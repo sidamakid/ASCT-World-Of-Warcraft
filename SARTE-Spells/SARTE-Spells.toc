@@ -1,0 +1,42 @@
+## Interface: 20504
+## Version: 1.0.0
+## Title: SARTE-Spells
+## Title-frFR: SARTE-Sorts
+## Title-koKR: SARTE-주문
+## Title-zhCN: SARTE-法术
+## Title-zhTW: SARTE-法术
+## Title-esES: SARTE-Hechizos
+## Title-esMX: SARTE-Hechizos
+## Title-ruRU: SARTE-Заклинания
+## Title-ptBR: SARTE-Feitiços
+## Title-itIT: SARTE-Incantesimi
+## Notes: All the Spells for Scrolling ability text.
+## Notes-koKR: 스크롤 능력 텍스트에 대한 모든 주문.
+## Notes-zhCN: 所有滚动技能文本的咒语。
+## Notes-zhTW: 所有滾動技能文本的咒語。
+## Notes-ruRU: Все заклинания для прокрутки текста способности.
+## Notes-ptBR: Todos os feitiços para obter o texto de habilidade de rolagem.
+## Notes-esES: Todos los hechizos para el texto de la habilidad de desplazamiento.
+## Notes-esMX: Todos los hechizos para el texto de la habilidad de desplazamiento.
+## Notes-frFR: Tous les sorts pour le texte de la capacité de défilement.
+## Notes-deDE: Alle Zaubersprüche für die Bildlauffähigkeit.
+## Notes-itIT: Tutti gli incantesimi per il testo della capacità di scorrimento.
+## Author: Sidamakid Tinman
+
+# Localizing
+SARTE-Localize-Spells.lua
+# Spell Lists
+SARTE-Rogue-Spells.lua
+SARTE-Priest-Spells.lua
+SARTE-Druid-Spells.lua
+SARTE-Mage-Spells.lua
+SARTE-Warlock-Spells.lua
+SARTE-Paladin-Spells.lua
+SARTE-Shaman-Spells.lua
+SARTE-Hunter-Spells.lua
+SARTE-Warrior-Spells.lua
+SARTE-Death-Knight-Spells.lua
+SARTE-Racials-Spells.lua
+SARTE-Shared-Spell-Effects.lua
+SARTE-Shared-Cooldwn-Spells.lua
+
