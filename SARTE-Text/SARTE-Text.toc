@@ -1,0 +1,46 @@
+## Interface: 20504
+## Version: 1.0.0
+## Title: Scrolling Ability Text
+## Title-koKR: 스크롤 능력 텍스트
+## Title-frFR: Texte de capacité de défilement
+## Title-deDE: Text mit Bildlauffähigkeit
+## Title-zhCN: 滚动能力文本
+## Title-zhTW: 滾動能力文本
+## Title-esES: Texto de capacidad de desplazamiento
+## Title-esMX: Texto de capacidad de desplazamiento
+## Title-ruRU: Текст с возможностью прокрутки
+## Title-ptBR: Texto de habilidade de rolagem
+## Title-itIT: Scorrimento del testo
+## Notes: Shows you when your abilities are ready!
+## Notes-koKR: 당신의 능력이 준비되었을 때 당신을 보여줍니다!
+## Notes-frFR: Vous montre quand vos capacités sont prêtes!
+## Notes-deGE: Zeigt dir, wann deine Fähigkeiten bereit sind!
+## Notes-zhCN: 显示您的能力何时准备就绪！
+## Notes-zhTW: 顯示您的能力何時準備就緒！
+## Notes-esES: ¡Te muestra cuando tus habilidades están listas!
+## Notes-esMX: ¡Te muestra cuando tus habilidades están listas!
+## Notes-ruRU: Показывает вам, когда ваши способности готовы!
+## Notes-ptBR: Mostra quando suas habilidades estão prontas!
+## Notes-itIT: Ti mostra quando le tue abilità sono pronte!
+## Author: Sidamakid Tinman
+## RequiredDeps: SARTE-Spells
+
+# SARTE-Text-Localize
+
+# SARTE-Text-Localize-First
+SARTE-Text-Localize\SARTE-Text-esES.lua
+SARTE-Text-Localize\SARTE-Text-koKR.lua
+SARTE-Text-Localize\SARTE-Text-frFR.lua
+SARTE-Text-Localize\SARTE-Text-deDE.lua
+SARTE-Text-Localize\SARTE-Text-zhCN.lua
+SARTE-Text-Localize\SARTE-Text-zhTW.lua
+SARTE-Text-Localize\SARTE-Text-esMX.lua
+SARTE-Text-Localize\SARTE-Text-ruRU.lua
+SARTE-Text-Localize\SARTE-Text-ptBR.lua
+SARTE-Text-Localize\SARTE-Text-itIT.lua
+# SARTE-Text-Normal-Text {
+SARTE-Text.lua
+# SARTE-Text-Classic
+SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
+SARTE-Text-Classic\SARTE-Text-Wrath.lua
+#}
