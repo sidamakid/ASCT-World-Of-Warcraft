@@ -1,4 +1,8 @@
-local SARTE = ... --This assigns the name of the addon to SARTE
+local locale = GetLocale()
+local is_Classic_Wow = select(4, GetBuildInfo()) < 20504
+if locale == "enUS" then
+if is_Classic_Wow then
+local SARTE_Race = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
 
 
@@ -9,11 +13,12 @@ f:SetScript("OnEvent", --Run when our event fires
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
       --Races
-      SpellTableRacials and (SARTESPELLDB["Blood Elf"] and SARTESPELLDB["Blood Elf"][spellName] == true) or (SARTESPELLDB["Orc"] and SARTESPELLDB["Orc"][spellName] == true) or (SARTESPELLDB["Troll"] and SARTESPELLDB["Troll"][spellName] == true) or
-      (SARTESPELLDB["Tauren"] and SARTESPELLDB["Tauren"][spellName] == true) or (SARTESPELLDB["Undead"] and SARTESPELLDB["Undead"][spellName] == true) or (SARTESPELLDB["Human"] and SARTESPELLDB["Human"][spellName] == true) or (SARTESPELLDB["Night Elf"] and SARTESPELLDB["Night Elf"][spellName] == true)
-      or (SARTESPELLDB["Dranei"] and SARTESPELLDB["Dranei"][spellName] == true) or (SARTESPELLDB["Gnome"] and SARTESPELLDB["Gnome"][spellName] == true) or (SARTESPELLDB["Dwarf"] and SARTESPELLDB["Dwarf"][spellName] == true)
+      SpellTableRacials[SDT_GetEnglishName(spellName)] and ((SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true)) or
+      ((SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true)) or
+      ((SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true))
+      or ((SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true))
       then
-         local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         local spellFrame = _G[SARTE_Race..spellName] or CreateFrame("Frame", SARTE_Race..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
             function()
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
@@ -25,7 +30,9 @@ f:SetScript("OnEvent", --Run when our event fires
                end
             end
          )
-         
+
       end
    end
 )
+end
+end
