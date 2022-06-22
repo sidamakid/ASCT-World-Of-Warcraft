@@ -1,0 +1,48 @@
+## Interface: 20504
+## Version: 1.0.5
+## Title: SARTE-Options
+## Title-koKR: SARTE-옵션
+## Title-frFR: SARTE-Options
+## Title-deDE: SARTE-Optionen
+## Title-zhCN: SARTE-选项
+## Title-zhTW: SARTE-選項
+## Title-esES: SARTE-Opciones
+## Title-esMX: SARTE-Opciones
+## Title-ruRU: SARTE-Параметры
+## Title-ptBR: SARTE-Opções
+## Title-itIT: SARTE-Opzioni
+## Notes: SARTE Options panel
+## Notes-koKR: SARTE Panel Opciones
+## Notes-frFR: SARTE Panneau Options
+## Notes-deDE: SARTE Bedienfeld "Optionen"
+## Notes-zhCN: SARTE “选项”面板
+## Notes-esES: SARTE Panel Opciones
+## Notes-esMX: SARTE Panel Opciones
+## Notes-zhTW: SARTE “選項”面板
+## Notes-ruRU: SARTE Панель «Параметры»
+## Notes-ptBR: SARTE Painel de opções
+## Notes-itIT: SARTE Pannello Opzioni
+## Author: Sidamakid Tinman
+## RequiredDeps: SARTE-Spells, SARTE-Text
+## SavedVariablesPerCharacter: SARTESPELLDB
+
+
+# Localize
+Options-Localize.lua
+# Localize_files
+Localization\Localize-enUS.lua
+Localization\Localize-esES.lua
+Localization\Localize-koKR.lua
+Localization\Localize-frFR.lua
+Localization\Localize-deDE.lua
+Localization\Localize-zhCN.lua
+Localization\Localize-zhTW.lua
+Localization\Localize-ruRU.lua
+Localization\Localize-ptBR.lua
+Localization\Localize-itIT.lua
+Localization\Localize-esMX.lua
+#Retail
+
+# Classic Verisons
+Options_Classic\Options-Vanilla.lua
+Options_Classic\Options-Tbc.lua
