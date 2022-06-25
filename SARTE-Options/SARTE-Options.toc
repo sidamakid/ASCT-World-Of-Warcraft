@@ -1,5 +1,5 @@
 ## Interface: 20504
-## Version: 1.0.0
+## Version: 1.1.0
 ## Title: SARTE-Options
 ## Title-koKR: SARTE-옵션
 ## Title-frFR: SARTE-Options
@@ -40,6 +40,7 @@ Localization\Localize-zhTW.lua
 Localization\Localize-ruRU.lua
 Localization\Localize-ptBR.lua
 Localization\Localize-itIT.lua
+Localization\Localize-esMX.lua
 #Retail
 
 # Classic Verisons

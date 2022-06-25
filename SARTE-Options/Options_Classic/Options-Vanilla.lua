@@ -1,4 +1,4 @@
-local isClassicWow = select(4, GetBuildInfo()) < 20504
+local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 if isClassicWow then
 local L = SARTE_Localization_My_Localization_Table;
@@ -287,6 +287,28 @@ function f:InitializeOptions_Class()
 		--Prints
 		print("/rl")
 		end)
+
+	local Class = UnitClass("player")
+	if Class == "Rogue" then
+		SARTESPELLDB["Class"]["Rogue"] = true
+	elseif Class == "Priest" then
+		SARTESPELLDB["Class"]["Priest"] = true
+	elseif Class == "Warrior" then
+		SARTESPELLDB["Class"]["Warrior"] = true
+	elseif Class == "Druid" then
+		SARTESPELLDB["Class"]["Druid"] = true
+	elseif Class == "Warlock" then
+		SARTESPELLDB["Class"]["Warlock"] = true
+	elseif Class == "Shaman" then
+		SARTESPELLDB["Class"]["Shaman"] = true
+	elseif Class == "Hunter" then
+		SARTESPELLDB["Class"]["Hunter"] = true
+	elseif Class == "Paladin" then
+		SARTESPELLDB["Class"]["Paladin"] = true
+	elseif Class == "Mage" then
+		SARTESPELLDB["Class"]["Mage"] = true
+	end
+
   -----------------------
   --Row 1
   -----------------------
