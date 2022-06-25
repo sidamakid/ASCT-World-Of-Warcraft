@@ -1,4 +1,4 @@
-local isClassicWow = select(4, GetBuildInfo()) < 20504
+local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 if isClassicWow then
 local LR = SARTE_Localization_Racial_My_Localization_Table;
@@ -77,6 +77,24 @@ function f:InitializeOptions_Race()
 		--Prints
 		print("/rl")
 		end)
+	local Race = UnitRace("player")
+	if Race == "Undead" then
+		SARTERACIALSDB["Race"]["Undead"] = true
+	elseif Race == "Orc" then
+		SARTERACIALSDB["Race"]["Orc"] = true
+	elseif Race == "Dwarf" then
+		SARTERACIALSDB["Race"]["Dwarf"] = true
+	elseif Race == "Gnome" then
+		SARTERACIALSDB["Race"]["Gnome"] = true
+	elseif Race == "Night Elf" then
+		SARTERACIALSDB["Race"]["Night Elf"] = true
+	elseif Race == "Troll" then
+		SARTERACIALSDB["Race"]["Troll"] = true
+	elseif Race == "Tauren" then
+		SARTERACIALSDB["Race"]["Tauren"] = true
+	elseif Race == "Human" then
+		SARTERACIALSDB["Race"]["Human"] = true
+	end
 -----------------------
 --Row 1
 -----------------------

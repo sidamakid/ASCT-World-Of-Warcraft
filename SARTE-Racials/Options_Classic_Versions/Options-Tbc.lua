@@ -1,4 +1,4 @@
-local isTbcWow = select(4, GetBuildInfo()) > 11403 and select(4, GetBuildInfo()) < 30305
+local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 
 if isTbcWow then
 local LR = SARTE_Localization_Racial_My_Localization_Table;
@@ -90,6 +90,30 @@ function f:InitializeOptions_Race()
 		--Prints
 		print("/rl")
 		end)
+	local Race = UnitRace("player")
+	if Race == "Undead" then
+		SARTERACIALSDB["Race"]["Undead"] = true
+	elseif Race == "Orc" then
+		SARTERACIALSDB["Race"]["Orc"] = true
+	elseif Race == "Dwarf" then
+		SARTERACIALSDB["Race"]["Dwarf"] = true
+	elseif Race == "Gnome" then
+		SARTERACIALSDB["Race"]["Gnome"] = true
+	elseif Race == "Night Elf" then
+		SARTERACIALSDB["Race"]["Night Elf"] = true
+	elseif Race == "Troll" then
+		SARTERACIALSDB["Race"]["Troll"] = true
+	elseif Race == "Tauren" then
+		SARTERACIALSDB["Race"]["Tauren"] = true
+	elseif Race == "Human" then
+		SARTERACIALSDB["Race"]["Human"] = true
+	elseif Race == "Blood Elf" then
+		SARTERACIALSDB["Race"]["Blood Elf"] = true
+	elseif Race == "Draenei" then
+		SARTERACIALSDB["Race"]["Draenei"] = true
+	end
+
+
 -----------------------
 --Row 1
 -----------------------
@@ -345,7 +369,7 @@ elseif SARTERACIALSDB["Race"]["Draenei"] == true then
 ---------------------
 elseif SARTERACIALSDB["Race"]["Blood Elf"] == true then
  local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTERACIALSDB["Dranei"]) do
+	for v in pairs(SARTERACIALSDB["Blood Elf"]) do
   local b = CreateFrame("CheckButton", nil, self.panel_main_Race, "InterfaceOptionsCheckButtonTemplate")
   b:SetPoint("TOPLEFT", 20, modifierfirst)
   modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
