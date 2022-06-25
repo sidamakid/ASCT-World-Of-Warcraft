@@ -1,4 +1,4 @@
-local is_Tbc_Classic_Wow = select(4, GetBuildInfo()) < 30305
+local is_Tbc_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 local locale = GetLocale()
 if locale == "enUS" then
 if is_Tbc_Classic_Wow then

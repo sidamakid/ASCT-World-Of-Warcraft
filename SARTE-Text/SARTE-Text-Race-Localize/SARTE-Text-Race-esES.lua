@@ -1,7 +1,7 @@
 local locale = GetLocale()
-local isRetailWow = select(4, GetBuildInfo()) > 90200
-local is_Tbc_Wow = select(4, GetBuildInfo()) < 30305
-local is_Classic_Wow = select(4, GetBuildInfo()) < 20504
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+local is_Tbc_Wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
+local is_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 
 if locale == "esES" then
@@ -18,11 +18,16 @@ f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
-      --Races
-      SpellTableRacials[SDT_GetEnglishName(spellName)] and ((SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true))
-      or ((SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -53,24 +58,16 @@ f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
-      --Rogue
-      SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
-      --Priest
-      SpellTablePriest[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Shadow"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Holy"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Discipline"][SDT_GetEnglishName(spellName)] == true)) or
-      --Shaman
-      SpellTableShaman[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Elemental"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Enhancement"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Shaman_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
-      --Warrior
-      SpellTableWarrior[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Arms"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Fury"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Protection_Warrior"][SDT_GetEnglishName(spellName)] == true)) or
-      --Warlock
-      SpellTableWarlock[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Affliction"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Demonology"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Destruction"][SDT_GetEnglishName(spellName)] == true)) or
-      --Paladin
-      SpellTablePaladin[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Holy_Paladin"][SDT_GetEnglishName(spellName)] == true) or ( SARTESPELLDB["Protection_Paladin"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Retribution"][SDT_GetEnglishName(spellName)] == true)) or
-      --Mage
-      SpellTableMage[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Arcane"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Fire"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_Mage"][SDT_GetEnglishName(spellName)] == true)) or
-      --Druid
-      SpellTableDruid[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Balance"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Feral_Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Druid_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
-      --Hunter
-      SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -102,10 +99,14 @@ f:SetScript("OnEvent", --Run when our event fires
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
       --Races
-      SpellTableRacials[SDT_GetEnglishName(spellName)] and ((SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true))
-      or ((SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -137,10 +138,16 @@ f:SetScript("OnEvent", --Run when our event fires
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
       --Races
-      SpellTableRacials[SDT_GetEnglishName(spellName)] and ((SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true)) or
-      ((SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true))
-      or ((SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)) or ((SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!

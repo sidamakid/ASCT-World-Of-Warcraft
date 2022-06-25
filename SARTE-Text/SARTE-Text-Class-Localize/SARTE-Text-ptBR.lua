@@ -1,6 +1,6 @@
 local locale = GetLocale()
-local isRetailWow = select(4, GetBuildInfo()) > 90200
-local is_Tbc_Classic_Wow = select(4, GetBuildInfo()) < 30305
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+local is_Tbc_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 
 if locale == "ptBR" then

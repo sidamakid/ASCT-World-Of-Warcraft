@@ -1,4 +1,4 @@
-local isRetailWow = select(4, GetBuildInfo()) > 90200
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local locale = GetLocale()
 if locale == "enUS" then
 if isRetailWow then
@@ -39,7 +39,7 @@ f:SetScript("OnEvent", --Run when our event fires
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
                local name, _, icon = GetSpellInfo(spellName)
-               local msg = format("|T%d:18|t  %s is now ready!", icon, name)
+               local msg = format("|T%d:18|t  %s is now ready! |T%d:18|t ", icon, name, icon)
                 CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
