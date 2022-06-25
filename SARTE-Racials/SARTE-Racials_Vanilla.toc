@@ -1,4 +1,4 @@
-## Interface: 90205
+## Interface: 11403
 ## Version: 1.1.0
 ## Title: Scrolling ability text Racial options
 ## Title-koKR: 스크롤 능력 텍스트 종족 옵션
