@@ -1,6 +1,6 @@
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
-local isTbcWow = select(4, GetBuildInfo()) > 11403 and select(4, GetBuildInfo()) < 30305
-local isClassicWow = select(4, GetBuildInfo()) == 11403
+local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
+local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 
 if isTbcWow then

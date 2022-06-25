@@ -227,7 +227,7 @@ function SDT_LoadSpellNames()
      ["War Stomp"] = 20549,
      ["Every Man for Himself"] = 59752,
      ["Perception"] = 20600,
-     ["Shadowmeld"] =  20580 or 58984,
+     ["Shadowmeld"] =  20580,
      ["Stoneform"] = 20594,
      ["Arcane Torrent"] = 50613 or 28730 or 25046,
      ["Mana Tap"] = 28734,

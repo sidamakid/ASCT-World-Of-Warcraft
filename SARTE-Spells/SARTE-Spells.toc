@@ -1,5 +1,5 @@
 ## Interface: 20504
-## Version: 1.0.5
+## Version: 1.1.0
 ## Title: SARTE-Spells
 ## Title-frFR: SARTE-Sorts
 ## Title-koKR: SARTE-주문
@@ -36,7 +36,16 @@ SARTE-Shaman-Spells.lua
 SARTE-Hunter-Spells.lua
 SARTE-Warrior-Spells.lua
 SARTE-Death-Knight-Spells.lua
-SARTE-Racials-Spells.lua
 SARTE-Shared-Spell-Effects.lua
 SARTE-Shared-Cooldwn-Spells.lua
-
+# Racial spells: Racial_Spells\
+Racial_Spells\SARTE-Dwarf-Spells.lua
+Racial_Spells\SARTE-Human-Spells.lua
+Racial_Spells\SARTE-Undead-Spells.lua
+Racial_Spells\SARTE-Orc-Spells.lua
+Racial_Spells\SARTE-Troll-Spells.lua
+Racial_Spells\SARTE-Tauren-Spells.lua
+Racial_Spells\SARTE-Dranei-Spells.lua
+Racial_Spells\SARTE-Blood-Elf-Spells.lua
+Racial_Spells\SARTE-Night-Elf-Spells.lua
+Racial_Spells\SARTE-Gnome-Spells.lua
