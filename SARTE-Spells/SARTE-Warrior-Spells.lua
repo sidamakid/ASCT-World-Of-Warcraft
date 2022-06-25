@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)

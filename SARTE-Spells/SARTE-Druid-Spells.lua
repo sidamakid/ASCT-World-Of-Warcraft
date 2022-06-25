@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
@@ -86,5 +87,57 @@ SpellTableDruid = {--Druid Spells
 ["Berserk"] = "Berserk",
 ["Feral Charge - Cat"] = "Feral Charge - Cat",
 ["Survival Instincts"] = "Survival Instincts",
+}
+elseif isRetailWow then
+SpellTableDruid = {
+--All-Specs
+["Barkskin"] = "Barkskin",
+["Rebirth"] = "Rebirth",
+["Dash"] = "Dash",
+["Dreamwalk"] = "Dreamwalk",
+["Soothe"] = "Soothe",
+["Mangle"] = "Mangle",
+["Thrash"] = "Thrash",
+["Prowl"] = "Prowl",
+["Stampeding Roar"] = "Stampeding Roar",
+["Charm Woodland Creature"] = "Charm Woodland Creature",
+["Growl"] = "Growl",
+--Balance
+["Celestial Alignment"] = "Celestial Alignment",
+["Typhoon"] = "Typhoon",
+["Solar Beam"] = "Solar Beam",
+["Fury of Elune"] = "Fury of Elune",
+["Force of Nature"] = "Force of Nature",
+["Incarnation: Chosen of Elune"] = "Incarnation: Chosen of Elune",
+["New Moon"] = "New Moon",
+--Restoration
+["Wild Growth"] = "Wild Growth",
+["Tranquility"] = "Tranquility",
+["Swiftmend"] = "Swiftmend",
+["Nature's Cure"] = "Nature's Cure",
+["Ironbark"] = "Ironbark",
+["Ursol's Vortex"] = "Ursol's Vortex",
+["Nature's Swiftness"] = "Nature's Swiftness",
+["Flourish"] = "Flourish",
+["Incarnation: Tree of Life"] = "Incarnation: Tree of Life",
+["Overgrowth"] = "Overgrowth",
+--Fearl
+["Tiger's Fury"] = "Tiger's Fury",
+["Maim"] = "Maim",
+["Feral Frenzy"] = "Feral Frenzy",
+["Brutal Slash"] = "Brutal Slash",
+["Incarnation: King of the Jungle"] = "Incarnation: King of the Jungle",
+--Guardian
+["Frenzied Regeneration"] = "Frenzied Regeneration",
+["Incapacitating Roar"] = "Incapacitating Roar",
+["Incarnation: Guardian of Ursoc"] = "Incarnation: Guardian of Ursoc",
+["Pulverize"] = "Pulverize",
+["Bristling Fur"] = "Bristling Fur",
+--Shared-Spec-spells
+["Innervate"] = "Innervate",
+["Remove Corruption"] = "Remove Corruption",
+["Survival Instincts"] = "Survival Instincts",
+["Berserk"] = "Berserk",
+["Skull Bash"] = "Skull Bash",
 }
 end
