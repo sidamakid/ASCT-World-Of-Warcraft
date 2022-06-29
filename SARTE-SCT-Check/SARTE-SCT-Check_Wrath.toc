@@ -25,6 +25,7 @@
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-Text
 
+
 # Loads table
 Check_if_is_loaded_Localize_Table.lua
 Check_if_is_loaded_localize.lua
