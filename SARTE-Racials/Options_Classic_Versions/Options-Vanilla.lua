@@ -77,133 +77,28 @@ function f:InitializeOptions_Race()
 		--Prints
 		print("/rl")
 		end)
-	local Race = UnitRace("player")
-	if Race == "Undead" then
+	local Race = select(3, UnitRace("player"))
+	if Race == 5 then
 		SARTERACIALSDB["Race"]["Undead"] = true
-	elseif Race == "Orc" then
+	elseif Race == 2 then
 		SARTERACIALSDB["Race"]["Orc"] = true
-	elseif Race == "Dwarf" then
+	elseif Race == 3 then
 		SARTERACIALSDB["Race"]["Dwarf"] = true
-	elseif Race == "Gnome" then
+	elseif Race == 7 then
 		SARTERACIALSDB["Race"]["Gnome"] = true
-	elseif Race == "Night Elf" then
+	elseif Race == 4 then
 		SARTERACIALSDB["Race"]["Night Elf"] = true
-	elseif Race == "Troll" then
+	elseif Race == 8 then
 		SARTERACIALSDB["Race"]["Troll"] = true
-	elseif Race == "Tauren" then
+	elseif Race == 6 then
 		SARTERACIALSDB["Race"]["Tauren"] = true
-	elseif Race == "Human" then
+	elseif Race == 1 then
 		SARTERACIALSDB["Race"]["Human"] = true
 	end
------------------------
---Row 1
------------------------
-	local race = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race:SetPoint("TOPLEFT", 20, -20)
-	race:SetText(LR["Orc"])
-    race:SetWidth(100)
-	race:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Orc"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
 
-	local race1 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race1:SetPoint("TOPLEFT", 20, -60)
-	race1:SetText(LR["Undead"])
-    race1:SetWidth(100)
-	race1:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Undead"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race1:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
-local race2 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race2:SetPoint("TOPLEFT", 20, -100)
-	race2:SetText(LR["Troll"])
-    race2:SetWidth(100)
-	race2:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Troll"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race2:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
-local race3 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race3:SetPoint("TOPLEFT", 20, -140)
-	race3:SetText(LR["Tauren"])
-    race3:SetWidth(100)
-	race3:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Tauren"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race3:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
-local race4 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race4:SetPoint("TOPLEFT", 20, -180)
-	race4:SetText(LR["Gnome"])
-    race4:SetWidth(100)
-	race4:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Gnome"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race4:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-----------------------
---Row 2
----------------------
-local race5 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race5:SetPoint("TOPLEFT", 120, -20)
-	race5:SetText(LR["Human"])
-    race5:SetWidth(100)
-	race5:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Human"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race5:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
-local race6 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race6:SetPoint("TOPLEFT", 120, -60)
-	race6:SetText(LR["Night Elf"])
-    race6:SetWidth(100)
-	race6:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Night Elf"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race6:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
-local race7 = CreateFrame("CheckButton", nil, self.panel_main_Race, "UIPanelButtonTemplate")
-	race7:SetPoint("TOPLEFT", 120, -100)
-	race7:SetText(LR["Dwarf"])
-    race7:SetWidth(100)
-	race7:SetScript("OnClick",
-	function(self) 
-		SARTERACIALSDB["Race"]["Dwarf"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	race7:SetShown(SARTERACIALSDB["Race"]["Orc"] == false and SARTERACIALSDB["Race"]["Undead"] == false and SARTERACIALSDB["Race"]["Troll"] == false and SARTERACIALSDB["Race"]["Tauren"] == false and
-SARTERACIALSDB["Race"]["Gnome"] == false and SARTERACIALSDB["Race"]["Human"] == false and SARTERACIALSDB["Race"]["Night Elf"] == false and SARTERACIALSDB["Race"]["Dwarf"] == false)
-
+------------------------
+--Undead
+------------------------
 if SARTERACIALSDB["Race"]["Undead"] == true then
 local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTERACIALSDB["Undead"]) do
