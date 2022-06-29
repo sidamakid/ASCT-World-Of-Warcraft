@@ -151,7 +151,6 @@ f.defaults = {
 		["Fire Nova Totem"] = false,
 		["Stoneclaw Totem"] = false,
 		["Elemental Mastery"] = false,
-		--["Shocks"] = false,
 		},
 	["Enhancement"] = {
 		["Grounding Totem"] = false,
@@ -167,7 +166,6 @@ f.defaults = {
 	},
 	--Hunter spells
 	["Beast Mastery"] = {
-		--["Traps"] = false,
         ["Bestial Wrath"] = false,
 		["Scare Beast"] = false,
 		["Intimidation"] = false,
@@ -190,6 +188,9 @@ f.defaults = {
 		["Wyvern Sting"] = false,
 		["Counterattack"] = false,
     },
+	["Hunter_Traps"] = {
+		["Traps"] = false,
+	},
 	--Paladin
 	["Holy_Paladin"] = {
 		["Consecration"] = false,
@@ -291,146 +292,28 @@ function f:InitializeOptions_Class()
 		print("/rl")
 		end)
 
-	local Class = UnitClass("player")
-	if Class == "Rogue" then
-		SARTESPELLDB["Class"]["Rogue"] = true
-	elseif Class == "Priest" then
-		SARTESPELLDB["Class"]["Priest"] = true
-	elseif Class == "Warrior" then
-		SARTESPELLDB["Class"]["Warrior"] = true
-	elseif Class == "Druid" then
-		SARTESPELLDB["Class"]["Druid"] = true
-	elseif Class == "Warlock" then
-		SARTESPELLDB["Class"]["Warlock"] = true
-	elseif Class == "Shaman" then
-		SARTESPELLDB["Class"]["Shaman"] = true
-	elseif Class == "Hunter" then
-		SARTESPELLDB["Class"]["Hunter"] = true
-	elseif Class == "Paladin" then
-		SARTESPELLDB["Class"]["Paladin"] = true
-	elseif Class == "Mage" then
-		SARTESPELLDB["Class"]["Mage"] = true
-	end
+local Class = select(3, UnitClass("player"))
+if Class == 4 then
+	SARTESPELLDB["Class"]["Rogue"] = true
+elseif Class == 5 then
+	SARTESPELLDB["Class"]["Priest"] = true
+elseif Class == 1 then
+	SARTESPELLDB["Class"]["Warrior"] = true
+elseif Class == 11 then
+	SARTESPELLDB["Class"]["Druid"] = true
+elseif Class == 9 then
+	SARTESPELLDB["Class"]["Warlock"] = true
+elseif Class == 7 then
+	SARTESPELLDB["Class"]["Shaman"] = true
+elseif Class == 3 then
+	SARTESPELLDB["Class"]["Hunter"] = true
+elseif Class == 2 then
+	SARTESPELLDB["Class"]["Paladin"] = true
+elseif Class == 8 then
+	SARTESPELLDB["Class"]["Mage"] = true
+end
 
-  -----------------------
-  --Row 1
-  -----------------------
-	local class = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class:SetPoint("TOPLEFT", 20, -20)
-	class:SetText(L["Rogue"])
-    class:SetWidth(100)
-	class:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Rogue"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
 
-	local class1 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class1:SetPoint("TOPLEFT", 20, -60)
-	class1:SetText(L["Priest"])
-    class1:SetWidth(100)
-	class1:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Priest"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class1:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-
-	local class2 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class2:SetPoint("TOPLEFT", 20, -100)
-	class2:SetText(L["Warrior"])
-    class2:SetWidth(100)
-	class2:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Warrior"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class2:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-	
-	local class3 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class3:SetPoint("TOPLEFT", 20, -140)
-	class3:SetText(L["Druid"])
-    class3:SetWidth(100)
-	class3:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Druid"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class3:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-
-	local class4 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class4:SetPoint("TOPLEFT", 20, -180)
-	class4:SetText(L["Warlock"])
-    class4:SetWidth(100)
-	class4:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Warlock"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class4:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-	--------------------
-    --Row 2
-	---------------------
-	local class5 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class5:SetPoint("TOPLEFT", 120, -20)
-	class5:SetText(L["Shaman"])
-    class5:SetWidth(100)
-	class5:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Shaman"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class5:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-	
-	local class6 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class6:SetPoint("TOPLEFT", 120, -60)
-	class6:SetText(L["Hunter"])
-    class6:SetWidth(100)
-	class6:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Hunter"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class6:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-	local class7 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class7:SetPoint("TOPLEFT", 120, -100)
-	class7:SetText(L["Paladin"])
-    class7:SetWidth(100)
-	class7:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Paladin"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class7:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-	local class8 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-	class8:SetPoint("TOPLEFT", 120, -140)
-	class8:SetText(L["Mage"])
-    class8:SetWidth(100)
-	class8:SetScript("OnClick",
-	function(self) 
-		SARTESPELLDB["Class"]["Mage"] = true
-		print("Reload Ui type /reload and then hit enter")
-			end
-	)
-	class8:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
 
 
 	local function SubPanelMaker(Name)
@@ -624,6 +507,7 @@ elseif SARTESPELLDB["Class"]["Shaman"] == true then
 local Panel_1 = SubPanelMaker(L["Elemental"])
 local Panel_2 = SubPanelMaker(L["Enhancement"])
 local Panel_3 = SubPanelMaker(L["Restoration"])
+local Panel_4 = SubPanelMaker("Shared_Spell_CDS")
 
 local col_1 = 4
 local x_1 = 0
@@ -656,6 +540,17 @@ for v in pairs(SARTESPELLDB["Shaman_Restoration"]) do
 	b:SetChecked(SARTESPELLDB["Shaman_Restoration"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Shaman_Restoration"][v] = s:GetChecked() end)
 	x_3=x_3+1
+end
+
+local col_4 = 4
+local x_4 = 0
+for v in pairs(SARTESPELLDB["Shared_Shaman_spells"]) do
+	local b = CreateFrame("CheckButton", nil, Panel_4, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_4 % col_4), -20 + (- b:GetHeight()-5) * math.floor(x_4/col_4))
+	b.Text:SetText(L[v])
+	b:SetChecked(SARTESPELLDB["Shared_Shaman_spells"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Shared_Shaman_spells"][v] = s:GetChecked() end)
+	x_4=x_4+1
 end
 ---------------------------
 --Warlock
@@ -704,6 +599,7 @@ elseif SARTESPELLDB["Class"]["Hunter"] == true then
 local Panel_1 = SubPanelMaker(L["Beast Mastery"])
 local Panel_2 = SubPanelMaker(L["Marksmanship"])
 local Panel_3 = SubPanelMaker(L["Survival"])
+local Panel_4 = SubPanelMaker("Shared_Spell_CDS")
 
 local col_1 = 4
 local x_1 = 0
@@ -736,6 +632,17 @@ for v in pairs(SARTESPELLDB["Survival"]) do
 	b:SetChecked(SARTESPELLDB["Survival"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Survival"][v] = s:GetChecked() end)
 	x_3=x_3+1
+end
+
+local col_4 = 4
+local x_4 = 0
+for v in pairs(SARTESPELLDB["Hunter_Traps"]) do
+	local b = CreateFrame("CheckButton", nil, Panel_4, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_4 % col_4), -20 + (- b:GetHeight()-5) * math.floor(x_4/col_4))
+	b.Text:SetText(L[v])
+	b:SetChecked(SARTESPELLDB["Hunter_Traps"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Hunter_Traps"][v] = s:GetChecked() end)
+	x_4=x_4+1
 end
 ---------------------------
 --Paladin

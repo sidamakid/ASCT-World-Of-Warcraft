@@ -48,4 +48,8 @@ if GetLocale() == "zhCN	" then
  --Side-Buttons
  L["Reset Class"] = "重置类";
  L["Title_Class"] = "滚动能力文本类";
+ --Custom Button Names
+ L["Shocks"] = "冲击";
+ L["Traps"] = "陷阱";
+ L["Lust"] = "欲望";
 end

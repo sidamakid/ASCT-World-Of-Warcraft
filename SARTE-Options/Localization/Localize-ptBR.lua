@@ -48,4 +48,8 @@ if GetLocale() == "ptBR	" then
  --Side-Buttons
  L["Reset Class"] = "Classe reset";
  L["Title_Class"] = "Classe de texto de habilidade de rolagem";
+ --Custom Button Names
+ L["Shocks"] = "Choques";
+ L["Traps"] = "Armadilhas";
+ L["Lust"] = "Luxúria";
 end

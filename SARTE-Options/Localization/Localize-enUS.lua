@@ -23,6 +23,7 @@ if GetLocale() == "enUS" then
  L["Shaman"] = "Shaman";
  L["Elemental"] = "Elemental";
  L["Enhancement"] = "Enhancement";
+
  --Warlock
  L["Warlock"] = "Warlock";
  L["Affliction"] = "Affliction";
@@ -48,4 +49,8 @@ if GetLocale() == "enUS" then
  --Side-Buttons
  L["Reset Class"] = "Reset Class";
  L["Title_Class"] = "Scrolling_ability_text_Class";
+ --Custom Button names
+ L["Shocks"] = "Shocks";
+ L["Traps"] = "Traps";
+ L["Lust"] = "Lust";
 end

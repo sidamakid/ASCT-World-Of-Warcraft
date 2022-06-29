@@ -48,4 +48,8 @@ if GetLocale() == "koKR" then
  --Side-Buttons
  L["Reset Class"] = "클래스 재설정";
  L["Title_Class"] = "스크롤 기능 텍스트 클래스";
+ --Custom Button Names
+ L["Shocks"] = "충격";
+ L["Traps"] = "트랩";
+ L["Lust"] = "정욕";
 end

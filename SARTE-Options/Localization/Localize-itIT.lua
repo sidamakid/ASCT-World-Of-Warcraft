@@ -48,4 +48,8 @@ if GetLocale() == "itIT	" then
  --Side-Buttons
  L["Reset Class"] = "Classe reset";
  L["Title_Class"] = "Classe di testo con capacità di scorrimento";
+ --Custom Button Names
+ L["Shocks"] = "Shock";
+ L["Traps"] = "Trappole";
+ L["Lust"] = "Lussuria";
 end

@@ -48,4 +48,8 @@ if GetLocale() == "esES" then
 --Side-Buttons
  L["Reset Class"] = "Restablecer clase";
  L["Title_Class"] = "Clase de texto de capacidad de desplazamiento";
+--Custom Button Names
+ L["Shocks"] = "Choques";
+ L["Traps"] = "Trampas";
+ L["Lust"] = "Lujuria";
 end

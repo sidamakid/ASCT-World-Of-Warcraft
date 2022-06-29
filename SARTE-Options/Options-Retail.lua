@@ -21,106 +21,35 @@ f.defaults = {
 		Mage = false,
 		Death_Knight = false,
 		Demon_Hunter = false,
+		Monk = false,
 		},
 	--Rogue spells
 	["Rogue_Shared"] = {
-		["Blind"] = false,
-		["Cloak of Shadows"] = false,
-		["Vanish"] = false,
-		["Stealth"] = false,
-		["Shroud of Concealment"] = false,
-		["Evasion"] = false,
-		["Kidney Shot"] = false,
-		["Shiv"] = false,
-		["Feint"] = false,
-		["Kick"] = false,
-		["Crimson Vial"] = false,
-		["Distract"] = false,
-		["Sprint"] = false,
+
 	},
 	["Assassination"] = {
-		["Vendetta"] = false,
-		["Garrote"] = false,
+
 		},
 	["Outlaw"] = {
-		["Adrenaline Rush"] = false,
-		["Blade Flurry"] = false,
-		["Roll the Bones"] = false,
-		["Between the Eyes"] = false,
-		["Gouge"] = false,
-		["Grappling Hook"] = false,
-		["Ghostly Strike"] = false,
-		["Blade Rush"] = false,
-		["Killing Spree"] = false,
+
 		},
 	["Subtlety"] = {
-		["Shadow Dance"] = false,
-		["Shadow Blades"] = false,
-		["Symbols of Death"] = false,
-		["Shuriken Tornado"] = false,
-		["Secret Technique"] = false,
+
 		},
-	["Rogue_Shared_Spec_Spells"] = {
-		["Shadowstep"] = false,
-	},
 --Priest spells
 	["Priest_Shared"] = {
-		["Power Infusion"] = false,
-		["Mass Dispel"] = false,
-		["Desperate Prayer"] = false,
-		["Leap of Faith"] = false,
-		["Fade"] = false,
-		["Shadow Word: Death"] = false,
-		["Psychic Scream"] = false,
-		["Mind Blast"] = false,
+
 	},
 	["Shadow"] = {
-		["Vampiric Embrace"] = false,
-		["Dispersion"] = false,
-		["Silence"] = false,
-		["Void Eruption"] = false,
-		["Void Bolt"] = false,
-		["Psychic Horror"] = false,
-		["Purify Disease"] = false,
-		["Mind Bomb"] = false,
-		["Surrender to Madness"] = false,
-		["Shadow Crash"] = false,
-		["Damnation"] = false,
-		["Void Torrent"] = false,
+
       },
    ["Holy_Priest"] = {
-		["Symbol of Hope"] = false,
-		["Guardian Spirit"] = false,
-		["Divine Hymn"] = false,
-		["Holy Word: Chastise"] = false,
-		["Holy Word: Serenity"] = false,
-		["Prayer of Mending"] = false,
-		["Holy Word: Sanctify"] = false,
-		["Holy Fire"] = false,
-		["Circle of Healing"] = false,
-		["Holy Word: Salvation"] = false,
-		["Apotheosis"] = false,
+
     },
    ["Discipline"] = {
-		["Pain Suppression"] = false,
-		["Penance"] = false,
-		["Rapture"] = false,
-		["Power Word: Barrier"] = false,
-		["Power Word: Radiance"] = false,
-		["Schism"] = false,
-		["Mindbender"] = false,
-		["Evangelism"] = false,
-		["Spirit Shell"] = false,
+
 	},
-	  ["Priest_Shared_Spec_Spells"] = {
-		["Shadowfiend"] = false,
-		["Purify"] = false,
-		["Angelic Feather"] = false,
-		["Shining Force"] = false,
-		["Divine Star"] = false,
-		["Halo"] = false,
-		["Shadow Covenant"] = false,
-	  },
+
 	  --Warrior spells
 	["Arms"] = {
 
@@ -133,65 +62,28 @@ f.defaults = {
 	},
 		--Druid Spells
 	["Druid_Shared"] = {
-		["Barkskin"] = false,
-		["Rebirth"] = false,
-		["Dash"] = false,
-		["Dreamwalk"] = false,
-		["Soothe"] = false,
-		["Mangle"] = false,
-		["Thrash"] = false,
-		["Prowl"] = false,
-		["Stampeding Roar"] = false,
-		["Charm Woodland Creature"] = false,
-		["Growl"] = false,
-	},
-	["Balance"] = {
-		["Celestial Alignment"] = false,
-		["Typhoon"] = false,
-		["Solar Beam"] = false,
-		["Fury of Elune"] = false,
-		["Force of Nature"] = false,
-		["Incarnation: Chosen of Elune"] = false,
-		["New Moon"] = false,
-	},
-	["Feral_Combat"] = {
-		["Tiger's Fury"] = false,
-		["Maim"] = false,
-		["Feral Frenzy"] = false,
-		["Brutal Slash"] = false,
-		["Incarnation: King of the Jungle"] = false,
-	},
-	["Druid_Restoration"] = {
-		["Wild Growth"] = false,
-		["Tranquility"] = false,
-		["Swiftmend"] = false,
-		["Nature's Cure"] = false,
-		["Ironbark"] = false,
-		["Ursol's Vortex"] = false,
-		["Nature's Swiftness"] = false,
-		["Flourish"] = false,
-		["Incarnation: Tree of Life"] = false,
-		["Overgrowth"] = false,
-	},
-	["Guardian"] = {
-		["Frenzied Regeneration"] = false,
-		["Incapacitating Roar"] = false,
-		["Incarnation: Guardian of Ursoc"] = false,
-		["Pulverize"] = false,
-		["Bristling Fur"] = false,
-	},
-	["Druid_Shared_Spec_Spells"] = {
-		["Innervate"] = false,
-		["Remove Corruption"] = false,
-		["Survival Instincts"] = false,
-		["Berserk"] = false,
-		["Skull Bash"] = false,
-	},
-	--Warlock spells
-  ["Affliction"] = {
 
 	},
-   ["Demonology"] = {
+	["Balance"] = {
+
+	},
+	["Feral_Combat"] = {
+
+	},
+	["Druid_Restoration"] = {
+
+	},
+	["Guardian"] = {
+
+	},
+	["Druid_Shared_Spec_Spells"] = {
+
+	},
+	--Warlock spells
+	["Affliction"] = {
+
+	},
+    ["Demonology"] = {
 
 	},
 	["Destruction"] = {
@@ -292,30 +184,7 @@ function f:InitializeOptions_Class()
 		--Prints
 		print("/rl")
 		end)
-  local function cbMakerLeft(spellName, x, y)
-		local checkb = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-		checkb:SetPoint("TOPLEFT", x, y)
-		checkb:SetText(spellName)
-        checkb:SetWidth(100)
-		checkb:SetScript("OnClick",
-			function(self) 
-				SARTESPELLDB["Class"][spellName] = true
-				print("Reload Ui type /reload and then hit enter")
-			end
-		)
-		checkb:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-		SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false)
-		return checkb
-	end
-	local class = cbMakerLeft(L["Rogue"], 20, -20)
-	local class1 = cbMakerLeft(L["Priest"], 20, -60)
-	local class2 = cbMakerLeft(L["Warrior"], 20, -100)
-	local class3 = cbMakerLeft(L["Druid"], 20, -140)
-	local class4 = cbMakerLeft(L["Warlock"], 20, -180)
-	local class5 = cbMakerLeft(L["Shaman"], 120, -20)
-	local class6 = cbMakerLeft(L["Hunter"], 120, -60)
-	local class7 = cbMakerLeft(L["Paladin"], 120, -100)
-	local class8 = cbMakerLeft(L["Mage"], 120, -140)
+
 
 
 	local function SubPanelMaker(Name)
@@ -325,7 +194,8 @@ function f:InitializeOptions_Class()
 	InterfaceOptions_AddCategory(Frames)
 	return Frames
 	end
-
+local ClassInfo = select(3, UnitClass("player"))
+local SpecInfo = select(1, GetSpecializationInfo("player"))
 
 
 

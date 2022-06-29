@@ -48,4 +48,8 @@ if GetLocale() == "ruRU	" then
  --Side-Buttons
  L["Reset Class"] = "Сброс класса";
  L["Title_Class"] = "Класс текста с возможностью прокрутки";
+ --Custom Button Names
+ L["Shocks"] = "Потрясений";
+ L["Traps"] = "Ловушки";
+ L["Lust"] = "Вожделение";
 end

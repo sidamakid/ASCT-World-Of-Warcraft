@@ -398,137 +398,28 @@ function f:InitializeOptions_Class()
 	--Prints
 	print("/rl")
 	end)
-  -----------------------
-  --Row 1
-  -----------------------
-  local class = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class:SetPoint("TOPLEFT", 20, -20)
-  class:SetText(L["Rogue"])
-  class:SetWidth(100)
-  class:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Rogue"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-
-  local class1 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class1:SetPoint("TOPLEFT", 20, -60)
-  class1:SetText(L["Priest"])
-  class1:SetWidth(100)
-  class1:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Priest"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class1:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-
-  local class2 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class2:SetPoint("TOPLEFT", 20, -100)
-  class2:SetText(L["Warrior"])
-  class2:SetWidth(100)
-  class2:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Warrior"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class2:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-  
-  local class3 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class3:SetPoint("TOPLEFT", 20, -140)
-  class3:SetText(L["Druid"])
-  class3:SetWidth(100)
-  class3:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Druid"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class3:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-
-  local class4 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class4:SetPoint("TOPLEFT", 20, -180)
-  class4:SetText(L["Warlock"])
-  class4:SetWidth(100)
-  class4:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Warlock"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class4:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-  --------------------
-  --Row 2
-  ---------------------
-  local class5 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class5:SetPoint("TOPLEFT", 120, -20)
-  class5:SetText(L["Shaman"])
-  class5:SetWidth(100)
-  class5:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Shaman"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class5:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-  
-  local class6 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class6:SetPoint("TOPLEFT", 120, -60)
-  class6:SetText(L["Hunter"])
-  class6:SetWidth(100)
-  class6:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Hunter"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class6:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-  local class7 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class7:SetPoint("TOPLEFT", 120, -100)
-  class7:SetText(L["Paladin"])
-  class7:SetWidth(100)
-  class7:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Paladin"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class7:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-  local class8 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class8:SetPoint("TOPLEFT", 120, -140)
-  class8:SetText(L["Mage"])
-  class8:SetWidth(100)
-  class8:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Mage"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class8:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
-	local class9 = CreateFrame("CheckButton", nil, self.panel_main, "UIPanelButtonTemplate")
-  class9:SetPoint("TOPLEFT", 120, -180)
-  class9:SetText(L["Death_Knight"])
-  class9:SetWidth(100)
-  class9:SetScript("OnClick",
-  function(self) 
-	  SARTESPELLDB["Class"]["Death_Knight"] = true
-	  print("Reload Ui type /reload and then hit enter")
-		  end
-  )
-  class9:SetShown(SARTESPELLDB["Class"]["Rogue"] == false and SARTESPELLDB["Class"]["Priest"] == false and SARTESPELLDB["Class"]["Warrior"] == false and SARTESPELLDB["Class"]["Druid"] == false and SARTESPELLDB["Class"]["Warlock"] == false and
-	  SARTESPELLDB["Class"]["Shaman"] == false and SARTESPELLDB["Class"]["Hunter"] == false and SARTESPELLDB["Class"]["Paladin"] == false and SARTESPELLDB["Class"]["Mage"] == false and SARTESPELLDB["Class"]["Death_Knight"] == false)
+	local Class = UnitClassBase("player")
+	if Class == "ROGUE" then
+		SARTESPELLDB["Class"]["Rogue"] = true
+	elseif Class == "PRIEST" then
+		SARTESPELLDB["Class"]["Priest"] = true
+	elseif Class == "WARRIOR" then
+		SARTESPELLDB["Class"]["Warrior"] = true
+	elseif Class == "DRUID" then
+		SARTESPELLDB["Class"]["Druid"] = true
+	elseif Class == "WARLOCK" then
+		SARTESPELLDB["Class"]["Warlock"] = true
+	elseif Class == "SHAMAN" then
+		SARTESPELLDB["Class"]["Shaman"] = true
+	elseif Class == "HUNTER" then
+		SARTESPELLDB["Class"]["Hunter"] = true
+	elseif Class == "PALADIN" then
+		SARTESPELLDB["Class"]["Paladin"] = true
+	elseif Class == "MAGE" then
+		SARTESPELLDB["Class"]["Mage"] = true
+	elseif Class == "DEATHKNIGHT" then
+		SARTESPELLDB["Class"]["Death_Knight"] = true
+	end
 
 
 

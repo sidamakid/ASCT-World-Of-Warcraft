@@ -48,4 +48,8 @@ if GetLocale() == "deDE	" then
  --Side-Buttons
  L["Reset Class"] = "Reset-Klasse";
  L["Title_Class"] = "Textklasse mit Bildlauffähigkeit";
+ --Custom Button Names
+ L["Shocks"] = "Schocks";
+ L["Traps"] = "Fallen";
+ L["Lust"] = "Wollust";
 end

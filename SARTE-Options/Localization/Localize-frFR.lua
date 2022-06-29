@@ -48,4 +48,8 @@ if GetLocale() == "frFR	" then
  --Side-Buttons
  L["Reset Class"] = "Réinitialiser la classe";
  L["Title_Class"] = "Classe de texte de capacité de défilement";
+ --Custom Button Names
+ L["Shocks"] = "Chocs";
+ L["Traps"] = "Pièges";
+ L["Lust"] = "Luxure";
 end
