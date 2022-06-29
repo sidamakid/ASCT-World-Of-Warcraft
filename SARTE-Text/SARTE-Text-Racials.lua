@@ -1,7 +1,7 @@
-local locale = GetLocale()
 local is_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 local is_Tbc_Wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
-if locale == "enUS" then
+local L_Is_Now_Ready = SARTE_Ready_Text_Localization_My_Localization_Table
+
 if is_Classic_Wow then
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
@@ -41,7 +41,6 @@ f:SetScript("OnEvent", --Run when our event fires
       end
    end
 )
-end
 elseif is_Tbc_Wow then
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
@@ -73,7 +72,7 @@ f:SetScript("OnEvent", --Run when our event fires
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
                 local name, _, icon = GetSpellInfo(spellName)
-                local msg = format("|T%d:18|t  %s is now ready!", icon, name)
+                local msg = format("|T%d:18|t  %s"..L_Is_Now_Ready["msg"], icon, name)
                 CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
@@ -84,4 +83,3 @@ f:SetScript("OnEvent", --Run when our event fires
    end
 )
 end
-

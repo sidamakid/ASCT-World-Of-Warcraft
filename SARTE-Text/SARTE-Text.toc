@@ -29,28 +29,10 @@
 
 
 
-# SARTE-Text-Class-Localize-First
-SARTE-Text-Class-Localize\SARTE-Text-esES.lua
-SARTE-Text-Class-Localize\SARTE-Text-koKR.lua
-SARTE-Text-Class-Localize\SARTE-Text-frFR.lua
-SARTE-Text-Class-Localize\SARTE-Text-deDE.lua
-SARTE-Text-Class-Localize\SARTE-Text-zhCN.lua
-SARTE-Text-Class-Localize\SARTE-Text-zhTW.lua
-SARTE-Text-Class-Localize\SARTE-Text-esMX.lua
-SARTE-Text-Class-Localize\SARTE-Text-ruRU.lua
-SARTE-Text-Class-Localize\SARTE-Text-ptBR.lua
-SARTE-Text-Class-Localize\SARTE-Text-itIT.lua
-# SARTE-Text-Race-Localize-second
-SARTE-Text-Race-Localize\SARTE-Text-Race-esES.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-koKR.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-frFR.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-deDE.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-zhCN.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-zhTW.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-esMX.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-ruRU.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-ptBR.lua
-SARTE-Text-Race-Localize\SARTE-Text-Race-itIT.lua
+# SARTE-Text-Localize-Table
+SARTE-Localize-Ready-text-Table.lua
+# SARTE-Localize
+SARTE-Text-Localize.lua
 # SARTE-Text-Normal-Text {
 SARTE-Text.lua
 # SARTE-Text-Classic
@@ -58,3 +40,8 @@ SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
 SARTE-Text-Classic\SARTE-Text-Wrath.lua
 #SARTE-Racials
 SARTE-Text-Racials.lua
+# SARTE-Text-Shared-Spell-Cooldowns\
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
+# SARTE-Text-Shared-Spell-Effects\
+SARTE-Text-Shared-Spell-Effects\SARTE-Text-Lust.lua

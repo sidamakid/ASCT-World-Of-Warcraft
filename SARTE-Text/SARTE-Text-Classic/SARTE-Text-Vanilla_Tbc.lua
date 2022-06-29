@@ -1,7 +1,9 @@
 local is_Tbc_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
-local locale = GetLocale()
-if locale == "enUS" then
+
+
+
 if is_Tbc_Classic_Wow then
+local L_Is_Now_Ready = SARTE_Ready_Text_Localization_My_Localization_Table
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
 
@@ -17,7 +19,7 @@ f:SetScript("OnEvent", --Run when our event fires
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
-      SpellTablePriest[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Shadow"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Holy"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Discipline"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTablePriest[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Shadow"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Holy_Priest"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Discipline"][SDT_GetEnglishName(spellName)] == true)) or
       --Shaman
       SpellTableShaman[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Elemental"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Enhancement"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Shaman_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
       --Warrior
@@ -38,8 +40,8 @@ f:SetScript("OnEvent", --Run when our event fires
             function()
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
-                local name, _, icon = GetSpellInfo(spellName)
-                local msg = format("|T%d:18|t  %s is now ready!", icon, name)
+               local name, _, icon = GetSpellInfo(spellName)
+               local msg = format("|T%d:18|t  %s"..L_Is_Now_Ready["msg"], icon, name)
                 CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
@@ -50,4 +52,4 @@ f:SetScript("OnEvent", --Run when our event fires
    end
 )
 end
-end
+
