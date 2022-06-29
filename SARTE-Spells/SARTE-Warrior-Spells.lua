@@ -4,7 +4,7 @@ local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 if isTbcWow then
-SpellTableWarrior = {--Warrior spells
+SpellTableWarrior = {--Warrior Spells
 --Arms
 ["Thunder Clap"] = "Thunder Clap",
 ["Charge"] = "Charge",
@@ -36,7 +36,7 @@ SpellTableWarrior = {--Warrior spells
 ["Concussion Blow"] = "Concussion Blow",
 }
 elseif isClassicWow then
-SpellTableWarrior = {--Warrior spells
+SpellTableWarrior = {--Warrior Spells
 --Arms
 ["Thunder Clap"] = "Thunder Clap",
 ["Charge"] = "Charge",
@@ -67,7 +67,7 @@ SpellTableWarrior = {--Warrior spells
 ["Concussion Blow"] = "Concussion Blow",
 }
 elseif isWrathWow then
-SpellTableWarrior = {--Warrior spells
+SpellTableWarrior = {--Warrior Spells
 --Arms
 ["Thunder Clap"] = "Thunder Clap",
 ["Charge"] = "Charge",
@@ -103,6 +103,58 @@ SpellTableWarrior = {--Warrior spells
 ["Last Stand"] = "Last Stand",
 ["Concussion Blow"] = "Concussion Blow",
 ["Shockwave"] = "Shockwave",
+}
+elseif isRetailWow then
+SpellTableWarrior = {--Warrior Spells
+--All-Specs
+["Rallying Cry"] = "Rallying Cry",
+["Heroic Leap"] = "Heroic Leap",
+["Charge"] = "Charge",
+["Spell Reflection"] = "Spell Reflection",
+["Intimidating Shout"] = "Intimidating Shout",
+["Shield Block"] = "Shield Block",
+["Execute"] = "Execute",
+["Shield Slam"] = "Shield Slam",
+["Shattering Throw"] = "Shattering Throw",
+["Ignore Pain"] = "Ignore Pain",
+["Berserker Rage"] = "Berserker Rage",
+["Battle Shout"] = "Battle Shout",
+["Intervene"] = "Intervene",
+["Taunt"] = "Taunt",
+["Pummel"] = "Pummel",
+["Heroic Throw"] = "Heroic Throw",
+["Challenging Shout"] = "Challenging Shout",
+["Storm Bolt"] = "Storm Bolt",
+--Arms
+["Colossus Smash"] = "Colossus Smash",
+["Die by the Sword"] = "Die by the Sword",
+["Bladestorm"] = "Bladestorm",
+["Mortal Strike"] = "Mortal Strike",
+["Overpower"] = "Overpower",
+["Sweeping Strikes"] = "Sweeping Strikes",
+["Defensive Stance"] = "Defensive Stance",
+["Warbreaker"] = "Warbreaker",
+["Cleave"] = "Cleave",
+["Deadly Calm"] = "Deadly Calm",
+["Skullsplitter"] = "Skullsplitter",
+--Fury
+["Piercing Howl"] = "Piercing Howl",
+["Impending Victory"] = "Impending Victory",
+["Recklessness"] = "Recklessness",
+["Bloodthirst"] = "Bloodthirst",
+["Enraged Regeneration"] = "Enraged Regeneration",
+["Raging Blow"] = "Raging Blow",
+["Siegebreaker"] = "Siegebreaker",
+["Onslaught"] = "Onslaught",
+--Protection
+["Avatar"] = "Avatar",
+["Dragon Roar"] = "Dragon Roar",
+["Demoralizing Shout"] = "Demoralizing Shout",
+["Shockwave"] = "Shockwave",
+["Shield Wall"] = "Shield Wall",
+["Last Stand"] = "Last Stand",
+["Ravager"] = "Ravager",
+--Shared-Spec-spells
 }
 end
 

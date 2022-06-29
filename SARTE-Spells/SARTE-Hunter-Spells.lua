@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
@@ -85,5 +86,31 @@ SpellTableHunter = {--Hunter spells
 ["Counterattack"] = "Counterattack",
 ["Black Arrow"] = "Black Arrow",
 ["Freezing Arrow"] = "Freezing Arrow",
+}
+elseif isRetailWow then
+SpellTableHunter = {--Hunter Spells
+--All-Specs
+["Freezing Trap"] = "Freezing Trap",
+["Aspect of the Turtle"] = "Aspect of the Turtle",
+["Aspect of the Cheetah"] = "Aspect of the Cheetah",
+["Aspect of the Chameleon"] = "Aspect of the Chameleon",
+["Feign Death"] = "Feign Death",
+["Flare"] = "Flare",
+["Tar Trap"] = "Tar Trap",
+["Misdirection"] = "Misdirection",
+["Tranquilizing Shot"] = "Tranquilizing Shot",
+["Kill Shot"] = "Kill Shot",
+["Mend Pet"] = "Mend Pet",
+["Disengage"] = "Disengage",
+["Play Dead"] = "Play Dead",
+["Exhilaration"] = "Exhilaration",
+["Wailing Arrow"] = "Wailing Arrow",
+["Feed Pet"] = "Feed Pet",
+--Beast Mastery
+
+--Marksmanship
+
+--Survial
+
 }
 end

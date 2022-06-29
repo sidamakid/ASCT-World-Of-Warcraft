@@ -36,8 +36,8 @@ SARTE-Shaman-Spells.lua
 SARTE-Hunter-Spells.lua
 SARTE-Warrior-Spells.lua
 SARTE-Death-Knight-Spells.lua
-SARTE-Shared-Spell-Effects.lua
 SARTE-Shared-Cooldwn-Spells.lua
+SARTE-Shared-Spell-Effects.lua
 # Racial spells: Racial_Spells\
 Racial_Spells\SARTE-Dwarf-Spells.lua
 Racial_Spells\SARTE-Human-Spells.lua

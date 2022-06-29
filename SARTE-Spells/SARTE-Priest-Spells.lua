@@ -84,7 +84,7 @@ SpellTablePriest = {--Priest Spells
 ["Penance"] = "Penance",
 }
 elseif isRetailWow then
-SpellTablePriest = {--Priest
+SpellTablePriest = {--Priest Spells
 --All-Specs
 ["Power Infusion"] = "Power Infusion",
 ["Mass Dispel"] = "Mass Dispel",
@@ -106,10 +106,14 @@ SpellTablePriest = {--Priest
 ["Surrender to Madness"] = "Surrender to Madness",
 ["Shadow Crash"] = "Shadow Crash",
 ["Damnation"] = "Damnation",
+["Shadowfiend"] = "Shadowfiend",
 ["Void Torrent"] = "Void Torrent",
+["Shadow Covenant"] = "Shadow Covenant",
 --Holy
 ["Symbol of Hope"] = "Symbol of Hope",
 ["Guardian Spirit"] = "Guardian Spirit",
+["Shining Force"] = "Shining Force",
+["Divine Star"] = "Divine Star",
 ["Divine Hymn"] = "Divine Hymn",
 ["Holy Word: Chastise"] = "Holy Word: Chastise",
 ["Holy Word: Serenity"] = "Holy Word: Serenity",
@@ -127,15 +131,12 @@ SpellTablePriest = {--Priest
 ["Power Word: Radiance"] = "Power Word: Radiance",
 ["Schism"] = "Schism",
 ["Mindbender"] = "Mindbender",
+["Angelic Feather"] = "Angelic Feather",
 ["Evangelism"] = "Evangelism",
+["Halo"] = "Halo",
+["Purify"] = "Purify",
 ["Spirit Shell"] = "Spirit Shell",
 --Shared-Spec-spells
-["Shadowfiend"] = "Shadowfiend",
-["Purify"] = "Purify",
-["Angelic Feather"] = "Angelic Feather",
-["Shining Force"] = "Shining Force",
-["Divine Star"] = "Divine Star",
-["Halo"] = "Halo",
-["Shadow Covenant"] = "Shadow Covenant",
+
 }
 end

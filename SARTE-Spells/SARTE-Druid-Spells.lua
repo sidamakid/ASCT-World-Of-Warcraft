@@ -89,7 +89,7 @@ SpellTableDruid = {--Druid Spells
 ["Survival Instincts"] = "Survival Instincts",
 }
 elseif isRetailWow then
-SpellTableDruid = {
+SpellTableDruid = {--Druid Spells
 --All-Specs
 ["Barkskin"] = "Barkskin",
 ["Rebirth"] = "Rebirth",
@@ -121,23 +121,25 @@ SpellTableDruid = {
 ["Flourish"] = "Flourish",
 ["Incarnation: Tree of Life"] = "Incarnation: Tree of Life",
 ["Overgrowth"] = "Overgrowth",
+["Innervate"] = "Innervate",
 --Fearl
 ["Tiger's Fury"] = "Tiger's Fury",
 ["Maim"] = "Maim",
 ["Feral Frenzy"] = "Feral Frenzy",
 ["Brutal Slash"] = "Brutal Slash",
 ["Incarnation: King of the Jungle"] = "Incarnation: King of the Jungle",
+["Remove Corruption"] = "Remove Corruption",
+["Survival Instincts"] = "Survival Instincts",
 --Guardian
 ["Frenzied Regeneration"] = "Frenzied Regeneration",
 ["Incapacitating Roar"] = "Incapacitating Roar",
 ["Incarnation: Guardian of Ursoc"] = "Incarnation: Guardian of Ursoc",
 ["Pulverize"] = "Pulverize",
 ["Bristling Fur"] = "Bristling Fur",
---Shared-Spec-spells
-["Innervate"] = "Innervate",
-["Remove Corruption"] = "Remove Corruption",
-["Survival Instincts"] = "Survival Instincts",
 ["Berserk"] = "Berserk",
 ["Skull Bash"] = "Skull Bash",
+--Shared-Spec-spells
+
+
 }
 end
