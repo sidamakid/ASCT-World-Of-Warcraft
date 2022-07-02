@@ -23,17 +23,9 @@
 ## Notes-ptBR: Mostra quando suas habilidades estão prontas!
 ## Notes-itIT: Ti mostra quando le tue abilità sono pronte!
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Spells
+## RequiredDeps: SARTE-Spells, SARTE-localize
 
-
-
-
-
-# SARTE-Text-Localize-Table
-SARTE-Localize-Ready-text-Table.lua
-# SARTE-Localize
-SARTE-Text-Localize.lua
-# SARTE-Text-Normal-Text {
+# SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic
 SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua

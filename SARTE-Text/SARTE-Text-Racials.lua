@@ -16,14 +16,14 @@ f:SetScript("OnEvent", --Run when our event fires
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
       --Races
-      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true)
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Troll"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -32,7 +32,7 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                 local name, _, icon = GetSpellInfo(spellName)
                 local msg = format("|T%d:18|t  %s is now ready!", icon, name)
-                CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
+                CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
             end
@@ -55,16 +55,16 @@ f:SetScript("OnEvent", --Run when our event fires
       local spellName = GetSpellInfo(spellName)
       if unit == "player" and
       --Races
-      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Human"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTERACIALSDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
+      SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Human"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableGnome[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Gnome"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableUndead[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Undead"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
+      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -73,7 +73,7 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                 local name, _, icon = GetSpellInfo(spellName)
                 local msg = format("|T%d:18|t  %s"..L_Is_Now_Ready["msg"], icon, name)
-                CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
+                CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
             end

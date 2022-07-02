@@ -1,13 +1,34 @@
+---------------------------
+--Checks if is Classic wow
+---------------------------
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
-
 if isClassicWow then
-local L = SARTE_Localization_My_Localization_Table;
+---------------------------
+--Localize Table
+---------------------------
+local L = SARTE_LOCALE_TABLE
+---------------------------
+--For Call Back handler
+---------------------------
 local function InitializeOptions()
-
+---------------------------
+--Create Our Frame
+---------------------------
 local f = CreateFrame("Frame")
-
-
+---------------------------
+--Normal table
+---------------------------
 f.defaults = {
+	["Race"] = {
+	Orc = false,
+	Undead = false,
+	Troll = false,
+	Tauren = false,
+	Gnome = false,
+	Human = false,
+	["Night Elf"] = false,
+	Dwarf = false,
+	},
 	--Classes
 	["Class"] = {
 		Rogue = false,
@@ -188,7 +209,7 @@ f.defaults = {
 		["Wyvern Sting"] = false,
 		["Counterattack"] = false,
     },
-	["Hunter_Traps"] = {
+	["Shared_Hunter_spells"] = {
 		["Traps"] = false,
 	},
 	--Paladin
@@ -237,61 +258,68 @@ f.defaults = {
 		["Cold Snap"] = false,
 		["Ice Barrier"] = false,
 	},
+	["Undead"] = {
+	Cannibalize = false,
+	["Will of the Forsaken"] = false,
+	},
+	["Orc"] = {
+	["Blood Fury"] = false,
+	},
+	["Troll"] = {
+	Berserking = false,
+	},
+	["Tauren"] = {
+	["War Stomp"] = false,
+	},
+	["Human"] = {
+	Perception = false,
+	},
+	["Night Elf"] = {
+	Shadowmeld = false,
+	},
+	["Gnome"] = {
+	["Escape Artist"] = false,
+	},
+	["Dwarf"] = {
+	Stoneform = false,
+	},
 }
-
+---------------------------
+--Create Options panel
+---------------------------
 function f:InitializeOptions_Class()
 	self.panel_main = CreateFrame("Frame")
-	self.panel_main.name =  L["Title_Class"]
+	self.panel_main.name =  L["Title"]
 	InterfaceOptions_AddCategory(self.panel_main)
+---------------------------
+--MiniMap Icon
+---------------------------
+local MinimapDataObject = LibStub("LibDataBroker-1.1"):NewDataObject("SARTE", {
+    type = "SARTE",
+    text = L["Title"],
+    icon = "Interface\\Addons\\SARTE-Options\\SARTE-Image_4.tga",
+    OnClick = function() InterfaceOptionsFrame_OpenToCategory(f.panel_main)  end,
+	--GameToolTip
+    OnTooltipShow = function(tooltip)
+      tooltip:AddLine(L["Title"])
+	  tooltip:AddLine(L["Tooltip Button"])
+    end,
+});
 
-	local resetbtn = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
-	resetbtn:SetPoint("BOTTOMLEFT", 20, 20)
-	resetbtn:SetText(L["Reset Class"])
-	resetbtn:SetWidth(100)
-	resetbtn:SetScript("OnClick", function()
-		--Class
-		for k in pairs(SARTESPELLDB["Class"]) do SARTESPELLDB["Class"][k]=false end
-		--Rogue
-		for k in pairs(SARTESPELLDB["Assassination"]) do SARTESPELLDB["Assassination"][k]=false end
-		for k in pairs(SARTESPELLDB["Combat"]) do SARTESPELLDB["Combat"][k]=false end
-		for k in pairs(SARTESPELLDB["Subtlety"]) do SARTESPELLDB["Subtlety"][k]=false end
-		--Priest
-		for k in pairs(SARTESPELLDB["Shadow"]) do SARTESPELLDB["Shadow"][k]=false end
-		for k in pairs(SARTESPELLDB["Holy_Priest"]) do SARTESPELLDB["Holy_Priest"][k]=false end
-		for k in pairs(SARTESPELLDB["Discipline"]) do SARTESPELLDB["Discipline"][k]=false end
-		for k in pairs(SARTESPELLDB["Racials_Priest"]) do SARTESPELLDB["Racials_Priest"][k]=false end
-		--Warrior
-		for k in pairs(SARTESPELLDB["Arms"]) do SARTESPELLDB["Arms"][k]=false end
-		for k in pairs(SARTESPELLDB["Fury"]) do SARTESPELLDB["Fury"][k]=false end
-		for k in pairs(SARTESPELLDB["Protection_Warrior"]) do SARTESPELLDB["Protection_Warrior"][k]=false end
-		--Druid
-		for k in pairs(SARTESPELLDB["Balance"]) do SARTESPELLDB["Balance"][k]=false end
-		for k in pairs(SARTESPELLDB["Feral_Combat"]) do SARTESPELLDB["Feral_Combat"][k]=false end
-		for k in pairs(SARTESPELLDB["Druid_Restoration"]) do SARTESPELLDB["Druid_Restoration"][k]=false end
-		--Warlock
-		for k in pairs(SARTESPELLDB["Affliction"]) do SARTESPELLDB["Affliction"][k]=false end
-		for k in pairs(SARTESPELLDB["Demonology"]) do SARTESPELLDB["Demonology"][k]=false end
-		for k in pairs(SARTESPELLDB["Destruction"]) do SARTESPELLDB["Destruction"][k]=false end
-		--Shaman
-		for k in pairs(SARTESPELLDB["Elemental"]) do SARTESPELLDB["Elemental"][k]=false end
-		for k in pairs(SARTESPELLDB["Enhancement"]) do SARTESPELLDB["Enhancement"][k]=false end
-		for k in pairs(SARTESPELLDB["Shaman_Restoration"]) do SARTESPELLDB["Shaman_Restoration"][k]=false end
-		--Hunter
-		for k in pairs(SARTESPELLDB["Beast Mastery"]) do SARTESPELLDB["Beast Mastery"][k]=false end
-		for k in pairs(SARTESPELLDB["Marksmanship"]) do SARTESPELLDB["Marksmanship"][k]=false end
-		for k in pairs(SARTESPELLDB["Survival"]) do SARTESPELLDB["Survival"][k]=false end
-		--Paladin
-		for k in pairs(SARTESPELLDB["Holy_Paladin"]) do SARTESPELLDB["Holy_Paladin"][k]=false end
-		for k in pairs(SARTESPELLDB["Protection_Paladin"]) do SARTESPELLDB["Protection_Paladin"][k]=false end
-		for k in pairs(SARTESPELLDB["Retribution"]) do SARTESPELLDB["Retribution"][k]=false end
-		--Mage
-		for k in pairs(SARTESPELLDB["Arcane"]) do SARTESPELLDB["Arcane"][k]=false end
-		for k in pairs(SARTESPELLDB["Fire"]) do SARTESPELLDB["Fire"][k]=false end
-		for k in pairs(SARTESPELLDB["Frost_Mage"]) do SARTESPELLDB["Frost_Mage"][k]=false end
-		--Prints
-		print("/rl")
-		end)
-
+LibStub("LibDBIcon-1.0"):Register("SARTE", MinimapDataObject, SARTESPELLDB)
+---------------------------
+--Color Picker
+---------------------------
+local Color_picker_SARTE = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
+	Color_picker_SARTE:SetPoint("TOPRIGHT", -30, -20)
+	Color_picker_SARTE:SetText(L["Color Picker"])
+	Color_picker_SARTE:SetWidth(100)
+	Color_picker_SARTE:SetScript("OnClick", function()
+	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
+end)
+---------------------------
+--Automatic Class picker
+---------------------------
 local Class = select(3, UnitClass("player"))
 if Class == 4 then
 	SARTESPELLDB["Class"]["Rogue"] = true
@@ -313,60 +341,82 @@ elseif Class == 8 then
 	SARTESPELLDB["Class"]["Mage"] = true
 end
 
+---------------------------
+--Sub Panel Maker
+---------------------------
+function SubPanelMaker(Name)
+local Frames = CreateFrame("Frame")
+Frames.name = Name
+Frames.parent = self.panel_main.name
+InterfaceOptions_AddCategory(Frames)
+return Frames
+end
 
-
-
-	local function SubPanelMaker(Name)
-	local Frames = CreateFrame("Frame")
-	Frames.name = Name
-	Frames.parent = self.panel_main.name
-	InterfaceOptions_AddCategory(Frames)
-	return Frames
-	end
-
-
-
-
---------------------------
+---------------------------
 --Rogue
---------------------------
+---------------------------
 if SARTESPELLDB["Class"]["Rogue"] == true then
-	local Panel_1 = SubPanelMaker(L["Assassination"])
-	local Panel_2 = SubPanelMaker(L["Combat"])
-	local Panel_3 = SubPanelMaker(L["Subtlety"])
+local Panel_1 = SubPanelMaker(L["Assassination"])
+local Panel_2 = SubPanelMaker(L["Combat"])
+local Panel_3 = SubPanelMaker(L["Subtlety"])
 
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Assassination"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_1/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Assassination"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
-        x_1=x_1+1
+local col_1 = 4
+local x_1 = 0
+for v in pairs(SARTESPELLDB["Assassination"]) do
+	local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_1/col_1))
+	b.Text:SetText(SDT_GetLocalizedName(v))
+	b:SetChecked(SARTESPELLDB["Assassination"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Assassination"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
 	end
+	end
+	x_1=x_1+1
+	
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Combat"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Combat"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Combat"][v] = s:GetChecked() end)
-        x_2=x_2+1
+local col_2 = 4
+local x_2 = 0
+for v in pairs(SARTESPELLDB["Combat"]) do
+	local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+	b.Text:SetText(SDT_GetLocalizedName(v))
+	b:SetChecked(SARTESPELLDB["Combat"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Combat"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Combat"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
 	end
+	end
+	x_2=x_2+1
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Subtlety"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Subtlety"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Subtlety"][v] = s:GetChecked() end)
-        x_3=x_3+1
+local col_3 = 4
+local x_3 = 0
+for v in pairs(SARTESPELLDB["Subtlety"]) do
+	local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+	b.Text:SetText(SDT_GetLocalizedName(v))
+	b:SetChecked(SARTESPELLDB["Subtlety"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Subtlety"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Subtlety"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
 	end
+	end
+	x_3=x_3+1
+end
 ---------------------------
 --Priest
 ---------------------------
@@ -384,6 +434,14 @@ for v in pairs(SARTESPELLDB["Shadow"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Shadow"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Shadow"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Shadow"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -395,6 +453,14 @@ for v in pairs(SARTESPELLDB["Holy_Priest"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Holy_Priest"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Priest"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Holy_Priest"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -406,6 +472,14 @@ for v in pairs(SARTESPELLDB["Discipline"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Discipline"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Discipline"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Discipline"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 
@@ -417,6 +491,14 @@ for v in pairs(SARTESPELLDB["Racials_Priest"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Racials_Priest"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Racials_Priest"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Racials_Priest"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_4=x_4+1
 end
 ---------------------------
@@ -436,6 +518,14 @@ for v in pairs(SARTESPELLDB["Arms"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Arms"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Arms"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Arms"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -447,6 +537,14 @@ for v in pairs(SARTESPELLDB["Fury"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Fury"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Fury"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Fury"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -458,13 +556,21 @@ for v in pairs(SARTESPELLDB["Protection_Warrior"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Protection_Warrior"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Warrior"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Protection_Warrior"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 ---------------------------
 --Druid
 ---------------------------
 elseif SARTESPELLDB["Class"]["Druid"] == true then
-local Panel_1 = SubPanelMaker(L["Druid"])
+local Panel_1 = SubPanelMaker(L["Balance"])
 local Panel_2 = SubPanelMaker(L["Feral_Combat"])
 local Panel_3 = SubPanelMaker(L["Restoration"])
 
@@ -476,6 +582,14 @@ for v in pairs(SARTESPELLDB["Balance"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Balance"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Balance"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Balance"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -487,6 +601,14 @@ for v in pairs(SARTESPELLDB["Feral_Combat"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Feral_Combat"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Feral_Combat"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Feral_Combat"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -498,6 +620,14 @@ for v in pairs(SARTESPELLDB["Druid_Restoration"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Druid_Restoration"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Druid_Restoration"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Druid_Restoration"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 ---------------------------
@@ -507,7 +637,7 @@ elseif SARTESPELLDB["Class"]["Shaman"] == true then
 local Panel_1 = SubPanelMaker(L["Elemental"])
 local Panel_2 = SubPanelMaker(L["Enhancement"])
 local Panel_3 = SubPanelMaker(L["Restoration"])
-local Panel_4 = SubPanelMaker("Shared_Spell_CDS")
+local Panel_4 = SubPanelMaker(L["Shared Spell cd's"])
 
 local col_1 = 4
 local x_1 = 0
@@ -517,6 +647,14 @@ for v in pairs(SARTESPELLDB["Elemental"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Elemental"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Elemental"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Elemental"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -528,6 +666,14 @@ for v in pairs(SARTESPELLDB["Enhancement"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Enhancement"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Enhancement"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Enhancement"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -539,6 +685,14 @@ for v in pairs(SARTESPELLDB["Shaman_Restoration"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Shaman_Restoration"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Shaman_Restoration"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Shaman_Restoration"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 
@@ -568,6 +722,14 @@ for v in pairs(SARTESPELLDB["Affliction"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Affliction"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Affliction"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Affliction"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -579,6 +741,14 @@ for v in pairs(SARTESPELLDB["Demonology"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Demonology"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Demonology"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Demonology"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -590,6 +760,14 @@ for v in pairs(SARTESPELLDB["Destruction"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Destruction"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Destruction"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Destruction"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 ---------------------------
@@ -599,7 +777,7 @@ elseif SARTESPELLDB["Class"]["Hunter"] == true then
 local Panel_1 = SubPanelMaker(L["Beast Mastery"])
 local Panel_2 = SubPanelMaker(L["Marksmanship"])
 local Panel_3 = SubPanelMaker(L["Survival"])
-local Panel_4 = SubPanelMaker("Shared_Spell_CDS")
+local Panel_4 = SubPanelMaker(L["Shared Spell cd's"])
 
 local col_1 = 4
 local x_1 = 0
@@ -609,6 +787,14 @@ for v in pairs(SARTESPELLDB["Beast Mastery"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Beast Mastery"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Beast Mastery"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Beast Mastery"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -620,6 +806,14 @@ for v in pairs(SARTESPELLDB["Marksmanship"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Marksmanship"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Marksmanship"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Marksmanship"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -631,17 +825,25 @@ for v in pairs(SARTESPELLDB["Survival"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Survival"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Survival"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Survival"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 
 local col_4 = 4
 local x_4 = 0
-for v in pairs(SARTESPELLDB["Hunter_Traps"]) do
+for v in pairs(SARTESPELLDB["Shared_Hunter_spells"]) do
 	local b = CreateFrame("CheckButton", nil, Panel_4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_4 % col_4), -20 + (- b:GetHeight()-5) * math.floor(x_4/col_4))
 	b.Text:SetText(L[v])
-	b:SetChecked(SARTESPELLDB["Hunter_Traps"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Hunter_Traps"][v] = s:GetChecked() end)
+	b:SetChecked(SARTESPELLDB["Shared_Hunter_spells"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Shared_Hunter_spells"][v] = s:GetChecked() end)
 	x_4=x_4+1
 end
 ---------------------------
@@ -660,6 +862,14 @@ for v in pairs(SARTESPELLDB["Holy_Paladin"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Holy_Paladin"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Paladin"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Holy_Paladin"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -671,6 +881,14 @@ for v in pairs(SARTESPELLDB["Protection_Paladin"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Protection_Paladin"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Paladin"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Protection_Paladin"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -682,6 +900,14 @@ for v in pairs(SARTESPELLDB["Retribution"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Retribution"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Retribution"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Retribution"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 ---------------------------
@@ -700,6 +926,14 @@ for v in pairs(SARTESPELLDB["Arcane"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Arcane"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Arcane"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Arcane"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_1=x_1+1
 end
 
@@ -711,6 +945,14 @@ for v in pairs(SARTESPELLDB["Fire"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Fire"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Fire"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Fire"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_2=x_2+1
 end
 
@@ -722,34 +964,241 @@ for v in pairs(SARTESPELLDB["Frost_Mage"]) do
 	b.Text:SetText(SDT_GetLocalizedName(v))
 	b:SetChecked(SARTESPELLDB["Frost_Mage"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Frost_Mage"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Frost_Mage"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
 	x_3=x_3+1
 end
 
 end
+------------------------
+--AutoMatic Race Picker
+------------------------
+local Race = select(3, UnitRace("player"))
+if Race == 5 then
+	SARTESPELLDB["Race"]["Undead"] = true
+elseif Race == 2 then
+	SARTESPELLDB["Race"]["Orc"] = true
+elseif Race == 3 then
+	SARTESPELLDB["Race"]["Dwarf"] = true
+elseif Race == 7 then
+	SARTESPELLDB["Race"]["Gnome"] = true
+elseif Race == 4 then
+	SARTESPELLDB["Race"]["Night Elf"] = true
+elseif Race == 8 then
+	SARTESPELLDB["Race"]["Troll"] = true
+elseif Race == 6 then
+	SARTESPELLDB["Race"]["Tauren"] = true
+elseif Race == 1 then
+	SARTESPELLDB["Race"]["Human"] = true
+end
+-------------------------
+--Racials
+------------------------
+local Racial_Panel = SubPanelMaker(L["Racials"])
+------------------------
+--Undead
+------------------------
+if SARTESPELLDB["Race"]["Undead"] == true then
+local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Undead"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(v)
+  b:SetChecked(SARTESPELLDB["Undead"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Undead"][v] = s:GetChecked() end)
+	local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Undead"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+	end
+------------------------
+--Orc
+------------------------
+elseif SARTESPELLDB["Race"]["Orc"] == true then
+local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Orc"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(v)
+  b:SetChecked(SARTESPELLDB["Orc"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Orc"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Orc"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+	end
+-----------------------
+--Troll
+-----------------------
+elseif SARTESPELLDB["Race"]["Troll"] == true then
+local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Troll"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Troll"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Troll"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Troll"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+	end
+-----------------------
+--Tauren
+-----------------------
+elseif SARTESPELLDB["Race"]["Tauren"] == true then
+local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Tauren"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Tauren"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Tauren"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Tauren"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+	end
+---------------------
+ --Human
+--------------------- 
+elseif SARTESPELLDB["Race"]["Human"] == true then
+local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Human"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Human"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Human"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Human"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+	end
+ -------------------
+ --Night Elf
+ -------------------
+ 
+elseif SARTESPELLDB["Race"]["Night Elf"] == true then
+ local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Night Elf"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Night Elf"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Night Elf"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Night Elf"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+   end
+ ---------------------
+--Gnome
+---------------------
+elseif SARTESPELLDB["Race"]["Gnome"] == true then
+ local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Gnome"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Gnome"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Gnome"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Gnome"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+   end
+  ---------------------
+--Dwarf
+---------------------
+elseif SARTESPELLDB["Race"]["Dwarf"] == true then
+ local modifierfirst = -20 -- variable to keep track of what to subtract
+	for v in pairs(SARTESPELLDB["Dwarf"]) do
+  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+  b:SetPoint("TOPLEFT", 20, modifierfirst)
+  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
+  b.Text:SetText(SDT_GetLocalizedName(v))
+  b:SetChecked(SARTESPELLDB["Dwarf"][v])
+  b:SetScript("OnClick", function(s) SARTESPELLDB["Dwarf"][v] = s:GetChecked() end)
+  local tex = b:CreateTexture()
+	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+	tex:SetSize(22, 22)
+	for d in pairs(SARTESPELLDB["Dwarf"]) do
+	if v == d then
+		tex:SetTexture(SDT_GetLocalizedIcon(d))
+	end
+	end
+   end
 
 end
 
 
+end
 
 
-
-
-
-
+---------------------------
+--Slash Commands
+---------------------------
 SLASH_SARTE1 = "/SAT"
-
 SlashCmdList.SARTE = function(msg, editBox)
 	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
 	InterfaceOptionsFrame_OpenToCategory(f.panel_main)
 end
-
+---------------------------
+--Slash Commands
+---------------------------
 SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
-
+---------------------------
+--Saved Variables
+---------------------------
 SARTESPELLDB = SARTESPELLDB or CopyTable(f.defaults)
 f:InitializeOptions_Class()
+---------------------------
+--Not used
+---------------------------
 f.db = SARTESPELLDB
-
 end
 
 SDT_AddLocalizedCallback(function()

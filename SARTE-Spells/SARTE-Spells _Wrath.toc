@@ -22,9 +22,8 @@
 ## Notes-deDE: Alle Zaubersprüche für die Bildlauffähigkeit.
 ## Notes-itIT: Tutti gli incantesimi per il testo della capacità di scorrimento.
 ## Author: Sidamakid Tinman
+## RequiredDeps: SARTE-localize
 
-# Localizing
-SARTE-Localize-Spells.lua
 # Spell Lists
 SARTE-Rogue-Spells.lua
 SARTE-Priest-Spells.lua

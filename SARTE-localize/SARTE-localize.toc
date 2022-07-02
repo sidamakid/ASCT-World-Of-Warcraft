@@ -1,0 +1,42 @@
+## Interface: 90205
+## Version: 1.1.0
+## Title: SARTE-Localize
+## Title-koKR: SARTE-지역화
+## Title-frFR: SARTE-Localiser
+## Title-deDE: SARTE-Lokalisieren
+## Title-zhCN: SARTE-本地化
+## Title-esES: SARTE-Localizar
+## Title-zhTW: SARTE-當地語系化
+## Title-esMX: SARTE-Localizar
+## Title-ruRU: SARTE-Локализовать
+## Title-ptBR: SARTE-Localizar
+## Title-itIT: SARTE-Localizzare
+## Notes: Scrolling ability Text Localizing
+## Notes-koKR: 스크롤 기능 텍스트 지역화
+## Notes-frFR: Capacité de défilement Localisation de texte
+## Notes-deDE: Bildlauffähigkeit Text lokalisieren
+## Notes-zhCN: 滚动功能文本本地化
+## Notes-esES: Capacidad de desplazamiento Localización de texto
+## Notes-zhTW: 滾動功能文本當地語系化
+## Notes-esMX: Capacidad de desplazamiento Localización de texto
+## Notes-ruRU: Возможность прокрутки Локализация текста
+## Notes-ptBR: Capacidade de rolagem Localização de texto
+## Notes-itIT: Capacità di scorrimento Localizzazione del testo
+## Author: Sidamakid Tinman
+
+# Table Localize
+localize.lua
+# Spells Localize
+SARTE-Localize-Spells.lua
+# locales
+locale\enUS.lua
+locale\koKR.lua
+locale\frFR.lua
+locale\deDE.lua
+locale\zhCN.lua
+locale\esES.lua
+locale\zhTW.lua
+locale\esMX.lua
+locale\ruRU.lua
+locale\ptBR.lua
+locale\itIT.lua

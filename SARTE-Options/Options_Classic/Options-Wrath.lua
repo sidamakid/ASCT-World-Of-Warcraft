@@ -1,12 +1,14 @@
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 
 if isWrathWow then
-local L = SARTE_Localization_My_Localization_Table;
+local L = SARTE_LOCALE_TABLE
 local function InitializeOptions()
 local f = CreateFrame("Frame")
 
 f.defaults = {
-	--Classes
+------------------------
+--Classes
+------------------------
 	["Class"] = {
 		Rogue = false,
 		Priest = false,
@@ -19,8 +21,10 @@ f.defaults = {
 		Mage = false,
 		Death_Knight = false,
 		},
-	--Rogue spells
-		["Assassination"] = {
+------------------------
+--Rogue spells
+------------------------
+	["Assassination"] = {
 		["Cold Blood"] = false,
 		["Kidney Shot"] = false,
 	},
@@ -49,7 +53,9 @@ f.defaults = {
 		["Shadow Dance"] = false,
 		["Tricks of the Trade"] = false,
 	},
+------------------------
 --Priest spells
+------------------------
 	["Shadow"] = {
 		["Shadow Word: Death"] = false,
 		["Fade"] = false,
@@ -78,7 +84,9 @@ f.defaults = {
 		["Pain Suppression"] = false,
 		["Penance"] = false,
 	  },
-	  --Warrior spells
+------------------------
+--Warrior spells
+------------------------
 	["Arms"] = {
 		["Thunder Clap"] = false,
 		["Charge"] = false,
@@ -117,7 +125,9 @@ f.defaults = {
 		["Concussion Blow"] = false,
 		["Shockwave"] = false,
 	},
-		--Druid Spells
+------------------------
+--Druid Spells
+------------------------
 	["Balance"] = {
 		["Innervate"] = false,
 		["Barkskin"] = false,
@@ -151,7 +161,9 @@ f.defaults = {
 		["Nature's Swiftness"] = false,
 		["Wild Growth"] = false,
 		},
-	--Warlock spells
+------------------------
+--Warlock spells
+------------------------
   ["Affliction"] = {
 	["Curse of Doom"] = false,
 	["Death Coil"] = false,
@@ -181,7 +193,9 @@ f.defaults = {
 		["Shadowburn"] = false,
 		["Chaos Bolt"] = false,
 	},
-	--Shaman spells
+------------------------
+--Shaman spells
+------------------------
 	["Elemental"] = {
 		["Fire Elemental Totem"] = false,
 		["Chain Lightning"] = false,
@@ -189,7 +203,6 @@ f.defaults = {
 		["Fire Nova Totem"] = false,
 		["Stoneclaw Totem"] = false,
 		["Elemental Mastery"] = false,
-		--["Shocks"] = false,
 		},
 	["Enhancement"] = {
 		["Grounding Totem"] = false,
@@ -203,9 +216,10 @@ f.defaults = {
 		["Mana Tide Totem"] = false,
 		["Nature's Swiftness"] = false,
 	},
-	--Hunter spells
+------------------------
+--Hunter spells
+------------------------
 	["Beast Mastery"] = {
-         --["Traps"] = false,
 		 ["Kill Command"] = false,
 		 ["Bestial Wrath"] = false,
 		 ["Scare Beast"] = false,
@@ -243,7 +257,9 @@ f.defaults = {
 		["Freezing Arrow"] = false,
 		["Explosive Shot"] = false,
     },
-	--Paladin
+------------------------
+--Paladin
+------------------------
 	["Holy_Paladin"] = {
 		["Consecration"] = false,
 		["Exorcism"] = false,
@@ -283,7 +299,9 @@ f.defaults = {
 		["Repentance"] = false,
 		["Divine Storm"] = false,
 	},
-	--Mage
+------------------------
+--Mage
+------------------------
 	["Arcane"] = {
 		["Ritual of Refreshment"] = false,
 		["Invisibility"] = false,
@@ -294,7 +312,6 @@ f.defaults = {
 		["Arcane Barrage"] = false,
 		["Evocation"] = false,
 	},
-	--Fire
 	["Fire"] = {
 		["Fire Blast"] = false,
 		["Fire Ward"] = false,
@@ -313,7 +330,9 @@ f.defaults = {
 		["Deep Freeze"] = false,
 		["Ice Barrier"] = false,
 	},
-	--Death_Knight
+------------------------
+--Death_Knight
+------------------------
 	["Blood"] = {
 		["Mark of Blood"] = false,
 		["Dancing Rune Weapon"] = false,
@@ -345,59 +364,30 @@ function f:InitializeOptions_Class()
 	self.panel_main = CreateFrame("Frame")
 	self.panel_main.name = L["Title_Class"]
 	InterfaceOptions_AddCategory(self.panel_main)
+local MinimapDataObject = LibStub("LibDataBroker-1.1"):NewDataObject("SARTE", {
+    type = "SARTE",
+    text = L["Title"],
+    icon = "Interface\\Addons\\SARTE-Options\\SARTE-Image_4.tga",
+    OnClick = function() InterfaceOptionsFrame_OpenToCategory(f.panel_main)  end,
+	--GameToolTip
+    OnTooltipShow = function(tooltip)
+      tooltip:AddLine(L["Title"])
+	  tooltip:AddLine(L["Tooltip Button"])
+    end,
+});
 
+LibStub("LibDBIcon-1.0"):Register("SARTE", MinimapDataObject, SARTESPELLDB)
+---------------------------
+--Color Picker
+---------------------------
+local Color_picker_SARTE = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
+	Color_picker_SARTE:SetPoint("TOPRIGHT", -30, -20)
+	Color_picker_SARTE:SetText(L["Color Picker"])
+	Color_picker_SARTE:SetWidth(100)
+	Color_picker_SARTE:SetScript("OnClick", function()
+	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
+end)
 
-
-	local resetbtn = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
-	resetbtn:SetPoint("BOTTOMLEFT", 20, 20)
-	resetbtn:SetText(L["Reset Class"])
-	resetbtn:SetWidth(100)
-	resetbtn:SetScript("OnClick", function()
-    --Class
-	for k in pairs(SARTESPELLDB["Class"]) do SARTESPELLDB["Class"][k]=false end
-	--Rogue
-	for k in pairs(SARTESPELLDB["Assassination"]) do SARTESPELLDB["Assassination"][k]=false end
-	for k in pairs(SARTESPELLDB["Combat"]) do SARTESPELLDB["Combat"][k]=false end
-	for k in pairs(SARTESPELLDB["Subtlety"]) do SARTESPELLDB["Subtlety"][k]=false end
-	--Priest
-	for k in pairs(SARTESPELLDB["Shadow"]) do SARTESPELLDB["Shadow"][k]=false end
-	for k in pairs(SARTESPELLDB["Holy_Priest"]) do SARTESPELLDB["Holy_Priest"][k]=false end
-	for k in pairs(SARTESPELLDB["Discipline"]) do SARTESPELLDB["Discipline"][k]=false end
-	--Warrior
-	for k in pairs(SARTESPELLDB["Arms"]) do SARTESPELLDB["Arms"][k]=false end
-	for k in pairs(SARTESPELLDB["Fury"]) do SARTESPELLDB["Fury"][k]=false end
-	for k in pairs(SARTESPELLDB["Protection_Warrior"]) do SARTESPELLDB["Protection_Warrior"][k]=false end
-	--Druid
-	for k in pairs(SARTESPELLDB["Balance"]) do SARTESPELLDB["Balance"][k]=false end
-	for k in pairs(SARTESPELLDB["Feral_Combat"]) do SARTESPELLDB["Feral_Combat"][k]=false end
-	for k in pairs(SARTESPELLDB["Druid_Restoration"]) do SARTESPELLDB["Druid_Restoration"][k]=false end
-	--Warlock
-	for k in pairs(SARTESPELLDB["Affliction"]) do SARTESPELLDB["Affliction"][k]=false end
-	for k in pairs(SARTESPELLDB["Demonology"]) do SARTESPELLDB["Demonology"][k]=false end
-	for k in pairs(SARTESPELLDB["Destruction"]) do SARTESPELLDB["Destruction"][k]=false end
-	--Shaman
-	for k in pairs(SARTESPELLDB["Elemental"]) do SARTESPELLDB["Elemental"][k]=false end
-	for k in pairs(SARTESPELLDB["Enhancement"]) do SARTESPELLDB["Enhancement"][k]=false end
-	for k in pairs(SARTESPELLDB["Shaman_Restoration"]) do SARTESPELLDB["Shaman_Restoration"][k]=false end
-	--Hunter
-	for k in pairs(SARTESPELLDB["Beast Mastery"]) do SARTESPELLDB["Beast Mastery"][k]=false end
-	for k in pairs(SARTESPELLDB["Marksmanship"]) do SARTESPELLDB["Marksmanship"][k]=false end
-	for k in pairs(SARTESPELLDB["Survival"]) do SARTESPELLDB["Survival"][k]=false end
-	--Paladin
-	for k in pairs(SARTESPELLDB["Holy_Paladin"]) do SARTESPELLDB["Holy_Paladin"][k]=false end
-	for k in pairs(SARTESPELLDB["Protection_Paladin"]) do SARTESPELLDB["Protection_Paladin"][k]=false end
-	for k in pairs(SARTESPELLDB["Retribution"]) do SARTESPELLDB["Retribution"][k]=false end
-	--Mage
-	for k in pairs(SARTESPELLDB["Arcane"]) do SARTESPELLDB["Arcane"][k]=false end
-	for k in pairs(SARTESPELLDB["Fire"]) do SARTESPELLDB["Fire"][k]=false end
-	for k in pairs(SARTESPELLDB["Frost_Mage"]) do SARTESPELLDB["Frost_Mage"][k]=false end
-	--Death_Knight
-	for k in pairs(SARTESPELLDB["Blood"]) do SARTESPELLDB["Blood"][k]=false end
-	for k in pairs(SARTESPELLDB["Frost_DK"]) do SARTESPELLDB["Frost_DK"][k]=false end
-	for k in pairs(SARTESPELLDB["Unholy"]) do SARTESPELLDB["Unholy"][k]=false end
-	--Prints
-	print("/rl")
-	end)
 	local Class = UnitClassBase("player")
 	if Class == "ROGUE" then
 		SARTESPELLDB["Class"]["Rogue"] = true

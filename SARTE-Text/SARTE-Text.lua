@@ -2,7 +2,7 @@ local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 
 
 if isRetailWow then
-local L_Is_Now_Ready = SARTE_Ready_Text_Localization_My_Localization_Table
+local L = SARTE_LOCALE_TABLE
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
 
@@ -14,7 +14,7 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if unit == "player" and
+      if self and unit == "player" and
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
@@ -40,8 +40,8 @@ f:SetScript("OnEvent", --Run when our event fires
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
                local name, _, icon = GetSpellInfo(spellName)
-               local msg = format("|T%d:18|t  %s"..L_Is_Now_Ready["msg"], icon, name)
-                CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
+               local msg = format("|T%d:18|t  %s"..L["msg"], icon, name)
+                CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
             end
