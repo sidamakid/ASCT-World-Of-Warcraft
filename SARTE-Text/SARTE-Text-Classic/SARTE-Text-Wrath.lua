@@ -13,7 +13,7 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if self and unit == "player" and
+      if (unit == "player" and
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
@@ -33,7 +33,7 @@ f:SetScript("OnEvent", --Run when our event fires
       --Hunter
       SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true)) or
       --Death_Knight
-      SpellTableDeath_Knight[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Blood"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_DK"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Unholy"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableDeath_Knight[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Blood"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_DK"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Unholy"][SDT_GetEnglishName(spellName)] == true)))
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -42,7 +42,12 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                 local name, _, icon = GetSpellInfo(spellName)
                 local msg = format("|T%d:18|t  %s"..L["msg"], icon, name)
-                CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
+                local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+                if Comabt_Text == false then
+                   return
+                else
+                 CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
+                end
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
             end

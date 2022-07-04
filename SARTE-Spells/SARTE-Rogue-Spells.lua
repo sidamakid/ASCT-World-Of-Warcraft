@@ -83,23 +83,11 @@ SpellTableRogue = { --Rogue spells
 }
 elseif isRetailWow then
 SpellTableRogue = {--Rogue spells
---All-Specs
-["Blind"] = "Blind",
-["Cloak of Shadows"] = "Cloak of Shadows",
-["Vanish"] = "Vanish",
-["Stealth"] = "Stealth",
-["Shroud of Concealment"] = "Shroud of Concealment",
-["Evasion"] = "Evasion",
-["Kidney Shot"] = "Kidney Shot",
-["Shiv"] = "Shiv",
-["Feint"] = "Feint",
-["Kick"] = "Kick",
-["Crimson Vial"] = "Crimson Vial",
-["Distract"] = "Distract",
-["Sprint"] = "Sprint",
 --Assassination
 ["Vendetta"] = "Vendetta",
 ["Garrote"] = "Garrote",
+["Kidney Shot"] = "Kidney Shot",
+["Crimson Vial"] = "Crimson Vial",
 --Outlaw
 ["Adrenaline Rush"] = "Adrenaline Rush",
 ["Blade Flurry"] = "Blade Flurry",
@@ -110,6 +98,11 @@ SpellTableRogue = {--Rogue spells
 ["Ghostly Strike"] = "Ghostly Strike",
 ["Blade Rush"] = "Blade Rush",
 ["Killing Spree"] = "Killing Spree",
+["Shiv"] = "Shiv",
+["Evasion"] = "Evasion",
+["Feint"] = "Feint",
+["Kick"] = "Kick",
+["Sprint"] = "Sprint",
 --Subtlety
 ["Shadow Dance"] = "Shadow Dance",
 ["Shadow Blades"] = "Shadow Blades",
@@ -117,6 +110,11 @@ SpellTableRogue = {--Rogue spells
 ["Shuriken Tornado"] = "Shuriken Tornado",
 ["Secret Technique"] = "Secret Technique",
 ["Shadowstep"] = "Shadowstep",
---Shared-Spec-Spells
+["Cloak of Shadows"] = "Cloak of Shadows",
+["Vanish"] = "Vanish",
+["Stealth"] = "Stealth",
+["Blind"] = "Blind",
+["Shroud of Concealment"] = "Shroud of Concealment",
+["Distract"] = "Distract",
 }
 end

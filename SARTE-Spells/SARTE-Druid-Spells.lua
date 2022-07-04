@@ -90,18 +90,6 @@ SpellTableDruid = {--Druid Spells
 }
 elseif isRetailWow then
 SpellTableDruid = {--Druid Spells
---All-Specs
-["Barkskin"] = "Barkskin",
-["Rebirth"] = "Rebirth",
-["Dash"] = "Dash",
-["Dreamwalk"] = "Dreamwalk",
-["Soothe"] = "Soothe",
-["Mangle"] = "Mangle",
-["Thrash"] = "Thrash",
-["Prowl"] = "Prowl",
-["Stampeding Roar"] = "Stampeding Roar",
-["Charm Woodland Creature"] = "Charm Woodland Creature",
-["Growl"] = "Growl",
 --Balance
 ["Celestial Alignment"] = "Celestial Alignment",
 ["Typhoon"] = "Typhoon",
@@ -110,6 +98,8 @@ SpellTableDruid = {--Druid Spells
 ["Force of Nature"] = "Force of Nature",
 ["Incarnation: Chosen of Elune"] = "Incarnation: Chosen of Elune",
 ["New Moon"] = "New Moon",
+["Barkskin"] = "Barkskin",
+["Dreamwalk"] = "Dreamwalk",
 --Restoration
 ["Wild Growth"] = "Wild Growth",
 ["Tranquility"] = "Tranquility",
@@ -122,6 +112,8 @@ SpellTableDruid = {--Druid Spells
 ["Incarnation: Tree of Life"] = "Incarnation: Tree of Life",
 ["Overgrowth"] = "Overgrowth",
 ["Innervate"] = "Innervate",
+["Rebirth"] = "Rebirth",
+["Charm Woodland Creature"] = "Charm Woodland Creature",
 --Fearl
 ["Tiger's Fury"] = "Tiger's Fury",
 ["Maim"] = "Maim",
@@ -130,7 +122,11 @@ SpellTableDruid = {--Druid Spells
 ["Incarnation: King of the Jungle"] = "Incarnation: King of the Jungle",
 ["Remove Corruption"] = "Remove Corruption",
 ["Survival Instincts"] = "Survival Instincts",
---Guardian
+["Dash"] = "Dash",
+["Soothe"] = "Soothe",
+["Mangle"] = "Mangle",
+["Thrash"] = "Thrash",
+["Prowl"] = "Prowl",
 ["Frenzied Regeneration"] = "Frenzied Regeneration",
 ["Incapacitating Roar"] = "Incapacitating Roar",
 ["Incarnation: Guardian of Ursoc"] = "Incarnation: Guardian of Ursoc",
@@ -138,8 +134,7 @@ SpellTableDruid = {--Druid Spells
 ["Bristling Fur"] = "Bristling Fur",
 ["Berserk"] = "Berserk",
 ["Skull Bash"] = "Skull Bash",
---Shared-Spec-spells
-
-
+["Growl"] = "Growl",
+["Stampeding Roar"] = "Stampeding Roar",
 }
 end

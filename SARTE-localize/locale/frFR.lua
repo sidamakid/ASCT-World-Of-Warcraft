@@ -41,6 +41,16 @@ if locale == "frFR" then
  L["Mage"] = "Mage";
  L["Arcane"] = "Arcanes";
  L["Fire"] = "Feu";
+ --Demon Hunter
+ L["Havoc"] = "Rovina";
+ L["Vengeance"] = "Vendetta";
+ --Death Knight
+ L["Blood"] = "Sang";
+ L["Unholy"] = "Impie";
+ --Monk
+ L["Brewmaster"] = "Maître brasseur";
+ L["Mistweaver"] = "Tisserand de brume";
+ L["Windwalker"] = "Marcheur de vent";
   --Shared-Spec-names
  L["Frost"] = "Gel";
  L["Restoration"] = "Restauration";
@@ -63,5 +73,5 @@ if locale == "frFR" then
  L["msg_Traps"] = " Les pièges sont maintenant prêts!";
  L["msg_Lust"] = " La luxure est maintenant prête!";
  --Message
- L["Message"] = "Le défilement du texte de combat est désactivé. S’il n’est pas activé, il vous donnera des erreurs pour toujours.";
+ L["Message"] = "Le défilement du texte de combat est désactivé. S’il n’est pas activé, le texte De la capacité de défilement n’affichera rien.";
 end

@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
@@ -65,5 +66,43 @@ SpellTableWarlock = {-- Warlock spells
 ["Shadowburn"] = "Shadowburn",
 ["Conflagrate"] = "Conflagrate",
 ["Chaos Bolt"] = "Chaos Bolt",
+}
+elseif isRetailWow then
+SpellTableWarlock = {-- Warlock spells
+--Affliction
+["Create Soulwell"] = "Create Soulwell",
+["Unending Resolve"] = "Unending Resolve",
+["Soulstone"] = "Soulstone",
+["Ritual of Summoning"] = "Ritual of Summoning",
+["Ritual of Doom"] = "Ritual of Doom",
+["Haunt"] = "Haunt",
+["Grimoire of Sacrifice"] = "Grimoire of Sacrifice",
+["Dark Soul: Misery"] = "Dark Soul: Misery",
+["Phantom Singularity"] = "Phantom Singularity",
+["Summon Darkglare"] = "Summon Darkglare",
+["Vile Taint"] = "Vile Taint",
+--Demonology
+["Demonic Gateway"] = "Demonic Gateway",
+["Demonic Circle: Teleport"] = "Demonic Circle: Teleport",
+["Fel Domination"] = "Fel Domination",
+["Demonic Circle"] = "Demonic Circle",
+["Summon Demonic Tyrant"] = "Summon Demonic Tyrant",
+["Call Dreadstalkers"] = "Call Dreadstalkers",
+["Power Siphon"] = "Power Siphon",
+["Grimoire: Felguard"] = "Grimoire: Felguard",
+["Summon Vilefiend"] = "Summon Vilefiend",
+["Demonic Strength"] = "Demonic Strength",
+["Bilescourge Bombers"] = "Bilescourge Bombers",
+["Soul Strike"] = "Soul Strike",
+--Destruction
+["Shadowfury"] = "Shadowfury",
+["Conflagrate"] = "Conflagrate",
+["Havoc"] = "Havoc",
+["Summon Infernal"] = "Summon Infernal",
+["Shadowburn"] = "Shadowburn",
+["Cataclysm"] = "Cataclysm",
+["Dark Soul: Instability"] = "Dark Soul: Instability",
+["Soul Fire"] = "Soul Fire",
+["Channel Demonfire"] = "Channel Demonfire",
 }
 end

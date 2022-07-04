@@ -68,18 +68,6 @@ SpellTableShaman = {--Shaman Spells
 }
 elseif isRetailWow then
 SpellTableShaman = {--Shaman Spells
---All-Specs
-["Hex"] = "Hex",
-["Healing Stream Totem"] = "Healing Stream Totem",
-["Earth Elemental"] = "Earth Elemental",
-["Tremor Totem"] = "Tremor Totem",
-["Wind Shear"] = "Wind Shear",
-["Flame Shock"] = "Flame Shock",
-["Capacitor Totem"] = "Capacitor Totem",
-["Astral Shift"] = "Astral Shift",
-["Earthbind Totem"] = "Earthbind Totem",
-["Astral Recall"] = "Astral Recall",
-["Primal Strike"] = "Primal Strike",
 --Elemental
 ["Fire Elemental"] = "Fire Elemental",
 ["Lava Burst"] = "Lava Burst",
@@ -92,6 +80,15 @@ SpellTableShaman = {--Shaman Spells
 ["Ancestral Guidance"] = "Ancestral Guidance",
 ["Icefury"] = "Icefury",
 ["Static Discharge"] = "Static Discharge",
+["Hex"] = "Hex",
+["Earth Elemental"] = "Earth Elemental",
+["Tremor Totem"] = "Tremor Totem",
+["Wind Shear"] = "Wind Shear",
+["Flame Shock"] = "Flame Shock",
+["Capacitor Totem"] = "Capacitor Totem",
+["Astral Shift"] = "Astral Shift",
+["Earthbind Totem"] = "Earthbind Totem",
+["Astral Recall"] = "Astral Recall",
 --Enhancement
 ["Feral Spirit"] = "Feral Spirit",
 ["Lava Lash"] = "Lava Lash",
@@ -103,6 +100,7 @@ SpellTableShaman = {--Shaman Spells
 ["Sundering"] = "Sundering",
 ["Fire Nova"] = "Fire Nova",
 ["Ice Strike"] = "Ice Strike",
+["Primal Strike"] = "Primal Strike",
 --Restoration_Shaman
 ["Cleanse Spirit"] = "Cleanse Spirit",
 ["Spiritwalker's Grace"] = "Spiritwalker's Grace",
@@ -119,5 +117,6 @@ SpellTableShaman = {--Shaman Spells
 ["Wellspring"] = "Wellspring",
 ["Downpour"] = "Downpour",
 ["Surge of Earth"] = "Surge of Earth",
+["Healing Stream Totem"] = "Healing Stream Totem",
 }
 end

@@ -85,15 +85,6 @@ SpellTablePriest = {--Priest Spells
 }
 elseif isRetailWow then
 SpellTablePriest = {--Priest Spells
---All-Specs
-["Power Infusion"] = "Power Infusion",
-["Mass Dispel"] = "Mass Dispel",
-["Desperate Prayer"] = "Desperate Prayer",
-["Leap of Faith"] = "Leap of Faith",
-["Fade"] = "Fade",
-["Shadow Word: Death"] = "Shadow Word: Death",
-["Psychic Scream"] = "Psychic Scream",
-["Mind Blast"] = "Mind Blast",
 --Shadow
 ["Vampiric Embrace"] = "Vampiric Embrace",
 ["Dispersion"] = "Dispersion",
@@ -109,6 +100,10 @@ SpellTablePriest = {--Priest Spells
 ["Shadowfiend"] = "Shadowfiend",
 ["Void Torrent"] = "Void Torrent",
 ["Shadow Covenant"] = "Shadow Covenant",
+["Fade"] = "Fade",
+["Shadow Word: Death"] = "Shadow Word: Death",
+["Psychic Scream"] = "Psychic Scream",
+["Mind Blast"] = "Mind Blast",
 --Holy
 ["Symbol of Hope"] = "Symbol of Hope",
 ["Guardian Spirit"] = "Guardian Spirit",
@@ -123,6 +118,8 @@ SpellTablePriest = {--Priest Spells
 ["Circle of Healing"] = "Circle of Healing",
 ["Holy Word: Salvation"] = "Holy Word: Salvation",
 ["Apotheosis"] = "Apotheosis",
+["Desperate Prayer"] = "Desperate Prayer",
+["Leap of Faith"] = "Leap of Faith",
 --Discipline
 ["Pain Suppression"] = "Pain Suppression",
 ["Penance"] = "Penance",
@@ -136,7 +133,7 @@ SpellTablePriest = {--Priest Spells
 ["Halo"] = "Halo",
 ["Purify"] = "Purify",
 ["Spirit Shell"] = "Spirit Shell",
---Shared-Spec-spells
-
+["Power Infusion"] = "Power Infusion",
+["Mass Dispel"] = "Mass Dispel",
 }
 end

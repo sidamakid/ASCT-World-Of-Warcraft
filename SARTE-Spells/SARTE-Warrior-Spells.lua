@@ -106,25 +106,6 @@ SpellTableWarrior = {--Warrior Spells
 }
 elseif isRetailWow then
 SpellTableWarrior = {--Warrior Spells
---All-Specs
-["Rallying Cry"] = "Rallying Cry",
-["Heroic Leap"] = "Heroic Leap",
-["Charge"] = "Charge",
-["Spell Reflection"] = "Spell Reflection",
-["Intimidating Shout"] = "Intimidating Shout",
-["Shield Block"] = "Shield Block",
-["Execute"] = "Execute",
-["Shield Slam"] = "Shield Slam",
-["Shattering Throw"] = "Shattering Throw",
-["Ignore Pain"] = "Ignore Pain",
-["Berserker Rage"] = "Berserker Rage",
-["Battle Shout"] = "Battle Shout",
-["Intervene"] = "Intervene",
-["Taunt"] = "Taunt",
-["Pummel"] = "Pummel",
-["Heroic Throw"] = "Heroic Throw",
-["Challenging Shout"] = "Challenging Shout",
-["Storm Bolt"] = "Storm Bolt",
 --Arms
 ["Colossus Smash"] = "Colossus Smash",
 ["Die by the Sword"] = "Die by the Sword",
@@ -137,6 +118,11 @@ SpellTableWarrior = {--Warrior Spells
 ["Cleave"] = "Cleave",
 ["Deadly Calm"] = "Deadly Calm",
 ["Skullsplitter"] = "Skullsplitter",
+["Charge"] = "Charge",
+["Execute"] = "Execute",
+["Shield Slam"] = "Shield Slam",
+["Shattering Throw"] = "Shattering Throw",
+["Ignore Pain"] = "Ignore Pain",
 --Fury
 ["Piercing Howl"] = "Piercing Howl",
 ["Impending Victory"] = "Impending Victory",
@@ -146,6 +132,10 @@ SpellTableWarrior = {--Warrior Spells
 ["Raging Blow"] = "Raging Blow",
 ["Siegebreaker"] = "Siegebreaker",
 ["Onslaught"] = "Onslaught",
+["Heroic Throw"] = "Heroic Throw",
+["Berserker Rage"] = "Berserker Rage",
+["Battle Shout"] = "Battle Shout",
+["Intervene"] = "Intervene",
 --Protection
 ["Avatar"] = "Avatar",
 ["Dragon Roar"] = "Dragon Roar",
@@ -154,7 +144,15 @@ SpellTableWarrior = {--Warrior Spells
 ["Shield Wall"] = "Shield Wall",
 ["Last Stand"] = "Last Stand",
 ["Ravager"] = "Ravager",
---Shared-Spec-spells
+["Challenging Shout"] = "Challenging Shout",
+["Storm Bolt"] = "Storm Bolt",
+["Rallying Cry"] = "Rallying Cry",
+["Heroic Leap"] = "Heroic Leap",
+["Spell Reflection"] = "Spell Reflection",
+["Intimidating Shout"] = "Intimidating Shout",
+["Shield Block"] = "Shield Block",
+["Taunt"] = "Taunt",
+["Pummel"] = "Pummel",
 }
 end
 

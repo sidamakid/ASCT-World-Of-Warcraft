@@ -89,28 +89,55 @@ SpellTableHunter = {--Hunter spells
 }
 elseif isRetailWow then
 SpellTableHunter = {--Hunter Spells
---All-Specs
+--Beast Mastery
+["Feed Pet"] = "Feed Pet",
+["Tar Trap"] = "Tar Trap",
+["Misdirection"] = "Misdirection",
+["Tranquilizing Shot"] = "Tranquilizing Shot",
+["Kill Shot"] = "Kill Shot",
+["Mend Pet"] = "Mend Pet",
+["Kill Command"] = "Kill Command",
+["Bestial Wrath"] = "Bestial Wrath",
+["Intimidation"] = "Intimidation",
+["Counter Shot"] = "Counter Shot",
+["Barbed Shot"] = "Barbed Shot",
+["Aspect of the Wild"] = "Aspect of the Wild",
+["Concussive Shot"] = "Concussive Shot",
+["Barrage"] = "Barrage",
+["Dire Beast"] = "Dire Beast",
+["Chimaera Shot"] = "Chimaera Shot",
+["A Murder of Crows"] = "A Murder of Crows",
+["Stampede"] = "Stampede",
+["Bloodshed"] = "Bloodshed",
+["Binding Shot"] = "Binding Shot",
+--Marksmanship
+["Disengage"] = "Disengage",
+["Play Dead"] = "Play Dead",
+["Exhilaration"] = "Exhilaration",
+["Wailing Arrow"] = "Wailing Arrow",
+["Aimed Shot"] = "Aimed Shot",
+["Trueshot"] = "Trueshot",
+["Rapid Fire"] = "Rapid Fire",
+["Bursting Shot"] = "Bursting Shot",
+["Explosive Shot"] = "Explosive Shot",
+["Double Tap"] = "Double Tap",
+["Volley"] = "Volley",
+--Survial
 ["Freezing Trap"] = "Freezing Trap",
 ["Aspect of the Turtle"] = "Aspect of the Turtle",
 ["Aspect of the Cheetah"] = "Aspect of the Cheetah",
 ["Aspect of the Chameleon"] = "Aspect of the Chameleon",
 ["Feign Death"] = "Feign Death",
 ["Flare"] = "Flare",
-["Tar Trap"] = "Tar Trap",
-["Misdirection"] = "Misdirection",
-["Tranquilizing Shot"] = "Tranquilizing Shot",
-["Kill Shot"] = "Kill Shot",
-["Mend Pet"] = "Mend Pet",
-["Disengage"] = "Disengage",
-["Play Dead"] = "Play Dead",
-["Exhilaration"] = "Exhilaration",
-["Wailing Arrow"] = "Wailing Arrow",
-["Feed Pet"] = "Feed Pet",
---Beast Mastery
-
---Marksmanship
-
---Survial
-
+["Wildfire Bomb"] = "Wildfire Bomb",
+["Coordinated Assault"] = "Coordinated Assault",
+["Carve"] = "Carve",
+["Muzzle"] = "Muzzle",
+["Harpoon"] = "Harpoon",
+["Aspect of the Eagle"] = "Aspect of the Eagle",
+["Steel Trap"] = "Steel Trap",
+["Chakrams"] = "Chakrams",
+["Butchery"] = "Butchery",
+["Flanking Strike"] = "Flanking Strike",
 }
 end

@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
@@ -104,5 +105,50 @@ SpellTableMage = {-- Mage Spells
 ["Portal: Orgrimmar"] = "Portal: Orgrimmar",
 ["Portal: Undercity"] = "Portal: Undercity",
 ["Portal: Thunder Bluff"] = "Portal: Thunder Bluff",
+}
+elseif isRetailWow then
+SpellTableMage = {-- Mage Spells
+--Arcane
+["Time Warp"] = "Time Warp",
+["Mirror Image"] = "Mirror Image",
+["Illusion"] = "Illusion",
+["Remove Curse"] = "Remove Curse",
+["Counterspell"] = "Counterspell",
+["Blink"] = "Blink",
+["Invisibility"] = "Invisibility",
+["Arcane Barrage"] = "Arcane Barrage",
+["Greater Invisibility"] = "Greater Invisibility",
+["Arcane Power"] = "Arcane Power",
+["Touch of the Magi"] = "Touch of the Magi",
+["Evocation"] = "Evocation",
+["Prismatic Barrier"] = "Prismatic Barrier",
+["Presence of Mind"] = "Presence of Mind",
+["Arcane Familiar"] = "Arcane Familiar",
+["Arcane Orb"] = "Arcane Orb",
+["Supernova"] = "Supernova",
+--Fire
+["Fire Blast"] = "Fire Blast",
+["Combustion"] = "Combustion",
+["Dragon's Breath"] = "Dragon's Breath",
+["Alter Time"] = "Alter Time",
+["Blazing Barrier"] = "Blazing Barrier",
+["Phoenix Flames"] = "Phoenix Flames",
+["Meteor"] = "Meteor",
+["Living Bomb"] = "Living Bomb",
+["Blast Wave"] = "Blast Wave",
+--Frost
+["Ice Block"] = "Ice Block",
+["Frost Nova"] = "Frost Nova",
+["Ice Barrier"] = "Ice Barrier",
+["Cone of Cold"] = "Cone of Cold",
+["Summon Water Elemental"] = "Summon Water Elemental",
+["Icy Veins"] = "Icy Veins",
+["Blizzard"] = "Blizzard",
+["Frozen Orb"] =  "Frozen Orb",
+["Comet Storm"] = "Comet Storm",
+["Ice Floes"] = "Ice Floes",
+["Ice Nova"] = "Ice Nova",
+["Ray of Frost"] = "Ray of Frost",
+["Ebonbolt"] = "Ebonbolt",
 }
 end

@@ -25,6 +25,7 @@
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-Spells, SARTE-Text, SARTE-localize
 ## SavedVariablesPerCharacter: SARTESPELLDB
+## LoadWith: SARTE-Version-Of-Wow
 # Libs
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua

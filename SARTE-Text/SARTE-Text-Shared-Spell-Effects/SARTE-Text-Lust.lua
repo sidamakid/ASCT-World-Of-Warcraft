@@ -13,14 +13,21 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
    function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if self and unit == "player" and SpellTableLust[SDT_GetEnglishName(spellName)] and SARTESPELLDB["Shared_Shaman_spells"]["Lust"] == true then
+      if (self and (unit == "player" and SpellTableLust[SDT_GetEnglishName(spellName)] and SARTESPELLDB["Shared_Shaman_spells"]["Lust"] == true)) then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
             function()
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
+                  local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+                  if Comabt_Text == false then
+                     spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  if Comabt_Text == true then
+                  spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  return end
                   CombatText_AddMessage(L["msg_Lust"], CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  end
                end
             end
          )

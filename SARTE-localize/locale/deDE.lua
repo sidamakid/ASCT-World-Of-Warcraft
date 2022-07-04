@@ -41,6 +41,16 @@ if locale == "deDE" then
  L["Mage"] = "Magier";
  L["Arcane"] = "Geheimnisvoll";
  L["Fire"] = "Feuer";
+ --Demon Hunter
+ L["Havoc"] = "Verwüstung";
+ L["Vengeance"] = "Rache";
+ --Death Knight
+ L["Blood"] = "Blut";
+ L["Unholy"] = "Unheilig";
+ --Monk
+ L["Brewmaster"] = "Braumeister";
+ L["Mistweaver"] = "Nebelweber";
+ L["Windwalker"] = "Windrollator";
   --Shared-Spec-names
  L["Frost"] = "Frost";
  L["Restoration"] = "Restaurierung";
@@ -63,5 +73,5 @@ if locale == "deDE" then
  L["msg_Traps"] = " Fallen sind jetzt fertig!";
  L["msg_Lust"] = " Die Lust ist jetzt bereit!";
  --Message
- L["Message"] = "Der Bildlauf zum Kampftext ist deaktiviert. Wenn es nicht aktiviert ist, wird es Ihnen für immer Fehler geben.";
+ L["Message"] = "Der Bildlauf zum Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird im Text der Bildlauffähigkeit nichts angezeigt.";
 end

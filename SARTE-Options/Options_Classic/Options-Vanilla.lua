@@ -362,42 +362,63 @@ local Panel_3 = SubPanelMaker(L["Subtlety"])
 
 local col_1 = 4
 local x_1 = 0
+local buttons = {}
 for v in pairs(SARTESPELLDB["Assassination"]) do
-	local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_1/col_1))
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Assassination"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
-	local tex = b:CreateTexture()
-	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
-	tex:SetSize(22, 22)
-	for d in pairs(SARTESPELLDB["Assassination"]) do
-	if v == d then
-		tex:SetTexture(SDT_GetLocalizedIcon(d))
-	end
-	end
-	x_1=x_1+1
-	
+      local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
+      b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_1/col_1))
+      b.Text:SetText(SDT_GetLocalizedName(v))
+      b:SetChecked(SARTESPELLDB["Assassination"][v])
+      b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
+      local tex = b:CreateTexture()
+      tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+      tex:SetSize(22, 22)
+      for d in pairs(SARTESPELLDB["Assassination"]) do
+        if v == d then
+            tex:SetTexture(SDT_GetLocalizedIcon(d))
+        end
+      end
+      table.insert(buttons, b)
+      x_1=x_1+1
 end
+local function ShowHideButtons()
+  for _, b in ipairs(buttons) do
+    b:SetShown(GetSpellInfo(b.Text:GetText()) ~= nil)
+  end
+end
+function Panel_1:OnEvent(event, ...)
+    if event == "SPELLS_CHANGED" then
+        ShowHideButtons()
+    end
+end
+Panel_1:RegisterEvent("SPELLS_CHANGED")
+Panel_1:SetScript("OnEvent", Panel_1.OnEvent)
+Panel_1:SetScript("OnShow", ShowHideButtons)
 
 local col_2 = 4
 local x_2 = 0
 for v in pairs(SARTESPELLDB["Combat"]) do
-	local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Combat"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Combat"][v] = s:GetChecked() end)
-	local tex = b:CreateTexture()
-	tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
-	tex:SetSize(22, 22)
-	for d in pairs(SARTESPELLDB["Combat"]) do
-	if v == d then
-		tex:SetTexture(SDT_GetLocalizedIcon(d))
-	end
-	end
-	x_2=x_2+1
+      local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
+      b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+      b.Text:SetText(SDT_GetLocalizedName(v))
+      b:SetChecked(SARTESPELLDB["Combat"][v])
+      b:SetScript("OnClick", function(s) SARTESPELLDB["Combat"][v] = s:GetChecked() end)
+      local tex = b:CreateTexture()
+      tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
+      tex:SetSize(22, 22)
+      for d in pairs(SARTESPELLDB["Combat"]) do
+        if v == d then
+            tex:SetTexture(SDT_GetLocalizedIcon(d))
+        end
+      end
+      table.insert(buttons, b)
+      x_2=x_2+1
 end
+
+Panel_2:SetScript("OnShow", function()
+  for _, b in ipairs(buttons) do
+    b:SetShown(GetSpellInfo(b.Text:GetText()) ~= nil)
+  end
+end)
 
 local col_3 = 4
 local x_3 = 0

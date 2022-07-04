@@ -41,6 +41,16 @@ if locale == "itIT" then
  L["Mage"] = "Mago";
  L["Arcane"] = "Arcano";
  L["Fire"] = "Fuoco";
+ --Demon Hunter
+ L["Havoc"] = "Rovina";
+ L["Vengeance"] = "Vendetta";
+ --Death Knight
+ L["Blood"] = "Sangue";
+ L["Unholy"] = "Diabolica";
+ --Monk
+ L["Brewmaster"] = "Mastro birraio";
+ L["Mistweaver"] = "Tessitoredinebbia";
+ L["Windwalker"] = "Camminatoreavento";
   --Shared-Spec-names
  L["Frost"] = "Gelo";
  L["Restoration"] = "Restauro";
@@ -63,5 +73,5 @@ if locale == "itIT" then
  L["msg_Traps"] = " Le trappole sono ora pronte!";
  L["msg_Lust"] = " La lussuria è ora pronta!";
  --Message
- L["Message"] = "Lo scorrimento del testo di combattimento è disabilitato. Se non abilitato, ti darà errori per sempre.";
+ L["Message"] = "Lo scorrimento del testo di combattimento è disabilitato. Se non è abilitato, il testo Capacità di scorrimento non mostrerà nulla.";
 end

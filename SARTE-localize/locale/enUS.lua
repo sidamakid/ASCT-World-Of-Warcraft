@@ -41,7 +41,17 @@ if locale == "enUS" then
  L["Mage"] = "Mage";
  L["Arcane"] = "Arcane";
  L["Fire"] = "Fire";
-  --Shared-Spec-names
+ --Demon Hunter
+ L["Havoc"] = "Havoc";
+ L["Vengeance"] = "Vengeance";
+ --Death Knight
+ L["Blood"] = "Blood";
+ L["Unholy"] = "Unholy";
+ --Monk
+ L["Brewmaster"] = "Brewmaster";
+ L["Mistweaver"] = "Mistweaver";
+ L["Windwalker"] = "Windwalker";
+ --Shared-Spec-names
  L["Frost"] = "Frost";
  L["Restoration"] = "Restoration";
  L["Holy"] = "Holy";
@@ -63,5 +73,5 @@ if locale == "enUS" then
  L["msg_Traps"] = " Traps are now ready!";
  L["msg_Lust"] = " Lust is now ready!";
  --Message
- L["Message"] = "Scrolling Combat Text is disabled. If not enabled, it will give you errors forever.";
+ L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Scrolling Ability text won't show anything.";
 end

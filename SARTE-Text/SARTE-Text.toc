@@ -32,8 +32,3 @@ SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
 SARTE-Text-Classic\SARTE-Text-Wrath.lua
 #SARTE-Racials
 SARTE-Text-Racials.lua
-# SARTE-Text-Shared-Spell-Cooldowns\
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
-# SARTE-Text-Shared-Spell-Effects\
-SARTE-Text-Shared-Spell-Effects\SARTE-Text-Lust.lua

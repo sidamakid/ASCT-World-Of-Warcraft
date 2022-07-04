@@ -1,0 +1,6 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+if isRetailWow then
+SpellTableVoidElf = {
+["Spatial Rift"] = "Spatial Rift",
+}
+end

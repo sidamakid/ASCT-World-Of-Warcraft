@@ -41,8 +41,18 @@ if locale == "esMX" then
  L["Mage"] = "Mago";
  L["Arcane"] = "Arcano";
  L["Fire"] = "Fuego";
- L["Frost"] = "Helada";
+ --Demon Hunter
+ L["Havoc"] = "Estrago";
+ L["Vengeance"] = "Venganza";
+ --Death Knight
+ L["Blood"] = "Sangre";
+ L["Unholy"] = "Profano";
+ --Monk
+ L["Brewmaster"] = "Maestro cervecero";
+ L["Mistweaver"] = "Tejedor de niebla";
+ L["Windwalker"] = "Caminante de viento";
  --Shared-Spec-names
+ L["Frost"] = "Helada";
  L["Protection"] = "Protección";
  L["Holy"] = "Santo";
  L["Restoration"] = "Restauración";
@@ -63,5 +73,5 @@ if locale == "esMX" then
  L["msg_Traps"] = " ¡Las trampas ya están listas!"
  L["msg_Lust"] = " ¡La lujuria ya está lista!"
  --Message
- L["Message"] = "El desplazamiento de texto de combate está deshabilitado. Si no está habilitado, le dará errores para siempre.";
+ L["Message"] = "El desplazamiento de texto de combate está deshabilitado. Si no está habilitado, el texto Capacidad de desplazamiento no mostrará nada.";
 end

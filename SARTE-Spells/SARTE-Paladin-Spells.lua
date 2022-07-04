@@ -1,3 +1,4 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
 local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
@@ -92,5 +93,52 @@ SpellTablePaladin = {--Paladin Spells
 ["Crusader Strike"] = "Crusader Strike",
 ["Repentance"] = "Repentance",
 ["Divine Storm"] = "Divine Storm",
+}
+elseif isRetailWow then
+SpellTablePaladin = {--Paladin Spells
+--Holy
+["Consecration"] = "Consecration",
+["Lay on Hands"] = "Lay on Hands",
+["Contemplation"] = "Contemplation",
+["Turn Evil"] = "Turn Evil",
+["Holy Shock"] = "Holy Shock",
+["Divine Protection"] = "Divine Protection",
+["Aura Mastery"] = "Aura Mastery",
+["Cleanse"] = "Cleanse",
+["Avenging Crusader"] = "Avenging Crusader",
+["Beacon of Virtue"] = "Beacon of Virtue",
+["Bestow Faith"] = "Bestow Faith",
+["Light's Hammer"] = "Light's Hammer",
+["Rule of Law"] = "Rule of Law",
+--Protection
+["Blessing of Protection"] = "Blessing of Protection",
+["Divine Shield"] = "Divine Shield",
+["Blessing of Sacrifice"] = "Blessing of Sacrifice",
+["Blessing of Freedom"] = "Blessing of Freedom",
+["Hammer of Justice"] = "Hammer of Justice",
+["Hammer of Wrath"] = "Hammer of Wrath",
+["Hand of Reckoning"] = "Hand of Reckoning",
+["Divine Steed"] = "Divine Steed",
+["Guardian of Ancient Kings"] = "Guardian of Ancient Kings",
+["Ardent Defender"] = "Ardent Defender",
+["Avenger's Shield"] = "Avenger's Shield",
+["Hammer of the Righteous"] = "Hammer of the Righteous",
+["Blessing of Spellwarding"] = "Blessing of Spellwarding",
+["Blessed Hammer"] = "Blessed Hammer",
+["Moment of Glory"] = "Moment of Glory",
+--Retribution
+["Avenging Wrath"] = "Avenging Wrath",
+["Judgment"] = "Judgment",
+["Crusader Strike"] = "Crusader Strike",
+["Rebuke"] = "Rebuke",
+["Cleanse Toxins"] = "Cleanse Toxins",
+["Shield of Vengeance"] = "Shield of Vengeance",
+["Wake of Ashes"] = "Wake of Ashes",
+["Blade of Justice"] = "Blade of Justice",
+["Hand of Hindrance"] = "Hand of Hindrance",
+["Crusade"] = "Crusade",
+["Final Reckoning"] = "Final Reckoning",
+["Eye for an Eye"] = "Eye for an Eye",
+["Execution Sentence"] = "Execution Sentence",
 }
 end

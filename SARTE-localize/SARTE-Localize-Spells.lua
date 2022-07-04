@@ -3,12 +3,19 @@ local callbacks = {}
 local localizedNames = {}
 local englishNames = {}
 local englishToIcons = {}
+local englishNamesIsKnown = {}
 function SDT_LoadSpellNames()
-  local englishToSpellID = {--SARTE-Localizing-Classic
+  local englishToSpellID = {--SARTE-Localizing
       --Rogue
      ["Kidney Shot"] = 408,
+     ["Vendetta"] = 79140,
+     ["Garrote"] = 703,
+     ["Crimson Vial"] = 185311,
      ["Cold Blood"] = 14177,
      ["Sprint"] = 2983,
+     ["Roll the Bones"] = 315508,
+     ["Between the Eyes"] = 315341,
+     ["Grappling Hook"] = 195457,
      ["Kick"] = 1766,
      ["Evasion"] = 5277,
      ["Gouge"] = 1776,
@@ -258,9 +265,11 @@ function SDT_LoadSpellNames()
       loadingFrame:SetScript("OnEvent", nil)
       for key, spellID in pairs(englishToSpellID) do
         local localeName, _, icon = GetSpellInfo(spellID)
+        local IsSpellKnwon = GetSpellInfo(localeName) ~= nil
         localizedNames[localeName or ""] = key
         englishNames[key] = localeName
         englishToIcons[key] = icon
+        englishNamesIsKnown[key] = IsSpellKnwon
       end
 
       for _, func in ipairs(callbacks) do
@@ -284,6 +293,10 @@ end
 
 function SDT_GetLocalizedIcon(english)
   return englishToIcons[english]
+end
+
+function SDT_GetLocalizedISpellKnown(english)
+  return englishNamesIsKnown[english]
 end
 
 function SDT_AddLocalizedCallback(func)

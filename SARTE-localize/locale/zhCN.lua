@@ -41,6 +41,16 @@ if locale == "zhCN" then
  L["Mage"] = "魔术师";
  L["Arcane"] = "神秘";
  L["Fire"] = "火灾";
+ --Demon Hunter
+ L["Havoc"] = "大破坏";
+ L["Vengeance"] = "复仇";
+ --Death Knight
+ L["Blood"] = "血";
+ L["Unholy"] = "邪恶";
+ --Monk
+ L["Brewmaster"] = "酿造大师";
+ L["Mistweaver"] = "雾织机";
+ L["Windwalker"] = "风行者";
   --Shared-Spec-names
  L["Frost"] = "霜";
  L["Restoration"] = "恢复";
@@ -63,5 +73,5 @@ if locale == "zhCN" then
  L["msg_Traps"] = " 陷阱现在已经准备好了！";
  L["msg_Lust"] = " 欲望现在已经准备好了！";
  --Message
- L["Message"] = "滚动战斗文本已禁用。如果未启用，它将永远为您提供错误.";
+ L["Message"] = "滚动战斗文本已禁用。如果未启用，滚动技能文本将不会显示任何内容。";
 end

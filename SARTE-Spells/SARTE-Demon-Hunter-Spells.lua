@@ -1,0 +1,40 @@
+local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+if isRetailWow then
+SpellTableDemon_Hunter = {--Demon Hunter Spells
+--Havoc
+["Metamorphosis"] = "Metamorphosis",
+["Blur"] = "Blur",
+["Imprison"] = "Imprison",
+["Spectral Sight"] = "Spectral Sight",
+["Immolation Aura"] = "Immolation Aura",
+["Disrupt"] = "Disrupt",
+["Torment"] = "Torment",
+["Eye Beam"] = "Eye Beam",
+["Vengeful Retreat"] = "Vengeful Retreat",
+["Darkness"] = "Darkness",
+["Blade Dance"] = "Blade Dance",
+["Netherwalk"]  = "Netherwalk",
+["Felblade"] = "Felblade",
+["Fel Eruption"] = "Fel Eruption",
+["Glaive Tempest"] = "Glaive Tempest",
+["Fel Barrage"] = "Fel Barrage",
+["Essence Break"] = "Essence Break",
+--Vengeance
+["Consume Magic"] = "Consume Magic",
+["Throw Glaive"] = "Throw Glaive",
+["Fel Rush"] = "Fel Rush",
+["Soul Carver"] = "Soul Carver",
+["Chaos Nova"] = "Chaos Nova",
+["Fiery Brand"] = "Fiery Brand",
+["Sigil of Misery"] = "Sigil of Misery",
+["Demon Spikes"] = "Demon Spikes",
+["Fel Devastation"] = "Fel Devastation",
+["Sigil of Silence"] = "Sigil of Silence",
+["Infernal Strike"] = "Infernal Strike",
+["Sigil of Flame"] = "Sigil of Flame",
+["Fracture"] = "Fracture",
+["Sigil of Chains"] = "Sigil of Chains",
+["Soul Barrier"] = "Soul Barrier",
+["Bulk Extraction"] = "Bulk Extraction",
+}
+end

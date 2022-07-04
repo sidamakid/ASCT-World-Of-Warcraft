@@ -41,7 +41,17 @@ if locale == "koKR" then
  L["Mage"] = "마법사";
  L["Arcane"] = "비전";
  L["Fire"] = "불";
-  --Shared-Spec-names
+ --Demon Hunter
+ L["Havoc"] = "혼란";
+ L["Vengeance"] = "복수";
+ --Death Knight
+ L["Blood"] = "피";
+ L["Unholy"] = "신성";
+ --Monk
+ L["Brewmaster"] = "브루마스터";
+ L["Mistweaver"] = "안개 직조";
+ L["Windwalker"] = "윈드워커";
+ --Shared-Spec-names
  L["Frost"] = "서리";
  L["Restoration"] = "복구";
  L["Holy"] = "거룩한";
@@ -63,5 +73,5 @@ if locale == "koKR" then
  L["msg_Traps"] = " 이제 함정이 준비되었습니다!";
  L["msg_Lust"] = " 정욕이 이제 준비되었습니다!";
  --Message
- L["Message"] = "전투 텍스트 스크롤이 비활성화되었습니다. 활성화하지 않으면 영원히 오류가 발생합니다.";
+ L["Message"] = "전투 텍스트 스크롤이 비활성화되었습니다. 사용하도록 설정하지 않으면 스크롤 기능 텍스트에 아무 것도 표시되지 않습니다.";
 end

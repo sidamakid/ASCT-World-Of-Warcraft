@@ -41,6 +41,16 @@ if locale == "ptBR" then
  L["Mage"] = "Mago";
  L["Arcane"] = "Arcano";
  L["Fire"] = "Fogo";
+ --Demon Hunter
+ L["Havoc"] = "Destruição";
+ L["Vengeance"] = "Vingança";
+ --Death Knight
+ L["Blood"] = "Sangue";
+ L["Unholy"] = "Profano";
+ --Monk
+ L["Brewmaster"] = "Mestre cervejeiro";
+ L["Mistweaver"] = "Tecelão de névoa";
+ L["Windwalker"] = "Andador de vento";
   --Shared-Spec-names
  L["Frost"] = "Geada";
  L["Restoration"] = "Restauração";
@@ -63,5 +73,5 @@ if locale == "ptBR" then
  L["msg_Traps"] = " As armadilhas estão prontas!";
  L["msg_Lust"] = " A luxúria está pronta!";
  --Message
- L["Message"] = "O texto de combate de rolagem está desativado. Se não for ativado, ele lhe dará erros para sempre.";
+ L["Message"] = "O texto de combate de rolagem está desativado. Se não estiver ativado, o texto da Função de Rolagem não mostrará nada.";
 end
