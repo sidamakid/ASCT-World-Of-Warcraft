@@ -1,5 +1,5 @@
 ## Interface: 30305
-## Version: 1.1.0
+## Version: 2.0.0
 ## Title: SARTE-Localize
 ## Title-koKR: SARTE-지역화
 ## Title-frFR: SARTE-Localiser
@@ -27,6 +27,7 @@
 # Table Localize
 localize.lua
 # Spells Localize
+SARTE-Localize-Spells-Table.lua
 SARTE-Localize-Spells.lua
 # locales
 locale\enUS.lua

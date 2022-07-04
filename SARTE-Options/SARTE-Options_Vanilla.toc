@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 1.1.0
+## Version: 2.0.0
 ## Title: SARTE-Options
 ## Title-koKR: SARTE-옵션
 ## Title-frFR: SARTE-Options
@@ -25,7 +25,6 @@
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-Spells, SARTE-Text, SARTE-localize
 ## SavedVariablesPerCharacter: SARTESPELLDB
-## LoadWith: SARTE-Version-Of-Wow
 # Libs
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua

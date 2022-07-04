@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 1.1.0
+## Version: 2.0.0
 ## Title: Scrolling Ability Text
 ## Title-koKR: 스크롤 능력 텍스트
 ## Title-frFR: Texte de capacité de défilement

@@ -844,8 +844,45 @@ end
 SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
 
-SARTESPELLDB = SARTESPELLDB or CopyTable(f.defaults)
+
 f:InitializeOptions_Class()
+-- savedVars: table to put new defaults into
+-- cleanDefaults: default values table
+local function MergeInNewValues(savedVars, cleanDefaults)
+  -- Work through each key in the default values table
+  for k, v in pairs(cleanDefaults) do
+    -- If the key doesn't exist in savedVars (ie. its new)
+    -- we add it
+    if savedVars[k] == nil then
+      -- If the value of this key is another table, copy it in
+      if type(v) == "table" then
+        savedVars[k] = CopyTable(v)
+      -- Not another table, just a string/true/false/32 etc. copy it in with a
+      -- normal assigment
+      else
+        savedVars[k] = v
+      end
+    -- Found a nested table for this key, go through that nested table to check
+    -- all the keys exist compared to cleanDefaults, and that all the nested
+    -- tables, etc. do too.
+    elseif type(v) == "table" then
+      MergeInNewValues(savedVars[k], v)
+    end
+  end
+end
+---------------------------
+--Saved Variables
+---------------------------
+SARTESPELLDB = SARTESPELLDB or {}
+local function OnEvent(self, event, isLogin, isReload)
+	if isLogin or isReload then
+		MergeInNewValues(SARTESPELLDB, f.defaults)
+	end
+end
+
+local ds = CreateFrame("Frame")
+ds:RegisterEvent("PLAYER_ENTERING_WORLD")
+ds:SetScript("OnEvent", OnEvent)
 f.db = SARTESPELLDB
 
 end
