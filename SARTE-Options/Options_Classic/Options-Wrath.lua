@@ -832,7 +832,7 @@ end
 
 end
 
-SLASH_SARTE1 = "/SAT"
+SLASH_SARTE1 = "/SARTE"
 SLASH_SARTE2 = "/SCROLLINGABILITYTEXT"
 
 SlashCmdList.SARTE = function(msg, editBox)
@@ -845,7 +845,7 @@ SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
 
 
-f:InitializeOptions_Class()
+
 -- savedVars: table to put new defaults into
 -- cleanDefaults: default values table
 local function MergeInNewValues(savedVars, cleanDefaults)
@@ -870,19 +870,33 @@ local function MergeInNewValues(savedVars, cleanDefaults)
     end
   end
 end
+-- savedVars: table to put new defaults into
+-- cleanDefaults: default values table
+local function DeleteOldValues(cleanDefaults, savedVars)
+    -- Work through each key in the default values table
+    for k, v in pairs(savedVars) do
+      -- If the key doesn't exist in cleanDefaults (ie. it's been removed)
+      -- we remove it
+      if cleanDefaults[k] == nil then
+        savedVars[k] = nil
+      -- Found a nested table for this key, go through that nested table to check
+      -- all the keys exist compared to cleanDefaults, and that all the nested
+      -- tables, etc. do too.
+      elseif type(v) == "table" then
+        DeleteOldValues(cleanDefaults[k], v)
+      end
+    end
+  end
 ---------------------------
 --Saved Variables
 ---------------------------
 SARTESPELLDB = SARTESPELLDB or {}
-local function OnEvent(self, event, isLogin, isReload)
-	if isLogin or isReload then
-		MergeInNewValues(SARTESPELLDB, f.defaults)
-	end
-end
-
-local ds = CreateFrame("Frame")
-ds:RegisterEvent("PLAYER_ENTERING_WORLD")
-ds:SetScript("OnEvent", OnEvent)
+MergeInNewValues(SARTESPELLDB, f.defaults)
+DeleteOldValues(f.defaults, SARTESPELLDB)
+f:InitializeOptions_Class()
+---------------------------
+--Not used
+---------------------------
 f.db = SARTESPELLDB
 
 end

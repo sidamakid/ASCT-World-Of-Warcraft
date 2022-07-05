@@ -67,6 +67,7 @@ if locale == "enUS" then
  L["Shocks"] = "Shocks";
  L["Traps"] = "Traps";
  L["Lust"] = "Lust";
+ L["Tab"] = "This Tab is for Shaman's and Hunter's only.";
  --Ready Text
  L["msg"] = " is now ready!";
  L["msg_Shocks"] = " Shocks are now ready!";

@@ -67,6 +67,7 @@ if locale == "frFR" then
  L["Shocks"] = "Chocs";
  L["Traps"] = "Pièges";
  L["Lust"] = "Luxure";
+ L["Tab"] = "Cet onglet est réservé aux chamans et aux chasseurs.";
  --Ready Text
  L["msg"] = " est maintenant prêt!";
  L["msg_Shocks"] = " Les chocs sont maintenant prêts!";

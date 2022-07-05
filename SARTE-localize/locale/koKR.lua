@@ -67,6 +67,7 @@ if locale == "koKR" then
  L["Shocks"] = "충격";
  L["Traps"] = "트랩";
  L["Lust"] = "정욕";
+ L["Tab"] = "이 탭은 주술사와 헌터의 유일한 탭입니다.";
  --Ready Text
  L["msg"] = " 이제 준비가되었습니다!";
  L["msg_Shocks"] = " 이제 충격이 준비되었습니다!";

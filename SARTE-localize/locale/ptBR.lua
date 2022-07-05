@@ -67,6 +67,7 @@ if locale == "ptBR" then
  L["Shocks"] = "Choques";
  L["Traps"] = "Armadilhas";
  L["Lust"] = "Luxúria";
+ L["Tab"] = "Esta guia é só para xamã e hunter.";
  --Ready Text
  L["msg"] = " está pronto!";
  L["msg_Shocks"] = " Os choques estão prontos!";

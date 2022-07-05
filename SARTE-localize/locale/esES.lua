@@ -67,6 +67,7 @@ if locale == "esES" then
  L["Shocks"] = "Choques";
  L["Traps"] = "Trampas";
  L["Lust"] = "Lujuria";
+ L["Tab"] = "Esta pestaña es solo para chamanes y cazadores.";
  --Ready Text
  L["msg"] = " ya está listo!"
  L["msg_Shocks"] = " ¡Los choques ya están listos!"

@@ -67,6 +67,7 @@ if locale == "zhTW" then
  L["Shocks"] = "衝擊";
  L["Traps"] = "陷阱";
  L["Lust"] = "慾望";
+ L["Tab"] = "此選項卡僅適用於薩滿和亨特。";
  --Ready Text
  L["msg"] = " 現在準備好了！";
  L["msg_Shocks"] = " 衝擊現在已經準備好了！";
