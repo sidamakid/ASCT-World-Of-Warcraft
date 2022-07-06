@@ -15,7 +15,8 @@ end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if (unit == "player" and
+      if unit == "player" then
+      if
       --Races
       SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Human"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
@@ -24,7 +25,7 @@ f:SetScript("OnEvent", --Run when our event fires
       SpellTableNightElf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Night Elf"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableOrc[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Orc"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Troll"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Troll"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -50,6 +51,7 @@ f:SetScript("OnEvent", --Run when our event fires
          
       end
    end
+   end
 )
 elseif is_Tbc_Wow then
 local SARTE = ... --This assigns the name of the addon to SARTE
@@ -63,7 +65,8 @@ end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if (unit == "player" and
+      if unit == "player" then
+      if
       --Races
       SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Human"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
@@ -74,7 +77,7 @@ f:SetScript("OnEvent", --Run when our event fires
       SpellTableTauren[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Tauren"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Troll"][SDT_GetEnglishName(spellName)] == true) or
       SpellTableBloodElf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Blood Elf"][SDT_GetEnglishName(spellName)] == true) or
-      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Draenei"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableDranei[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Draenei"][SDT_GetEnglishName(spellName)] == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -100,6 +103,7 @@ f:SetScript("OnEvent", --Run when our event fires
          
       end
    end
+   end
 )
 elseif isRetailWow then
    local SARTE = ... --This assigns the name of the addon to SARTE
@@ -113,7 +117,8 @@ elseif isRetailWow then
    f:SetScript("OnEvent", --Run when our event fires
        function(self, event, unit, _, spellName)
          local spellName = GetSpellInfo(spellName)
-         if (unit == "player" and
+         if unit == "player" then
+         if
          --Races
          SpellTableHuman[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Human"][SDT_GetEnglishName(spellName)] == true) or
          SpellTableDwarf[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Dwarf"][SDT_GetEnglishName(spellName)] == true) or
@@ -137,7 +142,7 @@ elseif isRetailWow then
          SpellTableHighmountainTauren[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Highmountain Tauren"][SDT_GetEnglishName(spellName)] == true) or
          SpellTableVulpera[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Vulpera"][SDT_GetEnglishName(spellName)] == true) or
          SpellTableZandalariTroll[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Zandalari Troll"][SDT_GetEnglishName(spellName)] == true) or
-         SpellTableMagharOrc[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Mag'har Orc"][SDT_GetEnglishName(spellName)] == true))
+         SpellTableMagharOrc[SDT_GetEnglishName(spellName)] and (SARTESPELLDB["Mag'har Orc"][SDT_GetEnglishName(spellName)] == true)
          then
             local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
             spellFrame:SetScript("OnUpdate", --Run forever!
@@ -162,6 +167,7 @@ elseif isRetailWow then
             )
 
          end
+      end
       end
    )
 end

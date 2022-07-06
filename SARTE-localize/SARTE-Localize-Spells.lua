@@ -58,7 +58,9 @@ end
 function SDT_GetLocalizedISpellKnown(english)
   return englishNamesIsKnown[english]
 end
-
+---------------------------
+--Callback For Localizng
+---------------------------
 function SDT_AddLocalizedCallback(func)
   table.insert(callbacks, func)
 end

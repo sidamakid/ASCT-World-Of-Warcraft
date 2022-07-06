@@ -20,7 +20,8 @@ end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if (self and (unit == "player" and
+      if unit == "player" then
+      if
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
@@ -38,7 +39,7 @@ f:SetScript("OnEvent", --Run when our event fires
       --Druid
       SpellTableDruid[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Balance"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Feral_Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Druid_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
       --Hunter
-      SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true))))
+      SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true))
       then
          ---------------------------
          --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
@@ -69,6 +70,7 @@ f:SetScript("OnEvent", --Run when our event fires
          )
          
       end
+   end
    end
 )
 end

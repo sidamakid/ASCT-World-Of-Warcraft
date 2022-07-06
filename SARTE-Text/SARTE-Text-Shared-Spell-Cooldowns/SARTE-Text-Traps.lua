@@ -10,7 +10,7 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
    function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if (self and (unit == "player" and SpellTableHunterTraps[SDT_GetEnglishName(spellName)] and SARTESPELLDB["Shared_Hunter_spells"]["Traps"] == true)) then
+      if unit == "player" and SpellTableHunterTraps[SDT_GetEnglishName(spellName)] and SARTESPELLDB["Shared_Hunter_spells"]["Traps"] == true then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
             function()
@@ -29,5 +29,6 @@ f:SetScript("OnEvent", --Run when our event fires
          )
          
       end
+
    end
 )

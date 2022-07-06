@@ -14,7 +14,8 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if self and unit == "player" and
+      if unit == "player" then
+      if
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Outlaw"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
@@ -60,6 +61,7 @@ f:SetScript("OnEvent", --Run when our event fires
          )
          
       end
+   end
    end
 )
 end

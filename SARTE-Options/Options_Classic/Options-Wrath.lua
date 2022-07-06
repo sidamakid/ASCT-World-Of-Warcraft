@@ -388,28 +388,28 @@ local Color_picker_SARTE = CreateFrame("Button", nil, self.panel_main, "UIPanelB
 	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
 end)
 
-	local Class = UnitClassBase("player")
-	if Class == "ROGUE" then
-		SARTESPELLDB["Class"]["Rogue"] = true
-	elseif Class == "PRIEST" then
-		SARTESPELLDB["Class"]["Priest"] = true
-	elseif Class == "WARRIOR" then
-		SARTESPELLDB["Class"]["Warrior"] = true
-	elseif Class == "DRUID" then
-		SARTESPELLDB["Class"]["Druid"] = true
-	elseif Class == "WARLOCK" then
-		SARTESPELLDB["Class"]["Warlock"] = true
-	elseif Class == "SHAMAN" then
-		SARTESPELLDB["Class"]["Shaman"] = true
-	elseif Class == "HUNTER" then
-		SARTESPELLDB["Class"]["Hunter"] = true
-	elseif Class == "PALADIN" then
-		SARTESPELLDB["Class"]["Paladin"] = true
-	elseif Class == "MAGE" then
-		SARTESPELLDB["Class"]["Mage"] = true
-	elseif Class == "DEATHKNIGHT" then
-		SARTESPELLDB["Class"]["Death_Knight"] = true
-	end
+local Class = UnitClassBase("player")
+if Class == "ROGUE" then
+	SARTESPELLDB["Class"]["Rogue"] = true
+elseif Class == "PRIEST" then
+	SARTESPELLDB["Class"]["Priest"] = true
+elseif Class == "WARRIOR" then
+	SARTESPELLDB["Class"]["Warrior"] = true
+elseif Class == "DRUID" then
+	SARTESPELLDB["Class"]["Druid"] = true
+elseif Class == "WARLOCK" then
+	SARTESPELLDB["Class"]["Warlock"] = true
+elseif Class == "SHAMAN" then
+	SARTESPELLDB["Class"]["Shaman"] = true
+elseif Class == "HUNTER" then
+	SARTESPELLDB["Class"]["Hunter"] = true
+elseif Class == "PALADIN" then
+	SARTESPELLDB["Class"]["Paladin"] = true
+elseif Class == "MAGE" then
+	SARTESPELLDB["Class"]["Mage"] = true
+elseif Class == "DEATHKNIGHT" then
+	SARTESPELLDB["Class"]["Death_Knight"] = true
+end
 
 
 

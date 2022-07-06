@@ -414,7 +414,7 @@ end
 ---------------------------
 --Slash Commands
 ---------------------------
-SLASH_SARTE1 = "/SARTE"
+SLASH_SARTE1 = "/SART"
 SlashCmdList.SARTE = function(msg, editBox)
 	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
 	SARTE_Config:Show()

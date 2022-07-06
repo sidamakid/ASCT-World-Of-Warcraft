@@ -13,7 +13,8 @@ SDT_AddLocalizedCallback(function()
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-      if (unit == "player" and
+      if unit == "player" then
+      if
       --Rogue
       SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
       --Priest
@@ -33,7 +34,7 @@ f:SetScript("OnEvent", --Run when our event fires
       --Hunter
       SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true)) or
       --Death_Knight
-      SpellTableDeath_Knight[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Blood"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_DK"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Unholy"][SDT_GetEnglishName(spellName)] == true)))
+      SpellTableDeath_Knight[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Blood"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_DK"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Unholy"][SDT_GetEnglishName(spellName)] == true))
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -54,6 +55,7 @@ f:SetScript("OnEvent", --Run when our event fires
          )
          
       end
+   end
    end
 )
 end
