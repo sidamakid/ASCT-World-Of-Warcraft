@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 2.1.5
+## Version: 2.1.6
 ## Title: SARTE-Options
 ## Title-koKR: SARTE-옵션
 ## Title-frFR: SARTE-Options

@@ -1,5 +1,5 @@
 ## Interface: 30305
-## Version: 2.1.5
+## Version: 2.1.6
 ## Title: SCT-Check
 ## Title-koKR: SCT-검사
 ## Title-frFR: SCT-Vérifier

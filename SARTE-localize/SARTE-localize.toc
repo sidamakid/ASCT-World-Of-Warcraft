@@ -1,5 +1,5 @@
 ## Interface: 90205
-## Version: 2.1.5
+## Version: 2.1.6
 ## Title: SARTE-Localize
 ## Title-koKR: SARTE-지역화
 ## Title-frFR: SARTE-Localiser

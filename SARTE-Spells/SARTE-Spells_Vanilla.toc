@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 2.1.5
+## Version: 2.1.6
 ## Title: SARTE-Spells
 ## Title-frFR: SARTE-Sorts
 ## Title-koKR: SARTE-주문

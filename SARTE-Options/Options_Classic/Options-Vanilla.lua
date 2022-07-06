@@ -291,8 +291,8 @@ table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
 SARTE_Config:SetResizable(true)
-SARTE_Config:SetMinResize(300,200)
-SARTE_Config:SetMaxResize(900,750)
+SARTE_Config:SetMinResize(900,200)
+SARTE_Config:SetMaxResize(900,550)
 SARTE_Config:RegisterForDrag("LeftButton")
 SARTE_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -306,7 +306,7 @@ SARTE_Config:SetScript("OnDragStop", function(self)
 end)
 
 --Points set
-SARTE_Config:SetSize(900, 750);
+SARTE_Config:SetSize(900, 550);
 SARTE_Config:SetPoint("CENTER", UIParent, "CENTER");
 SARTE_Config:Hide()
 
