@@ -75,4 +75,7 @@ if locale == "zhTW" then
  L["msg_Lust"] = " 慾望現在已經準備好了！";
  --Message
  L["Message"] = "滾動戰鬥文本已禁用。如果未啟用，滾動技能文本將不會顯示任何內容。";
+ --New things
+ L["Nothing"] = "無";
+ L["Open To Options Panel"] = "打開選項面板";
 end

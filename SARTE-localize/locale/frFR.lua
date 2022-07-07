@@ -75,4 +75,7 @@ if locale == "frFR" then
  L["msg_Lust"] = " La luxure est maintenant prête!";
  --Message
  L["Message"] = "Le défilement du texte de combat est désactivé. S’il n’est pas activé, le texte De la capacité de défilement n’affichera rien.";
+ --New things
+ L["Nothing"] = "Rien";
+ L["Open To Options Panel"] = "Ouvrir le panneau Options";
 end

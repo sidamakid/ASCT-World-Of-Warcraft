@@ -455,6 +455,23 @@ f.defaults = {
 		["Arcane Familiar"] = false,
 		["Arcane Orb"] = false,
 		["Supernova"] = false,
+		["Portal: Shattrath"] = false,
+		["Portal: Stonard"] = false,
+		["Portal: Theramore"] = false,
+		["Portal: Silvermoon"] = false,
+		["Portal: Exodar"] = false,
+		["Portal: Stormwind"] = false,
+		["Portal: Ironforge"] = false,
+		["Portal: Darnassus"] = false,
+		["Portal: Orgrimmar"] = false,
+		["Portal: Undercity"] = false,
+		["Portal: Thunder Bluff"] = false,
+		["Portal: Oribos"] = false,
+		["Portal: Dalaran - Northrend"] = false,
+		["Ancient Portal: Dalaran"] = false,
+		["Portal: Warspear"] = false,
+		["Portal: Vale of Eternal Blossoms"] = false,
+		["Portal: Tol Barad"] = false,
 	},
 	["Fire"] = {
 		["Fire Blast"] = false,
@@ -709,9 +726,175 @@ f.defaults = {
 }
 
 function f:InitializeOptions_Class()
-	self.panel_main = CreateFrame("Frame")
-	self.panel_main.name =  L["Title_Class"]
-	InterfaceOptions_AddCategory(self.panel_main)
+local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "UIPanelDialogTemplate");
+table.insert(UISpecialFrames, "SARTE_Config")
+SARTE_Config:SetMovable(true)
+SARTE_Config:EnableMouse(true)
+SARTE_Config:SetResizable(true)
+SARTE_Config:SetSize(950, 650);
+SARTE_Config:SetMinResize(950,200)
+SARTE_Config:SetMaxResize(950,650)
+SARTE_Config:RegisterForDrag("LeftButton")
+SARTE_Config:SetScript("OnDragStart", function(self)
+  if IsLeftAltKeyDown() then
+    self:StartSizing()
+  else
+    self:StartMoving()
+  end
+end)
+SARTE_Config:SetScript("OnDragStop", function(self)
+  self:StopMovingOrSizing()
+end)
+
+--Points set
+
+SARTE_Config:SetPoint("CENTER", UIParent, "CENTER");
+SARTE_Config:Hide()
+
+--Child Frames
+SARTE_Config.title = SARTE_Config:CreateFontString(nil, "OVERLAY");
+SARTE_Config.title:SetFontObject("GameFontHighlight");
+SARTE_Config.title:SetPoint("TOP", SARTE_Config, "TOP", 1,-7);
+SARTE_Config.title:SetText(L["Title"]);
+
+-- Create the scrolling parent frame and size it to fit inside the texture
+SARTE_Config.scrollFrame = CreateFrame("ScrollFrame", nil, SARTE_Config, "UIPanelScrollFrameTemplate")
+SARTE_Config.scrollFrame:SetPoint("TOPLEFT", 3, -25)
+SARTE_Config.scrollFrame:SetPoint("BOTTOMRIGHT", -27, 4)
+
+local function Tab_OnClick (self)
+  PanelTemplates_SetTab(self:GetParent(), self:GetID());
+
+  local scrollChild = SARTE_Config.scrollFrame:GetScrollChild();
+  if (scrollChild) then
+    scrollChild:Hide();
+  end
+
+  SARTE_Config.scrollFrame:SetScrollChild(self.content);
+  self.content:Show();
+end
+
+
+local function SetTabs(frame, numTabs, ...)
+frame.numTabs = numTabs
+local contents = {};
+local frameName = frame:GetName();
+for i = 1, numTabs do
+  local tab = CreateFrame("Button", frameName.."Tab"..i, frame, "CharacterFrameTabButtonTemplate");
+  tab:SetID(i);
+  tab:SetText(select(i, ...))
+  tab:SetScript("OnClick", Tab_OnClick);
+
+  tab.content = CreateFrame("Frame", nil, SARTE_Config.scrollFrame);
+  tab.content:SetSize(770, 500)
+  tab.content:Hide()
+
+
+
+
+  table.insert(contents, tab.content)
+
+  if (i == 1) then
+    tab:SetPoint("TOPLEFT", SARTE_Config, "BOTTOMLEFT", 5, 7);
+  else
+    tab:SetPoint("TOPLEFT", _G[frameName.."Tab"..(i - 1)], "TOPRIGHT", -14, 0);
+  end
+end
+
+  Tab_OnClick(_G[frameName.."Tab1"])
+return unpack(contents)
+end
+
+
+---------------------------
+--Slash Commands
+---------------------------
+SLASH_SARTE1 = "/SART"
+SlashCmdList.SARTE = function(msg, editBox)
+	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
+	SARTE_Config:Show()
+end
+-------------------------
+--Text Creating
+-------------------------
+local function TextCreate(Text)
+local text = f:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+text:SetText(Text)
+return Text
+end
+
+---------------------------
+--Automatic Class picker
+---------------------------
+local Class = select(3, UnitClass("player"))
+if Class == 4 then
+	SARTESPELLDB["Class"]["Rogue"] = true
+	Text1 = TextCreate(L["Assassination"])
+	Text2 = TextCreate(L["Combat"])
+	Text3 = TextCreate(L["Subtlety"])
+elseif Class == 5 then
+	SARTESPELLDB["Class"]["Priest"] = true
+	Text1 = TextCreate(L["Shadow"])
+	Text2 = TextCreate(L["Holy"])
+	Text3 = TextCreate(L["Discipline"])
+elseif Class == 1 then
+	SARTESPELLDB["Class"]["Warrior"] = true
+	Text1 = TextCreate(L["Arms"])
+	Text2 = TextCreate(L["Fury"])
+	Text3 = TextCreate(L["Protection"])
+elseif Class == 11 then
+	SARTESPELLDB["Class"]["Druid"] = true
+	Text1 = TextCreate(L["Balance"])
+	Text2 = TextCreate(L["Feral_Combat"])
+	Text3 = TextCreate(L["Restoration"])
+elseif Class == 9 then
+	SARTESPELLDB["Class"]["Warlock"] = true
+	Text1 = TextCreate(L["Affliction"])
+	Text2 = TextCreate(L["Demonology"])
+	Text3 = TextCreate(L["Destruction"])
+elseif Class == 7 then
+	SARTESPELLDB["Class"]["Shaman"] = true
+	Text1 = TextCreate(L["Elemental"])
+	Text2 = TextCreate(L["Enhancement"])
+	Text3 = TextCreate(L["Restoration"])
+elseif Class == 3 then
+	SARTESPELLDB["Class"]["Hunter"] = true
+	Text1 = TextCreate(L["Beast Mastery"])
+	Text2 = TextCreate(L["Marksmanship"])
+	Text3 = TextCreate(L["Survival"])
+elseif Class == 2 then
+	SARTESPELLDB["Class"]["Paladin"] = true
+	Text1 = TextCreate(L["Holy"])
+	Text2 = TextCreate(L["Protection"])
+	Text3 = TextCreate(L["Retribution"])
+elseif Class == 8 then
+	SARTESPELLDB["Class"]["Mage"] = true
+	Text1 = TextCreate(L["Arcane"])
+	Text2 = TextCreate(L["Fire"])
+	Text3 = TextCreate(L["Frost"])
+elseif Class == 6 then
+	SARTESPELLDB["Class"]["Death_Knight"] = true
+	Text1 = TextCreate(L["Blood"])
+	Text2 = TextCreate(L["Frost"])
+	Text3 = TextCreate(L["Unholy"])
+elseif Class == 10 then
+	SARTESPELLDB["Class"]["Monk"] = true
+	Text1 = TextCreate(L["Brewmaster"])
+	Text2 = TextCreate(L["Frost"])
+	Text3 = TextCreate(L["Windwalker"])
+elseif Class == 12 then
+	SARTESPELLDB["Class"]["Demon_Hunter"] = true
+	Text1 = TextCreate(L["Havoc"])
+	Text2 = TextCreate(L["Vengeance"])
+	Text3 = TextCreate(L["Nothing"])
+end
+local Text4 = TextCreate(L["Racials"])
+
+-------------------------
+---Tabs
+-------------------------
+local content1, content2, content3, content4, content5 = SetTabs(SARTE_Config, 5, Text1, Text2, Text3, Text4, L["Color Picker"]);
+
 ---------------------------
 --MiniMap Icon
 ---------------------------
@@ -719,7 +902,7 @@ local MinimapDataObject = LibStub("LibDataBroker-1.1"):NewDataObject("SARTE", {
     type = "SARTE",
     text = L["Title"],
     icon = "Interface\\Addons\\SARTE-Options\\SARTE-Image_4.tga",
-    OnClick = function() InterfaceOptionsFrame_OpenToCategory(f.panel_main)  end,
+    OnClick = function() SARTE_Config:Show()  end,
 	--GameToolTip
     OnTooltipShow = function(tooltip)
       tooltip:AddLine(L["Title"])
@@ -731,64 +914,26 @@ LibStub("LibDBIcon-1.0"):Register("SARTE", MinimapDataObject, SARTESPELLDB)
 ---------------------------
 --Color Picker
 ---------------------------
-local Color_picker_SARTE = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
-	Color_picker_SARTE:SetPoint("TOPRIGHT", -30, -20)
+local Color_picker_SARTE = CreateFrame("Button", nil, content5, "UIPanelButtonTemplate")
+	Color_picker_SARTE:SetPoint("TOPRIGHT", -70, -20)
 	Color_picker_SARTE:SetText(L["Color Picker"])
 	Color_picker_SARTE:SetWidth(100)
 	Color_picker_SARTE:SetScript("OnClick", function()
 	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
 end)
-
-
-
-local function SubPanelMaker(Name)
-local Frames = CreateFrame("Frame")
-Frames.name = Name
-Frames.parent = self.panel_main.name
-InterfaceOptions_AddCategory(Frames)
--- Create the scrolling parent frame and size it to fit inside the texture
-local scrollFrame = CreateFrame("ScrollFrame", nil, Frames, "UIPanelScrollFrameTemplate")
-scrollFrame:SetPoint("TOPLEFT", 3, -4)
-scrollFrame:SetPoint("BOTTOMRIGHT", -27, 4)
-
--- Create the scrolling child frame, set its width to fit, and give it an arbitrary minimum height (such as 1)
-local scrollChild = CreateFrame("Frame")
-scrollFrame:SetScrollChild(scrollChild)
-scrollChild:SetWidth(InterfaceOptionsFramePanelContainer:GetWidth()-18)
-scrollChild:SetHeight(1) 
-
--- Add widgets to the scrolling child frame as desired
-local footer = scrollChild:CreateFontString("ARTWORK", nil, "GameFontNormal")
-footer:SetPoint("TOP", 0, -5000)
-footer:SetText("")
-return scrollChild
-end
-local Class = select(3, UnitClass("player"))
-if Class == 4 then
-	SARTESPELLDB["Class"]["Rogue"] = true
-elseif Class == 5 then
-	SARTESPELLDB["Class"]["Priest"] = true
-elseif Class == 1 then
-	SARTESPELLDB["Class"]["Warrior"] = true
-elseif Class == 11 then
-	SARTESPELLDB["Class"]["Druid"] = true
-elseif Class == 9 then
-	SARTESPELLDB["Class"]["Warlock"] = true
-elseif Class == 7 then
-	SARTESPELLDB["Class"]["Shaman"] = true
-elseif Class == 3 then
-	SARTESPELLDB["Class"]["Hunter"] = true
-elseif Class == 2 then
-	SARTESPELLDB["Class"]["Paladin"] = true
-elseif Class == 8 then
-	SARTESPELLDB["Class"]["Mage"] = true
-elseif Class == 6 then
-	SARTESPELLDB["Class"]["Death_Knight"] = true
-elseif Class == 10 then
-	SARTESPELLDB["Class"]["Monk"] = true
-elseif Class == 12 then
-	SARTESPELLDB["Class"]["Demon_Hunter"] = true
-end
+self.panel_main = CreateFrame("Frame")
+self.panel_main.name = L["Title"]
+InterfaceOptions_AddCategory(self.panel_main)
+---------------------------
+--Open to options panel through default options panel
+---------------------------
+local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
+	OpenToOptionsPanel:SetPoint("CENTER", 0, 0)
+	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
+	OpenToOptionsPanel:SetWidth(150)
+	OpenToOptionsPanel:SetScript("OnClick", function()
+	SARTE_Config:Show()
+end)
 
 
 
@@ -796,16 +941,11 @@ end
 --Rogue
 --------------------------
 if SARTESPELLDB["Class"]["Rogue"] == true then
-	local Panel_1 = SubPanelMaker(L["Assassination"])
-	local Panel_2 = SubPanelMaker(L["Outlaw"])
-	local Panel_3 = SubPanelMaker(L["Subtlety"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Assassination"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_1/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Assassination"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
@@ -815,8 +955,8 @@ if SARTESPELLDB["Class"]["Rogue"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Outlaw"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Outlaw"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Outlaw"][v] = s:GetChecked() end)
@@ -826,8 +966,8 @@ if SARTESPELLDB["Class"]["Rogue"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Subtlety"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Subtlety"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Subtlety"][v] = s:GetChecked() end)
@@ -837,16 +977,11 @@ if SARTESPELLDB["Class"]["Rogue"] == true then
 --Priest
 --------------------------
 elseif SARTESPELLDB["Class"]["Priest"] == true then
-	local Panel_1 = SubPanelMaker(L["Shadow"])
-	local Panel_2 = SubPanelMaker(L["Holy"])
-	local Panel_3 = SubPanelMaker(L["Discipline"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Shadow"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Shadow"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Shadow"][v] = s:GetChecked() end)
@@ -856,8 +991,8 @@ elseif SARTESPELLDB["Class"]["Priest"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Holy_Priest"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Holy_Priest"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Priest"][v] = s:GetChecked() end)
@@ -867,8 +1002,8 @@ elseif SARTESPELLDB["Class"]["Priest"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Discipline"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Discipline"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Discipline"][v] = s:GetChecked() end)
@@ -878,16 +1013,11 @@ elseif SARTESPELLDB["Class"]["Priest"] == true then
 --Warrior
 --------------------------
 elseif SARTESPELLDB["Class"]["Warrior"] == true then
-	local Panel_1 = SubPanelMaker(L["Arms"])
-	local Panel_2 = SubPanelMaker(L["Fury"])
-	local Panel_3 = SubPanelMaker(L["Protection"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Arms"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_1/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Arms"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Arms"][v] = s:GetChecked() end)
@@ -897,8 +1027,8 @@ elseif SARTESPELLDB["Class"]["Warrior"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Fury"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Fury"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Fury"][v] = s:GetChecked() end)
@@ -908,8 +1038,8 @@ elseif SARTESPELLDB["Class"]["Warrior"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Protection_Warrior"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Protection_Warrior"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Warrior"][v] = s:GetChecked() end)
@@ -919,16 +1049,11 @@ elseif SARTESPELLDB["Class"]["Warrior"] == true then
 --Druid
 --------------------------
 elseif SARTESPELLDB["Class"]["Druid"] == true then
-	local Panel_1 = SubPanelMaker(L["Balance"])
-	local Panel_2 = SubPanelMaker(L["Feral_Combat"])
-	local Panel_3 = SubPanelMaker(L["Restoration"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Balance"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Balance"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Balance"][v] = s:GetChecked() end)
@@ -938,8 +1063,8 @@ elseif SARTESPELLDB["Class"]["Druid"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Feral_Combat"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Feral_Combat"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Feral_Combat"][v] = s:GetChecked() end)
@@ -949,8 +1074,8 @@ elseif SARTESPELLDB["Class"]["Druid"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Druid_Restoration"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Druid_Restoration"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Druid_Restoration"][v] = s:GetChecked() end)
@@ -960,16 +1085,11 @@ elseif SARTESPELLDB["Class"]["Druid"] == true then
 --Warlock
 --------------------------
 elseif SARTESPELLDB["Class"]["Warlock"] == true then
-	local Panel_1 = SubPanelMaker(L["Affliction"])
-	local Panel_2 = SubPanelMaker(L["Demonology"])
-	local Panel_3 = SubPanelMaker(L["Destruction"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Affliction"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Affliction"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Affliction"][v] = s:GetChecked() end)
@@ -979,8 +1099,8 @@ elseif SARTESPELLDB["Class"]["Warlock"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Demonology"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Demonology"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Demonology"][v] = s:GetChecked() end)
@@ -990,8 +1110,8 @@ elseif SARTESPELLDB["Class"]["Warlock"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Destruction"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Destruction"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Destruction"][v] = s:GetChecked() end)
@@ -1001,16 +1121,11 @@ elseif SARTESPELLDB["Class"]["Warlock"] == true then
 --Shaman
 --------------------------
 elseif SARTESPELLDB["Class"]["Shaman"] == true then
-	local Panel_1 = SubPanelMaker(L["Elemental"])
-	local Panel_2 = SubPanelMaker(L["Enhancement"])
-	local Panel_3 = SubPanelMaker(L["Restoration"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Elemental"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Elemental"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Elemental"][v] = s:GetChecked() end)
@@ -1020,8 +1135,8 @@ elseif SARTESPELLDB["Class"]["Shaman"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Enhancement"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Enhancement"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Enhancement"][v] = s:GetChecked() end)
@@ -1031,8 +1146,8 @@ elseif SARTESPELLDB["Class"]["Shaman"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Shaman_Restoration"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Shaman_Restoration"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Shaman_Restoration"][v] = s:GetChecked() end)
@@ -1042,16 +1157,11 @@ elseif SARTESPELLDB["Class"]["Shaman"] == true then
 --Hunter
 --------------------------
 elseif SARTESPELLDB["Class"]["Hunter"] == true then
-	local Panel_1 = SubPanelMaker(L["Beast Mastery"])
-	local Panel_2 = SubPanelMaker(L["Marksmanship"])
-	local Panel_3 = SubPanelMaker(L["Survival"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Beast Mastery"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Beast Mastery"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Beast Mastery"][v] = s:GetChecked() end)
@@ -1061,8 +1171,8 @@ elseif SARTESPELLDB["Class"]["Hunter"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Marksmanship"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Marksmanship"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Marksmanship"][v] = s:GetChecked() end)
@@ -1072,8 +1182,8 @@ elseif SARTESPELLDB["Class"]["Hunter"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Survival"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Survival"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Survival"][v] = s:GetChecked() end)
@@ -1083,16 +1193,11 @@ elseif SARTESPELLDB["Class"]["Hunter"] == true then
 --Paladin
 --------------------------
 elseif SARTESPELLDB["Class"]["Paladin"] == true then
-	local Panel_1 = SubPanelMaker(L["Holy"])
-	local Panel_2 = SubPanelMaker(L["Protection"])
-	local Panel_3 = SubPanelMaker(L["Retribution"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Holy_Paladin"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Holy_Paladin"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Paladin"][v] = s:GetChecked() end)
@@ -1102,8 +1207,8 @@ elseif SARTESPELLDB["Class"]["Paladin"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Protection_Paladin"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Protection_Paladin"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Paladin"][v] = s:GetChecked() end)
@@ -1113,8 +1218,8 @@ elseif SARTESPELLDB["Class"]["Paladin"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Retribution"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Retribution"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Retribution"][v] = s:GetChecked() end)
@@ -1124,16 +1229,11 @@ elseif SARTESPELLDB["Class"]["Paladin"] == true then
 --Mage
 --------------------------
 elseif SARTESPELLDB["Class"]["Mage"] == true then
-	local Panel_1 = SubPanelMaker(L["Arcane"])
-	local Panel_2 = SubPanelMaker(L["Fire"])
-	local Panel_3 = SubPanelMaker(L["Frost"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Arcane"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Arcane"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Arcane"][v] = s:GetChecked() end)
@@ -1143,8 +1243,8 @@ elseif SARTESPELLDB["Class"]["Mage"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Fire"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Fire"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Fire"][v] = s:GetChecked() end)
@@ -1154,8 +1254,8 @@ elseif SARTESPELLDB["Class"]["Mage"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Frost_Mage"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Frost_Mage"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Frost_Mage"][v] = s:GetChecked() end)
@@ -1165,16 +1265,11 @@ elseif SARTESPELLDB["Class"]["Mage"] == true then
 --Death Knight
 --------------------------
 elseif SARTESPELLDB["Class"]["Death_Knight"] == true then
-	local Panel_1 = SubPanelMaker(L["Blood"])
-	local Panel_2 = SubPanelMaker(L["Frost"])
-	local Panel_3 = SubPanelMaker(L["Unholy"])
-
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Blood"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Blood"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Blood"][v] = s:GetChecked() end)
@@ -1184,8 +1279,8 @@ elseif SARTESPELLDB["Class"]["Death_Knight"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Frost_DK"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Frost_DK"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Frost_DK"][v] = s:GetChecked() end)
@@ -1195,8 +1290,8 @@ elseif SARTESPELLDB["Class"]["Death_Knight"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Unholy"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Unholy"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Unholy"][v] = s:GetChecked() end)
@@ -1206,15 +1301,11 @@ elseif SARTESPELLDB["Class"]["Death_Knight"] == true then
 --Monk
 --------------------------
 elseif SARTESPELLDB["Class"]["Monk"] == true then
-	local Panel_1 = SubPanelMaker(L["Brewmaster"])
-	local Panel_2 = SubPanelMaker(L["Frost"])
-	local Panel_3 = SubPanelMaker(L["Unholy"])
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Brewmaster"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Brewmaster"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Brewmaster"][v] = s:GetChecked() end)
@@ -1224,8 +1315,8 @@ elseif SARTESPELLDB["Class"]["Monk"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Mistweaver"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Mistweaver"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Mistweaver"][v] = s:GetChecked() end)
@@ -1235,8 +1326,8 @@ elseif SARTESPELLDB["Class"]["Monk"] == true then
 	local col_3 = 4
     local x_3 = 0
     for v in pairs(SARTESPELLDB["Windwalker"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_3 % col_3), -20 + (- b:GetHeight()-5) * math.floor(x_3/col_3))
+        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Windwalker"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Windwalker"][v] = s:GetChecked() end)
@@ -1246,14 +1337,11 @@ elseif SARTESPELLDB["Class"]["Monk"] == true then
 --Demon Hunter
 --------------------------
 elseif SARTESPELLDB["Class"]["Demon_Hunter"] == true then
-	local Panel_1 = SubPanelMaker(L["Havoc"])
-	local Panel_2 = SubPanelMaker(L["Vengeance"])
-
 	local col_1 = 4
     local x_1 = 0
     for v in pairs(SARTESPELLDB["Havoc"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_1 % col_1), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_1))
+        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
 		b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Havoc"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Havoc"][v] = s:GetChecked() end)
@@ -1263,8 +1351,8 @@ elseif SARTESPELLDB["Class"]["Demon_Hunter"] == true then
 	local col_2 = 4
     local x_2 = 0
     for v in pairs(SARTESPELLDB["Vengeance"]) do
-        local b = CreateFrame("CheckButton", nil, Panel_2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+120) * (x_2 % col_2), -20 + (- b:GetHeight()-5) * math.floor(x_2/col_2))
+        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
+        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
         b.Text:SetText(SDT_GetLocalizedName(v))
         b:SetChecked(SARTESPELLDB["Vengeance"][v])
         b:SetScript("OnClick", function(s) SARTESPELLDB["Vengeance"][v] = s:GetChecked() end)
@@ -1321,14 +1409,14 @@ elseif Race == 31 then
 elseif Race == 36 then
 	SARTESPELLDB["Race"]["Mag'har Orc"] = true
 end
-local Racial_Panel = SubPanelMaker(L["Racials"])
+
 --------------------------
 --Undead
 --------------------------
 if SARTESPELLDB["Race"]["Undead"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 		for v in pairs(SARTESPELLDB["Undead"]) do
-	  local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	  local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	  b:SetPoint("TOPLEFT", 20, modifierfirst)
 	  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	  b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1341,7 +1429,7 @@ if SARTESPELLDB["Race"]["Undead"] == true then
 elseif SARTESPELLDB["Class"]["Orc"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Orc"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1354,7 +1442,7 @@ elseif SARTESPELLDB["Class"]["Orc"] == true then
 elseif SARTESPELLDB["Class"]["Dwarf"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Dwarf"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1367,7 +1455,7 @@ elseif SARTESPELLDB["Class"]["Dwarf"] == true then
 elseif SARTESPELLDB["Class"]["Gnome"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Gnome"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1380,7 +1468,7 @@ elseif SARTESPELLDB["Class"]["Gnome"] == true then
 elseif SARTESPELLDB["Class"]["Night Elf"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Night Elf"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1393,7 +1481,7 @@ elseif SARTESPELLDB["Class"]["Night Elf"] == true then
 elseif SARTESPELLDB["Class"]["Troll"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Troll"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1406,7 +1494,7 @@ elseif SARTESPELLDB["Class"]["Troll"] == true then
 elseif SARTESPELLDB["Class"]["Tauren"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Tauren"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1419,7 +1507,7 @@ elseif SARTESPELLDB["Class"]["Tauren"] == true then
 elseif SARTESPELLDB["Class"]["Human"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Human"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1432,7 +1520,7 @@ elseif SARTESPELLDB["Class"]["Human"] == true then
 elseif SARTESPELLDB["Class"]["Blood Elf"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Blood Elf"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1445,7 +1533,7 @@ elseif SARTESPELLDB["Class"]["Blood Elf"] == true then
 elseif SARTESPELLDB["Class"]["Draenei"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Draenei"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1458,7 +1546,7 @@ elseif SARTESPELLDB["Class"]["Draenei"] == true then
 elseif SARTESPELLDB["Class"]["Worgen"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Worgen"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1471,7 +1559,7 @@ elseif SARTESPELLDB["Class"]["Worgen"] == true then
 elseif SARTESPELLDB["Class"]["Pandaren"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Pandaren"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1484,7 +1572,7 @@ elseif SARTESPELLDB["Class"]["Pandaren"] == true then
 elseif SARTESPELLDB["Class"]["Void Elf"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Void Elf"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1497,7 +1585,7 @@ elseif SARTESPELLDB["Class"]["Void Elf"] == true then
 elseif SARTESPELLDB["Class"]["Lightforged Draenei"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Lightforged Draenei"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1510,7 +1598,7 @@ elseif SARTESPELLDB["Class"]["Lightforged Draenei"] == true then
 elseif SARTESPELLDB["Class"]["Dark Iron Dwarf"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Dark Iron Dwarf"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1523,7 +1611,7 @@ elseif SARTESPELLDB["Class"]["Dark Iron Dwarf"] == true then
 elseif SARTESPELLDB["Class"]["Mechagnome"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Mechagnome"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1536,7 +1624,7 @@ elseif SARTESPELLDB["Class"]["Mechagnome"] == true then
 elseif SARTESPELLDB["Class"]["Kul Tiran"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Kul Tiran"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1549,7 +1637,7 @@ elseif SARTESPELLDB["Class"]["Kul Tiran"] == true then
 elseif SARTESPELLDB["Class"]["Goblin"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Goblin"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1562,7 +1650,7 @@ elseif SARTESPELLDB["Class"]["Goblin"] == true then
 elseif SARTESPELLDB["Class"]["Nightborne"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Nightborne"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1575,7 +1663,7 @@ elseif SARTESPELLDB["Class"]["Nightborne"] == true then
 elseif SARTESPELLDB["Class"]["Highmountain Tauren"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Highmountain Tauren"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1588,7 +1676,7 @@ elseif SARTESPELLDB["Class"]["Highmountain Tauren"] == true then
 elseif SARTESPELLDB["Class"]["Vulpera"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Vulpera"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1601,7 +1689,7 @@ elseif SARTESPELLDB["Class"]["Vulpera"] == true then
 elseif SARTESPELLDB["Class"]["Zandalari Troll"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Zandalari Troll"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))
@@ -1614,7 +1702,7 @@ elseif SARTESPELLDB["Class"]["Zandalari Troll"] == true then
 elseif SARTESPELLDB["Class"]["Mag'har Orc"] == true then
 	local modifierfirst = -20 -- variable to keep track of what to subtract
 	for v in pairs(SARTESPELLDB["Mag'har Orc"]) do
-	local b = CreateFrame("CheckButton", nil, Racial_Panel, "InterfaceOptionsCheckButtonTemplate")
+	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20, modifierfirst)
 	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
 	b.Text:SetText(SDT_GetLocalizedName(v))

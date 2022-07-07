@@ -241,6 +241,12 @@ f.defaults = {
 		["Arcane Power"] = false,
 		["Presence of Mind"] = false,
 		["Evocation"] = false,
+		["Portal: Stormwind"] = false,
+		["Portal: Ironforge"] = false,
+		["Portal: Darnassus"] = false,
+		["Portal: Orgrimmar"] = false,
+		["Portal: Undercity"] = false,
+		["Portal: Thunder Bluff"] = false,
 	},
 	--Fire
 	["Fire"] = {
@@ -286,13 +292,14 @@ f.defaults = {
 --Create Options panel
 ---------------------------
 function f:InitializeOptions_Class()
-local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "BasicFrameTemplateWithInset");
+local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "UIPanelDialogTemplate");
 table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
 SARTE_Config:SetResizable(true)
-SARTE_Config:SetMinResize(900,200)
-SARTE_Config:SetMaxResize(900,550)
+SARTE_Config:SetSize(950, 650);
+SARTE_Config:SetMinResize(950,200)
+SARTE_Config:SetMaxResize(950,650)
 SARTE_Config:RegisterForDrag("LeftButton")
 SARTE_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -306,14 +313,14 @@ SARTE_Config:SetScript("OnDragStop", function(self)
 end)
 
 --Points set
-SARTE_Config:SetSize(900, 550);
+
 SARTE_Config:SetPoint("CENTER", UIParent, "CENTER");
 SARTE_Config:Hide()
 
 --Child Frames
 SARTE_Config.title = SARTE_Config:CreateFontString(nil, "OVERLAY");
 SARTE_Config.title:SetFontObject("GameFontHighlight");
-SARTE_Config.title:SetPoint("TOPLEFT", SARTE_Config, "TOPLEFT", 1,-5);
+SARTE_Config.title:SetPoint("TOP", SARTE_Config, "TOP", 1,-7);
 SARTE_Config.title:SetText(L["Title"]);
 
 -- Create the scrolling parent frame and size it to fit inside the texture
@@ -479,7 +486,7 @@ InterfaceOptions_AddCategory(self.panel_main)
 ---------------------------
 local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
 	OpenToOptionsPanel:SetPoint("CENTER", 0, 0)
-	OpenToOptionsPanel:SetText("Open To Options Panel")
+	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
 	OpenToOptionsPanel:SetWidth(150)
 	OpenToOptionsPanel:SetScript("OnClick", function()
 	SARTE_Config:Show()

@@ -150,5 +150,23 @@ SpellTableMage = {-- Mage Spells
 ["Ice Nova"] = "Ice Nova",
 ["Ray of Frost"] = "Ray of Frost",
 ["Ebonbolt"] = "Ebonbolt",
+--Portals
+["Portal: Shattrath"] = "Portal: Shattrath",
+["Portal: Stonard"] = "Portal: Stonard",
+["Portal: Theramore"] = "Portal: Theramore",
+["Portal: Silvermoon"] = "Portal: Silvermoon",
+["Portal: Exodar"] = "Portal: Exodar",
+["Portal: Stormwind"] = "Portal: Stormwind",
+["Portal: Ironforge"] = "Portal: Ironforge",
+["Portal: Darnassus"] = "Portal: Darnassus",
+["Portal: Orgrimmar"] = "Portal: Orgrimmar",
+["Portal: Undercity"] = "Portal: Undercity",
+["Portal: Thunder Bluff"] = "Portal: Thunder Bluff",
+["Portal: Oribos"] = "Portal: Oribos",
+["Portal: Dalaran - Northrend"] = "Portal: Dalaran - Northrend",
+["Ancient Portal: Dalaran"] = "Ancient Portal: Dalaran",
+["Portal: Warspear"] = "Portal: Warspear",
+["Portal: Vale of Eternal Blossoms"] = "Portal: Vale of Eternal Blossoms",
+["Portal: Tol Barad"] = "Portal: Tol Barad",
 }
 end

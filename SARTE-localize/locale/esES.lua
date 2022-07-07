@@ -75,4 +75,7 @@ if locale == "esES" then
  L["msg_Lust"] = " ¡La lujuria ya está lista!"
  --Message
  L["Message"] = "El desplazamiento de texto de combate está deshabilitado. Si no está habilitado, el texto Capacidad de desplazamiento no mostrará nada.";
+ --New things
+ L["Nothing"] = "Nada";
+ L["Open To Options Panel"] = "Abrir el panel Opciones";
 end

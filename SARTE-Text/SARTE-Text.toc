@@ -1,5 +1,5 @@
 ## Interface: 90205
-## Version: 2.1.6
+## Version: 2.2.0
 ## Title: Scrolling Ability Text
 ## Title-koKR: 스크롤 능력 텍스트
 ## Title-frFR: Texte de capacité de défilement

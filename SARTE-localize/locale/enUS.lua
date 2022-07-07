@@ -75,4 +75,7 @@ if locale == "enUS" then
  L["msg_Lust"] = " Lust is now ready!";
  --Message
  L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Scrolling Ability text won't show anything.";
+ --New things
+ L["Nothing"] = "Nothing";
+ L["Open To Options Panel"] = "Open To Options Panel";
 end

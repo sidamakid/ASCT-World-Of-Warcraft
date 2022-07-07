@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 2.1.6
+## Version: 2.2.0
 ## Title: SARTE-Options
 ## Title-koKR: SARTE-옵션
 ## Title-frFR: SARTE-Options
@@ -31,7 +31,7 @@ Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\lib.xml
 #Retail
-
+Options-Retail.lua
 # Classic Verisons
 Options_Classic\Options-Vanilla.lua
 Options_Classic\Options-Tbc.lua

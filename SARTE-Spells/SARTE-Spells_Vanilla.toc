@@ -1,5 +1,5 @@
 ## Interface: 11403
-## Version: 2.1.6
+## Version: 2.2.0
 ## Title: SARTE-Spells
 ## Title-frFR: SARTE-Sorts
 ## Title-koKR: SARTE-주문
@@ -35,6 +35,8 @@ SARTE-Shaman-Spells.lua
 SARTE-Hunter-Spells.lua
 SARTE-Warrior-Spells.lua
 SARTE-Death-Knight-Spells.lua
+SARTE-Demon-Hunter-Spells.lua
+SARTE-Monk-Spells.lua
 SARTE-Shared-Cooldwn-Spells.lua
 SARTE-Shared-Spell-Effects.lua
 # Racial spells: Racial_Spells\
@@ -48,3 +50,16 @@ Racial_Spells\SARTE-Dranei-Spells.lua
 Racial_Spells\SARTE-Blood-Elf-Spells.lua
 Racial_Spells\SARTE-Night-Elf-Spells.lua
 Racial_Spells\SARTE-Gnome-Spells.lua
+Racial_Spells\SARTE-Worgen-Spells.lua
+Racial_Spells\SARTE-Pandaren-Spells.lua
+Racial_Spells\SARTE-Void-Elf-Spells.lua
+Racial_Spells\SARTE-Lightforged-Draenei-Spells.lua
+Racial_Spells\SARTE-Dark-Iron-Dwarf-Spells.lua
+Racial_Spells\SARTE-Mechagnome-Spells.lua
+Racial_Spells\SARTE-Kul-Tiran-Spells.lua
+Racial_Spells\SARTE-Goblin-Spells.lua
+Racial_Spells\SARTE-Highmountain-Tauren-Spells.lua
+Racial_Spells\SARTE-Vulpera-Spells.lua
+Racial_Spells\SARTE-Zandalari-Troll-Spells.lua
+Racial_Spells\SARTE-Mag'har-Orc-Spells.lua
+Racial_Spells\SARTE-Nightborne-Spells.lua

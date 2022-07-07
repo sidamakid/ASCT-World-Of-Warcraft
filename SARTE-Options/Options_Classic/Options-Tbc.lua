@@ -273,6 +273,17 @@ f.defaults = {
 		["Arcane Power"] = false,
 		["Presence of Mind"] = false,
 		["Evocation"] = false,
+		["Portal: Shattrath"] = false,
+		["Portal: Stonard"] = false,
+		["Portal: Theramore"] = false,
+		["Portal: Silvermoon"] = false,
+		["Portal: Exodar"] = false,
+		["Portal: Stormwind"] = false,
+		["Portal: Ironforge"] = false,
+		["Portal: Darnassus"] = false,
+		["Portal: Orgrimmar"] = false,
+		["Portal: Undercity"] = false,
+		["Portal: Thunder Bluff"] = false,
 	},
 	--Fire
 	["Fire"] = {
@@ -335,8 +346,9 @@ table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
 SARTE_Config:SetResizable(true)
-SARTE_Config:SetMinResize(300,200)
-SARTE_Config:SetMaxResize(900,550)
+SARTE_Config:SetSize(950, 650);
+SARTE_Config:SetMinResize(950,200)
+SARTE_Config:SetMaxResize(900,650)
 SARTE_Config:RegisterForDrag("LeftButton")
 SARTE_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -349,7 +361,7 @@ SARTE_Config:SetScript("OnDragStop", function(self)
   self:StopMovingOrSizing()
 end)
 --Points set
-SARTE_Config:SetSize(900, 550);
+
 SARTE_Config:SetPoint("CENTER", UIParent, "CENTER");
 SARTE_Config:Hide()
 
@@ -522,7 +534,7 @@ InterfaceOptions_AddCategory(self.panel_main)
 ---------------------------
 local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
 	OpenToOptionsPanel:SetPoint("CENTER", 0, 0)
-	OpenToOptionsPanel:SetText("Open To Options Panel")
+	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
 	OpenToOptionsPanel:SetWidth(150)
 	OpenToOptionsPanel:SetScript("OnClick", function()
 	SARTE_Config:Show()

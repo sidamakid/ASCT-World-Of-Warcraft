@@ -75,4 +75,7 @@ if locale == "ptBR" then
  L["msg_Lust"] = " A luxúria está pronta!";
  --Message
  L["Message"] = "O texto de combate de rolagem está desativado. Se não estiver ativado, o texto da Função de Rolagem não mostrará nada.";
+ --New things
+ L["Nothing"] = "Nada";
+ L["Open To Options Panel"] = "Painel aberto para opções";
 end
