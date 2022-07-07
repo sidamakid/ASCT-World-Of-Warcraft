@@ -1,5 +1,5 @@
 ## Interface: 90205
-## Version: 2.2.0
+## Version: 2.2.1
 ## Title: SCT-Check
 ## Title-koKR: SCT-검사
 ## Title-frFR: SCT-Vérifier

@@ -348,7 +348,7 @@ SARTE_Config:EnableMouse(true)
 SARTE_Config:SetResizable(true)
 SARTE_Config:SetSize(950, 650);
 SARTE_Config:SetMinResize(950,200)
-SARTE_Config:SetMaxResize(900,650)
+SARTE_Config:SetMaxResize(950,650)
 SARTE_Config:RegisterForDrag("LeftButton")
 SARTE_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
