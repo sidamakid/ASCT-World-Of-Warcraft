@@ -69,13 +69,15 @@ if locale == "enUS" then
  L["Lust"] = "Lust";
  L["Tab"] = "This Tab is for Shaman's and Hunter's only.";
  --Ready Text
- L["msg"] = " is now ready!";
+ L["msg"] = "is now ready!";
  L["msg_Shocks"] = " Shocks are now ready!";
  L["msg_Traps"] = " Traps are now ready!";
  L["msg_Lust"] = " Lust is now ready!";
  --Message
  L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Scrolling Ability text won't show anything.";
- --New things
  L["Nothing"] = "Nothing";
  L["Open To Options Panel"] = "Open To Options Panel";
+ --New things
+ L["Icon"] = "Icon";
+ L["Name"] = "Name";
 end

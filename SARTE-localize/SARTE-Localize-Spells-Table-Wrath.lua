@@ -1,5 +1,3 @@
-local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
-if isRetailWow then
 SARTE_englishToSpellID = {--SARTE Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
@@ -24,7 +22,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Stealth"] = 1784,
       ["Vanish"] = 1856,
       ["Distract"] = 1725,
-      ["Ghostly Strike"] = 196937,
+      ["Ghostly Strike"] = 14278 or 196937,
       ["Preparation"] = 14185,
       ["Shiv"] = 5938,
       ["Shadow Blades"] = 121471,
@@ -39,6 +37,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Shadow Dance"] = 51713,
       ["Tricks of the Trade"] = 57934,
       --Priest
+      ["Power Word: Shield"] = 17,
       ["Elune's Grace"] = 2651,
       ["Feedback"] = 13896,
       ["Power Infusion"] = 10060,
@@ -72,6 +71,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Holy Word: Salvation"] = 265202,
       ["Apotheosis"] = 200183,
       ["Leap of Faith"] = 73325,
+      ["Consume Magic"] = 32676 or 278326, --First is only in TBC. Second is in Retail for DH.
       ["Chastise"] = 44041,
       ["Shadowfiend"] = 34433,
       ["Shadow Word: Death"] = 32379,
@@ -129,7 +129,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Heroic Leap"] = 6544,
       ["Ignore Pain"] = 190456,
       ["Challenging Shout"] = 1161,
-      ["Sweeping Strikes"] = 260708,
+      ["Sweeping Strikes"] = 12292 or 260708 or 316432 or 316433,
       ["Pummel"] = 6552,
       ["Whirlwind"] = 1680,
       ["Recklessness"] = 1719,
@@ -281,9 +281,9 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Ebonbolt"] = 257537,
       ["Ice Barrier"] = 11426,
       ["Dragon's Breath"] = 31661,
-      ["Blast Wave"] = 157981,
+      ["Blast Wave"] = 11113 or 157981,
       ["Summon Water Elemental"] = 31687,
-      ["Ice Block"] = 45438,
+      ["Ice Block"] = 45438 or 11958,
       ["Cold Snap"] = 12472,
       --Shaman
       ["Elemental Mastery"] = 16166,
@@ -311,7 +311,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Fire Nova Totem"] = 1535,
       --Shaman-Shocks
       ["Frost Shock"] = 8056,
-      ["Flame Shock"] = 188389,
+      ["Flame Shock"] = 8050 or 188389,
       ["Earth shock"] = 8042,
       --Shaman-Lust
       ["Heroism"] = 32182,
@@ -471,7 +471,6 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Immolation Aura"] = 258920,
       ["Disrupt"] = 183752,
       ["Torment"] = 185245,
-      ["Consume Magic"] = 278326,
       ["Eye Beam"] = 198013,
       ["Vengeful Retreat"] = 198793,
       ["Darkness"] = 196718,
@@ -609,7 +608,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Portal: Vale of Eternal Blossoms"] = 132620 or 132626,
       ["Portal: Tol Barad"] = 88345,
       --Shared-spell-Names
-      ["Nature's Swiftness"] = 132158,
+      ["Nature's Swiftness"] = 17116 or 16188 or 132158,
       --Racials
       ["Gift of the Naaru"] = 28880 or 59542 or 59543 or 59544 or 59545 or 59547 or 59548,
       ["Escape Artist"] = 20589,
@@ -618,6 +617,8 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Will of the Forsaken"] = 7744,
       ["Berserking"] = 26297 or 26296 or 20554,
       ["War Stomp"] = 20549,
+      ["Every Man for Himself"] = 59752,
+      ["Perception"] = 20600,
       ["Shadowmeld"] =  20580,
       ["Stoneform"] = 20594,
       ["Arcane Torrent"] = 50613 or 28730 or 25046,
@@ -647,4 +648,3 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Regeneratin'"] = 291944,
       ["Ancestral Call"] = 274738,
 }
-end

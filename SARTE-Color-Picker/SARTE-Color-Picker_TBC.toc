@@ -1,5 +1,5 @@
 ## Interface: 20504
-## Version: 2.2.1
+## Version: 2.3.5
 ## Title: SARTE_Color_Picker
 ## Title-koKR: SARTE 색상 선택기
 ## Title-frFR: Sélecteur de couleurs SARTE

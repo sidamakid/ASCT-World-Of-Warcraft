@@ -15,36 +15,73 @@ f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" then
+      local Spell_Localize = SDT_GetEnglishName(spellName)
+      local dbSettings_Rogue = SARTESPELLDB["Assassination"][Spell_Localize] or SARTESPELLDB["Outlaw"][Spell_Localize] or SARTESPELLDB["Subtlety"][Spell_Localize]
+      local dbSettings_Priest = SARTESPELLDB["Shadow"][Spell_Localize] or SARTESPELLDB["Holy_Priest"][Spell_Localize] or SARTESPELLDB["Discipline"][Spell_Localize]
+      local dbSettings_Shaman = SARTESPELLDB["Elemental"][Spell_Localize] or SARTESPELLDB["Enhancement"][Spell_Localize] or SARTESPELLDB["Shaman_Restoration"][Spell_Localize]
+      local dbSettings_Warrior = SARTESPELLDB["Arms"][Spell_Localize] or SARTESPELLDB["Fury"][Spell_Localize] or SARTESPELLDB["Protection_Warrior"][Spell_Localize]
+      local dbSettings_Warlock = SARTESPELLDB["Affliction"][Spell_Localize] or SARTESPELLDB["Demonology"][Spell_Localize] or SARTESPELLDB["Destruction"][Spell_Localize]
+      local dbSettings_Paladin = SARTESPELLDB["Holy_Paladin"][Spell_Localize] or SARTESPELLDB["Protection_Paladin"][Spell_Localize] or SARTESPELLDB["Retribution"][Spell_Localize]
+      local dbSettings_Mage = SARTESPELLDB["Arcane"][Spell_Localize] or SARTESPELLDB["Fire"][Spell_Localize] or SARTESPELLDB["Frost_Mage"][Spell_Localize]
+      local dbSettings_Druid = SARTESPELLDB["Balance"][Spell_Localize] or SARTESPELLDB["Feral_Combat"][Spell_Localize] or SARTESPELLDB["Druid_Restoration"][Spell_Localize]
+      local dbSettings_Hunter = SARTESPELLDB["Beast Mastery"][Spell_Localize] or SARTESPELLDB["Marksmanship"][Spell_Localize] or SARTESPELLDB["Survival"][Spell_Localize]
+      local dbSettings_Death_Knight = SARTESPELLDB["Blood"][Spell_Localize] or SARTESPELLDB["Frost_DK"][Spell_Localize] or SARTESPELLDB["Unholy"][Spell_Localize]
+      local dbSettings_Monk = SARTESPELLDB["Brewmaster"][Spell_Localize] or SARTESPELLDB["Mistweaver"][Spell_Localize] or SARTESPELLDB["Windwalker"][Spell_Localize]
+      local dbSettings_Demon_Hunter = SARTESPELLDB["Havoc"][Spell_Localize] or SARTESPELLDB["Vengeance"][Spell_Localize]
       if
       --Rogue
-      SpellTableRogue[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Assassination"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Outlaw"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Subtlety"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableRogue[Spell_Localize] and (dbSettings_Rogue.SpellEnable == true) or
       --Priest
-      SpellTablePriest[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Shadow"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Holy_Priest"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Discipline"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTablePriest[Spell_Localize] and (dbSettings_Priest.SpellEnable == true) or
       --Shaman
-      SpellTableShaman[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Elemental"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Enhancement"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Shaman_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableShaman[Spell_Localize] and (dbSettings_Shaman.SpellEnable == true) or
       --Warrior
-      SpellTableWarrior[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Arms"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Fury"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Protection_Warrior"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableWarrior[Spell_Localize] and (dbSettings_Warrior.SpellEnable == true) or
       --Warlock
-      SpellTableWarlock[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Affliction"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Demonology"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Destruction"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableWarlock[Spell_Localize] and (dbSettings_Warlock.SpellEnable == true) or
       --Paladin
-      SpellTablePaladin[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Holy_Paladin"][SDT_GetEnglishName(spellName)] == true) or ( SARTESPELLDB["Protection_Paladin"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Retribution"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTablePaladin[Spell_Localize] and (dbSettings_Paladin.SpellEnable == true) or
       --Mage
-      SpellTableMage[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Arcane"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Fire"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_Mage"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableMage[Spell_Localize] and (dbSettings_Mage.SpellEnable) or
       --Druid
-      SpellTableDruid[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Balance"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Feral_Combat"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Druid_Restoration"][SDT_GetEnglishName(spellName)] == true)) or
+      SpellTableDruid[Spell_Localize] and (dbSettings_Druid.SpellEnable) or
       --Hunter
-      SpellTableHunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Beast Mastery"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Marksmanship"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Survival"][SDT_GetEnglishName(spellName)] == true)) or
-      SpellTableDeath_Knight[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Blood"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Frost_DK"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Unholy"][SDT_GetEnglishName(spellName)] == true)) or
-      SpellTableMonk[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Brewmaster"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Mistweaver"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Windwalker"][SDT_GetEnglishName(spellName)] == true)) or
-      SpellTableDemon_Hunter[SDT_GetEnglishName(spellName)] and ((SARTESPELLDB["Havoc"][SDT_GetEnglishName(spellName)] == true) or (SARTESPELLDB["Vengeance"][SDT_GetEnglishName(spellName)] == true))
+      SpellTableHunter[Spell_Localize] and (dbSettings_Hunter.SpellEnable) or
+      --Death_Knight
+      SpellTableDeath_Knight[Spell_Localize] and (dbSettings_Death_Knight.SpellEnable) or
+      --Monk
+      SpellTableMonk[Spell_Localize] and (dbSettings_Monk.SpellEnable == true) or
+      --Demon_Hunter
+      SpellTableDemon_Hunter[Spell_Localize] and (dbSettings_Demon_Hunter.SpellEnable)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
             function()
-               start, duration = GetSpellCooldown(spellName) --Grab the needed time data
+               ---------------------------
+               --Grab the needed time data
+               ---------------------------
+               start, duration = GetSpellCooldown(spellName)
                if start == 0 then
                local name, _, icon = GetSpellInfo(spellName)
-               local msg = format("|T%d:18|t  %s"..L["msg"], icon, name)
+               local details = " "
+               local dbSettings = SARTESPELLDB["Assassination"][Spell_Localize] or SARTESPELLDB["Combat"][Spell_Localize] or SARTESPELLDB["Subtlety"][Spell_Localize] or
+                                  SARTESPELLDB["Shadow"][Spell_Localize] or SARTESPELLDB["Holy_Priest"][Spell_Localize] or SARTESPELLDB["Discipline"][Spell_Localize] or
+                                  SARTESPELLDB["Elemental"][Spell_Localize] or SARTESPELLDB["Enhancement"][Spell_Localize] or SARTESPELLDB["Shaman_Restoration"][Spell_Localize] or
+                                  SARTESPELLDB["Arms"][Spell_Localize] or SARTESPELLDB["Fury"][Spell_Localize] or SARTESPELLDB["Protection_Warrior"][Spell_Localize] or
+                                  SARTESPELLDB["Affliction"][Spell_Localize] or SARTESPELLDB["Demonology"][Spell_Localize] or SARTESPELLDB["Destruction"][Spell_Localize] or
+                                  SARTESPELLDB["Holy_Paladin"][Spell_Localize] or SARTESPELLDB["Protection_Paladin"][Spell_Localize] or SARTESPELLDB["Retribution"][Spell_Localize] or
+                                  SARTESPELLDB["Arcane"][Spell_Localize] or SARTESPELLDB["Fire"][Spell_Localize] or SARTESPELLDB["Frost_Mage"][Spell_Localize] or
+                                  SARTESPELLDB["Balance"][Spell_Localize] or SARTESPELLDB["Feral_Combat"][Spell_Localize] or SARTESPELLDB["Druid_Restoration"][Spell_Localize] or
+                                  SARTESPELLDB["Beast Mastery"][Spell_Localize] or SARTESPELLDB["Marksmanship"][Spell_Localize] or SARTESPELLDB["Survival"][Spell_Localize] or
+                                  SARTESPELLDB["Blood"][Spell_Localize] or SARTESPELLDB["Frost_DK"][Spell_Localize] or SARTESPELLDB["Unholy"][Spell_Localize] or
+                                  SARTESPELLDB["Brewmaster"][Spell_Localize] or SARTESPELLDB["Mistweaver"][Spell_Localize] or SARTESPELLDB["Windwalker"][Spell_Localize] or
+                                  SARTESPELLDB["Havoc"][Spell_Localize] or SARTESPELLDB["Vengeance"][Spell_Localize]
+               if dbSettings.iconEnable then details = details..string.format("|T%d:18|t ".." ", icon) end
+               if dbSettings.nameEnable then details = details..name.." " end
+               if dbSettings.iconEnable == false and dbSettings.nameEnable == false then
+                  spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  return end
+               local msg = string.format ("%s"..L["msg"], details)
                local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
                if Comabt_Text == false then
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
@@ -56,7 +93,7 @@ f:SetScript("OnEvent", --Run when our event fires
                ---------------------------
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
-               end
+            end
             end
          )
          

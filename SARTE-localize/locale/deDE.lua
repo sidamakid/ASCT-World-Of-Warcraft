@@ -75,7 +75,9 @@ if locale == "deDE" then
  L["msg_Lust"] = " Die Lust ist jetzt bereit!";
  --Message
  L["Message"] = "Der Bildlauf zum Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird im Text der Bildlauffähigkeit nichts angezeigt.";
- --New things
  L["Nothing"] = "Nichts";
  L["Open To Options Panel"] = "Bedienfeld Öffnen für Optionen";
+ --New things
+ L["Icon"] = "Ikone";
+ L["Name"] = "Name";
 end

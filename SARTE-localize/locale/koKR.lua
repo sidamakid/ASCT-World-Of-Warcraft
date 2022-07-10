@@ -75,7 +75,9 @@ if locale == "koKR" then
  L["msg_Lust"] = " 정욕이 이제 준비되었습니다!";
  --Message
  L["Message"] = "전투 텍스트 스크롤이 비활성화되었습니다. 사용하도록 설정하지 않으면 스크롤 기능 텍스트에 아무 것도 표시되지 않습니다.";
-  --New things
-  L["Nothing"] = "무";
-  L["Open To Options Panel"] = "옵션 패널로 열기";
+ L["Nothing"] = "무";
+ L["Open To Options Panel"] = "옵션 패널로 열기"; 
+ --New things
+ L["Icon"] = "아이콘";
+ L["Name"] = "이름";
 end

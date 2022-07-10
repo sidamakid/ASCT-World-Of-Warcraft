@@ -1,5 +1,5 @@
 ## Interface: 20504
-## Version: 2.2.1
+## Version: 2.3.5
 ## Title: SARTE-Spells
 ## Title-frFR: SARTE-Sorts
 ## Title-koKR: SARTE-주문

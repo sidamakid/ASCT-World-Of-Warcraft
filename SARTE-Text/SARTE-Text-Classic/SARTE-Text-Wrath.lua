@@ -43,13 +43,14 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                 local name, _, icon = GetSpellInfo(spellName)
                 local msg = format("|T%d:18|t  %s"..L["msg"], icon, name)
-                local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
-                if Comabt_Text == false then
-                   return
-                else
-                 CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
-                end
-                  spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                local Combat_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+                if Combat_Text == false then
+                  spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD 
+                  return end
+               if Combat_Text == true then
+                     CombatText_AddMessage(msg, CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
+                     spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+               end
                end
             end
          )

@@ -1,5 +1,5 @@
 ## Interface: 30305
-## Version: 2.2.1
+## Version: 2.3.5
 ## Title: SARTE-Options
 ## Title-koKR: SARTE-옵션
 ## Title-frFR: SARTE-Options
@@ -23,7 +23,7 @@
 ## Notes-ptBR: SARTE Painel de opções
 ## Notes-itIT: SARTE Pannello Opzioni
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Spells, SARTE-Text
+## RequiredDeps: SARTE-Spells, SARTE-Text, SARTE-localize
 ## SavedVariablesPerCharacter: SARTESPELLDB
 # Libs
 Libs\LibStub\LibStub.lua

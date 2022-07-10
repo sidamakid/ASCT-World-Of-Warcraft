@@ -1,5 +1,5 @@
 ## Interface: 30305
-## Version: 2.2.1
+## Version: 2.3.5
 ## DefaultState: disabled
 ## Title: Scrolling ability text Racial options (No Longer Used)
 ## Title-koKR: 스크롤 능력 텍스트 인종 옵션 (더 이상 사용되지 않음)

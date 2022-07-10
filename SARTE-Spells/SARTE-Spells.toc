@@ -1,5 +1,5 @@
 ## Interface: 90205
-## Version: 2.2.1
+## Version: 2.3.5
 ## Title: SARTE-Spells
 ## Title-frFR: SARTE-Sorts
 ## Title-koKR: SARTE-주문
@@ -37,6 +37,8 @@ SARTE-Warrior-Spells.lua
 SARTE-Death-Knight-Spells.lua
 SARTE-Demon-Hunter-Spells.lua
 SARTE-Monk-Spells.lua
+SARTE-Shared-Cooldwn-Spells.lua
+SARTE-Shared-Spell-Effects.lua
 # Racial spells: Racial_Spells\
 Racial_Spells\SARTE-Dwarf-Spells.lua
 Racial_Spells\SARTE-Human-Spells.lua

@@ -75,7 +75,9 @@ if locale == "itIT" then
  L["msg_Lust"] = " La lussuria è ora pronta!";
  --Message
  L["Message"] = "Lo scorrimento del testo di combattimento è disabilitato. Se non è abilitato, il testo Capacità di scorrimento non mostrerà nulla.";
- --New things
  L["Nothing"] = "Niente";
  L["Open To Options Panel"] = "Apri il pannello Opzioni";
+ --New things
+ L["Icon"] = "Icona";
+ L["Name"] = "Nome";
 end

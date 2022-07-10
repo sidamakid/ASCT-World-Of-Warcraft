@@ -75,7 +75,9 @@ if locale == "zhCN" then
  L["msg_Lust"] = " 欲望现在已经准备好了！";
  --Message
  L["Message"] = "滚动战斗文本已禁用。如果未启用，滚动技能文本将不会显示任何内容。";
- --New things
  L["Nothing"] = "无";
  L["Open To Options Panel"] = "打开选项面板";
+ --New things
+ L["Icon"] = "图标";
+ L["Name"] = "名字";
 end

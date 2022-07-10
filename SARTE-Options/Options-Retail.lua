@@ -51,677 +51,680 @@ f.defaults = {
 		},
 	--Rogue spells
 	["Assassination"] = {
-		["Vendetta"] = false,
-		["Garrote"] = false,
-		["Kidney Shot"] = false,
-		["Crimson Vial"] = false,
+		["Vendetta"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Garrote"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Kidney Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Crimson Vial"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Outlaw"] = {
-		["Adrenaline Rush"] = false,
-		["Blade Flurry"] = false,
-		["Roll the Bones"] = false,
-		["Between the Eyes"] = false,
-		["Gouge"] = false,
-		["Grappling Hook"] = false,
-		["Ghostly Strike"] = false,
-		["Blade Rush"] = false,
-		["Killing Spree"] = false,
-		["Shiv"] = false,
-		["Evasion"] = false,
-		["Feint"] = false,
-		["Kick"] = false,
-		["Sprint"] = false,
+		["Adrenaline Rush"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blade Flurry"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Roll the Bones"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Between the Eyes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Gouge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Grappling Hook"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ghostly Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blade Rush"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Killing Spree"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shiv"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Evasion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Feint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sprint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Subtlety"] = {
-		["Shadow Dance"] = false,
-		["Shadow Blades"] = false,
-		["Symbols of Death"] = false,
-		["Shuriken Tornado"] = false,
-		["Secret Technique"] = false,
-		["Shadowstep"] = false,
-		["Cloak of Shadows"] = false,
-		["Vanish"] = false,
-		["Stealth"] = false,
-		["Blind"] = false,
-		["Shroud of Concealment"] = false,
-		["Distract"] = false,
+		["Shadow Dance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadow Blades"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Symbols of Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shuriken Tornado"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Secret Technique"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadowstep"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cloak of Shadows"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Vanish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stealth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shroud of Concealment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Distract"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 --Priest spells
 	["Shadow"] = {
-		["Vampiric Embrace"] = false,
-		["Dispersion"] = false,
-		["Silence"] = false,
-		["Void Eruption"] = false,
-		["Void Bolt"] = false,
-		["Psychic Horror"] = false,
-		["Purify Disease"] = false,
-		["Mind Bomb"] = false,
-		["Surrender to Madness"] = false,
-		["Shadow Crash"] = false,
-		["Damnation"] = false,
-		["Shadowfiend"] = false,
-		["Void Torrent"] = false,
-		["Shadow Covenant"] = false,
-		["Fade"] = false,
-		["Shadow Word: Death"] = false,
-		["Psychic Scream"] = false,
-		["Mind Blast"] = false,
+		["Vampiric Embrace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dispersion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Silence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Void Eruption"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Void Bolt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Psychic Horror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Purify Disease"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mind Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Surrender to Madness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadow Crash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Damnation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadowfiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Void Torrent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadow Covenant"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadow Word: Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Psychic Scream"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mind Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
     ["Holy_Priest"] = {
-		["Symbol of Hope"] = false,
-		["Guardian Spirit"] = false,
-		["Shining Force"] = false,
-		["Divine Star"] = false,
-		["Divine Hymn"] = false,
-		["Holy Word: Chastise"] = false,
-		["Holy Word: Serenity"] = false,
-		["Prayer of Mending"] = false,
-		["Holy Word: Sanctify"] = false,
-		["Holy Fire"] = false,
-		["Circle of Healing"] = false,
-		["Holy Word: Salvation"] = false,
-		["Apotheosis"] = false,
-		["Desperate Prayer"] = false,
-		["Leap of Faith"] = false,
+		["Symbol of Hope"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Guardian Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shining Force"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Divine Star"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Divine Hymn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Word: Chastise"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Word: Serenity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Prayer of Mending"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Word: Sanctify"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Circle of Healing"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Word: Salvation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Apotheosis"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Desperate Prayer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Leap of Faith"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
     ["Discipline"] = {
-		["Pain Suppression"] = false,
-		["Penance"] = false,
-		["Rapture"] = false,
-		["Power Word: Barrier"] = false,
-		["Power Word: Radiance"] = false,
-		["Schism"] = false,
-		["Mindbender"] = false,
-		["Angelic Feather"] = false,
-		["Evangelism"] = false,
-		["Halo"] = false,
-		["Purify"] = false,
-		["Spirit Shell"] = false,
-		["Power Infusion"] = false,
-		["Mass Dispel"] = false,
+		["Pain Suppression"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Penance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rapture"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Power Word: Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Power Word: Radiance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Schism"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mindbender"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Angelic Feather"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Evangelism"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Halo"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Purify"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spirit Shell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Power Infusion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mass Dispel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	  --Warrior spells
 	["Arms"] = {
-		["Colossus Smash"] = false,
-		["Die by the Sword"] = false,
-		["Bladestorm"] = false,
-		["Mortal Strike"] = false,
-		["Overpower"] = false,
-		["Sweeping Strikes"] = false,
-		["Defensive Stance"] = false,
-		["Warbreaker"] = false,
-		["Cleave"] = false,
-		["Deadly Calm"] = false,
-		["Skullsplitter"] = false,
-		["Charge"] = false,
-		["Execute"] = false,
-		["Shield Slam"] = false,
-		["Shattering Throw"] = false,
-		["Ignore Pain"] = false,
+		["Colossus Smash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Die by the Sword"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bladestorm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mortal Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Overpower"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sweeping Strikes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Defensive Stance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Warbreaker"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cleave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Deadly Calm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Skullsplitter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Execute"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shield Slam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shattering Throw"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ignore Pain"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Fury"] = {
-		["Piercing Howl"] = false,
-		["Impending Victory"] = false,
-		["Recklessness"] = false,
-		["Bloodthirst"] = false,
-		["Enraged Regeneration"] = false,
-		["Raging Blow"] = false,
-		["Siegebreaker"] = false,
-		["Onslaught"] = false,
-		["Heroic Throw"] = false,
-		["Berserker Rage"] = false,
-		["Battle Shout"] = false,
-		["Intervene"] = false,
+		["Piercing Howl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Impending Victory"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Recklessness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bloodthirst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Enraged Regeneration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Raging Blow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Siegebreaker"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Onslaught"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Heroic Throw"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Berserker Rage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Battle Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Intervene"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Protection_Warrior"] = {
-		["Avatar"] = false,
-		["Dragon Roar"] = false,
-		["Demoralizing Shout"] = false,
-		["Shockwave"] = false,
-		["Shield Wall"] = false,
-		["Last Stand"] = false,
-		["Ravager"] = false,
-		["Challenging Shout"] = false,
-		["Storm Bolt"] = false,
-		["Rallying Cry"] = false,
-		["Heroic Leap"] = false,
-		["Spell Reflection"] = false,
-		["Intimidating Shout"] = false,
-		["Shield Block"] = false,
-		["Taunt"] = false,
-		["Pummel"] = false,
+		["Avatar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dragon Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Demoralizing Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shockwave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shield Wall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Last Stand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ravager"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Challenging Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Storm Bolt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rallying Cry"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Heroic Leap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spell Reflection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Intimidating Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shield Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Taunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Pummel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 		--Druid Spells
 	["Balance"] = {
-		["Celestial Alignment"] = false,
-		["Typhoon"] = false,
-		["Solar Beam"] = false,
-		["Fury of Elune"] = false,
-		["Force of Nature"] = false,
-		["Incarnation: Chosen of Elune"] = false,
-		["New Moon"] = false,
-		["Barkskin"] = false,
-		["Dreamwalk"] = false,
+		["Celestial Alignment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Typhoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Solar Beam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fury of Elune"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Force of Nature"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Incarnation: Chosen of Elune"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["New Moon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Barkskin"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dreamwalk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Feral_Combat"] = {
-		["Tiger's Fury"] = false,
-		["Maim"] = false,
-		["Feral Frenzy"] = false,
-		["Brutal Slash"] = false,
-		["Incarnation: King of the Jungle"] = false,
-		["Remove Corruption"] = false,
-		["Survival Instincts"] = false,
-		["Dash"] = false,
-		["Soothe"] = false,
-		["Mangle"] = false,
-		["Thrash"] = false,
-		["Prowl"] = false,
-		["Frenzied Regeneration"] = false,
-		["Incapacitating Roar"] = false,
-		["Incarnation: Guardian of Ursoc"] = false,
-		["Pulverize"] = false,
-		["Bristling Fur"] = false,
-		["Berserk"] = false,
-		["Skull Bash"] = false,
-		["Growl"] = false,
-		["Stampeding Roar"] = false,
+		["Tiger's Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Maim"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Feral Frenzy"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Brutal Slash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Incarnation: King of the Jungle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Remove Corruption"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Survival Instincts"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soothe"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mangle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Thrash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Prowl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Frenzied Regeneration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Incapacitating Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Incarnation: Guardian of Ursoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Pulverize"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bristling Fur"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Berserk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Skull Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Growl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stampeding Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Druid_Restoration"] = {
-		["Wild Growth"] = false,
-		["Tranquility"] = false,
-		["Swiftmend"] = false,
-		["Nature's Cure"] = false,
-		["Ironbark"] = false,
-		["Ursol's Vortex"] = false,
-		["Nature's Swiftness"] = false,
-		["Flourish"] = false,
-		["Incarnation: Tree of Life"] = false,
-		["Overgrowth"] = false,
-		["Innervate"] = false,
-		["Rebirth"] = false,
-		["Charm Woodland Creature"] = false,
+		["Wild Growth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tranquility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Swiftmend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Nature's Cure"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ironbark"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ursol's Vortex"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Flourish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Incarnation: Tree of Life"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Overgrowth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Innervate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rebirth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Charm Woodland Creature"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Warlock spells
 	["Affliction"] = {
-		["Create Soulwell"] = false,
-		["Unending Resolve"] = false,
-		["Soulstone"] = false,
-		["Ritual of Summoning"] = false,
-		["Ritual of Doom"] = false,
-		["Haunt"] = false,
-		["Grimoire of Sacrifice"] = false,
-		["Dark Soul: Misery"] = false,
-		["Phantom Singularity"] = false,
-		["Summon Darkglare"] = false,
-		["Vile Taint"] = false,
+		["Create Soulwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Unending Resolve"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soulstone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ritual of Summoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ritual of Doom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Haunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Grimoire of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dark Soul: Misery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Phantom Singularity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Darkglare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Vile Taint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
     ["Demonology"] = {
-		["Demonic Gateway"] = false,
-		["Demonic Circle: Teleport"] = false,
-		["Fel Domination"] = false,
-		["Demonic Circle"] = false,
-		["Summon Demonic Tyrant"] = false,
-		["Call Dreadstalkers"] = false,
-		["Power Siphon"] = false,
-		["Grimoire: Felguard"] = false,
-		["Summon Vilefiend"] = false,
-		["Demonic Strength"] = false,
-		["Bilescourge Bombers"] = false,
-		["Soul Strike"] = false,
+		["Demonic Gateway"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Demonic Circle: Teleport"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fel Domination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Demonic Circle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Demonic Tyrant"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Call Dreadstalkers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Power Siphon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Grimoire: Felguard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Vilefiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Demonic Strength"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bilescourge Bombers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soul Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Destruction"] = {
-		["Shadowfury"] = false,
-		["Conflagrate"] = false,
-		["Havoc"] = false,
-		["Summon Infernal"] = false,
-		["Shadowburn"] = false,
-		["Cataclysm"] = false,
-		["Dark Soul: Instability"] = false,
-		["Soul Fire"] = false,
-		["Channel Demonfire"] = false,
+		["Shadowfury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Conflagrate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Havoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Infernal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadowburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cataclysm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dark Soul: Instability"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soul Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Channel Demonfire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Shaman spells
 	["Elemental"] = {
-		["Fire Elemental"] = false,
-		["Lava Burst"] = false,
-		["Thunderstorm"] = false,
-		["Storm Elemental"] = false,
-		["Liquid Magma Totem"] = false,
-		["Stormkeeper"] = false,
-		["Elemental Blast"] = false,
-		["Echoing Shock"] = false,
-		["Ancestral Guidance"] = false,
-		["Icefury"] = false,
-		["Static Discharge"] = false,
-		["Hex"] = false,
-		["Earth Elemental"] = false,
-		["Tremor Totem"] = false,
-		["Wind Shear"] = false,
-		["Flame Shock"] = false,
-		["Capacitor Totem"] = false,
-		["Astral Shift"] = false,
-		["Earthbind Totem"] = false,
-		["Astral Recall"] = false,
+		["Fire Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Lava Burst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Thunderstorm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Storm Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Liquid Magma Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stormkeeper"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Elemental Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Echoing Shock"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ancestral Guidance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Icefury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Static Discharge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hex"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Earth Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tremor Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wind Shear"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Flame Shock"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Capacitor Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Astral Shift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Earthbind Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Astral Recall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		},
 	["Enhancement"] = {
-		["Feral Spirit"] = false,
-		["Lava Lash"] = false,
-		["Stormstrike"] = false,
-		["Crash Lightning"] = false,
-		["Spirit Walk"] = false,
-		["Feral Lunge"] = false,
-		["Earthen Spike"] = false,
-		["Sundering"] = false,
-		["Fire Nova"] = false,
-		["Ice Strike"] = false,
-		["Primal Strike"] = false,
+		["Feral Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Lava Lash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stormstrike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Crash Lightning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spirit Walk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Feral Lunge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Earthen Spike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sundering"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fire Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ice Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Primal Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Shaman_Restoration"] = {
-		["Cleanse Spirit"] = false,
-		["Spiritwalker's Grace"] = false,
-		["Ascendance"] = false,
-		["Healing Tide Totem"] = false,
-		["Riptide"] = false,
-		["Spirit Link Totem"] = false,
-		["Healing Rain"] = false,
-		["Purify Spirit"] = false,
-		["Mana Tide Totem"] = false,
-		["Cloudburst Totem"] = false,
-		["Earthen Wall Totem"] = false,
-		["Earthgrab Totem"] = false,
-		["Wellspring"] = false,
-		["Downpour"] = false,
-		["Surge of Earth"] = false,
-		["Healing Stream Totem"] = false,
+		["Cleanse Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spiritwalker's Grace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ascendance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Healing Tide Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Riptide"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spirit Link Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Healing Rain"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Purify Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mana Tide Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cloudburst Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Earthen Wall Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Earthgrab Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wellspring"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Downpour"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Surge of Earth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Healing Stream Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+	},
+	["Shared_Shaman_spells"] = {
+		["Lust"] = false,
 	},
 	--Hunter spells
 	["Beast Mastery"] = {
-		["Feed Pet"] = false,
-		["Tar Trap"] = false,
-		["Misdirection"] = false,
-		["Tranquilizing Shot"] = false,
-		["Kill Shot"] = false,
-		["Mend Pet"] = false,
-		["Kill Command"] = false,
-		["Bestial Wrath"] = false,
-		["Intimidation"] = false,
-		["Counter Shot"] = false,
-		["Barbed Shot"] = false,
-		["Aspect of the Wild"] = false,
-		["Concussive Shot"] = false,
-		["Barrage"] = false,
-		["Dire Beast"] = false,
-		["Chimaera Shot"] = false,
-		["A Murder of Crows"] = false,
-		["Stampede"] = false,
-		["Bloodshed"] = false,
-		["Binding Shot"] = false,
+		["Feed Pet"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tar Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Misdirection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tranquilizing Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Kill Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mend Pet"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Kill Command"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bestial Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Intimidation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Counter Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Barbed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aspect of the Wild"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Concussive Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Barrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dire Beast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Chimaera Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["A Murder of Crows"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stampede"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bloodshed"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Binding Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	  },
    ["Marksmanship"] = {
-		["Disengage"] = false,
-		["Play Dead"] = false,
-		["Exhilaration"] = false,
-		["Wailing Arrow"] = false,
-		["Aimed Shot"] = false,
-		["Trueshot"] = false,
-		["Rapid Fire"] = false,
-		["Bursting Shot"] = false,
-		["Explosive Shot"] = false,
-		["Double Tap"] = false,
-		["Volley"] = false,
+		["Disengage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Play Dead"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Exhilaration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wailing Arrow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aimed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Trueshot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rapid Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bursting Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Explosive Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Double Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Volley"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
    ["Survival"] = {
-		["Freezing Trap"] = false,
-		["Aspect of the Turtle"] = false,
-		["Aspect of the Cheetah"] = false,
-		["Aspect of the Chameleon"] = false,
-		["Aspect of the Eagle"] = false,
-		["Feign Death"] = false,
-		["Flare"] = false,
-		["Wildfire Bomb"] = false,
-		["Coordinated Assault"] = false,
-		["Carve"] = false,
-		["Muzzle"] = false,
-		["Harpoon"] = false,
-		["Steel Trap"] = false,
-		["Chakrams"] = false,
-		["Butchery"] = false,
-		["Flanking Strike"] = false,
+		["Freezing Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aspect of the Turtle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aspect of the Cheetah"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aspect of the Chameleon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aspect of the Eagle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Feign Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Flare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wildfire Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Coordinated Assault"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Carve"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Muzzle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Harpoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Steel Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Chakrams"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Butchery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Flanking Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
 	--Paladin
 	["Holy_Paladin"] = {
-		["Consecration"] = false,
-		["Lay on Hands"] = false,
-		["Contemplation"] = false,
-		["Turn Evil"] = false,
-		["Holy Shock"] = false,
-		["Divine Protection"] = false,
-		["Aura Mastery"] = false,
-		["Cleanse"] = false,
-		["Avenging Crusader"] = false,
-		["Beacon of Virtue"] = false,
-		["Bestow Faith"] = false,
-		["Light's Hammer"] = false,
-		["Rule of Law"] = false,
+		["Consecration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Lay on Hands"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Contemplation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Turn Evil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Holy Shock"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Divine Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Aura Mastery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cleanse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Avenging Crusader"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Beacon of Virtue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bestow Faith"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Light's Hammer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rule of Law"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Protection_Paladin"] = {
-		["Blessing of Protection"] = false,
-		["Divine Shield"] = false,
-		["Blessing of Sacrifice"] = false,
-		["Blessing of Freedom"] = false,
-		["Hammer of Justice"] = false,
-		["Hammer of Wrath"] = false,
-		["Hand of Reckoning"] = false,
-		["Divine Steed"] = false,
-		["Guardian of Ancient Kings"] = false,
-		["Ardent Defender"] = false,
-		["Avenger's Shield"] = false,
-		["Hammer of the Righteous"] = false,
-		["Blessing of Spellwarding"] = false,
-		["Blessed Hammer"] = false,
-		["Moment of Glory"] = false,
+		["Blessing of Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Divine Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blessing of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blessing of Freedom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hammer of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hammer of Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hand of Reckoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Divine Steed"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Guardian of Ancient Kings"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ardent Defender"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Avenger's Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hammer of the Righteous"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blessing of Spellwarding"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blessed Hammer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Moment of Glory"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Retribution"] = {
-		["Avenging Wrath"] = false,
-		["Judgment"] = false,
-		["Crusader Strike"] = false,
-		["Rebuke"] = false,
-		["Cleanse Toxins"] = false,
-		["Shield of Vengeance"] = false,
-		["Wake of Ashes"] = false,
-		["Blade of Justice"] = false,
-		["Hand of Hindrance"] = false,
-		["Crusade"] = false,
-		["Final Reckoning"] = false,
-		["Eye for an Eye"] = false,
-		["Execution Sentence"] = false,
+		["Avenging Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Judgment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Crusader Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rebuke"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cleanse Toxins"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shield of Vengeance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wake of Ashes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blade of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hand of Hindrance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Crusade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Final Reckoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Eye for an Eye"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Execution Sentence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Mage Spells
 	["Arcane"] = {
-		["Time Warp"] = false,
-		["Mirror Image"] = false,
-		["Illusion"] = false,
-		["Remove Curse"] = false,
-		["Counterspell"] = false,
-		["Blink"] = false,
-		["Invisibility"] = false,
-		["Arcane Barrage"] = false,
-		["Greater Invisibility"] = false,
-		["Arcane Power"] = false,
-		["Touch of the Magi"] = false,
-		["Evocation"] = false,
-		["Prismatic Barrier"] = false,
-		["Presence of Mind"] = false,
-		["Arcane Familiar"] = false,
-		["Arcane Orb"] = false,
-		["Supernova"] = false,
-		["Portal: Shattrath"] = false,
-		["Portal: Stonard"] = false,
-		["Portal: Theramore"] = false,
-		["Portal: Silvermoon"] = false,
-		["Portal: Exodar"] = false,
-		["Portal: Stormwind"] = false,
-		["Portal: Ironforge"] = false,
-		["Portal: Darnassus"] = false,
-		["Portal: Orgrimmar"] = false,
-		["Portal: Undercity"] = false,
-		["Portal: Thunder Bluff"] = false,
-		["Portal: Oribos"] = false,
-		["Portal: Dalaran - Northrend"] = false,
-		["Ancient Portal: Dalaran"] = false,
-		["Portal: Warspear"] = false,
-		["Portal: Vale of Eternal Blossoms"] = false,
-		["Portal: Tol Barad"] = false,
+		["Time Warp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mirror Image"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Illusion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Remove Curse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Counterspell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blink"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Arcane Barrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Greater Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Arcane Power"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Touch of the Magi"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Evocation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Prismatic Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Presence of Mind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Arcane Familiar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Arcane Orb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Supernova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Shattrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Stonard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Theramore"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Silvermoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Exodar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Stormwind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Ironforge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Darnassus"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Orgrimmar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Undercity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Thunder Bluff"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Oribos"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Dalaran - Northrend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ancient Portal: Dalaran"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Warspear"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Vale of Eternal Blossoms"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Portal: Tol Barad"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Fire"] = {
-		["Fire Blast"] = false,
-		["Combustion"] = false,
-		["Dragon's Breath"] = false,
-		["Alter Time"] = false,
-		["Blazing Barrier"] = false,
-		["Phoenix Flames"] = false,
-		["Meteor"] = false,
-		["Living Bomb"] = false,
-		["Blast Wave"] = false,
+		["Fire Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Combustion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dragon's Breath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Alter Time"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blazing Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Phoenix Flames"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Meteor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Living Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blast Wave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Frost_Mage"] = {
-		["Ice Block"] = false,
-		["Frost Nova"] = false,
-		["Ice Barrier"] = false,
-		["Cone of Cold"] = false,
-		["Summon Water Elemental"] = false,
-		["Icy Veins"] = false,
-		["Blizzard"] = false,
-		["Frozen Orb"] =  false,
-		["Comet Storm"] = false,
-		["Ice Floes"] = false,
-		["Ice Nova"] = false,
-		["Ray of Frost"] = false,
-		["Ebonbolt"] = false,
+		["Ice Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Frost Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ice Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cone of Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Water Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Icy Veins"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blizzard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Frozen Orb"] =  {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Comet Storm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ice Floes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ice Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ray of Frost"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Ebonbolt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Demon Hunter Spells
 	["Havoc"] = {
-		["Metamorphosis"] = false,
-		["Blur"] = false,
-		["Imprison"] = false,
-		["Spectral Sight"] = false,
-		["Immolation Aura"] = false,
-		["Disrupt"] = false,
-		["Torment"] = false,
-		["Eye Beam"] = false,
-		["Vengeful Retreat"] = false,
-		["Darkness"] = false,
-		["Blade Dance"] = false,
-		["Netherwalk"] = false,
-		["Felblade"] = false,
-		["Fel Eruption"] = false,
-		["Glaive Tempest"] = false,
-		["Fel Barrage"] = false,
-		["Essence Break"] = false,
+		["Metamorphosis"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blur"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Imprison"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spectral Sight"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Immolation Aura"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Disrupt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Torment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Eye Beam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Vengeful Retreat"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Darkness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blade Dance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Netherwalk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Felblade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fel Eruption"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Glaive Tempest"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fel Barrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Essence Break"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Vengeance"] = {
-		["Consume Magic"] = false,
-		["Throw Glaive"] = false,
-		["Fel Rush"] = false,
-		["Soul Carver"] = false,
-		["Chaos Nova"] = false,
-		["Fiery Brand"] = false,
-		["Sigil of Misery"] = false,
-		["Demon Spikes"] = false,
-		["Fel Devastation"] = false,
-		["Sigil of Silence"] = false,
-		["Infernal Strike"] = false,
-		["Sigil of Flame"] = false,
-		["Fracture"] = false,
-		["Sigil of Chains"] = false,
-		["Soul Barrier"] = false,
-		["Bulk Extraction"] = false,
+		["Consume Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Throw Glaive"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fel Rush"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soul Carver"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Chaos Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fiery Brand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sigil of Misery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Demon Spikes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fel Devastation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sigil of Silence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Infernal Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sigil of Flame"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fracture"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Sigil of Chains"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soul Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bulk Extraction"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Death_Knight Spells
 	["Blood"] = {
-		["Sacrificial Pact"] = false,
-		["Corpse Exploder"] = false,
-		["Dark Command"] = false,
-		["Dancing Rune Weapon"] = false,
-		["Asphyxiate"] = false,
-		["Blood Boil"] = false,
-		["Gorefiend's Grasp"] = false,
-		["Rune Tap"] = false,
-		["Vampiric Blood"] = false,
-		["Blooddrinker"] = false,
-		["Blood Tap"] = false,
-		["Tombstone"] = false,
-		["Death Pact"] = false,
-		["Bonestorm"] = false,
-		["Consumption"] = false,
-		["Mark of Blood"] = false,
+		["Sacrificial Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Corpse Exploder"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dark Command"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dancing Rune Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Asphyxiate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blood Boil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Gorefiend's Grasp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rune Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Vampiric Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blooddrinker"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blood Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tombstone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bonestorm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Consumption"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mark of Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Frost_DK"] = {
-		["Icebound Fortitude"] = false,
-		["Mind Freeze"] = false,
-		["Lichborne"] = false,
-		["Wraith Walk"] = false,
-		["Remorseless Winter"] = false,
-		["Frostwyrm's Fury"] = false,
-		["Pillar of Frost"] = false,
-		["Empower Rune Weapon"] = false,
-		["Glacial Advance"] = false,
-		["Breath of Sindragosa"] = false,
-		["Blinding Sleet"] = false,
-		["Horn of Winter"] = false,
-		["Hypothermic Presence"] = false,
+		["Icebound Fortitude"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mind Freeze"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Lichborne"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Wraith Walk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Remorseless Winter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Frostwyrm's Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Pillar of Frost"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Empower Rune Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Glacial Advance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Breath of Sindragosa"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blinding Sleet"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Horn of Winter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Hypothermic Presence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Unholy"] = {
-		["Death and Decay"] = false,
-		["Anti-Magic Zone"] = false,
-		["Death Grip"] = false,
-		["Anti-Magic Shell"] = false,
-		["Raise Ally"] = false,
-		["Death's Advance"] = false,
-		["Death Gate"] = false,
-		["Raise Dead"] = false,
-		["Dark Transformation"] = false,
-		["Army of the Dead"] = false,
-		["Apocalypse"] = false,
-		["Summon Gargoyle"] = false,
-		["Soul Reaper"] = false,
-		["Unholy Blight"] = false,
-		["Defile"] = false,
-		["Unholy Assault"] = false,
+		["Death and Decay"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Anti-Magic Zone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death Grip"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Anti-Magic Shell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Raise Ally"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death's Advance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death Gate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Raise Dead"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dark Transformation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Army of the Dead"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Apocalypse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Gargoyle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Soul Reaper"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Unholy Blight"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Defile"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Unholy Assault"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Monk Spells
 	["Brewmaster"] = {
-		["Paralysis"] = false,
-		["Roll"] = false,
-		["Leg Sweep"] = false,
-		["Blackout Kick"] = false,
-		["Touch of Death"] = false,
-		["Zen Meditation"] = false,
-		["Purifying Brew"] = false,
-		["Invoke Niuzao, the Black Ox"] = false,
-		["Keg Smash"] = false,
-		["Celestial Brew"] = false,
-		["Breath of Fire"] = false,
-		["Clash"] = false,
-		["Summon Black Ox Statue"] = false,
-		["Black Ox Brew"] = false,
-		["Exploding Keg"] = false,
+		["Paralysis"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Roll"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Leg Sweep"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blackout Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Touch of Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Zen Meditation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Purifying Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Invoke Niuzao, the Black Ox"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Keg Smash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Celestial Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Breath of Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Clash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Black Ox Statue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Black Ox Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Exploding Keg"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Mistweaver"] = {
-		["Transcendence"] = false,
-		["Transcendence: Transfer"] = false,
-		["Expel Harm"] = false,
-		["Detox"] = false,
-		["Healing Elixir"] = false,
-		["Life Cocoon"] = false,
-		["Rising Sun Kick"] = false,
-		["Essence Font"] = false,
-		["Thunder Focus Tea"] = false,
-		["Revival"] = false,
-		["Summon Jade Serpent Statue"] = false,
-		["Invoke Chi-Ji, the Red Crane"] = false,
-		["Mana Tea"] = false,
-		["Refreshing Jade Wind"] = false,
-		["Song of Chi-Ji"] = false,
+		["Transcendence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Transcendence: Transfer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Expel Harm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Detox"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Healing Elixir"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Life Cocoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rising Sun Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Essence Font"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Thunder Focus Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Revival"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Summon Jade Serpent Statue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Invoke Chi-Ji, the Red Crane"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mana Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Refreshing Jade Wind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Song of Chi-Ji"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Windwalker"] = {
-		["Fortifying Brew"] = false,
-		["Zen Pilgrimage"] = false,
-		["Provoke"] = false,
-		["Touch of Fatality"] = false,
-		["Rushing Jade Wind"] = false,
-		["Diffuse Magic"] = false,
-		["Spear Hand Strike"] = false,
-		["Storm, Earth, and Fire"] = false,
-		["Invoke Xuen, the White Tiger"] = false,
-		["Fists of Fury"] = false,
-		["Touch of Karma"] = false,
-		["Flying Serpent Kick"] = false,
-		["Whirling Dragon Punch"] = false,
-		["Fist of the White Tiger"] = false,
-		["Serenity"] = false,
-		["Energizing Elixir"] = false,
+		["Fortifying Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Zen Pilgrimage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Provoke"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Touch of Fatality"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rushing Jade Wind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Diffuse Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Spear Hand Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Storm, Earth, and Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Invoke Xuen, the White Tiger"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fists of Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Touch of Karma"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Flying Serpent Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Whirling Dragon Punch"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fist of the White Tiger"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Serenity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Energizing Elixir"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Racials
 	["Blood Elf"] = {
-		["Arcane Torrent"] = false,
+		["Arcane Torrent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Orc"] = {
-		["Blood Fury"] = false,
+		["Blood Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Undead"] = {
-		["Cannibalize"] = false,
-		["Will of the Forsaken"] = false,
+		["Cannibalize"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Will of the Forsaken"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Troll"] = {
-		["Berserking"] = false,
+		["Berserking"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Tauren"] = {
-		["War Stomp"] = false,
+		["War Stomp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Draenei"] = {
-		["Gift of the Naaru"] = false,
+		["Gift of the Naaru"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Gnome"] = {
-		["Escape Artist"] = false,
+		["Escape Artist"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Human"] = {
-		["Will to Survive"] = false,
+		["Will to Survive"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Night Elf"] = {
-		["Shadowmeld"] = false,
+		["Shadowmeld"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Dwarf"] = {
-		["Stoneform"] = false,
+		["Stoneform"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Worgen"] = {
-		["Darkflight"] = false,
+		["Darkflight"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Pandaren"] = {
-		["Quaking Palm"] = false,
+		["Quaking Palm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Void Elf"] = {
-		["Spatial Rift"] = false,
+		["Spatial Rift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Lightforged Draenei"] = {
-		["Forge of Light"] = false,
-		["Light's Judgment"] = false,
+		["Forge of Light"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Light's Judgment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Dark Iron Dwarf"] = {
-		["Fireblood"] = false,
-		["Mole Machine"] = false,
+		["Fireblood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mole Machine"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Mechagnome"] = {
-		["Hyper Organic Light Originator"] = false,
+		["Hyper Organic Light Originator"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Kul Tiran"] = {
-		["Haymaker"] = false,
+		["Haymaker"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Goblin"] = {
-		["Rocket Jump"] = false,
-		["Rocket Barrage"] = false,
-		["Pack Hobgoblin"] = false,
+		["Rocket Jump"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rocket Barrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Pack Hobgoblin"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Nightborne"] = {
-		["Cantrips"] = false,
-		["Arcane Pulse"] = false,
+		["Cantrips"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Arcane Pulse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Highmountain Tauren"] = {
-		["Bull Rush"] = false,
+		["Bull Rush"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Vulpera"] = {
-		["Bag of Tricks"] = false,
-		["Make Camp"] = false,
-		["Rummage Your Bag"] = false,
-		["Return to Camp"] = false,
+		["Bag of Tricks"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Make Camp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Rummage Your Bag"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Return to Camp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Zandalari Troll"] = {
-		["Embrace of the Loa"] = false,
-		["Pterrordax Swoop"] = false,
-		["Regeneratin'"] = false,
+		["Embrace of the Loa"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Pterrordax Swoop"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Regeneratin'"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Mag'har Orc"] = {
-		["Ancestral Call"] = false,
+		["Ancestral Call"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 }
 
@@ -893,7 +896,7 @@ local Text4 = TextCreate(L["Racials"])
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5 = SetTabs(SARTE_Config, 5, Text1, Text2, Text3, Text4, L["Color Picker"]);
+local content1, content2, content3, content4, content5, content6 = SetTabs(SARTE_Config, 6, Text1, Text2, Text3, Text4, L["Color Picker"], L["Shared Spell cd's"]);
 
 ---------------------------
 --MiniMap Icon
@@ -935,431 +938,404 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelB
 	SARTE_Config:Show()
 end)
 
+local function CreateNameIconToggles(button, settings, configparent)
+	local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+	nameToggle.Text:SetText(L["Name"])
+	nameToggle:SetChecked(settings.nameEnable)
+	nameToggle:SetScript("OnClick", function(self)
+	  settings.nameEnable = self:GetChecked()
+	end)
+	nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
+	local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+	iconToggle.Text:SetText(L["Icon"])
+	iconToggle:SetChecked(settings.iconEnable)
+	iconToggle:SetScript("OnClick", function(self)
+	  settings.iconEnable = self:GetChecked()
+	end)
+	iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
+end
+
+local function CreateSpellToggle(spellName, settings, parent)
+    local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
+    b.Text:SetText(SDT_GetLocalizedName(spellName))
+    b:SetChecked(settings.SpellEnable) -- THIS LINE CHANGED
+    b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
+    return b
+end
 
 
---------------------------
+---------------------------
 --Rogue
---------------------------
+---------------------------
 if SARTESPELLDB["Class"]["Rogue"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Assassination"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_1/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Assassination"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Assassination"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Assassination"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Outlaw"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Outlaw"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Outlaw"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Outlaw"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Subtlety"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Subtlety"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Subtlety"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Subtlety"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+
+---------------------------
 --Priest
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Priest"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Shadow"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Shadow"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Shadow"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Shadow"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Holy_Priest"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Holy_Priest"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Priest"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Holy_Priest"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Discipline"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Discipline"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Discipline"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Discipline"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+
+
+---------------------------
 --Warrior
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Warrior"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Arms"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_1/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Arms"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Arms"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Arms"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Fury"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Fury"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Fury"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Fury"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Protection_Warrior"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Protection_Warrior"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Warrior"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Protection_Warrior"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+---------------------------
 --Druid
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Druid"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Balance"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Balance"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Balance"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Balance"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Feral_Combat"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Feral_Combat"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Feral_Combat"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Feral_Combat"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Druid_Restoration"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Druid_Restoration"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Druid_Restoration"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
---Warlock
---------------------------
-elseif SARTESPELLDB["Class"]["Warlock"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Affliction"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Affliction"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Affliction"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
-
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Demonology"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Demonology"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Demonology"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
-
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Destruction"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Destruction"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Destruction"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Druid_Restoration"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+---------------------------
 --Shaman
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Shaman"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Elemental"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Elemental"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Elemental"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Elemental"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Enhancement"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Enhancement"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Enhancement"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Enhancement"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Shaman_Restoration"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Shaman_Restoration"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Shaman_Restoration"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Shaman_Restoration"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+
+local col_4 = 4
+local x_4 = 0
+for v in pairs(SARTESPELLDB["Shared_Shaman_spells"]) do
+	local b = CreateFrame("CheckButton", nil, content6, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_4 % col_4), -20 + (- b:GetHeight()-25) * math.floor(x_4/col_4))
+	b.Text:SetText(L[v])
+	b:SetChecked(SARTESPELLDB["Shared_Shaman_spells"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Shared_Shaman_spells"][v] = s:GetChecked() end)
+	x_4=x_4+1
+end
+---------------------------
+--Warlock
+---------------------------
+elseif SARTESPELLDB["Class"]["Warlock"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Affliction"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
+
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Demonology"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
+
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Destruction"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+---------------------------
 --Hunter
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Hunter"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Beast Mastery"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Beast Mastery"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Beast Mastery"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Beast Mastery"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Marksmanship"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Marksmanship"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Marksmanship"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Marksmanship"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Survival"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Survival"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Survival"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Survival"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+---------------------------
 --Paladin
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Paladin"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Holy_Paladin"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Holy_Paladin"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Holy_Paladin"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Holy_Paladin"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Protection_Paladin"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Protection_Paladin"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Protection_Paladin"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Protection_Paladin"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Retribution"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Retribution"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Retribution"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
---------------------------
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Retribution"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
+---------------------------
 --Mage
---------------------------
+---------------------------
 elseif SARTESPELLDB["Class"]["Mage"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Arcane"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Arcane"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Arcane"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Arcane"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Fire"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Fire"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Fire"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Fire"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Frost_Mage"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Frost_Mage"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Frost_Mage"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Frost_Mage"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
 --------------------------
 --Death Knight
 --------------------------
 elseif SARTESPELLDB["Class"]["Death_Knight"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Blood"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Blood"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Blood"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Frost_DK"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Frost_DK"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Frost_DK"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Blood"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Unholy"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Unholy"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Unholy"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Frost_DK"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
+
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Unholy"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
 --------------------------
 --Monk
 --------------------------
 elseif SARTESPELLDB["Class"]["Monk"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Brewmaster"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Brewmaster"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Brewmaster"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Brewmaster"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Mistweaver"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Mistweaver"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Mistweaver"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Mistweaver"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
-	local col_3 = 4
-    local x_3 = 0
-    for v in pairs(SARTESPELLDB["Windwalker"]) do
-        local b = CreateFrame("CheckButton", nil, content3, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-25) * math.floor(x_3/col_3))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Windwalker"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Windwalker"][v] = s:GetChecked() end)
-        x_3=x_3+1
-	end
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in pairs(SARTESPELLDB["Windwalker"]) do
+    local b = CreateSpellToggle(spellName, settings, content3)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
+end
 --------------------------
 --Demon Hunter
 --------------------------
 elseif SARTESPELLDB["Class"]["Demon_Hunter"] == true then
-	local col_1 = 4
-    local x_1 = 0
-    for v in pairs(SARTESPELLDB["Havoc"]) do
-        local b = CreateFrame("CheckButton", nil, content1, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_1))
-		b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Havoc"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Havoc"][v] = s:GetChecked() end)
-        x_1=x_1+1
-	end
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Havoc"]) do
+    local b = CreateSpellToggle(spellName, settings, content1)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content1)
+end
 
-	local col_2 = 4
-    local x_2 = 0
-    for v in pairs(SARTESPELLDB["Vengeance"]) do
-        local b = CreateFrame("CheckButton", nil, content2, "InterfaceOptionsCheckButtonTemplate")
-        b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-25) * math.floor(x_2/col_2))
-        b.Text:SetText(SDT_GetLocalizedName(v))
-        b:SetChecked(SARTESPELLDB["Vengeance"][v])
-        b:SetScript("OnClick", function(s) SARTESPELLDB["Vengeance"][v] = s:GetChecked() end)
-        x_2=x_2+1
-	end
+local col_2 = 4
+local x_2 = 0
+for spellName, settings in pairs(SARTESPELLDB["Vengeance"]) do
+    local b = CreateSpellToggle(spellName, settings, content2)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    x_2=x_2+1
+    CreateNameIconToggles(b, settings, content2)
+end
 
 end
+
+
+
+
 
 local Race = select(3, UnitRace("player"))
 if Race == 5 then
@@ -1410,344 +1386,304 @@ elseif Race == 36 then
 	SARTESPELLDB["Race"]["Mag'har Orc"] = true
 end
 
---------------------------
+------------------------
 --Undead
---------------------------
+------------------------
 if SARTESPELLDB["Race"]["Undead"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-		for v in pairs(SARTESPELLDB["Undead"]) do
-	  local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	  b:SetPoint("TOPLEFT", 20, modifierfirst)
-	  modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	  b.Text:SetText(SDT_GetLocalizedName(v))
-	  b:SetChecked(SARTESPELLDB["Undead"][v])
-	  b:SetScript("OnClick", function(s) SARTESPELLDB["Undead"][v] = s:GetChecked() end)
-	end
---------------------------
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Undead"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+------------------------
 --Orc
---------------------------
-elseif SARTESPELLDB["Class"]["Orc"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Orc"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Orc"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Orc"][v] = s:GetChecked() end)
-	end
---------------------------
---Dwarf
---------------------------
-elseif SARTESPELLDB["Class"]["Dwarf"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Dwarf"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Dwarf"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Dwarf"][v] = s:GetChecked() end)
-	end
---------------------------
---Gnome
---------------------------
-elseif SARTESPELLDB["Class"]["Gnome"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Gnome"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Gnome"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Gnome"][v] = s:GetChecked() end)
-	end
---------------------------
---Night Elf
---------------------------
-elseif SARTESPELLDB["Class"]["Night Elf"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Night Elf"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Night Elf"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Night Elf"][v] = s:GetChecked() end)
-	end
---------------------------
+------------------------
+elseif SARTESPELLDB["Race"]["Orc"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Orc"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+-----------------------
 --Troll
---------------------------
-elseif SARTESPELLDB["Class"]["Troll"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Troll"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Troll"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Troll"][v] = s:GetChecked() end)
-	end
---------------------------
+-----------------------
+elseif SARTESPELLDB["Race"]["Troll"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Troll"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+-----------------------
 --Tauren
---------------------------
-elseif SARTESPELLDB["Class"]["Tauren"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Tauren"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Tauren"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Tauren"][v] = s:GetChecked() end)
-	end
---------------------------
---Human
---------------------------
-elseif SARTESPELLDB["Class"]["Human"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Human"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Human"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Human"][v] = s:GetChecked() end)
-	end
---------------------------
+-----------------------
+elseif SARTESPELLDB["Race"]["Tauren"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Tauren"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+---------------------
+ --Human
+--------------------- 
+elseif SARTESPELLDB["Race"]["Human"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Human"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+-------------------
+--Night Elf
+-------------------
+
+elseif SARTESPELLDB["Race"]["Night Elf"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Night Elf"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+ ---------------------
+--Gnome
+---------------------
+elseif SARTESPELLDB["Race"]["Gnome"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Gnome"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end  ---------------------
+--Dwarf
+---------------------
+elseif SARTESPELLDB["Race"]["Dwarf"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Dwarf"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+---------------------
 --Blood Elf
---------------------------
-elseif SARTESPELLDB["Class"]["Blood Elf"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Blood Elf"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Blood Elf"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Blood Elf"][v] = s:GetChecked() end)
-	end
---------------------------
---Draenei
---------------------------
-elseif SARTESPELLDB["Class"]["Draenei"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Draenei"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Draenei"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Draenei"][v] = s:GetChecked() end)
-	end
---------------------------
---Worgen
---------------------------
-elseif SARTESPELLDB["Class"]["Worgen"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Worgen"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Worgen"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Worgen"][v] = s:GetChecked() end)
-	end
+---------------------
+elseif SARTESPELLDB["Race"]["Blood Elf"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Blood Elf"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+---------------------
+--Draenei 
+---------------------
+elseif SARTESPELLDB["Race"]["Draenei"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Draenei"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
 --------------------------
 --Pandaren
 --------------------------
-elseif SARTESPELLDB["Class"]["Pandaren"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Pandaren"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Pandaren"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Pandaren"][v] = s:GetChecked() end)
-	end
+elseif SARTESPELLDB["Race"]["Pandaren"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Pandaren"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
 --------------------------
 --Void Elf
 --------------------------
-elseif SARTESPELLDB["Class"]["Void Elf"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Void Elf"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Void Elf"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Void Elf"][v] = s:GetChecked() end)
-	end
+elseif SARTESPELLDB["Race"]["Void Elf"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Void Elf"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
 --------------------------
---Lightforged Draenei
+--Worgen
 --------------------------
-elseif SARTESPELLDB["Class"]["Lightforged Draenei"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Lightforged Draenei"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Lightforged Draenei"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Lightforged Draenei"][v] = s:GetChecked() end)
-	end
---------------------------
---Dark Iron Dwarf
---------------------------
-elseif SARTESPELLDB["Class"]["Dark Iron Dwarf"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Dark Iron Dwarf"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Dark Iron Dwarf"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Dark Iron Dwarf"][v] = s:GetChecked() end)
-	end
---------------------------
---Mechagnome
---------------------------
-elseif SARTESPELLDB["Class"]["Mechagnome"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Mechagnome"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Mechagnome"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Mechagnome"][v] = s:GetChecked() end)
-	end
---------------------------
---Kul Tiran
---------------------------
-elseif SARTESPELLDB["Class"]["Kul Tiran"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Kul Tiran"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Kul Tiran"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Kul Tiran"][v] = s:GetChecked() end)
-	end
---------------------------
---Goblin
---------------------------
-elseif SARTESPELLDB["Class"]["Goblin"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Goblin"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Goblin"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Goblin"][v] = s:GetChecked() end)
-	end
---------------------------
---Nightborne
---------------------------
-elseif SARTESPELLDB["Class"]["Nightborne"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Nightborne"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Nightborne"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Nightborne"][v] = s:GetChecked() end)
-	end
---------------------------
---Highmountain Tauren
---------------------------
-elseif SARTESPELLDB["Class"]["Highmountain Tauren"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Highmountain Tauren"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Highmountain Tauren"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Highmountain Tauren"][v] = s:GetChecked() end)
-	end
---------------------------
---Vulpera
---------------------------
-elseif SARTESPELLDB["Class"]["Vulpera"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Vulpera"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Vulpera"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Vulpera"][v] = s:GetChecked() end)
-	end
---------------------------
---Zandalari Troll
---------------------------
-elseif SARTESPELLDB["Class"]["Zandalari Troll"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Zandalari Troll"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Zandalari Troll"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Zandalari Troll"][v] = s:GetChecked() end)
-	end
+elseif SARTESPELLDB["Race"]["Worgen"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Worgen"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
 --------------------------
 --Mag'har Orc
 --------------------------
-elseif SARTESPELLDB["Class"]["Mag'har Orc"] == true then
-	local modifierfirst = -20 -- variable to keep track of what to subtract
-	for v in pairs(SARTESPELLDB["Mag'har Orc"]) do
-	local b = CreateFrame("CheckButton", nil, content4, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20, modifierfirst)
-	modifierfirst = modifierfirst - 40 -- update the variable to remove 40 each time around
-	b.Text:SetText(SDT_GetLocalizedName(v))
-	b:SetChecked(SARTESPELLDB["Mag'har Orc"][v])
-	b:SetScript("OnClick", function(s) SARTESPELLDB["Mag'har Orc"][v] = s:GetChecked() end)
-	end
+elseif SARTESPELLDB["Race"]["Mag'har Orc"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Mag'har Orc"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Zandalari Troll
+--------------------------
+elseif SARTESPELLDB["Race"]["Zandalari Troll"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Zandalari Troll"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Vulpera
+--------------------------
+elseif SARTESPELLDB["Race"]["Vulpera"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Vulpera"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Highmountain Tauren
+--------------------------
+elseif SARTESPELLDB["Race"]["Highmountain Tauren"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Highmountain Tauren"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Nightborne
+--------------------------
+elseif SARTESPELLDB["Race"]["Nightborne"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Nightborne"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Goblin
+--------------------------
+elseif SARTESPELLDB["Race"]["Goblin"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Nightborne"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Kul Tiran
+--------------------------
+elseif SARTESPELLDB["Race"]["Kul Tiran"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Kul Tiran"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Mechagnome
+--------------------------
+elseif SARTESPELLDB["Race"]["Mechagnome"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Mechagnome"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Dark Iron Dwarf
+--------------------------
+elseif SARTESPELLDB["Race"]["Dark Iron Dwarf"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Dark Iron Dwarf"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+--------------------------
+--Lightforged Draenei
+--------------------------
+elseif SARTESPELLDB["Race"]["Lightforged Draenei"] == true then
+local col_1 = 4
+local x_1 = 0
+for spellName, settings in pairs(SARTESPELLDB["Lightforged Draenei"]) do
+    local b = CreateSpellToggle(spellName, settings, content4)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    x_1=x_1+1
+    CreateNameIconToggles(b, settings, content4)
+end
+
+end
+
+
 end
 
 
 
 
-
-end
-
-
-
-
-SLASH_SARTE1 = "/SARTE"
-
-SlashCmdList.SARTE = function(msg, editBox)
-	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
-	InterfaceOptionsFrame_OpenToCategory(f.panel_main)
-end
 
 SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
 -- savedVars: table to put new defaults into
 -- cleanDefaults: default values table
 local function MergeInNewValues(savedVars, cleanDefaults)
-  -- Work through each key in the default values table
   for k, v in pairs(cleanDefaults) do
-    -- If the key doesn't exist in savedVars (ie. its new)
-    -- we add it
-    if savedVars[k] == nil then
-      -- If the value of this key is another table, copy it in
+    if savedVars[k] == nil or type(savedVars[k]) ~= type(v) then -- changed this line so that it replaces the on/off bool with the new table
       if type(v) == "table" then
         savedVars[k] = CopyTable(v)
-      -- Not another table, just a string/true/false/32 etc. copy it in with a
-      -- normal assigment
       else
         savedVars[k] = v
       end
-    -- Found a nested table for this key, go through that nested table to check
-    -- all the keys exist compared to cleanDefaults, and that all the nested
-    -- tables, etc. do too.
     elseif type(v) == "table" then
       MergeInNewValues(savedVars[k], v)
     end

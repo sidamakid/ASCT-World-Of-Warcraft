@@ -1,5 +1,5 @@
 ## Interface: 90205
-## Version: 2.2.1
+## Version: 2.3.5
 ## Title: SARTE-Localize
 ## Title-koKR: SARTE-지역화
 ## Title-frFR: SARTE-Localiser
@@ -27,6 +27,8 @@
 # Table Localize
 localize.lua
 # Spells Localize
+SARTE-Localize-Spells-Table-Vanilla.lua
+SARTE-Localize-Spells-Table-TBC.lua
 SARTE-Localize-Spells-Table.lua
 SARTE-Localize-Spells.lua
 # locales
