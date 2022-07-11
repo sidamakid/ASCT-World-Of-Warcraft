@@ -19,4 +19,4 @@ jobs:
             - name: Package and release
               uses: BigWigsMods/packager@v2t
               with:
-                    arg: -S
+                    arg: -g bcc -w 0
