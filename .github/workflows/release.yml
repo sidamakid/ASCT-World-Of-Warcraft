@@ -18,5 +18,4 @@ jobs:
                   fetch-depth: 0
             - name: Package and release
               uses: BigWigsMods/packager@v2
-                   -S
-              
+                   -s
