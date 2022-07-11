@@ -16,4 +16,4 @@ jobs:
       - uses: BigWigsMods/packager@v2
         # automatically generates game type specific TOC files
         with:
-          args: -s
+          args: -S
