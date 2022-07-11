@@ -1,4 +1,4 @@
-local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
+local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90207
 local L = SARTE_LOCALE_TABLE
 
 if isWrathWow then
