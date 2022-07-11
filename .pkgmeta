@@ -1,4 +1,4 @@
-package-as: Scrolling_Ability_Text
+package-as: SARTE-Text
 
 ignore:
     - .github
@@ -12,4 +12,3 @@ move-folders:
     SARTE-Racials
     SARTE-SCT-Check
     SARTE-Spells
-    SARTE-Text
