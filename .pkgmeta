@@ -1,4 +1,4 @@
-package-as: Scrolling_Ability_Text
+package-as: SARTE-Text
 
 ignore:
     - .github
