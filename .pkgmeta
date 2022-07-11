@@ -1,15 +1,24 @@
 package-as: SARTE-Text
 
-ignore:
-    - .github
-    - .gitignore
-    - .previews
-    - README.md
-move-folders:
-    SARTE-localize
-    SARTE-Text
-    SARTE-Options
-    SARTE-Color-Picker
-    SARTE-Racials
-    SARTE-SCT-Check
-    SARTE-Spells
+diff --git a/.pkgmeta b/.pkgmeta
+index 24b5eea..582304a 100644
+--- a/.pkgmeta
++++ b/.pkgmeta
+@@ -6,10 +6,10 @@ ignore:
+     - .previews
+     - README.md
+ move-folders:
+-    SARTE-localize
+-    SARTE-Text
+-    SARTE-Options
+-    SARTE-Color-Picker
+-    SARTE-Racials
+-    SARTE-SCT-Check
+-    SARTE-Spells
++    SARTE-Text/SARTE-localize: SARTE-localize
++    SARTE-Text/SARTE-Text: SARTE-Text
++    SARTE-Text/SARTE-Options: SARTE-Options
++    SARTE-Text/SARTE-Color-Picker: SARTE-Color-Picker
++    SARTE-Text/SARTE-Racials: SARTE-Racials
++    SARTE-Text/SARTE-SCT-Check: SARTE-SCT-Check
++    SARTE-Text/SARTE-Spells: SARTE-Spells
