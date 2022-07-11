@@ -27,3 +27,4 @@
 ## Notes-itIT: Sub addon che non vengono più utilizzati per SARTE come SARTE Spells e SARTE Racial
 ## Author: Sidamakid Tinman
 ## X-Curse-Project-ID: 634963
+## X-Wago-ID: WYK9pO6L

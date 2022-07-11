@@ -28,7 +28,7 @@
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-No-Longer-Used
 ## X-Curse-Project-ID: 634963
-
+## X-Wago-ID: WYK9pO6L
 
 # Localize_Table
 #Options-Racial-Localize.lua
