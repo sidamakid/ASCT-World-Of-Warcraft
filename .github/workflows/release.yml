@@ -17,3 +17,6 @@ jobs:
         # automatically generates game type specific TOC files
         with:
           args: -S
+        env:
+            GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+            CF_API_KEY: ${{ secrets.CF_API_KEY}}
