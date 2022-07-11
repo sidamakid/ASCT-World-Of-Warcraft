@@ -6,11 +6,15 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone project
+        uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-
+          fetch-depth: 0  # gets git history for changelogs
+      - name: Package and release
       - uses: BigWigsMods/packager@v2
         # automatically generates game type specific TOC files
         with:
