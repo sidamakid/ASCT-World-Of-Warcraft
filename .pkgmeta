@@ -1,0 +1,7 @@
+package-as: Scrolling_Ability_Text
+
+ignore:
+    - .github
+    - .gitignore
+    - .previews
+    - README.md
