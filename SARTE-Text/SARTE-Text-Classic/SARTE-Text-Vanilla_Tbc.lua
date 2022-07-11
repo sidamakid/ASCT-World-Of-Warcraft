@@ -33,23 +33,23 @@ f:SetScript("OnEvent", --Run when our event fires
       local dbSettings_Hunter = SARTESPELLDB["Beast Mastery"][Spell_Localize] or SARTESPELLDB["Marksmanship"][Spell_Localize] or SARTESPELLDB["Survival"][Spell_Localize]
       if
       --Rogue
-      SpellTableRogue[Spell_Localize] and (dbSettings_Rogue.SpellEnable == true) or
+      dbSettings_Rogue and dbSettings_Rogue.SpellEnable == true  or
       --Priest
-      SpellTablePriest[Spell_Localize] and (dbSettings_Priest.SpellEnable == true) or
+      dbSettings_Priest and dbSettings_Priest.SpellEnable == true or
       --Shaman
-      SpellTableShaman[Spell_Localize] and (dbSettings_Shaman.SpellEnable == true) or
+      dbSettings_Shaman and dbSettings_Shaman.SpellEnable == true or
       --Warrior
-      SpellTableWarrior[Spell_Localize] and (dbSettings_Warrior.SpellEnable == true) or
+      dbSettings_Warrior and dbSettings_Warrior.SpellEnable == true or
       --Warlock
-      SpellTableWarlock[Spell_Localize] and (dbSettings_Warlock.SpellEnable == true) or
+      dbSettings_Warlock and dbSettings_Warlock.SpellEnable == true or
       --Paladin
-      SpellTablePaladin[Spell_Localize] and (dbSettings_Paladin.SpellEnable == true) or
+      dbSettings_Paladin and dbSettings_Paladin.SpellEnable == true or
       --Mage
-      SpellTableMage[Spell_Localize] and (dbSettings_Mage.SpellEnable == true) or
+      dbSettings_Mage and dbSettings_Mage.SpellEnable == true or
       --Druid
-      SpellTableDruid[Spell_Localize] and (dbSettings_Druid.SpellEnable == true) or
+      dbSettings_Druid and dbSettings_Druid.SpellEnable == true or
       --Hunter
-      SpellTableHunter[Spell_Localize] and (dbSettings_Hunter.SpellEnable == true)
+      dbSettings_Hunter and dbSettings_Hunter.SpellEnable == true
       then
          ---------------------------
          --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe

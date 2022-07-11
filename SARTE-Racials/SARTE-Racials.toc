@@ -1,5 +1,7 @@
 ## Interface: 90205
-## Version: 2.3.5
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Version: @project-version@
 ## DefaultState: disabled
 ## Title: Scrolling ability text Racial options (No Longer Used)
 ## Title-koKR: 스크롤 능력 텍스트 인종 옵션 (더 이상 사용되지 않음)
@@ -24,8 +26,9 @@
 ## Notes-ptBR: SARTE Opções raciais (Não utilizadas. Fundido com o painel de opções SARTE normal)
 ## Notes-itIT: SARTE Opzioni razziali (Non utilizzate. Unito al normale pannello delle opzioni SARTE)
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Text, SARTE-Spells
-## SavedVariablesPerCharacter: SARTERACIALSDB
+## RequiredDeps: SARTE-No-Longer-Used
+## X-Curse-Project-ID: 634963
+
 
 # Localize_Table
 #Options-Racial-Localize.lua

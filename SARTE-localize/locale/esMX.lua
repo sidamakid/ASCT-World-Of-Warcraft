@@ -69,7 +69,7 @@ if locale == "esMX" then
  L["Lust"] = "Lujuria";
  L["Tab"] = "Esta pestaña es solo para chamanes y cazadores.";
  --Ready Text
- L["msg"] = " ya está listo!"
+ L["msg"] = "ya está listo!"
  L["msg_Shocks"] = " ¡Los choques ya están listos!"
  L["msg_Traps"] = " ¡Las trampas ya están listas!"
  L["msg_Lust"] = " ¡La lujuria ya está lista!"

@@ -69,7 +69,7 @@ if locale == "zhCN" then
  L["Lust"] = "欲望";
  L["Tab"] = "此选项卡仅适用于萨满和亨特。";
  --Ready Text
- L["msg"] = " 现在准备好了!";
+ L["msg"] = "现在准备好了!";
  L["msg_Shocks"] = " 冲击现在已经准备好了！";
  L["msg_Traps"] = " 陷阱现在已经准备好了！";
  L["msg_Lust"] = " 欲望现在已经准备好了！";

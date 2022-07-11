@@ -1,5 +1,7 @@
 ## Interface: 90205
-## Version: 2.3.5
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Version: @project-version@
 ## Title: Scrolling Ability Text
 ## Title-koKR: 스크롤 능력 텍스트
 ## Title-frFR: Texte de capacité de défilement
@@ -14,7 +16,7 @@
 ## Notes: Shows you when your abilities are ready!
 ## Notes-koKR: 당신의 능력이 준비되었을 때 당신을 보여줍니다!
 ## Notes-frFR: Vous montre quand vos capacités sont prêtes!
-## Notes-deGE: Zeigt dir, wann deine Fähigkeiten bereit sind!
+## Notes-deDE: Zeigt dir, wann deine Fähigkeiten bereit sind!
 ## Notes-zhCN: 显示您的能力何时准备就绪！
 ## Notes-zhTW: 顯示您的能力何時準備就緒！
 ## Notes-esES: ¡Te muestra cuando tus habilidades están listas!
@@ -23,12 +25,11 @@
 ## Notes-ptBR: Mostra quando suas habilidades estão prontas!
 ## Notes-itIT: Ti mostra quando le tue abilità sono pronte!
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Spells, SARTE-localize
-
+## RequiredDeps: SARTE-localize
+## X-Curse-Project-ID: 634963
 # SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic
 SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
-SARTE-Text-Classic\SARTE-Text-Wrath.lua
 #SARTE-Racials
 SARTE-Text-Racials.lua

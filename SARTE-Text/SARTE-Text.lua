@@ -30,29 +30,29 @@ f:SetScript("OnEvent", --Run when our event fires
       local dbSettings_Demon_Hunter = SARTESPELLDB["Havoc"][Spell_Localize] or SARTESPELLDB["Vengeance"][Spell_Localize]
       if
       --Rogue
-      SpellTableRogue[Spell_Localize] and (dbSettings_Rogue.SpellEnable == true) or
+      dbSettings_Rogue and (dbSettings_Rogue.SpellEnable == true) or
       --Priest
-      SpellTablePriest[Spell_Localize] and (dbSettings_Priest.SpellEnable == true) or
+      dbSettings_Priest and (dbSettings_Priest.SpellEnable == true) or
       --Shaman
-      SpellTableShaman[Spell_Localize] and (dbSettings_Shaman.SpellEnable == true) or
+      dbSettings_Shaman and (dbSettings_Shaman.SpellEnable == true) or
       --Warrior
-      SpellTableWarrior[Spell_Localize] and (dbSettings_Warrior.SpellEnable == true) or
+      dbSettings_Warrior and (dbSettings_Warrior.SpellEnable == true) or
       --Warlock
-      SpellTableWarlock[Spell_Localize] and (dbSettings_Warlock.SpellEnable == true) or
+      dbSettings_Warlock and (dbSettings_Warlock.SpellEnable == true) or
       --Paladin
-      SpellTablePaladin[Spell_Localize] and (dbSettings_Paladin.SpellEnable == true) or
+      dbSettings_Paladin and (dbSettings_Paladin.SpellEnable == true) or
       --Mage
-      SpellTableMage[Spell_Localize] and (dbSettings_Mage.SpellEnable) or
+      dbSettings_Mage and (dbSettings_Mage.SpellEnable) or
       --Druid
-      SpellTableDruid[Spell_Localize] and (dbSettings_Druid.SpellEnable) or
+      dbSettings_Druid and (dbSettings_Druid.SpellEnable) or
       --Hunter
-      SpellTableHunter[Spell_Localize] and (dbSettings_Hunter.SpellEnable) or
+      dbSettings_Hunter and (dbSettings_Hunter.SpellEnable) or
       --Death_Knight
-      SpellTableDeath_Knight[Spell_Localize] and (dbSettings_Death_Knight.SpellEnable) or
+      dbSettings_Death_Knight and (dbSettings_Death_Knight.SpellEnable) or
       --Monk
-      SpellTableMonk[Spell_Localize] and (dbSettings_Monk.SpellEnable == true) or
+      dbSettings_Monk and (dbSettings_Monk.SpellEnable == true) or
       --Demon_Hunter
-      SpellTableDemon_Hunter[Spell_Localize] and (dbSettings_Demon_Hunter.SpellEnable)
+      dbSettings_Demon_Hunter and (dbSettings_Demon_Hunter.SpellEnable)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -64,7 +64,7 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                local name, _, icon = GetSpellInfo(spellName)
                local details = " "
-               local dbSettings = SARTESPELLDB["Assassination"][Spell_Localize] or SARTESPELLDB["Combat"][Spell_Localize] or SARTESPELLDB["Subtlety"][Spell_Localize] or
+               local dbSettings = SARTESPELLDB["Assassination"][Spell_Localize] or SARTESPELLDB["Outlaw"][Spell_Localize] or SARTESPELLDB["Subtlety"][Spell_Localize] or
                                   SARTESPELLDB["Shadow"][Spell_Localize] or SARTESPELLDB["Holy_Priest"][Spell_Localize] or SARTESPELLDB["Discipline"][Spell_Localize] or
                                   SARTESPELLDB["Elemental"][Spell_Localize] or SARTESPELLDB["Enhancement"][Spell_Localize] or SARTESPELLDB["Shaman_Restoration"][Spell_Localize] or
                                   SARTESPELLDB["Arms"][Spell_Localize] or SARTESPELLDB["Fury"][Spell_Localize] or SARTESPELLDB["Protection_Warrior"][Spell_Localize] or

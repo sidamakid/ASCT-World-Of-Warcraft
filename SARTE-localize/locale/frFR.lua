@@ -69,7 +69,7 @@ if locale == "frFR" then
  L["Lust"] = "Luxure";
  L["Tab"] = "Cet onglet est réservé aux chamans et aux chasseurs.";
  --Ready Text
- L["msg"] = " est maintenant prêt!";
+ L["msg"] = "est maintenant prêt!";
  L["msg_Shocks"] = " Les chocs sont maintenant prêts!";
  L["msg_Traps"] = " Les pièges sont maintenant prêts!";
  L["msg_Lust"] = " La luxure est maintenant prête!";

@@ -1,5 +1,7 @@
 ## Interface: 90205
-## Version: 2.3.5
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Version: @project-version@
 ## Title: SCT-Check
 ## Title-koKR: SCT-검사
 ## Title-frFR: SCT-Vérifier
@@ -24,7 +26,7 @@
 ## Notes-itIT: Controlla se lo scorrimento del testo di combattimento è abilitato
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-Text, SARTE-localize
-
+## X-Curse-Project-ID: 634963
 
 # Loads table
 Check_if_is_loaded-message.lua

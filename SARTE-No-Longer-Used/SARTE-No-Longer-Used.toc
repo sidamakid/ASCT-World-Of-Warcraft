@@ -1,0 +1,29 @@
+## Interface: 90205
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Version: @project-version@
+## DefaultState: disabled
+## Title: SARTE-No-Longer-Used
+## Title-koKR: SARTE 더 이상 사용되지 않음
+## Title-frFR: SARTE N’est plus utilisé
+## Title-deDE: SARTE Nicht mehr verwendet
+## Title-zhCN: SARTE 不再使用
+## Title-zhTW: SARTE 不再使用
+## Title-esES: SARTE-Ya-no-se-usa
+## Title-esMX: SARTE-Ya-no-se-usa
+## Title-ruRU: SARTE Больше не используется
+## Title-ptBR: SARTE Não usado mais
+## Title-itIT: SARTE Não usado mais
+## Notes: Sub addons that are no longer used for SARTE such as SARTE Spells and SARTE Racials
+## Notes-koKR: SARTE 주문 및 SARTE 인종과 같은 SARTE에 더 이상 사용되지 않는 하위 애드온
+## Notes-frFR: Sous-addons qui ne sont plus utilisés pour SARTE tels que SARTE Spells et SARTE Racial
+## Notes-deDE: Sub-Addons, die nicht mehr für SARTE verwendet werden, wie SARTE Spells und SARTE Racial
+## Notes-zhCN: 不再用于SARTE的子插件，例如SARTE咒语和SARTE种族
+## Notes-zhTW: 不再用於SARTE的子外掛程式，例如SARTE咒語和SARTE種族
+## Notes-esES: Complementos secundarios que ya no se utilizan para SARTE, como SARTE Spells y SARTE Racial
+## Notes-esMX: Complementos secundarios que ya no se utilizan para SARTE, como SARTE Spells y SARTE Racial
+## Notes-ruRU: Субаддоны, которые больше не используются для SARTE, такие как SARTE Spells и SARTE Racial
+## Notes-ptBR: Sub addons que não são mais usados para SARTE, como SARTE Spells e SARTE Racial
+## Notes-itIT: Sub addon che non vengono più utilizzati per SARTE come SARTE Spells e SARTE Racial
+## Author: Sidamakid Tinman
+## X-Curse-Project-ID: 634963

@@ -1,5 +1,7 @@
 ## Interface: 90205
-## Version: 2.3.5
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Version: @project-version@
 ## Title: SARTE_Color_Picker
 ## Title-koKR: SARTE 색상 선택기
 ## Title-frFR: Sélecteur de couleurs SARTE
@@ -25,6 +27,7 @@
 ## Author: Sidamakid Tinman
 ## RequiredDeps: SARTE-Text, SARTE-Options
 ## SavedVariablesPerCharacter: SARTE_Color_Picker_Variables
+## X-Curse-Project-ID: 634963
 # Color picker first
 Color_picker.lua
 # Then saved variables

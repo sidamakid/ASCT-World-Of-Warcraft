@@ -69,7 +69,7 @@ if locale == "itIT" then
  L["Lust"] = "Lussuria";
  L["Tab"] = "Questa scheda è solo per Sciamani e Cacciatori.";
  --Ready Text
- L["msg"] = " è ora pronto!";
+ L["msg"] = "è ora pronto!";
  L["msg_Shocks"] = " Gli shock sono ora pronti!";
  L["msg_Traps"] = " Le trappole sono ora pronte!";
  L["msg_Lust"] = " La lussuria è ora pronta!";

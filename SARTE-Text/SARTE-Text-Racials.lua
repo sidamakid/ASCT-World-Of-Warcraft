@@ -27,14 +27,14 @@ f:SetScript("OnEvent", --Run when our event fires
       local db_Troll = SARTESPELLDB["Troll"][Spell_Localize]
       if
       --Races
-      SpellTableHuman[Spell_Localize] and (db_Human.SpellEnable == true) or
-      SpellTableDwarf[Spell_Localize] and (db_Dwarf.SpellEnable == true) or
-      SpellTableGnome[Spell_Localize] and (db_Gnome.SpellEnable == true) or
-      SpellTableUndead[Spell_Localize] and (db_Undead.SpellEnable == true) or
-      SpellTableNightElf[Spell_Localize] and (db_Night_Elf.SpellEnable == true) or
-      SpellTableOrc[Spell_Localize] and (db_Orc.SpellEnable == true) or
-      SpellTableTauren[Spell_Localize] and (db_Tauren.SpellEnable == true) or
-      SpellTableTroll[Spell_Localize] and (db_Troll.SpellEnable == true)
+      db_Human and db_Human.SpellEnable == true or
+      db_Dwarf and db_Dwarf.SpellEnable == true or
+      db_Gnome and db_Gnome.SpellEnable == true or
+      db_Undead and db_Undead.SpellEnable == true or
+      db_Night_Elf and db_Night_Elf.SpellEnable == true or
+      db_Orc and db_Orc.SpellEnable == true or
+      db_Tauren and db_Tauren.SpellEnable == true or
+      db_Troll and db_Troll.SpellEnable == true
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -93,16 +93,16 @@ f:SetScript("OnEvent", --Run when our event fires
       local db_Draenei = SARTESPELLDB["Draenei"][Spell_Localize]
       if
       --Races
-      SpellTableHuman[Spell_Localize] and (db_Human.SpellEnable == true) or
-      SpellTableDwarf[Spell_Localize] and (db_Dwarf.SpellEnable == true) or
-      SpellTableGnome[Spell_Localize] and (db_Gnome.SpellEnable == true) or
-      SpellTableUndead[Spell_Localize] and (db_Undead.SpellEnable == true) or
-      SpellTableNightElf[Spell_Localize] and (db_Night_Elf.SpellEnable == true) or
-      SpellTableOrc[Spell_Localize] and (db_Orc.SpellEnable == true) or
-      SpellTableTauren[Spell_Localize] and (db_Tauren.SpellEnable == true) or
-      SpellTableTroll[Spell_Localize] and (db_Troll.SpellEnable == true) or
-      SpellTableBloodElf[Spell_Localize] and (db_Blood_Elf.SpellEnable == true) or
-      SpellTableDranei[Spell_Localize] and (db_Draenei.SpellEnable == true)
+      db_Human and (db_Human.SpellEnable == true) or
+      db_Dwarf and (db_Dwarf.SpellEnable == true) or
+      db_Gnome and (db_Gnome.SpellEnable == true) or
+      db_Undead and (db_Undead.SpellEnable == true) or
+      db_Night_Elf and (db_Night_Elf.SpellEnable == true) or
+      db_Orc and (db_Orc.SpellEnable == true) or
+      db_Tauren and (db_Tauren.SpellEnable == true) or
+      db_Troll and (db_Troll.SpellEnable == true) or
+      db_Blood_Elf and (db_Blood_Elf.SpellEnable == true) or
+      db_Draenei and (db_Draenei.SpellEnable == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -176,29 +176,29 @@ elseif isRetailWow then
       local db_Maghar_Orc = SARTESPELLDB["Mag'har Orc"][Spell_Localize]
       if
       --Races
-      SpellTableHuman[Spell_Localize] and (db_Human.SpellEnable == true) or
-      SpellTableDwarf[Spell_Localize] and (db_Dwarf.SpellEnable == true) or
-      SpellTableGnome[Spell_Localize] and (db_Gnome.SpellEnable == true) or
-      SpellTableUndead[Spell_Localize] and (db_Undead.SpellEnable == true) or
-      SpellTableNightElf[Spell_Localize] and (db_Night_Elf.SpellEnable == true) or
-      SpellTableOrc[Spell_Localize] and (db_Orc.SpellEnable == true) or
-      SpellTableTauren[Spell_Localize] and (db_Tauren.SpellEnable == true) or
-      SpellTableTroll[Spell_Localize] and (db_Troll.SpellEnable == true) or
-      SpellTableBloodElf[Spell_Localize] and (db_Blood_Elf.SpellEnable == true) or
-      SpellTableDranei[Spell_Localize] and (db_Draenei.SpellEnable == true) or
-      SpellTableWorgen[Spell_Localize] and (db_Worgen.SpellEnable == true) or
-      SpellTablePandaren[Spell_Localize] and (db_Pandaren.SpellEnable == true) or
-      SpellTableVoidElf[Spell_Localize] and (db_Void_Elf.SpellEnable == true) or
-      SpellTableLightForgedDraenei[Spell_Localize] and (db_Lightforged_Draenei.SpellEnable == true) or
-      SpellTableDarkIronDwarf[Spell_Localize] and (db_Dark_Iron_Dwarf.SpellEnable == true) or
-      SpellTableMechagnome[Spell_Localize] and (db_Mechagnome.SpellEnable == true) or
-      SpellTableKulTiran[Spell_Localize] and (db_Kul_Tiran.SpellEnable == true) or
-      SpellTableGoblin[Spell_Localize] and (db_Goblin.SpellEnable == true) or
-      SpellTableNightborne[Spell_Localize] and (db_Nightborne.SpellEnable == true) or
-      SpellTableHighmountainTauren[Spell_Localize] and (db_Highmountain_Tauren.SpellEnable == true) or
-      SpellTableVulpera[Spell_Localize] and (db_Vulpera.SpellEnable == true) or
-      SpellTableZandalariTroll[Spell_Localize] and (db_Zandalari_Troll.SpellEnable == true) or
-      SpellTableMagharOrc[Spell_Localize] and (db_Maghar_Orc.SpellEnable == true)
+      db_Human and (db_Human.SpellEnable == true) or
+      db_Dwarf and (db_Dwarf.SpellEnable == true) or
+      db_Gnome and (db_Gnome.SpellEnable == true) or
+      db_Undead and (db_Undead.SpellEnable == true) or
+      db_Night_Elf and (db_Night_Elf.SpellEnable == true) or
+      db_Orc and (db_Orc.SpellEnable == true) or
+      db_Tauren and (db_Tauren.SpellEnable == true) or
+      db_Troll and (db_Troll.SpellEnable == true) or
+      db_Blood_Elf and (db_Blood_Elf.SpellEnable == true) or
+      db_Draenei and (db_Draenei.SpellEnable == true) or
+      db_Worgen and (db_Worgen.SpellEnable == true) or
+      db_Pandaren and (db_Pandaren.SpellEnable == true) or
+      db_Void_Elf and (db_Void_Elf.SpellEnable == true) or
+      db_Lightforged_Draenei and (db_Lightforged_Draenei.SpellEnable == true) or
+      db_Dark_Iron_Dwarf and (db_Dark_Iron_Dwarf.SpellEnable == true) or
+      db_Mechagnome and (db_Mechagnome.SpellEnable == true) or
+      db_Kul_Tiran and (db_Kul_Tiran.SpellEnable == true) or
+      db_Goblin and (db_Goblin.SpellEnable == true) or
+      db_Nightborne and (db_Nightborne.SpellEnable == true) or
+      db_Highmountain_Tauren and (db_Highmountain_Tauren.SpellEnable == true) or
+      db_Vulpera and (db_Vulpera.SpellEnable == true) or
+      db_Zandalari_Troll and (db_Zandalari_Troll.SpellEnable == true) or
+      db_Maghar_Orc and (db_Maghar_Orc.SpellEnable == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!

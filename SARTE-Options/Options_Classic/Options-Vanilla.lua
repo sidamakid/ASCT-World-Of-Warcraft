@@ -263,7 +263,7 @@ f.defaults = {
 		["Ice Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Undead"] = {
-	Cannibalize = false,
+	Cannibalize = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	["Will of the Forsaken"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Orc"] = {
@@ -375,7 +375,7 @@ end
 ---------------------------
 --Slash Commands
 ---------------------------
-SLASH_SARTE1 = "/SART"
+SLASH_SARTE1 = "/SARTE"
 SlashCmdList.SARTE = function(msg, editBox)
 	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
 	SARTE_Config:Show()

@@ -31,4 +31,17 @@ SpellTableHunterTraps = {--Hunter Traps
 ["Frost Trap"] = "Frost Trap",
 ["Freezing Trap"] = "Freezing Trap",
 }
+elseif isWrathWow then
+SpellTableHunterTraps = {--Hunter Traps
+["Freezing Trap"] = "Freezing Trap",
+["Immolation Trap"] = "Immolation Trap",
+["Snake Trap"] = "Snake Trap",
+["Explosive Trap"] = "Explosive Trap",
+}
+SpellTable_Shaman_Shocks = {--Shaman Shocks
+--Shocks
+["Frost Shock"] = "Frost Shock",
+["Flame Shock"] = "Flame Shock",
+["Earth Shock"] = "Earth Shock",
+}
 end

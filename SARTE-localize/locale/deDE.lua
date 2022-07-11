@@ -69,7 +69,7 @@ if locale == "deDE" then
  L["Lust"] = "Wollust";
  L["Tab"] = "Diese Registerkarte ist nur für Schamanen und Jäger gedacht.";
  --Ready Text
- L["msg"] = " ist jetzt fertig!!";
+ L["msg"] = "ist jetzt fertig!!";
  L["msg_Shocks"] = " Schocks sind jetzt bereit!";
  L["msg_Traps"] = " Fallen sind jetzt fertig!";
  L["msg_Lust"] = " Die Lust ist jetzt bereit!";
