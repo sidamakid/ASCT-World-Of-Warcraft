@@ -8,13 +8,6 @@ index 24b5eea..582304a 100644
      - .previews
      - README.md
  move-folders:
--    SARTE-localize
--    SARTE-Text
--    SARTE-Options
--    SARTE-Color-Picker
--    SARTE-Racials
--    SARTE-SCT-Check
--    SARTE-Spells
 +    SARTE-Text/SARTE-localize: SARTE-localize
 +    SARTE-Text/SARTE-Text: SARTE-Text
 +    SARTE-Text/SARTE-Options: SARTE-Options
