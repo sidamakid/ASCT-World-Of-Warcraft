@@ -5,3 +5,11 @@ ignore:
     - .gitignore
     - .previews
     - README.md
+move-folders:
+    SARTE-localize
+    SARTE-Options
+    SARTE-Color-Picker
+    SARTE-Racials
+    SARTE-SCT-Check
+    SARTE-Spells
+    SARTE-Text
