@@ -28,8 +28,8 @@
 ## RequiredDeps: SARTE-Text, SARTE-localize
 ## SavedVariablesPerCharacter: SARTESPELLDB
 ## X-Curse-Project-ID: 634963
-## X-Wago-ID: WYK9pO6L
 ## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L
 # Libs
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
