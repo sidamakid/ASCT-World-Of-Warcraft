@@ -3,12 +3,15 @@ Scrolling ability text is here! Working on getting shared cooldowns fixed and ad
 Hope you all enjoy! More updates will be coming soon!
 # QnA
 Q. What does this addon do?
+
 A. When a spell comes off cooldown it will say on scrolling combat text: Spell is now ready!
 
 Q. Can I chose to see if I want to see just the spell or just the icon?
+
 A. Yes you can do that. You can chose an individual spell to chose if you want to see just the icon or just the name.
 
 Q. Will it do it based on my class? Or will it show every class?
+
 A. It will load the options for only your class.
 
 Q. How do I open to the options panel?
