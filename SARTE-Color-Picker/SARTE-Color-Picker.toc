@@ -29,6 +29,7 @@
 ## SavedVariablesPerCharacter: SARTE_Color_Picker_Variables
 ## X-Curse-Project-ID: 634963
 ## X-Wago-ID: WYK9pO6L
+## X-WoWI-ID: 26362
 # Color picker first
 Color_picker.lua
 # Then saved variables

@@ -28,6 +28,7 @@
 ## RequiredDeps: SARTE-No-Longer-Used
 ## X-Curse-Project-ID: 634963
 ## X-Wago-ID: WYK9pO6L
+## X-WoWI-ID: 26362
 # Spell Lists
 #SARTE-Rogue-Spells.lua
 #SARTE-Priest-Spells.lua

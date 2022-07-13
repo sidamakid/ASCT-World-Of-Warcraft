@@ -319,9 +319,8 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       --Shaman-Countined
       ["Astral Recall"] = 556,
       ["Grounding Totem"] = 8177,
-      ["Fire Elemental Totem"] = 2894,
+      ["Fire Elemental"] = 198067,
       ["Stormstrike"] = 17364,
-      ["Earth Elemental Totem"] = 2062,
       ["Crash Lightning"] = 187874,
       ["Spirit Walk"] = 58875,
       ["Feral Lunge"] = 196884,
@@ -346,7 +345,7 @@ SARTE_englishToSpellID = {--SARTE Localizing Table
       ["Surge of Earth"] = 320746,
       ["Healing Stream Totem"] = 5394,
       ["Shamanistic Rage"] = 30823,
-      ["Mana Tide Totem"] = 16190,
+      ["Mana Tide Totem"] = 16191,
       --Hunter
       ["Scare Beast"] = 1513,
       ["Intimidation"] = 19577,

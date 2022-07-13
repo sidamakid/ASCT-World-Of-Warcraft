@@ -18,7 +18,7 @@ local f = CreateFrame("Frame")
 ---------------------------
 --Normal table
 ---------------------------
-f.defaults = {
+local defaults = {
 	["Race"] = {
 	Orc = false,
 	Undead = false,
@@ -984,8 +984,8 @@ end
 --Saved Variables
 ---------------------------
 SARTESPELLDB = SARTESPELLDB or {}
-MergeInNewValues(SARTESPELLDB, f.defaults)
-DeleteOldValues(f.defaults, SARTESPELLDB)
+MergeInNewValues(SARTESPELLDB, defaults)
+DeleteOldValues(defaults, SARTESPELLDB)
 f:InitializeOptions_Class()
 ---------------------------
 --Not used

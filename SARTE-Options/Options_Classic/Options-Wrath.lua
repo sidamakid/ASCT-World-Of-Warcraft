@@ -5,7 +5,7 @@ local L = SARTE_LOCALE_TABLE
 local function InitializeOptions()
 local f = CreateFrame("Frame")
 
-f.defaults = {
+local defaults = {
 ------------------------
 --Races
 ------------------------
@@ -417,7 +417,7 @@ f.defaults = {
 
 
 function f:InitializeOptions_Class()
-	local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "BasicFrameTemplateWithInset");
+	local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "UIPanelDialogTemplate");
 table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
@@ -1178,8 +1178,8 @@ end
 --Saved Variables
 ---------------------------
 SARTESPELLDB = SARTESPELLDB or {}
-MergeInNewValues(SARTESPELLDB, f.defaults)
-DeleteOldValues(f.defaults, SARTESPELLDB)
+MergeInNewValues(SARTESPELLDB, defaults)
+DeleteOldValues(defaults, SARTESPELLDB)
 f:InitializeOptions_Class()
 ---------------------------
 --Not used

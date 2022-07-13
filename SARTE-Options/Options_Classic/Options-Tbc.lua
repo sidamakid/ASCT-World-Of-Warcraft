@@ -18,7 +18,7 @@ local f = CreateFrame("Frame")
 ---------------------------
 --Normal table
 ---------------------------
-f.defaults = {
+local defaults = {
 	["Race"] = {
 	["Blood Elf"] = false,
 	Orc = false,
@@ -341,7 +341,7 @@ f.defaults = {
 --Create Options panel
 ---------------------------
 function f:InitializeOptions_Class()
-local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "BasicFrameTemplateWithInset");
+local SARTE_Config = CreateFrame("Frame", "SARTE_Config", UIParent, "UIPanelDialogTemplate");
 table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
@@ -1060,9 +1060,8 @@ end
 --Saved Variables
 ---------------------------
 SARTESPELLDB = SARTESPELLDB or {}
-MergeInNewValues(SARTESPELLDB, f.defaults)
-DeleteOldValues(f.defaults, SARTESPELLDB)
-MergeInNewValues(SARTESPELLDB, f.defaults)
+MergeInNewValues(SARTESPELLDB, defaults)
+DeleteOldValues(defaults, SARTESPELLDB)
 f:InitializeOptions_Class()
 ---------------------------
 --Not used

@@ -7,7 +7,7 @@ local function InitializeOptions()
 local f = CreateFrame("Frame")
 
 
-f.defaults = {
+local defaults = {
 	--Races
 	["Race"] = {
 		["Blood Elf"] = false,
@@ -734,9 +734,9 @@ table.insert(UISpecialFrames, "SARTE_Config")
 SARTE_Config:SetMovable(true)
 SARTE_Config:EnableMouse(true)
 SARTE_Config:SetResizable(true)
-SARTE_Config:SetSize(950, 650);
-SARTE_Config:SetMinResize(950,200)
-SARTE_Config:SetMaxResize(950,650)
+SARTE_Config:SetSize(1000, 650);
+SARTE_Config:SetMinResize(1000,200)
+SARTE_Config:SetMaxResize(1000,650)
 SARTE_Config:RegisterForDrag("LeftButton")
 SARTE_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -924,6 +924,7 @@ local Color_picker_SARTE = CreateFrame("Button", nil, content5, "UIPanelButtonTe
 	Color_picker_SARTE:SetScript("OnClick", function()
 	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
 end)
+
 self.panel_main = CreateFrame("Frame")
 self.panel_main.name = L["Title"]
 InterfaceOptions_AddCategory(self.panel_main)
@@ -960,6 +961,10 @@ local function CreateSpellToggle(spellName, settings, parent)
     b.Text:SetText(SDT_GetLocalizedName(spellName))
     b:SetChecked(settings.SpellEnable) -- THIS LINE CHANGED
     b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
+    local tex = b:CreateTexture()
+    tex:SetPoint("RIGHT", b, "LEFT", -3, 1)
+    tex:SetSize(44, 44)
+    tex:SetTexture(SDT_GetLocalizedIcon(spellName))
     return b
 end
 
@@ -972,7 +977,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Assassination"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -981,7 +986,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Outlaw"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -990,7 +995,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Subtlety"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1003,7 +1008,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Shadow"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1012,7 +1017,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Holy_Priest"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1021,7 +1026,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Discipline"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1035,7 +1040,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Arms"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1044,7 +1049,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Fury"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1053,7 +1058,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Protection_Warrior"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1065,7 +1070,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Balance"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1074,7 +1079,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Feral_Combat"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1083,7 +1088,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Druid_Restoration"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1095,7 +1100,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Elemental"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1104,7 +1109,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Enhancement"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1113,7 +1118,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Shaman_Restoration"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1122,7 +1127,7 @@ local col_4 = 4
 local x_4 = 0
 for v in pairs(SARTESPELLDB["Shared_Shaman_spells"]) do
 	local b = CreateFrame("CheckButton", nil, content6, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_4 % col_4), -20 + (- b:GetHeight()-25) * math.floor(x_4/col_4))
+	b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_4 % col_4), -20 + (- b:GetHeight()-25) * math.floor(x_4/col_4))
 	b.Text:SetText(L[v])
 	b:SetChecked(SARTESPELLDB["Shared_Shaman_spells"][v])
 	b:SetScript("OnClick", function(s) SARTESPELLDB["Shared_Shaman_spells"][v] = s:GetChecked() end)
@@ -1136,7 +1141,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Affliction"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1145,7 +1150,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Demonology"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1154,7 +1159,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Destruction"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1166,7 +1171,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Beast Mastery"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1175,7 +1180,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Marksmanship"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1184,7 +1189,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Survival"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1196,7 +1201,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Holy_Paladin"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1205,7 +1210,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Protection_Paladin"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1214,7 +1219,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Retribution"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1226,7 +1231,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Arcane"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1235,7 +1240,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Fire"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1244,7 +1249,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Frost_Mage"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1257,7 +1262,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Blood"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1266,7 +1271,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Frost_DK"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1275,7 +1280,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Unholy"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1287,7 +1292,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Brewmaster"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1296,7 +1301,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Mistweaver"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1305,7 +1310,7 @@ local col_3 = 4
 local x_3 = 0
 for spellName, settings in pairs(SARTESPELLDB["Windwalker"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
     CreateNameIconToggles(b, settings, content3)
 end
@@ -1317,7 +1322,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Havoc"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content1)
 end
@@ -1326,7 +1331,7 @@ local col_2 = 4
 local x_2 = 0
 for spellName, settings in pairs(SARTESPELLDB["Vengeance"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
 end
@@ -1394,7 +1399,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Undead"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1406,7 +1411,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Orc"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1418,7 +1423,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Troll"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1430,7 +1435,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Tauren"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1442,7 +1447,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Human"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1455,7 +1460,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Night Elf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1467,7 +1472,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Gnome"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end  ---------------------
@@ -1478,7 +1483,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Dwarf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1490,7 +1495,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Blood Elf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1502,7 +1507,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Draenei"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1514,7 +1519,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Pandaren"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1526,7 +1531,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Void Elf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1538,7 +1543,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Worgen"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1550,7 +1555,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Mag'har Orc"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1562,7 +1567,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Zandalari Troll"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1574,7 +1579,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Vulpera"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1586,7 +1591,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Highmountain Tauren"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1598,7 +1603,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Nightborne"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1608,9 +1613,9 @@ end
 elseif SARTESPELLDB["Race"]["Goblin"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(SARTESPELLDB["Nightborne"]) do
+for spellName, settings in pairs(SARTESPELLDB["Goblin"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1622,7 +1627,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Kul Tiran"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1634,7 +1639,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Mechagnome"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1646,7 +1651,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Dark Iron Dwarf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1658,7 +1663,7 @@ local col_1 = 4
 local x_1 = 0
 for spellName, settings in pairs(SARTESPELLDB["Lightforged Draenei"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
+    b:SetPoint("TOPLEFT", 60 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -1710,8 +1715,8 @@ end
 --Saved Variables
 ---------------------------
 SARTESPELLDB = SARTESPELLDB or {}
-MergeInNewValues(SARTESPELLDB, f.defaults)
-DeleteOldValues(f.defaults, SARTESPELLDB)
+MergeInNewValues(SARTESPELLDB, defaults)
+DeleteOldValues(defaults, SARTESPELLDB)
 f:InitializeOptions_Class()
 f.db = SARTESPELLDB
 

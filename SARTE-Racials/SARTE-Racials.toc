@@ -29,7 +29,7 @@
 ## RequiredDeps: SARTE-No-Longer-Used
 ## X-Curse-Project-ID: 634963
 ## X-Wago-ID: WYK9pO6L
-
+## X-WoWI-ID: 26362
 # Localize_Table
 #Options-Racial-Localize.lua
 # Localize_Files
