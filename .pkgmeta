@@ -11,6 +11,6 @@ move-folders:
     SARTE-Text/SARTE-Options: SARTE-Options
     SARTE-Text/SARTE-Color-Picker: SARTE-Color-Picker
     SARTE-Text/SARTE-SCT-Check: SARTE-SCT-Check
-	SARTE-Text/SARTE-Spells: SARTE-Spells
-	SARTE-Text/SARTE-No-Longer-Used: SARTE-No-Longer-Used
-	SARTE-Text/SARTE-Racials: SARTE-Racials
+    SARTE-Text/SARTE-Spells: SARTE-Spells
+    SARTE-Text/SARTE-No-Longer-Used: SARTE-No-Longer-Used
+    SARTE-Text/SARTE-Racials: SARTE-Racials
