@@ -28,6 +28,6 @@
 ## RequiredDeps: SARTE-Text, SARTE-localize
 ## X-Curse-Project-ID: 634963
 ## X-Wago-ID: WYK9pO6L
-## X-WoWI-ID: 26362
+## X-WoWI-ID: 353131
 # Loads table
 Check_if_is_loaded-message.lua

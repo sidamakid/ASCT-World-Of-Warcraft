@@ -28,7 +28,7 @@
 ## RequiredDeps: SARTE-localize
 ## X-Curse-Project-ID: 634963
 ## X-Wago-ID: WYK9pO6L
-## X-WoWI-ID: 26362
+## X-WoWI-ID: 353131
 # SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic
