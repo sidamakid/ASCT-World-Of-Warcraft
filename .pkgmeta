@@ -14,3 +14,4 @@ move-folders:
     SARTE-Text/SARTE-Spells: SARTE-Spells
     SARTE-Text/SARTE-No-Longer-Used: SARTE-No-Longer-Used
     SARTE-Text/SARTE-Racials: SARTE-Racials
+enable-toc-creation: yes
