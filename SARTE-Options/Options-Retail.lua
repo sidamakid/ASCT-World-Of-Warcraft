@@ -939,6 +939,8 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelB
 	SARTE_Config:Show()
 end)
 
+
+
 local function CreateNameIconToggles(button, settings, configparent)
 	local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
 	nameToggle.Text:SetText(L["Name"])
@@ -1379,6 +1381,7 @@ elseif Race == 37 then
 	SARTESPELLDB["Race"]["Kul Tiran"] = true
 elseif Race == 9 then
 	SARTESPELLDB["Race"]["Goblin"] = true
+	SARTESPELLDB["Race"]["Nightborne"] = false
 elseif Race == 27 then
 	SARTESPELLDB["Race"]["Nightborne"] = true
 elseif Race == 28 then
