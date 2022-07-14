@@ -18,5 +18,5 @@ Q. How do I open to the options panel?
 
 A. 3 ways. You can use the slash command: /SARTE, click the minimap icon, or go through the normal options panel.
 # Where to download?
-You can download the addon on CurseForge here [Scrolling_Ability_Text](https://www.curseforge.com/wow/addons/scrolling-ability-text) or [WAGOIO](https://addons.wago.io/addons/sarte-world-of-warcraft) or even [WOWInterface](https://www.wowinterface.com/downloads/info26362-ScrollingAbilityText.html#info)
+You can download the addon on CurseForge here [CurseForge](https://www.curseforge.com/wow/addons/scrolling-ability-text) or [WAGOIO](https://addons.wago.io/addons/sarte-world-of-warcraft) or even [WOWInterface](https://www.wowinterface.com/downloads/info26362-ScrollingAbilityText.html#info)
 Hope you enjoy the addon and report any bugs to or requests and I'll try to get them added as fast as I can.
