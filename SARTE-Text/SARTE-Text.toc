@@ -34,5 +34,6 @@
 SARTE-Text.lua
 # SARTE-Text-Classic
 SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
+SARTE-Text-Classic\SARTE-Text-Wrath.lua
 #SARTE-Racials
 SARTE-Text-Racials.lua

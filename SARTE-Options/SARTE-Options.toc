@@ -41,3 +41,4 @@ Options-Retail.lua
 # Classic Verisons
 Options_Classic\Options-Vanilla.lua
 Options_Classic\Options-Tbc.lua
+Options_Classic\Options-Wrath.lua

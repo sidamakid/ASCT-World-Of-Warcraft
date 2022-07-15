@@ -34,6 +34,7 @@ localize.lua
 # Spells Localize
 SARTE-Localize-Spells-Table-Vanilla.lua
 SARTE-Localize-Spells-Table-TBC.lua
+SARTE-Localize-Spells-Table-Wrath.lua
 SARTE-Localize-Spells-Table.lua
 SARTE-Localize-Spells.lua
 # locales
