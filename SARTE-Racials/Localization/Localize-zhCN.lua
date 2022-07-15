@@ -11,16 +11,16 @@ if GetLocale() == "zhCN" then
  --Gnome
  LR["Gnome"] = "侏儒";
  --Human
- LR["Human"] = "人";
+ LR["Human"] = "人类";
  --Night Elf
- LR["Night Elf"] = "夜精灵";
+ LR["Night Elf"] = "暗夜精灵";
  --Dwarf
- LR["Dwarf"] = "矮";
+ LR["Dwarf"] = "矮人";
   --Blood Elf
  LR["Blood Elf"] = "血精灵";
  --Dranei
  LR["Draenei"] = "德莱尼";
  --Side-Buttons
  LR["Reset Race"] = "重置比赛";
- LR["Title_Race"] = "滚动能力文本种族";
+ LR["Title_Race"] = "滚动技能文本-种族";
 end
