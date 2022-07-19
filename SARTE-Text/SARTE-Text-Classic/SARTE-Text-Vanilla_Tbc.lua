@@ -64,15 +64,15 @@ f:SetScript("OnEvent", --Run when our event fires
                if start == 0 then
                local name, _, icon = GetSpellInfo(spellName)
                local details = " "
-               local dbSettings = SARTESPELLDB["Assassination"][Spell_Localize] or SARTESPELLDB["Combat"][Spell_Localize] or SARTESPELLDB["Subtlety"][Spell_Localize] or
-                                  SARTESPELLDB["Shadow"][Spell_Localize] or SARTESPELLDB["Holy_Priest"][Spell_Localize] or SARTESPELLDB["Discipline"][Spell_Localize] or
-                                  SARTESPELLDB["Elemental"][Spell_Localize] or SARTESPELLDB["Enhancement"][Spell_Localize] or SARTESPELLDB["Shaman_Restoration"][Spell_Localize] or
-                                  SARTESPELLDB["Arms"][Spell_Localize] or SARTESPELLDB["Fury"][Spell_Localize] or SARTESPELLDB["Protection_Warrior"][Spell_Localize] or
-                                  SARTESPELLDB["Affliction"][Spell_Localize] or SARTESPELLDB["Demonology"][Spell_Localize] or SARTESPELLDB["Destruction"][Spell_Localize] or
-                                  SARTESPELLDB["Holy_Paladin"][Spell_Localize] or SARTESPELLDB["Protection_Paladin"][Spell_Localize] or SARTESPELLDB["Retribution"][Spell_Localize] or
-                                  SARTESPELLDB["Arcane"][Spell_Localize] or SARTESPELLDB["Fire"][Spell_Localize] or SARTESPELLDB["Frost_Mage"][Spell_Localize] or
-                                  SARTESPELLDB["Balance"][Spell_Localize] or SARTESPELLDB["Feral_Combat"][Spell_Localize] or SARTESPELLDB["Druid_Restoration"][Spell_Localize] or
-                                  SARTESPELLDB["Beast Mastery"][Spell_Localize] or SARTESPELLDB["Marksmanship"][Spell_Localize] or SARTESPELLDB["Survival"][Spell_Localize]
+               local dbSettings = dbSettings_Rogue or
+                                  dbSettings_Priest or
+                                  dbSettings_Shaman or
+                                  dbSettings_Warrior or
+                                  dbSettings_Warlock or
+                                  dbSettings_Paladin or
+                                  dbSettings_Mage or
+                                  dbSettings_Druid or
+                                  dbSettings_Hunter
                if dbSettings.iconEnable then details = details..string.format("|T%d:18|t ".." ", icon) end
                if dbSettings.nameEnable then details = details..name.." " end
                if dbSettings.iconEnable == false and dbSettings.nameEnable == false then
