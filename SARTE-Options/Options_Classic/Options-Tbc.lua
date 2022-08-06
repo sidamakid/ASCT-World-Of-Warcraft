@@ -1,7 +1,7 @@
 ---------------------------
 --Checks if is TBC wow
 ---------------------------
-local isTbcWow = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
+local isTbcWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE)
 if isTbcWow then
 ---------------------------
 --Localize Table

@@ -1,4 +1,4 @@
-local isWrathWow = select(4, GetBuildInfo()) >= 30400 and select(4, GetBuildInfo()) < 40000
+local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
 if isWrathWow then
 SARTE_englishToSpellID = {--SARTE Localizing Table
 --Rogue

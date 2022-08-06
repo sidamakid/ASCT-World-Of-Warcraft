@@ -1,5 +1,4 @@
-local isWrathWow = select(4, GetBuildInfo()) > 20504 and select(4, GetBuildInfo()) < 90205
-
+local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
 if isWrathWow then
 local L = SARTE_LOCALE_TABLE
 local function InitializeOptions()
@@ -400,7 +399,7 @@ local defaults = {
 		["War Stomp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Human"] = {
-		["Every Man for Himself"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Will to Survive"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Night Elf"] = {
 		["Shadowmeld"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -1191,4 +1190,3 @@ SDT_AddLocalizedCallback(function()
 	InitializeOptions()
   end)
 end
-
