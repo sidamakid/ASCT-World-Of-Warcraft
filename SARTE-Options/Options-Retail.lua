@@ -942,34 +942,38 @@ end)
 
 
 local function CreateNameIconToggles(button, settings, configparent)
-	local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-	nameToggle.Text:SetText(L["Name"])
-	nameToggle:SetChecked(settings.nameEnable)
-	nameToggle:SetScript("OnClick", function(self)
-	  settings.nameEnable = self:GetChecked()
+    local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    nameToggle.Text:SetText(L["Name"])
+    nameToggle:SetChecked(settings.nameEnable)
+    nameToggle:SetEnabled(settings.SpellEnable == true)
+    nameToggle:SetScript("OnClick", function(self)
+      settings.nameEnable = self:GetChecked()
+    end)
+    nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
+    local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    iconToggle.Text:SetText(L["Icon"])
+    iconToggle:SetChecked(settings.iconEnable)
+    iconToggle:SetEnabled(settings.SpellEnable == true)
+    iconToggle:SetScript("OnClick", function(self)
+      settings.iconEnable = self:GetChecked()
+    end)
+    iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
+    button:HookScript("OnClick", function(self)
+      nameToggle:SetEnabled(self:GetChecked())
+      iconToggle:SetEnabled(self:GetChecked())
 	end)
-	nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
-	local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-	iconToggle.Text:SetText(L["Icon"])
-	iconToggle:SetChecked(settings.iconEnable)
-	iconToggle:SetScript("OnClick", function(self)
-	  settings.iconEnable = self:GetChecked()
-	end)
-	iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
 end
-
 local function CreateSpellToggle(spellName, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
     b.Text:SetText(SDT_GetLocalizedName(spellName))
-    b:SetChecked(settings.SpellEnable) -- THIS LINE CHANGED
+    b:SetChecked(settings.SpellEnable)
     b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
     local tex = b:CreateTexture()
-    tex:SetPoint("RIGHT", b, "LEFT", -3, 1)
+    tex:SetPoint("LEFT", b, "RIGHT", 3, 1)
     tex:SetSize(44, 44)
     tex:SetTexture(SDT_GetLocalizedIcon(spellName))
     return b
 end
-
 
 ---------------------------
 --Rogue
