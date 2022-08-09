@@ -13,7 +13,7 @@ f:SetScript("OnEvent", --Run when our event fires
             function()
                start, duration = GetSpellCooldown(spellID) --Grab the needed time data
                if start == 0 then
-                  CombatText_AddMessage("Shocks are now Ready!", CombatText_StandardScroll, 1, 1, 0)
+                  CombatText_AddMessage("Shocks are now Ready!", CombatText_StandardScroll, SARTESPELLDB["Colors"].r, SARTESPELLDB["Colors"].g, SARTESPELLDB.b["Colors"], SARTESPELLDB["Colors"].a)
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
             end

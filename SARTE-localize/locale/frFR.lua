@@ -58,7 +58,7 @@ if locale == "frFR" then
  L["Protection"] = "Protection";
  --Side-Buttons
  L["Reset Class"] = "Réinitialiser la classe";
- L["Title"] = "Texte de capacité de défilement";
+ L["Title_SARTE"] = "Texte de capacité de défilement";
  L["Tooltip Button"] = "Cliquez avec le bouton gauche de la souris pour ouvrir le panneau Options";
  L["Color Picker"] = "Sélecteur de couleurs";
  L["Racials"] = "Races";
@@ -80,4 +80,21 @@ if locale == "frFR" then
   --New things
  L["Icon"] = "Icône";
  L["Name"] = "Nom";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "Vos compétences en";
+ L["has increased to"] = "a augmenté à";
+ L["Congratulations"] = "Félicitations";
+ L["you are now level"] = "vous êtes maintenant de niveau";
+ L["Title"] = "Texte de combat à défilement avancé";
+ L["Experience Gains"] = "Gains d’expérience";
+ L["Level up message"] = "Message de mise à niveau vers le haut";
+ L["Skill Up"] = "Compétences en haut";
+ L["Resource lost"] = "Ressource perdue";
+ L["Mana"] = "Mana";
+ L["Rage"] = "Rage";
+ L["Energy"] = "Énergie";
+ L["Runic Power"] = "Puissance runique";
+ L["Armor"] = "Armure";
+ L["Armor lost"] = "Armure perdue";
+ L["Armor Gained"] = "Armure gagnée";
 end

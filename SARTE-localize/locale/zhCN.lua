@@ -58,7 +58,7 @@ if locale == "zhCN" then
  L["Protection"] = "保护";
  --Side-Buttons
  L["Reset Class"] = "重置类";
- L["Title"] = "滚动技能文本";
+ L["Title_SARTE"] = "滚动技能文本";
  L["Tooltip Button"] = "左键单击以打开“选项”面板";
  L["Color Picker"] = "颜色选取器";
  L["Racials"] = "种族";
@@ -80,4 +80,21 @@ if locale == "zhCN" then
  --New things
  L["Icon"] = "图标";
  L["Name"] = "名字";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "您的技能";
+ L["has increased to"] = "已增至";
+ L["Congratulations"] = "祝贺";
+ L["you are now level"] = "你现在是水平";
+ L["Title"] = "高级滚动战斗文本";
+ L["Experience Gains"] = "经验收益";
+ L["Level up message"] = "升级消息";
+ L["Skill Up"] = "技能提升";
+ L["Resource lost"] = "资源丢失";
+ L["Mana"] = "法力";
+ L["Rage"] = "愤怒";
+ L["Energy"] = "能源";
+ L["Runic Power"] = "符文功率";
+ L["Armor"] = "装甲";
+ L["Armor lost"] = "装甲丢失";
+ L["Armor Gained"] = "获得的护甲";
 end

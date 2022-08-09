@@ -58,7 +58,7 @@ if locale == "ruRU" then
  L["Protection"] = "Защита";
  --Side-Buttons
  L["Reset Class"] = "Сброс класса";
- L["Title"] = "Текст с возможностью прокрутки";
+ L["Title_SARTE"] = "Текст с возможностью прокрутки";
  L["Tooltip Button"] = "Щелкните левой кнопкой мыши, чтобы открыть панель «Параметры»";
  L["Color Picker"] = "Палитра цветов";
  L["Racials"] = "Расы";
@@ -80,4 +80,21 @@ if locale == "ruRU" then
  --New things
  L["Icon"] = "Икона";
  L["Name"] = "Имя";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "Ваше мастерство в";
+ L["has increased to"] = "увеличился до";
+ L["Congratulations"] = "Поздравляю";
+ L["you are now level"] = "Теперь вы на уровне";
+ L["Title"] = "Расширенная прокрутка боевого текста";
+ L["Experience Gains"] = "Накопление опыта";
+ L["Level up message"] = "Сообщение о повышении уровня";
+ L["Skill Up"] = "Повышение квалификации";
+ L["Resource lost"] = "Потерянный ресурс";
+ L["Mana"] = "Мана";
+ L["Rage"] = "Ярость";
+ L["Energy"] = "Энергия";
+ L["Runic Power"] = "Руническая сила";
+ L["Armor"] = "Броня";
+ L["Armor lost"] = "Потерянные доспехи";
+ L["Armor Gained"] = "Доспехи";
 end

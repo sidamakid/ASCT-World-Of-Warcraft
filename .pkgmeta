@@ -11,4 +11,7 @@ move-folders:
     SARTE-Text/SARTE-Options: SARTE-Options
     SARTE-Text/SARTE-Color-Picker: SARTE-Color-Picker
     SARTE-Text/SARTE-SCT-Check: SARTE-SCT-Check
+    SARTE-Text/Advanced_Scrolling_Combat_Text: Advanced_Scrolling_Combat_Text
+    SARTE-Text/SLVLTE: SLVLTE
+    SARTE-Text/SXP: SXP
 enable-toc-creation: yes

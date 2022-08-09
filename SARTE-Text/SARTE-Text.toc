@@ -35,5 +35,8 @@ SARTE-Text.lua
 # SARTE-Text-Classic
 SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
 SARTE-Text-Classic\SARTE-Text-Wrath.lua
-#SARTE-Racials
+# Racials
 SARTE-Text-Racials.lua
+# Shared spell Coolodnws
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua

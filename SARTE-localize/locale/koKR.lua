@@ -58,7 +58,7 @@ if locale == "koKR" then
  L["Protection"] = "보호";
  --Side-Buttons
  L["Reset Class"] = "클래스 재설정";
- L["Title"] = "스크롤 능력 텍스트";
+ L["Title_SARTE"] = "스크롤 능력 텍스트";
  L["Tooltip Button"] = "왼쪽 버튼을 클릭하여 옵션 패널 열기";
  L["Color Picker"] = "색상 선택기";
  L["Racials"] = "인종 차별";
@@ -80,4 +80,21 @@ if locale == "koKR" then
  --New things
  L["Icon"] = "아이콘";
  L["Name"] = "이름";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "당신의 기술";
+ L["has increased to"] = "로 증가했다.";
+ L["Congratulations"] = "축하합니다";
+ L["you are now level"] = "당신은 지금 수준입니다";
+ L["Title"] = "고급 스크롤 전투 텍스트";
+ L["Experience Gains"] = "경험 향상";
+ L["Level up message"] = "레벨 업 메시지";
+ L["Skill Up"] = "스킬 업";
+ L["Resource lost"] = "리소스 손실";
+ L["Mana"] = "마나";
+ L["Rage"] = "분노";
+ L["Energy"] = "에너지";
+ L["Runic Power"] = "룬 파워";
+ L["Armor"] = "갑옷";
+ L["Armor lost"] = "갑옷 분실";
+ L["Armor Gained"] = "갑옷 획득";
 end

@@ -26,8 +26,8 @@
 ## Notes-ptBR: Escolha a cor que deseja que seu texto de combate seja para o Texto de Habilidade de Rolagem
 ## Notes-itIT: Scegli il colore che desideri che sia il testo del tuo combattimento per il testo dell'abilità di scorrimento
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Text, SARTE-Options
 ## SavedVariablesPerCharacter: SARTE_Color_Picker_Variables
+## RequiredDeps: SARTE-Options
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L

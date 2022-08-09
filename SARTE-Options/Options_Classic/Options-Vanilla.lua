@@ -287,6 +287,14 @@ local defaults = {
 	["Dwarf"] = {
 	Stoneform = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
+	["Advanced_Scrolling_Combat_Text"] = {
+		["Level up message"] = false,
+		["Experience Gains"] = false,
+		["Skill Up"] = false,
+		["Resource lost"] = false,
+		["Armor lost"] = false,
+		["Armor Gained"] = false,
+	},
 }
 ---------------------------
 --Create Options panel
@@ -321,7 +329,7 @@ SARTE_Config:Hide()
 SARTE_Config.title = SARTE_Config:CreateFontString(nil, "OVERLAY");
 SARTE_Config.title:SetFontObject("GameFontHighlight");
 SARTE_Config.title:SetPoint("TOP", SARTE_Config, "TOP", 1,-7);
-SARTE_Config.title:SetText(L["Title"]);
+SARTE_Config.title:SetText(L["Title_SARTE"]);
 
 -- Create the scrolling parent frame and size it to fit inside the texture
 SARTE_Config.scrollFrame = CreateFrame("ScrollFrame", nil, SARTE_Config, "UIPanelScrollFrameTemplate")
@@ -457,12 +465,12 @@ local TextTop = TitleCreate(content6, L["Tab"])
 ---------------------------
 local MinimapDataObject = LibStub("LibDataBroker-1.1"):NewDataObject("SARTE", {
     type = "SARTE",
-    text = L["Title"],
+    text = L["Title_SARTE"],
     icon = "Interface\\Addons\\SARTE-Options\\SARTE-Image_4.tga",
     OnClick = function() SARTE_Config:Show()  end,
 	--GameToolTip
     OnTooltipShow = function(tooltip)
-      tooltip:AddLine(L["Title"])
+      tooltip:AddLine(L["Title_SARTE"])
 	  tooltip:AddLine(L["Tooltip Button"])
     end,
 });
@@ -478,21 +486,42 @@ local Color_picker_SARTE = CreateFrame("Button", nil, content5, "UIPanelButtonTe
 	Color_picker_SARTE:SetScript("OnClick", function()
 	SARTE_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a, SARTE_COlOR_PICKER_myColorCallback);
 end)
-self.panel_main = CreateFrame("Frame")
-self.panel_main.name = L["Title"]
-InterfaceOptions_AddCategory(self.panel_main)
+local panel_main = CreateFrame("Frame")
+panel_main.name = L["Title"]
+InterfaceOptions_AddCategory(panel_main)
+---------------------------
+-- Advanced Scrolling Combat Text
+---------------------------
+local col_AD = 4
+local x_AD = 0
+for v in pairs(SARTESPELLDB["Advanced_Scrolling_Combat_Text"]) do
+	local b = CreateFrame("CheckButton", nil, panel_main, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+130) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
+	b.Text:SetText(L[v])
+	b:SetChecked(SARTESPELLDB["Advanced_Scrolling_Combat_Text"][v])
+	b:SetScript("OnClick", function(s) SARTESPELLDB["Advanced_Scrolling_Combat_Text"][v] = s:GetChecked() end)
+	x_AD=x_AD+1
+end
+---------------------------
+--Sub Panel
+---------------------------
+local panel_SARTE = CreateFrame("Frame")
+panel_SARTE.name = L["Title_SARTE"]
+panel_SARTE.parent = panel_main.name
+InterfaceOptions_AddCategory(panel_SARTE)
 ---------------------------
 --Open to options panel through default options panel
 ---------------------------
-local OpenToOptionsPanel = CreateFrame("Button", nil, self.panel_main, "UIPanelButtonTemplate")
+local OpenToOptionsPanel = CreateFrame("Button", nil, panel_SARTE, "UIPanelButtonTemplate")
 	OpenToOptionsPanel:SetPoint("CENTER", 0, 0)
 	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
 	OpenToOptionsPanel:SetWidth(150)
 	OpenToOptionsPanel:SetScript("OnClick", function()
 	SARTE_Config:Show()
 end)
-
-
+---------------------------
+--Create Icon and Names
+---------------------------
 local function CreateNameIconToggles(button, settings, configparent)
     local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     nameToggle.Text:SetText(L["Name"])
@@ -515,7 +544,9 @@ local function CreateNameIconToggles(button, settings, configparent)
       iconToggle:SetEnabled(self:GetChecked())
 	end) -- NEW STUFF
 end
-
+---------------------------
+--Create Spell Toggles
+---------------------------
 local function CreateSpellToggle(spellName, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
     b.Text:SetText(SDT_GetLocalizedName(spellName))

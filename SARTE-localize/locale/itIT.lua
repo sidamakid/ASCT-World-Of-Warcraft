@@ -58,7 +58,7 @@ if locale == "itIT" then
  L["Protection"] = "Protezione";
  --Side-Buttons
  L["Reset Class"] = "Classe reset";
- L["Title"] = "Scorrimento del testo";
+ L["Title_SARTE"] = "Scorrimento del testo";
  L["Tooltip Button"] = "Fare clic con il pulsante sinistro del mouse per aprire il pannello Opzioni";
  L["Color Picker"] = "Selettore colore";
  L["Racials"] = "Razziali";
@@ -80,4 +80,21 @@ if locale == "itIT" then
  --New things
  L["Icon"] = "Icona";
  L["Name"] = "Nome";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "La tua abilità in";
+ L["has increased to"] = "è aumentato a";
+ L["Congratulations"] = "Felicitazioni";
+ L["you are now level"] = "ora sei a livello";
+ L["Title"] = "Testo di combattimento a scorrimento avanzato";
+ L["Experience Gains"] = "Guadagni di esperienza";
+ L["Level up message"] = "Messaggio di aumento di livello";
+ L["Skill Up"] = "Abilità up";
+ L["Resource lost"] = "Risorsa persa";
+ L["Mana"] = "Mana";
+ L["Rage"] = "Rabbia";
+ L["Energy"] = "Energia";
+ L["Runic Power"] = "Potenza runica";
+ L["Armor"] = "Armatura";
+ L["Armor lost"] = "Armatura persa";
+ L["Armor Gained"] = "Armatura guadagnata";
 end

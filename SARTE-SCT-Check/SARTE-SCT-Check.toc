@@ -26,7 +26,7 @@
 ## Notes-ptBR: Verifica se o texto de combate de rolagem está ativado
 ## Notes-itIT: Controlla se lo scorrimento del testo di combattimento è abilitato
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Text, SARTE-localize
+## RequiredDeps: SARTE-localize
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L

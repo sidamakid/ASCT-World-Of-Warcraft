@@ -58,7 +58,7 @@ if locale == "enUS" then
  L["Protection"] = "Protection";
  --Side-Buttons
  L["Reset Class"] = "Reset Class";
- L["Title"] = "Scrolling Ability Text";
+ L["Title_SARTE"] = "Scrolling Ability Text";
  L["Tooltip Button"] = "Left click to Open the Options panel";
  L["Color Picker"] = "Color Picker";
  L["Racials"] = "Racials";
@@ -80,4 +80,21 @@ if locale == "enUS" then
  --New things
  L["Icon"] = "Icon";
  L["Name"] = "Name";
+ --Advanced Scrolling Combat Text
+ L["Your skill in"] = "Your skill in";
+ L["has increased to"] = "has increased to";
+ L["Congratulations"] = "Congratulations";
+ L["you are now level"] = "you are now level";
+ L["Title"] = "Advanced Scrolling Combat text";
+ L["Experience Gains"] = "Experience Gains";
+ L["Level up message"] = "Level up message";
+ L["Skill Up"] = "Skill Up";
+ L["Resource lost"] = "Resource lost";
+ L["Mana"] = "Mana";
+ L["Rage"] = "Rage";
+ L["Energy"] = "Energy";
+ L["Runic Power"] = "Runic Power";
+ L["Armor"] = "Armor";
+ L["Armor lost"] = "Armor lost";
+ L["Armor Gained"] = "Armor Gainied";
 end

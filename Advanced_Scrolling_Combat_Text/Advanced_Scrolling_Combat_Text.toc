@@ -1,0 +1,39 @@
+## Interface: 90205
+## Interface-Classic: 11403
+## Interface-BCC: 20504
+## Interface-Wrath: 30400
+## Version: @project-version@
+## Title: Advanced Scrolling Combat Text
+## Title-koKR: 고급 스크롤 전투 텍스트
+## Title-frFR: Texte de combat à défilement avancé
+## Title-deDE: Erweiterter Scrolling-Kampftext
+## Title-zhCN: 高级滚动战斗文本
+## Title-zhTW: 高級滾動戰鬥文本
+## Title-esES: Texto de combate de desplazamiento avanzado
+## Title-esMX: Texto de combate de desplazamiento avanzado
+## Title-ruRU: Расширенная прокрутка боевого текста
+## Title-ptBR: Texto de combate de rolagem avançada
+## Title-itIT: Testo di combattimento a scorrimento avanzato
+## Notes: Adds new functions to Scrolling Combat Text
+## Notes-koKR: 스크롤 전투 텍스트에 새로운 기능을 추가합니다.
+## Notes-frFR: Ajoute de nouvelles fonctions au défilement du texte de combat
+## Notes-deDE: Fügt dem Scrolling Combat Text neue Funktionen hinzu
+## Notes-zhCN: 为滚动战斗文本添加新功能
+## Notes-zhTW: 為滾動戰鬥文本添加新功能
+## Notes-esES: Añade nuevas funciones al texto de combate de desplazamiento
+## Notes-esMX: Añade nuevas funciones al texto de combate de desplazamiento
+## Notes-ruRU: Добавление новых функций в прокрутку боевого текста
+## Notes-ptBR: Adiciona novas funções ao Texto de Combate de Rolagem
+## Notes-itIT: Aggiunge nuove funzioni al testo di combattimento a scorrimento
+## Author: Sidamakid Tinman
+## RequiredDeps: SARTE-Options
+## X-Curse-Project-ID: 634963
+## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L
+
+Armor_Gains.lua
+Armor_Loss.lua
+Experience_Gains.lua
+Level_Up.lua
+Resource_Loss.lua
+Skill_Up.lua

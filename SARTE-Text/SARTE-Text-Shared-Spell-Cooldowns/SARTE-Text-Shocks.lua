@@ -1,3 +1,7 @@
+local isClassic_TBC_Wrath = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE) or (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
+if isClassic_TBC_Wrath then
+local class_Check = select(3, UnitClass("player"))
+if class_Check == 7 then
 local L = SARTE_LOCALE_TABLE
 local SARTE = ... --This assigns the name of the addon to addonName
 local start, duration --nil vars used later
@@ -31,3 +35,5 @@ f:SetScript("OnEvent", --Run when our event fires
       end
    end
 )
+end
+end

@@ -21,5 +21,4 @@ jobs:
       - uses: BigWigsMods/packager@v2
         # automatically generates game type specific TOC files
         with:
-          args: -S
-        
+          args: -S -n "Scrolling_Ability_Text_{project-version}{nolib}{classic}"
