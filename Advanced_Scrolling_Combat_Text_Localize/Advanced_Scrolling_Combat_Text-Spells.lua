@@ -4,10 +4,10 @@ local localizedNames = {}
 local englishNames = {}
 local englishToIcons = {}
 local englishNamesIsKnown = {}
-function SDT_LoadSpellNames()
+function ASCT_LoadSpellNames()
   local waiting = {}
   local left = 0
-  for key, spellID in pairs(SARTE_englishToSpellID) do
+  for key, spellID in pairs(ASCT_englishToSpellID) do
     if waiting[spellID] == nil then
       waiting[spellID] = true
       left = left + 1
@@ -23,7 +23,7 @@ function SDT_LoadSpellNames()
     end
     if left <= 0 then
       loadingFrame:SetScript("OnEvent", nil)
-      for key, spellID in pairs(SARTE_englishToSpellID) do
+      for key, spellID in pairs(ASCT_englishToSpellID) do
         local localeName, _, icon = GetSpellInfo(spellID)
         local IsSpellKnwon = GetSpellInfo(localeName) ~= nil
         localizedNames[localeName or ""] = key
@@ -38,30 +38,30 @@ function SDT_LoadSpellNames()
     end
   end)
 
-  for key, spellID in pairs(SARTE_englishToSpellID) do
+  for key, spellID in pairs(ASCT_englishToSpellID) do
     C_Spell.RequestLoadSpellData(spellID)
   end
 end
 
-function SDT_GetEnglishName(localized)
+function ASCT_GetEnglishName(localized)
    return localizedNames[localized] or ""
 end
 
-function SDT_GetLocalizedName(english)
+function ASCT_GetLocalizedName(english)
    return englishNames[english] or ""
 end
 
-function SDT_GetLocalizedIcon(english)
+function ASCT_GetLocalizedIcon(english)
   return englishToIcons[english]
 end
 
-function SDT_GetLocalizedISpellKnown(english)
+function ASCT_GetLocalizedISpellKnown(english)
   return englishNamesIsKnown[english]
 end
 ---------------------------
 --Callback For Localizng
 ---------------------------
-function SDT_AddLocalizedCallback(func)
+function ASCT_AddLocalizedCallback(func)
   table.insert(callbacks, func)
 end
 
@@ -71,7 +71,7 @@ local isInitialized = false
 frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:SetScript("OnEvent", function()
   if not isInitialized then
-    SDT_LoadSpellNames()
+    ASCT_LoadSpellNames()
     isInitialized = true
   end
 end)

@@ -1,6 +1,6 @@
 local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
 if isWrathWow then
-SARTE_englishToSpellID = {--SARTE Localizing Table
+ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
 --Rogue
 ["Adrenaline Rush"] = 13750,
 ["Blade Flurry"] = 13877,

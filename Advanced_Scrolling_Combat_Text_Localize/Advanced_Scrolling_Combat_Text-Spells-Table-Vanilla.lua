@@ -1,6 +1,6 @@
 local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 if isClassicWow then
-SARTE_englishToSpellID = {--SARTE Localizing Table
+ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

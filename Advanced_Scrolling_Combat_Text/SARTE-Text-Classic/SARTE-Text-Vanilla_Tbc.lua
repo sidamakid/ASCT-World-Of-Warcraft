@@ -14,14 +14,14 @@ local start, duration
 --Make our frame
 ---------------------------
 local f = CreateFrame"Frame"
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
   f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") --Register event
 end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" then
-      local Spell_Localize = SDT_GetEnglishName(spellName)
+      local Spell_Localize = ASCT_GetEnglishName(spellName)
       local dbSettings_Rogue = Advanced_Scrolling_Combat_Text_DB["Assassination"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Combat"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Subtlety"][Spell_Localize]
       local dbSettings_Priest = Advanced_Scrolling_Combat_Text_DB["Shadow"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Holy_Priest"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Discipline"][Spell_Localize]
       local dbSettings_Shaman = Advanced_Scrolling_Combat_Text_DB["Elemental"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Enhancement"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Shaman_Restoration"][Spell_Localize]

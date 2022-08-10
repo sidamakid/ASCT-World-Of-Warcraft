@@ -1,6 +1,6 @@
 local isTbcWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE)
 if isTbcWow then
-SARTE_englishToSpellID = {--SARTE Localizing Table
+ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

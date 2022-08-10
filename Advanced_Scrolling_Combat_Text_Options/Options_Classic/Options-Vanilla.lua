@@ -549,13 +549,13 @@ end
 ---------------------------
 local function CreateSpellToggle(spellName, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
-    b.Text:SetText(SDT_GetLocalizedName(spellName))
+    b.Text:SetText(ASCT_GetLocalizedName(spellName))
     b:SetChecked(settings.SpellEnable)
     b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
     local tex = b:CreateTexture()
     tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
     tex:SetSize(44, 44)
-    tex:SetTexture(SDT_GetLocalizedIcon(spellName))
+    tex:SetTexture(ASCT_GetLocalizedIcon(spellName))
     return b
 end
 
@@ -1030,7 +1030,7 @@ f:InitializeOptions_Class()
 f.db = Advanced_Scrolling_Combat_Text_DB
 end
 
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
   InitializeOptions()
 end)
 end

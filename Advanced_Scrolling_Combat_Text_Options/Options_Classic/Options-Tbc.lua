@@ -377,7 +377,7 @@ ASCT_Config:Hide()
 ASCT_Config.title = ASCT_Config:CreateFontString(nil, "OVERLAY");
 ASCT_Config.title:SetFontObject("GameFontHighlight");
 ASCT_Config.title:SetPoint("TOP", ASCT_Config, "TOP", 1,-7);
-ASCT_Config.title:SetText(L["Title_SARTE"]);
+ASCT_Config.title:SetText(L["Title"]);
 
 -- Create the scrolling parent frame and size it to fit inside the texture
 ASCT_Config.scrollFrame = CreateFrame("ScrollFrame", nil, ASCT_Config, "UIPanelScrollFrameTemplate")
@@ -591,13 +591,13 @@ end
 
 local function CreateSpellToggle(spellName, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
-    b.Text:SetText(SDT_GetLocalizedName(spellName))
+    b.Text:SetText(ASCT_GetLocalizedName(spellName))
     b:SetChecked(settings.SpellEnable)
     b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
     local tex = b:CreateTexture()
     tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
     tex:SetSize(44, 44)
-    tex:SetTexture(SDT_GetLocalizedIcon(spellName))
+    tex:SetTexture(ASCT_GetLocalizedIcon(spellName))
     return b
 end
 ---------------------------
@@ -1102,7 +1102,7 @@ f:InitializeOptions_Class()
 f.db = Advanced_Scrolling_Combat_Text_DB
 
 end
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
 	InitializeOptions()
   end)
 end

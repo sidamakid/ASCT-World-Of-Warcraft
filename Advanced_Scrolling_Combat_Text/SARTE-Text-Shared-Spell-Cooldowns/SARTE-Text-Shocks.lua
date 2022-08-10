@@ -8,13 +8,13 @@ local start, duration --nil vars used later
 
 
 local f = CreateFrame"Frame" --Make our frame
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
    f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") --Register event
  end)
 f:SetScript("OnEvent", --Run when our event fires
    function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
-       if unit == "player" and SpellTable_Shaman_Shocks[SDT_GetEnglishName(spellName)] and SARTESPELLDB["Shared_Shaman_spells"]["Shocks"] == true then
+       if unit == "player" and Advanced_Scrolling_Combat_Text_DB[ASCT_GetEnglishName(spellName)]["Shared_Shaman_spells"]["Shocks"] and Advanced_Scrolling_Combat_Text_DB["Shared_Shaman_spells"]["Shocks"] == true then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
             function()
@@ -25,7 +25,7 @@ f:SetScript("OnEvent", --Run when our event fires
                   spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end
                if Comabt_Text == true then
-               CombatText_AddMessage(L["msg_Shocks"], CombatText_StandardScroll, SARTE_Color_Picker_Variables.r, SARTE_Color_Picker_Variables.g, SARTE_Color_Picker_Variables.b, SARTE_Color_Picker_Variables.a)
+               CombatText_AddMessage(L["msg_Shocks"], CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
                spellFrame:SetScript("OnUpdate", nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
                end

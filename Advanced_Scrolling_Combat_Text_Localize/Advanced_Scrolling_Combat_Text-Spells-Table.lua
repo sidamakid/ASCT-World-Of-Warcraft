@@ -1,6 +1,6 @@
 local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 if isRetailWow then
-SARTE_englishToSpellID = {--SARTE Localizing Table
+ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

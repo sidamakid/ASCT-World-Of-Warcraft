@@ -9,14 +9,14 @@ local start, duration --nil vars used later
 
 
 local f = CreateFrame"Frame" --Make our frame
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
   f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") --Register event
 end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" then
-      local Spell_Localize = SDT_GetEnglishName(spellName)
+      local Spell_Localize = ASCT_GetEnglishName(spellName)
       local db_Human = Advanced_Scrolling_Combat_Text_DB["Human"][Spell_Localize]
       local db_Dwarf = Advanced_Scrolling_Combat_Text_DB["Dwarf"][Spell_Localize]
       local db_Gnome = Advanced_Scrolling_Combat_Text_DB["Gnome"][Spell_Localize]
@@ -73,14 +73,14 @@ local start, duration --nil vars used later
 
 
 local f = CreateFrame"Frame" --Make our frame
-SDT_AddLocalizedCallback(function()
+ASCT_AddLocalizedCallback(function()
   f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") --Register event
 end)
 f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" then
-      local Spell_Localize = SDT_GetEnglishName(spellName)
+      local Spell_Localize = ASCT_GetEnglishName(spellName)
       local db_Human = Advanced_Scrolling_Combat_Text_DB["Human"][Spell_Localize]
       local db_Dwarf = Advanced_Scrolling_Combat_Text_DB["Dwarf"][Spell_Localize]
       local db_Gnome = Advanced_Scrolling_Combat_Text_DB["Gnome"][Spell_Localize]
@@ -143,14 +143,14 @@ elseif isRetailWow then
    local start, duration --nil vars used later
 
    local f = CreateFrame"Frame" --Make our frame
-   SDT_AddLocalizedCallback(function()
+   ASCT_AddLocalizedCallback(function()
      f:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED") --Register event
    end)
    f:SetScript("OnEvent", --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = GetSpellInfo(spellName)
       if unit == "player" then
-      local Spell_Localize = SDT_GetEnglishName(spellName)
+      local Spell_Localize = ASCT_GetEnglishName(spellName)
       local db_Human = Advanced_Scrolling_Combat_Text_DB["Human"][Spell_Localize]
       local db_Dwarf = Advanced_Scrolling_Combat_Text_DB["Dwarf"][Spell_Localize]
       local db_Gnome = Advanced_Scrolling_Combat_Text_DB["Gnome"][Spell_Localize]
