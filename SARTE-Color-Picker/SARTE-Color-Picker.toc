@@ -3,7 +3,8 @@
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
 ## Version: @project-version@
-## Title: SARTE_Color_Picker
+## DefaultState: disabled
+## Title: SARTE_Color_Picker (Removed)
 ## Title-koKR: SARTE 색상 선택기
 ## Title-frFR: Sélecteur de couleurs SARTE
 ## Title-deDE: SARTE Farbwähler
@@ -31,7 +32,3 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# Color picker first
-Color_picker.lua
-# Then saved variables
-Color_picker_saved.lua

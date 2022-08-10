@@ -3,7 +3,7 @@
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
 ## Version: @project-version@
-## Title: SCT-Check
+## Title: SCT-Check (Removed)
 ## Title-koKR: SCT-검사
 ## Title-frFR: SCT-Vérifier
 ## Title-deDE: SCT-Prüfen
@@ -30,5 +30,3 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# Loads table
-Check_if_is_loaded-message.lua

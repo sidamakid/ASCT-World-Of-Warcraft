@@ -2,9 +2,8 @@
 ## Interface-Classic: 11403
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
-## DefaultState: disabled
 ## Version: @project-version@
-## Title: SARTE-Options
+## Title: Advanced Scrolling Combat Text Options
 ## Title-koKR: 고급 스크롤 전투 텍스트 옵션
 ## Title-frFR: Options avancées de texte de combat de défilement
 ## Title-deDE: Erweiterte Optionen für Scrolling-Kampftexte
@@ -27,8 +26,19 @@
 ## Notes-ptBR: Adiciona novas opções para rolar texto combate
 ## Notes-itIT: Aggiunge nuove opzioni per lo scorrimento del testo Combattimento
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Text, SARTE-localize
-## SavedVariablesPerCharacter: SARTESPELLDB
+## RequiredDeps:  Advanced_Scrolling_Combat_Text, Advanced_Scrolling_Combat_Text_Localize
+## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# Libs
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\lib.xml
+#Retail
+Options-Retail.lua
+# Classic Verisons
+Options_Classic\Options-Vanilla.lua
+Options_Classic\Options-Tbc.lua
+Options_Classic\Options-Wrath.lua

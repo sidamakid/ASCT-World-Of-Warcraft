@@ -3,7 +3,7 @@
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
 ## Version: @project-version@
-## Title: SARTE-Localize(Removed)
+## Title: Advanced Scrolling Combat Text localize
 ## Title-koKR: SARTE-지역화
 ## Title-frFR: SARTE-Localiser
 ## Title-deDE: SARTE-Lokalisieren
@@ -14,7 +14,7 @@
 ## Title-ruRU: SARTE-Локализовать
 ## Title-ptBR: SARTE-Localizar
 ## Title-itIT: SARTE-Localizzare
-## Notes: Scrolling ability Text Localizing
+## Notes: Advanced Scrolling Combat Text Localizing
 ## Notes-koKR: 스크롤 기능 텍스트 지역화
 ## Notes-frFR: Capacité de défilement Localisation de texte
 ## Notes-deDE: Bildlauffähigkeit Text lokalisieren
@@ -29,3 +29,13 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# Table Localize
+localize.lua
+# Spells Localize
+Advanced_Scrolling_Combat_Text-Spells-Table-Vanilla.lua
+Advanced_Scrolling_Combat_Text-Spells-Table-TBC.lua
+Advanced_Scrolling_Combat_Text-Spells-Table-Wrath.lua
+Advanced_Scrolling_Combat_Text-Spells-Table.lua
+Advanced_Scrolling_Combat_Text-Spells.lua
+# locales
+locale\locale.xml

@@ -3,7 +3,8 @@
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
 ## Version: @project-version@
-## Title: Scrolling Ability Text
+## DefaultState: disabled
+## Title: Scrolling Ability Text (Removed)
 ## Title-koKR: 스크롤 능력 텍스트
 ## Title-frFR: Texte de capacité de défilement
 ## Title-deDE: Text mit Bildlauffähigkeit
@@ -30,13 +31,3 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# SARTE-Text-Normal-Text
-SARTE-Text.lua
-# SARTE-Text-Classic
-SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
-SARTE-Text-Classic\SARTE-Text-Wrath.lua
-# Racials
-SARTE-Text-Racials.lua
-# Shared spell Coolodnws
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua

@@ -7,7 +7,6 @@ local function OnEvent(self, event, isLogin, isReload)
     end
 	end
 end
-
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent", OnEvent)

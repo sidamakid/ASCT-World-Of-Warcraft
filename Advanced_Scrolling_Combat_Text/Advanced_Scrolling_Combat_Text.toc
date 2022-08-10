@@ -26,14 +26,24 @@
 ## Notes-ptBR: Adiciona novas funções ao Texto de Combate de Rolagem
 ## Notes-itIT: Aggiunge nuove funzioni al testo di combattimento a scorrimento
 ## Author: Sidamakid Tinman
-## RequiredDeps: SARTE-Options
+## RequiredDeps: Advanced_Scrolling_Combat_Text_Localize
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-
-Armor_Gains.lua
-Armor_Loss.lua
-Experience_Gains.lua
-Level_Up.lua
-Resource_Loss.lua
-Skill_Up.lua
+# SARTE-Text-Normal-Text
+SARTE-Text.lua
+# SARTE-Text-Classic
+SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
+SARTE-Text-Classic\SARTE-Text-Wrath.lua
+# Racials
+SARTE-Text-Racials.lua
+# Shared spell Coolodnws
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
+# Gains_Losses
+Gains_Losses\Armor_Gains.lua
+Gains_Losses\Armor_Loss.lua
+Gains_Losses\Experience_Gains.lua
+Gains_Losses\Level_Up.lua
+Gains_Losses\Resource_Loss.lua
+Gains_Losses\Skill_Up.lua
