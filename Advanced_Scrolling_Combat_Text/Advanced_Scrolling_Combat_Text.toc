@@ -41,9 +41,4 @@ SARTE-Text-Racials.lua
 SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
 SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
 # Gains_Losses
-Gains_Losses\Armor_Gains.lua
-Gains_Losses\Armor_Loss.lua
-Gains_Losses\Experience_Gains.lua
-Gains_Losses\Level_Up.lua
-Gains_Losses\Resource_Loss.lua
-Gains_Losses\Skill_Up.lua
+Gains_Losses\Embeds.xml

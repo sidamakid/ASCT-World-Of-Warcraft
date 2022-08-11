@@ -99,4 +99,13 @@ if locale == "esMX" then
  L["Slash Command Message"] = "Se ha cambiado el comando Slash para Advanced Scrolling Combat Text. Escriba /asct para abrir el panel de opciones";
  L["Features"] = "Funciones";
  L["Message"] = "El desplazamiento de texto de combate está deshabilitado. Si no está habilitado, el texto de Combate de desplazamiento avanzado no mostrará nada.";
+ --New things 8/11/2022
+ L["Leveling]"] = "Nivelación";
+ L["Lost"] = "Extraviado";
+ L["Gained"] = "Ganado";
+ L["Attack Power"] = "Poder de ataque";
+ L["Agility"] = "Agilidad";
+ L["Strength"] = "Fuerza";
+ L["Intellect"] = "Intelecto";
+ L["Spirit"] = "Espíritu";
 end

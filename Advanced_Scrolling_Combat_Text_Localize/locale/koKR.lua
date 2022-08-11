@@ -99,4 +99,13 @@ if locale == "koKR" then
  L["Slash Command Message"] = "고급 스크롤 전투 텍스트에 대해 슬래시 명령이 변경되었습니다. /asct를 입력하여 옵션 패널을 엽니다.";
  L["Features"] = "기능";
  L["Message"] = "전투 텍스트 스크롤이 비활성화되었습니다. 활성화하지 않으면 고급 스크롤 전투 텍스트에 아무 것도 표시되지 않습니다.";
+ --New things 8/11/2022
+ L["Leveling]"] = "평준화";
+ L["Lost"] = "잃어버린";
+ L["Gained"] = "얻은";
+ L["Attack Power"] = "공격력";
+ L["Agility"] = "민첩성";
+ L["Strength"] = "힘";
+ L["Intellect"] = "지성";
+ L["Spirit"] = "정신";
 end

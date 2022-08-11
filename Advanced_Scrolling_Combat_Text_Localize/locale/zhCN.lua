@@ -99,4 +99,13 @@ if locale == "zhCN" then
  L["Slash Command Message"] = "斜杠命令已更改为高级滚动战斗文本。键入 /asct 以打开选项面板";
  L["Features"] = "特征";
  L["Message"] = "滚动战斗文本已禁用。如果未启用，高级滚动战斗文本将不会显示任何内容。";
+ --New things 8/11/2022
+ L["Leveling]"] = "水准";
+ L["Lost"] = "失去";
+ L["Gained"] = "获得";
+ L["Attack Power"] = "攻击力";
+ L["Agility"] = "敏捷";
+ L["Strength"] = "强度";
+ L["Intellect"] = "智力";
+ L["Spirit"] = "精神";
 end

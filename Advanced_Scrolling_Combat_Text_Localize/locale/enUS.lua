@@ -99,4 +99,13 @@ if locale == "enUS" then
  L["Slash Command Message"] = "Slash command changed for Advanced Scrolling Combat Text. Type /asct to open the options panel";
  L["Features"] = "Features";
  L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat text won't show anything.";
+ --New things 8/11/2022
+ L["Leveling]"] = "Leveling";
+ L["Lost"] = "Lost";
+ L["Gained"] = "Gained";
+ L["Attack Power"] = "Attack Power";
+ L["Agility"] = "Agility";
+ L["Strength"] = "Strength";
+ L["Intellect"] = "Intellect";
+ L["Spirit"] = "Spirit";
 end

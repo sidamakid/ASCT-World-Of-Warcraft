@@ -99,4 +99,13 @@ if locale == "zhTW" then
  L["Slash Command Message"] = "斜杠命令已更改為高級滾動戰鬥文本。鍵入 /asct 以打開選項面板";
  L["Features"] = "特徵";
  L["Message"] = "滾動戰鬥文本已禁用。如果未啟用，高級滾動戰鬥文本將不會顯示任何內容。";
+ --New things 8/11/2022
+ L["Leveling]"] = "水準";
+ L["Lost"] = "失去";
+ L["Gained"] = "獲得";
+ L["Attack Power"] = "攻擊力";
+ L["Agility"] = "敏捷";
+ L["Strength"] = "強度";
+ L["Intellect"] = "智力";
+ L["Spirit"] = "精神";
 end

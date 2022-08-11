@@ -99,4 +99,13 @@ if locale == "ptBR" then
  L["Slash Command Message"] = "O comando Slash foi alterado para Advanced Scrolling Combat Text. Digite /asct para abrir o painel de opções";
  L["Features"] = "Características";
  L["Message"] = "O texto de combate de rolagem está desativado. Se não estiver ativado, o texto Advanced Scrolling Combat não mostrará nada.";
+ --New things 8/11/2022
+ L["Leveling]"] = "Nivelamento";
+ L["Lost"] = "Perdido";
+ L["Gained"] = "Ganhou";
+ L["Attack Power"] = "Poder de Ataque";
+ L["Agility"] = "Agilidade";
+ L["Strength"] = "Força";
+ L["Intellect"] = "Intelecto";
+ L["Spirit"] = "Espírito";
 end

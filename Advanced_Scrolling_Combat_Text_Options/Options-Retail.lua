@@ -726,13 +726,18 @@ local defaults = {
 	["Mag'har Orc"] = {
 		["Ancestral Call"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
-	["Advanced_Scrolling_Combat_Text"] = {
-		["Level up message"] = false,
+	["Advanced_Scrolling_Combat_Text_Stats"] = {
+		["Armor"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Agility"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Strength"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Intellect"] = {StatEnable = false, Gains = false, Lost = false,},
+	},
+	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,
+		["Level up message"] = false,
 		["Skill Up"] = false,
-		["Resource lost"] = false,
-		["Armor lost"] = false,
-		["Armor Gained"] = false,
+		["Resource"] = false,
 	},
 }
 
@@ -912,11 +917,10 @@ elseif Class == 12 then
 	Text3 = TextCreate(L["Nothing"])
 end
 local Text4 = TextCreate(L["Racials"])
-
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7 = SetTabs(ASCT_Config, 7, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Features"]);
+local content1, content2, content3, content4, content5, content6, content7, content8 = SetTabs(ASCT_Config, 8, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -942,25 +946,11 @@ local Color_picker_SARTE = CreateFrame("Button", nil, content5, "UIPanelButtonTe
 	Color_picker_SARTE:SetText(L["Color Picker"])
 	Color_picker_SARTE:SetWidth(100)
 	Color_picker_SARTE:SetScript("OnClick", function()
-		ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a, ASDC_COlOR_PICKER_myColorCallback);
+	ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a, ASDC_COlOR_PICKER_myColorCallback);
 end)
-
 local panel_main = CreateFrame("Frame")
 panel_main.name = L["Title"]
 InterfaceOptions_AddCategory(panel_main)
----------------------------
--- Advanced Scrolling Combat Text
----------------------------
-local col_AD = 4
-local x_AD = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text"]) do
-	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
-	b.Text:SetText(L[v])
-	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text"][v])
-	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text"][v] = s:GetChecked() end)
-	x_AD=x_AD+1
-end
 ---------------------------
 --Open to options panel through default options panel
 ---------------------------
@@ -971,6 +961,65 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, panel_main, "UIPanelButton
 	OpenToOptionsPanel:SetScript("OnClick", function()
 	ASCT_Config:Show()
 end)
+---------------------------
+--Create Stat Gains and Losses
+---------------------------
+local function CreateGainsLossToggles(button, settings, configparent)
+    local GainToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    GainToggle.Text:SetText("Gained")
+    GainToggle:SetChecked(settings.Gains)
+    GainToggle:SetEnabled(settings.StatEnable == true)
+    GainToggle:SetScript("OnClick", function(self)
+      settings.Gains = self:GetChecked()
+    end)
+    GainToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
+    local lossToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    lossToggle.Text:SetText("Lost")
+    lossToggle:SetChecked(settings.Lost)
+    lossToggle:SetEnabled(settings.StatEnable == true)
+    lossToggle:SetScript("OnClick", function(self)
+      settings.Lost = self:GetChecked()
+    end)
+    lossToggle:SetPoint("TOPRIGHT", GainToggle, "BOTTOMRIGHT")
+    button:HookScript("OnClick", function(self) -- NEW STUFF START
+      GainToggle:SetEnabled(self:GetChecked())
+      lossToggle:SetEnabled(self:GetChecked())
+	end) -- NEW STUFF
+end
+---------------------------
+--Create Stat Toggles
+---------------------------
+local function CreateStatToggle(Stat, settings, parent)
+    local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
+    b.Text:SetText(L[Stat])
+    b:SetChecked(settings.StatEnable)
+    b:SetScript("OnClick", function(s) settings.StatEnable = s:GetChecked() end)
+	return b
+end
+---------------------------
+-- Advanced Scrolling Combat Text Leveling
+---------------------------
+local col_AD = 4
+local x_AD = 0
+for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
+	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
+	b.Text:SetText(L[v])
+	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v])
+	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v] = s:GetChecked() end)
+	x_AD=x_AD+1
+end
+---------------------------
+-- Advanced Scrolling Combat Stats
+---------------------------
+local col_AD_3 = 4
+local x_AD_3 = 0
+for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
+    local b = CreateStatToggle(Stat, settings, content8)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_3 % col_AD_3), -20 + (- b:GetHeight()-70) * math.floor(x_AD_3/col_AD_3))
+    x_AD_3=x_AD_3+1
+    CreateGainsLossToggles(b, settings, content8)
+end
 local function CreateNameIconToggles(button, settings, configparent)
     local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     nameToggle.Text:SetText(L["Name"])

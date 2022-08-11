@@ -99,4 +99,13 @@ if locale == "deDE" then
  L["Slash Command Message"] = "Der Befehl Schrägstrich wurde für Advanced Scrolling Combat Text geändert. Geben Sie /asct ein, um das Bedienfeld Optionen zu öffnen.";
  L["Features"] = "Funktionen";
  L["Message"] = "Der Bildlauf zum Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird im Text von Advanced Scrolling Combat nichts angezeigt.";
+ --New things 8/11/2022
+ L["Leveling]"] = "Nivellierung";
+ L["Lost"] = "Verloren";
+ L["Gained"] = "Gewonnen";
+ L["Attack Power"] = "Angriffskraft";
+ L["Agility"] = "Gewandtheit";
+ L["Strength"] = "Kraft";
+ L["Intellect"] = "Intellekt";
+ L["Spirit"] = "Geist";
 end
