@@ -18,15 +18,15 @@ local f = CreateFrame("Frame")
 f:RegisterUnitEvent("UNIT_POWER_FREQUENT", "player")
 f:SetScript("OnEvent", function()
   local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
-  if Comabt_Text == false then
-  return
-  end
-  if Comabt_Text == true then
   if Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Resource lost"] == true then
   if not lastPower then
     lastPower = UnitPower('player')
     return
   end
+  if Comabt_Text == false then
+    return
+    end
+  if Comabt_Text == true then
   if UnitPower('player') + 4 < lastPower then
     CombatText_AddMessage("-"..lastPower - UnitPower('player').." "..power, CombatText_StandardScroll, 0.1, 0.1, 1 )
   end

@@ -737,7 +737,7 @@ local defaults = {
 		["Experience Gains"] = false,
 		["Level up message"] = false,
 		["Skill Up"] = false,
-		["Resource"] = false,
+		["Resource lost"] = false,
 	},
 }
 
