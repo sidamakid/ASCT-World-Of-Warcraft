@@ -1,6 +1,9 @@
 local L = ASDC_LOCALE_TABLE
 local lastPower = nil
 local power
+local fs = CreateFrame("Frame")
+fs:RegisterEvent("PLAYER_ENTERING_WORLD")
+fs:SetScript("OnEvent", function ()
 if select(2,UnitPowerType('player')) == "MANA" then
   power = L["Mana"]
 elseif select(2,UnitPowerType('player')) == "RAGE" then
@@ -10,8 +13,8 @@ elseif select(2,UnitPowerType('player')) == "ENERGY" then
 elseif select(2,UnitPowerType('player')) == "RUNIC_POWER" then
   power = L["Runic Power"]
 end
+end)
 local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterUnitEvent("UNIT_POWER_FREQUENT", "player")
 f:SetScript("OnEvent", function()
   local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
