@@ -2,8 +2,9 @@
 ## Interface-Classic: 11403
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
+## DefaultState: disabled
 ## Version: @project-version@
-## Title: Advanced Scrolling Combat Text Color Picker
+## Title: Advanced Scrolling Combat Text Color Picker (Removed)
 ## Title-koKR: 고급 스크롤 전투 텍스트 색상 선택기
 ## Title-frFR: Sélecteur de couleurs de texte de combat à défilement avancé
 ## Title-deDE: Erweiterter Textfarbwähler für den Scrolling-Kampf
@@ -14,7 +15,7 @@
 ## Title-ruRU: Расширенная палитра цветов для прокрутки боевого текста
 ## Title-ptBR: Picker de cores de texto de combate de rolagem avançada
 ## Title-itIT: Selettore colore testo combattimento a scorrimento avanzato
-## Notes: Choose what color you want for Advanced Scrolling Combat Text
+## Notes: Choose what color you want for Advanced Scrolling Combat Text (Removed)
 ## Notes-koKR: 고급 스크롤 전투 텍스트에 대해 원하는 색상 선택
 ## Notes-frFR: Choisissez la couleur que vous voulez pour Advanced Scrolling Combat Text
 ## Notes-deDE: Wählen Sie aus, welche Farbe Sie für Advanced Scrolling Combat Text verwenden möchten
@@ -31,7 +32,3 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# Color picker first
-Color_picker.lua
-# Then saved variables
-Color_picker_saved.lua

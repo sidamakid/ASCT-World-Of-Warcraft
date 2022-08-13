@@ -108,4 +108,5 @@ if locale == "itIT" then
  L["Strength"] = "Forza";
  L["Intellect"] = "Intelletto";
  L["Spirit"] = "Spirito";
+ L["Stamina"] = "Resistenza";
 end

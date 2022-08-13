@@ -108,4 +108,5 @@ if locale == "zhCN" then
  L["Strength"] = "强度";
  L["Intellect"] = "智力";
  L["Spirit"] = "精神";
+ L["Stamina"] = "耐力";
 end

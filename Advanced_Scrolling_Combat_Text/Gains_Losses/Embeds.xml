@@ -1,16 +1,11 @@
 <UI>
-    <Script file="AGI_Loss.lua"/>
     <Script file="AGI_Gains.lua"/>
-    <Script file="AP_Gains.lua"/>
-    <Script file="AP_Loss.lua"/>
-    <Script file="STG_Gains.lua"/>
-    <Script file="STG_Loss.lua"/>
-    <Script file="Armor_Gains.lua"/>
-    <Script file="Armor_Loss.lua"/>
     <Script file="INT_Gains.lua"/>
-    <Script file="INT_Loss.lua"/>
+    <Script file="AP_Gains.lua"/>
+    <Script file="STG_Gains.lua"/>
+    <Script file="Armor_Gains.lua"/>
     <Script file="Spirit_Gains.lua"/>
-    <Script file="Spirit_Loss.lua"/>
+    <Script file="Stam_Gains.lua"/>
     <Script file="Experience_Gains.lua"/>
     <Script file="Level_Up.lua"/>
     <Script file="Resource_Loss.lua"/>

@@ -108,4 +108,5 @@ if locale == "ruRU" then
  L["Strength"] = "Сила";
  L["Intellect"] = "Ум";
  L["Spirit"] = "Дух";
+ L["Stamina"] = "Выносливость";
 end

@@ -732,6 +732,7 @@ local defaults = {
 		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false,},
 		["Strength"] = {StatEnable = false, Gains = false, Lost = false,},
 		["Intellect"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Stamina"] = {StatEnable = false, Gains = false, Lost = false,},
 	},
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,

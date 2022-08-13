@@ -108,4 +108,5 @@ if locale == "esMX" then
  L["Strength"] = "Fuerza";
  L["Intellect"] = "Intelecto";
  L["Spirit"] = "Espíritu";
+ L["Stamina"] = "Resistencia";
 end

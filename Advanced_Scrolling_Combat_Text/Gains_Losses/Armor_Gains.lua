@@ -1,23 +1,21 @@
 local L = ASDC_LOCALE_TABLE
-local lastArmor = nil
+local lastStat = -1
 local f = CreateFrame("Frame")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterUnitEvent("UNIT_STATS", "player")
+f:RegisterUnitEvent("UNIT_RESISTANCES", "player")
 f:SetScript("OnEvent", function()
-  local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
-  if Comabt_Text == false then
-    return
-  end
-  if Comabt_Text == true then
-  if Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Armor"].StatEnable == true and Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Armor"].Gains == true then
-  local base, effectiveArmor, armor, posBuff, negBuff = UnitArmor("player") -- MOVED THIS LINE
-  if not lastArmor then
-    lastArmor = effectiveArmor
-    return
-  end
-  if effectiveArmor > lastArmor then
-    CombatText_AddMessage(format("+%d".." "..L["Armor"].." ".."(%d)", effectiveArmor - lastArmor, effectiveArmor), CombatText_StandardScroll, 0.1, 0.1, 1 )
-  end
-  lastArmor = effectiveArmor
-end
-end
+    local stats = Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Armor"]
+    if not (stats.StatEnable and C_CVar.GetCVarBool("enableFloatingCombatText")) then return end
+    local base, effectiveArmor, armor, posBuff, negBuff = UnitArmor("player")
+    local diff = effectiveArmor - lastStat;
+    if not lastStat then
+      lastStat = effectiveArmor
+      return
+    end
+    if lastStat == -1 then
+    elseif (diff < 0 and stats.Lost) or (diff > 0 and stats.Gains) then
+        CombatText_AddMessage(format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Armor"],  effectiveArmor), CombatText_StandardScroll, 0.1, 0.1, 1 )
+    end
+    lastStat = effectiveArmor
 end)

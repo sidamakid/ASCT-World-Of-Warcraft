@@ -2,8 +2,9 @@
 ## Interface-Classic: 11403
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
+## DefaultState: disabled
 ## Version: @project-version@
-## Title: Advanced Scrolling Combat Text SCT Check
+## Title: Advanced Scrolling Combat Text SCT Check (Removed)
 ## Title-koKR: 고급 스크롤 전투 텍스트 SCT 확인
 ## Title-frFR: Vérification SCT de texte de combat à défilement avancé
 ## Title-deDE: Erweiterte Scrolling Combat Text SCT-Prüfung
@@ -14,7 +15,7 @@
 ## Title-ruRU: Расширенная прокрутка боевого текста SCT Check
 ## Title-ptBR: Verificação SCT de texto de combate de rolagem avançada
 ## Title-itIT: Controllo SCT del testo di combattimento a scorrimento avanzato
-## Notes: Checks to see if Scrolling Combat Text is enabled
+## Notes: Checks to see if Scrolling Combat Text is enabled (Removed)
 ## Notes-koKR: 스크롤 전투 텍스트가 활성화되어 있는지 확인합니다.
 ## Notes-frFR: Vérifie si le défilement du texte de combat est activé
 ## Notes-deDE: Überprüft, ob Scrolling Combat Text aktiviert ist
@@ -30,4 +31,3 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-Advanced_Scrolling_Combat_Text_SCT_Check.lua

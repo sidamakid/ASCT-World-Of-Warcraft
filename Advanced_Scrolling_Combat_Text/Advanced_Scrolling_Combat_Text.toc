@@ -30,6 +30,8 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# SCT_Check
+SCT_Check.lua
 # SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic

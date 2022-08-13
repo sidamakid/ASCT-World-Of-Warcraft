@@ -108,4 +108,5 @@ if locale == "enUS" then
  L["Strength"] = "Strength";
  L["Intellect"] = "Intellect";
  L["Spirit"] = "Spirit";
+ L["Stamina"] = "Stamina";
 end

@@ -9,11 +9,6 @@ move-folders:
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Localize: Advanced_Scrolling_Combat_Text_Localize
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text: Advanced_Scrolling_Combat_Text
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Options: Advanced_Scrolling_Combat_Text_Options
+    Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_SCT_Check: Advanced_Scrolling_Combat_Text_SCT_Check
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Color_Picker: Advanced_Scrolling_Combat_Text_Color_Picker
-    Advanced_Scrolling_Combat_Text/SARTE-localize: SARTE-localize
-    Advanced_Scrolling_Combat_Text/SARTE-Options: SARTE-Options
-    Advanced_Scrolling_Combat_Text/SARTE-Color-Picker: SARTE-Color-Picker
-    Advanced_Scrolling_Combat_Text/SARTE-SCT-Check: SARTE-SCT-Check
-    Advanced_Scrolling_Combat_Text/SLVLTE: SLVLTE
-    Advanced_Scrolling_Combat_Text/SXP: SXP
 enable-toc-creation: yes

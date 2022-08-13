@@ -108,4 +108,5 @@ if locale == "deDE" then
  L["Strength"] = "Kraft";
  L["Intellect"] = "Intellekt";
  L["Spirit"] = "Geist";
+ L["Stamina"] = "Ausdauer";
 end

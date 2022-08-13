@@ -27,7 +27,7 @@
 ## Notes-itIT: Aggiunge nuove opzioni per lo scorrimento del testo Combattimento
 ## Author: Sidamakid Tinman
 ## RequiredDeps:  Advanced_Scrolling_Combat_Text, Advanced_Scrolling_Combat_Text_Localize
-## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB
+## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_Color_Picker_Variables
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
@@ -36,6 +36,10 @@ Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\lib.xml
+# Color picker first
+Color_picker.lua
+# Then saved variables
+Color_picker_saved.lua
 #Retail
 Options-Retail.lua
 # Classic Verisons

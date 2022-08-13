@@ -108,4 +108,5 @@ if locale == "ptBR" then
  L["Strength"] = "Força";
  L["Intellect"] = "Intelecto";
  L["Spirit"] = "Espírito";
+ L["Stamina"] = "Vigor";
 end

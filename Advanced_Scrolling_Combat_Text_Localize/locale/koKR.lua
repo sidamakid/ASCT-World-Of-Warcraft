@@ -108,4 +108,5 @@ if locale == "koKR" then
  L["Strength"] = "힘";
  L["Intellect"] = "지성";
  L["Spirit"] = "정신";
+ L["Stamina"] = "체력";
 end
