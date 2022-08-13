@@ -9,6 +9,4 @@ move-folders:
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Localize: Advanced_Scrolling_Combat_Text_Localize
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text: Advanced_Scrolling_Combat_Text
     Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Options: Advanced_Scrolling_Combat_Text_Options
-    Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_SCT_Check: Advanced_Scrolling_Combat_Text_SCT_Check
-    Advanced_Scrolling_Combat_Text/Advanced_Scrolling_Combat_Text_Color_Picker: Advanced_Scrolling_Combat_Text_Color_Picker
 enable-toc-creation: yes

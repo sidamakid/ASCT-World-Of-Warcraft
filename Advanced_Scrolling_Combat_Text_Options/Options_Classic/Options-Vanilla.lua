@@ -510,6 +510,8 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, panel_main, "UIPanelButton
 	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
 	OpenToOptionsPanel:SetWidth(150)
 	OpenToOptionsPanel:SetScript("OnClick", function()
+	HideUIPanel(InterfaceOptionsFrame)
+	HideUIPanel(GameMenuFrame)
 	ASCT_Config:Show()
 end)
 ---------------------------

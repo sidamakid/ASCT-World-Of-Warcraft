@@ -214,7 +214,7 @@ local defaults = {
 		["Fire Elemental Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Chain Lightning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Earthbind Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Fire Nova Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Fire Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Stoneclaw Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Elemental Mastery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		},
@@ -224,7 +224,6 @@ local defaults = {
 		["Stormstrike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Shamanistic Rage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Astral Recall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Lust"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Shaman_Restoration"] = {
 		["Mana Tide Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -286,7 +285,6 @@ local defaults = {
 		["Exorcism"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Holy Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Lay on Hands"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Turn Evil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Hammer of Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Divine Illumination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Aura Mastery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -357,20 +355,34 @@ local defaults = {
 	["Blood"] = {
 		["Mark of Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Dancing Rune Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Hysteria"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Strangulate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blood Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Dark Command"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Unholy Frenzy"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Rune Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Vampiric Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Frost_DK"] = {
 		["Unbreakable Armor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Deathchill"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Icebound Fortitude"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Empower Rune Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Horn of Winter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Mind Freeze"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Hungering Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Howling Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Lichborne"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Unholy"] = {
+		["Anti-Magic Shell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Anti-Magic Zone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Bone Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death Grip"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Raise Ally"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Raise Dead"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Army of the Dead"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Death and Decay"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Corpse Explosion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Death Gate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Ghoul Frenzy"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -639,6 +651,8 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, panel_main, "UIPanelButton
 	OpenToOptionsPanel:SetText(L["Open To Options Panel"])
 	OpenToOptionsPanel:SetWidth(150)
 	OpenToOptionsPanel:SetScript("OnClick", function()
+	HideUIPanel(InterfaceOptionsFrame)
+	HideUIPanel(GameMenuFrame)
 	ASCT_Config:Show()
 end)
 ---------------------------
