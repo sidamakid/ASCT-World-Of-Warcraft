@@ -25,7 +25,7 @@ f:SetScript("OnEvent", function()
     end
   if Comabt_Text == true then
   if UnitPower('player') + 4 < lastPower then
-    CombatText_AddMessage(format("-%d".." "..power.." ".."(%d)", lastPower - UnitPower('player'), UnitPower("player")), CombatText_StandardScroll, 0.1, 0.1, 1 )
+    CombatText_AddMessage(format("-%d".." "..power.." ".."(%d)", lastPower - UnitPower('player'), UnitPower("player")), CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
   end
 
   lastPower = UnitPower('player')

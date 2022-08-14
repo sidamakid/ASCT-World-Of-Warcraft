@@ -109,4 +109,13 @@ if locale == "ruRU" then
  L["Intellect"] = "Ум";
  L["Spirit"] = "Дух";
  L["Stamina"] = "Выносливость";
+ --New things 8/14/2022
+ L["Auras"] = "Ауры";
+ L["Fading Debuffs Alert"] = "Предупреждение о затухающих дебаффах";
+ L["Is About to Fade!"] = "Вот-вот угаснет!";
+ L["Debuff has 5 seconds left"] = "У Дебафф осталось 5 секунд";
+ L["Announces a Debuff you applied is about to fade on the Target."] = "Объявляет, что Debuff, который вы применили, вот-вот исчезнет на Target.";
+ L["Fading Buffs Alert"] = "Предупреждение о затухающих баффах";
+ L["Buff has 5 seconds left"] = "У Баффа осталось 5 секунд";
+ L["Announces when a buff you gained is about to fade"] = "Объявляет, когда бафф, который вы получили, вот-вот исчезнет";
 end

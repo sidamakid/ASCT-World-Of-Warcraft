@@ -109,4 +109,13 @@ if locale == "frFR" then
  L["Intellect"] = "Intellect";
  L["Spirit"] = "Esprit";
  L["Stamina"] = "Endurance";
+ --New things 8/14/2022
+ L["Auras"] = "Auras";
+ L["Fading Debuffs Alert"] = "Alerte Debuffs en décoloration";
+ L["Is About to Fade!"] = "Est sur le point de s’estomper!";
+ L["Debuff has 5 seconds left"] = "Debuff a encore 5 secondes";
+ L["Announces a Debuff you applied is about to fade on the Target."] = "Annonce qu’un Debuff que vous avez appliqué est sur le point de disparaître sur la cible.";
+ L["Fading Buffs Alert"] = "Alerte Fading Buffs";
+ L["Buff has 5 seconds left"] = "Buff a encore 5 secondes";
+ L["Announces when a buff you gained is about to fade"] = "Annonce quand un buff que vous avez gagné est sur le point de s’estomper";
 end

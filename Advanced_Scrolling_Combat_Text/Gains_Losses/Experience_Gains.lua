@@ -13,7 +13,7 @@ learnaXP:SetScript("OnEvent",
         if Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Experience Gains"] == true then
         if strfind(arg1, "experience") then
             local xpgained = string.match(string.match(arg1, "%d+ experience"), "%d+")
-            CombatText_AddMessage(L["Experience"].."+"..xpgained, CombatText_StandardScroll, 0.1, 0.1, 1)
+            CombatText_AddMessage(L["Experience"].."+"..xpgained, CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
         end
         end
     end

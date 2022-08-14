@@ -302,6 +302,10 @@ local defaults = {
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 	},
+	["Advanced_Scrolling_Combat_Text_Auras"] = {
+		["Fading DeBuffs"] = false,
+		["Fading Buffs"] = false,
+	}
 }
 ---------------------------
 --Create Options panel
@@ -471,7 +475,7 @@ end
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8 = SetTabs(ASCT_Config, 8, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -573,6 +577,30 @@ for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrollin
     x_AD_3=x_AD_3+1
     CreateGainsLossToggles(b, settings, content8)
 end
+---------------------------
+--Fading auras
+---------------------------
+local function Buttons(value, btntext, x, y, text1, text2)
+	local b = CreateFrame("CheckButton", nil, content9, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", x, y)
+	b.Text:SetText(btntext)
+	b:SetScript("OnEnter",function (self)
+	GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+	GameTooltip:SetText(text1)
+  	GameTooltip:AddLine(text2)
+  	GameTooltip:Show()
+end)
+b:SetScript("OnLeave", function ()
+	GameTooltip:Hide()
+end)
+b:SetScript("OnClick", function(self) 
+	Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Auras"][value] = b:GetChecked()
+	end)
+b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Auras"][value])
+return b
+end
+local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+local Buffsfading = Buttons("Fading Buffs", L["Fading Buffs Alert"], 20, -60, L["Buff has 5 seconds left"], L["Announces when a buff you gained is about to fade"])
 ---------------------------
 --Create Icon and Names
 ---------------------------

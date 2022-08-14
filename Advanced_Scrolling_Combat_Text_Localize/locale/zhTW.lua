@@ -109,4 +109,13 @@ if locale == "zhTW" then
  L["Intellect"] = "智力";
  L["Spirit"] = "精神";
  L["Stamina"] = "耐力";
+ --New things 8/14/2022
+ L["Auras"] = "光環";
+ L["Fading Debuffs Alert"] = "褪色減益警報";
+ L["Is About to Fade!"] = "即將褪色！";
+ L["Debuff has 5 seconds left"] = "Debuff 還剩下 5 秒";
+ L["Announces a Debuff you applied is about to fade on the Target."] = "宣佈您應用的減益即將在目標上淡入淡出。";
+ L["Fading Buffs Alert"] = "淡入淡出的增益警報";
+ L["Buff has 5 seconds left"] = "Buff 還剩下 5 秒";
+ L["Announces when a buff you gained is about to fade"] = "宣佈您獲得的增益即將消失";
 end

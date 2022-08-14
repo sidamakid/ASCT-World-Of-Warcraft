@@ -30,8 +30,14 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# Libs
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibClassicDurations\LibClassicDurations.xml
 # SCT_Check
 SCT_Check.lua
+# Auras
+Auras\Auras.xml
 # SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic

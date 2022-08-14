@@ -109,4 +109,13 @@ if locale == "koKR" then
  L["Intellect"] = "지성";
  L["Spirit"] = "정신";
  L["Stamina"] = "체력";
+ --New things 8/14/2022
+ L["Auras"] = "오라스";
+ L["Fading Debuffs Alert"] = "페이딩 디버프 경고";
+ L["Is About to Fade!"] = "퇴색하려고합니다!";
+ L["Debuff has 5 seconds left"] = "디버프가 5초 남았습니다.";
+ L["Announces a Debuff you applied is about to fade on the Target."] = "적용한 디버프가 타겟에서 페이드 될 것이라고 발표합니다.";
+ L["Fading Buffs Alert"] = "페이딩 버프 경고";
+ L["Buff has 5 seconds left"] = "버프가 5초 남았습니다.";
+ L["Announces when a buff you gained is about to fade"] = "당신이 얻은 버프가 곧 사라질 때 발표합니다.";
 end
