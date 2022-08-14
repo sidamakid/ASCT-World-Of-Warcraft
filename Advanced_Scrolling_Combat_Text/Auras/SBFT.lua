@@ -22,6 +22,9 @@ local function onUpdate()
       if not name then
         return
       end
+      if duration < 5 then
+        return
+      end
       local remainingTime = expirationTime - GetTime()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
@@ -49,6 +52,9 @@ local function onUpdate()
         return
       end
       local remainingTime = expirationTime - GetTime()
+      if duration < 5 then
+        return
+      end
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " ..L["Is About to Fade!"], icon, name)

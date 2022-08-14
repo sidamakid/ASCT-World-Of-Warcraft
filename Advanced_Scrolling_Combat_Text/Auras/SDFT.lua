@@ -24,6 +24,9 @@ local function onUpdate()
       if not name then
         return
       end
+      if duration < 5 then
+        return
+      end
       local remainingTime = expirationTime - GetTime()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
@@ -50,6 +53,9 @@ local function onUpdate()
     local name, icon, count, dispelType, duration, expirationTime, source = UnitDebuff("target", i)
     if source == "player" then
       if not name then
+        return
+      end
+      if duration < 5 then
         return
       end
       local remainingTime = expirationTime - GetTime()
