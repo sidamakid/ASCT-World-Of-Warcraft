@@ -10,7 +10,7 @@ f:SetScript("OnEvent", function()
     local diff = currentStat - lastStat;
     if lastStat == -1 then
     elseif (diff < 0 and stats.Lost) or (diff > 0 and stats.Gains) then
-        CombatText_AddMessage(format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Agility"],  currentStat), 0.1, 0.1, 1)
+        CombatText_AddMessage(format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Agility"],  currentStat), CombatText_StandardScroll, 0.1, 0.1, 1)
     end
     lastStat = currentStat
 end)
