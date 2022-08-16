@@ -31,7 +31,7 @@ local function onUpdate()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " .. L["Is About to Fade!"], icon, name)
-          CombatText_AddMessage(msg, CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
+          CombatText_AddMessage(msg, CombatText_StandardScroll, ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a)
           debuffsTrigggered[name] = true
         end
       else
@@ -62,7 +62,7 @@ local function onUpdate()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " ..L["Is About to Fade!"], icon, name)
-          CombatText_AddMessage(msg, CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
+          CombatText_AddMessage(msg, CombatText_StandardScroll, ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a)
           debuffsTrigggered[name] = true
         end
       else

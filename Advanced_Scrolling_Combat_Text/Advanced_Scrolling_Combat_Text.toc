@@ -38,6 +38,8 @@ Libs\LibClassicDurations\LibClassicDurations.xml
 SCT_Check.lua
 # Auras
 Auras\Auras.xml
+# Achievement
+Achievement.lua
 # SARTE-Text-Normal-Text
 SARTE-Text.lua
 # SARTE-Text-Classic

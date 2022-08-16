@@ -118,4 +118,10 @@ if locale == "enUS" then
  L["Fading Buffs Alert"] = "Fading Buffs Alert";
  L["Buff has 5 seconds left"] = "Buff has 5 seconds left";
  L["Announces when a buff you gained is about to fade"] = "Announces when a buff you gained is about to fade";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Colors for stats";
+ L["Color Picker Spells"] = "Colors for Spells";
+ L["Color Picker Leveling"] = "Colors for Leveling";
+ L["Achievement Gains"] = "Achievement Gains";
+ L["Colors for Fading Auras"] = "Colors for Fading Auras";
 end

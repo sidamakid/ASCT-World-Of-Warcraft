@@ -118,4 +118,10 @@ if locale == "itIT" then
  L["Fading Buffs Alert"] = "Avviso di dissolvenza dei buff";
  L["Buff has 5 seconds left"] = "Buff ha 5 secondi rimasti";
  L["Announces when a buff you gained is about to fade"] = "Annuncia quando un buff che hai guadagnato sta per svanire";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Colori per le statistiche";
+ L["Color Picker Spells"] = "Colori per incantesimi";
+ L["Color Picker Leveling"] = "Colori per il livellamento";
+ L["Achievement Gains"] = "Guadagni di successo";
+ L["Colors for Fading Auras"] = "Colori per aure sbiadite";
 end

@@ -118,4 +118,10 @@ if locale == "ruRU" then
  L["Fading Buffs Alert"] = "Предупреждение о затухающих баффах";
  L["Buff has 5 seconds left"] = "У Баффа осталось 5 секунд";
  L["Announces when a buff you gained is about to fade"] = "Объявляет, когда бафф, который вы получили, вот-вот исчезнет";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Цвета для статистики";
+ L["Color Picker Spells"] = "Цвета для заклинаний";
+ L["Color Picker Leveling"] = "Цвета для выравнивания";
+ L["Achievement Gains"] = "Достижения";
+ L["Colors for Fading Auras"] = "Цвета для увядающих аур";
 end

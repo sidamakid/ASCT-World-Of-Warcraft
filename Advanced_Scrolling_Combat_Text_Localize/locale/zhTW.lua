@@ -118,4 +118,10 @@ if locale == "zhTW" then
  L["Fading Buffs Alert"] = "淡入淡出的增益警報";
  L["Buff has 5 seconds left"] = "Buff 還剩下 5 秒";
  L["Announces when a buff you gained is about to fade"] = "宣佈您獲得的增益即將消失";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "統計數據的顏色";
+ L["Color Picker Spells"] = "法術的顏色";
+ L["Color Picker Leveling"] = "調平顏色";
+ L["Achievement Gains"] = "成就收益";
+ L["Colors for Fading Auras"] = "褪色光環的顏色";
 end

@@ -118,4 +118,10 @@ if locale == "koKR" then
  L["Fading Buffs Alert"] = "페이딩 버프 경고";
  L["Buff has 5 seconds left"] = "버프가 5초 남았습니다.";
  L["Announces when a buff you gained is about to fade"] = "당신이 얻은 버프가 곧 사라질 때 발표합니다.";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "통계의 색상";
+ L["Color Picker Spells"] = "주문의 색상";
+ L["Color Picker Leveling"] = "레벨링을 위한 색상";
+ L["Achievement Gains"] = "성취도 향상";
+ L["Colors for Fading Auras"] = "페이딩 오라스의 색상";
 end

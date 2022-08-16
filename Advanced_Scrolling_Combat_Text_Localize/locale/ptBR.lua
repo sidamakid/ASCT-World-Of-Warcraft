@@ -118,4 +118,10 @@ if locale == "ptBR" then
  L["Fading Buffs Alert"] = "Alerta de buffs de desbotamento";
  L["Buff has 5 seconds left"] = "Buff tem 5 segundos restantes";
  L["Announces when a buff you gained is about to fade"] = "Anuncia quando um buff que você ganhou está prestes a desaparecer";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Cores para estatísticas";
+ L["Color Picker Spells"] = "Cores para Feitiços";
+ L["Color Picker Leveling"] = "Cores para nivelamento";
+ L["Achievement Gains"] = "Ganhos de realização";
+ L["Colors for Fading Auras"] = "Cores para Auras desbotadas";
 end

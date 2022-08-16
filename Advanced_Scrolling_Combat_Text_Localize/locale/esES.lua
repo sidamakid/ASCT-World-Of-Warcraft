@@ -117,4 +117,10 @@ if locale == "esES" then
  L["Fading Buffs Alert"] = "Alerta de desvanecimiento de Buffs";
  L["Buff has 5 seconds left"] = "A Buff le quedan 5 segundos";
  L["Announces when a buff you gained is about to fade"] = "Anuncia cuando un buff que ganaste está a punto de desvanecerse";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Colores para estadísticas";
+ L["Color Picker Spells"] = "Colores para hechizos";
+ L["Color Picker Leveling"] = "Colores para nivelar";
+ L["Achievement Gains"] = "Ganancias de logros";
+ L["Colors for Fading Auras"] = "Colores para auras que se desvanecen";
 end

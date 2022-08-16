@@ -118,4 +118,10 @@ if locale == "deDE" then
  L["Fading Buffs Alert"] = "Warnung vor verblassenden Buffs";
  L["Buff has 5 seconds left"] = "Buff hat noch 5 Sekunden Zeit";
  L["Announces when a buff you gained is about to fade"] = "Kündigt an, wenn ein Buff, den du gewonnen hast, verblasst";
+ --New things 8/15/2022
+ L["Color Picker Stats"] = "Farben für Statistiken";
+ L["Color Picker Spells"] = "Farben für Zaubersprüche";
+ L["Color Picker Leveling"] = "Farben für die Nivellierung";
+ L["Achievement Gains"] = "Erfolge";
+ L["Colors for Fading Auras"] = "Farben für verblassende Auren";
 end

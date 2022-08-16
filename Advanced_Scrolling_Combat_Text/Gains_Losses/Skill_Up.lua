@@ -14,7 +14,7 @@ function (self, event, ...)
     local message = ...;
     local skillUpPattern = ERR_SKILL_UP_SI:gsub("%%.", "(.*)")
     local skill, value = message:match(skillUpPattern)
-    CombatText_AddMessage(string.format(L["Your skill in"].." ".."%s".." "..L["has increased to"].." ".."%s", skill, value), CombatText_StandardScroll, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a)
+    CombatText_AddMessage(string.format(L["Your skill in"].." ".."%s".." "..L["has increased to"].." ".."%s", skill, value), CombatText_StandardScroll, ASCT_Colors_Leveling.r, ASCT_Colors_Leveling.g, ASCT_Colors_Leveling.b, ASCT_Colors_Leveling.a)
     end
   end
   end

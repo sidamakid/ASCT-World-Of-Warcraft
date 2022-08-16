@@ -1,5 +1,9 @@
 package-as: Advanced_Scrolling_Combat_Text
 
+externals:
+  Advanced_Scrolling_Combat_Text/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+  Advanced_Scrolling_Combat_Text/Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+  Advanced_Scrolling_Combat_Text/Libs/LibClassicDurations: https://repos.curseforge.com/wow/libclassicdurations
 ignore:
     - .github
     - .gitignore

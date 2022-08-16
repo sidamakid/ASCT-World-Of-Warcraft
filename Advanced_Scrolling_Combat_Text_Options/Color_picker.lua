@@ -24,4 +24,49 @@ function ASDC_COlOR_PICKER_myColorCallback(restore)
  -- And update any UI elements that use this color...
 end
 
+function ASDC_COlOR_PICKER_Stats_myColorCallback(restore)
+ local newR, newG, newB, newA;
+ if restore then
+  -- The user bailed, we extract the old color from the table created by ShowColorPicker.
+  newR, newG, newB, newA = unpack(restore);
+ else
+  -- Something changed
+  newA, newR, newG, newB = OpacitySliderFrame:GetValue(), ColorPickerFrame:GetColorRGB();
+ end
 
+ -- Update our internal storage.
+ ASCT_Colors_Stats.r, ASCT_Colors_Stats.g, ASCT_Colors_Stats.b, ASCT_Colors_Stats.a = newR, newG, newB, newA;
+ -- And update any UI elements that use this color...
+end
+
+
+function ASDC_COlOR_PICKER_Leveling_myColorCallback(restore)
+ local newR, newG, newB, newA;
+ if restore then
+  -- The user bailed, we extract the old color from the table created by ShowColorPicker.
+  newR, newG, newB, newA = unpack(restore);
+ else
+  -- Something changed
+  newA, newR, newG, newB = OpacitySliderFrame:GetValue(), ColorPickerFrame:GetColorRGB();
+ end
+
+ -- Update our internal storage.
+ ASCT_Colors_Leveling.r, ASCT_Colors_Leveling.g, ASCT_Colors_Leveling.b, ASCT_Colors_Leveling.a = newR, newG, newB, newA;
+ -- And update any UI elements that use this color...
+end
+
+
+function ASDC_COlOR_PICKER_Auars_myColorCallback(restore)
+ local newR, newG, newB, newA;
+ if restore then
+  -- The user bailed, we extract the old color from the table created by ShowColorPicker.
+  newR, newG, newB, newA = unpack(restore);
+ else
+  -- Something changed
+  newA, newR, newG, newB = OpacitySliderFrame:GetValue(), ColorPickerFrame:GetColorRGB();
+ end
+
+ -- Update our internal storage.
+ ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a = newR, newG, newB, newA;
+ -- And update any UI elements that use this color...
+end
