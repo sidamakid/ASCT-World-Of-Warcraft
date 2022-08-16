@@ -949,40 +949,10 @@ LibStub("LibDBIcon-1.0"):Register("ASCT", MinimapDataObject, Advanced_Scrolling_
 ---------------------------
 local Color_picker_SARTE = CreateFrame("Button", nil, content5, "UIPanelButtonTemplate")
 	Color_picker_SARTE:SetPoint("TOPRIGHT", -70, -20)
-	Color_picker_SARTE:SetText(L["Color Picker Spells"])
+	Color_picker_SARTE:SetText(L["Color Picker"])
 	Color_picker_SARTE:SetWidth(150)
 	Color_picker_SARTE:SetScript("OnClick", function()
 		ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(Advanced_Scrolling_Combat_Text_Color_Picker_Variables.r, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.g, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.b, Advanced_Scrolling_Combat_Text_Color_Picker_Variables.a, ASDC_COlOR_PICKER_myColorCallback);
-end)
----------------------------
---Color Picker Leveling
----------------------------
-local Color_picker_ASCT_Leveling = CreateFrame("Button", nil, content5, "UIPanelButtonTemplate")
-Color_picker_ASCT_Leveling:SetPoint("TOPRIGHT", -70, -60)
-Color_picker_ASCT_Leveling:SetText(L["Color Picker Leveling"])
-Color_picker_ASCT_Leveling:SetWidth(150)
-Color_picker_ASCT_Leveling:SetScript("OnClick", function()
-	ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(ASCT_Colors_Leveling.r, ASCT_Colors_Leveling.g, ASCT_Colors_Leveling.b, ASCT_Colors_Leveling.a, ASDC_COlOR_PICKER_Leveling_myColorCallback);
-end)
----------------------------
---Color Picker Stats
----------------------------
-local Color_picker_ASCT_STATS = CreateFrame("Button", nil, content5, "UIPanelButtonTemplate")
-Color_picker_ASCT_STATS:SetPoint("TOPRIGHT", -70, -100)
-Color_picker_ASCT_STATS:SetText(L["Color Picker Stats"])
-Color_picker_ASCT_STATS:SetWidth(150)
-Color_picker_ASCT_STATS:SetScript("OnClick", function()
-	ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(ASCT_Colors_Stats.r, ASCT_Colors_Stats.g, ASCT_Colors_Stats.b, ASCT_Colors_Stats.a, ASDC_COlOR_PICKER_Stats_myColorCallback);
-end)
----------------------------
---Color Picker Auras
----------------------------
-local Color_picker_ASCT_Auras = CreateFrame("Button", nil, content5, "UIPanelButtonTemplate")
-Color_picker_ASCT_Auras:SetPoint("TOPRIGHT", -70, -140)
-Color_picker_ASCT_Auras:SetText(L["Colors for Fading Auras"])
-Color_picker_ASCT_Auras:SetWidth(150)
-Color_picker_ASCT_Auras:SetScript("OnClick", function()
-	ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker(ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a, ASDC_COlOR_PICKER_Auars_myColorCallback);
 end)
 ---------------------------
 --Main options panel

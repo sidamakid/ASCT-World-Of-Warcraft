@@ -11,7 +11,7 @@ f:SetScript("OnEvent", function(self, event, achievementID, alreadyEarned)
     if Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Achievement Gains"] == true then
     local _, name, _, _, _, _, _, _, _, icon = GetAchievementInfo(achievementID)
     local msg = string.format("|T%d:18|t ".." ".."%s", icon, name)
-    CombatText_AddMessage(msg, CombatText_StandardScroll, ASCT_Colors_Leveling.r, ASCT_Colors_Leveling.g, ASCT_Colors_Leveling.b, ASCT_Colors_Leveling.a)
+    CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
     end
     end
 end)

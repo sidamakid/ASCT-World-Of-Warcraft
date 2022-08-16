@@ -27,7 +27,7 @@
 ## Notes-itIT: Aggiunge nuove opzioni per lo scorrimento del testo Combattimento
 ## Author: Sidamakid Tinman
 ## RequiredDeps:  Advanced_Scrolling_Combat_Text, Advanced_Scrolling_Combat_Text_Localize
-## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_Color_Picker_Variables, ASCT_Colors_Stats, ASCT_Colors_Leveling, ASCT_Colors_Auras
+## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_Color_Picker_Variables
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L

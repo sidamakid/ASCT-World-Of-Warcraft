@@ -29,7 +29,7 @@ local function onUpdate()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " .. L["Is About to Fade!"], icon, name)
-          CombatText_AddMessage(msg, CombatText_StandardScroll, ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a)
+          CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
           debuffsTrigggered[name] = true
         end
       else
@@ -58,7 +58,7 @@ local function onUpdate()
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " ..L["Is About to Fade!"], icon, name)
-          CombatText_AddMessage(msg, CombatText_StandardScroll, ASCT_Colors_Auras.r, ASCT_Colors_Auras.g, ASCT_Colors_Auras.b, ASCT_Colors_Auras.a)
+          CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
           debuffsTrigggered[name] = true
         end
       else

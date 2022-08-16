@@ -8,7 +8,7 @@ f:SetScript("OnEvent", function()
     end
     if Comabt_Text == true then
     if Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Level up message"] == true then
-    CombatText_AddMessage(format(L["Congratulations"].." ".."%s,".." "..L["you are now level"].." ".."%d", UnitName("player"), UnitLevel("player")), CombatText_StandardScroll, ASCT_Colors_Leveling.r, ASCT_Colors_Leveling.g, ASCT_Colors_Leveling.b, ASCT_Colors_Leveling.a)
+    CombatText_AddMessage(format(L["Congratulations"].." ".."%s,".." "..L["you are now level"].." ".."%d", UnitName("player"), UnitLevel("player")), CombatText_StandardScroll, 0.1, 0.1, 1)
     end
 end
 end)
