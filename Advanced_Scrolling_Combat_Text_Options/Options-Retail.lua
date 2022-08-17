@@ -85,6 +85,7 @@ local defaults = {
 		["Blind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Shroud of Concealment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Distract"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Tricks of the Trade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 --Priest spells
 	["Shadow"] = {
@@ -423,6 +424,7 @@ local defaults = {
 		["Blessing of Spellwarding"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Blessed Hammer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Moment of Glory"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Righteous Defense"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Retribution"] = {
 		["Avenging Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

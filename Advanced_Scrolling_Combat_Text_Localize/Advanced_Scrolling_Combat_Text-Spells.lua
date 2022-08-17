@@ -1,5 +1,4 @@
 local callbacks = {}
-
 local localizedNames = {}
 local englishNames = {}
 local englishToIcons = {}

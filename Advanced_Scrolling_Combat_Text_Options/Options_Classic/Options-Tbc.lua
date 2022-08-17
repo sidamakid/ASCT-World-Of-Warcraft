@@ -96,6 +96,7 @@ local defaults = {
 		["Feedback"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Elune's Grace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Starshards"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Consume Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	  --Warrior spells
 	["Arms"] = {
@@ -116,6 +117,7 @@ local defaults = {
 		["Challenging Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Pummel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Sweeping Strikes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Bloodthirst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Protection_Warrior"] = {
 		["Spell Reflection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -129,6 +131,7 @@ local defaults = {
 		["Shield Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Last Stand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Concussion Blow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shield Slam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 		--Druid Spells
 	["Balance"] = {
@@ -285,7 +288,6 @@ local defaults = {
 		["Portal: Undercity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Portal: Thunder Bluff"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
-	--Fire
 	["Fire"] = {
 		["Fire Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Fire Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

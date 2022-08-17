@@ -50,5 +50,6 @@ SARTE-Text-Racials.lua
 # Shared spell Coolodnws
 SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
 SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
+SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Lust.lua
 # Gains_Losses
 Gains_Losses\Embeds.xml

@@ -197,6 +197,7 @@ local defaults = {
 		["Aimed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Arcane Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Scatter Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Volley"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
    ["Survival"] = {
 		["Feign Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
