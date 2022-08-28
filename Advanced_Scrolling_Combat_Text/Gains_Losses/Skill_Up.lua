@@ -1,4 +1,5 @@
 local L = ASDC_LOCALE_TABLE
+local addonName, ASCT = ...;
 local Skillup = CreateFrame("Frame")
 Skillup:RegisterEvent("CHAT_MSG_SKILL")
 Skillup:RegisterEvent("CHAT_MSG_SYSTEM")
@@ -14,7 +15,8 @@ function (self, event, ...)
     local message = ...;
     local skillUpPattern = ERR_SKILL_UP_SI:gsub("%%.", "(.*)")
     local skill, value = message:match(skillUpPattern)
-    CombatText_AddMessage(string.format(L["Your skill in"].." ".."%s".." "..L["has increased to"].." ".."%s", skill, value), CombatText_StandardScroll, 0.1, 0.1, 1)
+    local msg = string.format(L["Your skill in"].." ".."%s".." "..L["has increased to"].." ".."%s", skill, value)
+    ASCT:Comabt_Text(msg, 0.1, 0.1, 1)
     end
   end
   end

@@ -1,6 +1,5 @@
-local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
-
-if isRetailWow then
+local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
+if isShadowlandsWow then
 local L = ASDC_LOCALE_TABLE
 local function InitializeOptions()
 
@@ -729,12 +728,12 @@ local defaults = {
 		["Ancestral Call"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Advanced_Scrolling_Combat_Text_Stats"] = {
-		["Armor"] = {StatEnable = false, Gains = false, Lost = false,},
-		["Agility"] = {StatEnable = false, Gains = false, Lost = false,},
-		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false,},
-		["Strength"] = {StatEnable = false, Gains = false, Lost = false,},
-		["Intellect"] = {StatEnable = false, Gains = false, Lost = false,},
-		["Stamina"] = {StatEnable = false, Gains = false, Lost = false,},
+		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
+		["Agility"] = {StatEnable = false, Gains = false, Lost = false},
+		["Strength"] = {StatEnable = false, Gains = false, Lost = false},
+		["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
+		["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
+		["Health"] = {StatEnable = false, Gains = false, Lost = false},
 	},
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,
@@ -742,11 +741,41 @@ local defaults = {
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 		["Achievement Gains"] = false,
+		["Death Quadrants"] = false,
+		["Duel Requests"] = false,
 	},
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
 		["Fading Buffs"] = false,
-	}
+	},
+	["Advanced_Scrolling_Combat_Text_Messages"] = {
+		["Inventory full"] = false,
+		["Locked Items"] = false,
+		["Group Invites"] = false,
+		["Quest Accepted"] = false,
+		["Quest Completed"] = false,
+		["Quest Log Full"] = false,
+		["Trade Requests"] = false,
+		["Trade Complete"] = false,
+		["Trade Canceled"] = false,
+		["Facing the wrong way"] = false,
+		["Friends come Online"] = false,
+		["Friends go Offline"] = false,
+		["Zone discovery"] = false,
+		["Unlearned Skills"] = false,
+		["Rested"] = false,
+		["Sent Mail"] = false,
+		["Dungeon Difficulty Changed"] = false,
+		["Not Enough Honor Points"] = false,
+		["Not Arena Honor Points"] = false,
+		["Players Invited"] = false,
+		["Player Left your group"] = false,
+		["Player joins your group"] = false,
+		["War mode Off"] = false,
+		["War mode On"] = false,
+		["Pvp On"] = false,
+		["Pvp Off"] = false,
+	},
 }
 
 function f:InitializeOptions_Class()
@@ -837,13 +866,9 @@ SlashCmdList.ASCT = function(msg, editBox)
 	ASCT_Config:Show()
 end
 ---------------------------
---Slash Commands
+--Loading message.
 ---------------------------
-SLASH_SARTE1 = "/SARTE"
-SlashCmdList.SARTE = function(msg, editBox)
-	-- https://github.com/Stanzilla/WoWUIBugs/issues/89
-	print(L["Slash Command Message"])
-end
+print(L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."])
 -------------------------
 --Text Creating
 -------------------------
@@ -928,7 +953,7 @@ local Text4 = TextCreate(L["Racials"])
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Messages"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -975,11 +1000,11 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, panel_main, "UIPanelButton
 	ASCT_Config:Show()
 end)
 ---------------------------
---Create Stat Gains and Losses
+--Functions
 ---------------------------
 local function CreateGainsLossToggles(button, settings, configparent)
     local GainToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    GainToggle.Text:SetText("Gained")
+    GainToggle.Text:SetText(L["Gained"])
     GainToggle:SetChecked(settings.Gains)
     GainToggle:SetEnabled(settings.StatEnable == true)
     GainToggle:SetScript("OnClick", function(self)
@@ -987,7 +1012,7 @@ local function CreateGainsLossToggles(button, settings, configparent)
     end)
     GainToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
     local lossToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    lossToggle.Text:SetText("Lost")
+    lossToggle.Text:SetText(L["Lost"])
     lossToggle:SetChecked(settings.Lost)
     lossToggle:SetEnabled(settings.StatEnable == true)
     lossToggle:SetScript("OnClick", function(self)
@@ -1000,7 +1025,7 @@ local function CreateGainsLossToggles(button, settings, configparent)
 	end) -- NEW STUFF
 end
 ---------------------------
---Create Stat Toggles
+--Stat Toggles
 ---------------------------
 local function CreateStatToggle(Stat, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
@@ -1010,53 +1035,7 @@ local function CreateStatToggle(Stat, settings, parent)
 	return b
 end
 ---------------------------
--- Advanced Scrolling Combat Text Leveling
----------------------------
-local col_AD = 4
-local x_AD = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
-	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
-	b.Text:SetText(L[v])
-	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v])
-	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v] = s:GetChecked() end)
-	x_AD=x_AD+1
-end
----------------------------
--- Advanced Scrolling Combat Stats
----------------------------
-local col_AD_3 = 4
-local x_AD_3 = 0
-for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
-    local b = CreateStatToggle(Stat, settings, content8)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_3 % col_AD_3), -20 + (- b:GetHeight()-70) * math.floor(x_AD_3/col_AD_3))
-    x_AD_3=x_AD_3+1
-    CreateGainsLossToggles(b, settings, content8)
-end
-local function CreateNameIconToggles(button, settings, configparent)
-    local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    nameToggle.Text:SetText(L["Name"])
-    nameToggle:SetChecked(settings.nameEnable)
-    nameToggle:SetEnabled(settings.SpellEnable == true)
-    nameToggle:SetScript("OnClick", function(self)
-      settings.nameEnable = self:GetChecked()
-    end)
-    nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
-    local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    iconToggle.Text:SetText(L["Icon"])
-    iconToggle:SetChecked(settings.iconEnable)
-    iconToggle:SetEnabled(settings.SpellEnable == true)
-    iconToggle:SetScript("OnClick", function(self)
-      settings.iconEnable = self:GetChecked()
-    end)
-    iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
-    button:HookScript("OnClick", function(self)
-      nameToggle:SetEnabled(self:GetChecked())
-      iconToggle:SetEnabled(self:GetChecked())
-	end)
-end
----------------------------
---Fading auras
+--Buttons
 ---------------------------
 local function Buttons(value, btntext, x, y, text1, text2)
 	local b = CreateFrame("CheckButton", nil, content9, "InterfaceOptionsCheckButtonTemplate")
@@ -1077,21 +1056,99 @@ b:SetScript("OnClick", function(self)
 b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Auras"][value])
 return b
 end
-local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
-local Buffsfading = Buttons("Fading Buffs", L["Fading Buffs Alert"], 20, -60, L["Buff has 5 seconds left"], L["Announces when a buff you gained is about to fade"])
-
+---------------------------
+--Name Icon Toggles
+---------------------------
+local function CreateNameIconToggles(button, settings, configparent)
+    local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    nameToggle.Text:SetText(L["Name"])
+    nameToggle:SetChecked(settings.nameEnable)
+    nameToggle:SetEnabled(settings.SpellEnable == true)
+    nameToggle:SetScript("OnClick", function(self)
+      settings.nameEnable = self:GetChecked()
+    end)
+    nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
+    local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    iconToggle.Text:SetText(L["Icon"])
+    iconToggle:SetChecked(settings.iconEnable)
+    iconToggle:SetEnabled(settings.SpellEnable == true)
+    iconToggle:SetScript("OnClick", function(self)
+      settings.iconEnable = self:GetChecked()
+    end)
+    iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
+    button:HookScript("OnClick", function(self) -- NEW STUFF START
+      nameToggle:SetEnabled(self:GetChecked())
+      iconToggle:SetEnabled(self:GetChecked())
+	end) -- NEW STUFF
+end
+---------------------------
+--Spell Toggles
+---------------------------
 local function CreateSpellToggle(spellName, settings, parent)
     local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
     b.Text:SetText(ASCT_GetLocalizedName(spellName))
     b:SetChecked(settings.SpellEnable)
     b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
     local tex = b:CreateTexture()
-    tex:SetPoint("LEFT", b, "RIGHT", 3, 1)
+    tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
     tex:SetSize(44, 44)
     tex:SetTexture(ASCT_GetLocalizedIcon(spellName))
     return b
 end
-
+----------------------------
+--Name sorting
+----------------------------
+local function pairsByKeys (t, g)
+    for n in pairs(t) do table.insert(Advanced_Scrolling_Combat_Text_DB, n) end
+    table.sort(Advanced_Scrolling_Combat_Text_DB, g)
+    local i = 0      -- iterator variable
+    local iter = function ()   -- iterator function
+        i = i + 1
+        if Advanced_Scrolling_Combat_Text_DB[i] == nil then return nil
+        else return Advanced_Scrolling_Combat_Text_DB[i], t[Advanced_Scrolling_Combat_Text_DB[i]]
+        end
+    end
+    return iter
+end
+---------------------------
+-- Advanced Scrolling Combat Text Leveling
+---------------------------
+local col_AD = 4
+local x_AD = 0
+for v in pairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
+	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
+	b.Text:SetText(L[v])
+	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v])
+	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"][v] = s:GetChecked() end)
+	x_AD=x_AD+1
+end
+---------------------------
+-- Advanced Scrolling Combat Stats
+---------------------------
+local col_AD_3 = 4
+local x_AD_3 = 0
+for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
+    local b = CreateStatToggle(Stat, settings, content8)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_3 % col_AD_3), -20 + (- b:GetHeight()-70) * math.floor(x_AD_3/col_AD_3))
+    x_AD_3=x_AD_3+1
+    CreateGainsLossToggles(b, settings, content8)
+end
+---------------------------
+-- Advanced Scrolling Combat Text Messages
+---------------------------
+local col_AD_4 = 4
+local x_AD_4 = 0
+for v in pairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"]) do
+	local b = CreateFrame("CheckButton", nil, content10, "InterfaceOptionsCheckButtonTemplate")
+	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-5) * math.floor(x_AD_4/col_AD_4))
+	b.Text:SetText(L[v])
+	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v])
+	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v] = s:GetChecked() end)
+	x_AD_4=x_AD_4+1
+end
+local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+local Buffsfading = Buttons("Fading Buffs", L["Fading Buffs Alert"], 20, -60, L["Buff has 5 seconds left"], L["Announces when a buff you gained is about to fade"])
 ---------------------------
 --Rogue
 ---------------------------

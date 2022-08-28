@@ -1,6 +1,7 @@
 local isTbcWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE)
+local addonName, ASCT_Locale = ...;
 if isTbcWow then
-ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
+ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Cold Blood"] = 14177,

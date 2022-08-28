@@ -1,6 +1,7 @@
-local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+local isRetailWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
+local addonName, ASCT_Locale = ...;
 if isRetailWow then
-ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
+ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

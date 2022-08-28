@@ -1,6 +1,7 @@
-local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
+local isClassicWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
+local addonName, ASCT_Locale = ...;
 if isClassicWow then
-ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
+ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Cold Blood"] = 14177,

@@ -1,4 +1,6 @@
+local addonName, ASCT_Locale = ...;
 local callbacks = {}
+
 local localizedNames = {}
 local englishNames = {}
 local englishToIcons = {}
@@ -6,7 +8,7 @@ local englishNamesIsKnown = {}
 function ASCT_LoadSpellNames()
   local waiting = {}
   local left = 0
-  for key, spellID in pairs(ASCT_englishToSpellID) do
+  for key, spellID in pairs(ASCT_Locale.ASCT_Locale) do
     if waiting[spellID] == nil then
       waiting[spellID] = true
       left = left + 1
@@ -22,7 +24,7 @@ function ASCT_LoadSpellNames()
     end
     if left <= 0 then
       loadingFrame:SetScript("OnEvent", nil)
-      for key, spellID in pairs(ASCT_englishToSpellID) do
+      for key, spellID in pairs(ASCT_Locale.ASCT_Locale) do
         local localeName, _, icon = GetSpellInfo(spellID)
         local IsSpellKnwon = GetSpellInfo(localeName) ~= nil
         localizedNames[localeName or ""] = key
@@ -37,7 +39,7 @@ function ASCT_LoadSpellNames()
     end
   end)
 
-  for key, spellID in pairs(ASCT_englishToSpellID) do
+  for key, spellID in pairs(ASCT_Locale.ASCT_Locale) do
     C_Spell.RequestLoadSpellData(spellID)
   end
 end

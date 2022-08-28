@@ -1,6 +1,7 @@
-local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
+local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
+local addonName, ASCT_Locale = ...;
 if isWrathWow then
-ASCT_englishToSpellID = {--Advanced Scrolling Combat Text Localizing Table
+ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
 --Rogue
 ["Adrenaline Rush"] = 13750,
 ["Blade Flurry"] = 13877,

@@ -1,6 +1,6 @@
-local is_Classic_Wow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
-local is_Tbc_Wrath_Wow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE) or (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND)
-local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+local is_Classic_Wow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
+local is_Tbc_Wrath_Wow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE) or (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
+local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
 local L = ASDC_LOCALE_TABLE
 
 if is_Classic_Wow then
@@ -138,7 +138,7 @@ f:SetScript("OnEvent", --Run when our event fires
    end
    end
 )
-elseif isRetailWow then
+elseif isShadowlandsWow then
    local SARTE = ... --This assigns the name of the addon to SARTE
    local start, duration --nil vars used later
 

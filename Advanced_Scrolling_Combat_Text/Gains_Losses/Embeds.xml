@@ -9,5 +9,6 @@
     <Script file="Experience_Gains.lua"/>
     <Script file="Level_Up.lua"/>
     <Script file="Resource_Loss.lua"/>
+    <Script file="Health_Gains.lua"/>
     <Script file="Skill_Up.lua"/>
 </UI>

@@ -1,0 +1,6 @@
+<Ui>
+    <Script file="Achievement.lua"/>
+    <Script file="Player_Death.lua"/>
+    <Script file="Duel_Request.lua"/>
+    <Script file="Error_Messages.lua"/>
+</Ui>

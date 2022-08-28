@@ -1,7 +1,6 @@
-local isRetailWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
+local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
 
-
-if isRetailWow then
+if isShadowlandsWow then
 local L = ASDC_LOCALE_TABLE
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later

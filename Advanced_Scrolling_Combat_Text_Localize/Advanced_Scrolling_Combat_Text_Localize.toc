@@ -1,4 +1,4 @@
-## Interface: 90205
+## Interface: 90207
 ## Interface-Classic: 11403
 ## Interface-BCC: 20504
 ## Interface-Wrath: 30400
@@ -31,6 +31,8 @@
 ## X-Wago-ID: WYK9pO6L
 # Table Localize
 localize.lua
+# Namespace
+Namespace.lua
 # Spells Localize
 Advanced_Scrolling_Combat_Text-Spells-Table-Vanilla.lua
 Advanced_Scrolling_Combat_Text-Spells-Table-TBC.lua

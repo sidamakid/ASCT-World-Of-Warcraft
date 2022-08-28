@@ -1,4 +1,4 @@
-local isClassicWow = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
+local isClassicWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
 local L = ASDC_LOCALE_TABLE
 local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
 if isClassicWow then

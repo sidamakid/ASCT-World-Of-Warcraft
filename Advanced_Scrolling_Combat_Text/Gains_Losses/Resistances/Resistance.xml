@@ -1,0 +1,7 @@
+<Ui>
+    <Script file="Shadow.lua"/>
+    <Script file="Fire.lua"/>
+    <Script file="Frost.lua"/>
+    <Script file="Nature.lua"/>
+    <Script file="Arcane.lua"/>
+</Ui>
