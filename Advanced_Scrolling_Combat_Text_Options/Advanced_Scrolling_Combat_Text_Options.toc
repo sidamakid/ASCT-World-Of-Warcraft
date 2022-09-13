@@ -36,6 +36,8 @@ Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\lib.xml
+# Namespace
+Namespace.lua
 # Color picker first
 Color_picker.lua
 # Then saved variables

@@ -1,0 +1,9 @@
+<UI>
+    <Script file="Namespace.lua"/>
+    <Script file="SCT_Check.lua"/>
+    <Include file= "Auras\Auras.xml"/>
+    <Include file="Player_Changes\Player_Embeds.xml"/>
+    <Include file="SARTE-Text\SARTE-Text.xml"/>
+    <Include file="SARTE-Text-Shared-Spell-Cooldowns\SharedSpells.xml"/>
+    <Include file="Gains_Losses\Gains_Losses.xml"/>
+</UI>

@@ -33,11 +33,9 @@
 localize.lua
 # Namespace
 Namespace.lua
+# Spells Tables
+Spell_Tables\Spell_Tables.xml
 # Spells Localize
-Advanced_Scrolling_Combat_Text-Spells-Table-Vanilla.lua
-Advanced_Scrolling_Combat_Text-Spells-Table-TBC.lua
-Advanced_Scrolling_Combat_Text-Spells-Table-Wrath.lua
-Advanced_Scrolling_Combat_Text-Spells-Table.lua
 Advanced_Scrolling_Combat_Text-Spells.lua
 # locales
 locale\locale.xml

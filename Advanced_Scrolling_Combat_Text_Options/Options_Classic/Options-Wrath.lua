@@ -1,6 +1,7 @@
 local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
 if isWrathWow then
 local L = ASDC_LOCALE_TABLE
+local addonName, ASCT_Options = ...;
 local function InitializeOptions()
 local f = CreateFrame("Frame")
 
@@ -76,7 +77,6 @@ local defaults = {
 		["Psychic Scream"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Mind Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Silence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Devouring Plague"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Dispersion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Shadowfiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
       },
@@ -786,27 +786,12 @@ local function CreateSpellToggle(spellName, settings, parent)
     tex:SetTexture(ASCT_GetLocalizedIcon(spellName))
     return b
 end
-----------------------------
---Name sorting
-----------------------------
-local function pairsByKeys (t, g)
-    for n in pairs(t) do table.insert(Advanced_Scrolling_Combat_Text_DB, n) end
-    table.sort(Advanced_Scrolling_Combat_Text_DB, g)
-    local i = 0      -- iterator variable
-    local iter = function ()   -- iterator function
-        i = i + 1
-        if Advanced_Scrolling_Combat_Text_DB[i] == nil then return nil
-        else return Advanced_Scrolling_Combat_Text_DB[i], t[Advanced_Scrolling_Combat_Text_DB[i]]
-        end
-    end
-    return iter
-end
 ---------------------------
 -- Advanced Scrolling Combat Text Leveling
 ---------------------------
 local col_AD = 4
 local x_AD = 0
-for v in pairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
+for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
 	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
 	b.Text:SetText(L[v])
@@ -830,7 +815,7 @@ end
 ---------------------------
 local col_AD_4 = 4
 local x_AD_4 = 0
-for v in pairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"]) do
+for v in ASCT_Options:PairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"]) do
 	local b = CreateFrame("CheckButton", nil, content10, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-5) * math.floor(x_AD_4/col_AD_4))
 	b.Text:SetText(L[v])

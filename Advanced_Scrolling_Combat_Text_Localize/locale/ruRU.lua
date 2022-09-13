@@ -166,4 +166,11 @@ if locale == "ruRU" then
  L["Fire Resistance"] = "Огнестойкость";
  L["Nature Resistance"] = "Устойчивость к природе";
  L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."] = "Расширенная прокрутка боевого текста успешно загружена. Для загрузки панели параметров. Введите /ASCT или щелкните значок мини-карты.";
+ --New things 9/2/2022
+ L["Holy Power"] = "Святая Сила";
+ L["Astral Power"] = "Астральная сила";
+ L["Maelstrom"] = "Водоворот";
+ L["Insanity"] = "Безумие";
+ L["Fury"] = "Ярость";
+ L["Focus"] = "Фокус";
 end

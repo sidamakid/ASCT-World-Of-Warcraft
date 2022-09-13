@@ -166,4 +166,11 @@ if locale == "enUS" then
  L["Fire Resistance"] = "Fire Resistance";
  L["Nature Resistance"] = "Nature Resistance";
  L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."] = "Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon.";
+ --New things 9/2/2022
+ L["Holy Power"] = "Holy Power";
+ L["Astral Power"] = "Astral Power";
+ L["Maelstrom"] = "Maelstrom";
+ L["Insanity"] = "Insanity";
+ L["Fury"] = "Fury";
+ L["Focus"] = "Focus";
 end

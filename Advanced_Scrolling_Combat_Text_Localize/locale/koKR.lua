@@ -166,4 +166,11 @@ if locale == "koKR" then
  L["Fire Resistance"] = "내화성";
  L["Nature Resistance"] = "자연 저항";
  L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."] = "고급 스크롤 전투 텍스트가 성공적으로 로드되었습니다. 옵션 패널을 로드합니다. /ASCT를 입력하거나 미니 맵 아이콘을 클릭합니다.";
+ --New things 9/2/2022
+ L["Holy Power"] = "거룩한 권능";
+ L["Astral Power"] = "아스트랄 파워";
+ L["Maelstrom"] = "큰 소용돌이";
+ L["Insanity"] = "광기";
+ L["Fury"] = "성";
+ L["Focus"] = "초점";
 end

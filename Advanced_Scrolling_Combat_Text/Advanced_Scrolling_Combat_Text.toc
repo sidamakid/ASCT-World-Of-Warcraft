@@ -34,25 +34,5 @@
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 Libs\LibClassicDurations\LibClassicDurations.xml
-# Name Space
-Namespace.lua
-# SCT_Check
-SCT_Check.lua
-# Auras
-Auras\Auras.xml
-# Player_Changes
-Player_Changes\Player_Embeds.xml
-# SARTE-Text-Normal-Text
-SARTE-Text.lua
-# SARTE-Text-Classic
-SARTE-Text-Classic\SARTE-Text-Vanilla_Tbc.lua
-SARTE-Text-Classic\SARTE-Text-Wrath.lua
-# Racials
-SARTE-Text-Racials.lua
-# Shared spell Coolodnws
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Shocks.lua
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Traps.lua
-SARTE-Text-Shared-Spell-Cooldowns\SARTE-Text-Lust.lua
-# Gains_Losses
-Gains_Losses\Embeds.xml
-Gains_Losses\Resistances\Resistance.xml
+# Embeds
+Embeds.xml

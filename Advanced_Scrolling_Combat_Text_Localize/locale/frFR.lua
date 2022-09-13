@@ -166,4 +166,11 @@ if locale == "frFR" then
  L["Fire Resistance"] = "Résistance au feu";
  L["Nature Resistance"] = "Résistance à la nature";
  L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."] = "Texte de combat à défilement avancé chargé avec succès. Pour charger le panneau d’options. Tapez /ASCT ou cliquez sur l’icône de la mini-carte.";
+ --New things 9/2/2022
+ L["Holy Power"] = "Puissance Sainte";
+ L["Astral Power"] = "Puissance astrale";
+ L["Maelstrom"] = "Tourbillon";
+ L["Insanity"] = "Folie";
+ L["Fury"] = "Furie";
+ L["Focus"] = "Foyer";
 end

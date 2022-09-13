@@ -166,4 +166,11 @@ if locale == "zhCN" then
  L["Fire Resistance"] = "耐火性";
  L["Nature Resistance"] = "耐自然性";
  L["Advanced Scrolling Combat Text successfully Loaded. To load the options panel. Type /ASCT or click the mini map Icon."] = "高级滚动战斗文本已成功加载。加载选项面板。键入 /ASCT 或单击迷你地图图标。";
+ --New things 9/2/2022
+ L["Holy Power"] = "圣力";
+ L["Astral Power"] = "星体力量";
+ L["Maelstrom"] = "漩涡";
+ L["Insanity"] = "精神错乱";
+ L["Fury"] = "愤怒";
+ L["Focus"] = "重点";
 end
