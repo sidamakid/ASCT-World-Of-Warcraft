@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--Spanish (Spain)
+-------------------------------------
 if locale == "esES" then
  --Rogue
  L["Rogue"] = "Pillo";
@@ -172,4 +175,21 @@ if locale == "esES" then
  L["Insanity"] = "Locura";
  L["Fury"] = "Furia";
  L["Focus"] = "Centro de atención";
+ --New things 9/18/2022
+ L["Hit Rating"] = "Clasificación de aciertos";
+ L["Critical Strike Rating"] = "Calificación de ataque crítico";
+ L["Expertise Rating"] = "Calificación de experiencia";
+ L["Resilience Rating"] = "Calificación de resiliencia";
+ L["Dodge Rating"] = "Clasificación dodge";
+ L["Defense Rating"] = "Calificación de defensa";
+ L["Parry Rating"] = "Calificación de Parry";
+ L["Block Rating"] = "Clasificación de bloques";
+ L["Haste Rating"] = "Calificación de prisa";
+ L["Spell Power"] = "Poder de hechizo";
+ L["Unsupported_Line_1"] = "Estás ejecutando Texto de combate de desplazamiento avanzado en una versión de juego no compatible.";
+ L["Unsupported_Line_2"] = "El complemento no funciona en servidores privados.";
+ L["Unsupported_Line_3"] = "El complemento solo es compatible con Vanilla, TBC Classic, Wrath Classic y Retail.";
+ L["Unsupported_Line_4"] = "¿Desea deshabilitar el complemento? ¿O mantenerlo habilitado?";
+ L["Keep Enabled"] = "Mantener habilitado";
+ L["Disable"] = "Inutilizar";
 end

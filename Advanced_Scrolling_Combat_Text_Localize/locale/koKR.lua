@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--Korean
+-------------------------------------
 if locale == "koKR" then
  --Rogue
  L["Rogue"] = "악성";
@@ -173,4 +176,21 @@ if locale == "koKR" then
  L["Insanity"] = "광기";
  L["Fury"] = "성";
  L["Focus"] = "초점";
+ --New things 9/18/2022
+ L["Hit Rating"] = "히트 등급";
+ L["Critical Strike Rating"] = "치명타 등급";
+ L["Expertise Rating"] = "전문성 등급";
+ L["Resilience Rating"] = "복원력 등급";
+ L["Dodge Rating"] = "닷지 등급";
+ L["Defense Rating"] = "방위 등급";
+ L["Parry Rating"] = "패리 등급";
+ L["Block Rating"] = "블록 등급";
+ L["Haste Rating"] = "급한 평가";
+ L["Spell Power"] = "주문력";
+ L["Unsupported_Line_1"] = "지원되지 않는 게임 버전에서 고급 스크롤 전투 텍스트를 실행하고 있습니다.";
+ L["Unsupported_Line_2"] = "애드온은 개인 서버에서 작동하지 않습니다.";
+ L["Unsupported_Line_3"] = "애드온은 바닐라, TBC 클래식, 분노 클래식 및 소매점에서만 지원됩니다.";
+ L["Unsupported_Line_4"] = "애드온을 비활성화하시겠습니까? 아니면 활성화 상태를 유지합니까?";
+ L["Keep Enabled"] = "사용 유지";
+ L["Disable"] = "비활성화";
 end

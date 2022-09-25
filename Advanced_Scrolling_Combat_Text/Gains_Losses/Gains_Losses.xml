@@ -12,4 +12,5 @@
     <Script file="Health_Gains.lua"/>
     <Script file="Skill_Up.lua"/>
     <Include file="Resistances\Resistance.xml"/>
+    <Include file="Special Stat Gains\Special_Stats.xml"/>
 </UI>

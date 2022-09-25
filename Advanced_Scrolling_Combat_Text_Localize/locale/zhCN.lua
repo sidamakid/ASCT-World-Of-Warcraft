@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--Chinese Simplifed
+-------------------------------------
 if locale == "zhCN" then
  --Rogue
  L["Rogue"] = "潜行者";
@@ -173,4 +176,21 @@ if locale == "zhCN" then
  L["Insanity"] = "精神错乱";
  L["Fury"] = "愤怒";
  L["Focus"] = "重点";
+ --New things 9/18/2022
+ L["Hit Rating"] = "命中率";
+ L["Critical Strike Rating"] = "严重打击评级";
+ L["Expertise Rating"] = "专业技能评级";
+ L["Resilience Rating"] = "弹性等级";
+ L["Dodge Rating"] = "道奇评级";
+ L["Defense Rating"] = "防御评级";
+ L["Parry Rating"] = "帕里评级";
+ L["Block Rating"] = "区块评级";
+ L["Haste Rating"] = "仓促评级";
+ L["Spell Power"] = "法术力量";
+ L["Unsupported_Line_1"] = "您正在运行不受支持的游戏版本中的高级滚动战斗文本。";
+ L["Unsupported_Line_2"] = "插件在专用服务器上不起作用。";
+ L["Unsupported_Line_3"] = "该插件仅在香草，待定经典，愤怒经典和零售中受支持。";
+ L["Unsupported_Line_4"] = "是否要禁用插件？还是保持启用状态？";
+ L["Keep Enabled"] = "保持启用状态";
+ L["Disable"] = "禁用";
 end

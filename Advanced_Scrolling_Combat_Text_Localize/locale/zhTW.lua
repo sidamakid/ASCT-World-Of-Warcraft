@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--Chinese Traditional
+-------------------------------------
 if locale == "zhTW" then
  --Rogue
  L["Rogue"] = "流氓";
@@ -173,4 +176,21 @@ if locale == "zhTW" then
  L["Insanity"] = "精神錯亂";
  L["Fury"] = "憤怒";
  L["Focus"] = "重點";
+ --New things 9/18/2022
+ L["Hit Rating"] = "命中率";
+ L["Critical Strike Rating"] = "嚴重打擊評級";
+ L["Expertise Rating"] = "專業技能評級";
+ L["Resilience Rating"] = "彈性等級";
+ L["Dodge Rating"] = "道奇評級";
+ L["Defense Rating"] = "防禦評級";
+ L["Parry Rating"] = "帕里評級";
+ L["Block Rating"] = "區塊評級";
+ L["Haste Rating"] = "倉促評級";
+ L["Spell Power"] = "法術力量";
+ L["Unsupported_Line_1"] = "您正在運行不受支援的遊戲版本中的高級滾動戰鬥文字。";
+ L["Unsupported_Line_2"] = "外掛程式在專用伺服器上不起作用。";
+ L["Unsupported_Line_3"] = "該外掛程式僅在香草，TBC經典，憤怒經典和零售中受支援。";
+ L["Unsupported_Line_4"] = "是否要禁用外掛程式？還是保持啟用狀態？";
+ L["Keep Enabled"] = "保持啟用狀態";
+ L["Disable"] = "禁用";
 end

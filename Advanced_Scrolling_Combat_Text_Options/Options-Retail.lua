@@ -747,7 +747,6 @@ local defaults = {
 	},
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
-		["Fading Buffs"] = false,
 	},
 	["Advanced_Scrolling_Combat_Text_Messages"] = {
 		["Inventory full"] = false,
@@ -1134,7 +1133,6 @@ for v in ASCT_Options:PairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Sc
 	x_AD_4=x_AD_4+1
 end
 local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
-local Buffsfading = Buttons("Fading Buffs", L["Fading Buffs Alert"], 20, -60, L["Buff has 5 seconds left"], L["Announces when a buff you gained is about to fade"])
 ---------------------------
 --Rogue
 ---------------------------

@@ -106,6 +106,7 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
 ["Shadow Cleave"] = 50581,
 ["Shadowburn"] = 17877,
 ["Shadowflame"] = 47897,
+["Shadow Ward"] = 6229,
 ["Shadowfury"] = 30283,
 ["Soulshatter"] = 29858,
 --Druid

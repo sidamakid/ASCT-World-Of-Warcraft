@@ -1,4 +1,4 @@
-## Interface: 00000
+## Interface: 11403
 ## Version: 8.4.9
 ## Title: Advanced Scrolling Combat Text Options
 ## Title-koKR: 고급 스크롤 전투 텍스트 옵션
@@ -28,3 +28,10 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# Libs
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\lib.xml
+# Embeds
+Embeds.xml

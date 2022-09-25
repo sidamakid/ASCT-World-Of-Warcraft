@@ -1,0 +1,7 @@
+<UI>
+    <Script file="localize.lua"/>
+    <Script file="Namespace.lua"/>
+    <Include file="Spell_Tables\Spell_Tables.xml"/>
+    <Script file="Advanced_Scrolling_Combat_Text-Spells.lua"/>
+    <Include file="locale\locale.xml"/>
+</UI>

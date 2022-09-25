@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--Spanish Russian
+-------------------------------------
 if locale == "ruRU" then
  --Rogue
  L["Rogue"] = "Жулик";
@@ -173,4 +176,21 @@ if locale == "ruRU" then
  L["Insanity"] = "Безумие";
  L["Fury"] = "Ярость";
  L["Focus"] = "Фокус";
+ --New things 9/18/2022
+ L["Hit Rating"] = "Рейтинг хитов";
+ L["Critical Strike Rating"] = "Критический рейтинг ударов";
+ L["Expertise Rating"] = "Рейтинг экспертизы";
+ L["Resilience Rating"] = "Рейтинг устойчивости";
+ L["Dodge Rating"] = "Додж Рейтинг";
+ L["Defense Rating"] = "Рейтинг обороны";
+ L["Parry Rating"] = "Парри Рейтинг";
+ L["Block Rating"] = "Рейтинг блока";
+ L["Haste Rating"] = "Рейтинг спешки";
+ L["Spell Power"] = "Сила заклинаний";
+ L["Unsupported_Line_1"] = "Вы используете расширенный прокручиваемый боевой текст в неподдерживаемой версии игры.";
+ L["Unsupported_Line_2"] = "Аддон не работает на частных серверах.";
+ L["Unsupported_Line_3"] = "Аддон поддерживается только в Vanilla, TBC Classic, Wrath Classic и Retail.";
+ L["Unsupported_Line_4"] = "Хотите отключить аддон? Или сохранить его включенным?";
+ L["Keep Enabled"] = "Сохранить включенным";
+ L["Disable"] = "Отключить";
 end

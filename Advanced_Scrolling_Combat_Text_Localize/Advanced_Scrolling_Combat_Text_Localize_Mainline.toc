@@ -1,4 +1,4 @@
-## Interface: 00000
+## Interface: 90207
 ## Version: 8.4.9
 ## Title: Advanced Scrolling Combat Text localize
 ## Title-koKR: 고급 스크롤 전투 텍스트 현지화
@@ -26,5 +26,5 @@
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# Embeds
-Unsuppoted Embeds.xml
+# Embeds Localize
+Embeds.xml

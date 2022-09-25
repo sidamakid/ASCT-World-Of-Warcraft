@@ -1,4 +1,3 @@
 <Ui>
     <Script file="SDFT.lua"/>
-    <Script file="SBFT.lua"/>
 </Ui>

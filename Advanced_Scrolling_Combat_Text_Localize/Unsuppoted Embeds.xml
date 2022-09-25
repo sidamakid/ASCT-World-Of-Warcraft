@@ -1,0 +1,4 @@
+<UI>
+    <Script file="localize.lua"/>
+    <Include file="locale\locale.xml"/>
+</UI>

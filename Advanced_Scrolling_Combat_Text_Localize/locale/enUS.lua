@@ -1,5 +1,8 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
+-------------------------------------
+--English
+-------------------------------------
 if locale == "enUS" then
  --Rogue
  L["Rogue"] = "Rogue";
@@ -173,4 +176,21 @@ if locale == "enUS" then
  L["Insanity"] = "Insanity";
  L["Fury"] = "Fury";
  L["Focus"] = "Focus";
+ --New things 9/18/2022
+ L["Hit Rating"] = "Hit Rating";
+ L["Critical Strike Rating"] = "Critical Strike Rating";
+ L["Expertise Rating"] = "Expertise Rating";
+ L["Resilience Rating"] = "Resilience Rating";
+ L["Dodge Rating"] = "Dodge Rating";
+ L["Defense Rating"] = "Defense Rating";
+ L["Parry Rating"] = "Parry Rating";
+ L["Block Rating"] = "Block Rating";
+ L["Haste Rating"] = "Haste Rating";
+ L["Spell Power"] = "Spell Power";
+ L["Unsupported_Line_1"] = "You're running Advanced Scrolling Combat Text in an Unsupported game Version.";
+ L["Unsupported_Line_2"] = "The Addon does not work on Private Servers.";
+ L["Unsupported_Line_3"] = "The addon is only supported in Vanilla, TBC Classic, Wrath Classic, and Retail.";
+ L["Unsupported_Line_4"] = "Would you like to Disable the addon? Or keep it enabled?";
+ L["Keep Enabled"] = "Keep Enabled";
+ L["Disable"] = "Disable";
 end

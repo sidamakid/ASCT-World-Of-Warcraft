@@ -1,0 +1,12 @@
+<UI>
+    <Script file="Hit Rating.lua"/>
+    <Script file="Critcal Strike.lua"/>
+    <Script file="Expertise.lua"/>
+    <Script file="Resilience.lua"/>
+    <Script file="Dodge Rating.lua"/>
+    <Script file="Defense Rating.lua"/>
+    <Script file="Parry Rating.lua"/>
+    <Script file="Block.lua"/>
+    <Script file="Haste Rating.lua"/>
+    <Script file="Spell Power.lua"/>
+</UI>
