@@ -54,6 +54,9 @@ if locale == "frFR" then
  L["Brewmaster"] = "Maître brasseur";
  L["Mistweaver"] = "Tisserand de brume";
  L["Windwalker"] = "Marcheur de vent";
+ --Evoker
+ L["Preservation"] = "Préservation";
+ L["Devastation"] = "Dévastation";
   --Shared-Spec-names
  L["Frost"] = "Gel";
  L["Restoration"] = "Restauration";
@@ -189,7 +192,7 @@ if locale == "frFR" then
  L["Spell Power"] = "Puissance du sort";
  L["Unsupported_Line_1"] = "Vous exécutez Advanced Scrolling Combat Text dans une version de jeu non prise en charge.";
  L["Unsupported_Line_2"] = "L’addon ne fonctionne pas sur les serveurs privés.";
- L["Unsupported_Line_3"] = "L’addon n’est pris en charge que dans Vanilla, TBC Classic, Wrath Classic et Retail.";
+ L["Unsupported_Line_3"] = "L’addon n’est pris en charge que dans Season of Mastery et Wrath Classic.";
  L["Unsupported_Line_4"] = "Souhaitez-vous désactiver l’addon? Ou le garder activé?";
  L["Keep Enabled"] = "Rester activé";
  L["Disable"] = "Désactiver";

@@ -54,6 +54,9 @@ if locale == "ruRU" then
  L["Brewmaster"] = "Пивовар";
  L["Mistweaver"] = "Туманоткачиха";
  L["Windwalker"] = "Ветрогенератор";
+ --Evoker
+ L["Preservation"] = "Сохранение";
+ L["Devastation"] = "Опустошение";
   --Shared-Spec-names
  L["Frost"] = "Мороз";
  L["Restoration"] = "Восстановление";
@@ -189,7 +192,7 @@ if locale == "ruRU" then
  L["Spell Power"] = "Сила заклинаний";
  L["Unsupported_Line_1"] = "Вы используете расширенный прокручиваемый боевой текст в неподдерживаемой версии игры.";
  L["Unsupported_Line_2"] = "Аддон не работает на частных серверах.";
- L["Unsupported_Line_3"] = "Аддон поддерживается только в Vanilla, TBC Classic, Wrath Classic и Retail.";
+ L["Unsupported_Line_3"] = "Аддон поддерживается только в Season of Mastery и Wrath Classic.";
  L["Unsupported_Line_4"] = "Хотите отключить аддон? Или сохранить его включенным?";
  L["Keep Enabled"] = "Сохранить включенным";
  L["Disable"] = "Отключить";

@@ -2,5 +2,5 @@
     <Script file="Resource_Loss-Classic.lua"/>
     <Script file="Resource_Loss-TBC.lua"/>
     <Script file="Resource_Loss-WOTLK.lua"/>
-    <Script file="Resource_Loss-SL.lua"/>
+    <Script file="Resource_Loss-DF.lua"/>
 </UI>

@@ -54,6 +54,9 @@ if locale == "zhCN" then
  L["Brewmaster"] = "酒仙";
  L["Mistweaver"] = "织雾";
  L["Windwalker"] = "踏风";
+ --Evoker
+ L["Preservation"] = "保存";
+ L["Devastation"] = "破坏";
   --Shared-Spec-names
  L["Frost"] = "冰霜";
  L["Restoration"] = "恢复";
@@ -189,7 +192,7 @@ if locale == "zhCN" then
  L["Spell Power"] = "法术力量";
  L["Unsupported_Line_1"] = "您正在运行不受支持的游戏版本中的高级滚动战斗文本。";
  L["Unsupported_Line_2"] = "插件在专用服务器上不起作用。";
- L["Unsupported_Line_3"] = "该插件仅在香草，待定经典，愤怒经典和零售中受支持。";
+ L["Unsupported_Line_3"] = "该插件仅在精通季节和愤怒经典中受支持。";
  L["Unsupported_Line_4"] = "是否要禁用插件？还是保持启用状态？";
  L["Keep Enabled"] = "保持启用状态";
  L["Disable"] = "禁用";

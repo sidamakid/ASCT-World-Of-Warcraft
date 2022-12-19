@@ -313,33 +313,10 @@ local defaults = {
 		["Resource lost"] = false,
 		["Death Quadrants"] = false,
 		["Duel Requests"] = false,
+		["Sent Mail"] = false,
 	},
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
-	},
-	["Advanced_Scrolling_Combat_Text_Messages"] = {
-		["Inventory full"] = false,
-		["Locked Items"] = false,
-		["Group Invites"] = false,
-		["Quest Accepted"] = false,
-		["Quest Completed"] = false,
-		["Quest Log Full"] = false,
-		["Trade Requests"] = false,
-		["Trade Complete"] = false,
-		["Trade Canceled"] = false,
-		["Facing the wrong way"] = false,
-		["Friends come Online"] = false,
-		["Friends go Offline"] = false,
-		["Zone discovery"] = false,
-		["Unlearned Skills"] = false,
-		["Rested"] = false,
-		["Sent Mail"] = false,
-		["Dungeon Difficulty Changed"] = false,
-		["Players Invited"] = false,
-		["Player Left your group"] = false,
-		["Player joins your group"] = false,
-		["Pvp On"] = false,
-		["Pvp Off"] = false,
 	},
 }
 ---------------------------
@@ -352,8 +329,7 @@ ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
 ASCT_Config:SetSize(950, 650);
-ASCT_Config:SetMinResize(950,200)
-ASCT_Config:SetMaxResize(950,650)
+ASCT_Config:SetResizeBounds(950,200, 950,650)
 ASCT_Config:RegisterForDrag("LeftButton")
 ASCT_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -506,7 +482,7 @@ end
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Messages"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -653,7 +629,7 @@ end
 ---------------------------
 local col_AD = 4
 local x_AD = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
+for v in ASCT_Options:PairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
 	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
 	b.Text:SetText(L[v])
@@ -673,18 +649,8 @@ for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrollin
     CreateGainsLossToggles(b, settings, content8)
 end
 ---------------------------
--- Advanced Scrolling Combat Text Messages
+--Debuffs fading
 ---------------------------
-local col_AD_4 = 4
-local x_AD_4 = 0
-for v in ASCT_Options:PairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"]) do
-	local b = CreateFrame("CheckButton", nil, content10, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-5) * math.floor(x_AD_4/col_AD_4))
-	b.Text:SetText(L[v])
-	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v])
-	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v] = s:GetChecked() end)
-	x_AD_4=x_AD_4+1
-end
 local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
 
 ---------------------------

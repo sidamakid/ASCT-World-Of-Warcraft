@@ -1,4 +1,4 @@
-local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
+local isShadowlandsWow = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
 if not isShadowlandsWow then
 local L = ASDC_LOCALE_TABLE
 local lastStat = -1

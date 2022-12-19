@@ -1,5 +1,5 @@
-local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
-if not isShadowlandsWow then
+local isDragonFlightWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_DRAGONFLIGHT)
+if not isDragonFlightWow then
 local L = ASDC_LOCALE_TABLE
 local lastStat = -1
 local f = CreateFrame("Frame")

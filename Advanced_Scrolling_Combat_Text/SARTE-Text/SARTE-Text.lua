@@ -1,6 +1,6 @@
-local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
+local isDragonFlightWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_DRAGONFLIGHT)
 
-if isShadowlandsWow then
+if isDragonFlightWow then
 local L = ASDC_LOCALE_TABLE
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
@@ -27,6 +27,7 @@ f:SetScript("OnEvent", --Run when our event fires
       local dbSettings_Death_Knight = Advanced_Scrolling_Combat_Text_DB["Blood"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Frost_DK"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Unholy"][Spell_Localize]
       local dbSettings_Monk = Advanced_Scrolling_Combat_Text_DB["Brewmaster"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Mistweaver"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Windwalker"][Spell_Localize]
       local dbSettings_Demon_Hunter = Advanced_Scrolling_Combat_Text_DB["Havoc"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Vengeance"][Spell_Localize]
+      local dbSettings_Evoker = Advanced_Scrolling_Combat_Text_DB["Preservation"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Devastation"][Spell_Localize]
       if
       --Rogue
       dbSettings_Rogue and (dbSettings_Rogue.SpellEnable == true) or
@@ -51,7 +52,9 @@ f:SetScript("OnEvent", --Run when our event fires
       --Monk
       dbSettings_Monk and (dbSettings_Monk.SpellEnable == true) or
       --Demon_Hunter
-      dbSettings_Demon_Hunter and (dbSettings_Demon_Hunter.SpellEnable)
+      dbSettings_Demon_Hunter and (dbSettings_Demon_Hunter.SpellEnable) or
+      --Evoker
+      dbSettings_Evoker and (dbSettings_Evoker.SpellEnable == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -64,7 +67,7 @@ f:SetScript("OnEvent", --Run when our event fires
                local name, _, icon = GetSpellInfo(spellName)
                local details = " "
                local dbSettings = dbSettings_Rogue or dbSettings_Priest or dbSettings_Shaman or dbSettings_Warrior or dbSettings_Warlock or dbSettings_Paladin or dbSettings_Mage or dbSettings_Druid or dbSettings_Hunter or dbSettings_Death_Knight
-               or dbSettings_Monk or dbSettings_Demon_Hunter
+               or dbSettings_Monk or dbSettings_Demon_Hunter or dbSettings_Evoker
                if dbSettings.iconEnable then details = details..string.format("|T%d:18|t ".." ", icon) end
                if dbSettings.nameEnable then details = details..name.." " end
                if dbSettings.iconEnable == false and dbSettings.nameEnable == false then

@@ -54,6 +54,9 @@ if locale == "koKR" then
  L["Brewmaster"] = "브루마스터";
  L["Mistweaver"] = "안개 직조";
  L["Windwalker"] = "윈드워커";
+ --Evoker
+ L["Preservation"] = "보존";
+ L["Devastation"] = "폐허";
  --Shared-Spec-names
  L["Frost"] = "서리";
  L["Restoration"] = "복구";
@@ -189,7 +192,7 @@ if locale == "koKR" then
  L["Spell Power"] = "주문력";
  L["Unsupported_Line_1"] = "지원되지 않는 게임 버전에서 고급 스크롤 전투 텍스트를 실행하고 있습니다.";
  L["Unsupported_Line_2"] = "애드온은 개인 서버에서 작동하지 않습니다.";
- L["Unsupported_Line_3"] = "애드온은 바닐라, TBC 클래식, 분노 클래식 및 소매점에서만 지원됩니다.";
+ L["Unsupported_Line_3"] = "애드온은 마스터리 시즌과 분노 클래식에서만 지원됩니다.";
  L["Unsupported_Line_4"] = "애드온을 비활성화하시겠습니까? 아니면 활성화 상태를 유지합니까?";
  L["Keep Enabled"] = "사용 유지";
  L["Disable"] = "비활성화";

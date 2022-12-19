@@ -1,5 +1,5 @@
-local isShadowLandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
-if isShadowLandsWow then
+local isDragonFlightWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_DRAGONFLIGHT)
+if isDragonFlightWow then
 local L = ASDC_LOCALE_TABLE
 local lastPower = nil
 local power

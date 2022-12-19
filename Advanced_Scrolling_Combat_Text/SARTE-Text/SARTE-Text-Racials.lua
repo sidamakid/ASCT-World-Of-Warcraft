@@ -1,6 +1,6 @@
 local is_Classic_Wow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
 local is_Tbc_Wrath_Wow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE) or (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
-local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
+local isDragonFlightWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_DRAGONFLIGHT)
 local L = ASDC_LOCALE_TABLE
 
 if is_Classic_Wow then
@@ -138,7 +138,7 @@ f:SetScript("OnEvent", --Run when our event fires
    end
    end
 )
-elseif isShadowlandsWow then
+elseif isDragonFlightWow then
    local SARTE = ... --This assigns the name of the addon to SARTE
    local start, duration --nil vars used later
 
@@ -174,6 +174,7 @@ elseif isShadowlandsWow then
       local db_Vulpera = Advanced_Scrolling_Combat_Text_DB["Vulpera"][Spell_Localize]
       local db_Zandalari_Troll = Advanced_Scrolling_Combat_Text_DB["Zandalari Troll"][Spell_Localize]
       local db_Maghar_Orc = Advanced_Scrolling_Combat_Text_DB["Mag'har Orc"][Spell_Localize]
+      local db_Dracthyr = Advanced_Scrolling_Combat_Text_DB["Dracthyr"][Spell_Localize]
       if
       --Races
       db_Human and (db_Human.SpellEnable == true) or
@@ -198,7 +199,8 @@ elseif isShadowlandsWow then
       db_Highmountain_Tauren and (db_Highmountain_Tauren.SpellEnable == true) or
       db_Vulpera and (db_Vulpera.SpellEnable == true) or
       db_Zandalari_Troll and (db_Zandalari_Troll.SpellEnable == true) or
-      db_Maghar_Orc and (db_Maghar_Orc.SpellEnable == true)
+      db_Maghar_Orc and (db_Maghar_Orc.SpellEnable == true) or
+      db_Dracthyr and (db_Dracthyr.SpellEnable == true)
       then
          local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          spellFrame:SetScript("OnUpdate", --Run forever!
@@ -218,6 +220,7 @@ elseif isShadowlandsWow then
                 Advanced_Scrolling_Combat_Text_DB["Kul Tiran"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Goblin"][Spell_Localize] or
                 Advanced_Scrolling_Combat_Text_DB["Nightborne"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Highmountain Tauren"][Spell_Localize] or
                 Advanced_Scrolling_Combat_Text_DB["Vulpera"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Zandalari Troll"][Spell_Localize] or Advanced_Scrolling_Combat_Text_DB["Mag'har Orc"][Spell_Localize]
+                or Advanced_Scrolling_Combat_Text_DB["Dracthyr"][Spell_Localize]
                 if dbSettings.iconEnable then details = details..string.format("|T%d:18|t ".." ", icon) end
                 if dbSettings.nameEnable then details = details..name.." " end
                 if dbSettings.iconEnable == false and dbSettings.nameEnable == false then

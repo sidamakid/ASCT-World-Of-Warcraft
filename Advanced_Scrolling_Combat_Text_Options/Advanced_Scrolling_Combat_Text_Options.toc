@@ -1,5 +1,5 @@
 ## Interface: 00000
-## Version: 8.4.9
+## Version: 8.8.0
 ## Title: Advanced Scrolling Combat Text Options
 ## Title-koKR: 고급 스크롤 전투 텍스트 옵션
 ## Title-frFR: Options avancées de texte de combat de défilement

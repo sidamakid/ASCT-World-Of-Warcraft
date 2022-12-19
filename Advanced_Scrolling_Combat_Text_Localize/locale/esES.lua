@@ -54,6 +54,9 @@ if locale == "esES" then
  L["Brewmaster"] = "Maestro cervecero";
  L["Mistweaver"] = "Tejedor de niebla";
  L["Windwalker"] = "Caminante de viento";
+ --Evoker
+ L["Preservation"] = "Preservación";
+ L["Devastation"] = "Devastación";
  --Shared-Spec-names
  L["Frost"] = "Helada";
  L["Protection"] = "Protección";
@@ -188,7 +191,7 @@ if locale == "esES" then
  L["Spell Power"] = "Poder de hechizo";
  L["Unsupported_Line_1"] = "Estás ejecutando Texto de combate de desplazamiento avanzado en una versión de juego no compatible.";
  L["Unsupported_Line_2"] = "El complemento no funciona en servidores privados.";
- L["Unsupported_Line_3"] = "El complemento solo es compatible con Vanilla, TBC Classic, Wrath Classic y Retail.";
+ L["Unsupported_Line_3"] = "El complemento solo es compatible con Season of Mastery y Wrath Classic.";
  L["Unsupported_Line_4"] = "¿Desea deshabilitar el complemento? ¿O mantenerlo habilitado?";
  L["Keep Enabled"] = "Mantener habilitado";
  L["Disable"] = "Inutilizar";
