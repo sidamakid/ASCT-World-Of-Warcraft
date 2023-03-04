@@ -192,8 +192,12 @@ if locale == "zhCN" then
  L["Spell Power"] = "法术力量";
  L["Unsupported_Line_1"] = "您正在运行不受支持的游戏版本中的高级滚动战斗文本。";
  L["Unsupported_Line_2"] = "插件在专用服务器上不起作用。";
- L["Unsupported_Line_3"] = "该插件仅在精通季节和愤怒经典中受支持。";
+ L["Unsupported_Line_3"] = "该插件仅在暴雪官方服务器上受支持。";
  L["Unsupported_Line_4"] = "是否要禁用插件？还是保持启用状态？";
+ L["Unsupported_Line_5"] = "高级滚动战斗文本未加载！";
  L["Keep Enabled"] = "保持启用状态";
  L["Disable"] = "禁用";
+ L["You have gained the"] = "您已经获得了";
+ L["skill"] = "技能";
+ L["Skill Gained"] = "获得的技能";
 end

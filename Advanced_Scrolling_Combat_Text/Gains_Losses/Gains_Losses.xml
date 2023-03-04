@@ -11,6 +11,7 @@
     <Include file="Resource_Losses\Resource_Loss.xml"/>
     <Script file="Health_Gains.lua"/>
     <Script file="Skill_Up.lua"/>
+    <Script file="Skill_Gained.lua"/>
     <Include file="Resistances\Resistance.xml"/>
     <Include file="Special Stat Gains\Special_Stats.xml"/>
 </UI>

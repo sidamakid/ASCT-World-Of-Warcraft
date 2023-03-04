@@ -192,8 +192,12 @@ if locale == "enUS" then
  L["Spell Power"] = "Spell Power";
  L["Unsupported_Line_1"] = "You're running Advanced Scrolling Combat Text in an Unsupported game Version.";
  L["Unsupported_Line_2"] = "The Addon does not work on Private Servers.";
- L["Unsupported_Line_3"] = "The addon is only supported in Season of Mastery and Wrath Classic.";
+ L["Unsupported_Line_3"] = "The addon is only supported on Official Blizzard Servers.";
  L["Unsupported_Line_4"] = "Would you like to Disable the addon? Or keep it enabled?";
+ L["Unsupported_Line_5"] = "Advanced Scrolling Combat Text not loaded!";
  L["Keep Enabled"] = "Keep Enabled";
  L["Disable"] = "Disable";
+ L["You have gained the"] = "You have gained the";
+ L["skill"] = "skill";
+ L["Skill Gained"] = "Skill Gained";
 end

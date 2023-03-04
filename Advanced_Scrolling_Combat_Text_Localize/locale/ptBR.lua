@@ -1,7 +1,7 @@
 local L = ASDC_LOCALE_TABLE
 local locale = GetLocale()
 -------------------------------------
---Portuguese (Portugal)
+--Portuguese (Brazil)
 -------------------------------------
 if locale == "ptBR" then
  --Rogue
@@ -192,8 +192,12 @@ if locale == "ptBR" then
  L["Spell Power"] = "Poder Ortodr ou feitiço";
  L["Unsupported_Line_1"] = "Você está executando Advanced Scrolling Combat Text em uma versão de jogo sem suporte.";
  L["Unsupported_Line_2"] = "O Addon não funciona em servidores privados.";
- L["Unsupported_Line_3"] = "O addon só é suportado em Season of Mastery and Wrath Classic.";
+ L["Unsupported_Line_3"] = "O addon só é suportado nos Servidores Oficiais da Blizzard.";
  L["Unsupported_Line_4"] = "Gostaria de desativar o addon? Ou mantê-lo ativado?";
+ L["Unsupported_Line_5"] = "Texto de Combate de Rolagem Avançada não carregado!";
  L["Keep Enabled"] = "Mantenha ativado";
  L["Disable"] = "Desabilitar";
+ L["You have gained the"] = "Você ganhou o";
+ L["skill"] = "habilidade";
+ L["Skill Gained"] = "Habilidade adquirida";
 end

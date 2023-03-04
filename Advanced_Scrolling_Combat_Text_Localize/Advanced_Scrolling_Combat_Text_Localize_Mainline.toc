@@ -1,5 +1,5 @@
-## Interface: 100002
-## Version: 8.8.0
+## Interface: 100005
+## Version: 8.8.5
 ## Title: Advanced Scrolling Combat Text localize
 ## Title-koKR: 고급 스크롤 전투 텍스트 현지화
 ## Title-frFR: Localisation du texte de combat à défilement avancé

@@ -15,6 +15,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Cold Blood"] = 382245,
             ["Crimson Vial"] = 185311,
             ["Kidney Shot"] = 408,
+            --PVP Talents
+            ["Smoke Bomb"] = 212182 or 359053,
+            ["Death from Above"] = 269513,
             --Outlaw
             ["Marked for Death"] = 137619,
             ["Gouge"] = 1776,
@@ -33,6 +36,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Ghostly Strike"] = 196937,
             ["Keep It Rolling"] = 381989,
             ["Roll the Bones"] = 315508,
+            --PVP Talents
+            ["Dismantle"] = 207777,
             --Subtlety
             ["Echoing Reprimand"] = 385616,
             ["Shadowstep"] = 36554,
@@ -49,6 +54,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Secret Technique"] = 280719,
             ["Flagellation"] = 384631,
             ["Shuriken Tornado"] = 277925,
+            --PVP Talents
+            ["Shadowy Duel"] = 269513,
       --Priest
             --Discipline
             ["Power Word: Life"] = 373481,
@@ -67,6 +74,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Power Word: Barrier"] = 62618,
             ["Schism"] = 214621,
             ["Pain Suppression"] = 33206,
+            --PVP Talents
+            ["Dark Archangel"] = 197871,
+            ["Archangel"] = 197862,
             --Holy
             ["Divine Star"] = 110744,
             ["Holy Fire"] = 14914,
@@ -86,6 +96,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Holy Word: Sanctify"] = 34861,
             ["Holy Word: Chastise"] = 88625,
             ["Guardian Spirit"] = 47788,
+            --PVP Talents
+            ["Ray of Hope"] = 197268,
+            ["Greater Heal"] = 289666,
+            ["Divine Ascension"] = 328530,
+            ["Holy Ward"] = 213610,
             --Shadow
             ["Dominate Mind"] = 205364,
             ["Void Shift"] = 108968,
@@ -109,6 +124,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Psychic Horror"] = 64044,
             ["Dark Void"] = 263346,
             ["Silence"] = 15487,
+            --PVP Talents
+            ["Thoughtsteal"] = 316262,
+            ["Inner Light and Shadow"] = 356085,
+            ["Psyfiend"] = 211522,
       --Warrior
             --Arms
             ["Battle Shout"] = 6673,
@@ -130,6 +149,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Cleave"] = 845,
             ["Sweeping Strikes"] = 260708,
             ["Spear of Bastion"] = 376079,
+            --PVP Talents
+            ["War Banner"] = 236320,
+            ["Sharpen Blade"] = 198817,
+            ["Duel"] = 236273,
             --Fury
             ["Execute"] = 163201,
             ["Piercing Howl"] = 12323,
@@ -147,6 +170,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Avatar"] = 107574,
             ["Intimidating Shout"] = 5246,
             ["Bitter Immunity"] = 383762,
+            --PVP Talents
+            ["Death Wish"] = 199261,
+            ["Bloodrage"] = 329038,
             --Protection
             ["Shield Block"] = 2565,
             ["Heroic Leap"] = 6544,
@@ -163,6 +189,12 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Demoralizing Shout"] = 1160,
             ["Shockwave"] = 46968,
             ["Storm Bolt"] = 107570,
+            --PVP Talents
+            ["Disarm"] = 236077,
+            ["Oppressor"] = 205800,
+            ["Shield Bash"] = 198912,
+            ["Bodyguard"] = 213871,
+            ["Dragon Charge"] = 206572,
       --Warlock
             --Affliction
             ["Ritual of Summoning"] = 698,
@@ -179,6 +211,13 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Haunt"] = 48181,
             ["Grimoire of Sacrifice"] = 108503,
             ["Phantom Singularity"] = 205179,
+            --PVP Talents
+            ["Nether Ward"] = 212295,
+            ["Casting Circle"] = 221703,
+            ["Shadow Rift"] = 353294,
+            ["Bane of Fragility"] = 199954,
+            ["Call Observer"] = 201996,
+            ["Bane of Shadows"] = 234877,
             --Demonology
             ["Soulburn"] = 385899,
             ["Fel Domination"] = 333889,
@@ -194,6 +233,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Bilescourge Bombers"] = 267211,
             ["Soul Strike"] = 264057,
             ["Call Dreadstalkers"] = 104316,
+            --PVP Talents
+            ["Fel Obelisk"] = 353601,
+            ["Call Fel Lord"] = 212459,
+            ["Call Felhunter"] = 212619,
             --Destruction
             ["Ritual of Doom"] = 342601,
             ["Unending Resolve"] = 104773,
@@ -207,6 +250,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Channel Demonfire"] = 196447,
             ["Havoc"] = 80240,
             ["Shadowfury"] = 30283,
+            --PVP Talents
+            ["Bane of Havoc"] = 200546,
+            ["Deathbolt"] = 264106,
+            ["Rapid Contagion"] = 344566,
+            ["Bonds of Fel"] = 353753,
       --Druid
             --Balance
             ["Barkskin"] = 22812,
@@ -225,6 +273,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Wild Mushroom"] = 88747,
             ["Astral Communion"] = 202359,
             ["Warrior of Elune"] = 202425,
+            --PVP Talents
+            ["Faerie Swarm"] = 209749,
             --Fearl Combat
             ["Dash"] = 1850,
             ["Thrash"] = 77758,
@@ -246,6 +296,12 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Bristling Fur"] = 155835,
             ["Rage of the Sleeper"] = 200851,
             ["Pulverize"] = 80313,
+            --PVP Talents
+            ["Alpha Challenge"] = 207017,
+            ["Demoralizing Roar"] = 201664,
+            ["Overrun"] = 202246,
+            ["Emerald Slumber"] = 329042,
+            ["Grove Protection"] = 354654,
             --Restoration
             ["Rebirth"] = 20484,
             ["Nature's Vigil"] = 124974,
@@ -262,58 +318,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Invigorate"] = 392160,
             ["Overgrowth"] = 203651,
             ["Incarnation: Tree of Life"] = 33891,
-      --Mage
-            --Arcane
-            ["Time Warp"] = 80353,
-            ["Blink"] = 1953,
-            ["Illusion"] = 131784,
-            ["Counterspell"] = 2139,
-            ["Conjure Refreshment"] = 190336,
-            ["Shimmer"] = 212653,
-            ["Displacement"] = 389713,
-            ["Mass Polymorph"] = 383121,
-            ["Invisibility"] = 66,
-            ["Greater Invisibility"] = 110959,
-            ["Alter Time"] = 342245,
-            ["Mirror Image"] = 55342,
-            ["Remove Curse"] = 475,
-            ["Prismatic Barrier"] = 235450,
-            ["Arcane Barrage"] = 44425,
-            ["Radiant Spark"] = 376103,
-            ["Evocation"] = 12051,
-            ["Supernova"] = 157980,
-            ["Touch of the Magi"] = 321507,
-            ["Presence of Mind"] = 205025,
-            ["Arcane Surge"] = 365350,
-            ["Arcane Orb"] = 153626,
-            ["Arcane Familiar"] = 205022,
-            --Fire
-            ["Fire Blast"] = 319836 or 108853,
-            ["Meteor"] = 153561,
-            ["Dragon's Breath"] = 31661,
-            ["Blast Wave"] = 157981,
-            ["Alexstrasza's Fury"] = 235870,
-            ["Living Bomb"] = 44457,
-            ["Combustion"] = 190319,
-            ["Phoenix Flames"] = 257541,
-            --Frost
-            ["Cone of Cold"] = 120,
-            ["Shifting Power"] = 382440,
-            ["Frost Nova"] = 122,
-            ["Ice Nova"] = 157997,
-            ["Ice Block"] = 45438,
-            ["Ring of Frost"] = 113724,
-            ["Rune of Power"] = 116011,
-            ["Ice Floes"] = 108839,
-            ["Summon Water Elemental"] = 31687,
-            ["Ebonbolt"] = 257537,
-            ["Ray of Frost"] = 205021,
-            ["Comet Storm"] = 153595,
-            ["Icy Veins"] = 12472,
-            ["Cold Snap"] = 235219,
-            ["Flurry"] = 44614,
-            ["Blizzard"] = 190356,
-            ["Frozen Orb"] = 84714,
+            --PVP Talents
+            ["Thorns"] = 305497,
       --Shaman
             --Elemental
             ["Hex"] = 51514,
@@ -331,6 +337,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Icefury"] = 210714,
             ["Gust of Wind"] = 192063,
             ["Wind Shear"] = 57994,
+            --PVP Talents
+            ["Unleash Shield"] = 356736,
+            ["Thundercharge"] = 204366,
             --Enhancement
             ["Astral Shift"] = 108271,
             ["Earthbind Totem"] = 2484,
@@ -353,6 +362,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Greater Purge"] = 378773,
             ["Tremor Totem"] = 8143,
             ["Capacitor Totem"] = 192058,
+            --PVP Talents
+            ["Skyfury Totem"] = 204330,
+            ["Grounding Totem"] = 204336,
+            ["Counterstrike Totem"] = 204331,
+            ["Static Field Totem"] = 355580,
             --Restoration
             ["Ascendance"] = 114050 or 114051 or 114052,
             ["Ancestral Protection Totem"] = 207399,
@@ -373,6 +387,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Spirit Link Totem"] = 98008,
             ["Wellspring"] = 197995,
             ["Earthen Wall Totem"] = 198838,
+            --PVP Talents
+            ["Ethereal Form"] = 210918,
       --Hunter
             --Beast Mastery
             ["Mend Pet"] = 136,
@@ -389,6 +405,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Dire Beast"] = 120679,
             ["Bloodshed"] = 321530,
             ["Barbed Shot"] = 217200,
+            --PVP Talents
+            ["Dire Beast: Basilisk"] = 205691,
+            ["Roar of Sacrifice"] = 53480,
+            ["Dire Beast: Hawk"] = 208652,
+            ["Wild Kingdom"] = 356707,
             --Marksmanship
             ["Flare"] = 1543,
             ["Death Chakram"] = 325028 or 375891,
@@ -406,6 +427,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Bursting Shot"] = 186387,
             ["Double Tap"] = 260402,
             ["Aimed Shot"] = 19434,
+            --PVP Talents
+            ["Sniper Shot"] = 203155,
+            ["Chimaeral Sting"] = 356719,
             --Survival
             ["Freezing Trap"] = 187650,
             ["Feign Death"] = 5384,
@@ -425,6 +449,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Wildfire Bomb"] = 259495,
             ["Aspect of the Eagle"] = 186289,
             ["Harpoon"] = 190925,
+            --PVP Talents
+            ["Mending Bandage"] = 212640,
+            ["Tracker's Net"] = 212638,
+            ["Interlope"] = 248518,
             --Aspect's
             ["Aspect of the Turtle"] = 186265,
             ["Aspect of the Cheetah"] = 186257,
@@ -452,6 +480,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Aura Mastery"] = 31821,
             ["Holy Shock"] = 20473,
             ["Divine Protection"] = 498,
+            --PVP Talents
+            ["Shield of Virtue"] = 215652,
             --Protection
             ["Hammer of Justice"] = 853,
             ["Divine Shield"] = 642,
@@ -472,6 +502,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Ardent Defender"] = 31850,
             ["Blessed Hammer"] = 204019,
             ["Avenger's Shield"] = 31935,
+            --PVP Talents
+            ["Inquisition"] = 207028,
+            ["Guardian of the Forgotten Queen"] = 228049,
             --Returitbion
             ["Contemplation"] = 121183,
             ["Avenging Wrath"] = 31884,
@@ -489,6 +522,72 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Shield of Vengeance"] = 184662,
             ["Wake of Ashes"] = 255937,
             ["Blade of Justice"] = 184575,
+            --PVP Talents
+            ["Blessing of Sanctuary"] = 210256,
+      --Mage
+            --Arcane
+            ["Time Warp"] = 80353,
+            ["Blink"] = 1953,
+            ["Illusion"] = 131784,
+            ["Counterspell"] = 2139,
+            ["Conjure Refreshment"] = 190336,
+            ["Shimmer"] = 212653,
+            ["Displacement"] = 389713,
+            ["Mass Polymorph"] = 383121,
+            ["Invisibility"] = 66,
+            ["Greater Invisibility"] = 110959,
+            ["Alter Time"] = 342245,
+            ["Mirror Image"] = 55342,
+            ["Remove Curse"] = 475,
+            ["Prismatic Barrier"] = 235450,
+            ["Arcane Barrage"] = 44425,
+            ["Radiant Spark"] = 376103,
+            ["Evocation"] = 12051,
+            ["Supernova"] = 157980,
+            ["Touch of the Magi"] = 321507,
+            ["Presence of Mind"] = 205025,
+            ["Arcane Surge"] = 365350,
+            ["Arcane Orb"] = 153626,
+            ["Arcane Familiar"] = 205022,
+            --PVP Talents
+            ["Temporal Shield"] = 198111,
+            ["Mass Invisibility"] = 198158,
+            ["Arcanosphere"] = 353128,
+            --Fire
+            ["Fire Blast"] = 319836 or 108853,
+            ["Meteor"] = 153561,
+            ["Dragon's Breath"] = 31661,
+            ["Blast Wave"] = 157981,
+            ["Alexstrasza's Fury"] = 235870,
+            ["Living Bomb"] = 44457,
+            ["Combustion"] = 190319,
+            ["Phoenix Flames"] = 257541,
+            --PVP Talents
+            ["Greater Pyroblast"] = 203286,
+            ["Ring of Fire"] = 353082,
+            --Frost
+            ["Cone of Cold"] = 120,
+            ["Shifting Power"] = 382440,
+            ["Frost Nova"] = 122,
+            ["Ice Nova"] = 157997,
+            ["Ice Block"] = 45438,
+            ["Ring of Frost"] = 113724,
+            ["Rune of Power"] = 116011,
+            ["Ice Floes"] = 108839,
+            ["Summon Water Elemental"] = 31687,
+            ["Ebonbolt"] = 257537,
+            ["Ray of Frost"] = 205021,
+            ["Comet Storm"] = 153595,
+            ["Icy Veins"] = 12472,
+            ["Cold Snap"] = 235219,
+            ["Flurry"] = 44614,
+            ["Blizzard"] = 190356,
+            ["Frozen Orb"] = 84714,
+            --PVP Talents
+            ["Snowdrift"] = 389794,
+            ["Ice Form"] = 198144,
+            ["Frost Bomb"] = 390612,
+            ["Ice Wall"] = 352278,
       --Demon Hunter
             --Havoc
             ["Fel Rush"] = 344865,
@@ -506,6 +605,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Netherwalk"] = 196555,
             ["Fel Eruption"] = 211881,
             ["Eye Beam"] = 198013,
+            --PVP Talents
+            ["Rain from Above"] = 206803,
+            ["Reverse Magic"] = 205604,
             --Vengeance
             ["Darkness"] = 196718,
             ["Torment"] = 185245,
@@ -522,6 +624,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Sigil of Chains"] = 202138,
             ["Fel Devastation"] = 212084,
             ["Fiery Brand"] = 204021,
+            --PVP Talents
+            ["Tormentor"] = 207029,
+            ["Demonic Trample"] = 205629,
+            ["Illidan's Grasp"] = 205630,
       --Death_Knight Spells
             --Blood
             ["Dark Command"] = 56222,
@@ -540,6 +646,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Blood Boil"] = 50842,
             ["Rune Tap"] = 194679,
             ["Death's Caress"] = 195292,
+            --PVP Talents
+            ["Murderous Intent"] = 207018,
+            ["Dark Simulacrum"] = 77606,
             --Frost
             ["Lichborne"] = 49039,
             ["Soul Reaper"] = 343294,
@@ -555,6 +664,8 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Chill Streak"] = 305392,
             ["Horn of Winter"] = 57330,
             ["Pillar of Frost"] = 51271,
+            --PVP Talents
+            ["Strangulate"] = 47476,
             --Unholy
             ["Death's Advance"] = 48265,
             ["Death Gate"] = 50977,
@@ -571,6 +682,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Dark Transformation"] = 63560,
             ["Apocalypse"] = 275699,
             ["Unholy Blight"] = 115989,
+            --PVP Talents
+            ["Raise Abomination"] = 288853,
+            ["Death Chain"] = 203173,
       --Monk Spells
             --Brewmaster
             ["Touch of Death"] = 322109,
@@ -593,6 +707,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Celestial Brew"] = 322507,
             ["Keg Smash"] = 121253,
             ["Purifying Brew"] = 119582,
+            --PVP Talents
+            ["Admonishment"] = 207025,
+            ["Mighty Ox Kick"] = 202370,
+            ["Grapple Weapon"] = 233759,
+            ["Nimble Brew"] = 354540,
             --Mistweaver
             ["Zen Pilgrimage"] = 126892,
             ["Summon Jade Serpent Statue"] = 115313,
@@ -615,6 +734,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Thunder Focus Tea"] = 116680,
             ["Life Cocoon"] = 116849,
             ["Renewing Mist"] = 115151,
+            --PVP Talents
+            ["Healing Sphere"] = 205234,
+            ["Zen Focus Tea"] = 209584,
             --Windwalker
             ["Provoke"] = 115546,
             ["Leg Sweep"] = 119381,
@@ -632,6 +754,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Fists of Fury"] = 113656,
             ["Flying Serpent Kick"] = 101545,
             ["Touch of Karma"] = 122470,
+            --PVP Talents
+            ["Avert Harm"] = 202162,
+            ["Double Barrel"] = 202335,
+            ["Tigereye Brew"] = 247483,
       --Evoker Spells
             --Devastation
             ["Fire Breath"] = 357208,
@@ -650,6 +776,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Firestorm"] = 368847,
             ["Shattering Star"] = 370452,
             ["Dragonrage"] = 375087,
+            --PVP Talents
+            ["Nullifying Shroud"] = 378464,
+            ["Time Stop"] = 378441,
             --Preservation
             ["Emerald Blossom"] = 355913,
             ["Blessing of the Bronze"] = 364342,
@@ -669,6 +798,10 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Spiritbloom"] = 367226,
             ["Rewind"] = 363534,
             ["Reversion"] = 366155,
+            --PVP Talents
+            ["Chrono Loop"] = 383005,
+            ["Swoop Up"] = 370388,
+            ["Dream Projection"] = 377509,
       --Portals
       ["Portal: Shattrath"] = 33691 or 35717,
       ["Portal: Stonard"] = 49361,

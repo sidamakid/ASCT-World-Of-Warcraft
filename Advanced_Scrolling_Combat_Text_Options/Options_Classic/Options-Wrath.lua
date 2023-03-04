@@ -1,4 +1,6 @@
 local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
+local is340 = select(4, GetBuildInfo()) == 30400
+local is341 = select(4, GetBuildInfo()) == 30401
 if isWrathWow then
 local L = ASDC_LOCALE_TABLE
 local addonName, ASCT_Options = ...;
@@ -145,7 +147,6 @@ local defaults = {
 	["Balance"] = {
 		["Innervate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Barkskin"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Hurricane"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Nature's Grasp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Force of Nature"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Starfall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -457,6 +458,7 @@ local defaults = {
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,
 		["Level up message"] = false,
+		["Skill Gained"] = false,
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 		["Achievement Gains"] = false,
@@ -479,8 +481,12 @@ ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
 ASCT_Config:SetSize(950, 650);
+if is340 then
 ASCT_Config:SetMinResize(950,200)
 ASCT_Config:SetMaxResize(950,650)
+elseif is341 then
+ASCT_Config:SetResizeBounds(950,200, 950,650)
+end
 ASCT_Config:RegisterForDrag("LeftButton")
 ASCT_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
@@ -635,7 +641,7 @@ end
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon

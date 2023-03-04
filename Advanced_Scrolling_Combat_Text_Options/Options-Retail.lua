@@ -3,7 +3,9 @@ if isDragonFlightWow then
 local L = ASDC_LOCALE_TABLE
 local addonName, ASCT_Options = ...;
 local function InitializeOptions()
-
+---------------------------
+--Create The MainFrame
+---------------------------
 local f = CreateFrame("Frame")
 
 
@@ -64,8 +66,11 @@ local defaults = {
         ["Cold Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Crimson Vial"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Kidney Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Smoke Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Death from Above"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Outlaw"] = {
+        ["Dismantle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Marked for Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Gouge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Feint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -85,6 +90,7 @@ local defaults = {
         ["Roll the Bones"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Subtlety"] = {
+        ["Shadowy Duel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 		["Echoing Reprimand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Shadowstep"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Tricks of the Trade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -125,6 +131,9 @@ local defaults = {
         ["Psychic Horror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Dark Void"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Silence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Thoughtsteal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Inner Light and Shadow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Psyfiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
     ["Holy_Priest"] = {
 		["Divine Star"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -145,6 +154,10 @@ local defaults = {
         ["Holy Word: Sanctify"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Holy Word: Chastise"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Guardian Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Ray of Hope"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Greater Heal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Divine Ascension"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Holy Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
     ["Discipline"] = {
 		["Power Word: Life"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -163,6 +176,8 @@ local defaults = {
         ["Power Word: Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Schism"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Pain Suppression"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dark Archangel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Archangel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	  --Warrior spells
 	["Arms"] = {
@@ -185,6 +200,9 @@ local defaults = {
         ["Cleave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Sweeping Strikes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Spear of Bastion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["War Banner"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Sharpen Blade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Duel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Fury"] = {
         ["Execute"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -203,6 +221,8 @@ local defaults = {
         ["Avatar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Intimidating Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Bitter Immunity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Death Wish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bloodrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Protection_Warrior"] = {
         ["Shield Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -220,6 +240,71 @@ local defaults = {
         ["Demoralizing Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Shockwave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Storm Bolt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Disarm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Oppressor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shield Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bodyguard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dragon Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+	},
+        --Warlock spells
+	["Affliction"] = {
+        ["Ritual of Summoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Create Soulwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Soulstone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dark Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Amplify Curse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Mortal Coil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Soul Swap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Howl of Terror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Soul Rot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Summon Darkglare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Vile Taint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Haunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Grimoire of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Phantom Singularity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Nether Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Casting Circle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shadow Rift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bane of Fragility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Call Observer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bane of Shadows"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+	},
+    ["Demonology"] = {
+        ["Soulburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Fel Domination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Inquisitor's Gaze"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Demonic Gateway"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Summon Vilefiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Guillotine"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Nether Portal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Summon Demonic Tyrant"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Grimoire: Felguard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Power Siphon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Demonic Strength"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bilescourge Bombers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Soul Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Call Dreadstalkers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Fel Obelisk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Call Fel Lord"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Call Felhunter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+	},
+	["Destruction"] = {
+        ["Ritual of Doom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Unending Resolve"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shadowflame"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Conflagrate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dimensional Rift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Cataclysm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Summon Infernal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shadowburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Soul Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Channel Demonfire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Havoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shadowfury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bane of Havoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Deathbolt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Rapid Contagion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Bonds of Fel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 		--Druid Spells
 	["Balance"] = {
@@ -239,6 +324,7 @@ local defaults = {
         ["Wild Mushroom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Astral Communion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Warrior of Elune"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Faerie Swarm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Feral_Combat"] = {
         ["Dash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -261,6 +347,11 @@ local defaults = {
         ["Bristling Fur"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Rage of the Sleeper"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Pulverize"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Alpha Challenge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Demoralizing Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Overrun"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Emerald Slumber"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Grove Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Druid_Restoration"] = {
 		["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -279,53 +370,7 @@ local defaults = {
         ["Invigorate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Overgrowth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Incarnation: Tree of Life"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	--Warlock spells
-	["Affliction"] = {
-        ["Ritual of Summoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Create Soulwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Soulstone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Dark Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Amplify Curse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Mortal Coil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Soul Swap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Howl of Terror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Soul Rot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Summon Darkglare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Vile Taint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Haunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Grimoire of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Phantom Singularity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-    ["Demonology"] = {
-        ["Soulburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Fel Domination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Inquisitor's Gaze"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Demonic Gateway"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Summon Vilefiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Guillotine"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Nether Portal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Summon Demonic Tyrant"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Grimoire: Felguard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Power Siphon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Demonic Strength"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Bilescourge Bombers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Soul Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Call Dreadstalkers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Destruction"] = {
-        ["Ritual of Doom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Unending Resolve"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Shadowflame"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Conflagrate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Dimensional Rift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Cataclysm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Summon Infernal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Shadowburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Soul Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Channel Demonfire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Havoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-        ["Shadowfury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Thorns"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Shaman spells
 	["Elemental"] = {
@@ -344,6 +389,8 @@ local defaults = {
         ["Icefury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Gust of Wind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Wind Shear"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Unleash Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Thundercharge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Enhancement"] = {
         ["Astral Shift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -367,6 +414,11 @@ local defaults = {
         ["Greater Purge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Tremor Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Capacitor Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Skyfury Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Grounding Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Counterstrike Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Static Field Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+
 	},
 	["Shaman_Restoration"] = {
 		["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -389,6 +441,7 @@ local defaults = {
         ["Spirit Link Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Wellspring"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Earthen Wall Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Ethereal Form"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Shared_Shaman_spells"] = {
 		["Lust"] = false,
@@ -409,6 +462,10 @@ local defaults = {
         ["Dire Beast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Bloodshed"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Barbed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dire Beast: Basilisk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Roar of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dire Beast: Hawk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Wild Kingdom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
     ["Marksmanship"] = {
         ["Flare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -427,6 +484,8 @@ local defaults = {
         ["Bursting Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Double Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Aimed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Sniper Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Chimaeral Sting"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
     ["Survival"] = {
         ["Freezing Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -450,6 +509,9 @@ local defaults = {
         ["Aspect of the Turtle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Aspect of the Cheetah"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Aspect of the Chameleon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Mending Bandage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Tracker's Net"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Interlope"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
 	--Paladin
 	["Holy_Paladin"] = {
@@ -474,6 +536,7 @@ local defaults = {
         ["Aura Mastery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Holy Shock"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Divine Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Shield of Virtue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Protection_Paladin"] = {
         ["Hammer of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -495,6 +558,8 @@ local defaults = {
         ["Ardent Defender"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Blessed Hammer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Avenger's Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Inquisition"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Guardian of the Forgotten Queen"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Retribution"] = {
         ["Contemplation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -513,6 +578,7 @@ local defaults = {
         ["Shield of Vengeance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Wake of Ashes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Blade of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Blessing of Sanctuary"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Mage Spells
 	["Arcane"] = {
@@ -557,6 +623,9 @@ local defaults = {
         ["Arcane Surge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Arcane Orb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Arcane Familiar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Temporal Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Mass Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Arcanosphere"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Fire"] = {
         ["Fire Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -567,6 +636,8 @@ local defaults = {
         ["Living Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Combustion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Phoenix Flames"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Greater Pyroblast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Ring of Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Frost_Mage"] = {
         ["Cone of Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -586,6 +657,10 @@ local defaults = {
         ["Flurry"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Blizzard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Frozen Orb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Snowdrift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Ice Form"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Frost Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Ice Wall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Demon Hunter Spells
 	["Havoc"] = {
@@ -604,6 +679,8 @@ local defaults = {
         ["Netherwalk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Fel Eruption"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Eye Beam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Rain from Above"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Reverse Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Vengeance"] = {
         ["Darkness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -621,6 +698,9 @@ local defaults = {
         ["Sigil of Chains"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Fel Devastation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Fiery Brand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Tormentor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Demonic Trample"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Illidan's Grasp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Death_Knight Spells
 	["Blood"] = {
@@ -640,6 +720,8 @@ local defaults = {
         ["Blood Boil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Rune Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Death's Caress"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Murderous Intent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dark Simulacrum"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Frost_DK"] = {
         ["Lichborne"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -656,6 +738,7 @@ local defaults = {
         ["Chill Streak"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Horn of Winter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Pillar of Frost"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Strangulate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Unholy"] = {
         ["Death's Advance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -673,6 +756,8 @@ local defaults = {
         ["Dark Transformation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Apocalypse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Unholy Blight"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Raise Abomination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Death Chain"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Monk Spells
 	["Brewmaster"] = {
@@ -696,6 +781,10 @@ local defaults = {
         ["Celestial Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Keg Smash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Purifying Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Admonishment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Mighty Ox Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Grapple Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Nimble Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Mistweaver"] = {
         ["Zen Pilgrimage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -719,6 +808,8 @@ local defaults = {
         ["Thunder Focus Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Life Cocoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Renewing Mist"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Healing Sphere"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Zen Focus Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Windwalker"] = {
         ["Provoke"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -737,6 +828,9 @@ local defaults = {
         ["Fists of Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Flying Serpent Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Touch of Karma"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Avert Harm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Double Barrel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Tigereye Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Evoker Spells
 	["Devastation"] = {
@@ -756,6 +850,8 @@ local defaults = {
         ["Firestorm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Shattering Star"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Dragonrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Nullifying Shroud"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Time Stop"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Preservation"] = {
         ["Emerald Blossom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -776,6 +872,9 @@ local defaults = {
         ["Spiritbloom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Rewind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         ["Reversion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Chrono Loop"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Swoop Up"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        ["Dream Projection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	--Racials
 	["Blood Elf"] = {
@@ -874,6 +973,7 @@ local defaults = {
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,
 		["Level up message"] = false,
+        ["Skill Gained"] = false,
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 		["Achievement Gains"] = false,
@@ -1065,7 +1165,7 @@ local Text4 = TextCreate(L["Racials"])
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -1950,12 +2050,7 @@ end
 
 end
 
-
 end
-
-
-
-
 
 SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
@@ -1997,7 +2092,13 @@ end
 Advanced_Scrolling_Combat_Text_DB = Advanced_Scrolling_Combat_Text_DB or {}
 MergeInNewValues(Advanced_Scrolling_Combat_Text_DB, defaults)
 DeleteOldValues(defaults, Advanced_Scrolling_Combat_Text_DB)
+---------------------------
+--Run Function
+---------------------------
 f:InitializeOptions_Class()
+---------------------------
+--Unused variable
+---------------------------
 f.db = Advanced_Scrolling_Combat_Text_DB
 
 end
