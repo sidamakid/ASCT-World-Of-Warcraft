@@ -6,6 +6,8 @@
     <Script file="Armor_Gains.lua"/>
     <Script file="Spirit_Gains.lua"/>
     <Script file="Stam_Gains.lua"/>
+    <Script file="Armor Penetration.lua"/>
+    <Script file="Spell Penetration.lua"/>
     <Script file="Experience_Gains.lua"/>
     <Script file="Level_Up.lua"/>
     <Include file="Resource_Losses\Resource_Loss.xml"/>

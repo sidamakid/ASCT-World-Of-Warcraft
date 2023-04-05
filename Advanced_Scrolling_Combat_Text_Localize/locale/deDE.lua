@@ -200,4 +200,7 @@ if locale == "deDE" then
  L["You have gained the"] = "Sie haben die";
  L["skill"] = "Fertigkeit";
  L["Skill Gained"] = "Erworbene Fähigkeiten";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Durchschlagskraft der Panzerung";
+ L["Spell Penetration"] = "Durchdringung von Zaubersprüchen";
 end

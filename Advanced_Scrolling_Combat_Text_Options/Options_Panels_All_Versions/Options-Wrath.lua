@@ -454,6 +454,8 @@ local defaults = {
 		["Block Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Haste Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Spell Power"] = {StatEnable = false, Gains = false, Lost = false},
+		["Armor Penetration"] = {StatEnable = false, Gains = false, Lost = false},
+		["Spell Penetration"] = {StatEnable = false, Gains = false, Lost = false},
 	},
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,

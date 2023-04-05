@@ -2,6 +2,5 @@
     <Script file="Namespace.lua"/>
     <Script file="Color_picker.lua"/>
     <Script file="Color_picker_saved.lua"/>
-    <Script file="Options-Retail.lua"/>
-    <Include file="Options_Classic\Classic Options.xml"/>
+    <Include file="Options_Panels_All_Versions\Classic Options.xml"/>
 </Ui>

@@ -1,7 +1,6 @@
 local isWrathWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
-local L = ASDC_LOCALE_TABLE
-
 if isWrathWow then
+local L = ASDC_LOCALE_TABLE
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
 

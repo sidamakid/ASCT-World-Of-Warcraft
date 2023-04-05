@@ -200,4 +200,7 @@ if locale == "koKR" then
  L["You have gained the"] = "당신은 얻었습니다";
  L["skill"] = "기술";
  L["Skill Gained"] = "획득한 스킬";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "방어구 관통력";
+ L["Spell Penetration"] = "주문 관통";
 end

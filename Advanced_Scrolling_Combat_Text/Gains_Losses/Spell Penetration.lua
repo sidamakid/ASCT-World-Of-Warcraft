@@ -6,14 +6,14 @@ local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterEvent("COMBAT_RATING_UPDATE")
 f:SetScript("OnEvent", function()
-    local stats = Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Dodge Rating"]
-    local DodgeChance = GetCombatRating(CR_DODGE)
+    local stats = Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Spell Penetration"]
+    local Spell_Penetration = GetSpellPenetration()
     if not (stats.StatEnable and C_CVar.GetCVarBool("enableFloatingCombatText")) then return end
-    local currentStat = DodgeChance
+    local currentStat = Spell_Penetration
     local diff = currentStat - lastStat;
     if lastStat == -1 then
     elseif (diff < 0 and stats.Lost) or (diff > 0 and stats.Gains) then
-        local msg = string.format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Dodge Rating"],  currentStat)
+        local msg = string.format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Spell Penetration"],  currentStat)
         CombatText_AddMessage(msg, CombatText_StandardScroll, 0.1, 0.1, 1)
     end
     lastStat = currentStat

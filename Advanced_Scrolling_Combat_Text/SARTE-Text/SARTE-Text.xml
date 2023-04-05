@@ -1,6 +1,4 @@
 <UI>
-    <Script file="SARTE-Text.lua"/>
-    <Script file="SARTE-Text-Vanilla_Tbc.lua"/>
-    <Script file="SARTE-Text-Wrath.lua"/>
-    <Script file="SARTE-Text-Racials.lua"/>
+    <Include file="SARTE-Text-Abilites\SARTE-Text.xml"/>
+    <Include file="SARTE-Racials\SARTE-Racials.xml"/>
 </UI>

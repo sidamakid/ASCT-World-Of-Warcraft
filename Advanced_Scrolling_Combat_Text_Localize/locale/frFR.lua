@@ -200,4 +200,7 @@ if locale == "frFR" then
  L["You have gained the"] = "Vous avez gagné le";
  L["skill"] = "habileté";
  L["Skill Gained"] = "Compétences acquises";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Pénétration de blindage";
+ L["Spell Penetration"] = "Pénétration des sorts";
 end

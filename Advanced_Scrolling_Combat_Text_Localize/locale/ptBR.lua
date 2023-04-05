@@ -200,4 +200,7 @@ if locale == "ptBR" then
  L["You have gained the"] = "Você ganhou o";
  L["skill"] = "habilidade";
  L["Skill Gained"] = "Habilidade adquirida";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Penetração da armadura";
+ L["Spell Penetration"] = "Penetração de Feitiços";
 end

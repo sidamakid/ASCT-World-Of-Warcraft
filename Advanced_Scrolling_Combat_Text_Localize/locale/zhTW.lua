@@ -200,4 +200,7 @@ if locale == "zhTW" then
  L["You have gained the"] = "您已經獲得了";
  L["skill"] = "技能";
  L["Skill Gained"] = "獲得的技能";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "裝甲穿透力";
+ L["Spell Penetration"] = "法術穿透";
 end

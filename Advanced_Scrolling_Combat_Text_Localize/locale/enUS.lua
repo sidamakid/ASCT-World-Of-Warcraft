@@ -200,4 +200,7 @@ if locale == "enUS" then
  L["You have gained the"] = "You have gained the";
  L["skill"] = "skill";
  L["Skill Gained"] = "Skill Gained";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Armor Penetration";
+ L["Spell Penetration"] = "Spell Penetration";
 end

@@ -2,4 +2,6 @@
     <Script file="Options-Vanilla.lua"/>
     <Script file="Options-Tbc.lua"/>
     <Script file="Options-Wrath.lua"/>
+    <Script file="Options-SL.lua"/>
+    <Script file="Options-DF.lua"/>
 </UI>

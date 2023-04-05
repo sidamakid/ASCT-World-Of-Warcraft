@@ -199,4 +199,7 @@ if locale == "esES" then
  L["You have gained the"] = "Has ganado el";
  L["skill"] = "habilidad";
  L["Skill Gained"] = "Habilidad adquirida";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Penetración de armadura";
+ L["Spell Penetration"] = "Penetración de hechizos";
 end

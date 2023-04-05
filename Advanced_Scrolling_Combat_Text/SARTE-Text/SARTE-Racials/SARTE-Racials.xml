@@ -1,0 +1,6 @@
+<UI>
+    <Script file="SARTE-Text-Racials_Classic.lua"/>
+    <Script file="SARTE-Text-Racials_TBC_Wrath.lua"/>
+    <Script file="SARTE-Text-Racials_SL.lua"/>
+    <Script file="SARTE-Text-Racials_DF.lua"/>
+</UI>

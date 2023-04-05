@@ -200,4 +200,7 @@ if locale == "itIT" then
  L["You have gained the"] = "Hai ottenuto il";
  L["skill"] = "abilità";
  L["Skill Gained"] = "Abilità acquisite";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Penetrazione dell'armatura";
+ L["Spell Penetration"] = "Penetrazione degli incantesimi";
 end

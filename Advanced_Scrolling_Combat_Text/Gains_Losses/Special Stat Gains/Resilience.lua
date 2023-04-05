@@ -7,7 +7,7 @@ f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterEvent("COMBAT_RATING_UPDATE")
 f:SetScript("OnEvent", function()
     local stats = Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Resilience Rating"]
-    local Resilience = GetCombatRating(15)
+    local Resilience = GetCombatRating(CR_RESILIENCE_CRIT_TAKEN)
     if not (stats.StatEnable and C_CVar.GetCVarBool("enableFloatingCombatText")) then return end
     local currentStat = Resilience
     local diff = currentStat - lastStat;

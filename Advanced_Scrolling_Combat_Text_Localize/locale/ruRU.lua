@@ -200,4 +200,7 @@ if locale == "ruRU" then
  L["You have gained the"] = "Вы получили";
  L["skill"] = "мастерство";
  L["Skill Gained"] = "Приобретенные навыки";
+ --New Things 4/1/2023
+ L["Armor Penetration"] = "Бронепробиваемость";
+ L["Spell Penetration"] = "Проникновение заклинаний";
 end
