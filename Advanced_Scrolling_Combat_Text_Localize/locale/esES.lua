@@ -105,7 +105,7 @@ if locale == "esES" then
  L["Features"] = "Funciones";
  L["Message"] = "El desplazamiento de texto de combate está deshabilitado. Si no está habilitado, el texto de Combate de desplazamiento avanzado no mostrará nada.";
  --New things 8/11/2022
- L["Leveling]"] = "Nivelación";
+ L["Leveling"] = "Nivelación";
  L["Lost"] = "Extraviado";
  L["Gained"] = "Ganado";
  L["Attack Power"] = "Poder de ataque";
@@ -202,4 +202,13 @@ if locale == "esES" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Penetración de armadura";
  L["Spell Penetration"] = "Penetración de hechizos";
+ --New Things 5/27/2023 
+ L["Stats"] = "Estadísticas";
+ L["Trinkets"] = "Baratijas";
+ L["Trinket 1"] = "Baratija 1";
+ L["Trinket Slot One"] = "La primera baratija en la ranura 13.";
+ L["Trinket Slot One Info"] = "Anuncia cuándo sale la primera baratija del enfriamiento.";
+ L["Trinket 2"] = "Baratija 2";
+ L["Trinket Slot Two"] = "La segunda baratija en la ranura 14.";
+ L["Trinket Slot Two Info"] = "Anuncia cuando tu segunda baratija sale del enfriamiento.";
 end

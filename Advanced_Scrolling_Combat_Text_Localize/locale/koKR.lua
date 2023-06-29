@@ -106,7 +106,7 @@ if locale == "koKR" then
  L["Features"] = "기능";
  L["Message"] = "전투 텍스트 스크롤이 비활성화되었습니다. 활성화하지 않으면 고급 스크롤 전투 텍스트에 아무 것도 표시되지 않습니다.";
  --New things 8/11/2022
- L["Leveling]"] = "평준화";
+ L["Leveling"] = "평준화";
  L["Lost"] = "잃어버린";
  L["Gained"] = "얻은";
  L["Attack Power"] = "공격력";
@@ -203,4 +203,13 @@ if locale == "koKR" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "방어구 관통력";
  L["Spell Penetration"] = "주문 관통";
+ --New Things 5/27/2023 
+ L["Stats"] = "통계";
+ L["Trinkets"] = "장신구";
+ L["Trinket 1"] = "장신구 1";
+ L["Trinket Slot One"] = "슬롯 13의 첫 번째 장신구.";
+ L["Trinket Slot One Info"] = "첫 번째 장신구의 재사용 대기시간이 해제되면 알려줍니다.";
+ L["Trinket 2"] = "장신구 2";
+ L["Trinket Slot Two"] = "슬롯 14의 두 번째 장신구.";
+ L["Trinket Slot Two Info"] = "두 번째 장신구의 재사용 대기시간이 해제되면 알려줍니다.";
 end

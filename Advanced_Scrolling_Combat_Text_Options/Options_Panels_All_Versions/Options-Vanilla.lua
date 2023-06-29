@@ -330,7 +330,8 @@ ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
 ASCT_Config:SetSize(950, 650);
-ASCT_Config:SetResizeBounds(950,200, 950,650)
+ASCT_Config:SetMinResize(950,200)
+ASCT_Config:SetMaxResize(950,650)
 ASCT_Config:RegisterForDrag("LeftButton")
 ASCT_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then

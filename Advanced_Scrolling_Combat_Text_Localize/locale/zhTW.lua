@@ -106,7 +106,7 @@ if locale == "zhTW" then
  L["Features"] = "特徵";
  L["Message"] = "滾動戰鬥文本已禁用。如果未啟用，高級滾動戰鬥文本將不會顯示任何內容。";
  --New things 8/11/2022
- L["Leveling]"] = "水準";
+ L["Leveling"] = "水準";
  L["Lost"] = "失去";
  L["Gained"] = "獲得";
  L["Attack Power"] = "攻擊力";
@@ -203,4 +203,13 @@ if locale == "zhTW" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "裝甲穿透力";
  L["Spell Penetration"] = "法術穿透";
+ --New Things 5/27/2023 
+ L["Stats"] = "統計";
+ L["Trinkets"] = "飾品";
+ L["Trinket 1"] = "飾品 1";
+ L["Trinket Slot One"] = "插槽 13 中的第一個小飾品。";
+ L["Trinket Slot One Info"] = "宣佈您的第一個飾品何時冷卻。";
+ L["Trinket 2"] = "飾品 2";
+ L["Trinket Slot Two"] = "插槽 14 中的第二個小飾品。";
+ L["Trinket Slot Two Info"] = "宣佈您的第二個飾品何時冷卻。";
 end

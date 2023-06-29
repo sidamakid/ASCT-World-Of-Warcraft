@@ -106,7 +106,7 @@ if locale == "ptBR" then
  L["Features"] = "Características";
  L["Message"] = "O texto de combate de rolagem está desativado. Se não estiver ativado, o texto Advanced Scrolling Combat não mostrará nada.";
  --New things 8/11/2022
- L["Leveling]"] = "Nivelamento";
+ L["Leveling"] = "Nivelamento";
  L["Lost"] = "Perdido";
  L["Gained"] = "Ganhou";
  L["Attack Power"] = "Poder de Ataque";
@@ -203,4 +203,13 @@ if locale == "ptBR" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Penetração da armadura";
  L["Spell Penetration"] = "Penetração de Feitiços";
+ --New Things 5/27/2023 
+ L["Stats"] = "Estatísticas";
+ L["Trinkets"] = "Bugigangas";
+ L["Trinket 1"] = "Bugiganga 1";
+ L["Trinket Slot One"] = "A primeira bugiganga no slot 13.";
+ L["Trinket Slot One Info"] = "Anuncia quando sua primeira bugiganga sai do frio.";
+ L["Trinket 2"] = "Bugiganga 2";
+ L["Trinket Slot Two"] = "A segunda bugiganga no slot 14.";
+ L["Trinket Slot Two Info"] = "Anuncia quando sua segunda bugiganga sai do frio.";
 end

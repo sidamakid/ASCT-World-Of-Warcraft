@@ -106,7 +106,7 @@ if locale == "frFR" then
  L["Features"] = "Fonctionnalités";
  L["Message"] = "Le défilement du texte de combat est désactivé. S’il n’est pas activé, le texte Advanced Scrolling Combat n’affichera rien.";
  --New things 8/11/2022
- L["Leveling]"] = "Nivellement";
+ L["Leveling"] = "Nivellement";
  L["Lost"] = "Perdu";
  L["Gained"] = "Gagné";
  L["Attack Power"] = "Puissance d’attaque";
@@ -203,4 +203,13 @@ if locale == "frFR" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Pénétration de blindage";
  L["Spell Penetration"] = "Pénétration des sorts";
+ --New Things 5/27/2023 
+ L["Stats"] = "Stats";
+ L["Trinkets"] = "Bibelots";
+ L["Trinket 1"] = "Bibelot 1";
+ L["Trinket Slot One"] = "Le premier bibelot de la fente 13.";
+ L["Trinket Slot One Info"] = "Annonce quand votre premier bibelot sort du temps de recharge.";
+ L["Trinket 2"] = "Bibelot 2";
+ L["Trinket Slot Two"] = "Le deuxième bibelot dans la fente 14.";
+ L["Trinket Slot Two Info"] = "Annonce quand votre deuxième bibelot sort du temps de recharge.";
 end

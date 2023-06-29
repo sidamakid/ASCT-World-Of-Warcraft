@@ -106,7 +106,7 @@ if locale == "deDE" then
  L["Features"] = "Funktionen";
  L["Message"] = "Der Bildlauf zum Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird im Text von Advanced Scrolling Combat nichts angezeigt.";
  --New things 8/11/2022
- L["Leveling]"] = "Nivellierung";
+ L["Leveling"] = "Nivellierung";
  L["Lost"] = "Verloren";
  L["Gained"] = "Gewonnen";
  L["Attack Power"] = "Angriffskraft";
@@ -203,4 +203,13 @@ if locale == "deDE" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Durchschlagskraft der Panzerung";
  L["Spell Penetration"] = "Durchdringung von Zaubersprüchen";
+ --New Things 5/27/2023 
+ L["Stats"] = "Statistiken";
+ L["Trinkets"] = "Wertlosigkeiten";
+ L["Trinket 1"] = "Schmuckstück 1";
+ L["Trinket Slot One"] = "Das erste Schmuckstück in Slot 13.";
+ L["Trinket Slot One Info"] = "Kündigt an, wenn die Abklingzeit deines ersten Schmuckstücks abgelaufen ist.";
+ L["Trinket 2"] = "Schmuckstück 2";
+ L["Trinket Slot Two"] = "Das zweite Schmuckstück in Slot 14.";
+ L["Trinket Slot Two Info"] = "Kündigt an, wenn die Abklingzeit deines zweiten Schmuckstücks abgelaufen ist.";
 end

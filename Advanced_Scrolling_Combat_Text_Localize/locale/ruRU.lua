@@ -106,7 +106,7 @@ if locale == "ruRU" then
  L["Features"] = "Функции";
  L["Message"] = "Прокрутка боевого текста отключена. Если этот параметр не включен, текст Advanced Scrolling Combat ничего не покажет.";
  --New things 8/11/2022
- L["Leveling]"] = "Нивелирование";
+ L["Leveling"] = "Нивелирование";
  L["Lost"] = "Потерянный";
  L["Gained"] = "Получил";
  L["Attack Power"] = "Мощность атаки";
@@ -203,4 +203,13 @@ if locale == "ruRU" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Бронепробиваемость";
  L["Spell Penetration"] = "Проникновение заклинаний";
+ --New Things 5/27/2023 
+ L["Stats"] = "Статистика";
+ L["Trinkets"] = "Безделушки";
+ L["Trinket 1"] = "Безделушка 1";
+ L["Trinket Slot One"] = "Первая безделушка в слоте 13.";
+ L["Trinket Slot One Info"] = "Объявляет, когда ваша первая безделушка сойдет с перезарядки.";
+ L["Trinket 2"] = "Безделушка 2";
+ L["Trinket Slot Two"] = "Вторая безделушка в слоте 14.";
+ L["Trinket Slot Two Info"] = "Объявляет, когда ваша вторая безделушка заканчивается.";
 end

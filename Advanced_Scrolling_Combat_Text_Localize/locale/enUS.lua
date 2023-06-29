@@ -79,6 +79,7 @@ if locale == "enUS" then
  L["msg_Shocks"] = " Shocks are now ready!";
  L["msg_Traps"] = " Traps are now ready!";
  L["msg_Lust"] = " Lust is now ready!";
+ --message
  L["Nothing"] = "Nothing";
  L["Open To Options Panel"] = "Open To Options Panel";
  --New things
@@ -106,7 +107,7 @@ if locale == "enUS" then
  L["Features"] = "Features";
  L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat text won't show anything.";
  --New things 8/11/2022
- L["Leveling]"] = "Leveling";
+ L["Leveling"] = "Leveling";
  L["Lost"] = "Lost";
  L["Gained"] = "Gained";
  L["Attack Power"] = "Attack Power";
@@ -203,4 +204,13 @@ if locale == "enUS" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Armor Penetration";
  L["Spell Penetration"] = "Spell Penetration";
+ --New Things 5/27/2023 
+ L["Stats"] = "Stats";
+ L["Trinkets"] = "Trinkets";
+ L["Trinket 1"] = "Trinket 1";
+ L["Trinket Slot One"] = "The first trinket in slot 13.";
+ L["Trinket Slot One Info"] = "Announces when your first trinket comes off cooldown.";
+ L["Trinket 2"] = "Trinket 2";
+ L["Trinket Slot Two"] = "The second trinket in slot 14.";
+ L["Trinket Slot Two Info"] = "Announces when your second trinket comes off cooldown.";
 end

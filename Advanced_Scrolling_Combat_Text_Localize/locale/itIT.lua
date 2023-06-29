@@ -106,7 +106,7 @@ if locale == "itIT" then
  L["Features"] = "Tratti somatici";
  L["Message"] = "Lo scorrimento del testo di combattimento è disabilitato. Se non abilitato, il testo Advanced Scrolling Combat non mostrerà nulla.";
  --New things 8/11/2022
- L["Leveling]"] = "Livellamento";
+ L["Leveling"] = "Livellamento";
  L["Lost"] = "Perduto";
  L["Gained"] = "Guadagnato";
  L["Attack Power"] = "Potenza d'attacco";
@@ -203,4 +203,13 @@ if locale == "itIT" then
  --New Things 4/1/2023
  L["Armor Penetration"] = "Penetrazione dell'armatura";
  L["Spell Penetration"] = "Penetrazione degli incantesimi";
+ --New Things 5/27/2023 
+ L["Stats"] = "Statistiche";
+ L["Trinkets"] = "Bigiotteria";
+ L["Trinket 1"] = "Gingillo 1";
+ L["Trinket Slot One"] = "Il primo gingillo nello slot 13.";
+ L["Trinket Slot One Info"] = "Annuncia quando il tuo primo gingillo esce dal cooldown.";
+ L["Trinket 2"] = "Gingillo 2";
+ L["Trinket Slot Two"] = "Il secondo gingillo nello slot 14.";
+ L["Trinket Slot Two Info"] = "Annuncia quando il tuo secondo gingillo esce dal cooldown.";
 end
