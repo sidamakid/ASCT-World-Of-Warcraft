@@ -784,6 +784,8 @@ table.insert(UISpecialFrames, "ASCT_Config")
 ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
+ASCT_Config:SetClampedToScreen(true)
+ASCT_Config:SetPoint("CENTER", UIParent, "CENTER", 1000, 650)
 ASCT_Config:SetSize(1000, 650);
 ASCT_Config:SetMinResize(1000,200)
 ASCT_Config:SetMaxResize(1000,650)

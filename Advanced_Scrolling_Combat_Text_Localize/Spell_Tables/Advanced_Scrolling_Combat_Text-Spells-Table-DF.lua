@@ -66,6 +66,7 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Power Word: Shield"] = 17,
             ["Angelic Feather"] = 121536,
             ["Power Word: Radiance"] = 194509,
+            ["Luminous Barrier"] = 271466,
             ["Evangelism"] = 246287,
             ["Light's Wrath"] = 373178,
             ["Power Word: Solace"] = 129250,
@@ -115,14 +116,12 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Mind Blast"] = 8092,
             ["Mind Soothe"] = 453,
             ["Dispersion"] = 47585,
-            ["Damnation"] = 341374,
             ["Void Torrent"] = 263165,
             ["Dark Ascension"] = 391109,
             ["Mindbender"] = 123040 or 200174,
             ["Shadow Crash"] = 205385,
             ["Void Eruption"] = 228260,
             ["Psychic Horror"] = 64044,
-            ["Dark Void"] = 263346,
             ["Silence"] = 15487,
             --PVP Talents
             ["Thoughtsteal"] = 316262,
@@ -214,10 +213,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             --PVP Talents
             ["Nether Ward"] = 212295,
             ["Casting Circle"] = 221703,
+            ["Oblivion"] = 417537,
             ["Shadow Rift"] = 353294,
-            ["Bane of Fragility"] = 199954,
             ["Call Observer"] = 201996,
-            ["Bane of Shadows"] = 234877,
             --Demonology
             ["Soulburn"] = 385899,
             ["Fel Domination"] = 333889,
@@ -252,7 +250,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Shadowfury"] = 30283,
             --PVP Talents
             ["Bane of Havoc"] = 200546,
-            ["Deathbolt"] = 264106,
             ["Rapid Contagion"] = 344566,
             ["Bonds of Fel"] = 353753,
       --Druid
@@ -296,6 +293,7 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Bristling Fur"] = 155835,
             ["Rage of the Sleeper"] = 200851,
             ["Pulverize"] = 80313,
+            ["Lunar Beam"] = 204066,
             --PVP Talents
             ["Alpha Challenge"] = 207017,
             ["Demoralizing Roar"] = 201664,
@@ -339,7 +337,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Wind Shear"] = 57994,
             --PVP Talents
             ["Unleash Shield"] = 356736,
-            ["Thundercharge"] = 204366,
             --Enhancement
             ["Astral Shift"] = 108271,
             ["Earthbind Totem"] = 2484,
@@ -388,7 +385,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Wellspring"] = 197995,
             ["Earthen Wall Totem"] = 198838,
             --PVP Talents
-            ["Ethereal Form"] = 210918,
       --Hunter
             --Beast Mastery
             ["Mend Pet"] = 136,
@@ -471,10 +467,11 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Light's Hammer"] = 114158,
             ["Beacon of Virtue"] = 200025,
             ["Holy Prism"] = 114165,
-            ["Bestow Faith"] = 223306,
             ["Blessing of Summer"] = 388007,
             ["Barrier of Faith"] = 148039,
             ["Tyr's Deliverance"] = 200652,
+            ["Hand of Divinity"] = 414273,
+            ["Daybreak"] = 414170,
             ["Divine Favor"] = 210294,
             ["Rule of Law"] = 214202,
             ["Aura Mastery"] = 31821,
@@ -485,7 +482,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             --Protection
             ["Hammer of Justice"] = 853,
             ["Divine Shield"] = 642,
-            ["Seraphim"] = 152262,
             ["Blinding Light"] = 115750,
             ["Blessing of Protection"] = 1022,
             ["Blessing of Sacrifice"] = 6940,
@@ -510,7 +506,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Avenging Wrath"] = 31884,
             ["Judgment"] = 20271 or 275773 or 275779,
             ["Repentance"] = 20066,
-            ["Holy Avenger"] = 105809,
             ["Crusade"] = 231895,
             ["Justicar's Vengeance"] = 215661,
             ["Eye for an Eye"] = 205191,
@@ -521,6 +516,7 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Exorcism"] = 383185,
             ["Shield of Vengeance"] = 184662,
             ["Wake of Ashes"] = 255937,
+            ["Divine Hammer"] = 198034,
             ["Blade of Justice"] = 184575,
             --PVP Talents
             ["Blessing of Sanctuary"] = 210256,
@@ -553,9 +549,9 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Temporal Shield"] = 198111,
             ["Mass Invisibility"] = 198158,
             ["Arcanosphere"] = 353128,
+            ["Mass Barrier"] = 414660,
             --Fire
             ["Fire Blast"] = 319836 or 108853,
-            ["Meteor"] = 153561,
             ["Dragon's Breath"] = 31661,
             ["Blast Wave"] = 157981,
             ["Alexstrasza's Fury"] = 235870,
@@ -572,7 +568,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Ice Nova"] = 157997,
             ["Ice Block"] = 45438,
             ["Ring of Frost"] = 113724,
-            ["Rune of Power"] = 116011,
             ["Ice Floes"] = 108839,
             ["Summon Water Elemental"] = 31687,
             ["Ebonbolt"] = 257537,
@@ -683,7 +678,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Apocalypse"] = 275699,
             ["Unholy Blight"] = 115989,
             --PVP Talents
-            ["Raise Abomination"] = 288853,
             ["Death Chain"] = 203173,
       --Monk Spells
             --Brewmaster
@@ -699,7 +693,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Rushing Jade Wind"] = 116847,
             ["Weapons of Order"] = 387184,
             ["Exploding Keg"] = 325153,
-            ["Bonedust Brew"] = 386276,
             ["Invoke Niuzao, the Black Ox"] = 132578,
             ["Breath of Fire"] = 115181,
             ["Clash"] = 324312,
@@ -728,7 +721,6 @@ ASCT_Locale.ASCT_Locale = {--Advanced Scrolling Combat Text Localizing Table
             ["Invoke Chi-Ji, the Red Crane"] = 325197,
             ["Restoral"] = 388615,
             ["Zen Pulse"] = 124081,
-            ["Song of Chi-Ji"] = 198898,
             ["Revival"] = 115310,
             ["Essence Font"] = 191837,
             ["Thunder Focus Tea"] = 116680,

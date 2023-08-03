@@ -490,6 +490,8 @@ table.insert(UISpecialFrames, "ASCT_Config")
 ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
+ASCT_Config:SetClampedToScreen(true)
+ASCT_Config:SetPoint("CENTER", UIParent, "CENTER", -950, 200)
 ASCT_Config:SetSize(950, 650);
 if is340 then
 ASCT_Config:SetMinResize(950,200)
@@ -509,7 +511,6 @@ ASCT_Config:SetScript("OnDragStop", function(self)
   self:StopMovingOrSizing()
 end)
 --Points set
-
 ASCT_Config:SetPoint("CENTER", UIParent, "CENTER");
 ASCT_Config:Hide()
 
@@ -733,7 +734,7 @@ local function CreateStatToggle(Stat, settings, parent)
 	return b
 end
 ---------------------------
---Functions_Trinkets
+--Functions For Trinkets
 ---------------------------
 local function CreateTrinketNameIconsToggles(button, settings, configparent)
     local NameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")

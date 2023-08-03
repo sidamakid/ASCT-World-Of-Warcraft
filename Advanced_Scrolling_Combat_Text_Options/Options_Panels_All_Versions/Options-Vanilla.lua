@@ -3,6 +3,8 @@
 ---------------------------
 local isClassicWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
 if isClassicWow then
+local is11403 = select(4, GetBuildInfo()) == 11403
+local is11404 = select(4, GetBuildInfo()) == 11404
 ---------------------------
 --Localize Table
 ---------------------------
@@ -329,9 +331,15 @@ table.insert(UISpecialFrames, "ASCT_Config")
 ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
+ASCT_Config:SetClampedToScreen(true)
+ASCT_Config:SetPoint("CENTER", UIParent, "CENTER", -950, 200)
 ASCT_Config:SetSize(950, 650);
+if is11403 then
 ASCT_Config:SetMinResize(950,200)
 ASCT_Config:SetMaxResize(950,650)
+elseif is11404 then
+ASCT_Config:SetResizeBounds(950,200, 950,650)
+end
 ASCT_Config:RegisterForDrag("LeftButton")
 ASCT_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then

@@ -380,6 +380,8 @@ table.insert(UISpecialFrames, "ASCT_Config")
 ASCT_Config:SetMovable(true)
 ASCT_Config:EnableMouse(true)
 ASCT_Config:SetResizable(true)
+ASCT_Config:SetClampedToScreen(true)
+ASCT_Config:SetPoint("CENTER", UIParent, "CENTER", -950, 200)
 ASCT_Config:SetSize(950, 650);
 ASCT_Config:SetResizeBounds(950,200, 950,650)
 ASCT_Config:RegisterForDrag("LeftButton")
