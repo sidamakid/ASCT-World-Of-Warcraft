@@ -475,10 +475,6 @@ local defaults = {
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
 	},
-	["Trinkets"] = {
-		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
-		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
-	},
 }
 
 
@@ -652,7 +648,7 @@ end
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -731,41 +727,6 @@ local function CreateStatToggle(Stat, settings, parent)
     b.Text:SetText(L[Stat])
     b:SetChecked(settings.StatEnable)
     b:SetScript("OnClick", function(s) settings.StatEnable = s:GetChecked() end)
-	return b
-end
----------------------------
---Functions For Trinkets
----------------------------
-local function CreateTrinketNameIconsToggles(button, settings, configparent)
-    local NameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    NameToggle.Text:SetText(L["Name"])
-    NameToggle:SetChecked(settings.Name)
-    NameToggle:SetEnabled(settings.TrinketEnable == true)
-    NameToggle:SetScript("OnClick", function(self)
-      settings.Name = self:GetChecked()
-    end)
-    NameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
-    local IconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    IconToggle.Text:SetText(L["Icon"])
-    IconToggle:SetChecked(settings.Icon)
-    IconToggle:SetEnabled(settings.TrinketEnable == true)
-    IconToggle:SetScript("OnClick", function(self)
-      settings.Icon = self:GetChecked()
-    end)
-    IconToggle:SetPoint("TOPRIGHT", NameToggle, "BOTTOMRIGHT")
-    button:HookScript("OnClick", function(self) -- NEW STUFF START
-	NameToggle:SetEnabled(self:GetChecked())
-      IconToggle:SetEnabled(self:GetChecked())
-	end) -- NEW STUFF
-end
----------------------------
---Stat Toggles
----------------------------
-local function CreateTrinketToggle(Stat, settings, parent)
-    local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
-    b.Text:SetText(L[Stat])
-    b:SetChecked(settings.TrinketEnable)
-    b:SetScript("OnClick", function(s) settings.TrinketEnable = s:GetChecked() end)
 	return b
 end
 ---------------------------
@@ -857,17 +818,6 @@ end
 --Debuffs fading
 ---------------------------
 local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
----------------------------
---Trinkets
----------------------------
-local col_AD_4 = 4
-local x_AD_4 = 0
-for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Trinkets"]) do
-    local b = CreateTrinketToggle(Stat, settings, content10)
-    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-70) * math.floor(x_AD_4/col_AD_4))
-    x_AD_4=x_AD_4+1
-    CreateTrinketNameIconsToggles(b, settings, content10)
-end
 ---------------------------
 --Rogue
 ---------------------------
