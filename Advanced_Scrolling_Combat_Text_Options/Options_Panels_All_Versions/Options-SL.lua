@@ -1,5 +1,12 @@
 local isShadowlandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
 if isShadowlandsWow then
+---------------------------
+--Functions Table
+---------------------------
+local L_Function_Keys = Functions_For_ASDC_Table
+---------------------------
+--Localize Table
+---------------------------
 local L = ASDC_LOCALE_TABLE
 local function InitializeOptions()
 
@@ -728,54 +735,40 @@ local defaults = {
 		["Ancestral Call"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Advanced_Scrolling_Combat_Text_Stats"] = {
-		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
-		["Agility"] = {StatEnable = false, Gains = false, Lost = false},
-		["Strength"] = {StatEnable = false, Gains = false, Lost = false},
-		["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
-		["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
-		["Health"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Armor"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Agility"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Strength"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
+        ["Health"] = {StatEnable = false, Gains = false, Lost = false},
+    },
+    ["Advanced_Scrolling_Combat_Text_Leveling"] = {
+        ["Experience Gains"] = false,
+        ["Level up message"] = false,
+        ["Skill Gained"] = false,
+        ["Skill Up"] = false,
+        ["Resource lost"] = false,
+        ["Achievement Gains"] = false,
+        ["Death Quadrants"] = false,
+        ["Duel Requests"] = false,
+        ["Sent Mail"] = false,
+		--["Loot"] = false,
+    },
+    ["Advanced_Scrolling_Combat_Text_Auras"] = {
+        ["Fading DeBuffs"] = false,
+    },
+	--[[
+	["Trinkets"] = {
+		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
+		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
 	},
-	["Advanced_Scrolling_Combat_Text_Leveling"] = {
-		["Experience Gains"] = false,
-		["Level up message"] = false,
-		["Skill Up"] = false,
-		["Resource lost"] = false,
-		["Achievement Gains"] = false,
-		["Death Quadrants"] = false,
-		["Duel Requests"] = false,
+	]]
+	--[[
+	["Integer_Values"] = {
+		Icon = 18,
+		Debuff_time = 5,
 	},
-	["Advanced_Scrolling_Combat_Text_Auras"] = {
-		["Fading DeBuffs"] = false,
-		["Fading Buffs"] = false,
-	},
-	["Advanced_Scrolling_Combat_Text_Messages"] = {
-		["Inventory full"] = false,
-		["Locked Items"] = false,
-		["Group Invites"] = false,
-		["Quest Accepted"] = false,
-		["Quest Completed"] = false,
-		["Quest Log Full"] = false,
-		["Trade Requests"] = false,
-		["Trade Complete"] = false,
-		["Trade Canceled"] = false,
-		["Facing the wrong way"] = false,
-		["Friends come Online"] = false,
-		["Friends go Offline"] = false,
-		["Zone discovery"] = false,
-		["Unlearned Skills"] = false,
-		["Rested"] = false,
-		["Sent Mail"] = false,
-		["Dungeon Difficulty Changed"] = false,
-		["Not Enough Honor Points"] = false,
-		["Not Arena Honor Points"] = false,
-		["Players Invited"] = false,
-		["Player Left your group"] = false,
-		["Player joins your group"] = false,
-		["War mode Off"] = false,
-		["War mode On"] = false,
-		["Pvp On"] = false,
-		["Pvp Off"] = false,
-	},
+	]]
 }
 
 function f:InitializeOptions_Class()
@@ -1137,20 +1130,76 @@ for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrollin
     CreateGainsLossToggles(b, settings, content8)
 end
 ---------------------------
--- Advanced Scrolling Combat Text Messages
+--Debuffs fading
 ---------------------------
+local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+---------------------------
+--Slider
+---------------------------
+--[[
+local SliderText = TitleCreate(content5, -265, -10, "Spell Icon Size")
+local MySlider = CreateFrame("Slider", "Icon_slider", content5, "OptionsSliderTemplate")
+MySlider:SetWidth(200)
+MySlider:SetHeight(20)
+MySlider:SetPoint("TOPLEFT", 20, -20)
+MySlider:SetOrientation('HORIZONTAL')
+MySlider:SetMinMaxValues(1, 50)
+MySlider:SetValue(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon)
+MySlider:SetValueStep(1)
+MySlider:SetObeyStepOnDrag(true)
+MySlider.tooltipText = 'The size of the Spell Icon'   -- Creates a tooltip on mouseover.
+_G[MySlider:GetName() .. 'Low']:SetText('1')        -- Sets the left-side slider text (default is "Low").
+_G[MySlider:GetName() .. 'High']:SetText('50')     -- Sets the right-side slider text (default is "High").
+local fs = content5:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+fs:SetPoint("TOPLEFT", 110, -40)
+fs:SetText(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon)
+MySlider:SetScript("OnValueChanged", function(self,value,userInput)
+	if userInput then 
+		Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon = value
+		fs:SetText(value)
+	end
+end)
+]]
+---------------------------
+--Debuff Slider
+---------------------------
+--[[
+local SliderText_Debuff = TitleCreate(content5, -265, -90, L["Debuff fade time"])
+local Debuff_Slider = CreateFrame("Slider", "Debuff_slider", content5, "OptionsSliderTemplate")
+Debuff_Slider:SetWidth(200)
+Debuff_Slider:SetHeight(20)
+Debuff_Slider:SetPoint("TOPLEFT", 20, -100)
+Debuff_Slider:SetOrientation('HORIZONTAL')
+Debuff_Slider:SetMinMaxValues(1, 20)
+Debuff_Slider:SetValue(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time)
+Debuff_Slider:SetValueStep(1)
+Debuff_Slider:SetObeyStepOnDrag(true)
+Debuff_Slider.tooltipText = L["The time warning for Debuffs about to fade"]   -- Creates a tooltip on mouseover.
+_G[Debuff_Slider:GetName() .. 'Low']:SetText('1')        -- Sets the left-side slider text (default is "Low").
+_G[Debuff_Slider:GetName() .. 'High']:SetText('20')     -- Sets the right-side slider text (default is "High").
+local fss = content5:CreateFontString(nil, "OVERLAY", "GameTooltipText")
+fss:SetPoint("TOPLEFT", 110, -140)
+fss:SetText(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time)
+Debuff_Slider:SetScript("OnValueChanged", function(self,value,userInput)
+	if userInput then
+		Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time = value
+		fss:SetText(value)
+	end
+end)
+]]
+---------------------------
+--Trinkets
+---------------------------
+--[[
 local col_AD_4 = 4
 local x_AD_4 = 0
-for v in pairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"]) do
-	local b = CreateFrame("CheckButton", nil, content10, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-5) * math.floor(x_AD_4/col_AD_4))
-	b.Text:SetText(L[v])
-	b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v])
-	b:SetScript("OnClick", function(s) Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Messages"][v] = s:GetChecked() end)
-	x_AD_4=x_AD_4+1
+for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Trinkets"]) do
+    local b = CreateTrinketToggle(Stat, settings, content10)
+    b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-70) * math.floor(x_AD_4/col_AD_4))
+    x_AD_4=x_AD_4+1
+    CreateTrinketNameIconsToggles(b, settings, content10)
 end
-local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
-local Buffsfading = Buttons("Fading Buffs", L["Fading Buffs Alert"], 20, -60, L["Buff has 5 seconds left"], L["Announces when a buff you gained is about to fade"])
+]]
 ---------------------------
 --Rogue
 ---------------------------
@@ -1862,44 +1911,12 @@ end
 
 SLASH_NEWRELOAD1 = "/rl"
 SlashCmdList.NEWRELOAD =  ReloadUI
--- savedVars: table to put new defaults into
--- cleanDefaults: default values table
-local function MergeInNewValues(savedVars, cleanDefaults)
-  for k, v in pairs(cleanDefaults) do
-    if savedVars[k] == nil or type(savedVars[k]) ~= type(v) then -- changed this line so that it replaces the on/off bool with the new table
-      if type(v) == "table" then
-        savedVars[k] = CopyTable(v)
-      else
-        savedVars[k] = v
-      end
-    elseif type(v) == "table" then
-      MergeInNewValues(savedVars[k], v)
-    end
-  end
-end
--- savedVars: table to put new defaults into
--- cleanDefaults: default values table
-local function DeleteOldValues(cleanDefaults, savedVars)
--- Work through each key in the default values table
-for k, v in pairs(savedVars) do
-	-- If the key doesn't exist in cleanDefaults (ie. it's been removed)
-	-- we remove it
-	if cleanDefaults[k] == nil then
-	savedVars[k] = nil
-	-- Found a nested table for this key, go through that nested table to check
-	-- all the keys exist compared to cleanDefaults, and that all the nested
-	-- tables, etc. do too.
-	elseif type(v) == "table" then
-	DeleteOldValues(cleanDefaults[k], v)
-	end
-end
-end
 ---------------------------
 --Saved Variables
 ---------------------------
 Advanced_Scrolling_Combat_Text_DB = Advanced_Scrolling_Combat_Text_DB or {}
-MergeInNewValues(Advanced_Scrolling_Combat_Text_DB, defaults)
-DeleteOldValues(defaults, Advanced_Scrolling_Combat_Text_DB)
+L_Function_Keys["MergeInNewValues"](Advanced_Scrolling_Combat_Text_DB, defaults)
+L_Function_Keys["DeleteOldValues"](defaults, Advanced_Scrolling_Combat_Text_DB)
 f:InitializeOptions_Class()
 f.db = Advanced_Scrolling_Combat_Text_DB
 
@@ -1907,5 +1924,6 @@ end
 
 ASCT_AddLocalizedCallback(function()
   InitializeOptions()
+  L_Function_Keys["Advanced_Scrolling_Combat_Text_RunInitializers"]()
 end)
 end

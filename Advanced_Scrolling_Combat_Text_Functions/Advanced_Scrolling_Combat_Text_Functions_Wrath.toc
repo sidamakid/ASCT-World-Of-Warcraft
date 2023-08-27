@@ -1,0 +1,27 @@
+## Interface: 30402
+## Version: 8.9.8
+## Title: Advanced Scrolling Combat Text Functions
+## Title-koKR: 고급 스크롤 전투 텍스트 기능
+## Title-frFR: Fonctions avancées de texte de combat à défilement
+## Title-deDE: Erweiterte Scrolling-Kampftextfunktionen
+## Title-zhCN: 高级滚动战斗文本功能
+## Title-zhTW: 高級滾動戰鬥文本功能
+## Title-esES: Funciones avanzadas de texto de combate de desplazamiento
+## Title-esMX: Funciones avanzadas de texto de combate de desplazamiento
+## Title-ruRU: Расширенные функции прокрутки боевого текста
+## Title-ptBR: Funções avançadas de texto de combate de rolagem
+## Title-itIT: Funzioni avanzate di testo di combattimento a scorrimento
+## Notes: All the functions for Advanced Scrolling Combat Text
+## Notes-koKR: Advanced Scrolling Combat Text의 모든 기능
+## Notes-frFR: Toutes les fonctions pour Advanced Scrolling Combat Text
+## Notes-deDE: Alle Funktionen für Advanced Scrolling Combat Text
+## Notes-zhCN: 高级滚动战斗文本的所有功能
+## Notes-zhTW: 高級滾動戰鬥文本的所有功能
+## Notes-esES: Todas las funciones para Advanced Scrolling Combat Text
+## Notes-esMX: Todas las funciones para Advanced Scrolling Combat Text
+## Notes-ruRU: Все функции для Advanced Scrolling Combat Text
+## Notes-ptBR: Todas as funções para Advanced Scrolling Combat Text
+## Notes-itIT: Tutte le funzioni per Advanced Scrolling Combat Text
+## Author: Sidamakid Tinman
+
+Functions.xml

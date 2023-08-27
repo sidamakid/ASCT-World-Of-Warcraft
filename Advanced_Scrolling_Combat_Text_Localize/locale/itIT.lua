@@ -212,4 +212,7 @@ if locale == "itIT" then
  L["Trinket 2"] = "Gingillo 2";
  L["Trinket Slot Two"] = "Il secondo gingillo nello slot 14.";
  L["Trinket Slot Two Info"] = "Annuncia quando il tuo secondo gingillo esce dal cooldown.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Tempo di dissolvenza del debuff";
+ L["The time warning for Debuffs about to fade"] = "L'avviso temporale per i debuff sta per svanire";
 end

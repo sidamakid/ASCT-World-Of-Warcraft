@@ -1,11 +1,13 @@
 local isShadowLandsWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_SHADOWLANDS)
 if isShadowLandsWow then
 local L = ASDC_LOCALE_TABLE
+local L_Function_Keys = Functions_For_ASDC_Table
 local lastPower = nil
 local power
 local f = CreateFrame("Frame")
 f:RegisterUnitEvent("UNIT_POWER_FREQUENT", "player")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
+L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 f:SetScript("OnEvent", function()
   if UnitPowerType('player') == 0 then
     power = L["Mana"]
@@ -46,5 +48,6 @@ f:SetScript("OnEvent", function()
   lastPower = UnitPower('player')
   end
   end
+end)
 end)
 end

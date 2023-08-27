@@ -213,4 +213,7 @@ if locale == "enUS" then
  L["Trinket 2"] = "Trinket 2";
  L["Trinket Slot Two"] = "The second trinket in slot 14.";
  L["Trinket Slot Two Info"] = "Announces when your second trinket comes off cooldown.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Debuff fade time";
+ L["The time warning for Debuffs about to fade"] = "The time warning for Debuffs about to fade";
 end

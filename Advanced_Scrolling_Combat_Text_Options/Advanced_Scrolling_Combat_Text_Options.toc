@@ -1,5 +1,5 @@
 ## Interface: 00000
-## Version: 8.9.6
+## Version: 8.9.8
 ## Title: Advanced Scrolling Combat Text Options
 ## Title-koKR: 고급 스크롤 전투 텍스트 옵션
 ## Title-frFR: Options avancées de texte de combat de défilement
@@ -23,7 +23,7 @@
 ## Notes-ptBR: Adiciona novas opções para rolar texto combate
 ## Notes-itIT: Aggiunge nuove opzioni per lo scorrimento del testo Combattimento
 ## Author: Sidamakid Tinman
-## RequiredDeps: Advanced_Scrolling_Combat_Text_Localize
+## RequiredDeps: Advanced_Scrolling_Combat_Text_Localize, Advanced_Scrolling_Combat_Text_Functions
 ## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_Color_Picker_Variables
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362

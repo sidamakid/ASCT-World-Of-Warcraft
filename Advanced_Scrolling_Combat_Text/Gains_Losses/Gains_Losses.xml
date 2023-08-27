@@ -1,12 +1,8 @@
 <UI>
-    <Script file="AGI_Gains.lua"/>
-    <Script file="INT_Gains.lua"/>
+    <Script file="All_Stats_Classic.lua"/>
+    <Script file="All_Stats_Post_Shadowlands.lua"/>
     <Script file="AP_Gains.lua"/>
-    <Script file="STG_Gains.lua"/>
     <Script file="Armor_Gains.lua"/>
-    <Script file="Spirit_Gains.lua"/>
-    <Script file="Stam_Gains.lua"/>
-    <Script file="Armor Penetration.lua"/>
     <Script file="Spell Penetration.lua"/>
     <Script file="Experience_Gains.lua"/>
     <Script file="Level_Up.lua"/>

@@ -1,4 +1,5 @@
 <UI>
+    <Script file="Armor Penetration.lua"/>
     <Script file="Hit Rating.lua"/>
     <Script file="Critcal Strike.lua"/>
     <Script file="Expertise.lua"/>

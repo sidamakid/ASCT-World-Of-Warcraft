@@ -212,4 +212,7 @@ if locale == "ruRU" then
  L["Trinket 2"] = "Безделушка 2";
  L["Trinket Slot Two"] = "Вторая безделушка в слоте 14.";
  L["Trinket Slot Two Info"] = "Объявляет, когда ваша вторая безделушка заканчивается.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Время затухания дебаффа";
+ L["The time warning for Debuffs about to fade"] = "Предупреждение о времени для дебаффов вот-вот исчезнет";
 end

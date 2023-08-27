@@ -212,4 +212,7 @@ if locale == "frFR" then
  L["Trinket 2"] = "Bibelot 2";
  L["Trinket Slot Two"] = "Le deuxième bibelot dans la fente 14.";
  L["Trinket Slot Two Info"] = "Annonce quand votre deuxième bibelot sort du temps de recharge.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Temps de fondu de Debuff";
+ L["The time warning for Debuffs about to fade"] = "L’avertissement de temps pour les débuffs sur le point de s’estomper";
 end

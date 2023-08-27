@@ -1,5 +1,6 @@
 local isClassicWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_CLASSIC)
 local L = ASDC_LOCALE_TABLE
+local L_Function_Keys = Functions_For_ASDC_Table
 local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
 local UnitAura = _G.UnitAura
 local UnitDebuff = _G.UnitDebuff
@@ -24,10 +25,26 @@ local function onUpdate()
       if not name then
         return
       end
+      --[[
+      if duration <= Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time then
+        return
+      end
+      ]]
       if duration <= 5 then
         return
       end
       local remainingTime = expirationTime - GetTime()
+      --[[
+      if remainingTime < Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time then
+        if not debuffsTrigggered[name] then
+          local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " .. L["Is About to Fade!"], icon, name)
+          CombatText_AddMessage(msg, CombatText_StandardScroll, 1, 1, 0)
+          debuffsTrigggered[name] = true
+        end
+      else
+        debuffsTrigggered[name] = false
+      end
+      ]]
       if remainingTime < 5 then
         if not debuffsTrigggered[name] then
           local msg = string.format("|T%d:18|t " .. " " .. "%s" .. " " .. L["Is About to Fade!"], icon, name)
@@ -43,4 +60,4 @@ end
 end
 
 local f = CreateFrame("Frame")
-f:SetScript("OnUpdate", onUpdate)
+L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function() f:SetScript("OnUpdate", onUpdate) end)

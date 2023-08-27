@@ -212,4 +212,7 @@ if locale == "zhCN" then
  L["Trinket 2"] = "饰品 2";
  L["Trinket Slot Two"] = "插槽 14 中的第二个小饰品。";
  L["Trinket Slot Two Info"] = "宣布您的第二个饰品何时冷却。";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "减益淡出时间";
+ L["The time warning for Debuffs about to fade"] = "减益的时间警告即将消退";
 end

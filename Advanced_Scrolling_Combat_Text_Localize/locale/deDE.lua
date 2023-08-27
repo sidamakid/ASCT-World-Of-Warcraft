@@ -212,4 +212,7 @@ if locale == "deDE" then
  L["Trinket 2"] = "Schmuckstück 2";
  L["Trinket Slot Two"] = "Das zweite Schmuckstück in Slot 14.";
  L["Trinket Slot Two Info"] = "Kündigt an, wenn die Abklingzeit deines zweiten Schmuckstücks abgelaufen ist.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Debuff-Fade-Zeit";
+ L["The time warning for Debuffs about to fade"] = "Die Zeitwarnung für Debuffs, die kurz vor dem Verblassen stehen";
 end

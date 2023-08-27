@@ -212,4 +212,7 @@ if locale == "ptBR" then
  L["Trinket 2"] = "Bugiganga 2";
  L["Trinket Slot Two"] = "A segunda bugiganga no slot 14.";
  L["Trinket Slot Two Info"] = "Anuncia quando sua segunda bugiganga sai do frio.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Debuff fade time";
+ L["The time warning for Debuffs about to fade"] = "O aviso de tempo para Debuffs prestes a desaparecer";
 end

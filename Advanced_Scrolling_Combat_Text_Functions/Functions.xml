@@ -1,0 +1,6 @@
+<UI>
+    <Script file="Main_Table.lua"/>
+    <Include file="Version_Check\Version_Check.xml"/>
+    <Include file="Options_Functions\Options_Functions.xml"/>
+    <Include file="Loading_Functions\Loading_Functions.xml"/>
+</UI>

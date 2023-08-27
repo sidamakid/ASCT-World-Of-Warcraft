@@ -212,4 +212,7 @@ if locale == "koKR" then
  L["Trinket 2"] = "장신구 2";
  L["Trinket Slot Two"] = "슬롯 14의 두 번째 장신구.";
  L["Trinket Slot Two Info"] = "두 번째 장신구의 재사용 대기시간이 해제되면 알려줍니다.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "디버프 페이드 시간";
+ L["The time warning for Debuffs about to fade"] = "디버프에 대한 시간 경고가 곧 사라집니다.";
 end

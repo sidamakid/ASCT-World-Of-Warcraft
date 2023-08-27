@@ -211,4 +211,7 @@ if locale == "esMX" then
  L["Trinket 2"] = "Baratija 2";
  L["Trinket Slot Two"] = "La segunda baratija en la ranura 14.";
  L["Trinket Slot Two Info"] = "Anuncia cuando tu segunda baratija sale del enfriamiento.";
+ --New Things 8/26/2023
+ L["Debuff fade time"] = "Tiempo de desvanecimiento de Debuff";
+ L["The time warning for Debuffs about to fade"] = "La advertencia de tiempo para Debuffs a punto de desvanecerse";
 end

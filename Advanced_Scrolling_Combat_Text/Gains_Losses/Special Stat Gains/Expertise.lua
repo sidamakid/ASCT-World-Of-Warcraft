@@ -1,10 +1,12 @@
 local isWrathWoW = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_WRATH_OF_THE_LICH_KING)
 if isWrathWoW then
 local L = ASDC_LOCALE_TABLE
+local L_Function_Keys = Functions_For_ASDC_Table
 local lastStat = -1
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:RegisterEvent("COMBAT_RATING_UPDATE")
+L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 f:SetScript("OnEvent", function()
     local stats = Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]["Expertise Rating"]
     local Spellpower = GetCombatRating(CR_EXPERTISE)
@@ -17,5 +19,6 @@ f:SetScript("OnEvent", function()
         CombatText_AddMessage(msg, CombatText_StandardScroll, 0.1, 0.1, 1)
     end
     lastStat = currentStat
+end)
 end)
 end
