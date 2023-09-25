@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Register_Events.lua"/>
+    <Script file="Register_Unit_Events.lua"/>
+    <Script file="Main_Frame_Functions.lua"/>
+</UI>

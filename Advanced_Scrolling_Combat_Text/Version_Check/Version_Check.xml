@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Version_Check.lua"/>
+    <Include file="Verison_Check_Le_Expansion_Level_Current\Verison_Check_Le_Expansion_Level_Current.xml"/>
+    <Include file="Verison_Check_Get_Build_Information\Verison_Check_Get_Build_Info.xml"/>
+</UI>

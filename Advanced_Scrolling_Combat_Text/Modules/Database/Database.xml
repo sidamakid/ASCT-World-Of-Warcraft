@@ -1,0 +1,5 @@
+<UI>
+    <Include file="Locale_Spells_DB\Locale_Spells_DB.xml"/>
+    <Include file="Spells_DB\Spells.xml"/>
+    <Include file="Others_DB\Others.xml"/>
+</UI>

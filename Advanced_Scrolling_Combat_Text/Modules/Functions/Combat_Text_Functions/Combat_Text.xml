@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Combat_Text.lua"/>
+    <Script file="Combat_Text_Set_Color.lua"/>
+</UI>

@@ -1,0 +1,5 @@
+<UI>
+    <Include file="SARTE-Text-Abilites\SARTE-Text.xml"/>
+    <Include file="SARTE-Racials\SARTE-Racials.xml"/>
+    <Include file="SARTE-Text-Shared-Spell-Cooldowns\SharedSpells.xml"/>
+</UI>

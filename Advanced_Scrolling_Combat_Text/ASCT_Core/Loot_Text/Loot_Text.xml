@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Loot.lua"/>
+    <Script file="Loot_Money.lua"/>
+</UI>

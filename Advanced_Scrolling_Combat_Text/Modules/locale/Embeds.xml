@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Advanced_Scrolling_Combat_Text-Spells.lua"/>
+    <Include file="locale\locale.xml"/>
+</UI>

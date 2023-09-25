@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Create_Buttons_Toggles_Classic.lua"/>
+    <Script file="Create_Buttons_Toggles_DragonFlight.lua"/>
+</UI>

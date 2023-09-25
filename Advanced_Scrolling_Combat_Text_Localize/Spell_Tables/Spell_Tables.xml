@@ -1,7 +1,0 @@
-<UI>
-    <Script file="Advanced_Scrolling_Combat_Text-Spells-Table-Vanilla.lua"/>
-    <Script file="Advanced_Scrolling_Combat_Text-Spells-Table-TBC.lua"/>
-    <Script file="Advanced_Scrolling_Combat_Text-Spells-Table-Wrath.lua"/>
-    <Script file="Advanced_Scrolling_Combat_Text-Spells-Table-SL.lua"/>
-    <Script file="Advanced_Scrolling_Combat_Text-Spells-Table-DF.lua"/>
-</UI>

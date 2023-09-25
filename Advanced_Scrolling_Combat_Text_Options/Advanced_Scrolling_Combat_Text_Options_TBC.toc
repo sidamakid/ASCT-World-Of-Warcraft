@@ -1,37 +1,30 @@
 ## Interface: 20504
-## Version: 8.9.8
-## Title: Advanced Scrolling Combat Text Options
-## Title-koKR: 고급 스크롤 전투 텍스트 옵션
-## Title-frFR: Options avancées de texte de combat de défilement
-## Title-deDE: Erweiterte Optionen für Scrolling-Kampftexte
-## Title-zhCN: 高级滚动战斗文本选项
-## Title-zhTW: 高級滾動戰鬥文本選項
-## Title-esES: Opciones avanzadas de texto de combate de desplazamiento
-## Title-esMX: Opciones avanzadas de texto de combate de desplazamiento
-## Title-ruRU: Расширенные параметры прокрутки боевого текста
-## Title-ptBR: Opções avançadas de texto de combate de rolagem
-## Title-itIT: Opzioni avanzate del testo di combattimento a scorrimento
-## Notes: Adds New options for Scrolling Combat text
-## Notes-koKR: 전투 텍스트 스크롤에 대한 새로운 옵션 추가
-## Notes-frFR: Ajoute de nouvelles options pour faire défiler le texte combat
-## Notes-deDE: Fügt neue Optionen für das Scrollen von Kampftext hinzu
-## Notes-zhCN: 添加滚动战斗文本的新选项
-## Notes-zhTW: 添加滾動戰鬥文本的新選項
-## Notes-esES: Agrega nuevas opciones para desplazar el texto de combate
-## Notes-esMX: Agrega nuevas opciones para desplazar el texto de combate
-## Notes-ruRU: Добавлены новые параметры прокрутки боевого текста
-## Notes-ptBR: Adiciona novas opções para rolar texto combate
-## Notes-itIT: Aggiunge nuove opzioni per lo scorrimento del testo Combattimento
+## Version: 9.0.0
+## Title: Old ASCT Options
+## Title-koKR: 이전 ASCT 옵션
+## Title-frFR: Anciennes options ASCT
+## Title-deDE: Alte ASCT-Optionen
+## Title-zhCN: 旧的 ASCT 选项
+## Title-zhTW: 舊的 ASCT 選項
+## Title-esES: Opciones antiguas de ASCT
+## Title-esMX: Opciones antiguas de ASCT
+## Title-ruRU: Старые параметры ASCT
+## Title-ptBR: Opções antigas de ASCT
+## Title-itIT: Vecchie opzioni ASCT
+## Notes: (safe to delete)
+## Notes-koKR: (안전하게 삭제할 수 있음)
+## Notes-frFR: (peut être supprimé en toute sécurité)
+## Notes-deDE: (sicher zu löschen)
+## Notes-zhCN: （可安全删除）
+## Notes-zhTW: （可安全刪除）
+## Notes-esES: (seguro de eliminar)
+## Notes-esMX: (seguro de eliminar)
+## Notes-ruRU: (безопасно удалить)
+## Notes-ptBR: (seguro para excluir)
+## Notes-itIT: (sicuro da eliminare)
 ## Author: Sidamakid Tinman
-## RequiredDeps: Advanced_Scrolling_Combat_Text_Localize, Advanced_Scrolling_Combat_Text_Functions
 ## SavedVariablesPerCharacter: Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_Color_Picker_Variables
+## LoadOnDemand: 1
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
-# Libs
-Libs\LibStub\LibStub.lua
-Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
-Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
-Libs\LibDBIcon-1.0\lib.xml
-# Embeds
-Embeds.xml

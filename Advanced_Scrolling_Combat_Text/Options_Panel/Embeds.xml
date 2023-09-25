@@ -1,0 +1,6 @@
+<Ui>
+    <Include file="Libs.xml"/>
+    <Script file="Color_picker.lua"/>
+    <Script file="Color_picker_saved.lua"/>
+    <Include file="Options_Panels_All_Versions\Classic Options.xml"/>
+</Ui>

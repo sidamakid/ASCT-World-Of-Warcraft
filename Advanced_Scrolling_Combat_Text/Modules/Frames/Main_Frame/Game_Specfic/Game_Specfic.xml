@@ -1,0 +1,7 @@
+<UI>
+    <Script file="Vanilla.lua"/>
+    <Script file="TBC.lua"/>
+    <Script file="Wrath.lua"/>
+    <Script file="SL.lua"/>
+    <Script file="DF.lua"/>
+</UI>

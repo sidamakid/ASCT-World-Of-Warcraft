@@ -1,0 +1,12 @@
+<UI>
+    <Script file="Locale_Spells_Table.lua"/>
+    <Script file="localize.lua"/>
+    <Script file="Verison_Check_Table.lua"/>
+    <Script file="Table_Functions_Table.lua"/>
+    <Script file="Frames_Table.lua"/>
+    <Script file="Events_Table.lua"/>
+    <Script file="Widget_Methods_Table.lua"/>
+    <Script file="Script_Handlers_Table.lua"/>
+    <Script file="Functions_Main_Table.lua"/>
+    <Script file="Database_Table.lua"/>
+</UI>

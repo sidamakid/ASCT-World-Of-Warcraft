@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Main_Frame_Functions_Setup_Not_Shadowlands.lua"/>
+    <Script file="Main_Frame_Functions_Setup_Not_Classic_Wow.lua"/>
+</UI>

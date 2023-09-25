@@ -1,15 +1,13 @@
-local L = ASDC_LOCALE_TABLE
+local L_ASCT_Frames, L_ASCT_Handlers, L =  ASCT_Frames_Table, ASCT_Script_Handlers_Table, ASDC_LOCALE_TABLE
 local function OnEvent(self, event, isLogin, isReload)
 	if isLogin or isReload then
-	if not Advanced_Scrolling_Combat_Text_DB then
-		Advanced_Scrolling_Combat_Text_DB = {}
+	if not ASCT_DB then
+		ASCT_DB = {}
 	end
-	local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
-    if Comabt_Text == false then
+    if not C_CVar.GetCVarBool("enableFloatingCombatText") then
     message(L["Message"])
     end
 	end
 end
-local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_ENTERING_WORLD")
-f:SetScript("OnEvent", OnEvent)
+local f = L_ASCT_Frames["SCT_Check_Frame"]
+L_ASCT_Handlers["OnEvent"](f, OnEvent)

@@ -1,3 +1,4 @@
+local L_Function_Keys = Functions_For_ASDC_Table
 local defaults = {
   r = 1,
   b = 0,
@@ -12,5 +13,5 @@ local function OnEvent(self, event, addonEventName)
 end
 
 local f = CreateFrame("Frame")
-f:RegisterEvent("ADDON_LOADED")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent", OnEvent)

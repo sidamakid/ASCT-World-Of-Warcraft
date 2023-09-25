@@ -1,0 +1,7 @@
+<UI>
+    <Include file="Dragonflight\DF_locale.xml"/>
+    <Include file="Shadowlands\SL_locale.xml"/>
+    <Include file="Wrath\Wrath_locale.xml"/>
+    <Include file="TBC\TBC_locale.xml"/>
+    <Include file="Vanilla\Vanilla_locale.xml"/>
+</UI>

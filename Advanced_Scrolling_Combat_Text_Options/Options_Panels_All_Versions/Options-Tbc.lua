@@ -1,17 +1,12 @@
-local isTbcWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE)
-if isTbcWow then
----------------------------
---Localize Table
----------------------------
-local L = ASDC_LOCALE_TABLE
 ---------------------------
 --Functions Table
 ---------------------------
 local L_Function_Keys = Functions_For_ASDC_Table
+if L_Function_Keys["isTbcWow"] then
 ---------------------------
---Namespace
+--Localize Table
 ---------------------------
-local addonName, ASCT_Options = ...;
+local L = ASDC_LOCALE_TABLE
 ---------------------------
 --For Call Back handler
 ---------------------------
@@ -19,386 +14,17 @@ local function InitializeOptions()
 ---------------------------
 --Create Our Frame
 ---------------------------
-local f = CreateFrame("Frame")
+local f = L_Function_Keys["InitializeOptions_Frame"]
 ---------------------------
 --Normal table
 ---------------------------
-local defaults = {
-	["Race"] = {
-	["Blood Elf"] = false,
-	Orc = false,
-	Undead = false,
-	Troll = false,
-	Tauren = false,
-	Draenei = false,
-	Gnome = false,
-	Human = false,
-	["Night Elf"] = false,
-	Dwarf = false,
-	},
-	--Classes
-	["Class"] = {
-		Rogue = false,
-		Priest = false,
-		Warrior = false,
-		Druid = false,
-		Warlock = false,
-		Shaman = false,
-      	Hunter = false,
-		Paladin = false,
-		Mage = false,
-	},
-	--Rogue spells
-	["Assassination"] = {
-			["Cold Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Kidney Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Combat"] = {
-			["Feint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Adrenaline Rush"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Gouge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Evasion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Sprint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Riposte"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Blade Flurry"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Subtlety"] = {
-			["Stealth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Ghostly Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Preparation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Vanish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Premeditation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Shadowstep"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Cloak of Shadows"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Blind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-			["Distract"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
---Priest spells
-	["Shadow"] = {
-		["Shadow Word: Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Fade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Devouring Plague"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Psychic Scream"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Mind Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Vampiric Embrace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Silence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shadowfiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-      },
-   ["Holy_Priest"] = {
-	["Prayer of Mending"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Lightwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Desperate Prayer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Chastise"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-    },
-   ["Discipline"] = {
-		["Fear Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Power Word: Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Power Infusion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Inner Focus"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Pain Suppression"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Symbol of Hope"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Feedback"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Elune's Grace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Starshards"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Consume Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	  --Warrior spells
-	["Arms"] = {
-		["Thunder Clap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Overpower"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Retaliation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Mocking Blow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Death Wish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Mortal Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Fury"] = {
-		["Recklessness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Intercept"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Whirlwind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Berserker Rage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Intimidating Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Challenging Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Pummel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Sweeping Strikes"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Bloodthirst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Protection_Warrior"] = {
-		["Spell Reflection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Intervene"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shield Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shield Wall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Disarm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Taunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Bloodrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Revenge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shield Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Last Stand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Concussion Blow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shield Slam"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-		--Druid Spells
-	["Balance"] = {
-		["Innervate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Barkskin"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Hurricane"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Nature's Grasp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Force of Nature"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Feral_Combat"] = {
-		["Maim"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Enrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Prowl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Dash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Challenging Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Growl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Cower"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Frenzied Regeneration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Tiger's Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Feral Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Faerie Fire (Feral)"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Druid_Restoration"] = {
-		["Rebirth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Tranquility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Swiftmend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-
-
-	--Warlock spells
-  ["Affliction"] = {
-	["Curse of Doom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Death Coil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Howl of Terror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-   ["Demonology"] = {
-		["Inferno"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Soulshatter"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Ritual of Doom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Ritual of Souls"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shadow Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Fel Domination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Destruction"] = {
-		["Soul Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shadowfury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Conflagrate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shadowburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	--Shaman spells
-	["Elemental"] = {
-		["Fire Elemental Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Chain Lightning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Earthbind Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Fire Nova Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Stoneclaw Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Elemental Mastery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		},
-	["Enhancement"] = {
-		["Grounding Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Earth Elemental Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Stormstrike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Astral Recall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Shamanistic Rage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Shaman_Restoration"] = {
-		["Mana Tide Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Shared_Shaman_spells"] = {
-		["Shocks"] = false,
-		["Lust"] = false,
-	},
-	--Hunter spells
-	["Beast Mastery"] = {
-		 ["Kill Command"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		 ["Bestial Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		 ["Scare Beast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		 ["Intimidation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	  },
-   ["Marksmanship"] = {
-		["Rapid Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Multi-Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Flare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Concussive Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Arcane Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Aimed Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Scatter Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-    },
-   ["Survival"] = {
-		["Misdirection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Feign Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Disengage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Raptor Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Mongoose Bite"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Readiness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Deterrence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Wyvern Sting"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Counterattack"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-    },
-	["Hunter_Traps"] = {
-		["Traps"] = false,
-	},
-	--Paladin
-	["Holy_Paladin"] = {
-		["Consecration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Exorcism"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Holy Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Lay on Hands"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Turn Evil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Hammer of Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Divine Illumination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Holy Shock"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Divine Favor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Protection_Paladin"] = {
-		["Righteous Defense"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Divine Intervention"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Divine Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Blessing of Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Blessing of Freedom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Hammer of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Divine Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Blessing of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Avenger's Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Holy Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Retribution"] = {
-		["Avenging Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Judgement"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Crusader Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Repentance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	--Mage
-	["Arcane"] = {
-		["Ritual of Refreshment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Counterspell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Blink"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Arcane Power"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Presence of Mind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Evocation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Shattrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Stonard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Theramore"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Silvermoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Exodar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Stormwind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Ironforge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Darnassus"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Orgrimmar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Undercity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Portal: Thunder Bluff"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Fire"] = {
-		["Fire Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Fire Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Dragon's Breath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Combustion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Blast Wave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Frost_Mage"] = {
-		["Ice Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Frost Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Cone of Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Frost Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Icy Veins"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Summon Water Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Cold Snap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Ice Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	--Racials
-	["Blood Elf"] = {
-		["Arcane Torrent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Mana Tap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Undead"] = {
-		["Cannibalize"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-		["Will of the Forsaken"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Orc"] = {
-		["Blood Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Troll"] = {
-		Berserking = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Tauren"] = {
-		["War Stomp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Human"] = {
-		Perception = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Night Elf"] = {
-		Shadowmeld = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Draenei"] = {
-		["Gift of the Naaru"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Gnome"] = {
-		["Escape Artist"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Dwarf"] = {
-		["Stoneform"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	},
-	["Advanced_Scrolling_Combat_Text_Stats"] = {
-		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
-		["Agility"] = {StatEnable = false, Gains = false, Lost = false},
-		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false},
-		["Strength"] = {StatEnable = false, Gains = false, Lost = false},
-		["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
-		["Spirit"] = {StatEnable = false, Gains = false, Lost = false},
-		["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
-		["Health"] = {StatEnable = false, Gains = false, Lost = false},
-		["Shadow Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Arcane Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Frost Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Fire Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Nature Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-	},
-	["Advanced_Scrolling_Combat_Text_Leveling"] = {
-		["Experience Gains"] = false,
-		["Level up message"] = false,
-		["Skill Gained"] = false,
-		["Skill Up"] = false,
-		["Resource lost"] = false,
-		["Death Quadrants"] = false,
-		["Duel Requests"] = false,
-		["Sent Mail"] = false,
-		--["Loot"] = false,
-	},
-	["Advanced_Scrolling_Combat_Text_Auras"] = {
-		["Fading DeBuffs"] = false,
-	},
-	--[[
-	["Trinkets"] = {
-		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
-		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
-	},
-	]]
-	--[[
-	["Integer_Values"] = {
-		Icon = 18,
-		Debuff_time = 5,
-	},
-	]]
-}
+local defaults = L_Function_Keys["TableCombine"](L_Function_Keys["Spells_TBC"], L_Function_Keys["Others_TBC"])
 ---------------------------
 --Create Options panel
 ---------------------------
 function f:InitializeOptions_Class()
-local ASCT_Config = CreateFrame("Frame", "ASCT_Config", UIParent, "UIPanelDialogTemplate");
+local ASCT_Config = L_Function_Keys["ASCT_Config"]
 table.insert(UISpecialFrames, "ASCT_Config")
-ASCT_Config:SetMovable(true)
-ASCT_Config:EnableMouse(true)
-ASCT_Config:SetResizable(true)
-ASCT_Config:SetClampedToScreen(true)
-ASCT_Config:SetPoint("CENTER", UIParent, "CENTER", -950, 200)
-ASCT_Config:SetSize(950, 650);
-ASCT_Config:SetResizeBounds(950,200, 950,650)
-ASCT_Config:RegisterForDrag("LeftButton")
 ASCT_Config:SetScript("OnDragStart", function(self)
   if IsLeftAltKeyDown() then
     self:StartSizing()
@@ -409,10 +35,6 @@ end)
 ASCT_Config:SetScript("OnDragStop", function(self)
   self:StopMovingOrSizing()
 end)
---Points set
-
-ASCT_Config:SetPoint("CENTER", UIParent, "CENTER");
-ASCT_Config:Hide()
 
 --Child Frames
 ASCT_Config.title = ASCT_Config:CreateFontString(nil, "OVERLAY");
@@ -482,18 +104,11 @@ print(L["Advanced Scrolling Combat Text successfully Loaded. To load the options
 -------------------------
 --Text Creating
 -------------------------
-local function TextCreate(Text)
-local text = f:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-text:SetText(Text)
-return Text
-end
-local function TitleCreate(content, x, y, Text)
-	content.title = content:CreateFontString(nil, "OVERLAY");
-	content.title:SetFontObject("GameFontHighlight");
-	content.title:SetPoint("TOP", content, "TOP", x, y);
-	content.title:SetText(Text);
-	return Text
-end
+local TextCreate = L_Function_Keys["TextCreate"]
+-------------------------
+--Title Creating
+-------------------------
+local TitleCreate = L_Function_Keys["TitleCreate"]
 ---------------------------
 --Automatic Class picker
 ---------------------------
@@ -549,7 +164,8 @@ end
 -------------------------
 ---Tabs
 -------------------------
-local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
+--local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
+local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"]);
 local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 ---------------------------
 --MiniMap Icon
@@ -596,107 +212,35 @@ local OpenToOptionsPanel = CreateFrame("Button", nil, panel_main, "UIPanelButton
 	ASCT_Config:Show()
 end)
 ---------------------------
---Functions
+--Gains and Losses Toogles
 ---------------------------
-local function CreateGainsLossToggles(button, settings, configparent)
-    local GainToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    GainToggle.Text:SetText(L["Gained"])
-    GainToggle:SetChecked(settings.Gains)
-    GainToggle:SetEnabled(settings.StatEnable == true)
-    GainToggle:SetScript("OnClick", function(self)
-      settings.Gains = self:GetChecked()
-    end)
-    GainToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
-    local lossToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    lossToggle.Text:SetText(L["Lost"])
-    lossToggle:SetChecked(settings.Lost)
-    lossToggle:SetEnabled(settings.StatEnable == true)
-    lossToggle:SetScript("OnClick", function(self)
-      settings.Lost = self:GetChecked()
-    end)
-    lossToggle:SetPoint("TOPRIGHT", GainToggle, "BOTTOMRIGHT")
-    button:HookScript("OnClick", function(self) -- NEW STUFF START
-      GainToggle:SetEnabled(self:GetChecked())
-      lossToggle:SetEnabled(self:GetChecked())
-	end) -- NEW STUFF
-end
+local CreateGainsLossToggles = L_Function_Keys["CreateGainsLossToggles"]
 ---------------------------
 --Stat Toggles
 ---------------------------
-local function CreateStatToggle(Stat, settings, parent)
-    local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
-    b.Text:SetText(L[Stat])
-    b:SetChecked(settings.StatEnable)
-    b:SetScript("OnClick", function(s) settings.StatEnable = s:GetChecked() end)
-	return b
-end
+local CreateStatToggle = L_Function_Keys["CreateStatToggle"]
 ---------------------------
 --Buttons
 ---------------------------
-local function Buttons(value, btntext, x, y, text1, text2)
-	local b = CreateFrame("CheckButton", nil, content9, "InterfaceOptionsCheckButtonTemplate")
-	b:SetPoint("TOPLEFT", x, y)
-	b.Text:SetText(btntext)
-	b:SetScript("OnEnter",function (self)
-	GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
-	GameTooltip:SetText(text1)
-  	GameTooltip:AddLine(text2)
-  	GameTooltip:Show()
-end)
-b:SetScript("OnLeave", function ()
-	GameTooltip:Hide()
-end)
-b:SetScript("OnClick", function(self) 
-	Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Auras"][value] = b:GetChecked()
-	end)
-b:SetChecked(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Auras"][value])
-return b
-end
+local Buttons = L_Function_Keys["Buttons"]
 ---------------------------
 --Name Icon Toggles
 ---------------------------
-local function CreateNameIconToggles(button, settings, configparent)
-    local nameToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    nameToggle.Text:SetText(L["Name"])
-    nameToggle:SetChecked(settings.nameEnable)
-    nameToggle:SetEnabled(settings.SpellEnable == true)
-    nameToggle:SetScript("OnClick", function(self)
-      settings.nameEnable = self:GetChecked()
-    end)
-    nameToggle:SetPoint("TOPRIGHT", button, "BOTTOMRIGHT", 20, 0) -- anchor to set it relative to the button
-    local iconToggle = CreateFrame("CheckButton", nil, configparent, "InterfaceOptionsCheckButtonTemplate")
-    iconToggle.Text:SetText(L["Icon"])
-    iconToggle:SetChecked(settings.iconEnable)
-    iconToggle:SetEnabled(settings.SpellEnable == true)
-    iconToggle:SetScript("OnClick", function(self)
-      settings.iconEnable = self:GetChecked()
-    end)
-    iconToggle:SetPoint("TOPRIGHT", nameToggle, "BOTTOMRIGHT")
-    button:HookScript("OnClick", function(self) -- NEW STUFF START
-      nameToggle:SetEnabled(self:GetChecked())
-      iconToggle:SetEnabled(self:GetChecked())
-	end) -- NEW STUFF
-end
+local CreateNameIconToggles = L_Function_Keys["CreateNameIconToggles"]
 ---------------------------
 --Spell Toggles
 ---------------------------
-local function CreateSpellToggle(spellName, settings, parent)
-    local b = CreateFrame("CheckButton", nil, parent, "InterfaceOptionsCheckButtonTemplate")
-    b.Text:SetText(ASCT_GetLocalizedName(spellName))
-    b:SetChecked(settings.SpellEnable)
-    b:SetScript("OnClick", function(s) settings.SpellEnable = s:GetChecked() end)
-    local tex = b:CreateTexture()
-    tex:SetPoint("LEFT", b.Text, "RIGHT", 3, 1)
-    tex:SetSize(44, 44)
-    tex:SetTexture(ASCT_GetLocalizedIcon(spellName))
-    return b
-end
+local CreateSpellToggle = L_Function_Keys["CreateSpellToggle"]
+---------------------------
+--Table Sorting
+---------------------------
+local PairsByKeys = L_Function_Keys["PairsByKeys"]
 ---------------------------
 -- Advanced Scrolling Combat Text Leveling
 ---------------------------
 local col_AD = 4
 local x_AD = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
+for v in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
 	local b = CreateFrame("CheckButton", nil, content7, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD % col_AD), -20 + (- b:GetHeight()-5) * math.floor(x_AD/col_AD))
 	b.Text:SetText(L[v])
@@ -709,7 +253,7 @@ end
 ---------------------------
 local col_AD_3 = 4
 local x_AD_3 = 0
-for Stat, settings in ASCT_Options:PairsByKeys(Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
+for Stat, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
     local b = CreateStatToggle(Stat, settings, content8)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_3 % col_AD_3), -20 + (- b:GetHeight()-70) * math.floor(x_AD_3/col_AD_3))
     x_AD_3=x_AD_3+1
@@ -718,81 +262,78 @@ end
 ---------------------------
 --Debuffs fading
 ---------------------------
-local Debuffsfading = Buttons("Fading DeBuffs", L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+local Debuffsfading = Buttons("Fading DeBuffs", content9, L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
 ---------------------------
---Slider
+--Icon Slider
 ---------------------------
---[[
-local SliderText = TitleCreate(content5, -265, -10, "Spell Icon Size")
-local MySlider = CreateFrame("Slider", "Icon_slider", content5, "OptionsSliderTemplate")
-MySlider:SetWidth(200)
-MySlider:SetHeight(20)
-MySlider:SetPoint("TOPLEFT", 20, -20)
-MySlider:SetOrientation('HORIZONTAL')
-MySlider:SetMinMaxValues(1, 50)
-MySlider:SetValue(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon)
-MySlider:SetValueStep(1)
-MySlider:SetObeyStepOnDrag(true)
-MySlider.tooltipText = 'The size of the Spell Icon'   -- Creates a tooltip on mouseover.
-_G[MySlider:GetName() .. 'Low']:SetText('1')        -- Sets the left-side slider text (default is "Low").
-_G[MySlider:GetName() .. 'High']:SetText('50')     -- Sets the right-side slider text (default is "High").
-local fs = content5:CreateFontString(nil, "OVERLAY", "GameTooltipText")
-fs:SetPoint("TOPLEFT", 110, -40)
-fs:SetText(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon)
-MySlider:SetScript("OnValueChanged", function(self,value,userInput)
-	if userInput then 
-		Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Icon = value
-		fs:SetText(value)
-	end
-end)
-]]
+local SliderText = TitleCreate(content5, -265, -10, L["Spell Icon Size"])
+local Icon_Slider_Text = L_Function_Keys["Interger_Value_Text"](content5, "TOPLEFT", 110, -40, "Integer_Values", "Icon")
+local Icon_Slider = L_Function_Keys["CreateSlider"]("Icon_slider", content5, 200, 20, "TOPLEFT", 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the Spell Icon"], '1', '50', Icon_Slider_Text)
 ---------------------------
 --Debuff Slider
 ---------------------------
---[[
-local SliderText_Debuff = TitleCreate(content5, -265, -90, L["Debuff fade time"])
-local Debuff_Slider = CreateFrame("Slider", "Debuff_slider", content5, "OptionsSliderTemplate")
-Debuff_Slider:SetWidth(200)
-Debuff_Slider:SetHeight(20)
-Debuff_Slider:SetPoint("TOPLEFT", 20, -100)
-Debuff_Slider:SetOrientation('HORIZONTAL')
-Debuff_Slider:SetMinMaxValues(1, 20)
-Debuff_Slider:SetValue(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time)
-Debuff_Slider:SetValueStep(1)
-Debuff_Slider:SetObeyStepOnDrag(true)
-Debuff_Slider.tooltipText = L["The time warning for Debuffs about to fade"]   -- Creates a tooltip on mouseover.
-_G[Debuff_Slider:GetName() .. 'Low']:SetText('1')        -- Sets the left-side slider text (default is "Low").
-_G[Debuff_Slider:GetName() .. 'High']:SetText('20')     -- Sets the right-side slider text (default is "High").
-local fss = content5:CreateFontString(nil, "OVERLAY", "GameTooltipText")
-fss:SetPoint("TOPLEFT", 110, -140)
-fss:SetText(Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time)
-Debuff_Slider:SetScript("OnValueChanged", function(self,value,userInput)
-	if userInput then
-		Advanced_Scrolling_Combat_Text_DB["Integer_Values"].Debuff_time = value
-		fss:SetText(value)
-	end
-end)
-]]
+local SliderText_Debuff = TitleCreate(content5, -265, -130, L["Debuff fade time"])
+local Debuff_Slider_Text = L_Function_Keys["Interger_Value_Text"](content5, "TOPLEFT", 110, -160, "Integer_Values", "Debuff_time")
+local Debuff_Slider = L_Function_Keys["CreateSlider"]("Debuff_Slider_S", content5, 200, 20, "TOPLEFT", 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+---------------------------
+--Reset All Slider Values
+---------------------------
+local Slider_Reset_Icon = L_Function_Keys["MakeSliderReset"]({
+    text = L["Reset Icon Size"],
+    width = 150,
+    anchor = {"TOPLEFT", 40, -60},
+    parent = content5,
+    options = {
+      {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
+    },
+    })
+local Slider_Reset_Auras = L_Function_Keys["MakeSliderReset"]({
+    text = L["Reset Debuff fade time"],
+    width = 150,
+    anchor = {"TOPLEFT", 40, -180},
+    parent = content5,
+    options = {
+      {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
+    },
+    })
+local All_Slider_Reset = L_Function_Keys["MakeSliderReset"](
+    {
+    text = L["Reset Both Aura and Icon Values"],
+    width = 200,
+    anchor = {"BOTTOMLEFT", 20, 20},
+    parent = content5,
+    options = {
+      {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
+      {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
+    },
+  }
+)
+---------------------------
+--Trinket Toggle
+---------------------------
+local CreateTrinketToggle = L_Function_Keys["CreateTrinketToggle"]
+---------------------------
+--Trinket Name and Icon Toggles
+---------------------------
+local CreateTrinketNameIconsToggles = L_Function_Keys["CreateTrinketNameIconsToggles"]
 ---------------------------
 --Trinkets
 ---------------------------
---[[
 local col_AD_4 = 4
 local x_AD_4 = 0
-for Stat, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Trinkets"]) do
+for Stat, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Trinkets"]) do
     local b = CreateTrinketToggle(Stat, settings, content10)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_AD_4 % col_AD_4), -20 + (- b:GetHeight()-70) * math.floor(x_AD_4/col_AD_4))
     x_AD_4=x_AD_4+1
     CreateTrinketNameIconsToggles(b, settings, content10)
 end
-]]
 ---------------------------
 --Rogue
 ---------------------------
 if Advanced_Scrolling_Combat_Text_DB["Class"]["Rogue"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Assassination"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Assassination"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -801,7 +342,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Combat"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Combat"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -810,7 +351,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Subtlety"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Subtlety"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -823,7 +364,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Priest"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Shadow"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Shadow"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -832,7 +373,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Holy_Priest"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Holy_Priest"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -841,7 +382,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Discipline"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Discipline"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -855,7 +396,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Warrior"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Arms"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Arms"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -864,7 +405,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Fury"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Fury"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -873,7 +414,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Protection_Warrior"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Protection_Warrior"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -885,7 +426,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Druid"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Balance"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Balance"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -894,7 +435,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Feral_Combat"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Feral_Combat"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -903,7 +444,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Druid_Restoration"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Druid_Restoration"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -915,7 +456,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Shaman"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Elemental"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Elemental"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -924,7 +465,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Enhancement"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Enhancement"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -933,7 +474,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Shaman_Restoration"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Shaman_Restoration"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -942,7 +483,7 @@ end
 
 local col_4 = 4
 local x_4 = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Shared_Shaman_spells"]) do
+for v in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Shared_Shaman_spells"]) do
 	local b = CreateFrame("CheckButton", nil, content6, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_4 % col_4), -20 + (- b:GetHeight()-25) * math.floor(x_4/col_4))
 	b.Text:SetText(L[v])
@@ -956,7 +497,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Warlock"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Affliction"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Affliction"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -965,7 +506,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Demonology"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Demonology"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -974,7 +515,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Destruction"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Destruction"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -986,7 +527,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Hunter"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Beast Mastery"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Beast Mastery"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -995,7 +536,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Marksmanship"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Marksmanship"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -1004,7 +545,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Survival"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Survival"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -1013,7 +554,7 @@ end
 
 local col_4 = 4
 local x_4 = 0
-for v in pairs(Advanced_Scrolling_Combat_Text_DB["Shared_Hunter_spells"]) do
+for v in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Shared_Hunter_spells"]) do
 	local b = CreateFrame("CheckButton", nil, content6, "InterfaceOptionsCheckButtonTemplate")
 	b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_4 % col_4), -20 + (- b:GetHeight()-25) * math.floor(x_4/col_4))
 	b.Text:SetText(L[v])
@@ -1027,7 +568,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Paladin"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Holy_Paladin"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Holy_Paladin"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1036,7 +577,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Protection_Paladin"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Protection_Paladin"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -1045,7 +586,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Retribution"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Retribution"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -1057,7 +598,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Class"]["Mage"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Arcane"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Arcane"]) do
     local b = CreateSpellToggle(spellName, settings, content1)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1066,7 +607,7 @@ end
 
 local col_2 = 4
 local x_2 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Fire"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Fire"]) do
     local b = CreateSpellToggle(spellName, settings, content2)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_2 % col_2), -20 + (- b:GetHeight()-70) * math.floor(x_2/col_2))
     x_2=x_2+1
@@ -1075,7 +616,7 @@ end
 
 local col_3 = 4
 local x_3 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Frost_Mage"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Frost_Mage"]) do
     local b = CreateSpellToggle(spellName, settings, content3)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_3 % col_3), -20 + (- b:GetHeight()-70) * math.floor(x_3/col_3))
     x_3=x_3+1
@@ -1116,7 +657,7 @@ end
 if Advanced_Scrolling_Combat_Text_DB["Race"]["Undead"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Undead"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Undead"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1128,7 +669,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Orc"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Orc"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Orc"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1140,7 +681,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Troll"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Troll"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Troll"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1152,7 +693,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Tauren"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Tauren"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Tauren"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1164,7 +705,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Human"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Human"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Human"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1177,7 +718,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Night Elf"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Night Elf"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Night Elf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1189,7 +730,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Gnome"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Gnome"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Gnome"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1200,7 +741,7 @@ end  ---------------------
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Dwarf"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Dwarf"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Dwarf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1212,7 +753,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Blood Elf"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Blood Elf"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Blood Elf"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1224,7 +765,7 @@ end
 elseif Advanced_Scrolling_Combat_Text_DB["Race"]["Draenei"] == true then
 local col_1 = 4
 local x_1 = 0
-for spellName, settings in pairs(Advanced_Scrolling_Combat_Text_DB["Draenei"]) do
+for spellName, settings in PairsByKeys(Advanced_Scrolling_Combat_Text_DB, Advanced_Scrolling_Combat_Text_DB["Draenei"]) do
     local b = CreateSpellToggle(spellName, settings, content4)
     b:SetPoint("TOPLEFT", 20 + (b:GetWidth()+200) * (x_1 % col_1), -20 + (- b:GetHeight()-70) * math.floor(x_1/col_1))
     x_1=x_1+1
@@ -1234,9 +775,6 @@ end
 end
 
 end
-
-
-
 
 ---------------------------
 --Slash Commands

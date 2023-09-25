@@ -1,9 +1,9 @@
 <UI>
-    <Script file="Namespace.lua"/>
+    <Script file="Copy_Saved_Variables.lua"/>
+    <Include file="Tables\Addon_Tables.xml"/>
+    <Include file="Version_Check\Version_Check.xml"/>
+    <Include file="Modules\Moudules.xml"/>
+    <Include file="Options_Panel\Embeds.xml"/>
     <Script file="SCT_Check.lua"/>
-    <Include file= "Auras\Auras.xml"/>
-    <Include file="Player_Changes\Player_Embeds.xml"/>
-    <Include file="SARTE-Text\SARTE-Text.xml"/>
-    <Include file="SARTE-Text-Shared-Spell-Cooldowns\SharedSpells.xml"/>
-    <Include file="Gains_Losses\Gains_Losses.xml"/>
+    <Include file="ASCT_Core\ASCT_Core.xml"/>
 </UI>

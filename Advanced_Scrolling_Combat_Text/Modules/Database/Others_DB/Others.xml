@@ -1,0 +1,7 @@
+<UI>
+    <Include file="Dragonflight\DF_Others.xml"/>
+    <Include file="Shadowlands\SL_Others.xml"/>
+    <Include file="Wrath\Wrath_Others.xml"/>
+    <Include file="TBC\TBC_Others.xml"/>
+    <Include file="Vanilla\Vanilla_Others.xml"/>
+</UI>
