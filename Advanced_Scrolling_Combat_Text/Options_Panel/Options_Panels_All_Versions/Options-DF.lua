@@ -193,7 +193,7 @@ local TextTop = TitleCreate(content6, 0, -10, L["Tab"])
 local MinimapDataObject = LibStub("LibDataBroker-1.1"):NewDataObject("ASCT", {
     type = "ASCT",
     text = L["Title"],
-    icon = "Interface\\Addons\\Advanced_Scrolling_Combat_Text\\Options_Panel\\Mini_Icon.tga",
+    icon = "Interface\\Addons\\Advanced_Scrolling_Combat_Text_Options\\Mini_Icon.tga",
     OnClick = function() ASCT_Config:Show()  end,
 	--GameToolTip
     OnTooltipShow = function(tooltip)

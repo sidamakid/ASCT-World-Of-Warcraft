@@ -1,4 +1,5 @@
 <UI>
     <Script file="Loot.lua"/>
     <Script file="Loot_Money.lua"/>
+    <Script file="Loot_Currency.lua"/>
 </UI>
