@@ -1,5 +1,5 @@
 ## Interface: 00000
-## Version: 9.1.0
+## Version: 9.2.0
 ## Title: Advanced Scrolling Combat Text |cFFFF0000(Unsupported Game version detected!)|r
 ## Title-koKR: 고급 스크롤 전투 텍스트 (지원되지 않는 게임 버전이 감지되었습니다!)
 ## Title-frFR: Texte de combat défilant avancé (version de jeu non prise en charge détectée!)

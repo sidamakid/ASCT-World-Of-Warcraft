@@ -3,7 +3,6 @@
     <Script file="All_Stats_Post_Shadowlands.lua"/>
     <Script file="AP_Gains.lua"/>
     <Script file="Armor_Gains.lua"/>
-    <Script file="Spell Penetration.lua"/>
     <Script file="Experience_Gains.lua"/>
     <Script file="Level_Up.lua"/>
     <Include file="Resource_Losses\Resource_Loss.xml"/>
@@ -11,5 +10,5 @@
     <Script file="Skill_Up.lua"/>
     <Script file="Skill_Gained.lua"/>
     <Include file="Resistances\Resistance.xml"/>
-    <Include file="Special Stat Gains\Special_Stats.xml"/>
+    <Include file="Wrath_TBC_Special_Stat_Gains\Wrath_TBC_Special_Stat_Gains.xml"/>
 </UI>

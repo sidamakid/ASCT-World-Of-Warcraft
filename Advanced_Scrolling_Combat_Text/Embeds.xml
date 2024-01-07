@@ -1,7 +1,9 @@
 <UI>
     <Script file="Copy_Saved_Variables.lua"/>
+    <Include file="ASCT_Metatables\Embeds.xml"/>
+    <Include file="ASCT_API\Embeds.xml"/>
+    <Include file="ASCT_Client\Embeds.xml"/>
     <Include file="Tables\Addon_Tables.xml"/>
-    <Include file="Version_Check\Version_Check.xml"/>
     <Include file="Modules\Moudules.xml"/>
     <Include file="Options_Panel\Embeds.xml"/>
     <Script file="SCT_Check.lua"/>

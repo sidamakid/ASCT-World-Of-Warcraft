@@ -1,8 +1,8 @@
 ---------------------------
 --All Tables
 ---------------------------
-local L_Version_Check_Keys, L_ASCT_Locale_Spells, L_Database_Keys, L_Table_Functions, L_ASCT_Frames, L_ASCT_Widget_Methods, L_ASCT_Handlers, L_Function_Keys, L =
-ASCT_Version_Check_Table, --Checks the Version of the game to find which files to load for ASCT
+local ASCT, L_ASCT_Locale_Spells, L_Database_Keys, L_Table_Functions, L_ASCT_Frames, L_ASCT_Widget_Methods, L_ASCT_Handlers, L_Function_Keys, L =
+ASCT_Table, --Checks the Version of the game to find which files to load for ASCT
 ASCT_Spell_Locale_Table, --Localize Spells
 Spell_Database_For_ASDC_Table, --ASCT Spells
 Table_Functions_For_ASCT, --ASCT Table functions Merge/Combine, Organization, Save and delete values.
@@ -11,7 +11,7 @@ ASCT_Widget_Methods_Table, --Widget Scripts for ASCT
 ASCT_Script_Handlers_Table, --Script handlers.  
 Functions_For_ASDC_Table, --Run functions for ASCT
 ASDC_LOCALE_TABLE --Localize Words Table
-if L_Version_Check_Keys["isWrathWow"] then
+if ASCT.Client["isWrathWow"] then
 ---------------------------
 --Load Options Panel
 ---------------------------

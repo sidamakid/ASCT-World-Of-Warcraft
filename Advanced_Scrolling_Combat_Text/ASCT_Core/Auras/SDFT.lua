@@ -1,8 +1,8 @@
-local L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
 local UnitAura = _G.UnitAura
 local UnitDebuff = _G.UnitDebuff
 
-if L_Version_Check_Keys["isVanillaWow"] then
+if ASCT.Client["isVanillaWow"] then
 local LibClassicDurations = LibStub("LibClassicDurations", true)
 if LibClassicDurations then
     LibClassicDurations:Register("Advanced_Scrolling_Combat_Text")
@@ -15,7 +15,7 @@ end
 
 local debuffsTrigggered = {};
 local function onUpdate()
-  local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+  local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])
   if ASCT_DB["Advanced_Scrolling_Combat_Text_Auras"]["Fading DeBuffs"] == true and Comabt_Text == true then
   for i = 1, 40 do
     local name, icon, count, dispelType, duration, expirationTime, source = UnitDebuff("target", i)

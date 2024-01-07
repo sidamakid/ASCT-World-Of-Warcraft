@@ -1,6 +1,7 @@
-local L_Version_Check_Keys, L_Database_Keys = ASCT_Version_Check_Table, Spell_Database_For_ASDC_Table
-if L_Version_Check_Keys["isDragonFlightWow"] then
-if L_Version_Check_Keys["isDragonFlightWow_100107"] then
+local ASCT = ASCT_Table
+local L_Database_Keys = Spell_Database_For_ASDC_Table
+if ASCT.Client["isDragonFlightWow"] then
+if ASCT.Client["is100107"] then
 L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
             --Assassination

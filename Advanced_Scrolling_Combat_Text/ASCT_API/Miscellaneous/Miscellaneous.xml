@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Miscellaneous_Integers.lua"/>
+    <Script file="Miscellaneous_Strings.lua"/>
+</UI>

@@ -1,7 +1,6 @@
 <UI>
     <Script file="Locale_Spells_Table.lua"/>
     <Script file="localize.lua"/>
-    <Script file="Verison_Check_Table.lua"/>
     <Script file="Table_Functions_Table.lua"/>
     <Script file="Frames_Table.lua"/>
     <Script file="Events_Table.lua"/>

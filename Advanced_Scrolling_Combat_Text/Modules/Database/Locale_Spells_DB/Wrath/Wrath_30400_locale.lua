@@ -1,6 +1,5 @@
-local L_Version_Check_Keys, L_Database_Keys = ASCT_Version_Check_Table, Spell_Database_For_ASDC_Table
-if L_Version_Check_Keys["isWrathWow"] then
-if L_Version_Check_Keys["is30400"] or L_Version_Check_Keys["is30401"] or L_Version_Check_Keys["is30402"] then
+local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
+if ASCT.Client["isWrathWow"] and ASCT.Client["is30400"] then
     L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
     --Rogue
     ["Adrenaline Rush"] = 13750,
@@ -319,5 +318,4 @@ if L_Version_Check_Keys["is30400"] or L_Version_Check_Keys["is30401"] or L_Versi
     ["War Stomp"] = 20549,
     ["Will of the Forsaken"] = 7744,
 }
-end
 end

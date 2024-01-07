@@ -1,7 +1,7 @@
-local L_Version_Check_Keys = ASCT_Version_Check_Table
+local ASCT = ASCT_Table
 local L_Database_Keys = Spell_Database_For_ASDC_Table
-if L_Version_Check_Keys["isVanillaWow"] then
-if L_Version_Check_Keys["is11404"] then
+if ASCT.Client["isVanillaWow"] then
+if ASCT.Client["is11404"] then
 L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,

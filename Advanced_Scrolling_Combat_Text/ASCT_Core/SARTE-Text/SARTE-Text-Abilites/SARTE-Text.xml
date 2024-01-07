@@ -1,7 +1,8 @@
 <UI>
-    <Script file="SARTE-Text_DF.lua"/>
-    <Script file="SARTE-Text_SL.lua"/>
-    <Script file="SARTE-Text-Vanilla_Tbc.lua"/>
+    <Script file="SARTE-Text-Vanilla.lua"/>
+    <Script file="SARTE-Text-Tbc.lua"/>
     <Script file="SARTE-Text-Wrath.lua"/>
-    <Script file="SARTE-Trinkets.lua"/>
+    <Script file="SARTE-Text-Cata.lua"/>
+    <Script file="SARTE-Text_SL.lua"/>
+    <Script file="SARTE-Text_DF.lua"/>
 </UI>

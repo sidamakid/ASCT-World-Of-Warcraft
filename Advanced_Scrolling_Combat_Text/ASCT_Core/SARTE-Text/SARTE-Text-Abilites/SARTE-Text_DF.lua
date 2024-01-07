@@ -1,5 +1,5 @@
-local L_ASCT_Locale_Spells, L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Spell_Locale_Table, ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
-if L_Version_Check_Keys["isDragonFlightWow"] then
+local ASCT, L_ASCT_Locale_Spells, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Spell_Locale_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+if ASCT.Client["isDragonFlightWow"] then
 local SARTE = ... --This assigns the name of the addon to SARTE
 local start, duration --nil vars used later
 ---------------------------
@@ -72,7 +72,7 @@ L_ASCT_Handlers["OnEvent"](f, --Run when our event fires
                   L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end
                local msg = string.format ("%s"..L["msg"], details)
-               local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+               local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])
                if Comabt_Text == false then
                   L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end

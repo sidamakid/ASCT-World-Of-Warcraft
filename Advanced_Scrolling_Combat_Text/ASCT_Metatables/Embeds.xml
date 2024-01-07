@@ -1,0 +1,6 @@
+<UI>
+    <Script file="Maintable.lua"/>
+    <Script file="Utility.lua"/>
+    <Script file="Api.lua"/>
+    <Script file="Version.lua"/>
+</UI>

@@ -1,11 +1,11 @@
-local L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
-if L_Version_Check_Keys["isShadowlandsWow"] then
+local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+if ASCT.Client["isShadowlandsWow"] then
 local lastPower = nil
 local power
 local f = L_ASCT_Frames["Resource_Loss_Frame"]
 L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 L_ASCT_Handlers["OnEvent"](f, function()
-  if not C_CVar.GetCVarBool("enableFloatingCombatText") then return end
+  if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
   if UnitPowerType('player') == 0 then
     power = L["Mana"]
   elseif UnitPowerType('player') == 1 then

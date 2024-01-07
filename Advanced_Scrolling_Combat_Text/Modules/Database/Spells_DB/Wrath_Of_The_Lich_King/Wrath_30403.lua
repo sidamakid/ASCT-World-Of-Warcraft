@@ -1,6 +1,7 @@
-local L_Version_Check_Keys, L_Database_Keys, L, L_Table_Functions = ASCT_Version_Check_Table, Spell_Database_For_ASDC_Table, ASDC_LOCALE_TABLE, Table_Functions_For_ASCT
-if L_Version_Check_Keys["isWrathWow"] then
-if L_Version_Check_Keys["is30403"] then
+local ASCT, L_Database_Keys, L, L_Table_Functions = ASCT_Table, Spell_Database_For_ASDC_Table, ASDC_LOCALE_TABLE, Table_Functions_For_ASCT
+if
+ASCT.Client["isWrathWow"] and ASCT.Client["is30403"]
+then
 L_Database_Keys["Spells_Wrath"] = {
     ------------------------
     --Races
@@ -433,6 +434,5 @@ L_Table_Functions["TableCombine"](L_Database_Keys["Spells_Wrath"]["Enhancement"]
 elseif select(3, UnitClass("player")) == 7 and select(2, UnitFactionGroup("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
 L_Table_Functions["TableCombine"](L_Database_Keys["Spells_Wrath"]["Enhancement"], Lust_Table)
-end
 end
 end

@@ -1,5 +1,5 @@
-local L_ASCT_Locale_Spells, L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Spell_Locale_Table, ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
-if L_Version_Check_Keys["is_Classic_TBC_Wrath"] then
+local ASCT, L_ASCT_Locale_Spells, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Spell_Locale_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+if ASCT.Client["isVanillaWow"] or ASCT.Client["isTbcWow"] or ASCT.Client["isWrathWow"] then
 local class_Check = select(3, UnitClass("player"))
 if class_Check == 3 then
 local SARTE = ... --This assigns the name of the addon to addonName
@@ -34,7 +34,7 @@ L_ASCT_Handlers["OnEvent"](f, --Run when our event fires
             function()
                start, duration = GetSpellCooldown(spellName) --Grab the needed time data
                if start == 0 then
-                  local Comabt_Text = C_CVar.GetCVarBool("enableFloatingCombatText")
+                  local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])
                   if Comabt_Text == false then
                      L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end

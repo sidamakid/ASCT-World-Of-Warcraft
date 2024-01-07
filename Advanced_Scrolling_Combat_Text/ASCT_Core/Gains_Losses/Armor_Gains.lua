@@ -1,10 +1,10 @@
-local L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
 local lastStat = -1
 local f = L_ASCT_Frames["Armor_Frame"]
 L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 L_ASCT_Handlers["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Armor"]
-    if not (stats.StatEnable and C_CVar.GetCVarBool("enableFloatingCombatText")) then return end
+    if not (stats.StatEnable and ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])) then return end
     local base, effectiveArmor, armor, posBuff, negBuff = UnitArmor("player")
     local diff = effectiveArmor - lastStat;
     if not lastStat then

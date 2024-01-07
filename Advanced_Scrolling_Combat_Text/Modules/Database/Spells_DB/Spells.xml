@@ -1,7 +1,8 @@
 <UI>
     <Include file="Vanilla\Vanilla.xml"/>
-    <Include file="Wrath_Of_The_Lich_King\Wrath.xml"/>
     <Include file="The_Burning_Crusade\TBC.xml"/>
+    <Include file="Wrath_Of_The_Lich_King\Wrath.xml"/>
+    <Include file="Cataclysm\Cataclysm.xml"/>
     <Include file="Shadowlands\Shadowlands.xml"/>
     <Include file="Dragonflight\Dragonflight.xml"/>
 </UI>

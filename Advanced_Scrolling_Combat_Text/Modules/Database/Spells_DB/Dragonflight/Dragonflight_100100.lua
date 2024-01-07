@@ -1,6 +1,7 @@
-local L_Version_Check_Keys, L_Database_Keys, L, L_Table_Functions = ASCT_Version_Check_Table, Spell_Database_For_ASDC_Table, ASDC_LOCALE_TABLE, Table_Functions_For_ASCT
-if L_Version_Check_Keys["isDragonFlightWow"] then
-if L_Version_Check_Keys["isDragonFlightWow_100100"] then
+local ASCT = ASCT_Table
+local L_Database_Keys, L, L_Table_Functions = Spell_Database_For_ASDC_Table, ASDC_LOCALE_TABLE, Table_Functions_For_ASCT
+if ASCT.Client["isDragonFlightWow"] then
+if ASCT.Client["is100100"] then
     L_Database_Keys["Spells_DF"] = {
 	--Races
 	["Race"] = {
@@ -943,10 +944,10 @@ if L_Version_Check_Keys["isDragonFlightWow_100100"] then
 local Lust_Table
 if select(3, UnitClass("player")) == 7 and select(2, UnitFactionGroup("player")) == L["Alliance"] then
 Lust_Table = {["Heroism"] = {SpellEnable = false, iconEnable = false, nameEnable = false}}
-L_Table_Functions["TableCombine"](L_Database_Keys["Spells_Wrath"]["Enhancement"], Lust_Table)
+L_Table_Functions["TableCombine"](L_Database_Keys["Spells_DF"]["Enhancement"], Lust_Table)
 elseif select(3, UnitClass("player")) == 7 and select(2, UnitFactionGroup("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
-L_Table_Functions["TableCombine"](L_Database_Keys["Spells_Wrath"]["Enhancement"], Lust_Table)
+L_Table_Functions["TableCombine"](L_Database_Keys["Spells_DF"]["Enhancement"], Lust_Table)
 end
 end
 end

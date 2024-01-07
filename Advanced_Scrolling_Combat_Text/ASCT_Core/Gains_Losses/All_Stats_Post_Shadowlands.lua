@@ -1,5 +1,5 @@
-local L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
-if L_Version_Check_Keys["isShadowlandsWowOrAbove"] then
+local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+if ASCT.Client["isShadowlandsWowOrAbove"] then
 local statKeys = {
     "Strength",
     "Agility",
@@ -31,7 +31,7 @@ local statKeys = {
         --brand new stats
       else
         for _, stat in ipairs(statKeys) do
-          if not C_CVar.GetCVarBool("enableFloatingCombatText") then return end
+          if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
           if ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"][stat].StatEnable then
             if previousStats[stat].effectiveStat < stats[stat].effectiveStat and ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"][stat].Gains then
               --in this bit you can do any math you want

@@ -1,5 +1,7 @@
-local L_Version_Check_Keys, L_Database_Keys = ASCT_Version_Check_Table, Spell_Database_For_ASDC_Table
-if L_Version_Check_Keys["isWrathWow"] then
+local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
+if
+ASCT.Client["isWrathWow"] and ASCT.Client["is30400"]
+then
 L_Database_Keys["Others_Wrath"] = {
 ["Advanced_Scrolling_Combat_Text_Stats"] = {
 		["Armor"] = {StatEnable = false, Gains = false, Lost = false},

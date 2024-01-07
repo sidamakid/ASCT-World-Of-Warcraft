@@ -1,5 +1,5 @@
-local L_ASCT_Locale_Spells, L, L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Widget_Methods, L_ASCT_Handlers = ASCT_Spell_Locale_Table, ASDC_LOCALE_TABLE, ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Widget_Methods_Table, ASCT_Script_Handlers_Table
-if L_Version_Check_Keys["isDragonFlightWow"] then
+local ASCT, L_ASCT_Locale_Spells, L, L_ASCT_Frames, L_ASCT_Widget_Methods, L_ASCT_Handlers = ASCT_Table, ASCT_Spell_Locale_Table, ASDC_LOCALE_TABLE, ASCT_Frames_Table, ASCT_Widget_Methods_Table, ASCT_Script_Handlers_Table
+if ASCT.Client["isDragonFlightWow"] then
 ---------------------------
 --Gains and Losses Toogles
 ---------------------------

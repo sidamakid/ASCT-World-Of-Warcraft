@@ -1,9 +1,9 @@
-local L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys = ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table
+local ASCT, L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys = ASCT_Table, ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table
 local Loot = L_ASCT_Frames["Honor_Loot_Frame"]
 L_ASCT_Handlers["OnEvent"](Loot,
 function (self, event, ...)
   if event == "CHAT_MSG_COMBAT_HONOR_GAIN" then
-    if not C_CVar.GetCVarBool("enableFloatingCombatText")then return end
+    if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])then return end
     if ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Loot"] == true then
     local message = ...;
     local globalStrings = {

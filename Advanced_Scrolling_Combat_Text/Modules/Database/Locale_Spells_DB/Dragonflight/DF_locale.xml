@@ -5,4 +5,5 @@
     <Script file="DF_100100_locale.lua"/>
     <Script file="DF_100105_locale.lua"/>
     <Script file="DF_100107_locale.lua"/>
+    <Script file="DF_100200_locale.lua"/>
 </UI>

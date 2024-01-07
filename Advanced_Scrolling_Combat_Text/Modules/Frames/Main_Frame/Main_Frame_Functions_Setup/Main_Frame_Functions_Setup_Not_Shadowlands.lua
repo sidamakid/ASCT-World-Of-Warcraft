@@ -1,5 +1,5 @@
-local L_Version_Check_Keys, L_ASCT_Frames, L_ASCT_Widget_Methods = ASCT_Version_Check_Table, ASCT_Frames_Table, ASCT_Widget_Methods_Table
-if L_Version_Check_Keys["isNotShadowlandsWow"] then
+local ASCT, L_ASCT_Frames, L_ASCT_Widget_Methods = ASCT_Table, ASCT_Frames_Table, ASCT_Widget_Methods_Table
+if ASCT.Client["isNotShadowlandsWow"] then
 L_ASCT_Widget_Methods["SetMovable"](L_ASCT_Frames["ASCT_Config"], true)
 L_ASCT_Widget_Methods["EnableMouse"](L_ASCT_Frames["ASCT_Config"], true)
 L_ASCT_Widget_Methods["SetResizable"](L_ASCT_Frames["ASCT_Config"], true)
