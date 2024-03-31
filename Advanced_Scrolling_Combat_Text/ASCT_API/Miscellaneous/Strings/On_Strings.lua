@@ -1,0 +1,11 @@
+local ASCT = ASCT_Table
+ASCT.Strings.ScriptTypeName["OnEvent"] = "OnEvent";
+ASCT.Strings.ScriptTypeName["OnUpdate"] = "OnUpdate";
+ASCT.Strings.ScriptTypeName["OnClick"] = "OnClick";
+ASCT.Strings.ScriptTypeName["OnDoubleClick"] = "OnDoubleClick";
+ASCT.Strings.ScriptTypeName["OnValueChanged"] = "OnValueChanged";
+ASCT.Strings.ScriptTypeName["OnEnter"] = "OnEnter";
+ASCT.Strings.ScriptTypeName["OnLeave"] = "OnLeave";
+ASCT.Strings.ScriptTypeName["OnDragStart"] = "OnDragStart";
+ASCT.Strings.ScriptTypeName["OnDragStop"] = "OnDragStop";
+ASCT.Strings.ScriptTypeName["OnEscapePressed"] = "OnEscapePressed";

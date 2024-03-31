@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Korean
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "koKR" then
  L["Shocks"] = "충격";
  L["Traps"] = "트랩";
  L["Lust"] = "정욕";
- L["Tab"] = "이 탭은 주술사와 헌터의 유일한 탭입니다.";
+ L["This Tab is for Shaman's and Hunter's only."] = "이 탭은 주술사와 헌터의 유일한 탭입니다.";
  --Ready Text
  L["msg"] = "이제 준비가되었습니다!";
  L["msg_Shocks"] = " 이제 충격이 준비되었습니다!";
@@ -232,4 +232,27 @@ if locale == "koKR" then
  --New Things 9/5/2023
  L["Icon Size"] = "아이콘 크기";
  L["The size of the message icon"] = "메시지 아이콘의 크기입니다";
+ --New things 9/17/2023
+ L["Mastery"] = "숙달";
+ L["Avoidance"] = "회피";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "미니맵 아이콘";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "전투 텍스트 스크롤이 비활성화됩니다. 활성화하지 않으면 고급 스크롤 전투 문자 메시지 에 아무 것도 표시되지 않습니다.";
+ --New things 1/01/2024
+ L["is now ready!"] = "is now ready!";
+ L["Is Now Ready!"] = "이제 준비되었습니다!";
+ L["is about to fade!"] = "곧 사라질 것입니다!";
+ L["Is About To Fade!"] = "곧 사라질 것입니다!";
+ L["Uppercase"] = "대문자";
+ L["Lowercase"] = "소문자";
+ --New things 3/16/2024
+ L["About"] = "약";
+ L["About_Line_1"] = "고급 스크롤 전투 문자 메시지";
+ L["About_Line_2"] = "(원래 이름은 스크롤 능력 텍스트)";
+ L["About_Line_3"] = "기본 블리자드 플로팅 컴뱃 텍스트가 제공하지 않는 다양한 기능을 추가하는 애드온입니다.";
+ L["About_Line_4"] = "이 애드온은 능력의 재사용 대기시간, 능력치 변경, 경험치 획득, 자원 손실 등을 추적할 수 있습니다!";
+ L["About_Line_5"] = "버그가 발생하거나 기능을 추가하고 싶으신가요? 깃허브 리포지토리에 보고하세요!";
+ --New things 3/31/2024
+ L["Resistances"] = "저항";
 end

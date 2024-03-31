@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --German
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "deDE" then
  L["Shocks"] = "Schocks";
  L["Traps"] = "Fallen";
  L["Lust"] = "Wollust";
- L["Tab"] = "Diese Registerkarte ist nur für Schamanen und Jäger gedacht.";
+ L["This Tab is for Shaman's and Hunter's only."] = "Diese Registerkarte ist nur für Schamanen und Jäger gedacht.";
  --Ready Text
  L["msg"] = "ist jetzt fertig!!";
  L["msg_Shocks"] = " Schocks sind jetzt bereit!";
@@ -232,4 +232,27 @@ if locale == "deDE" then
  --New Things 9/5/2023
  L["Icon Size"] = "Größe des Symbols";
  L["The size of the message icon"] = "Die Größe des Nachrichtensymbols";
+ --New things 9/17/2023
+ L["Mastery"] = "Beherrschung";
+ L["Avoidance"] = "Vermeidung";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "Minikarten-Symbol";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "Scrollender Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird der erweiterte Lauftext für den Kampf nichts angezeigt.";
+ --New things 1/01/2024
+ L["is now ready!"] = "is now ready!";
+ L["Is Now Ready!"] = "Ist jetzt fertig!";
+ L["is about to fade!"] = "ist im Begriff zu verblassen!";
+ L["Is About To Fade!"] = "ist kurz davor, zu verblassen!";
+ L["Uppercase"] = "Großschrift";
+ L["Lowercase"] = "Kleingeschrieben";
+ --New things 3/16/2024
+ L["About"] = "Über";
+ L["About_Line_1"] = "Erweiterter Lauf-Kampftext";
+ L["About_Line_2"] = "(Ursprünglicher Name Scrolling Ability Text)";
+ L["About_Line_3"] = "Ist ein Addon, das Multifunktionalität hinzufügt, die der Standard-Blizzard-Kampftext nicht bietet.";
+ L["About_Line_4"] = "Dieses Addon kann verfolgen, wann die Abklingzeit einer Fähigkeit abgelaufen ist, Statusänderungen, Erfahrungsgewinne, Ressourcenverluste und mehr!";
+ L["About_Line_5"] = "Stoßen Sie auf einen Fehler oder möchten Sie eine Funktion hinzufügen? Melden Sie es im GitHub Repository!";
+ --New things 3/31/2024
+ L["Resistances"] = "Widerstände";
 end

@@ -1,0 +1,12 @@
+<UI>
+    <Script file="Mouse_Buttons_Strings.lua"/>
+    <Script file="FrameName_Strings.lua"/>
+    <!-- <Include file="EventName\EventName_Strings.xml"/> -->
+    <Script file="Layer_Strings.lua"/>
+    <Script file="Unit_Id_Strings.lua"/>
+    <Script file="C_CVar_Strings.lua"/>
+    <!-- <Script file="Miscellaneous_Strings.lua"/> -->
+    <Script file="LE_EXPANSION_LEVEL_Strings.lua"/>
+    <Script file="Point_Strings.lua"/>
+    <Script file="On_Strings.lua"/>
+</UI>

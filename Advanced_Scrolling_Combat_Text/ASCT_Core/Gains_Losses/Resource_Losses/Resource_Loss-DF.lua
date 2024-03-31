@@ -1,42 +1,42 @@
-local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 if ASCT.Client["isDragonFlightWow"] then
 local lastPower = nil
 local power
-local f = L_ASCT_Frames["Resource_Loss_Frame"]
-L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
-L_ASCT_Handlers["OnEvent"](f, function()
-  if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
-  if UnitPowerType('player') == 0 then
+local f = ASCT.Frames.SARTE["Resource_Loss_Frame"]
+ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Scripts.Frame["OnEvent"](f, function()
+  if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"]) then return end
+  if ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 0 then
     power = L["Mana"]
-  elseif UnitPowerType('player') == 1 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 1 then
     power = L["Rage"]
-  elseif UnitPowerType('player') == 2 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 2 then
     power = L["Focus"]
-  elseif UnitPowerType('player') == 3 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 3 then
     power = L["Energy"]
-  elseif UnitPowerType('player') == 6 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 6 then
     power = L["Runic Power"]
-  elseif UnitPowerType('player') == 8 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 8 then
     power = L["Lunar Power"]
-  elseif UnitPowerType('player') == 9 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 9 then
     power = L["Holy Power"]
-  elseif UnitPowerType('player') == 11 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 11 then
     power = L["Maelstrom"]
-  elseif UnitPowerType('player') == 13 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 13 then
     power = L["Insanity"]
-  elseif UnitPowerType('player') == 17 then
+  elseif ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 17 then
     power = L["Fury"]
   end
   if ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Resource lost"] == true then
   if not lastPower then
-    lastPower = UnitPower('player')
+    lastPower = ASCT.API.Documentation["UnitPower"](ASCT.Strings.UnitId["player"])
     return
   end
-  if UnitPower('player') + 4 < lastPower then
-    local msg = string.format("-%d".." ".."%s".." ".."(%d)", lastPower - UnitPower('player'), power, UnitPower("player"))
-    L_Function_Keys["Combat_Text_Function_Dark_Blue"](msg)
+  if ASCT.API.Documentation["UnitPower"](ASCT.Strings.UnitId["player"]) + 4 < lastPower then
+    local msg = string.format("-%d".." ".."%s".." ".."(%d)", lastPower - ASCT.API.Documentation["UnitPower"](ASCT.Strings.UnitId["player"]), power, ASCT.API.Documentation["UnitPower"](ASCT.Strings.UnitId["player"]))
+    ASCT.Functions["CombatText_AddMessage_Dark_Blue"](msg)
   end
-  lastPower = UnitPower('player')
+  lastPower = ASCT.API.Documentation["UnitPower"](ASCT.Strings.UnitId["player"])
   end
 end)
 end)

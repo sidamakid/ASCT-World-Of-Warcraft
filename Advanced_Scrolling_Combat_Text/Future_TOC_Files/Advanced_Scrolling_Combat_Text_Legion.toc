@@ -1,0 +1,32 @@
+# Legion TOC file
+## Interface: 70300
+## Version: 9.2.5
+## Title: Advanced Scrolling Combat Text |cFFFF0000(Unsupported Game version detected!)|r
+## Title-koKR: 고급 스크롤 전투 텍스트 (지원되지 않는 게임 버전이 감지되었습니다!)
+## Title-frFR: Texte de combat défilant avancé (version de jeu non prise en charge détectée!)
+## Title-deDE: Erweiterter scrollender Kampftext (Nicht unterstützte Spielversion erkannt!)
+## Title-zhCN: 高级滚动战斗文本（检测到不支持的游戏版本！)
+## Title-zhTW: 高級滾動戰鬥文本（檢測到不支援的遊戲版本！)
+## Title-esES: Texto de combate de desplazamiento avanzado (¡versión del juego no compatible detectada!)
+## Title-esMX: Texto de combate de desplazamiento avanzado (¡versión del juego no compatible detectada!)
+## Title-ruRU: Расширенная прокрутка боевого текста (обнаружена неподдерживаемая версия игры!)
+## Title-ptBR: Advanced Scrolling Combat Text (Versão do jogo não suportada detectada!)
+## Title-itIT: Testo di combattimento a scorrimento avanzato (rilevata la versione del gioco non supportata!)
+## Notes: Adds new functions to Scrolling Combat Text
+## Notes-koKR: 스크롤 전투 텍스트에 새로운 기능을 추가합니다.
+## Notes-frFR: Ajoute de nouvelles fonctions au défilement du texte de combat
+## Notes-deDE: Fügt dem Scrolling Combat Text neue Funktionen hinzu
+## Notes-zhCN: 为滚动战斗文本添加新功能
+## Notes-zhTW: 為滾動戰鬥文本添加新功能
+## Notes-esES: Añade nuevas funciones al texto de combate de desplazamiento
+## Notes-esMX: Añade nuevas funciones al texto de combate de desplazamiento
+## Notes-ruRU: Добавление новых функций в прокрутку боевого текста
+## Notes-ptBR: Adiciona novas funções ao Texto de Combate de Rolagem
+## Notes-itIT: Aggiunge nuove funzioni al testo di combattimento a scorrimento
+## Author: Sidamakid Tinman
+## SavedVariablesPerCharacter: ASCT_DB, ASCT_Color_Picker_Variables
+# RequiredDeps: Advanced_Scrolling_Combat_Text_Localize
+## X-Curse-Project-ID: 634963
+## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L
+Unsupported_Embeds.xml

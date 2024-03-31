@@ -1,0 +1,6 @@
+<UI>
+    <Include file="Text\Text.xml"/>
+    <Script file="Slider.lua"/>
+    <Include file="Button_Toggles\Button_Toggles.xml"/>
+    <Include file="Color_picker\Color_picker.xml"/>
+</UI>

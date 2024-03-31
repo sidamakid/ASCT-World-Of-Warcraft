@@ -1,4 +1,6 @@
 <UI>
-    <Script file="Miscellaneous_Integers.lua"/>
-    <Script file="Miscellaneous_Strings.lua"/>
+    <Include file="Integers\Integers.xml"/>
+    <Include file="Strings\Strings.xml"/>
+    <Include file="Str_Int\Str_Int.xml"/>
+    <Include file="Int_Str\Int_Str.xml"/>
 </UI>

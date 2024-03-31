@@ -1,0 +1,7 @@
+<UI>
+    <Script file="Vanilla_11403_Spells.lua"/>
+    <Script file="Vanilla_11404_Spells.lua"/>
+    <Script file="Vanilla_11500_Spells.lua"/>
+    <Script file="Vanilla_11501_Spells.lua"/>
+    <Script file="Vanilla_11502_Spells.lua"/>
+</UI>

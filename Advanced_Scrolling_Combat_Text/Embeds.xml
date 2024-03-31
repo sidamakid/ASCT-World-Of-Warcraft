@@ -1,11 +1,15 @@
 <UI>
+    <Include file="Embeds-libs.xml"/>
     <Script file="Copy_Saved_Variables.lua"/>
     <Include file="ASCT_Metatables\Embeds.xml"/>
     <Include file="ASCT_API\Embeds.xml"/>
     <Include file="ASCT_Client\Embeds.xml"/>
-    <Include file="Tables\Addon_Tables.xml"/>
+    <Script file="localize.lua"/>
+    <Include file="Miscellaneous_Modules\Miscellaneous_Modules.xml"/>
     <Include file="Modules\Moudules.xml"/>
+    <Include file="Options_Panel_Modules\Options_Panel_Modules.xml"/>
     <Include file="Options_Panel\Embeds.xml"/>
     <Script file="SCT_Check.lua"/>
+    <Include file="ASCT_Modules\ASCT_Modules.xml"/>
     <Include file="ASCT_Core\ASCT_Core.xml"/>
 </UI>

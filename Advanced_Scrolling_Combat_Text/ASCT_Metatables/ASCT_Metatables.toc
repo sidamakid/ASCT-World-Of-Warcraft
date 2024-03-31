@@ -1,0 +1,28 @@
+## Interface: 00000
+## Version: 9.1.0
+## Title: ASCT Metatables
+## Title-koKR:
+## Title-frFR:
+## Title-deDE:
+## Title-zhCN:
+## Title-zhTW:
+## Title-esES:
+## Title-esMX: 
+## Title-ruRU:
+## Title-ptBR:
+## Title-itIT:
+## Notes: Metatables for Advanced Scrolling Combat Text
+## Notes-koKR:
+## Notes-frFR:
+## Notes-deDE:
+## Notes-zhCN:
+## Notes-zhTW:
+## Notes-esES:
+## Notes-esMX:
+## Notes-ruRU:
+## Notes-ptBR:
+## Notes-itIT:
+## Author: Sidamakid Tinman
+## X-Curse-Project-ID: 634963
+## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L

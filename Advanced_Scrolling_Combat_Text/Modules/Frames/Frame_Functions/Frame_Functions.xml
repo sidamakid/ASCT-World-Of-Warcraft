@@ -1,5 +1,0 @@
-<UI>
-    <Script file="Text.lua"/>
-    <Script file="Slider.lua"/>
-    <Include file="Button_Toggles\Button_Toggles.xml"/>
-</UI>

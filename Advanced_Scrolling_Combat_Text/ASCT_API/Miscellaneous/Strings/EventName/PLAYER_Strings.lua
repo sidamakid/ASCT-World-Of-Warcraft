@@ -1,0 +1,5 @@
+local ASCT = ASCT_Table
+--ASCT.Strings.EventName
+ASCT.Strings.EventName["PLAYER_ENTERING_WORLD"] = "PLAYER_ENTERING_WORLD"
+ASCT.Strings.EventName["PLAYER_DEAD"] = "PLAYER_DEAD"
+ASCT.Strings.EventName["PLAYER_LEVEL_UP"] = "PLAYER_LEVEL_UP"

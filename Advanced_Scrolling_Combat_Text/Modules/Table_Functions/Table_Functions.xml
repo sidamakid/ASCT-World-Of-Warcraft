@@ -1,5 +1,0 @@
-<UI>
-    <Script file="Merge_Delete_Values.lua"/>
-    <Script file="Merge_Tables.lua"/>
-    <Script file="Organization.lua"/>
-</UI>

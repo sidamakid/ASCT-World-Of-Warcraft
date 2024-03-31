@@ -1,5 +1,4 @@
 <UI>
-    <Include file="Integer_Val\Integer_Val.xml"/>
     <Include file="GetBuildInfo\GetBuildInfo.xml"/>
     <Include file="LE_EXPANSION_LEVEL_CURRENT\LE_EXPANSION_LEVEL_CURRENT.xml"/>
 </UI>

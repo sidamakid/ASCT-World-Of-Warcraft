@@ -1,0 +1,7 @@
+<UI>
+    <Script file="Critcal Strike.lua"/>
+    <Script file="Expertise.lua"/>
+    <Script file="Haste Rating.lua"/>
+    <Script file="Hit Rating.lua"/>
+    <Script file="Spell Penetration.lua"/>
+</UI>

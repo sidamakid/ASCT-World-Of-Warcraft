@@ -1,0 +1,8 @@
+<UI>
+    <!-- <Script file="Auras.lua"/> -->
+    <Script file="All_Stats.lua"/>
+    <Script file="CR.lua"/>
+    <Script file="Resistance.lua"/>
+    <!-- <Script file="Resource.lua"/> -->
+    <Script file="Misc.lua"/>
+</UI>

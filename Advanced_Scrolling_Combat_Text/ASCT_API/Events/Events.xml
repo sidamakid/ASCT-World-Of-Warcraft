@@ -1,0 +1,4 @@
+<UI>
+    <Include file="RegisterEvent\RegisterEvent.xml"/>
+    <Include file="UnRegisterEvent\UnRegisterEvent.xml"/>
+</UI>

@@ -1,10 +1,10 @@
-local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
-local f = L_ASCT_Frames["Error_Messages_Frame"]
-L_ASCT_Handlers["OnEvent"](f, function (self, event, errorType, message)
-    if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local f = ASCT.Frames.SARTE["Error_Messages_Frame"]
+ASCT.Scripts.Frame["OnEvent"](f, function (self, event, errorType, message)
+    if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"]) then return end
     local msg
     if message == ERR_MAIL_SENT and ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Sent Mail"] == true then
         msg = ERR_MAIL_SENT
-        L_Function_Keys["Combat_Text_Function_Yellow"](msg)
+        ASCT.Functions["CombatText_AddMessage_Yellow"](msg)
 end
 end)

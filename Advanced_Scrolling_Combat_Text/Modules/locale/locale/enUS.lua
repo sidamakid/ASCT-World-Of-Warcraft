@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --English
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "enUS" then
  L["Shocks"] = "Shocks";
  L["Traps"] = "Traps";
  L["Lust"] = "Lust";
- L["Tab"] = "This Tab is for Shaman's and Hunter's only.";
+ L["This Tab is for Shaman's and Hunter's only."] = "This Tab is for Shaman's and Hunter's only.";
  --Ready Text
  L["msg"] = "is now ready!";
  L["msg_Shocks"] = " Shocks are now ready!";
@@ -233,4 +233,27 @@ if locale == "enUS" then
  --New Things 9/5/2023
  L["Icon Size"] = "Icon Size";
  L["The size of the message icon"] = "The size of the message icon";
+ --New things 9/17/2023
+ L["Mastery"] = "Mastery";
+ L["Avoidance"] = "Avoidance";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "Minimap Icon";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything.";
+ --New things 1/01/2024
+ L["is now ready!"] = "is now ready!";
+ L["Is Now Ready!"] = "Is Now Ready!";
+ L["is about to fade!"] = "is about to fade!";
+ L["Is About To Fade!"] = "Is About To Fade!";
+ L["Uppercase"] = "Uppercase";
+ L["Lowercase"] = "Lowercase";
+ --New things 3/16/2024
+ L["About"] = "About";
+ L["About_Line_1"] = "Advanced Scrolling Combat Text";
+ L["About_Line_2"] = "(Originally Named Scrolling Ability Text)";
+ L["About_Line_3"] = "Is an addon that adds multifunctionality that the Default Blizzard Floating Combat Text does not offer.";
+ L["About_Line_4"] = "This addon can track when an ability comes off cooldown, Stat changes, Experience Gains, Resource losses, and more!";
+ L["About_Line_5"] = "Encounter a bug or want a feature added? Report it to the GitHub Repository!";
+ --New things 3/31/2024
+ L["Resistances"] = "Resistances";
 end

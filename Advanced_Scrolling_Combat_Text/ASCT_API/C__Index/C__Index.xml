@@ -1,0 +1,5 @@
+<UI>
+    <Script file="C_Spell_Index.lua"/>
+    <!-- <Script file="C_Item_Index.lua"/> -->
+    <Script file="C_CVar_Index.lua"/>
+</UI>

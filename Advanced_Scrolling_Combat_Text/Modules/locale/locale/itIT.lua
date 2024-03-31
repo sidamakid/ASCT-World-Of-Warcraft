@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Italian 
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "itIT" then
  L["Shocks"] = "Shock";
  L["Traps"] = "Trappole";
  L["Lust"] = "Lussuria";
- L["Tab"] = "Questa scheda è solo per Sciamani e Cacciatori.";
+ L["This Tab is for Shaman's and Hunter's only."] = "Questa scheda è solo per Sciamani e Cacciatori.";
  --Ready Text
  L["msg"] = "è ora pronto!";
  L["msg_Shocks"] = " Gli shock sono ora pronti!";
@@ -232,4 +232,27 @@ if locale == "itIT" then
  --New Things 9/5/2023
  L["Icon Size"] = "Dimensione icona";
  L["The size of the message icon"] = "La dimensione dell'icona del messaggio";
+ --New things 9/17/2023
+ L["Mastery"] = "Maestria";
+ L["Avoidance"] = "Evitamento";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "Icona della minimappa";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "Lo scorrimento del testo di combattimento è disabilitato. Se non è abilitato, il testo di combattimento a scorrimento avanzato non mostrerà nulla.";
+ --New things 1/01/2024
+ L["is now ready!"] = "è ora pronto!";
+ L["Is Now Ready!"] = "Ora è pronta!";
+ L["is about to fade!"] = "sta per svanire!";
+ L["Is About To Fade!"] = "Sta per svanire!";
+ L["Uppercase"] = "Maiuscolo";
+ L["Lowercase"] = "Minuscola";
+ --New things 3/16/2024
+ L["About"] = "Circa";
+ L["About_Line_1"] = "Testo di combattimento a scorrimento avanzato";
+ L["About_Line_2"] = "(Originariamente chiamato Scrolling Ability Text)";
+ L["About_Line_3"] = "╚ un addon che aggiunge multifunzionalità che il Testo di Combattimento Fluttuante Blizzard Predefinito non offre.";
+ L["About_Line_4"] = "Questo add-on può tenere traccia di quando un'abilità termina il tempo di recupero, le modifiche alle statistiche, i guadagni di esperienza, le perdite di risorse e altro ancora!";
+ L["About_Line_5"] = "Hai riscontrato un bug o vuoi aggiungere una funzionalità? Segnalalo al repository GitHub!";
+ --New things 3/31/2024
+ L["Resistances"] = "Resistenze";
 end

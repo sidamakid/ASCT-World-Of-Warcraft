@@ -1,6 +1,10 @@
 <UI>
     <Include file="Miscellaneous\Miscellaneous.xml"/>
     <Script file="LE_EXPANSION_LEVEL_CURRENT.lua"/>
-    <Script file="Utility.lua"/>
-    <Script file="Get_Index.lua"/>
+    <Include file="C__Index\C__Index.xml"/>
+    <Include file="Widget_API\Widget_API.xml"/>
+    <Include file="Index\Index.xml"/>
+    <Include file="Events\Events.xml"/>
+    <Include file="Script_Handlers_API\Script_Handlers_API.xml"/>
+    <Include file="Functions\Functions.xml"/>
 </UI>

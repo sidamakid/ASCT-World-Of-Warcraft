@@ -1,0 +1,16 @@
+local ASCT = ASCT_Table
+local Frame = ASCT.Strings.FrameName["Frame"]
+ASCT.Frames.SARTE["Armor_Pen_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Avoidance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Block_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Defense_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Critical_Strike_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Expertise_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Dodge_Rating_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Parry_Rating_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Hit_Rating_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Haste_Rating_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Mastery_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Resilience_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Spell_Power_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+ASCT.Frames.SARTE["Spell_Pen_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)

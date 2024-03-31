@@ -73,7 +73,7 @@ if locale == "zhTW" then
  L["Shocks"] = "衝擊";
  L["Traps"] = "陷阱";
  L["Lust"] = "慾望";
- L["Tab"] = "此選項卡僅適用於薩滿和亨特。";
+ L["This Tab is for Shaman's and Hunter's only."] = "此選項卡僅適用於薩滿和亨特。";
  --Ready Text
  L["msg"] = "現在準備好了！";
  L["msg_Shocks"] = " 衝擊現在已經準備好了！";
@@ -232,4 +232,27 @@ if locale == "zhTW" then
  --New Things 9/5/2023
  L["Icon Size"] = "圖示大小";
  L["The size of the message icon"] = "消息圖示的大小";
+ --New things 9/17/2023
+ L["Mastery"] = "掌握";
+ L["Avoidance"] = "避免";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "小地圖圖示";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "滾動戰鬥文本被禁用。如果未啟用，高級滾動戰鬥文本將不會顯示任何內容。";
+ --New things 1/01/2024
+ L["is now ready!"] = "現在準備好了！";
+ L["Is Now Ready!"] = "現在準備好了！";
+ L["is about to fade!"] = "快要褪色了！";
+ L["Is About To Fade!"] = "快要褪色了！";
+ L["Uppercase"] = "大寫";
+ L["Lowercase"] = "小寫";
+ --New things 3/16/2024
+ L["About"] = "大約";
+ L["About_Line_1"] = "高級滾動戰鬥文本";
+ L["About_Line_2"] = "（原名為滾動能力文本）";
+ L["About_Line_3"] = "是一個外掛程式，它增加了預設暴雪浮動戰鬥文本不提供的多功能性。";
+ L["About_Line_4"] = "這個外掛程式可以跟蹤技能何時停止冷卻、屬性變化、經驗值增加、資源損失等等！";
+ L["About_Line_5"] = "遇到錯誤或想要添加功能？將其報告給 GitHub上 儲存庫！";
+ --New things 3/31/2024
+ L["Resistances"] = "電阻";
 end

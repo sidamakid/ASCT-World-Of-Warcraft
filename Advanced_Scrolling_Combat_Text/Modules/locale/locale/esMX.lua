@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Spanish (Mexico)
 -------------------------------------
@@ -73,12 +73,12 @@ if locale == "esMX" then
  L["Shocks"] = "Choques";
  L["Traps"] = "Trampas";
  L["Lust"] = "Lujuria";
- L["Tab"] = "Esta pestaña es solo para chamanes y cazadores.";
+ L["This Tab is for Shaman's and Hunter's only."] = "Esta pestaña es solo para chamanes y cazadores.";
  --Ready Text
- L["msg"] = "ya está listo!"
- L["msg_Shocks"] = " ¡Los choques ya están listos!"
- L["msg_Traps"] = " ¡Las trampas ya están listas!"
- L["msg_Lust"] = " ¡La lujuria ya está lista!"
+ L["msg"] = "ya está listo!";
+ L["msg_Shocks"] = " ¡Los choques ya están listos!";
+ L["msg_Traps"] = " ¡Las trampas ya están listas!";
+ L["msg_Lust"] = " ¡La lujuria ya está lista!";
  L["Nothing"] = "Nada";
  L["Open To Options Panel"] = "Abrir el panel Opciones";
  --New things
@@ -231,4 +231,27 @@ if locale == "esMX" then
  --New Things 9/5/2023
  L["Icon Size"] = "Tamaño del icono";
  L["The size of the message icon"] = "El tamaño del icono del mensaje";
+ --New things 9/17/2023
+ L["Mastery"] = "Maestría";
+ L["Avoidance"] = "Evitación";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "Icono de minimapa";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "El desplazamiento del texto de combate está desactivado. Si no está habilitado, el texto de combate de desplazamiento avanzado no mostrará nada.";
+ --New things 1/01/2024
+ L["is now ready!"] = "ya está listo!";
+ L["Is Now Ready!"] = "¡Ya está listo!";
+ L["is about to fade!"] = "está a punto de desvanecerse!";
+ L["Is About To Fade!"] = "¡Está a punto de desvanecerse!";
+ L["Uppercase"] = "Mayúscula";
+ L["Lowercase"] = "Minúscula";
+ --New things 3/16/2024
+ L["About"] = "Acerca de";
+ L["About_Line_1"] = "Texto de combate de desplazamiento avanzado";
+ L["About_Line_2"] = "(Originalmente llamado Texto de habilidad de desplazamiento)";
+ L["About_Line_3"] = "Es un addon que añade una multifuncionalidad que el Default Blizzard Floating Combat Text no ofrece.";
+ L["About_Line_4"] = "¡Este complemento puede rastrear cuándo una habilidad sale del tiempo de reutilización, los cambios de estadísticas, las ganancias de experiencia, las pérdidas de recursos y más!";
+ L["About_Line_5"] = "¿Encuentra un error o desea agregar una función? ¡Repórtalo al repositorio de GitHub!";
+ --New things 3/31/2024
+ L["Resistances"] = "Resistencias";
 end

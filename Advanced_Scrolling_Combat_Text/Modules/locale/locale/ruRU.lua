@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Spanish Russian
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "ruRU" then
  L["Shocks"] = "Потрясений";
  L["Traps"] = "Ловушки";
  L["Lust"] = "Вожделение";
- L["Tab"] = "Эта вкладка предназначена только для шаманов и охотников.";
+ L["This Tab is for Shaman's and Hunter's only."] = "Эта вкладка предназначена только для шаманов и охотников.";
  --Ready Text
  L["msg"] = "теперь готов!";
  L["msg_Shocks"] = " Шоки уже готовы!";
@@ -81,7 +81,7 @@ if locale == "ruRU" then
  L["msg_Lust"] = " Похоть теперь готова!";
  --Message
  L["Nothing"] = "Ничто";
- L["Open To Options Panel"] = "Открыть панель «Параметры»"; 
+ L["Open To Options Panel"] = "Открыть панель «Параметры»";
  --New things
  L["Icon"] = "Икона";
  L["Name"] = "Имя";
@@ -232,4 +232,27 @@ if locale == "ruRU" then
  --New Things 9/5/2023
  L["Icon Size"] = "Размер значка";
  L["The size of the message icon"] = "Размер значка сообщения";
+ --New things 9/17/2023
+ L["Mastery"] = "Мастерство";
+ L["Avoidance"] = "Избежание";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "Значок мини-карты";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "Прокрутка боевого текста отключена. Если эта опция не включена, Advanced Scrolling Combat Text ничего не покажет.";
+ --New things 1/01/2024
+ L["is now ready!"] = "теперь готов!";
+ L["Is Now Ready!"] = "Теперь готово!";
+ L["is about to fade!"] = "вот-вот исчезнет!";
+ L["Is About To Fade!"] = "Вот-вот исчезнет!";
+ L["Uppercase"] = "Заглавная";
+ L["Lowercase"] = "Нижний регистр";
+ --New things 3/16/2024
+ L["About"] = "Около";
+ L["About_Line_1"] = "Продвинутая прокрутка боевого текста";
+ L["About_Line_2"] = "(Первоначальное название Scrolling Ability Text)";
+ L["About_Line_3"] = "Это аддон, который добавляет многофункциональность, которую нет в Blizzard Floating Combat Text по умолчанию.";
+ L["About_Line_4"] = "Этот аддон может отслеживать, когда у способности заканчивается перезарядка, изменения характеристик, получение опыта, потеря ресурсов и многое другое!";
+ L["About_Line_5"] = "Столкнулись с ошибкой или хотите добавить функцию? Сообщите об этом в репозиторий GitHub!";
+ --New things 3/31/2024
+ L["Resistances"] = "Сопротивление";
 end

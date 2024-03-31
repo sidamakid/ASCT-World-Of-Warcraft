@@ -1,0 +1,2 @@
+local ASCT = ASCT_Table
+ASCT.Int_Str.LE_EXPANSION_LEVEL = {}

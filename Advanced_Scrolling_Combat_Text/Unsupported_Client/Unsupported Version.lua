@@ -1,5 +1,5 @@
 local L = ASDC_LOCALE_TABLE
-local isDFWow = (LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_DRAGONFLIGHT)
+local isDFWow = (LE_EXPANSION_LEVEL_CURRENT >= LE_EXPANSION_DRAGONFLIGHT)
 local msg = {
 	L["Unsupported_Line_1"],
 	L["Unsupported_Line_2"],
@@ -14,7 +14,7 @@ StaticPopupDialogs["UNSUPPORTED_GAME_VERSION"] = {
 	button1 = L["Disable"],
 	button2 = L["Keep Enabled"],
 	OnAccept = function()
-		DisableAddOn("Advanced_Scrolling_Combat_Text")
+		C_AddOns.DisableAddOn("Advanced_Scrolling_Combat_Text")
 		ReloadUI()
 	  end,
 	timeout = 0,

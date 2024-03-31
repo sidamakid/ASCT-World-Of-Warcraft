@@ -1,6 +1,14 @@
 <UI>
     <Script file="Maintable.lua"/>
-    <Script file="Utility.lua"/>
+    <Include file="Utility\Utility.xml"/>
+    <Script file="Database.lua"/>
+    <Script file="locale.lua"/>
     <Script file="Api.lua"/>
+    <Script file="Widget.lua"/>
+    <Script file="Custom_Functions.lua"/>
+    <Script file="Script_Handlers.lua"/>
+    <Script file="Frames_Events.lua"/>
+    <!-- <Include file="Frames\Frames.xml"/> -->
+    <!-- <Include file="Events\Events.xml"/> -->
     <Script file="Version.lua"/>
 </UI>

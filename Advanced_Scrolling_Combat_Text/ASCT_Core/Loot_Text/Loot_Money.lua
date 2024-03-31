@@ -1,7 +1,8 @@
-local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table
-local Loot_Money = L_ASCT_Frames["Money_Loot_Frame"]
-L_ASCT_Handlers["OnEvent"](Loot_Money, function (self, event, ...)
-  if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
+local ASCT = ASCT_Table
+local Loot_Money = ASCT.Frames.SARTE["Money_Loot_Frame"]
+ASCT.Scripts.Frame["OnEvent"](Loot_Money, function (self, event, ...)
+  if event == "CHAT_MSG_MONEY" then
+  if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"]) then return end
     if ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Loot"] == true then
     local message = ...
     local globalStrings = {
@@ -29,6 +30,7 @@ L_ASCT_Handlers["OnEvent"](Loot_Money, function (self, event, ...)
     ]]
     local msg = string.format("%s", MoneyGains)
     --local msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".."%s", quantity, MoneyGains)
-    L_Function_Keys["Combat_Text_Function"](msg)
+    ASCT.Functions["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
   end
+end
 end)

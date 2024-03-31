@@ -1,0 +1,4 @@
+<UI>
+    <Include file="Miscellaneous_Frames\Miscellaneous_Frames.xml"/>
+    <Include file="Miscellaneous_Events\Miscellaneous_Events.xml"/>
+</UI>

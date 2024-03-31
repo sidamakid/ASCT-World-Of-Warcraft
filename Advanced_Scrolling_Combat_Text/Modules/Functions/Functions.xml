@@ -1,4 +1,0 @@
-<UI>
-    <Include file="Loading_Functions\Loading_Functions.xml"/>
-    <Include file="Combat_Text_Functions\Combat_Text.xml"/>
-</UI>

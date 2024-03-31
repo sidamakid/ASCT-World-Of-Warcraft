@@ -1,8 +1,8 @@
-local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
+local ASCT = ASCT_Table
 if
 ASCT.Client["isShadowlandsWow"] and ASCT.Client["90207"]
 then
-    L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+      ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

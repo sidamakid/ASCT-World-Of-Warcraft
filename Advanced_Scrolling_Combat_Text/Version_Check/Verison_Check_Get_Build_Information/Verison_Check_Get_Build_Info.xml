@@ -1,5 +1,0 @@
-<UI>
-    <Script file="Verison_Check_Get_Build_Info_Vanilla.lua"/>
-    <Script file="Verison_Check_Get_Build_Wrath.lua"/>
-    <Script file="Verison_Check_Get_Build_Info_Dragon_Flight.lua"/>
-</UI>

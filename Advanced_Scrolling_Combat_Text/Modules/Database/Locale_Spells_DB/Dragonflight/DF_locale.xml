@@ -6,4 +6,7 @@
     <Script file="DF_100105_locale.lua"/>
     <Script file="DF_100107_locale.lua"/>
     <Script file="DF_100200_locale.lua"/>
+    <Script file="DF_100205_locale.lua"/>
+    <Script file="DF_100206_locale.lua"/>
+    <Script file="DF_100207_locale.lua"/>
 </UI>

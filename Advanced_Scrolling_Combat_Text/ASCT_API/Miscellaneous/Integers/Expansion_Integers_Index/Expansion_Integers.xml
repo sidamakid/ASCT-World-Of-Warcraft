@@ -1,0 +1,8 @@
+<UI>
+    <Script file="Vanilla_Integers.lua"/>
+    <Script file="TBC_Integers.lua"/>
+    <Script file="WOTLK_Integers.lua"/>
+    <Script file="Cataclysm_Integers.lua"/>
+    <Script file="Shadowlands_Integers.lua"/>
+    <Script file="Dragonflight_Integers.lua"/>
+</UI>

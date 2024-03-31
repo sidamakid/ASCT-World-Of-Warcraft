@@ -1,0 +1,11 @@
+<UI>
+    <Script file="ADDON_Index.lua"/>
+    <Script file="ACHIEVEMENT_Index.lua"/>
+    <Script file="COMBAT_Index.lua"/>
+    <Script file="PLAYER_Index.lua"/>
+    <Script file="UNIT_Events.lua"/>
+    <Script file="CHAT_MSG_Index.lua"/>
+    <Script file="DUEL_Index.lua"/>
+    <Script file="SPELL_Index.lua"/>
+    <Script file="UI_Index.lua"/>
+</UI>

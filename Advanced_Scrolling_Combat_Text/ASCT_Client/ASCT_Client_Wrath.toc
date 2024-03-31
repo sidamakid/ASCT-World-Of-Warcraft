@@ -1,0 +1,31 @@
+## Interface: 30403
+## Version: 9.2.2
+## Title: ASCT Client
+## Title-koKR: 
+## Title-frFR:
+## Title-deDE:
+## Title-zhCN:
+## Title-zhTW:
+## Title-esES:
+## Title-esMX:
+## Title-ruRU:
+## Title-ptBR:
+## Title-itIT:
+## Notes: Checks Game Version for Advanced Scrolling Combat Text
+## Notes-koKR:
+## Notes-frFR:
+## Notes-deDE:
+## Notes-zhCN:
+## Notes-zhTW:
+## Notes-esES:
+## Notes-esMX:
+## Notes-ruRU:
+## Notes-ptBR:
+## Notes-itIT:
+## Author: Sidamakid Tinman
+## RequiredDeps: ASCT_Metatables, ASCT_API
+## X-Curse-Project-ID: 634963
+## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L
+# Embeds
+Embeds.xml

@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Cata_40300_Spells.lua"/>
+    <Script file="Cata_40400_Spells.lua"/>
+</UI>

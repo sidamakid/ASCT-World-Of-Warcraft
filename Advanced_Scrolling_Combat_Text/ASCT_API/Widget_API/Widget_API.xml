@@ -1,0 +1,11 @@
+<UI>
+    <Script file="Add_Index.lua"/>
+    <Script file="Get_Index.lua"/>
+    <Script file="Set_Index.lua"/>
+    <Script file="Start_Index.lua"/>
+    <Script file="Stop_Index.lua"/>
+    <Script file="Is_Index.lua"/>
+    <Script file="Register_Index.lua"/>
+    <Script file="Enable_Index.lua"/>
+    <Script file="Visibility.lua"/>
+</UI>

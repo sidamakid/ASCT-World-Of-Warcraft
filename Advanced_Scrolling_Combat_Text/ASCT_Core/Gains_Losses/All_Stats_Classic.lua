@@ -1,4 +1,4 @@
-local ASCT, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 if ASCT.Client["isNotShadowlandsWow"] then
 local statKeys = {
     "Strength",
@@ -12,7 +12,7 @@ local previousStats = false;
   local function getStats()
     local stats = {}
     for i = 1, 5 do --wiki says spirit is going away so only went to 4
-      local stat, effectiveStat, posBuff, negBuff = UnitStat("player", i)
+      local stat, effectiveStat, posBuff, negBuff = ASCT.API.Documentation["UnitStat"](ASCT.Strings.UnitId["player"], i)
       stats[statKeys[i]] = {
         stat = stat,
         effectiveStat = effectiveStat,
@@ -22,7 +22,7 @@ local previousStats = false;
     end
     return stats;
   end
-  
+
   local function OnEvent(_, eventName)
     if eventName == "PLAYER_ENTERING_WORLD" then
       previousStats = getStats()
@@ -32,19 +32,19 @@ local previousStats = false;
         --brand new stats
       else
         for _, stat in ipairs(statKeys) do
-          if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"]) then return end
+          if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"]) then return end
           if ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"][stat].StatEnable then
             if previousStats[stat].effectiveStat < stats[stat].effectiveStat and ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"][stat].Gains then
               --in this bit you can do any math you want
               local delta = math.abs(previousStats[stat].effectiveStat - stats[stat].effectiveStat)
               local currentstat = stats[stat].effectiveStat
               local msg = string.format("+%d".." "..L[stat].." ".."(%d)", delta, currentstat)
-              L_Function_Keys["Combat_Text_Function_Dark_Blue"](msg)
+              ASCT.Functions["CombatText_AddMessage_Dark_Blue"](msg)
             elseif previousStats[stat].effectiveStat > stats[stat].effectiveStat and ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"][stat].Lost then
               local delta = math.abs(stats[stat].effectiveStat - previousStats[stat].effectiveStat)
               local currentstat = stats[stat].effectiveStat
               local msg = string.format("-%d".." "..L[stat].." ".."(%d)", delta, currentstat)
-              L_Function_Keys["Combat_Text_Function_Dark_Blue"](msg)
+              ASCT.Functions["CombatText_AddMessage_Dark_Blue"](msg)
             end
           end
         end
@@ -52,6 +52,6 @@ local previousStats = false;
       previousStats = stats; --sorry had this is wrong place
     end
   end
-  local f = L_ASCT_Frames["All_Stats_Frame"]
-  L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function() L_ASCT_Handlers["OnEvent"](f, OnEvent) end)
+  local f = ASCT.Frames.SARTE["All_Stats_Frame"]
+  ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function() ASCT.Scripts.Frame["OnEvent"](f, OnEvent) end)
 end

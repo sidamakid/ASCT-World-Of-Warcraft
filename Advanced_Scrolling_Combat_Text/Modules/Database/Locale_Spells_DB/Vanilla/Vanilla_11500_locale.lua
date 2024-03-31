@@ -1,7 +1,8 @@
-local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
-if ASCT.Client["isVanillaWow"] then
-if ASCT.Client["is11500"] then
-L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+local ASCT = ASCT_Table
+if
+ASCT.Client["isVanillaWow"] and ASCT.Client["is11500"]
+then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Cold Blood"] = 14177,
@@ -20,6 +21,9 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Ghostly Strike"] = 14278,
       ["Preparation"] = 14185,
       ["Premeditation"] = 14183,
+      ["Quick Draw"] = 398196,
+      ["Between the Eyes"] = 400009,
+      ["Main Gauche"] = 424919,
       --Priest
       ["Power Word: Shield"] = 17,
       ["Elune's Grace"] = 2651,
@@ -36,6 +40,13 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Fade"] = 586,
       ["Psychic Scream"] = 8122,
       ["Silence"] = 15487,
+      ["Penance"] = 402174,
+      ["Void Plague"] = 425204,
+      ["Prayer of Mending"] = 401859,
+      ["Homunculi"] = 402799,
+      ["Shadow Word: Death"] = 401955,
+      ["Power Word: Barrier"] = 425207,
+      ["Circle of Healing"] = 401946,
       --Warrior
       ["Retaliation"] = 20230,
       ["Overpower"] = 7384,
@@ -62,6 +73,8 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Shield Slam"] = 23922,
       ["Last Stand"] = 12975,
       ["Concussion Blow"] = 12809,
+      ["Victory Rush"] = 402927,
+      ["Raging Blow"] = 402911,
       --Warlock
       ["Curse of Doom"] = 603,
       ["Death Coil"] = 6789,
@@ -74,6 +87,9 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Soul Fire"] = 6353,
       ["Conflagrate"] = 17962,
       ["Shadowburn"] = 17877,
+      ["Chaos Bolt"] = 403629,
+      ["Haunt"] = 403501,
+      ["Demonic Grace"] = 425463,
       --Druid
       ["Barkskin"] = 22812,
       ["Hurricane"] = 16914,
@@ -93,6 +109,9 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Tranquility"] = 740,
       ["Rebirth"] = 20484,
       ["Swiftmend"] = 18562,
+      ["Starsurge"] = 417157,
+      ["Skull Bash"] = 410176,
+      ["Wild Growth"] = 408120,
       --Mage
       ["Blink"] = 1953,
       ["Counterspell"] = 2139, --Counter Spell
@@ -108,6 +127,11 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Ice Barrier"] = 11426,
       ["Ice Block"] = 11958,
       ["Cold Snap"] = 12472,
+      ["Living Flame"] = 401556,
+      ["Arcane Surge"] = 425124,
+      ["Icy Veins"] = 425121,
+      ["Rewind Time"] = 401462,
+      ["Mass Regeneration"] = 412510,
       --Shaman
       ["Elemental Mastery"] = 16166,
       ["Chain Lightning"] = 421,
@@ -123,6 +147,11 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Grounding Totem"] = 8177,
       ["Stormstrike"] = 17364,
       ["Mana Tide Totem"] = 16190,
+      ["Lava Lash"] = 408507,
+      ["Ancestral Guidance"] = 409324,
+      ["Molten Blast"] = 425339,
+      ["Healing Rain"] = 415236,
+      ["Shamanistic Rage"] = 425336,
       --Hunter
       ["Scare Beast"] = 1513,
       ["Intimidation"] = 19577,
@@ -147,6 +176,11 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Counterattack"] = 19306,
       ["Wyvern Sting"] = 19386,
       ["Deterrence"] = 19263,
+      ["Kill Command"] = 409379,
+      ["Carve"] = 425711,
+      ["Flanking Strike"] = 415320,
+      ["Chimera Shot"] = 409433,
+      ["Explosive Shot"] = 409552,
       --Paladin
       ["Exorcism"] = 879,
       ["Hammer of Wrath"] = 24275,
@@ -165,6 +199,13 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Divine Protection"] = 498,
       ["Repentance"] = 20066,
       ["Judgement"] = 20271,
+      ["Rebuke"] = 425609,
+      ["Crusader Strike"] = 407676,
+      ["Horn of Lordaeron"] = 425600,
+      ["Hand of Reckoning"] = 407631,
+      ["Divine Sacrifice"] = 407804,
+      ["Avenger's Shield"] = 407669,
+      ["Divine Storm"] = 407778,
       --Portals
       ["Portal: Shattrath"] = 33691 or 35717,
       ["Portal: Stonard"] = 49361,
@@ -196,5 +237,4 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Shadowmeld"] =  20580,
       ["Stoneform"] = 20594,
 }
-end
 end

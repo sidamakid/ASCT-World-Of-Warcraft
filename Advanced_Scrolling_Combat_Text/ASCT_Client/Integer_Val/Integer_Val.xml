@@ -1,7 +1,0 @@
-<UI>
-    <Script file="Verison_Check_Get_Build_Info_Vanilla.lua"/>
-    <Script file="Verison_Check_Get_Build_Info_The_Burning_Crusade.lua"/>
-    <Script file="Verison_Check_Get_Build_Info_Wrath_Of_The_Lich_King.lua"/>
-    <Script file="Verison_Check_Get_Build_Info_Shadowlands.lua"/>
-    <Script file="Verison_Check_Get_Build_Info_Dragonflight.lua"/>
-</UI>

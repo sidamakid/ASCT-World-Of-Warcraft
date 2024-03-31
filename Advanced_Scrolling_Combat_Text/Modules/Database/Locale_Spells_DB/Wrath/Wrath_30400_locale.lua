@@ -1,6 +1,8 @@
-local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
-if ASCT.Client["isWrathWow"] and ASCT.Client["is30400"] then
-    L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+local ASCT = ASCT_Table
+if
+ASCT.Client["isWrathWow"] and ASCT.Client["is30400"]
+then
+    ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
     --Rogue
     ["Adrenaline Rush"] = 13750,
     ["Blade Flurry"] = 13877,

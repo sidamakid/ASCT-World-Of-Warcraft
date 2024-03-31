@@ -1,0 +1,4 @@
+<UI>
+    <Include file="ASCT_Frames\ASCT_Frames.xml"/>
+    <Include file="ASCT_Events\ASCT_Events.xml"/>
+</UI>

@@ -1,7 +1,8 @@
-local ASCT, L_Database_Keys = ASCT_Table, Spell_Database_For_ASDC_Table
-if ASCT.Client["isVanillaWow"] then
-if ASCT.Client["is11403"] then
-L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+local ASCT = ASCT_Table
+if
+ASCT.Client["isVanillaWow"] and ASCT.Client["is11403"]
+then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Cold Blood"] = 14177,
@@ -196,5 +197,4 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
       ["Shadowmeld"] =  20580,
       ["Stoneform"] = 20594,
 }
-end
 end

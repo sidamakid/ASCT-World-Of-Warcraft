@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Events.lua"/>
+    <!-- <Script file="RegisterEvent.lua"/> -->
+    <!-- <Script file="UnRegisterEvent.lua"/> -->
+</UI>

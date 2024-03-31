@@ -1,0 +1,8 @@
+<UI>
+    <Script file="Client_Strings.lua"/>
+    <Script file="API_Strings.lua"/>
+    <!-- <Script file="EventName_Strings.lua"/> -->
+    <Script file="Script_Strings.lua"/>
+    <Script file="Keyboard_Mouse_Strings.lua"/>
+    <Script file="Miscellaneous_Strings.lua"/>
+</UI>

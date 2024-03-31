@@ -1,0 +1,4 @@
+<UI>
+    <Script file="CR_Str_Int.lua"/>
+    <Script file="Resistance_Str_Int.lua"/>
+</UI>

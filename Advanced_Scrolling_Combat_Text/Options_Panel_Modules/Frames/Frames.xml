@@ -1,0 +1,4 @@
+<UI>
+    <Include file="Main_Frame\Main_Frame.xml"/>
+    <Include file="Text_Frame\Text_Frame.xml"/>
+</UI>

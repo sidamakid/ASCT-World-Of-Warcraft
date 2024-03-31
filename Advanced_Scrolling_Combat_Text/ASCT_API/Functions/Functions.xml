@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Tables.lua"/>
+    <Script file="Initializers.lua"/>
+    <Script file="Combat_Text.lua"/>
+</UI>

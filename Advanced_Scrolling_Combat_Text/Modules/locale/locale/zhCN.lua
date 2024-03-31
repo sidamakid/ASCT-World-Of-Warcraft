@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Chinese Simplifed
 -------------------------------------
@@ -73,7 +73,7 @@ if locale == "zhCN" then
  L["Shocks"] = "冲击";
  L["Traps"] = "陷阱";
  L["Lust"] = "欲望";
- L["Tab"] = "此选项仅适用于萨满和猎人。";
+ L["This Tab is for Shaman's and Hunter's only."] = "此选项仅适用于萨满和猎人。";
  --Ready Text
  L["msg"] = "现在准备好了!";
  L["msg_Shocks"] = " 冲击现在已经准备好了！";
@@ -232,4 +232,27 @@ if locale == "zhCN" then
  --New Things 9/5/2023
  L["Icon Size"] = "图标大小";
  L["The size of the message icon"] = "消息图标的大小";
+ --New things 9/17/2023
+ L["Mastery"] = "掌握";
+ L["Avoidance"] = "避免";
+ --New things 9/24/2023
+ L["Minimap Icon"] = "小地图图标";
+ --New things 12/30/2023
+ L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "滚动战斗文本被禁用。如果未启用，高级滚动战斗文本将不会显示任何内容。";
+ --New things 1/01/2024
+ L["is now ready!"] = "is now ready!";
+ L["Is Now Ready!"] = "现在准备好了！";
+ L["is about to fade!"] = "快要褪色了！";
+ L["Is About To Fade!"] = "快要褪色了！";
+ L["Uppercase"] = "大写";
+ L["Lowercase"] = "小写";
+ --New things 3/16/2024
+ L["About"] = "大约";
+ L["About_Line_1"] = "高级滚动战斗文本";
+ L["About_Line_2"] = "（原名为滚动能力文本）";
+ L["About_Line_3"] = "是一个插件，它增加了默认暴雪浮动战斗文本不提供的多功能性。";
+ L["About_Line_4"] = "这个插件可以跟踪技能何时停止冷却、属性变化、经验值增加、资源损失等等！";
+ L["About_Line_5"] = "遇到错误或想要添加功能？将其报告给 GitHub上 存储库！";
+ --New things 3/31/2024
+ L["Resistances"] = "电阻";
 end

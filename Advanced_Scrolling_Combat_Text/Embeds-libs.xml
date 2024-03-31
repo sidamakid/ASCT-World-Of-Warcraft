@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Libs\LibStub\LibStub.lua"/>
+    <Script file="Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua"/>
+    <Include file="Libs\LibClassicDurations\LibClassicDurations.xml"/>
+</UI>

@@ -1,5 +1,7 @@
 <UI>
-    <Script file="Vanilla_11403.lua"/>
-    <Script file="Vanilla_11404.lua"/>
-    <Script file="Vanilla_11500.lua"/>
+    <Script file="Vanilla_11403_Others.lua"/>
+    <Script file="Vanilla_11404_Others.lua"/>
+    <Script file="Vanilla_11500_Others.lua"/>
+    <Script file="Vanilla_11501_Others.lua"/>
+    <Script file="Vanilla_11502_Others.lua"/>
 </UI>

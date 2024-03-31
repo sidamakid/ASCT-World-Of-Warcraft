@@ -1,17 +1,17 @@
-local ASCT, L_ASCT_Locale_Spells, L_ASCT_Frames, L_ASCT_Handlers, L_Function_Keys, L = ASCT_Table, ASCT_Spell_Locale_Table, ASCT_Frames_Table, ASCT_Script_Handlers_Table, Functions_For_ASDC_Table, ASDC_LOCALE_TABLE
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 if ASCT.Client["isShadowlandsWow"] then
-   local SARTE = ... --This assigns the name of the addon to SARTE
+   local ASCT_SARTE = ... --This assigns the name of the addon to SARTE
    local start, duration --nil vars used later
    ---------------------------
    --L_Function_Keys frame for our frame
    ---------------------------
-   local f = L_ASCT_Frames["SARTE-Text-Racials_Frame"]
-   L_Function_Keys["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
-   L_ASCT_Handlers["OnEvent"](f, --Run when our event fires
+   local f = ASCT.Frames.SARTE["SARTE-Text-Racials_Frame"]
+   ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
+   ASCT.Scripts.Frame["OnEvent"](f, --Run when our event fires
     function(self, event, unit, _, spellName)
-      local spellName = GetSpellInfo(spellName)
-      if unit == "player" then
-      local Spell_Localize = L_ASCT_Locale_Spells["ASCT_GetEnglishName"](spellName)
+      local spellName = ASCT.API.Documentation["GetSpellInfo"](spellName)
+      if unit == ASCT.Strings.UnitId["player"] then
+      local Spell_Localize = ASCT.Locale.Spells["ASCT_GetEnglishName"](spellName)
       local db_Human = ASCT_DB["Human"][Spell_Localize]
       local db_Dwarf = ASCT_DB["Dwarf"][Spell_Localize]
       local db_Gnome = ASCT_DB["Gnome"][Spell_Localize]
@@ -61,12 +61,12 @@ if ASCT.Client["isShadowlandsWow"] then
       db_Zandalari_Troll and (db_Zandalari_Troll.SpellEnable == true) or
       db_Maghar_Orc and (db_Maghar_Orc.SpellEnable == true)
       then
-         local spellFrame = _G[SARTE..spellName] or CreateFrame("Frame", SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
-         L_ASCT_Handlers["OnUpdate"](spellFrame, --Run forever!
+         local spellFrame = _G[ASCT_SARTE..spellName] or ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         ASCT.Scripts.Frame["OnUpdate"](spellFrame, --Run forever!
             function()
-               start, duration = GetSpellCooldown(spellName) --Grab the needed time data
+               start, duration = ASCT.API.Documentation["GetSpellCooldown"](spellName) --Grab the needed time data
                if start == 0 then
-                local name, _, icon = GetSpellInfo(spellName)
+                local name, _, icon = ASCT.API.Documentation["GetSpellInfo"](spellName)
                 local details = " "
                 local dbSettings = ASCT_DB["Human"][Spell_Localize] or ASCT_DB["Dwarf"][Spell_Localize] or
                 ASCT_DB["Gnome"][Spell_Localize] or ASCT_DB["Undead"][Spell_Localize] or
@@ -83,16 +83,16 @@ if ASCT.Client["isShadowlandsWow"] then
                 if dbSettings.iconEnable then details = details..string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t ".." ", icon) end
                 if dbSettings.nameEnable then details = details..name.." " end
                 if dbSettings.iconEnable == false and dbSettings.nameEnable == false then
-                  L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  ASCT.Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end
                local msg = string.format ("%s"..L["msg"], details)
-                local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings["enableFloatingCombatText"])
+                local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"])
                   if Comabt_Text == false then
-                  L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  ASCT.Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                   return end
                if Comabt_Text == true then
-                  L_Function_Keys["Combat_Text_Function"](msg)
-                  L_ASCT_Handlers["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
+                  ASCT.Functions["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
+                  ASCT.Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
                end
                end
             end

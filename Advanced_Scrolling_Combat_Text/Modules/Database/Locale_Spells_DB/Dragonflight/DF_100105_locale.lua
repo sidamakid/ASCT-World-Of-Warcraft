@@ -1,8 +1,8 @@
 local ASCT = ASCT_Table
-local L_Database_Keys = Spell_Database_For_ASDC_Table
-if ASCT.Client["isDragonFlightWow"] then
-if ASCT.Client["is100105"] then
-L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+if
+ASCT.Client["isDragonFlightWow"] and ASCT.Client["is100105"]
+then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
             --Assassination
             ["Garrote"] = 703,
@@ -882,5 +882,4 @@ L_Database_Keys["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Ta
             ["Pterrordax Swoop"] = 281954,
             ["Regeneratin'"] = 291944,
 }
-end
 end

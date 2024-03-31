@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Cata_40300_locale.lua"/>
+    <Script file="Cata_40400_locale.lua"/>
+</UI>

@@ -1,9 +1,12 @@
 <UI>
-    <Script file="Dragonflight_100002_Others.lua"/>
-    <Script file="Dragonflight_100005_Others.lua"/>
-    <Script file="Dragonflight_100007_Others.lua"/>
-    <Script file="Dragonflight_100100_Others.lua"/>
-    <Script file="Dragonflight_100105_Others.lua"/>
-    <Script file="Dragonflight_100107_Others.lua"/>
-    <Script file="Dragonflight_100200_Others.lua"/>
+    <Script file="DF_100002_Others.lua"/>
+    <Script file="DF_100005_Others.lua"/>
+    <Script file="DF_100007_Others.lua"/>
+    <Script file="DF_100100_Others.lua"/>
+    <Script file="DF_100105_Others.lua"/>
+    <Script file="DF_100107_Others.lua"/>
+    <Script file="DF_100200_Others.lua"/>
+    <Script file="DF_100205_Others.lua"/>
+    <Script file="DF_100206_Others.lua"/>
+    <Script file="DF_100207_Others.lua"/>
 </UI>

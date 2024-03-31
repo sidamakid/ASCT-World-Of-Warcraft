@@ -1,7 +1,4 @@
 <UI>
-    <Include file="Table_Functions\Table_Functions.xml"/>
     <Include file="Database\Database.xml"/>
     <Include file="locale\Embeds.xml"/>
-    <Include file="Frames\Frames.xml"/>
-    <Include file="Functions\Functions.xml"/>
 </UI>
