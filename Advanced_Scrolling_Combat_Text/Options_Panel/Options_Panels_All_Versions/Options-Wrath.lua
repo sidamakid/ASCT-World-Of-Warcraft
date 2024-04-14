@@ -47,7 +47,7 @@ local function Tab_OnClick (self)
     ASCT.Widget.API["Hide"](scrollChild);
   end
 
-  ASCT.Widget.API["SetScrollChild"](ASCT_Config.scrollFrameself.content);
+  ASCT.Widget.API["SetScrollChild"](ASCT_Config.scrollFrame, self.content);
   ASCT.Widget.API["Show"](self.content);
 end
 
