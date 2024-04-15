@@ -202,7 +202,7 @@ local Color_picker_SARTE = ASCT.API.Documentation["CreateFrame"]("Button", nil, 
     ASCT.Widget.API["SetText"](Color_picker_SARTE, L["Color Picker"])
     ASCT.Widget.API["SetWidth"](Color_picker_SARTE, 150)
 	ASCT.Scripts.Frame["OnClick"](Color_picker_SARTE, function()
-		ASCT.Frames.Widgets["ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker"](ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b, ASCT_Color_Picker_Variables.a, ASCT.Frames.Widgets["ASDC_COlOR_PICKER_myColorCallback"]);
+		ASCT.Frames.Widgets["ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker"](ASCT_Color_Picker_Variables);
 end)
 ---------------------------
 --Main options panel
