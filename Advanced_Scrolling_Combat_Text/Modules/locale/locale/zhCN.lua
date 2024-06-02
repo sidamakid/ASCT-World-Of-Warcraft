@@ -255,4 +255,6 @@ if locale == "zhCN" then
  L["About_Line_5"] = "遇到错误或想要添加功能？将其报告给 GitHub上 存储库！";
  --New things 3/31/2024
  L["Resistances"] = "电阻";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "杂项";
 end

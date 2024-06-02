@@ -255,4 +255,6 @@ if locale == "koKR" then
  L["About_Line_5"] = "버그가 발생하거나 기능을 추가하고 싶으신가요? 깃허브 리포지토리에 보고하세요!";
  --New things 3/31/2024
  L["Resistances"] = "저항";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "잡다한";
 end

@@ -3,7 +3,7 @@ if ASCT.Client["isDragonFlightWow"] then
 local lastPower = nil
 local power
 local f = ASCT.Frames.SARTE["Resource_Loss_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 ASCT.Scripts.Frame["OnEvent"](f, function()
   if not ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"]) then return end
   if ASCT.API.Documentation["UnitPowerType"](ASCT.Strings.UnitId["player"]) == 0 then

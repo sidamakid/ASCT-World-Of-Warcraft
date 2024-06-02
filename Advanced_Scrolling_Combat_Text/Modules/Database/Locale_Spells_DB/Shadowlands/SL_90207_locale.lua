@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client["90207"]
+ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
 then
       ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue

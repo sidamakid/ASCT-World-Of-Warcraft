@@ -11,5 +11,4 @@
     <Script file="Skill_Gained.lua"/>
     <Include file="Resistances\Resistance.xml"/>
     <Include file="Special_Stat_Gains\Special_Stat_Gains.xml"/>
-    <Include file="Other_Stats_Gains\Other_Stats_Gains.xml"/>
 </UI>

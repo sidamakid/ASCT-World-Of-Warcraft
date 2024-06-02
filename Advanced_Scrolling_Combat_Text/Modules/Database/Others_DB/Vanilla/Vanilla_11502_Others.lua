@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 if
-ASCT.Client["isVanillaWow"] and ASCT.Client["is11502"]
+ASCT.Client["isVanillaWow"] and ASCT.Client.tocversion["is11502"]
 then
 ASCT.Database.Spells["Others_Vanilla"] = {
     ["Advanced_Scrolling_Combat_Text_Stats"] = {

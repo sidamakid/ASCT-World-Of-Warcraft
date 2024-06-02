@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-local Frame = ASCT.Strings.FrameName["Frame"]
-ASCT.Frames.Miscellaneous["SCT_Check_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.Miscellaneous["loadingFrame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.Miscellaneous["Initialize_Locale_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
+Frames.Miscellaneous["SCT_Check_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.Miscellaneous["loadingFrame"] = Documentation["CreateFrame"](frameType)
+Frames.Miscellaneous["Initialize_Locale_Frame"] = Documentation["CreateFrame"](frameType)

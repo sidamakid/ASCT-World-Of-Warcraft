@@ -23,13 +23,13 @@ end
 --L_Function_Keys frame for our frame
 ---------------------------
 local f = ASCT.Frames.SARTE["SARTE-Text-Traps_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
 ASCT.Scripts.Frame["OnEvent"](f, --Run when our event fires
    function(self, event, unit, _, spellName)
       local spellName = ASCT.API.Documentation["GetSpellInfo"](spellName)
       if unit == ASCT.Strings.UnitId["player"] then
        if SpellTableHunterTraps[ASCT.Locale.Spells["ASCT_GetEnglishName"](spellName)] and ASCT_DB["Shared_Hunter_spells"]["Traps"] == true then
-         local spellFrame = _G[ASCT_SARTE..spellName] or ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         local spellFrame = _G[ASCT_SARTE..spellName] or ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          ASCT.Scripts.Frame["OnUpdate"](spellFrame, --Run forever!
             function()
                start, duration = ASCT.API.Documentation["GetSpellCooldown"](spellName) --Grab the needed time data

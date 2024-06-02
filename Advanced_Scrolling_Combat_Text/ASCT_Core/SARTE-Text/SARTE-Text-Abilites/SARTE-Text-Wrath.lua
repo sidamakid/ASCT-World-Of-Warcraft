@@ -6,7 +6,7 @@ local start, duration --nil vars used later
 --L_Function_Keys frame for our frame
 ---------------------------
 local f = ASCT.Frames.SARTE["SARTE-Text_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
 ASCT.Scripts.Frame["OnEvent"](f, --Run when our event fires
     function(self, event, unit, _, spellName)
       local spellName = ASCT.API.Documentation["GetSpellInfo"](spellName)
@@ -44,7 +44,7 @@ ASCT.Scripts.Frame["OnEvent"](f, --Run when our event fires
       --Death_Knight
       dbSettings_Death_Knight and dbSettings_Death_Knight.SpellEnable == true
       then
-         local spellFrame = _G[ASCT_SARTE..spellName] or ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         local spellFrame = _G[ASCT_SARTE..spellName] or ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          ASCT.Scripts.Frame["OnUpdate"](spellFrame, --Run forever!
          function()
             ---------------------------

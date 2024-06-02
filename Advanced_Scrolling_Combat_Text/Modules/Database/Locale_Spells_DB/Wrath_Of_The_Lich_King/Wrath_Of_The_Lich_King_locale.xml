@@ -1,0 +1,6 @@
+<UI>
+    <Script file="Wrath_30400_locale.lua"/>
+    <Script file="Wrath_30401_locale.lua"/>
+    <Script file="Wrath_30402_locale.lua"/>
+    <Script file="Wrath_30403_locale.lua"/>
+</UI>

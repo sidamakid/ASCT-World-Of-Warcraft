@@ -254,4 +254,6 @@ if locale == "esES" then
  L["About_Line_5"] = "¿Encuentra un error o desea agregar una función? ¡Repórtalo al repositorio de GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Resistencias";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Misceláneo";
 end

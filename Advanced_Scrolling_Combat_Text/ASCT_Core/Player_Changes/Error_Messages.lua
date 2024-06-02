@@ -6,5 +6,5 @@ ASCT.Scripts.Frame["OnEvent"](f, function (self, event, errorType, message)
     if message == ERR_MAIL_SENT and ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Sent Mail"] == true then
         msg = ERR_MAIL_SENT
         ASCT.Functions["CombatText_AddMessage_Yellow"](msg)
-end
+    end
 end)

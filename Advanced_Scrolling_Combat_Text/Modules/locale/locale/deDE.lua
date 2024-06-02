@@ -255,4 +255,6 @@ if locale == "deDE" then
  L["About_Line_5"] = "Stoßen Sie auf einen Fehler oder möchten Sie eine Funktion hinzufügen? Melden Sie es im GitHub Repository!";
  --New things 3/31/2024
  L["Resistances"] = "Widerstände";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Verschiedenes";
 end

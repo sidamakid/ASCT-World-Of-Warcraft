@@ -26,9 +26,9 @@ function (self, event, ...)
     local r, g, b = ASCT.API.Documentation["GetItemQualityColor"](Rarity);
     local msg
     if Quantity ~= 1 and Quantity ~= nil then
-      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."%s".." ".."x".."%d", ItemIcon, ItemName, Quantity)
+      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."[".."%s".."]".." ".."x".."%d", ItemIcon, ItemName, Quantity)
     else
-      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."%s", ItemIcon, ItemName)
+      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."[".."%s".."]", ItemIcon, ItemName)
     end
     ASCT.Functions["CombatText_AddMessage"](msg, CombatText_StandardScroll, r, g, b)
   end

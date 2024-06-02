@@ -38,9 +38,9 @@ function (self, event, ...)
     local amount = tonumber(Quantity)
     local msg
     if amount ~= 1 then
-      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."%s".." ".."x".."%d", ItemIcon, ItemName, Quantity)
+      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."[".."%s".."]".." ".."x".."%d", ItemIcon, ItemName, Quantity)
     elseif amount == 1 then
-      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."%s", ItemIcon, ItemName)
+      msg = string.format("|T%d:"..ASCT_DB["Integer_Values"].Icon.."|t".." ".." ".."[".."%s".."]", ItemIcon, ItemName)
     end
     ASCT.Functions["CombatText_AddMessage"](msg, CombatText_StandardScroll, r, g, b)
     end

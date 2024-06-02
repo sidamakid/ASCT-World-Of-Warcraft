@@ -5,4 +5,5 @@
     <Script file="SARTE-Text-Cata.lua"/>
     <Script file="SARTE-Text_SL.lua"/>
     <Script file="SARTE-Text_DF.lua"/>
+    <Script file="SARTE-Text_TWW.lua"/>
 </UI>

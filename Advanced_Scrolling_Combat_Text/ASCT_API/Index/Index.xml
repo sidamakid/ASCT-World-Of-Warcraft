@@ -1,6 +1,7 @@
 <UI>
     <Script file="Create_Index.lua"/>
     <Script file="Get_Index.lua"/>
+    <Script file="Is_Index.lua"/>
     <Script file="Unit_Index.lua"/>
     <Script file="_G_Index.lua"/>
 </UI>

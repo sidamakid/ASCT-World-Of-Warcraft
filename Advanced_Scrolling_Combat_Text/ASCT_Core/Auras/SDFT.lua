@@ -42,4 +42,4 @@ end
 end
 
 local f = ASCT.Frames.SARTE["Aura_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function() ASCT.Scripts.Frame["OnUpdate"](f, onUpdate) end)
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function() ASCT.Scripts.Frame["OnUpdate"](f, onUpdate) end)

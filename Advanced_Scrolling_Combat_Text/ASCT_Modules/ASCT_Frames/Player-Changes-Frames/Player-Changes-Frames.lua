@@ -1,10 +1,10 @@
 local ASCT = ASCT_Table
-local Frame = ASCT.Strings.FrameName["Frame"]
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
 --Achievement Gains
-ASCT.Frames.SARTE["Achievement_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Achievement_Frame"] = Documentation["CreateFrame"](frameType)
 --Player Dies
-ASCT.Frames.SARTE["Player_Dead_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Player_Dead_Frame"] = Documentation["CreateFrame"](frameType)
 --Duel Request
-ASCT.Frames.SARTE["Duel_Request_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Duel_Request_Frame"] = Documentation["CreateFrame"](frameType)
 --Error Message
-ASCT.Frames.SARTE["Error_Messages_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Error_Messages_Frame"] = Documentation["CreateFrame"](frameType)

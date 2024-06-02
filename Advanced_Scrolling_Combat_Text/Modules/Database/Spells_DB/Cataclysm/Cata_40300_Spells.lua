@@ -206,9 +206,9 @@ if ASCT.Client["isCataclysmWow"] and ASCT.Client["is40300"] then
 local Lust_Table
 if select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
 Lust_Table = {["Heroism"] = {SpellEnable = false, iconEnable = false, nameEnable = false}}
-ASCT.Functions["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
+ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
 elseif select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
-ASCT.Functions["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
+ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
 end
 end

@@ -1,8 +1,9 @@
 <UI>
     <Include file="Vanilla\Vanilla_locale.xml"/>
-    <Include file="TBC\TBC_locale.xml"/>
-    <Include file="Wrath\Wrath_locale.xml"/>
-    <Include file="Cataclysm\Cata_locale.xml"/>
-    <Include file="Shadowlands\SL_locale.xml"/>
-    <Include file="Dragonflight\DF_locale.xml"/>
+    <Include file="The_Burning_Crusade\The_Burning_Crusade_locale.xml"/>
+    <Include file="Wrath_Of_The_Lich_King\Wrath_Of_The_Lich_King_locale.xml"/>
+    <Include file="Cataclysm\Cataclysm_locale.xml"/>
+    <Include file="Shadowlands\Shadowlands_locale.xml"/>
+    <Include file="Dragonflight\Dragonflight_locale.xml"/>
+    <Include file="The_War_Within\The_War_Within_locale.xml"/>
 </UI>

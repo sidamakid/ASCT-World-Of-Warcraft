@@ -1,5 +1,7 @@
 <UI>
-    <Include file="TBC_Wrath_Cata\TBC_Wrath_Cata.xml"/>
     <Include file="TBC_Wrath\TBC_Wrath.xml"/>
+    <Include file="TBC_Wrath_Cata\TBC_Wrath_Cata.xml"/>
     <Include file="Wrath_Cata\Wrath_Cata.xml"/>
+    <Include file="Cata\Cata.xml"/>
+    <Include file="Warlords\Warlords.xml"/>
 </UI>

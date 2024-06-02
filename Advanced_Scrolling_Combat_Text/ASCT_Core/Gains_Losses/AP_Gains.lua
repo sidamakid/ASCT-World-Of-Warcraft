@@ -2,7 +2,7 @@ local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 if ASCT.Client["isNotDragonFlightWow"] then
 local lastStat = -1
 local f = ASCT.Frames.SARTE["Attack_Power_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 ASCT.Scripts.Frame["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Attack Power"]
     if not (stats.StatEnable and ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"])) then return end

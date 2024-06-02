@@ -1,3 +1,3 @@
 local ASCT = ASCT_Table
-local Frame = ASCT.Strings.FrameName["Frame"]
-ASCT.Frames.SARTE["Resource_Loss_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
+Frames.SARTE["Resource_Loss_Frame"] = Documentation["CreateFrame"](frameType)

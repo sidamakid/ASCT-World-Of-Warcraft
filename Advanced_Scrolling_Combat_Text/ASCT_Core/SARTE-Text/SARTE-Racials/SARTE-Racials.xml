@@ -5,4 +5,5 @@
     <Script file="SARTE-Text-Racials_Wrath.lua"/>
     <Script file="SARTE-Text-Racials_SL.lua"/>
     <Script file="SARTE-Text-Racials_DF.lua"/>
+    <Script file="SARTE-Text-Racials_TWW.lua"/>
 </UI>

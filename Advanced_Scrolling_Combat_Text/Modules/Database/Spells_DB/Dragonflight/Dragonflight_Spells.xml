@@ -1,0 +1,12 @@
+<UI>
+    <Script file="DF_100002_Spells.lua"/>
+    <Script file="DF_100005_Spells.lua"/>
+    <Script file="DF_100007_Spells.lua"/>
+    <Script file="DF_100100_Spells.lua"/>
+    <Script file="DF_100105_Spells.lua"/>
+    <Script file="DF_100107_Spells.lua"/>
+    <Script file="DF_100200_Spells.lua"/>
+    <Script file="DF_100205_Spells.lua"/>
+    <Script file="DF_100206_Spells.lua"/>
+    <Script file="DF_100207_Spells.lua"/>
+</UI>

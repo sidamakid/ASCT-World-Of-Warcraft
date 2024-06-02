@@ -4,7 +4,7 @@ if ASCT.Client["isDragonFlightWow"] then
 --Gains and Losses Toogles
 ---------------------------
 ASCT.Frames.Widgets["CreateGainsLossToggles"] = function(button, settings, configparent)
-    local GainToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    local GainToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](GainToggle.Text, L["Gained"])
     ASCT.Widget.API["SetChecked"](GainToggle, settings.Gains)
     ASCT.Widget.API["SetEnabled"](GainToggle, settings.StatEnable == true)
@@ -12,7 +12,7 @@ ASCT.Frames.Widgets["CreateGainsLossToggles"] = function(button, settings, confi
       settings.Gains = ASCT.Widget.API["GetChecked"](self)
     end)
     ASCT.Widget.API["SetPoint"](GainToggle, ASCT.Strings.Point["TOPRIGHT"], button, ASCT.Strings.Point["BOTTOMRIGHT"], 20, 0) -- anchor to set it relative to the button
-    local lossToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    local lossToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](lossToggle.Text, L["Lost"])
     ASCT.Widget.API["SetChecked"](lossToggle, settings.Lost)
     ASCT.Widget.API["SetEnabled"](lossToggle, settings.StatEnable == true)
@@ -30,7 +30,7 @@ end
 --Stat Toggles
 ---------------------------
 ASCT.Frames.Widgets["CreateStatToggle"] = function(Stat, settings, parent)
-    local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
+    local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](b.Text, L[Stat])
     ASCT.Widget.API["SetChecked"](b, settings.StatEnable)
     ASCT.Scripts.Frame["OnClick"](b, function(s) settings.StatEnable = ASCT.Widget.API["GetChecked"](s) end)
@@ -40,7 +40,7 @@ end
 --Name Icon Toggles
 ---------------------------
 ASCT.Frames.Widgets["CreateNameIconToggles"] = function(button, settings, configparent)
-    local nameToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    local nameToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](nameToggle.Text, L["Name"])
     ASCT.Widget.API["SetChecked"](nameToggle, settings.nameEnable)
     ASCT.Widget.API["SetEnabled"](nameToggle, settings.SpellEnable == true)
@@ -48,7 +48,7 @@ ASCT.Frames.Widgets["CreateNameIconToggles"] = function(button, settings, config
       settings.nameEnable = ASCT.Widget.API["GetChecked"](self)
     end)
     ASCT.Widget.API["SetPoint"](nameToggle, ASCT.Strings.Point["TOPRIGHT"], button, ASCT.Strings.Point["BOTTOMRIGHT"], 20, 0) -- anchor to set it relative to the button
-    local iconToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+    local iconToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](iconToggle.Text, L["Icon"])
     ASCT.Widget.API["SetChecked"](iconToggle, settings.iconEnable)
     ASCT.Widget.API["SetEnabled"](iconToggle, settings.SpellEnable == true)
@@ -66,7 +66,7 @@ end
 --Spell Toggles
 ---------------------------
 ASCT.Frames.Widgets["CreateSpellToggle"] = function(Function_Name, Function_Icon, spellName, settings, parent)
-    local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
+    local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](b.Text, Function_Name(spellName))
     ASCT.Widget.API["SetChecked"](b, settings.SpellEnable)
     ASCT.Scripts.Frame["OnClick"](b, function(s) settings.SpellEnable = ASCT.Widget.API["GetChecked"](s) end)
@@ -80,7 +80,7 @@ end
 --Buttons
 ---------------------------
 ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext,  x, y, tooltip_text1, tooltip_text2)
-	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], "NewButton", Location, "InterfaceOptionsCheckButtonTemplate")
+	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], "NewButton", Location, "InterfaceOptionsCheckButtonTemplate")
 	ASCT.Widget.API["SetPoint"](b, ASCT.Strings.Point["TOPLEFT"], x, y)
 	ASCT.Widget.API["SetText"](b.Text, btntext)
   local Button_Tooltip = GameTooltip
@@ -103,7 +103,7 @@ end
 --Functions For Trinkets
 ---------------------------
 ASCT.Frames.Widgets["CreateTrinketNameIconsToggles"] = function (button, settings, configparent)
-  local NameToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+  local NameToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
   ASCT.Widget.API["SetText"](NameToggle.Text, L["Name"])
   ASCT.Widget.API["SetChecked"](NameToggle, settings.Name)
   ASCT.Widget.API["SetEnabled"](NameToggle, settings.TrinketEnable == true)
@@ -111,7 +111,7 @@ ASCT.Frames.Widgets["CreateTrinketNameIconsToggles"] = function (button, setting
     settings.Name = ASCT.Widget.API["GetChecked"](self)
   end)
   ASCT.Widget.API["SetPoint"](NameToggle, ASCT.Strings.Point["TOPRIGHT"], button, ASCT.Strings.Point["BOTTOMRIGHT"], 20, 0) -- anchor to set it relative to the button
-  local IconToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
+  local IconToggle = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, configparent, "InterfaceOptionsCheckButtonTemplate")
   ASCT.Widget.API["SetText"](IconToggle.Text, L["Icon"])
   ASCT.Widget.API["SetChecked"](IconToggle, settings.Icon)
   ASCT.Widget.API["SetEnabled"](IconToggle, settings.TrinketEnable == true)
@@ -126,7 +126,7 @@ end) -- NEW STUFF
 return NameToggle, IconToggle
 end
 ASCT.Frames.Widgets["CreateTrinketToggle"] = function (Trinket, settings, parent)
-  local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
+  local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
   ASCT.Widget.API["SetText"](b.Text, L[Trinket])
   ASCT.Widget.API["SetChecked"](b, settings.TrinketEnable)
   ASCT.Scripts.Frame["OnClick"](b, function(s) settings.TrinketEnable = ASCT.Widget.API["GetChecked"](s) end)

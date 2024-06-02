@@ -1,5 +1,5 @@
-local L = ASDC_LOCALE_TABLE
-local locale = GetLocale()
+local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local locale = ASCT.API.Documentation["GetLocale"]()
 -------------------------------------
 --Chinese Traditional
 -------------------------------------
@@ -255,4 +255,6 @@ if locale == "zhTW" then
  L["About_Line_5"] = "遇到錯誤或想要添加功能？將其報告給 GitHub上 儲存庫！";
  --New things 3/31/2024
  L["Resistances"] = "電阻";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "雜項";
 end

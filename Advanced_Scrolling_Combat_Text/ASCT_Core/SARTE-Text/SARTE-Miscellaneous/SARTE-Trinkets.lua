@@ -33,7 +33,7 @@ local fs = ASCT.Frames.SARTE["Trinket_Frame"]
 ASCT.Scripts.Frame["OnEvent"](fs, function(_, _, addonName)
   if addonName == "Advanced_Scrolling_Combat_Text"then
     ASCT.Events.UnRegisterEvent["ADDON_LOADED"](fs)
-    ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 13, ASCT_DB["Trinkets"]["Trinket_1"], ASCT_DB["Integer_Values"]) end)
-    ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 14, ASCT_DB["Trinkets"]["Trinket_2"], ASCT_DB["Integer_Values"]) end)
+    ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 13, ASCT_DB["Trinkets"]["Trinket_1"], ASCT_DB["Integer_Values"]) end)
+    ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 14, ASCT_DB["Trinkets"]["Trinket_2"], ASCT_DB["Integer_Values"]) end)
   end
 end)

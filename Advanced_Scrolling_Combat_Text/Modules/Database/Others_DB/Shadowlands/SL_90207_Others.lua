@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client["90207"]
+ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
 then
     ASCT.Database.Spells["Others_SL"] = {
 ["Advanced_Scrolling_Combat_Text_Stats"] = {
@@ -10,6 +10,7 @@ then
     ["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
     ["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
     ["Health"] = {StatEnable = false, Gains = false, Lost = false},
+    --["Transmog"] = {StatEnable = false, Gains = false, Lost = false},
 },
 ["Advanced_Scrolling_Combat_Text_Leveling"] = {
     ["Experience Gains"] = false,

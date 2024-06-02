@@ -1,4 +1,5 @@
 local ASCT = ASCT_Table
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
 --ASCT.Frames
-ASCT.Frames.Initializers["InitializeOptions_Frame"] = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Frame"])
-ASCT.Frames.Initializers["ASCT_Config"] = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Frame"], "ASCT_Config", UIParent, "UIPanelDialogTemplate")
+Frames.Initializers["InitializeOptions_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.Initializers["ASCT_Config"] = Documentation["CreateFrame"](frameType, "ASCT_Config", UIParent, "UIPanelDialogTemplate")

@@ -1,8 +1,8 @@
 local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isTbcWow"] or ASCT.Client["isWrathWow"] or ASCT.Client["isCataclysmWow"] then
+if ASCT.Client["is_Tbc-Wrath-Cata_Wow"] then
 local lastStat = -1
 local f = ASCT.Frames.SARTE["Critical_Strike_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 ASCT.Scripts.Frame["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Critical Strike Rating"]
     local CritChance = ASCT.API.Documentation["GetCombatRating"](ASCT.Str_Int.CR["CR_CRIT_MELEE"])

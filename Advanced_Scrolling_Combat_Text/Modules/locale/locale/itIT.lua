@@ -255,4 +255,6 @@ if locale == "itIT" then
  L["About_Line_5"] = "Hai riscontrato un bug o vuoi aggiungere una funzionalità? Segnalalo al repository GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Resistenze";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Misto";
 end

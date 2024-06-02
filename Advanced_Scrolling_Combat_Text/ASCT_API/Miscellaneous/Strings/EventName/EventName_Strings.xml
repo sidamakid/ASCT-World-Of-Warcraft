@@ -6,6 +6,7 @@
     <Script file="DUEL_Strings.lua"/>
     <Script file="PLAYER_Strings.lua"/>
     <Script file="SPELL_Strings.lua"/>
+    <Script file="TRANSMOG_Strings.lua"/>
     <Script file="UI_Strings.lua"/>
     <Script file="UNIT_Strings.lua"/>
 </UI>

@@ -1,8 +1,9 @@
 <UI>
     <Include file="Vanilla\Vanilla_Others.xml"/>
-    <Include file="TBC\TBC_Others.xml"/>
-    <Include file="Wrath\Wrath_Others.xml"/>
-    <Include file="Cataclysm\Cata_Others.xml"/>
-    <Include file="Shadowlands\SL_Others.xml"/>
-    <Include file="Dragonflight\DF_Others.xml"/>
+    <Include file="The_Burning_Crusade\The_Burning_Crusade_Others.xml"/>
+    <Include file="Wrath_Of_The_Lich_King\Wrath_Of_The_Lich_King_Others.xml"/>
+    <Include file="Cataclysm\Cataclysm_Others.xml"/>
+    <Include file="Shadowlands\Shadowlands_Others.xml"/>
+    <Include file="Dragonflight\Dragonflight_Others.xml"/>
+    <Include file="The_War_Within\The_War_Within_Others.xml"/>
 </UI>

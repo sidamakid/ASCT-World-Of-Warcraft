@@ -1,6 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isDragonFlightWow"] then
-if ASCT.Client["is100207"] then
+if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100207"] then
 ASCT.Database.Spells["Others_DF"] = {
 	["Advanced_Scrolling_Combat_Text_Stats"] = {
         ["Armor"] = {StatEnable = false, Gains = false, Lost = false},
@@ -9,6 +8,7 @@ ASCT.Database.Spells["Others_DF"] = {
         ["Intellect"] = {StatEnable = false, Gains = false, Lost = false},
         ["Stamina"] = {StatEnable = false, Gains = false, Lost = false},
         ["Health"] = {StatEnable = false, Gains = false, Lost = false},
+        --["Transmog"] = {StatEnable = false, Gains = false, Lost = false},
     },
     ["Advanced_Scrolling_Combat_Text_Leveling"] = {
         ["Experience Gains"] = false,
@@ -34,5 +34,4 @@ ASCT.Database.Spells["Others_DF"] = {
 		Debuff_time = 5,
 	},
 }
-end
 end

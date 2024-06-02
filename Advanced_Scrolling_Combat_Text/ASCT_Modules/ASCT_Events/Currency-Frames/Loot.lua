@@ -20,3 +20,13 @@ Event.RegisterEvent["CHAT_MSG_CURRENCY"](ASCT.Frames.SARTE["Currency_Loot_Frame"
 ---------------------------
 Event.RegisterEvent["CHAT_MSG_SYSTEM"](ASCT.Frames.SARTE["Honor_Loot_Frame"])
 Event.RegisterEvent["CHAT_MSG_COMBAT_HONOR_GAIN"](ASCT.Frames.SARTE["Honor_Loot_Frame"])
+--[[
+---------------------------
+--Transmog_Gained_Loot_Frame
+---------------------------
+Event.RegisterEvent["TRANSMOG_COLLECTION_SOURCE_ADDED"](ASCT.Frames.SARTE["Transmog_Gained_Loot_Frame"])
+---------------------------
+--Transmog_Lost_Loot_Frame
+---------------------------
+Event.RegisterEvent["TRANSMOG_COLLECTION_SOURCE_REMOVED"](ASCT.Frames.SARTE["Transmog_Lost_Loot_Frame"])
+]]

@@ -1,8 +1,8 @@
 local ASCT = ASCT_Table
-local Frame = ASCT.Strings.FrameName["Frame"]
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
 --ASCT
-ASCT.Frames.SARTE["SARTE-Text_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.SARTE["SARTE-Text-Racials_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.SARTE["SARTE-Text-Traps_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.SARTE["SARTE-Text-Shocks_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
-ASCT.Frames.SARTE["Trinket_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["SARTE-Text_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.SARTE["SARTE-Text-Racials_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.SARTE["SARTE-Text-Traps_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.SARTE["SARTE-Text-Shocks_Frame"] = Documentation["CreateFrame"](frameType)
+Frames.SARTE["Trinket_Frame"] = Documentation["CreateFrame"](frameType)

@@ -1,8 +1,8 @@
 local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isWrathWow"] or ASCT.Client["isCataclysmWow"] then
+if ASCT.Client["is_Tbc-Wrath_Wow"] then
 local lastStat = -1
 local f = ASCT.Frames.SARTE["Spell_Power_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 ASCT.Scripts.Frame["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Spell Power"]
     local SpellDamage = ASCT.API.Documentation["GetSpellBonusHealing"]()

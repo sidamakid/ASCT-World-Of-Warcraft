@@ -48,9 +48,9 @@ local statKeys = {
           end
         end
       end
-      previousStats = stats; --sorry had this is wrong place
+      previousStats = stats;
     end
   end
   local f = ASCT.Frames.SARTE["All_Stats_Frame"]
-  ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function() ASCT.Scripts.Frame["OnEvent"](f, OnEvent) end)
+  ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function() ASCT.Scripts.Frame["OnEvent"](f, OnEvent) end)
 end

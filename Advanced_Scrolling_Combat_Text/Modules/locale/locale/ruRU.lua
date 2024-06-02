@@ -255,4 +255,6 @@ if locale == "ruRU" then
  L["About_Line_5"] = "Столкнулись с ошибкой или хотите добавить функцию? Сообщите об этом в репозиторий GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Сопротивление";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Смешанный";
 end

@@ -1,12 +1,12 @@
 local ASCT = ASCT_Table
-local Frame = ASCT.Strings.FrameName["Frame"]
+local Frames, Documentation, frameType = ASCT.Frames, ASCT.API.Documentation, ASCT.Strings.FrameType["Frame"]
 --Arcane
-ASCT.Frames.SARTE["Arcane_Resistance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Arcane_Resistance_Frame"] = Documentation["CreateFrame"](frameType)
 --Shadow
-ASCT.Frames.SARTE["Shadow_Resistance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Shadow_Resistance_Frame"] = Documentation["CreateFrame"](frameType)
 --Nature
-ASCT.Frames.SARTE["Nature_Resistance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Nature_Resistance_Frame"] = Documentation["CreateFrame"](frameType)
 --Frost
-ASCT.Frames.SARTE["Frost_Resistance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Frost_Resistance_Frame"] = Documentation["CreateFrame"](frameType)
 --Fire
-ASCT.Frames.SARTE["Fire_Resistance_Frame"] = ASCT.API.Documentation["CreateFrame"](Frame)
+Frames.SARTE["Fire_Resistance_Frame"] = Documentation["CreateFrame"](frameType)

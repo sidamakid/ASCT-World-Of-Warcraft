@@ -2,7 +2,4 @@
     <Script file="Armor Penetration.lua"/>
     <Script file="Block.lua"/>
     <Script file="Defense Rating.lua"/>
-    <Script file="Dodge Rating.lua"/>
-    <Script file="Parry Rating.lua"/>
-    <Script file="Resilience.lua"/>
 </UI>

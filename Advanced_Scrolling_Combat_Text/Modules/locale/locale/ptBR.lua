@@ -246,13 +246,15 @@ if locale == "ptBR" then
  L["Is About To Fade!"] = "Está prestes a desaparecer!";
  L["Uppercase"] = "Maiúscula";
  L["Lowercase"] = "Minúsculo";
---New things 3/16/2024
-L["About"] = "Sobre";
-L["About_Line_1"] = "Texto de combate de rolagem avançada";
-L["About_Line_2"] = "(Originalmente chamado de texto de capacidade de rolagem)";
-L["About_Line_3"] = "É um addon que adiciona multifuncionalidade que o Texto de Combate Flutuante Padrão da Blizzard não oferece.";
-L["About_Line_4"] = "Este addon pode rastrear quando uma habilidade sai do cooldown, mudanças de stat, ganhos de experiência, perdas de recursos e muito mais!";
-L["About_Line_5"] = "Encontrar um bug ou quer adicionar um recurso? Denuncie ao repositório do GitHub!";
---New things 3/31/2024
-L["Resistances"] = "Resistências";
+ --New things 3/16/2024
+ L["About"] = "Sobre";
+ L["About_Line_1"] = "Texto de combate de rolagem avançada";
+ L["About_Line_2"] = "(Originalmente chamado de texto de capacidade de rolagem)";
+ L["About_Line_3"] = "É um addon que adiciona multifuncionalidade que o Texto de Combate Flutuante Padrão da Blizzard não oferece.";
+ L["About_Line_4"] = "Este addon pode rastrear quando uma habilidade sai do cooldown, mudanças de stat, ganhos de experiência, perdas de recursos e muito mais!";
+ L["About_Line_5"] = "Encontrar um bug ou quer adicionar um recurso? Denuncie ao repositório do GitHub!";
+ --New things 3/31/2024
+ L["Resistances"] = "Resistências";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Variado";
 end

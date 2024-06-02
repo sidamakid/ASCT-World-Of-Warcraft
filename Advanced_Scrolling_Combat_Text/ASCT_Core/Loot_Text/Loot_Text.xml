@@ -2,4 +2,6 @@
     <Script file="Loot.lua"/>
     <Script file="Loot_Money.lua"/>
     <Script file="Loot_Currency.lua"/>
+    <!-- <Script file="Loot_Transmog_Gained.lua"/> -->
+    <!-- <Script file="Loot_Transmog_Lost.lua"/> -->
 </UI>

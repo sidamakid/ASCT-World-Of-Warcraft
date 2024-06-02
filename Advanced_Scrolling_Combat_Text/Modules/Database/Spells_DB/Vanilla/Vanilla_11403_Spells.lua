@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 if
-ASCT.Client["isVanillaWow"] and ASCT.Client["is11403"]
+ASCT.Client["isVanillaWow"] and ASCT.Client.tocversion["is11403"]
 then
 	ASCT.Database.Spells["Spells_Vanilla"] = {
 	["Race"] = {

@@ -1,8 +1,9 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isCataclysmWow"] and ASCT.Client["is40400"] then
+if ASCT.Client["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
 ASCT.Database.Spells["Others_Cataclysm"] = {
-["Advanced_Scrolling_Combat_Text_Stats"] = {
+	["Advanced_Scrolling_Combat_Text_Stats"] = {
 		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
+		["Dodge Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Agility"] = {StatEnable = false, Gains = false, Lost = false},
 		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false},
 		["Strength"] = {StatEnable = false, Gains = false, Lost = false},
@@ -15,9 +16,11 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Expertise Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Resilience Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Haste Rating"] = {StatEnable = false, Gains = false, Lost = false},
+		["Parry Rating"] = {StatEnable = false, Gains = false, Lost = false},
 		["Spell Power"] = {StatEnable = false, Gains = false, Lost = false},
 		["Spell Penetration"] = {StatEnable = false, Gains = false, Lost = false},
 		["Mastery"] = {StatEnable = false, Gains = false, Lost = false},
+		--["Transmog"] = {StatEnable = false, Gains = false, Lost = false},
 	},
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		["Experience Gains"] = false,

@@ -256,4 +256,10 @@ if locale == "enUS" then
  L["About_Line_5"] = "Encounter a bug or want a feature added? Report it to the GitHub Repository!";
  --New things 3/31/2024
  L["Resistances"] = "Resistances";
+ --New things 5/24/2024
+ L["Transmog"] = "Transmog";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "has been added to your appearance collection.";
+ --New things 6/01/2024
+ L["Miscellaneous"] = "Miscellaneous";
 end

@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 if
-ASCT.Client["isCataclysmWow"] and ASCT.Client["is40400"]
+ASCT.Client["isCataclysmWow"] and ASCT.Client.tocversion["is40400"]
 then
     ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
     --Rogue
@@ -15,6 +15,7 @@ then
     ["Feint"] = 1966,
     ["Dismantle"] = 51722,
     ["Adrenaline Rush"] = 13750,
+    ["Blade Flurry"] = 13877,
     ["Killing Spree"] = 51690,
     ["Stealth"] = 1784,
     ["Blind"] = 2094,
@@ -51,6 +52,7 @@ then
     ["Mind Blast"] = 8092,
     ["Fade"] = 586,
     ["Psychic Scream"] = 8122,
+    ["Shadowform"] = 15473,
     ["Shadow Word: Death"] = 32379,
     --["Shadowform"] = 15473,
     ["Dispersion"] = 47585,

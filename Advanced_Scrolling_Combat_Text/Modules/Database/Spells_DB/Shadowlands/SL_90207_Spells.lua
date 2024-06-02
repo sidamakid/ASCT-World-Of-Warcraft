@@ -1,6 +1,6 @@
 local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client["90207"]
+ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
 then
 	ASCT.Database.Spells["Spells_SL"] = {
 	--Races
@@ -724,9 +724,9 @@ then
 local Lust_Table
 if select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
 Lust_Table = {["Heroism"] = {SpellEnable = false, iconEnable = false, nameEnable = false}}
-ASCT.Functions["TableCombine"](ASCT.Database.Spells["Spells_SL"]["Enhancement"], Lust_Table)
+ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_SL"]["Enhancement"], Lust_Table)
 elseif select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
-ASCT.Functions["TableCombine"](ASCT.Database.Spells["Spells_SL"]["Enhancement"], Lust_Table)
+ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_SL"]["Enhancement"], Lust_Table)
 end
 end

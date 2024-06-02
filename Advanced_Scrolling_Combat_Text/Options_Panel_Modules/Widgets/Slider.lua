@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
 ASCT.Frames.Widgets["CreateSlider"] = function (Slider_Name, UIParent, Width, Height, Location, x, y, Orientation, minValue, MaxValue, Table_Value, Variable_Value, ValueStep, Tooltip_text, Low_text, High_Text, Slider_Number_Value)
-  local Slider = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Slider"], Slider_Name, UIParent, "OptionsSliderTemplate")
+  local Slider = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["Slider"], Slider_Name, UIParent, "OptionsSliderTemplate")
   ASCT.Widget.API["SetWidth"](Slider, Width)
   ASCT.Widget.API["SetHeight"](Slider, Height)
   ASCT.Widget.API["SetPoint"](Slider, Location, x, y)
@@ -22,7 +22,7 @@ ASCT.Frames.Widgets["CreateSlider"] = function (Slider_Name, UIParent, Width, He
 end
 
 ASCT.Frames.Widgets["MakeSliderReset"] = function (details)
-  local resetIcon = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameName["Button"], nil, details.parent, "UIPanelButtonTemplate")
+  local resetIcon = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["Button"], nil, details.parent, "UIPanelButtonTemplate")
   ASCT.Widget.API["SetPoint"](resetIcon, unpack(details.anchor))
   ASCT.Widget.API["SetText"](resetIcon, details.text)
   ASCT.Widget.API["SetWidth"](resetIcon, details.width)

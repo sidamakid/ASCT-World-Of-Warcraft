@@ -47,15 +47,15 @@ ASCT.Locale.Spells["ASCT_GetEnglishName"] = function(localized)
   return localizedNames[localized] or ""
 end
 
-ASCT.Locale.Spells["ASCT_GetLocalizedName"] = function (english)
+ASCT.Locale.Spells["ASCT_GetLocalizedName"] = function(english)
   return englishNames[english] or ""
 end
 
-ASCT.Locale.Spells["ASCT_GetLocalizedIcon"] = function (english)
+ASCT.Locale.Spells["ASCT_GetLocalizedIcon"] = function(english)
   return englishToIcons[english]
 end
 
-ASCT.Locale.Spells["ASCT_GetLocalizedISpellKnown"] = function (english)
+ASCT.Locale.Spells["ASCT_GetLocalizedISpellKnown"] = function(english)
   return englishNamesIsKnown[english]
 end
 ---------------------------

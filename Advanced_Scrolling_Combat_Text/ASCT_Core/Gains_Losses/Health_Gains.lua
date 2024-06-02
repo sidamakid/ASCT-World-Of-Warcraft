@@ -1,7 +1,7 @@
 local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
 local lastStat = -1
 local f = ASCT.Frames.SARTE["Health_Frame"]
-ASCT.Functions["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 ASCT.Scripts.Frame["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Health"]
     if not (stats.StatEnable and ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"])) then return end
