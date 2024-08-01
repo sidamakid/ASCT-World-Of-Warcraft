@@ -3,12 +3,12 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local ASCT, L =
 ASCT_Table, --Checks the Version of the game to find which files to load for ASCT
-ASDC_LOCALE_TABLE --Localize Words Table
-if ASCT.Client["isCataclysmWow"] then
+ASCT_locale_Table --Localize Words Table
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Nested_ASCT_Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+local Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+if Client.LE_EXPANSION_LEVEL["isCataclysmWow"] then
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --For Call Back handler
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -174,6 +174,7 @@ end
 ---Tabs
 -------------------------
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"], L["About"])
+--local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11, content12 = SetTabs(ASCT_Config, 12, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Auras"], L["Trinkets"], L["Message Selector"])
 local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Auras"], L["Trinkets"])
 local content_6_TextTop = TitleCreate(content6, Strings.Point["TOP"], 0, -10, Strings.Point["TOP"], L["This Tab is for Shaman's and Hunter's only."])
 --local content_11_Text = TitleCreate(content11, Strings.Point["CENTER"], 95, 0, Strings.Point["CENTER"], L["About_Line_1"].."\n"..L["About_Line_2"].."\n"..L["About_Line_3"].."\n"..L["About_Line_4"].."\n"..L["About_Line_5"])
@@ -285,7 +286,19 @@ end
 ---------------------------
 --Custom Buttons
 ---------------------------
-local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content10, L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content10, L["Fading Debuffs Alert"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
+--[[
+local col_AD_5 = 4
+local x_AD_5 = 0
+for v in PairsByKeys(ASCT_DB, ASCT_DB["Message_Selector"]) do
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], nil, content12, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD_5 % col_AD_5), -20 + (- Widget.API["GetHeight"](b)-5) * math.floor(x_AD_5/col_AD_5))
+	Widget.API["SetText"](b.Text, L[v])
+	Widget.API["SetChecked"](b, ASCT_DB["Message_Selector"][v])
+	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Message_Selector"][v] = Widget.API["GetChecked"](s) end)
+	x_AD_5=x_AD_5+1
+end
+]]
 ---------------------------
 --Icon Slider
 ---------------------------
@@ -322,7 +335,7 @@ local Slider_Reset_Auras = Frames.Widgets["MakeSliderReset"]({
 local All_Slider_Reset = Frames.Widgets["MakeSliderReset"](
     {
     text = L["Reset Both Aura and Icon Values"],
-    width = 200,
+    width = 210,
     anchor = {Strings.Point["BOTTOMLEFT"], 20, 385},
     parent = content5,
     options = {

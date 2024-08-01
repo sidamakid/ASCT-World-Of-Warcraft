@@ -1,6 +1,6 @@
 # Shadowlands TOC file
 ## Interface: 90207
-## Version: 9.4.8
+## Version: 9.9.9
 ## Title: Advanced Scrolling Combat Text
 ## Title-koKR: 고급 스크롤 전투 텍스트
 ## Title-frFR: Texte de combat à défilement avancé

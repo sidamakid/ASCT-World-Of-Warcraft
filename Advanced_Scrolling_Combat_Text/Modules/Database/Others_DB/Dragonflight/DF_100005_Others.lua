@@ -1,6 +1,6 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100005"] then
-    ASCT.Database.Spells["Others_DF"] = {
+if ASCT.Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] and ASCT.Client.tocversion["is100005"] then
+ASCT.Database.Spells["Others_DF"] = {
 	["Advanced_Scrolling_Combat_Text_Stats"] = {
         ["Armor"] = {StatEnable = false, Gains = false, Lost = false},
         ["Agility"] = {StatEnable = false, Gains = false, Lost = false},

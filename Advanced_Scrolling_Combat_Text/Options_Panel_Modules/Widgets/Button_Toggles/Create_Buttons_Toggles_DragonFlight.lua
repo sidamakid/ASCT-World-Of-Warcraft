@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isDragonFlightWow"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Client = ASCT.Client
+if Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] then
 ---------------------------
 --Gains and Losses Toogles
 ---------------------------
@@ -79,7 +80,7 @@ end
 ---------------------------
 --Buttons
 ---------------------------
-ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext,  x, y, tooltip_text1, tooltip_text2)
+ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext,  x, y, tooltip_text1)
 	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], "NewButton", Location, "InterfaceOptionsCheckButtonTemplate")
 	ASCT.Widget.API["SetPoint"](b, ASCT.Strings.Point["TOPLEFT"], x, y)
 	ASCT.Widget.API["SetText"](b.Text, btntext)
@@ -87,7 +88,6 @@ ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btnt
 	ASCT.Scripts.Frame["OnEnter"](b, function (self)
     ASCT.Widget.API["SetOwner"](Button_Tooltip, self, "ANCHOR_TOPLEFT")
 	  ASCT.Widget.API["SetText"](Button_Tooltip, tooltip_text1)
-  	ASCT.Widget.API["AddLine"](Button_Tooltip, tooltip_text2)
   	ASCT.Widget.API["Show"](Button_Tooltip)
 end)
 ASCT.Scripts.Frame["OnLeave"](b, function ()

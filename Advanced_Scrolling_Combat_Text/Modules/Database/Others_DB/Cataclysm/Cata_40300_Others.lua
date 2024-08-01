@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isCataclysmWow"] and ASCT.Client["is40300"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40300"] then
 ASCT.Database.Spells["Others_Cataclysm"] = {
 ["Advanced_Scrolling_Combat_Text_Stats"] = {
 		["Armor"] = {StatEnable = false, Gains = false, Lost = false},

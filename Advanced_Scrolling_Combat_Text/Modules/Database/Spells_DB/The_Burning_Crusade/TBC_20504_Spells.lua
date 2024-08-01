@@ -1,7 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if
-ASCT.Client["isTbcWow"] and ASCT.Client.tocversion["is20504"]
-then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isTbcWow"] and ASCT.Client.tocversion["is20504"] then
 	ASCT.Database.Spells["Spells_TBC"] = {
 	["Race"] = {
 	["Blood Elf"] = false,

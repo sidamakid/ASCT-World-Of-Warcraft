@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Chinese Simplifed
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "zhCN" then
  --Evoker
  L["Preservation"] = "保存";
  L["Devastation"] = "破坏";
+ L["Augmentation"] = "增大";
   --Shared-Spec-names
  L["Frost"] = "冰霜";
  L["Restoration"] = "恢复";
@@ -255,6 +257,20 @@ if locale == "zhCN" then
  L["About_Line_5"] = "遇到错误或想要添加功能？将其报告给 GitHub上 存储库！";
  --New things 3/31/2024
  L["Resistances"] = "电阻";
+ --New things 5/24/2024
+ L["Transmog"] = "幻化";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "已添加到您的外观收藏中。";
  --New things 6/01/2024
  L["Miscellaneous"] = "杂项";
+ --New things 6/23/2024
+ L["Icon Enable"] = "图标启用";
+ L["Name Enable"] = "名称启用";
+ --New things 7/14/2024
+ L["Ready!"] = "准备！";
+ L["Is Ready!"] = "准备好了！";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "是";
+ L["Message Selector"] = "消息选择器";
 end

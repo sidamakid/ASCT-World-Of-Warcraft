@@ -5,4 +5,5 @@
     <Script file="Cata.lua"/>
     <Script file="SL.lua"/>
     <Script file="DF.lua"/>
+    <Script file="TWW.lua"/>
 </UI>

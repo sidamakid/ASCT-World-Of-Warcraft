@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isNotShadowlandsWow"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isNotShadowlandsWow"] then
 ASCT.Widget.API["SetMovable"](ASCT.Frames.Initializers["ASCT_Config"], true)
 ASCT.Widget.API["EnableMouse"](ASCT.Frames.Initializers["ASCT_Config"], true)
 ASCT.Widget.API["SetResizable"](ASCT.Frames.Initializers["ASCT_Config"], true)

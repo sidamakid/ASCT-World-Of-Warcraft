@@ -1,18 +1,19 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["is_Tbc-Wrath_Wow"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Client, Frames, Functions, Scripts, API, Strings, Str_Int = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Str_Int
+if Client.LE_EXPANSION_LEVEL["is_Tbc-Wrath_Wow"] then
 local lastStat = -1
-local f = ASCT.Frames.SARTE["Armor_Pen_Frame"]
-ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
-ASCT.Scripts.Frame["OnEvent"](f, function()
+local f = Frames.SARTE["Armor_Pen_Frame"]
+Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
+Scripts.Frame["OnEvent"](f, function()
     local stats = ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]["Armor Penetration"]
-    local Armor_Penetration = ASCT.API.Documentation["GetCombatRating"](ASCT.Str_Int.CR["CR_ARMOR_PENETRATION"])
-    if not (stats.StatEnable and ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"])) then return end
+    local Armor_Penetration = API.Documentation["GetCombatRating"](Str_Int.CR["CR_ARMOR_PENETRATION"])
+    if not (stats.StatEnable and API.Documentation["C_CVar.GetCVarBool"](Strings.C_CVar["enableFloatingCombatText"])) then return end
     local currentStat = Armor_Penetration
     local diff = currentStat - lastStat;
     if lastStat == -1 then
     elseif (diff < 0 and stats.Lost) or (diff > 0 and stats.Gains) then
         local msg = string.format("%s%d %s (%d)", (diff>0) and "+" or "", diff, L["Armor Penetration"],  currentStat)
-        ASCT.Functions["CombatText_AddMessage_Dark_Blue"](msg)
+        Functions.CombatText["CombatText_AddMessage_Dark_Blue"](msg)
     end
     lastStat = currentStat
 end)

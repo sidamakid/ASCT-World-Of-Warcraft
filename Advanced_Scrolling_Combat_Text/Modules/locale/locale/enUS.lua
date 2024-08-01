@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --English
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "enUS" then
  --Evoker
  L["Preservation"] = "Preservation";
  L["Devastation"] = "Devastation";
+ L["Augmentation"] = "Augmentation";
  --Shared-Spec-names
  L["Frost"] = "Frost";
  L["Restoration"] = "Restoration";
@@ -262,4 +264,14 @@ if locale == "enUS" then
  L["has been added to your appearance collection."] = "has been added to your appearance collection.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Miscellaneous";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Icon Enable";
+ L["Name Enable"] = "Name Enable";
+ --New things 7/14/2024
+ L["Ready!"] = "Ready!";
+ L["Is Ready!"] = "Is Ready!";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "Y";
+ L["Message Selector"] = "Message Selector";
 end

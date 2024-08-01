@@ -28,7 +28,7 @@ ASCT.Frames.Widgets["ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker"] = function(C
   local OldColor = {r = Color.r,g = Color.g, b = Color.b}
   local info = {
     swatchFunc = function()
-      local r, g, b = ColorPickerFrame:GetColorRGB()
+      local r, g, b = ASCT.API.Documentation["GetColorRGB"](ColorPickerFrame)
       Color.r, Color.g, Color.b = r, g, b
       -- PREVIEW
     end,

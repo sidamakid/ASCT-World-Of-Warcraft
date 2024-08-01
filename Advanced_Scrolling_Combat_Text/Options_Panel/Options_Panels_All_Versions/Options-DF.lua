@@ -3,12 +3,12 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local ASCT, L =
 ASCT_Table, --Checks the Version of the game to find which files to load for ASCT
-ASDC_LOCALE_TABLE --Localize Words Table
-if ASCT.Client["isDragonFlightWow"] then
+ASCT_locale_Table --Localize Words Table
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Nested_ASCT_Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+local Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+if Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] then
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --For Call Back handler
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -183,7 +183,7 @@ elseif Class == 13 then
 	ASCT_DB["Class"]["Evoker"] = true
 	Text1 = TextCreate(Text_Frame, L["Preservation"])
 	Text2 = TextCreate(Text_Frame, L["Devastation"])
-	Text3 = TextCreate(Text_Frame, L["Nothing"])
+	Text3 = TextCreate(Text_Frame, L["Augmentation"])
 end
 local Text4 = TextCreate(Text_Frame, L["Racials"])
 -------------------------
@@ -273,7 +273,7 @@ end
 ---------------------------
 --Custom Buttons
 ---------------------------
-local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content9, L["Fading Debuffs Alert"], 20, -20, L["Debuff has 5 seconds left"], L["Announces a Debuff you applied is about to fade on the Target."])
+local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content9, L["Fading Debuffs Alert"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
 ---------------------------
 --Icon Slider
 ---------------------------
@@ -310,7 +310,7 @@ local Slider_Reset_Auras = Frames.Widgets["MakeSliderReset"]({
 local All_Slider_Reset = Frames.Widgets["MakeSliderReset"](
     {
     text = L["Reset Both Aura and Icon Values"],
-    width = 200,
+    width = 210,
     anchor = {Strings.Point["BOTTOMLEFT"], 20, 385},
     parent = content5,
     options = {
@@ -713,6 +713,15 @@ for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Devastation"]) do
     Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 60 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
     x_2=x_2+1
     CreateNameIconToggles(b, settings, content2)
+end
+
+local col_3 = 4
+local x_3 = 0
+for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Augmentation"]) do
+    local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 60 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
+    x_3=x_3+1
+    CreateNameIconToggles(b, settings, content3)
 end
 
 end

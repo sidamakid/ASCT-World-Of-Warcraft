@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Chinese Traditional
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "zhTW" then
  --Evoker
  L["Preservation"] = "保存";
  L["Devastation"] = "破壞";
+ L["Augmentation"] = "增大";
   --Shared-Spec-names
  L["Frost"] = "霜";
  L["Restoration"] = "恢復";
@@ -255,6 +257,20 @@ if locale == "zhTW" then
  L["About_Line_5"] = "遇到錯誤或想要添加功能？將其報告給 GitHub上 儲存庫！";
  --New things 3/31/2024
  L["Resistances"] = "電阻";
+ --New things 5/24/2024
+ L["Transmog"] = "幻化";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "已新增至您的外觀收藏。";
  --New things 6/01/2024
  L["Miscellaneous"] = "雜項";
+ --New things 6/23/2024
+ L["Icon Enable"] = "圖示啟用";
+ L["Name Enable"] = "名稱啟用";
+ --New things 7/14/2024
+ L["Ready!"] = "準備！";
+ L["Is Ready!"] = "準備好了！";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "是";
+ L["Message Selector"] = "訊息選擇器";
 end

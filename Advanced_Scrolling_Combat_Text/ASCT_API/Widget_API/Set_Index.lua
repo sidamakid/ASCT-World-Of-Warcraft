@@ -26,3 +26,4 @@ ASCT.Widget.API["SetID"] = function(Frame, ID) Frame:SetID(ID) return Frame end
 ASCT.Widget.API["SetScrollChild"] = function(Frame, Child) Frame:SetScrollChild(Child) return Frame end
 ---------------------------
 ASCT.Widget.API["SetOwner"] = function(Frame, OwnerFrame, anchor) Frame:SetOwner(OwnerFrame, anchor) return Frame end
+ASCT.Widget.API["SetPadding"] = function(Frame, width, height) Frame:SetPadding(width, height) return Frame end

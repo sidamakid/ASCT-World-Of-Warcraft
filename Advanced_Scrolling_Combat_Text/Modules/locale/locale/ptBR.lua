@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Portuguese (Brazil)
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "ptBR" then
  --Evoker
  L["Preservation"] = "Preservação";
  L["Devastation"] = "Devastação";
+ L["Augmentation"] = "Aumento";
   --Shared-Spec-names
  L["Frost"] = "Geada";
  L["Restoration"] = "Restauração";
@@ -255,6 +257,20 @@ if locale == "ptBR" then
  L["About_Line_5"] = "Encontrar um bug ou quer adicionar um recurso? Denuncie ao repositório do GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Resistências";
+ --New things 5/24/2024
+ L["Transmog"] = "Transmogrificação";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "foi adicionado à sua coleção de aparências.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Variado";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Ativar ícone";
+ L["Name Enable"] = "Nome Ativar";
+ --New things 7/14/2024
+ L["Ready!"] = "Pronto!";
+ L["Is Ready!"] = "Está pronto!";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "S";
+ L["Message Selector"] = "Seletor de mensagens";
 end

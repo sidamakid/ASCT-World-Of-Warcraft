@@ -13,14 +13,15 @@ ASCT.API.Documentation["GetSpellInfo"] = function(spell)
     local name, rank, icon, castTime, minRange, maxRange, spellID, originalIcon = GetSpellInfo(spell)
     return name, rank, icon, castTime, minRange, maxRange, spellID, originalIcon
 end
+ASCT.API.Documentation["GetSpellDescription"] = function(spellID)
+    local desc = GetSpellDescription(spellID)
+    return desc
+end
 ASCT.API.Documentation["GetSpellCooldown"] = function(spell)
     local start, duration, enabled, modRate = GetSpellCooldown(spell)
     return start, duration, enabled, modRate
 end
-ASCT.API.Documentation["GetCombatRating"] = function(CR)
-    local rating = GetCombatRating(CR)
-    return rating
-end
+
 ASCT.API.Documentation["GetSpellPenetration"] = function()
     local spellPen = GetSpellPenetration()
     return spellPen
@@ -28,6 +29,13 @@ end
 ASCT.API.Documentation["GetSpellBonusHealing"] = function()
     local bonusHeal = GetSpellBonusHealing()
     return bonusHeal
+end
+---------------------------
+--GetCombatRating
+---------------------------
+ASCT.API.Documentation["GetCombatRating"] = function(CR)
+    local rating = GetCombatRating(CR)
+    return rating
 end
 ---------------------------
 --GetLocale
@@ -74,4 +82,9 @@ end
 ASCT.API.Documentation["GetTime"] = function()
    local seconds = GetTime()
    return seconds
+end
+
+ASCT.API.Documentation["GetColorRGB"] = function(Frame)
+    local rgbR, rgbG, rgbB = Frame:GetColorRGB()
+    return rgbR, rgbG, rgbB
 end

@@ -1,4 +1,4 @@
-local L = ASDC_LOCALE_TABLE
+local L = ASCT_LOCALE_TABLE
 local locale = GetLocale()
 -------------------------------------
 --Portuguese (Brazil)

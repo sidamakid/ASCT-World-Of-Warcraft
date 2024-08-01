@@ -1,7 +1,5 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isTbcWow"] and ASCT.Client.tocversion["is20504"]
-then
+if ASCT.Client.LE_EXPANSION_LEVEL["isTbcWow"] and ASCT.Client.tocversion["is20504"] then
 ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,

@@ -1,6 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100100"] then
-    ASCT.Database.Spells["Spells_DF"] = {
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] and ASCT.Client.tocversion["is100100"] then
+        ASCT.Database.Spells["Spells_DF"] = {
 	--Races
 	["Race"] = {
 		["Blood Elf"] = false,

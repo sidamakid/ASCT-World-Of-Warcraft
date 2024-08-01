@@ -1,30 +1,28 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isVanillaWow"] and ASCT.Client.tocversion["is11403"]
-then
+if ASCT.Client.LE_EXPANSION_LEVEL["isVanillaWow"] and ASCT.Client.tocversion["is11403"] then
 	ASCT.Database.Spells["Spells_Vanilla"] = {
 	["Race"] = {
-	Orc = false,
-	Undead = false,
-	Troll = false,
-	Tauren = false,
-	Gnome = false,
-	Human = false,
-	["Night Elf"] = false,
-	Dwarf = false,
+		["Orc"] = false,
+		["Undead"] = false,
+		["Troll"] = false,
+		["Tauren"] = false,
+		["Gnome"] = false,
+		["Human"] = false,
+		["Night Elf"] = false,
+		["Dwarf"] = false,
 	},
 	--Classes
 	["Class"] = {
-		Rogue = false,
-		Priest = false,
-		Warrior = false,
-		Druid = false,
-		Warlock = false,
-		Shaman = false,
-      	Hunter = false,
-		Paladin = false,
-		Mage = false,
-		},
+		["Rogue"] = false,
+		["Priest"] = false,
+		["Warrior"] = false,
+		["Druid"] = false,
+		["Warlock"] = false,
+		["Shaman"] = false,
+      	["Hunter"] = false,
+		["Paladin"] = false,
+		["Mage"] = false,
+	},
 	--Rogue spells
 	["Assassination"] = {
 			["Cold Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -59,8 +57,8 @@ then
 		["Devouring Plague"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
       },
    ["Holy_Priest"] = {
-	["Lightwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Desperate Prayer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Lightwell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Desperate Prayer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
     },
    ["Discipline"] = {
 		["Power Word: Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -247,29 +245,29 @@ then
 		["Ice Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Undead"] = {
-	Cannibalize = {SpellEnable = false, iconEnable = false, nameEnable = false},
-	["Will of the Forsaken"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Cannibalize"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Will of the Forsaken"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Orc"] = {
-	["Blood Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Blood Fury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Troll"] = {
-	Berserking = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Berserking"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Tauren"] = {
-	["War Stomp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["War Stomp"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Human"] = {
-	Perception = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Perception"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Night Elf"] = {
-	Shadowmeld = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Shadowmeld"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Gnome"] = {
-	["Escape Artist"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Escape Artist"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 	["Dwarf"] = {
-	Stoneform = {SpellEnable = false, iconEnable = false, nameEnable = false},
+		["Stoneform"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
 }
 end

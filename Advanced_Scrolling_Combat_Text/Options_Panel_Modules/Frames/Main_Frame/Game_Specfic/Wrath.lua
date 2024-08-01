@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isWrathWow"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isWrathWow"] then
     if ASCT.Client.tocversion["is30400"] then
     ASCT.Widget.API["SetMinResize"](ASCT.Frames.Initializers["ASCT_Config"], 950,200)
     ASCT.Widget.API["SetMaxResize"](ASCT.Frames.Initializers["ASCT_Config"], 950,650)

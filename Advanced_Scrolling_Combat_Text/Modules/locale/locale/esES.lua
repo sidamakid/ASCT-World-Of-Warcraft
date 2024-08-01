@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Spanish (Spain)
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "esES" then
  --Evoker
  L["Preservation"] = "Preservación";
  L["Devastation"] = "Devastación";
+ L["Augmentation"] = "Aumento";
  --Shared-Spec-names
  L["Frost"] = "Helada";
  L["Protection"] = "Protección";
@@ -254,6 +256,20 @@ if locale == "esES" then
  L["About_Line_5"] = "¿Encuentra un error o desea agregar una función? ¡Repórtalo al repositorio de GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Resistencias";
+ --New things 5/24/2024
+ L["Transmog"] = "Transfiguración";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "Se ha agregado a tu colección de apariencia.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Misceláneo";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Icono Habilitar";
+ L["Name Enable"] = "Nombre Habilitar";
+ --New things 7/14/2024
+ L["Ready!"] = "¡Listo!";
+ L["Is Ready!"] = "¡Está listo!";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "Y";
+ L["Message Selector"] = "Selector de mensajes";
 end

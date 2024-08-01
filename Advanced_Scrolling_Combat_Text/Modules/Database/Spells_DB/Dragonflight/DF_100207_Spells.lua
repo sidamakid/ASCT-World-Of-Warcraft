@@ -1,5 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100207"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] and ASCT.Client.tocversion["is100207"] then
 ASCT.Database.Spells["Spells_DF"] = {
 	--Races
 	["Race"] = {
@@ -848,6 +848,17 @@ ASCT.Database.Spells["Spells_DF"] = {
                 ["Swoop Up"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
                 ["Dream Projection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
 	},
+        ["Augmentation"] = {
+                ["Ebon Might"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Spatial Paradox"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Prescience"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Blistering Scales"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Breath of Eons"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Bestow Weyrnstone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Upheaval"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Time Skip"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+                ["Swoop Up"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+        },
 	--Racials
 	["Blood Elf"] = {
 		["Arcane Torrent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

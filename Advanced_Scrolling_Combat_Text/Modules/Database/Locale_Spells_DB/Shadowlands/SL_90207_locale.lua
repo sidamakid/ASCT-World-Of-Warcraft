@@ -1,8 +1,6 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
-then
-      ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] and ASCT.Client.tocversion["90207"] then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
       ["Kidney Shot"] = 408,
       ["Vendetta"] = 79140,

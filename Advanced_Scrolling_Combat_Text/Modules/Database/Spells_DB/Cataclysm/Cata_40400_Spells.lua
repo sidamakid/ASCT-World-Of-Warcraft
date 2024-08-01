@@ -1,5 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
     ASCT.Database.Spells["Spells_Cataclysm"] = {
     ------------------------
     --Races
@@ -107,6 +107,7 @@ if ASCT.Client["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
     --Warrior spells
     ------------------------
         ["Arms"] = {
+            ["Heroic Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Colossus Smash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Heroic Throw"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

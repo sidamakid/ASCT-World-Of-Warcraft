@@ -1,8 +1,6 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isCataclysmWow"] and ASCT.Client["is40300"]
-then
-    ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40300"] then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
     --Rogue
 
     --Priest

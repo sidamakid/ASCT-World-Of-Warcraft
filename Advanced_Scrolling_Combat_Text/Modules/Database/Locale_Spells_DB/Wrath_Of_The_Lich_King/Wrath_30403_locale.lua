@@ -1,8 +1,6 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isWrathWow"] and ASCT.Client.tocversion["is30403"]
-then
-    ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isWrathWow"] and ASCT.Client.tocversion["is30403"] then
+ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
     --Rogue
     ["Adrenaline Rush"] = 13750,
     ["Blade Flurry"] = 13877,

@@ -1,4 +1,4 @@
-local L = ASDC_LOCALE_TABLE
+local L = ASCT_LOCALE_TABLE
 local isDFWow = (LE_EXPANSION_LEVEL_CURRENT >= LE_EXPANSION_DRAGONFLIGHT)
 local msg = {
 	L["Unsupported_Line_1"],

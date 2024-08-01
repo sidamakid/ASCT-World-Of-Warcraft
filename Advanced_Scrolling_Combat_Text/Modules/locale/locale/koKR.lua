@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Korean
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "koKR" then
  --Evoker
  L["Preservation"] = "보존";
  L["Devastation"] = "폐허";
+ L["Augmentation"] = "확대";
  --Shared-Spec-names
  L["Frost"] = "서리";
  L["Restoration"] = "복구";
@@ -240,7 +242,7 @@ if locale == "koKR" then
  --New things 12/30/2023
  L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "전투 텍스트 스크롤이 비활성화됩니다. 활성화하지 않으면 고급 스크롤 전투 문자 메시지 에 아무 것도 표시되지 않습니다.";
  --New things 1/01/2024
- L["is now ready!"] = "is now ready!";
+ L["is now ready!"] = "이제 준비되었습니다!";
  L["Is Now Ready!"] = "이제 준비되었습니다!";
  L["is about to fade!"] = "곧 사라질 것입니다!";
  L["Is About To Fade!"] = "곧 사라질 것입니다!";
@@ -255,6 +257,20 @@ if locale == "koKR" then
  L["About_Line_5"] = "버그가 발생하거나 기능을 추가하고 싶으신가요? 깃허브 리포지토리에 보고하세요!";
  --New things 3/31/2024
  L["Resistances"] = "저항";
+ --New things 5/24/2024
+ L["Transmog"] = "형상변환";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "외모 컬렉션에 추가되었습니다.";
  --New things 6/01/2024
  L["Miscellaneous"] = "잡다한";
+ --New things 6/23/2024
+ L["Icon Enable"] = "아이콘 활성화";
+ L["Name Enable"] = "이름: 활성화";
+ --New things 7/14/2024
+ L["Ready!"] = "준비된!";
+ L["Is Ready!"] = "준비되었습니다!";
+ --New things 7/21/2024
+ L["X"] = "엑스";
+ L["Y"] = "와이";
+ L["Message Selector"] = "메시지 선택기";
 end

@@ -1,7 +1,5 @@
 local ASCT = ASCT_Table
-if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
-then
+if ASCT.Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] and ASCT.Client.tocversion["90207"] then
     ASCT.Database.Spells["Others_SL"] = {
 ["Advanced_Scrolling_Combat_Text_Stats"] = {
     ["Armor"] = {StatEnable = false, Gains = false, Lost = false},

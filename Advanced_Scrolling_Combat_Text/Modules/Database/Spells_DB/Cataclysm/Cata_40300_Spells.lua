@@ -1,5 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isCataclysmWow"] and ASCT.Client["is40300"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40300"] then
     ASCT.Database.Spells["Spells_Cataclysm"] = {
     ------------------------
     --Races

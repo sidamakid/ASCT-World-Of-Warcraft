@@ -5,4 +5,5 @@
     <Script file="Cataclysm_Integers.lua"/>
     <Script file="Shadowlands_Integers.lua"/>
     <Script file="Dragonflight_Integers.lua"/>
+    <Script file="TWW_Integers.lua"/>
 </UI>

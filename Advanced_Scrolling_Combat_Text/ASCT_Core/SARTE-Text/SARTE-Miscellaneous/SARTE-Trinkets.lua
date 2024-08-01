@@ -1,16 +1,17 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Frames, Scripts, API, Strings, Functions, Events = ASCT.Frames, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Functions, ASCT.Events
 local function MakeTrinketTracker(unit, inventorySlot, dbSettings, Icon_Size)
   local lastStart
-  local f = ASCT.Frames.SARTE["Trinket_OnUpdate_Frame"]
-  ASCT.Scripts.Frame["OnUpdate"](f, function ()
-      local start, duration, enable = ASCT.API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
+  local f = Frames.SARTE["Trinket_OnUpdate_Frame"]
+  Scripts.Frame["OnUpdate"](f, function ()
+      local start, duration, enable = API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
       if lastStart == nil then
-        lastStart = ASCT.API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
+        lastStart = API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
       end
       if start ~= lastStart and start == 0 and dbSettings.TrinketEnable then
-        local itemID = ASCT.API.Documentation["GetInventoryItemID"](unit, inventorySlot)
-        local itemName, _, _, _, _, _, _, _, _, itemTexture =  ASCT.API.Documentation["GetItemInfo"](itemID)
-        local Comabt_Text = ASCT.API.Documentation["C_CVar.GetCVarBool"](ASCT.Strings.C_CVar["enableFloatingCombatText"])
+        local itemID = API.Documentation["GetInventoryItemID"](unit, inventorySlot)
+        local itemName, _, _, _, _, _, _, _, _, itemTexture =  API.Documentation["GetItemInfo"](itemID)
+        local Comabt_Text = API.Documentation["C_CVar.GetCVarBool"](Strings.C_CVar["enableFloatingCombatText"])
         local details = " "
         --if dbSettings.Icon then details = details..string.format("|T%d:18|t ".." ", itemTexture) end
         if dbSettings.Icon then details = details..string.format("|T%d:"..Icon_Size.Icon.."|t ".." ", itemTexture) end
@@ -23,17 +24,17 @@ local function MakeTrinketTracker(unit, inventorySlot, dbSettings, Icon_Size)
         end
         if Comabt_Text == true then
         local msg = string.format ("%s"..L["msg"], details)
-        ASCT.Functions["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
+        Functions.CombatText["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
         end
       end
-      lastStart = ASCT.API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
+      lastStart = API.Documentation["GetInventoryItemCooldown"](unit, inventorySlot)
   end)
 end
-local fs = ASCT.Frames.SARTE["Trinket_Frame"]
-ASCT.Scripts.Frame["OnEvent"](fs, function(_, _, addonName)
+local fs = Frames.SARTE["Trinket_Frame"]
+Scripts.Frame["OnEvent"](fs, function(_, _, addonName)
   if addonName == "Advanced_Scrolling_Combat_Text"then
-    ASCT.Events.UnRegisterEvent["ADDON_LOADED"](fs)
-    ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 13, ASCT_DB["Trinkets"]["Trinket_1"], ASCT_DB["Integer_Values"]) end)
-    ASCT.Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(ASCT.Strings.UnitId["player"], 14, ASCT_DB["Trinkets"]["Trinket_2"], ASCT_DB["Integer_Values"]) end)
+    Events.UnRegisterEvent["ADDON_LOADED"](fs)
+    Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(Strings.UnitId["player"], 13, ASCT_DB["Trinkets"]["Trinket_1"], ASCT_DB["Integer_Values"]) end)
+    Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()MakeTrinketTracker(Strings.UnitId["player"], 14, ASCT_DB["Trinkets"]["Trinket_2"], ASCT_DB["Integer_Values"]) end)
   end
 end)

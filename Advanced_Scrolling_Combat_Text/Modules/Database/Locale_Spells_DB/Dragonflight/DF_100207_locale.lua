@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100207"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] and ASCT.Client.tocversion["is100207"] then
 ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
             --Assassination
@@ -787,8 +787,18 @@ ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizi
             ["Reversion"] = 366155,
             --PVP Talents
             ["Chrono Loop"] = 383005,
-            ["Swoop Up"] = 370388,
             ["Dream Projection"] = 377509,
+            --Augmentation
+            ["Ebon Might"] = 395152,
+            ["Spatial Paradox"] = 406732,
+            ["Prescience"] = 409311,
+            ["Blistering Scales"] = 360827,
+            ["Breath of Eons"] = 403631,
+            ["Bestow Weyrnstone"] = 408233,
+            ["Upheaval"] = 396286,
+            ["Time Skip"] = 404977,
+            --PVP Talents
+            ["Swoop Up"] = 370388,
       --Portals
       ["Portal: Shattrath"] = 33691 or 35717,
       ["Portal: Stonard"] = 49361,

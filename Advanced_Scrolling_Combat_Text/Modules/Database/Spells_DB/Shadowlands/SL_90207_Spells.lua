@@ -1,7 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if
-ASCT.Client["isShadowlandsWow"] and ASCT.Client.tocversion["90207"]
-then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] and ASCT.Client.tocversion["90207"] then
 	ASCT.Database.Spells["Spells_SL"] = {
 	--Races
 	["Race"] = {

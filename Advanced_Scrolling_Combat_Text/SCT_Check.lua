@@ -1,4 +1,4 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
+local ASCT, L = ASCT_Table, ASCT_locale_Table
 local function OnEvent(self, event, isLogin, isReload)
 	if isLogin or isReload then
 	if not ASCT_DB then

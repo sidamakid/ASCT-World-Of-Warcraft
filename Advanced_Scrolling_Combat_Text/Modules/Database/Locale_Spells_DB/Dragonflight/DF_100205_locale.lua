@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isDragonFlightWow"] and ASCT.Client.tocversion["is100205"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isDragonFlightWow"] and ASCT.Client.tocversion["is100205"] then
 ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizing Table
       --Rogue
             --Assassination

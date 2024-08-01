@@ -1,7 +1,5 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if
-ASCT.Client["isWrathWow"] and ASCT.Client.tocversion["is30401"]
-then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+if ASCT.Client.LE_EXPANSION_LEVEL["isWrathWow"] and ASCT.Client.tocversion["is30401"] then
 ASCT.Database.Spells["Spells_Wrath"] = {
     ------------------------
     --Races

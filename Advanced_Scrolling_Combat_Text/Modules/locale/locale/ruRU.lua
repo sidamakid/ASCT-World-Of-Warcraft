@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Spanish Russian
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "ruRU" then
  --Evoker
  L["Preservation"] = "Сохранение";
  L["Devastation"] = "Опустошение";
+ L["Augmentation"] = "Увеличение";
   --Shared-Spec-names
  L["Frost"] = "Мороз";
  L["Restoration"] = "Восстановление";
@@ -255,6 +257,20 @@ if locale == "ruRU" then
  L["About_Line_5"] = "Столкнулись с ошибкой или хотите добавить функцию? Сообщите об этом в репозиторий GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Сопротивление";
+ --New things 5/24/2024
+ L["Transmog"] = "Трансмогрификация";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "был добавлен в вашу коллекцию внешности.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Смешанный";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Включение значка";
+ L["Name Enable"] = "Имя Включить";
+ --New things 7/14/2024
+ L["Ready!"] = "Готовый!";
+ L["Is Ready!"] = "Готово!";
+ --New things 7/21/2024
+ L["X"] = "Икс";
+ L["Y"] = "Да";
+ L["Message Selector"] = "Селектор сообщений";
 end

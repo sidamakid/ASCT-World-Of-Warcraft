@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-if ASCT.Client["isNotDragonFlightWow"] then
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Client = ASCT.Client
+if Client.LE_EXPANSION_LEVEL["isNotDragonFlightWow"] then
 ---------------------------
 --Gains and Losses Toogles
 ---------------------------
@@ -65,7 +66,8 @@ end
 ---------------------------
 --Spell Toggles
 ---------------------------
-ASCT.Frames.Widgets["CreateSpellToggle"] = function(Function_Name, Function_Icon, spellName, settings, parent)
+--[[
+ASCT.Frames.Widgets["CreateSpellToggle"] = function(Function_Name, Function_Icon, spellName, settings, parent, Function_SpellDescription)
     local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
     ASCT.Widget.API["SetText"](b.Text, Function_Name(spellName))
     ASCT.Widget.API["SetChecked"](b, settings.SpellEnable)
@@ -74,20 +76,41 @@ ASCT.Frames.Widgets["CreateSpellToggle"] = function(Function_Name, Function_Icon
     ASCT.Widget.API["SetPoint"](tex, ASCT.Strings.Point["LEFT"], b.Text, ASCT.Strings.Point["RIGHT"], 3, 1)
     ASCT.Widget.API["SetSize"](tex, 44, 44)
     ASCT.Widget.API["SetTexture"](tex, Function_Icon(spellName))
+    local Button_Tooltip = GameTooltip
+    ASCT.Scripts.Frame["OnEnter"](tex, function (self)
+    ASCT.Widget.API["SetOwner"](Button_Tooltip, self, "ANCHOR_TOPLEFT")
+    ASCT.Widget.API["SetText"](Button_Tooltip, Function_Name(spellName))
+    ASCT.Widget.API["AddLine"](Button_Tooltip, Function_SpellDescription(spellName))
+      ASCT.Widget.API["Show"](Button_Tooltip)
+    end)
+    ASCT.Scripts.Frame["OnLeave"](tex, function ()
+      ASCT.Widget.API["Hide"](Button_Tooltip)
+    end)
     return b
+end
+]]
+ASCT.Frames.Widgets["CreateSpellToggle"] = function(Function_Name, Function_Icon, spellName, settings, parent)
+  local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], nil, parent, "InterfaceOptionsCheckButtonTemplate")
+  ASCT.Widget.API["SetText"](b.Text, Function_Name(spellName))
+  ASCT.Widget.API["SetChecked"](b, settings.SpellEnable)
+  ASCT.Scripts.Frame["OnClick"](b, function(s) settings.SpellEnable = ASCT.Widget.API["GetChecked"](s) end)
+  local tex = ASCT.API.Documentation["CreateTexture"](b)
+  ASCT.Widget.API["SetPoint"](tex, ASCT.Strings.Point["LEFT"], b.Text, ASCT.Strings.Point["RIGHT"], 3, 1)
+  ASCT.Widget.API["SetSize"](tex, 44, 44)
+  ASCT.Widget.API["SetTexture"](tex, Function_Icon(spellName))
+  return b
 end
 ---------------------------
 --Buttons
 ---------------------------
-ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext,  x, y, tooltip_text1, tooltip_text2)
-	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], "NewButton", Location, "InterfaceOptionsCheckButtonTemplate")
+ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, configparent, btntext, x, y, tooltip_text1)
+	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], "NewButton", configparent, "InterfaceOptionsCheckButtonTemplate")
 	ASCT.Widget.API["SetPoint"](b, ASCT.Strings.Point["TOPLEFT"], x, y)
 	ASCT.Widget.API["SetText"](b.Text, btntext)
   local Button_Tooltip = GameTooltip
 	ASCT.Scripts.Frame["OnEnter"](b, function (self)
   ASCT.Widget.API["SetOwner"](Button_Tooltip, self, "ANCHOR_TOPLEFT")
   ASCT.Widget.API["SetText"](Button_Tooltip, tooltip_text1)
-  ASCT.Widget.API["AddLine"](Button_Tooltip, tooltip_text2)
   	ASCT.Widget.API["Show"](Button_Tooltip)
 end)
 ASCT.Scripts.Frame["OnLeave"](b, function ()

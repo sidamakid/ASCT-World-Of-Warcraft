@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --German
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "deDE" then
  --Evoker
  L["Preservation"] = "Konservierung";
  L["Devastation"] = "Verwüstung";
+ L["Augmentation"] = "Vergrößerung";
   --Shared-Spec-names
  L["Frost"] = "Frost";
  L["Restoration"] = "Restaurierung";
@@ -240,7 +242,7 @@ if locale == "deDE" then
  --New things 12/30/2023
  L["Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat Text won't show anything."] = "Scrollender Kampftext ist deaktiviert. Wenn diese Option nicht aktiviert ist, wird der erweiterte Lauftext für den Kampf nichts angezeigt.";
  --New things 1/01/2024
- L["is now ready!"] = "is now ready!";
+ L["is now ready!"] = "ist jetzt fertig!";
  L["Is Now Ready!"] = "Ist jetzt fertig!";
  L["is about to fade!"] = "ist im Begriff zu verblassen!";
  L["Is About To Fade!"] = "ist kurz davor, zu verblassen!";
@@ -255,6 +257,20 @@ if locale == "deDE" then
  L["About_Line_5"] = "Stoßen Sie auf einen Fehler oder möchten Sie eine Funktion hinzufügen? Melden Sie es im GitHub Repository!";
  --New things 3/31/2024
  L["Resistances"] = "Widerstände";
+ --New things 5/24/2024
+ L["Transmog"] = "Transmog";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "wurde zu Ihrer Erscheinungsbildsammlung hinzugefügt.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Verschiedenes";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Symbol aktivieren";
+ L["Name Enable"] = "Name aktivieren";
+ --New things 7/14/2024
+ L["Ready!"] = "Fertig!";
+ L["Is Ready!"] = "Ist bereit!";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "Y";
+ L["Message Selector"] = "Nachrichtenauswahl";
 end

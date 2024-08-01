@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASDC_LOCALE_TABLE
-local locale = ASCT.API.Documentation["GetLocale"]()
+local ASCT, L = ASCT_Table, ASCT_locale_Table
+local API = ASCT.API
+local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Italian 
 -------------------------------------
@@ -57,6 +58,7 @@ if locale == "itIT" then
  --Evoker
  L["Preservation"] = "Conservazione";
  L["Devastation"] = "Devastazione";
+ L["Augmentation"] = "Ingrandimento";
   --Shared-Spec-names
  L["Frost"] = "Gelo";
  L["Restoration"] = "Restauro";
@@ -255,6 +257,20 @@ if locale == "itIT" then
  L["About_Line_5"] = "Hai riscontrato un bug o vuoi aggiungere una funzionalità? Segnalalo al repository GitHub!";
  --New things 3/31/2024
  L["Resistances"] = "Resistenze";
+ --New things 5/24/2024
+ L["Transmog"] = "Trasmog";
+ --New things 5/26/2024
+ L["has been added to your appearance collection."] = "è stato aggiunto alla tua raccolta di aspetti.";
  --New things 6/01/2024
  L["Miscellaneous"] = "Misto";
+ --New things 6/23/2024
+ L["Icon Enable"] = "Icona Abilita";
+ L["Name Enable"] = "Nome Abilita";
+ --New things 7/14/2024
+ L["Ready!"] = "Pronto!";
+ L["Is Ready!"] = "È pronto!";
+ --New things 7/21/2024
+ L["X"] = "X";
+ L["Y"] = "Y";
+ L["Message Selector"] = "Selettore di messaggi";
 end

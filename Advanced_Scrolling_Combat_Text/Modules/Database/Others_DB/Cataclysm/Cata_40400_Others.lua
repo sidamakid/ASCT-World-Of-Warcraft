@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-if ASCT.Client["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
+if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40400"] then
 ASCT.Database.Spells["Others_Cataclysm"] = {
 	["Advanced_Scrolling_Combat_Text_Stats"] = {
 		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
@@ -22,7 +22,9 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Mastery"] = {StatEnable = false, Gains = false, Lost = false},
 		--["Transmog"] = {StatEnable = false, Gains = false, Lost = false},
 	},
+	--["Advanced_Scrolling_Combat_Text_Miscellaneous"] = {
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
+		--["Fading DeBuffs"] = false,
 		["Experience Gains"] = false,
 		["Level up message"] = false,
 		["Skill Gained"] = false,
@@ -44,6 +46,12 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
 	},
+	--[[
+    ["Advanced_Scrolling_Combat_Text_Settings"] = {
+        ["IconEnable"] = false,
+        ["NameEnable"] = false,
+    },
+    ]]
 	["Trinkets"] = {
 		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
@@ -52,5 +60,12 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		Icon = 18,
 		Debuff_time = 5,
 	},
+	--[[
+	["Message_Selector"] = {
+		["Ready!"] = false,
+		["Is Ready!"] = false,
+		["is now ready!"] = false,
+	},
+	]]
 }
 end
