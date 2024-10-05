@@ -1,4 +1,5 @@
 <UI>
     <Script file="TWW_110000_locale.lua"/>
-    <!-- <Script file="TWW_110002_locale.lua"/> -->
+    <Script file="TWW_110002_locale.lua"/>
+    <!-- <Script file="TWW_110005_locale.lua"/> -->
 </UI>

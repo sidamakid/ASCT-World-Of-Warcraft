@@ -1,5 +1,5 @@
 ## Interface: 00000
-## Version: 10.0.0
+## Version: 10.5.0
 ## Title: Advanced Scrolling Combat Text |cFFFF0000(Unsupported Game version detected!)|r
 ## Title-koKR: 고급 스크롤 전투 텍스트 (지원되지 않는 게임 버전이 감지되었습니다!)
 ## Title-frFR: Texte de combat défilant avancé (version de jeu non prise en charge détectée!)
@@ -24,8 +24,9 @@
 ## Notes-itIT: Aggiunge funzionalità aggiuntive al testo di combattimento a scorrimento predefinito di Blizzard.
 ## Author: Sidamakid Tinman
 ## SavedVariablesPerCharacter: ASCT_DB, ASCT_Color_Picker_Variables
-# RequiredDeps: Advanced_Scrolling_Combat_Text_Localize
+## OptionalDeps: Advanced_Scrolling_Combat_Text_Options
 ## X-Curse-Project-ID: 634963
 ## X-WoWI-ID: 26362
 ## X-Wago-ID: WYK9pO6L
+# Unsupported_Embeds
 Unsupported_Embeds.xml

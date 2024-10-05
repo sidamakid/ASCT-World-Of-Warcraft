@@ -1,5 +1,5 @@
-## Interface: 110000
-## Version: 10.0.0
+## Interface: 110002
+## Version: 10.5.0
 ## Title: Advanced Scrolling Combat Text
 ## Title-koKR: 고급 스크롤 전투 텍스트
 ## Title-frFR: Texte de combat à défilement avancé
