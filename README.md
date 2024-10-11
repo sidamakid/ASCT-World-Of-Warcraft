@@ -17,6 +17,8 @@ A. It will load the options for only your class.
 Q. How do I open to the options panel?
 
 A. 3 ways. You can use the slash command: /ASCT, click the minimap icon, or go through the normal options panel.
+
+Q. Is there a 4th way to open to the options panel?
 # Where to download?
 You can download the addon on [CurseForge](https://www.curseforge.com/wow/addons/advanced-scrolling-combat-text) or [WAGOIO](https://addons.wago.io/addons/advanced-scrolling-combat-text)
 Hope you enjoy the addon and report any bugs to or requests and I'll try to get them added as fast as I can.
