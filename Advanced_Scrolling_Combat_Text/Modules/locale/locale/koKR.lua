@@ -1,10 +1,10 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
-local API = ASCT.API
+local API, Strings = ASCT.API, ASCT.Strings
 local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Korean
 -------------------------------------
-if locale == "koKR" then
+if locale == Strings.LocaleName["koKR"] then
  --Rogue
  L["Rogue"] = "악성";
  L["Assassination"] = "암살";

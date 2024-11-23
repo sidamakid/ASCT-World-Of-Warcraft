@@ -6,4 +6,6 @@
     <Script file="Vanilla_11502_locale.lua"/>
     <Script file="Vanilla_11503_locale.lua"/>
     <Script file="Vanilla_11504_locale.lua"/>
+    <Script file="Vanilla_11505_locale.lua"/>
+    <Include file="Seasonal\Seasonal.xml"/>
 </UI>

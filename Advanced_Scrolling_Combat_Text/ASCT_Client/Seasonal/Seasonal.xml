@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Has_Active_Season_Index.lua"/>
+    <Script file="Get_Active_Season_Index.lua"/>
+</UI>

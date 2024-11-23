@@ -1,4 +1,5 @@
 <UI>
+    <Script file="C_Seasons_Index.lua"/>
     <Script file="C_Spell_Index.lua"/>
     <Script file="C_Item_Index.lua"/>
     <Script file="C_CurrencyInfo_Index.lua"/>

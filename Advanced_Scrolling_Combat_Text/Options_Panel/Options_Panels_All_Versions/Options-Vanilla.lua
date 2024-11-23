@@ -200,24 +200,6 @@ local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["B
 		Frames.Widgets["ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker"](ASCT_Color_Picker_Variables);
 end)
 ---------------------------
---Main options panel
----------------------------
-local panel_main = API.Documentation["CreateFrame"]("Frame")
-panel_main.name = L["Title"]
-InterfaceOptions_AddCategory(panel_main)
----------------------------
---Open to options panel through default options panel
----------------------------
-local OpenToOptionsPanel = API.Documentation["CreateFrame"](Strings.FrameType["Button"], nil, panel_main, "UIPanelButtonTemplate")
-	Widget.API["SetPoint"](OpenToOptionsPanel, Strings.Point["CENTER"], 0, 0)
-	Widget.API["SetText"](OpenToOptionsPanel, L["Open To Options Panel"])
-	Widget.API["SetWidth"](OpenToOptionsPanel, 150)
-	Scripts.Frame["OnClick"](OpenToOptionsPanel, function()
-	HideUIPanel(InterfaceOptionsFrame)
-	HideUIPanel(GameMenuFrame)
-	Widget.API["Show"](ASCT_Config)
-end)
----------------------------
 --Gains and Losses Toogles
 ---------------------------
 local CreateGainsLossToggles = Frames.Widgets["CreateGainsLossToggles"]

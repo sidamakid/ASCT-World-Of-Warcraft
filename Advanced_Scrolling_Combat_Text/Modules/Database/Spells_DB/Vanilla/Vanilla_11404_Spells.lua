@@ -1,6 +1,7 @@
 local ASCT = ASCT_Table
 if ASCT.Client.LE_EXPANSION_LEVEL["isVanillaWow"] and ASCT.Client.tocversion["is11404"] then
 	ASCT.Database.Spells["Spells_Vanilla"] = {
+	--Races
 	["Race"] = {
 		["Orc"] = false,
 		["Undead"] = false,

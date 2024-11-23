@@ -1,5 +1,5 @@
 <UI>
     <Script file="Cata_40300_Others.lua"/>
     <Script file="Cata_40400_Others.lua"/>
-    <!-- <Script file="Cata_40401_Others.lua"/> -->
+    <Script file="Cata_40401_Others.lua"/>
 </UI>

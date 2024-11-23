@@ -1,5 +1,6 @@
 <UI>
     <Script file="Client_Strings.lua"/>
+    <Script file="Locale_Strings.lua"/>
     <Script file="API_Strings.lua"/>
     <Script file="EventName_Strings.lua"/>
     <Script file="Script_Strings.lua"/>

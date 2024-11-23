@@ -1,10 +1,10 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
-local API = ASCT.API
+local API, Strings = ASCT.API, ASCT.Strings
 local locale = API.Documentation["GetLocale"]()
 -------------------------------------
 --Chinese Simplifed
 -------------------------------------
-if locale == "zhCN" then
+if locale == Strings.LocaleName["zhCN"] then
  --Rogue
  L["Rogue"] = "潜行者";
  L["Assassination"] = "奇袭";

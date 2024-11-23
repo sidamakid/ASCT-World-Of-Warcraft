@@ -1,5 +1,6 @@
 <UI>
+    <Script file="Seasonal_Str_Int.lua"/>
+    <Script file="LE_EXPANSION_LEVEL_Str_Int.lua"/>
     <Script file="Resistance_Str_Int.lua"/>
     <Script file="CR_Str_Int.lua"/>
-    <Script file="LE_EXPANSION_LEVEL_Str_Int.lua"/>
 </UI>

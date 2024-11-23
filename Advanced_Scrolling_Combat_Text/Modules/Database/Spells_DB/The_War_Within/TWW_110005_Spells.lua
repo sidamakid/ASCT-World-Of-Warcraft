@@ -53,6 +53,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Kingsbane"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Deathmark"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Death from Above"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Cold Blood"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Echoing Reprimand"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Thistle Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Outlaw"] = {
             ["Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -68,6 +71,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Keep It Rolling"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dreadblades"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dismantle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shiv"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Gouge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Evasion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Subtlety"] = {
             ["Vanish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -84,6 +90,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Goremaw's Bite"]  = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Sepsis"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Smoke Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shadowstep"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tricks of the Trade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Blind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Cloak of Shadows"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
     --Priest 
         ["Shadow"] = {
@@ -100,6 +110,12 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Mindbender"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dispersion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Psychic Horror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shadowfiend"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shadow Word: Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Dominate Mind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Void Tendrils"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Vampiric Embrace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Void Shift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             },
         ["Holy_Priest"] = {
             ["Desperate Prayer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -119,6 +135,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Greater Heal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Holy Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Divine Ascension"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Prayer of Mending"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Divine Star"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Halo"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Discipline"] = {
             ["Power Word: Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -135,6 +154,11 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Luminous Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dark Archangel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Archangel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Angelic Feather"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Leap of Faith"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mass Dispel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Power Infusion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Power Word: Life"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
           --Warrior 
         ["Arms"] = {
@@ -159,6 +183,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["War Banner"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Sharpen Blade"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Duel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Thunder Clap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Rallying Cry"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Wrecking Throw"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Fury"] = {
             ["Execute"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -174,6 +201,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dragon Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Siegebreaker"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Death Wish"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Heroic Leap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Berserker Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Piercing Howl"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Champion's Spear"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Protection_Warrior"] = {
             ["Shield Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -193,6 +224,11 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Oppressor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Bodyguard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dragon Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Intervene"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Intimidating Shout"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Spell Reflection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shockwave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Thunderous Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
             --Warlock 
         ["Affliction"] = {
@@ -207,6 +243,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dark Soul: Misery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Nether Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Bonds of Fel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Howl of Terror"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mortal Coil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Dark Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Demonology"] = {
             ["Ritual of Summoning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -226,6 +265,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Bilescourge Bombers"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Call Observer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Call Fel Lord"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Amplify Curse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Demonic Gateway"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Fel Domination"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Destruction"] = {
             ["Havoc"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -240,6 +282,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dark Soul: Instability"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Shadow Rift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Soul Rip"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shadowflame"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shadowfury"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Soulburn"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
             --Druid 
         ["Balance"] = {
@@ -256,6 +301,12 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["New Moon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Warrior of Elune"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Faerie Swarm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mass Entanglement"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Ursol's Vortex"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Soothe"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Typhoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Innervate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Heart of the Wild"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Feral_Combat"] = {
             ["Dash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -279,6 +330,15 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Alpha Challenge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Overrun"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Grove Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Frenzied Regeneration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Ironfur"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Maim"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Skull Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Wild Charge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tiger Dash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Stampeding Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Incapacitating Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mighty Bash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Druid_Restoration"] = {
             ["Rebirth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -295,6 +355,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Invigorate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Thorns"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Wild Growth"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Renewal"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Nature's Vigil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Shaman 
         ["Elemental"] = {
@@ -310,13 +373,20 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Stormkeeper"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Burrow"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Grounding Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Lava Burst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Wind Shear"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Gust of Wind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Thunderstorm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Lightning Lasso"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Enhancement"] = {
             ["Astral Recall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Astral Shift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Earthbind Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Feral Lunge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Feral Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Fire Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Earth Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Storm Elemental"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Stormstrike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Crash Lightning"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -328,6 +398,12 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Doom Winds"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Static Field Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Unleash Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Spirit Walk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Greater Purge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tremor Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Wind Rush Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Poison Cleansing Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Stone Bulwark Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Shaman_Restoration"] = {
             ["Purify Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -344,7 +420,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Riptide"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Wellspring"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Counterstrike Totem"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-            --["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Spiritwalker's Grace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Nature's Swiftness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Totemic Projection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Totemic Recall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Hunter 
         ["Beast Mastery"] = {
@@ -366,6 +445,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dire Beast: Basilisk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Wild Kingdom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dire Beast: Hawk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Counter Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Intimidation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Scatter Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Roar of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Marksmanship"] = {
             ["Flare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -386,6 +469,12 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Salvo"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Chimaeral Sting"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Sniper Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tar Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tranquilizing Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Concussive Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Bursting Shot"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["High Explosive Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Implosive Trap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Survival"] = {
             ["Feign Death"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -403,6 +492,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Chakrams"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Mending Bandage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Sticky Tar Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Muzzle"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Survival of the Fittest"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Misdirection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Camouflage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Paladin
         ["Holy_Paladin"] = {
@@ -426,6 +519,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Holy Bulwark"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Rule of Law"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Searing Glare"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Lay on Hands"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Divine Steed"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Blinding Light"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Divine Toll"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Protection_Paladin"] = {
             ["Hammer of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -444,6 +541,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Inquisition"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Shield of Virtue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Guardian of the Forgotten Queen"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Rebuke"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Blessing of Sacrifice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Blessing of Protection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Retribution"] = {
             ["Consecration"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -458,6 +558,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Blade of Justice"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Divine Hammer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Blessing of Sanctuary"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Blessing of Freedom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Hammer of Wrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Turn Evil"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Repentance"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Mage 
         ["Arcane"] = {
@@ -500,6 +604,14 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Temporal Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Arcanosphere"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Kleptomania"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Remove Curse"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Alter Time"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mirror Image"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mass Polymorph"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shimmer"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Greater Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mass Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Mass Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Fire"] = {
             ["Fire Blast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -511,6 +623,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Blast Wave"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Ring of Fire"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Greater Pyroblast"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Dragon's Breath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Frost_Mage"] = {
             ["Cone of Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -527,6 +640,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Ice Wall"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Frost Bomb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Snowdrift"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Ice Block"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shifting Power"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Ring of Frost"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Demon Hunter
         ["Havoc"] = {
@@ -546,6 +662,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Rain from Above"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Reverse Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Glide"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Vengeful Retreat"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Sigil of Misery"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Darkness"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Sigil of Spite"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Vengeance"] = {
             ["Immolation Aura"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -564,6 +684,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Fracture"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Tormentor"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Demonic Trample"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Imprison"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Chaos Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Consume Magic"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["The Hunt"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Death_Knight 
         ["Blood"] = {
@@ -588,6 +712,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Death Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Murderous Intent"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Death Chain"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Sacrificial Pact"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Frost_DK"] = {
             ["Lichborne"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -602,9 +727,11 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Asphyxiate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Chill Streak"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Strangulate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Icebound Fortitude"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Unholy"] = {
             ["Anti-Magic Shell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Anti-Magic Zone"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Death and Decay"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Raise Ally"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Death Gate"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -620,6 +747,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Vile Contagion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dark Simulacrum"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Reanimation"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Abomination Limb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Monk 
         ["Brewmaster"] = {
@@ -639,6 +767,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Admonishment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Grapple Weapon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Avert Harm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Rising Sun Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Chi Burst"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Chi Torpedo"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Fortifying Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Mistweaver"] = {
             ["Zen Pilgrimage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -662,6 +794,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Healing Sphere"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Zen Focus Tea"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Nimble Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Paralysis"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Transcendence"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Ring of Peace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Windwalker"] = {
             ["Expel Harm"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -681,6 +816,9 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Mighty Ox Kick"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Double Barrel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Tigereye Brew"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tiger's Lust"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Spear Hand Strike"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Clash"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Evoker 
         ["Devastation"] = {
@@ -693,6 +831,13 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Engulf"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Nullifying Shroud"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Time Stop"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Landslide"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Quell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Tip the Scales"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Unravel"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Oppressing Roar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Zephyr"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Time Spiral"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Preservation"] = {
             ["Emerald Blossom"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -710,6 +855,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dream Flight"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Chrono Loop"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Swoop Up"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Expunge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Verdant Embrace"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Sleep Walk"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Rescue"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Augmentation"] = {
             ["Deep Breath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -722,6 +871,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Upheaval"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Time Skip"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Dream Projection"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Obsidian Scales"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Cauterizing Flame"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Renewing Blaze"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Spatial Paradox"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         --Racials
         ["Blood Elf"] = {

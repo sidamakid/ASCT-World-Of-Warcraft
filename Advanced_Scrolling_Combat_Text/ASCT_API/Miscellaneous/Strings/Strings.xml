@@ -1,4 +1,5 @@
 <UI>
+    <Script file="Locale_Strings.lua"/>
     <Script file="Mouse_Buttons_Strings.lua"/>
     <Script file="FrameType_Strings.lua"/>
     <Include file="EventName\EventName_Strings.xml"/>

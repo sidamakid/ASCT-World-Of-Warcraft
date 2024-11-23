@@ -204,6 +204,7 @@ local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["B
 	Scripts.Frame["OnClick"](Color_picker_SARTE, function()
 		Frames.Widgets["ADSC_SHOW_COLOR_PICKER_FRAME_ShowColorPicker"](ASCT_Color_Picker_Variables);
 end)
+--[[
 ---------------------------
 --Main options panel
 ---------------------------
@@ -222,6 +223,7 @@ local OpenToOptionsPanel = API.Documentation["CreateFrame"](Strings.FrameType["B
 	HideUIPanel(GameMenuFrame)
 	Widget.API["Show"](ASCT_Config)
 end)
+]]
 ---------------------------
 --Gains and Losses Toogles
 ---------------------------

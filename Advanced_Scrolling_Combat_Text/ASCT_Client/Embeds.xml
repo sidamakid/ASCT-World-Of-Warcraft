@@ -1,4 +1,6 @@
 <UI>
     <Include file="GetBuildInfo\GetBuildInfo.xml"/>
     <Include file="LE_EXPANSION_LEVEL_CURRENT\LE_EXPANSION_LEVEL_CURRENT.xml"/>
+    <Include file="Seasonal\Seasonal.xml"/>
+    <Include file="Seasons\Seasons.xml"/>
 </UI>

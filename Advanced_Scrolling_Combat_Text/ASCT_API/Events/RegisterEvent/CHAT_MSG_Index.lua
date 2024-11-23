@@ -8,3 +8,4 @@ ASCT.Events.RegisterEvent["CHAT_MSG_COMBAT_XP_GAIN"] = function(Frame) Frame:Reg
 ASCT.Events.RegisterEvent["CHAT_MSG_SKILL"] = function(Frame) Frame:RegisterEvent(Strings.EventName["CHAT_MSG_SKILL"]) return Frame end
 ASCT.Events.RegisterEvent["CHAT_MSG_CURRENCY"] = function(Frame) Frame:RegisterEvent(Strings.EventName["CHAT_MSG_CURRENCY"]) return Frame end
 ASCT.Events.RegisterEvent["CHAT_MSG_COMBAT_HONOR_GAIN"] = function(Frame) Frame:RegisterEvent(Strings.EventName["CHAT_MSG_COMBAT_HONOR_GAIN"]) return Frame end
+ASCT.Events.RegisterEvent["CHAT_MSG_COMBAT_FACTION_CHANGE"] = function(Frame) Frame:RegisterEvent(Strings.EventName["CHAT_MSG_COMBAT_FACTION_CHANGE"]) return Frame end

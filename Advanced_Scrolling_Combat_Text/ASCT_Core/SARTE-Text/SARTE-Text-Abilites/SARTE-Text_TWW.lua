@@ -10,7 +10,7 @@ local f = Frames.SARTE["SARTE-Text_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function ()
 Scripts.Frame["OnEvent"](f, --Run when our event fires
     function(self, event, unit, _, spellName)
-      local spellName = API.Documentation["GetSpellInfo"](spellName)
+      local spellName = API.Documentation["C_Spell.GetSpellName"](spellName)
       if unit == Strings.UnitId["player"] then
       local Spell_Localize = Locale.Spells["ASCT_GetEnglishName"](spellName)
       --Spells
@@ -140,9 +140,9 @@ Scripts.Frame["OnEvent"](f, --Run when our event fires
                ---------------------------
                --Grab the needed time data
                ---------------------------
-               start, duration = API.Documentation["GetSpellCooldown"](spellName)
+               start, duration = API.Documentation["C_Spell.GetSpellCooldown"](spellName).startTime, API.Documentation["C_Spell.GetSpellCooldown"](spellName).duration
                if start == 0 then
-               local name, _, icon = API.Documentation["GetSpellInfo"](spellName)
+               local name, icon = API.Documentation["C_Spell.GetSpellInfo"](spellName).name, API.Documentation["C_Spell.GetSpellInfo"](spellName).iconID
                local details = " "
                local dbSettings =
                --Spells

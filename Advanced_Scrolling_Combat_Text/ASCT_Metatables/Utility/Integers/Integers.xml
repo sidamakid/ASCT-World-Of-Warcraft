@@ -1,4 +1,5 @@
 <UI>
+    <Script file="Locale_Integers.lua"/>
     <Script file="Client_Integers.lua"/>
     <Script file="API_Integers.lua"/>
 </UI>

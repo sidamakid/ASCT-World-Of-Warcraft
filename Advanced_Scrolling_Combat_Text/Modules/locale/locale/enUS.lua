@@ -1,10 +1,10 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
-local API = ASCT.API
+local API, Strings = ASCT.API, ASCT.Strings
 local locale = API.Documentation["GetLocale"]()
 -------------------------------------
---English
+--English (US)
 -------------------------------------
-if locale == "enUS" then
+if locale == Strings.LocaleName["enUS"] then
  --Rogue
  L["Rogue"] = "Rogue";
  L["Assassination"] = "Assassination";
