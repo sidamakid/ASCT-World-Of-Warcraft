@@ -1,0 +1,5 @@
+<UI>
+    <!-- <Script file="Retail_Get_Build_Info.lua"/> -->
+    <!-- <Script file="Classic_Get_Build_Info.lua"/> -->
+    <Script file="Hybrid_Get_Build_Info.lua"/>
+</UI>

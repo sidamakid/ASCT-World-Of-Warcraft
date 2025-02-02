@@ -7,5 +7,6 @@
     <Script file="Vanilla_11503_Spells.lua"/>
     <Script file="Vanilla_11504_Spells.lua"/>
     <Script file="Vanilla_11505_Spells.lua"/>
+    <Script file="Vanilla_11506_Spells.lua"/>
     <Include file="Seasonal\Seasonal.xml"/>
 </UI>

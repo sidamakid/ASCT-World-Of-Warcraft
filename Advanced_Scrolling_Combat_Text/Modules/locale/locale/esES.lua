@@ -272,4 +272,7 @@ if locale == Strings.LocaleName["esES"] then
  L["X"] = "X";
  L["Y"] = "Y";
  L["Message Selector"] = "Selector de mensajes";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Progreso de la misión";
+ L["Complete"] = "Íntegro";
 end

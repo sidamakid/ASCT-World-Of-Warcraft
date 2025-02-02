@@ -88,3 +88,13 @@ ASCT.API.Documentation["GetColorRGB"] = function(Frame)
     local rgbR, rgbG, rgbB = Frame:GetColorRGB()
     return rgbR, rgbG, rgbB
 end
+
+ASCT.API.Documentation["GetQuestLogTitle"] = function(questLogIndex)
+    local title, level, suggestedGroup, isHeader, isCollapsed, isComplete, frequency, questID, startEvent, displayQuestID, isOnMap, hasLocalPOI, isTask, isBounty, isStory, isHidden, isScaling = GetQuestLogTitle(questLogIndex)
+    return title, level, suggestedGroup, isHeader, isCollapsed, isComplete, frequency, questID, startEvent, displayQuestID, isOnMap, hasLocalPOI, isTask, isBounty, isStory, isHidden, isScaling
+end
+
+ASCT.API.Documentation["GetQuestLogIndexByID"] = function(questID)
+    local questLogIndex = GetQuestLogIndexByID(questID)
+    return questLogIndex
+end

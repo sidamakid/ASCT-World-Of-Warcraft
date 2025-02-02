@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["ptBR"] then
  L["X"] = "X";
  L["Y"] = "S";
  L["Message Selector"] = "Seletor de mensagens";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Progresso da missão";
+ L["Complete"] = "Completar";
 end

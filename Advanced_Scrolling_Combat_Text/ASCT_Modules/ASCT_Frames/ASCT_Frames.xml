@@ -1,5 +1,6 @@
 <UI>
     <Include file="SARTE-Frames\SARTE-Frames.xml"/>
+    <Include file="Quest-Frames\Quest-Frames.xml"/>
     <Include file="Stat-Frames\Stat-Frames.xml"/>
     <Include file="Player-Changes-Frames\Player-Changes-Frames.xml"/>
     <Include file="Currency-Frames\Currency-Frames.xml"/>

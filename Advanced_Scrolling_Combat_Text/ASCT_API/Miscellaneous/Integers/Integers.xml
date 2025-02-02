@@ -1,5 +1,6 @@
 <UI>
     <Include file="Expansion_Integers_Index\Expansion_Integers.xml"/>
     <Include file="Locale_Integers_Index\Locale_Integers_Index.xml"/>
+    <Include file="Options_Panel_Integers_Index\Options_Panel_Integers_Index.xml"/>
     <Include file="CR_Index\CR_Index.xml"/>
 </UI>

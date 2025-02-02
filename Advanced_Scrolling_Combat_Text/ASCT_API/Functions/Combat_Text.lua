@@ -38,3 +38,7 @@ ASCT.Functions.CombatText["CombatText_AddMessage_Dark_Blue"] = function (message
   CombatText_AddMessage(message, CombatText_StandardScroll, 0.1, 0.1, 1)
 end
 --ASCT.Functions.CombatText["CombatText_AddMessage_Dark_Blue"](msg)
+ASCT.Functions.CombatText["CombatText_AddMessage_Green"] = function (message)
+  CombatText_AddMessage(message, CombatText_StandardScroll, 0, 1, 0)
+end
+--ASCT.Functions.CombatText["CombatText_AddMessage_Green"](msg)

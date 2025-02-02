@@ -1,8 +1,8 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
-local Client, Frames, Functions, Scripts, API, Strings = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
+local Customs, Client, Frames, Functions, Scripts, API, Strings = ASCT.Customs, ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
 if Client.LE_EXPANSION_LEVEL["isVanillaWow"] then
-local lastPower = nil
-local power
+local lastPower = Customs.Vars.Resource_Loss["lastPower"]
+local power = Customs.Vars.Resource_Loss["power"]
 local f = Frames.SARTE["Resource_Loss_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 Scripts.Frame["OnEvent"](f, function()

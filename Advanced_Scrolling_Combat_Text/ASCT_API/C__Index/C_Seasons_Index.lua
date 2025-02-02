@@ -10,4 +10,3 @@ ASCT.API.Documentation["C_Seasons.GetActiveSeason"] = function()
     local seasonID = C_Seasons.GetActiveSeason()
     return seasonID
 end
-

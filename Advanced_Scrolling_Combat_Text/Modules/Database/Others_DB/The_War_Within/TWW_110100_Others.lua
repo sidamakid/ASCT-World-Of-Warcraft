@@ -21,10 +21,17 @@ ASCT.Database.Spells["Others_TWW"] = {
         ["Duel Requests"] = false,
         ["Sent Mail"] = false,
         ["Loot"] = false,
+        ["Quest Progress"] = false,
     },
     ["Advanced_Scrolling_Combat_Text_Auras"] = {
         ["Fading DeBuffs"] = false,
     },
+    --[[
+    ["Advanced_Scrolling_Combat_Text_Settings"] = {
+        ["IconEnable"] = false,
+        ["NameEnable"] = false,
+    },
+    ]]
 	["Trinkets"] = {
 		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
@@ -33,5 +40,15 @@ ASCT.Database.Spells["Others_TWW"] = {
 		Icon = 18,
 		Debuff_time = 5,
 	},
+    ["EditBox_Values"] = {
+        ["EntryLimit"] = 10,
+        ["Position"] = {"CENTER", 0, 0},
+        ["Size"] = {400, 200},
+        ["Transparency"] = 1,
+        ["Font"] = "ChatFontNormal",
+    },
+    ["Display_On_Login"] = {
+        ["Chatbox"] = false,
+    },
 }
 end

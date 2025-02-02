@@ -2,5 +2,6 @@
     <Script file="All_Expansions.lua"/>
     <Script file="Not_Expansion.lua"/>
     <Script file="Expansion_Or_Above.lua"/>
+    <Script file="Not_Expansion_Or_Above.lua"/>
     <Script file="Hybird_Expansion.lua"/>
 </UI>

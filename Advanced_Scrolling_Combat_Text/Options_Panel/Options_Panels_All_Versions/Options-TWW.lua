@@ -7,7 +7,7 @@ ASCT_locale_Table --Localize Words Table
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Nested_ASCT_Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+local Lua_ASCT, Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Str_Int, Locale = ASCT.Lua_ASCT, ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Str_Int, ASCT.Locale
 if Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] then
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --For Call Back handler
@@ -119,67 +119,67 @@ local TitleCreate = Frames.Widgets["TitleCreate"]
 --Automatic Class picker
 ---------------------------
 local Class = select(3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
-if Class == 4 then
+if Class == Str_Int.Class["Rogue"] then
 	ASCT_DB["Class"]["Rogue"] = true
 	Text1 = TextCreate(Text_Frame, L["Assassination"])
 	Text2 = TextCreate(Text_Frame, L["Combat"])
 	Text3 = TextCreate(Text_Frame, L["Subtlety"])
-elseif Class == 5 then
+elseif Class == Str_Int.Class["Priest"] then
 	ASCT_DB["Class"]["Priest"] = true
 	Text1 = TextCreate(Text_Frame, L["Shadow"])
 	Text2 = TextCreate(Text_Frame, L["Holy"])
 	Text3 = TextCreate(Text_Frame, L["Discipline"])
-elseif Class == 1 then
+elseif Class == Str_Int.Class["Warrior"] then
 	ASCT_DB["Class"]["Warrior"] = true
 	Text1 = TextCreate(Text_Frame, L["Arms"])
 	Text2 = TextCreate(Text_Frame, L["Fury"])
 	Text3 = TextCreate(Text_Frame, L["Protection"])
-elseif Class == 11 then
+elseif Class == Str_Int.Class["Druid"] then
 	ASCT_DB["Class"]["Druid"] = true
 	Text1 = TextCreate(Text_Frame, L["Balance"])
 	Text2 = TextCreate(Text_Frame, L["Feral_Combat"])
 	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == 9 then
+elseif Class == Str_Int.Class["Warlock"] then
 	ASCT_DB["Class"]["Warlock"] = true
 	Text1 = TextCreate(Text_Frame, L["Affliction"])
 	Text2 = TextCreate(Text_Frame, L["Demonology"])
 	Text3 = TextCreate(Text_Frame, L["Destruction"])
-elseif Class == 7 then
+elseif Class == Str_Int.Class["Shaman"] then
 	ASCT_DB["Class"]["Shaman"] = true
 	Text1 = TextCreate(Text_Frame, L["Elemental"])
 	Text2 = TextCreate(Text_Frame, L["Enhancement"])
 	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == 3 then
+elseif Class == Str_Int.Class["Hunter"] then
 	ASCT_DB["Class"]["Hunter"] = true
 	Text1 = TextCreate(Text_Frame, L["Beast Mastery"])
 	Text2 = TextCreate(Text_Frame, L["Marksmanship"])
 	Text3 = TextCreate(Text_Frame, L["Survival"])
-elseif Class == 2 then
+elseif Class == Str_Int.Class["Paladin"] then
 	ASCT_DB["Class"]["Paladin"] = true
 	Text1 = TextCreate(Text_Frame, L["Holy"])
 	Text2 = TextCreate(Text_Frame, L["Protection"])
 	Text3 = TextCreate(Text_Frame, L["Retribution"])
-elseif Class == 8 then
+elseif Class == Str_Int.Class["Mage"] then
 	ASCT_DB["Class"]["Mage"] = true
 	Text1 = TextCreate(Text_Frame, L["Arcane"])
 	Text2 = TextCreate(Text_Frame, L["Fire"])
 	Text3 = TextCreate(Text_Frame, L["Frost"])
-elseif Class == 6 then
+elseif Class == Str_Int.Class["Death Knight"] then
 	ASCT_DB["Class"]["Death_Knight"] = true
 	Text1 = TextCreate(Text_Frame, L["Blood"])
 	Text2 = TextCreate(Text_Frame, L["Frost"])
 	Text3 = TextCreate(Text_Frame, L["Unholy"])
-elseif Class == 10 then
+elseif Class == Str_Int.Class["Monk"] then
 	ASCT_DB["Class"]["Monk"] = true
 	Text1 = TextCreate(Text_Frame, L["Brewmaster"])
 	Text2 = TextCreate(Text_Frame, L["Frost"])
 	Text3 = TextCreate(Text_Frame, L["Windwalker"])
-elseif Class == 12 then
+elseif Class == Str_Int.Class["Demon Hunter"] then
 	ASCT_DB["Class"]["Demon_Hunter"] = true
 	Text1 = TextCreate(Text_Frame, L["Havoc"])
 	Text2 = TextCreate(Text_Frame, L["Vengeance"])
 	Text3 = TextCreate(Text_Frame, L["Nothing"])
-elseif Class == 13 then
+elseif Class == Str_Int.Class["Evoker"] then
 	ASCT_DB["Class"]["Evoker"] = true
 	Text1 = TextCreate(Text_Frame, L["Preservation"])
 	Text2 = TextCreate(Text_Frame, L["Devastation"])
@@ -192,6 +192,7 @@ local Text4 = TextCreate(Text_Frame, L["Racials"])
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9 = SetTabs(ASCT_Config, 9, Text1, Text2, Text3, L["Racials"], L["Color Picker"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"]);
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"], L["About"]);
 local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Auras"], L["Trinkets"]);
+--local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Auras"], L["Trinkets"], L["On Login"]);
 local TextTop = TitleCreate(content6, Strings.Point["TOP"], 0, -10, Strings.Point["TOP"], L["This Tab is for Shaman's and Hunter's only."])
 --local content_11_Text = TitleCreate(content11, Strings.Point["CENTER"], 95, 0, Strings.Point["CENTER"], L["About_Line_1"].."\n"..L["About_Line_2"].."\n"..L["About_Line_3"].."\n"..L["About_Line_4"].."\n"..L["About_Line_5"])
 ---------------------------
@@ -259,6 +260,21 @@ for v in PairsByKeys(ASCT_DB, ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]
 	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"][v] = Widget.API["GetChecked"](s) end)
 	x_AD=x_AD+1
 end
+---------------------------
+-- Onlogin_Values
+---------------------------
+--[[
+local col_AD_5 = 4
+local x_AD_5 = 0
+for v in PairsByKeys(ASCT_DB, ASCT_DB["Display_On_Login"]) do
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], nil, content11, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD_5 % col_AD_5), -20 + (- Widget.API["GetHeight"](b)-5) * math.floor(x_AD_5/col_AD_5))
+	Widget.API["SetText"](b.Text, L[v])
+	Widget.API["SetChecked"](b, ASCT_DB["Display_On_Login"][v])
+	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Display_On_Login"][v] = Widget.API["GetChecked"](s) end)
+	x_AD_5=x_AD_5+1
+end
+]]
 ---------------------------
 -- Advanced Scrolling Combat Stats
 ---------------------------
@@ -730,56 +746,55 @@ end
 end
 
 local Race = select(3, API.Documentation["UnitRace"](Strings.UnitId["player"]))
-if Race == 5 then
+if Race == Str_Int.Race["Undead"] then
 	ASCT_DB["Race"]["Undead"] = true
-elseif Race == 2 then
+elseif Race == Str_Int.Race["Orc"] then
 	ASCT_DB["Race"]["Orc"] = true
-elseif Race == 3 then
+elseif Race == Str_Int.Race["Dwarf"] then
 	ASCT_DB["Race"]["Dwarf"] = true
-elseif Race == 7 then
+elseif Race == Str_Int.Race["Gnome"] then
 	ASCT_DB["Race"]["Gnome"] = true
-elseif Race == 4 then
+elseif Race == Str_Int.Race["Night Elf"] then
 	ASCT_DB["Race"]["Night Elf"] = true
-elseif Race == 8 then
+elseif Race == Str_Int.Race["Troll"] then
 	ASCT_DB["Race"]["Troll"] = true
-elseif Race == 6 then
+elseif Race == Str_Int.Race["Tauren"] then
 	ASCT_DB["Race"]["Tauren"] = true
-elseif Race == 1 then
+elseif Race == Str_Int.Race["Human"] then
 	ASCT_DB["Race"]["Human"] = true
-elseif Race == 10 then
+elseif Race == Str_Int.Race["Blood Elf"] then
 	ASCT_DB["Race"]["Blood Elf"] = true
-elseif Race == 11 then
+elseif Race == Str_Int.Race["Draenei"] then
 	ASCT_DB["Race"]["Draenei"] = true
-elseif Race == 22 then
+elseif Race == Str_Int.Race["Worgen"] then
 	ASCT_DB["Race"]["Worgen"] = true
-elseif Race == 25 or 26 then
+elseif Race == Str_Int.Race["Pandaren"] then
 	ASCT_DB["Race"]["Pandaren"] = true
-elseif Race == 29 then
+elseif Race == Str_Int.Race["Void Elf"] then
 	ASCT_DB["Race"]["Void Elf"] = true
-elseif Race == 30 then
+elseif Race == Str_Int.Race["Lightforged Draenei"] then
 	ASCT_DB["Race"]["Lightforged Draenei"] = true
-elseif Race == 34 then
+elseif Race == Str_Int.Race["Dark Iron Dwarf"] then
 	ASCT_DB["Race"]["Dark Iron Dwarf"] = true
-elseif Race == 37 then
-	ASCT_DB["Race"]["Mechagnome"] = true
-elseif Race == 37 then
+elseif Race == Str_Int.Race["Kul Tiran"] then
 	ASCT_DB["Race"]["Kul Tiran"] = true
-elseif Race == 9 then
+elseif Race == Str_Int.Race["Mechagnome"] then
+	ASCT_DB["Race"]["Mechagnome"] = true
+elseif Race == Str_Int.Race["Goblin"] then
 	ASCT_DB["Race"]["Goblin"] = true
-	ASCT_DB["Race"]["Nightborne"] = false
-elseif Race == 27 then
+elseif Race == Str_Int.Race["Nightborne"] then
 	ASCT_DB["Race"]["Nightborne"] = true
-elseif Race == 28 then
+elseif Race == Str_Int.Race["Highmountain Tauren"] then
 	ASCT_DB["Race"]["Highmountain Tauren"] = true
-elseif Race == 35 then
+elseif Race == Str_Int.Race["Vulpera"] then
 	ASCT_DB["Race"]["Vulpera"] = true
-elseif Race == 31 then
+elseif Race == Str_Int.Race["Zandalari Troll"] then
 	ASCT_DB["Race"]["Zandalari Troll"] = true
-elseif Race == 36 then
+elseif Race == Str_Int.Race["Mag'har Orc"] then
 	ASCT_DB["Race"]["Mag'har Orc"] = true
-elseif Race == 52 or 70 then
+elseif Race == Str_Int.Race["Dracthyr"] then
 	ASCT_DB["Race"]["Dracthyr"] = true
-elseif Race == 84 then
+elseif Race == Str_Int.Race["Earthen"] then
     ASCT_DB["Race"]["Earthen"] = true
 end
 ---------------------------------------------------------------------------------
@@ -1087,6 +1102,243 @@ for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Earthen"]) do
 end
 
 end
+--[[
+-- Create a frame for the custom chatbox
+local frame = CreateFrame("Frame", "CustomChatboxFrame", UIParent, "BackdropTemplate")
+frame:SetSize(unpack(ASCT_DB["EditBox_Values"]["Size"]))
+frame:SetPoint(unpack(ASCT_DB["EditBox_Values"]["Position"]))
+frame:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+frame:SetBackdropColor(0, 0, 0, ASCT_DB["EditBox_Values"]["Transparency"])
+frame:EnableMouse(true)
+frame:SetMovable(true)
+frame:SetResizable(true)
+frame:RegisterForDrag("LeftButton")
+frame:SetScript("OnDragStart", frame.StartMoving)
+frame:SetScript("OnDragStop", function()
+    frame:StopMovingOrSizing()
+    local point, _, _, x, y = frame:GetPoint()
+    ASCT_DB["EditBox_Values"]["Position"] = {point, x, y}
+end)
+frame:SetResizeBounds(200, 100, 800, 600)
+frame:SetScript("OnSizeChanged", function()
+    local width, height = frame:GetSize()
+    ASCT_DB["EditBox_Values"]["Size"] = {width, height}
+end)
+
+if ASCT_DB["Display_On_Login"]["Chatbox"] then
+    frame:Show()
+else
+    frame:Hide()
+end
+
+-- Create a resize handle
+local resizeButton = CreateFrame("Button", "CustomChatboxResizeButton", frame)
+resizeButton:SetSize(16, 16)
+resizeButton:SetPoint("BOTTOMRIGHT")
+resizeButton:SetNormalTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up")
+resizeButton:SetHighlightTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Highlight")
+resizeButton:SetPushedTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down")
+resizeButton:SetScript("OnMouseDown", function() frame:StartSizing("BOTTOMRIGHT") end)
+resizeButton:SetScript("OnMouseUp", function() frame:StopMovingOrSizing() end)
+
+-- Create a close button
+local closeButton = CreateFrame("Button", "CustomChatboxCloseButton", frame, "UIPanelCloseButton")
+closeButton:SetPoint("TOPRIGHT", frame, "TOPRIGHT")
+closeButton:SetScript("OnClick", function()
+    frame:Hide()
+end)
+
+-- Create the settings frame
+local settingsFrame = CreateFrame("Frame", "CustomChatboxSettingsFrame", UIParent, "BackdropTemplate")
+settingsFrame:SetSize(300, 200)
+settingsFrame:SetPoint("CENTER")
+settingsFrame:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+settingsFrame:SetBackdropColor(0, 0, 0, 1)
+settingsFrame:EnableMouse(true)
+settingsFrame:SetMovable(true)
+settingsFrame:RegisterForDrag("LeftButton")
+settingsFrame:SetScript("OnDragStart", settingsFrame.StartMoving)
+settingsFrame:SetScript("OnDragStop", settingsFrame.StopMovingOrSizing)
+settingsFrame:Hide()
+
+-- Create a settings button
+local settingsButton = CreateFrame("Button", "CustomChatboxSettingsButton", frame, "UIPanelButtonTemplate")
+settingsButton:SetSize(20, 20)
+settingsButton:SetPoint("TOPRIGHT", closeButton, "TOPLEFT", -5, 0)
+settingsButton:SetText("S")
+settingsButton:SetScript("OnClick", function()
+    settingsFrame:Show()
+end)
+
+-- Create an X button to hide the settings frame
+local settingsCloseButton = CreateFrame("Button", "CustomChatboxSettingsCloseButton", settingsFrame, "UIPanelCloseButton")
+settingsCloseButton:SetPoint("TOPRIGHT", settingsFrame, "TOPRIGHT")
+settingsCloseButton:SetScript("OnClick", function() settingsFrame:Hide() end)
+
+-- Transparency slider
+local transparencySlider = CreateFrame("Slider", "CustomChatboxTransparencySlider", settingsFrame, "OptionsSliderTemplate")
+transparencySlider:SetPoint("TOP", 0, -40)
+transparencySlider:SetMinMaxValues(0, 1)
+transparencySlider:SetValue(ASCT_DB["EditBox_Values"]["Transparency"])
+transparencySlider:SetValueStep(0.01)
+transparencySlider:SetObeyStepOnDrag(true)
+_G[transparencySlider:GetName() .. 'Low']:SetText('0')
+_G[transparencySlider:GetName() .. 'High']:SetText('1')
+_G[transparencySlider:GetName() .. 'Text']:SetText('Transparency')
+transparencySlider:SetScript("OnValueChanged", function(self, value)
+    frame:SetBackdropColor(0, 0, 0, value)
+    ASCT_DB["EditBox_Values"]["Transparency"] = value
+
+end)
+
+-- Create a scroll frame for the chatbox
+local scrollFrame = CreateFrame("ScrollFrame", "CustomChatboxScrollFrame", frame, "UIPanelScrollFrameTemplate")
+scrollFrame:SetPoint("TOPLEFT", 10, -10)
+scrollFrame:SetPoint("BOTTOMRIGHT", -30, 10)
+
+-- Create a container frame for the fontstring
+local content = CreateFrame("Frame", nil, scrollFrame)
+content:SetSize(360, 180)
+scrollFrame:SetScrollChild(content)
+
+-- Create a fontstring for the chatbox
+local fontString = content:CreateFontString("CustomChatboxFontString", "OVERLAY", "ChatFontNormal")
+fontString:SetPoint("TOPLEFT")
+fontString:SetWidth(360)
+fontString:SetJustifyH("LEFT")
+fontString:SetJustifyV("TOP")
+fontString:SetText("")  -- Initialize with empty text
+
+-- Font dropdown
+local fontDropdown = CreateFrame("Frame", "CustomChatboxFontDropdown", settingsFrame, "UIDropDownMenuTemplate")
+fontDropdown:SetPoint("TOP", transparencySlider, "BOTTOM", 0, -20)
+UIDropDownMenu_SetWidth(fontDropdown, 150)
+UIDropDownMenu_SetText(fontDropdown, ASCT_DB["EditBox_Values"]["Font"])
+local fonts = {"ChatFontNormal", "GameFontNormal", "GameFontHighlight"}
+UIDropDownMenu_Initialize(fontDropdown, function(self, level)
+    local function OnClick(self)
+        UIDropDownMenu_SetText(fontDropdown, self.value)
+        fontString:SetFontObject(_G[self.value])
+        ASCT_DB["EditBox_Values"]["Font"] = self.value
+    end
+    for _, font in ipairs(fonts) do
+        local info = UIDropDownMenu_CreateInfo()
+        info.text = font
+        info.value = font
+        info.func = OnClick
+        UIDropDownMenu_AddButton(info)
+    end
+end)
+
+-- Entry limit editbox
+local entryLimitEditBox = CreateFrame("EditBox", "CustomChatboxEntryLimitEditBox", settingsFrame, "InputBoxTemplate")
+entryLimitEditBox:SetSize(50, 20)
+entryLimitEditBox:SetPoint("TOP", fontDropdown, "BOTTOM", 0, -20)
+entryLimitEditBox:SetNumeric(true)
+entryLimitEditBox:SetAutoFocus(false)
+entryLimitEditBox:SetMaxLetters(2)
+entryLimitEditBox:SetScript("OnTextChanged", function(self)
+    local text = self:GetText()
+    if not tonumber(text) then
+        self:SetText("")
+    end
+end)
+entryLimitEditBox:SetText(ASCT_DB["EditBox_Values"]["EntryLimit"])  -- Default limit
+local entryLimitLabel = entryLimitEditBox:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+entryLimitLabel:SetPoint("RIGHT", entryLimitEditBox, "LEFT", -10, 0)
+entryLimitLabel:SetText("Entry Limit")
+
+-- Confirm button to save the entry limit
+local confirmButton = CreateFrame("Button", "CustomChatboxConfirmButton", settingsFrame, "UIPanelButtonTemplate")
+confirmButton:SetSize(50, 20)
+confirmButton:SetPoint("LEFT", entryLimitEditBox, "RIGHT", 10, 0)
+confirmButton:SetText("Confirm")
+confirmButton:SetScript("OnClick", function()
+    local limit = tonumber(entryLimitEditBox:GetText())
+    if limit then
+        ASCT_DB["EditBox_Values"]["EntryLimit"] = limit
+
+        -- Ensure the chatbox adheres to the new entry limit
+        local lines = {strsplit("\n", fontString:GetText() or "")}
+        while #lines > ASCT_DB["EditBox_Values"]["EntryLimit"] do
+            table.remove(lines, 1)
+        end
+        fontString:SetText(table.concat(lines, "\n"))
+        local contentHeight = fontString:GetStringHeight()
+        content:SetHeight(contentHeight)
+        scrollFrame:UpdateScrollChildRect()
+        scrollFrame:SetVerticalScroll(scrollFrame:GetVerticalScrollRange())
+    end
+    entryLimitEditBox:ClearFocus()
+end)
+
+
+-- Function to get the current time in HH:MM:SS AM/PM format
+local function GetCurrentTime()
+    return date("%I:%M:%S %p")
+end
+
+-- Function to print text to the custom chatbox
+function PrintToCustomChatbox(text)
+    local lines = {strsplit("\n", fontString:GetText() or "")}
+    if #lines >= ASCT_DB["EditBox_Values"]["EntryLimit"] then
+        table.remove(lines, 1)
+    end
+    local time = GetCurrentTime()
+    table.insert(lines, time .. ": " .. text)
+    fontString:SetText(table.concat(lines, "\n"))
+    local contentHeight = fontString:GetStringHeight()
+    content:SetHeight(contentHeight)
+    scrollFrame:UpdateScrollChildRect() -- Force the scroll frame to update
+    scrollFrame:SetVerticalScroll(scrollFrame:GetVerticalScrollRange()) -- Scroll to bottom
+end
+local stringTable = {"Hello, world!", "How are you?", "Have a great day!", "Lua is fun!", "Enjoy coding!"}
+-- Slash commands for custom chatbox functionalities
+SLASH_CUSTOMCHATBOX1 = "/ccb"
+SlashCmdList["CUSTOMCHATBOX"] = function(msg)
+    if msg == "settings" then
+        settingsFrame:Show()
+    elseif msg == "hide" then
+        frame:Hide()
+    elseif msg == "resetposition" then
+        frame:ClearAllPoints()
+        frame:SetPoint("CENTER")
+        ASCT_DB["EditBox_Values"]["Position"] = {"CENTER", 0, 0}
+    elseif msg == "resetsize" then
+        frame:SetSize(400, 200)
+        ASCT_DB["EditBox_Values"]["Size"] = {400, 200}
+    elseif msg == "ment" then
+        for i = 10,19,1 do
+            PrintToCustomChatbox(i)
+        end
+    elseif msg == "show" then
+        frame:Show()
+    elseif msg == "help" then
+        for i = 1, #stringTable do
+            print(stringTable[i] .. "\n")
+        end
+    else
+        print("Use /asct help for a list of all the slash commands used in the asct addon.")
+    end
+end
+
+-- Hide the frame initially and show on slash command
+if ASCT_DB["Display_On_Login"]["Chatbox"] then
+    frame:Show()
+else
+    frame:Hide()
+end
+]]
 
 end
 

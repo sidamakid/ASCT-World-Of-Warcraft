@@ -2,7 +2,7 @@ local ASCT, L = ASCT_Table, ASCT_locale_Table
 local API, Strings = ASCT.API, ASCT.Strings
 local locale = API.Documentation["GetLocale"]()
 -------------------------------------
---Spanish Russian
+--Russian
 -------------------------------------
 if locale == Strings.LocaleName["ruRU"] then
  --Rogue
@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["ruRU"] then
  L["X"] = "Икс";
  L["Y"] = "Да";
  L["Message Selector"] = "Селектор сообщений";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Прогресс заданий";
+ L["Complete"] = "Полный";
 end

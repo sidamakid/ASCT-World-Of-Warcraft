@@ -7,3 +7,4 @@ ASCT.Events.RegisterEvent["UNIT_POWER_FREQUENT"] = function (Frame, Unit) Frame:
 ASCT.Events.RegisterEvent["UNIT_ATTACK_POWER"] = function(Frame, Unit) Frame:RegisterEvent(Strings.EventName["UNIT_ATTACK_POWER"], Unit) return Frame end
 ASCT.Events.RegisterEvent["UNIT_RESISTANCES"] = function(Frame, Unit) Frame:RegisterEvent(Strings.EventName["UNIT_RESISTANCES"], Unit) return Frame end
 ASCT.Events.RegisterEvent["UNIT_MAXHEALTH"] = function(Frame, Unit) Frame:RegisterEvent(Strings.EventName["UNIT_MAXHEALTH"], Unit) return Frame end
+ASCT.Events.RegisterEvent["UNIT_QUEST_LOG_CHANGED"] = function(Frame, Unit) Frame:RegisterEvent(Strings.EventName["UNIT_QUEST_LOG_CHANGED"], Unit) return Frame end

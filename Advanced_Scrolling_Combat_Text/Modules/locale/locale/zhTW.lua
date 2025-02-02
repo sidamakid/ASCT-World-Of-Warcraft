@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["zhTW"] then
  L["X"] = "X";
  L["Y"] = "是";
  L["Message Selector"] = "訊息選擇器";
+ --New things 01/01/2025
+ L["Quest Progress"] = "任務進度";
+ L["Complete"] = "完成";
 end

@@ -7,7 +7,7 @@ ASCT_locale_Table --Localize Words Table
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Nested_ASCT_Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Locale
+local Lua_ASCT, Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Str_Int, Locale = ASCT.Lua_ASCT, ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Str_Int, ASCT.Locale
 if Client.LE_EXPANSION_LEVEL["isTbcWow"] then
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --For Call Back handler
@@ -119,47 +119,47 @@ local TitleCreate = Frames.Widgets["TitleCreate"]
 --Automatic Class picker
 ---------------------------
 local Class = select(3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
-if Class == 4 then
+if Class == Str_Int.Class["Rogue"] then
 	ASCT_DB["Class"]["Rogue"] = true
 	Text1 = TextCreate(Text_Frame, L["Assassination"])
 	Text2 = TextCreate(Text_Frame, L["Combat"])
 	Text3 = TextCreate(Text_Frame, L["Subtlety"])
-elseif Class == 5 then
+elseif Class == Str_Int.Class["Priest"] then
 	ASCT_DB["Class"]["Priest"] = true
 	Text1 = TextCreate(Text_Frame, L["Shadow"])
 	Text2 = TextCreate(Text_Frame, L["Holy"])
 	Text3 = TextCreate(Text_Frame, L["Discipline"])
-elseif Class == 1 then
+elseif Class == Str_Int.Class["Warrior"] then
 	ASCT_DB["Class"]["Warrior"] = true
 	Text1 = TextCreate(Text_Frame, L["Arms"])
 	Text2 = TextCreate(Text_Frame, L["Fury"])
 	Text3 = TextCreate(Text_Frame, L["Protection"])
-elseif Class == 11 then
+elseif Class == Str_Int.Class["Druid"] then
 	ASCT_DB["Class"]["Druid"] = true
 	Text1 = TextCreate(Text_Frame, L["Balance"])
 	Text2 = TextCreate(Text_Frame, L["Feral_Combat"])
 	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == 9 then
+elseif Class == Str_Int.Class["Warlock"] then
 	ASCT_DB["Class"]["Warlock"] = true
 	Text1 = TextCreate(Text_Frame, L["Affliction"])
 	Text2 = TextCreate(Text_Frame, L["Demonology"])
 	Text3 = TextCreate(Text_Frame, L["Destruction"])
-elseif Class == 7 then
+elseif Class == Str_Int.Class["Shaman"] then
 	ASCT_DB["Class"]["Shaman"] = true
 	Text1 = TextCreate(Text_Frame, L["Elemental"])
 	Text2 = TextCreate(Text_Frame, L["Enhancement"])
 	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == 3 then
+elseif Class == Str_Int.Class["Hunter"] then
 	ASCT_DB["Class"]["Hunter"] = true
 	Text1 = TextCreate(Text_Frame, L["Beast Mastery"])
 	Text2 = TextCreate(Text_Frame, L["Marksmanship"])
 	Text3 = TextCreate(Text_Frame, L["Survival"])
-elseif Class == 2 then
+elseif Class == Str_Int.Class["Paladin"] then
 	ASCT_DB["Class"]["Paladin"] = true
 	Text1 = TextCreate(Text_Frame, L["Holy"])
 	Text2 = TextCreate(Text_Frame, L["Protection"])
 	Text3 = TextCreate(Text_Frame, L["Retribution"])
-elseif Class == 8 then
+elseif Class == Str_Int.Class["Mage"] then
 	ASCT_DB["Class"]["Mage"] = true
 	Text1 = TextCreate(Text_Frame, L["Arcane"])
 	Text2 = TextCreate(Text_Frame, L["Fire"])
@@ -647,25 +647,25 @@ end
 --AutoMatic Race Picker
 ------------------------
 local Race = select(3, API.Documentation["UnitRace"](Strings.UnitId["player"]))
-if Race == 5 then
+if Race == Str_Int.Race["Undead"] then
 	ASCT_DB["Race"]["Undead"] = true
-elseif Race == 2 then
+elseif Race == Str_Int.Race["Orc"] then
 	ASCT_DB["Race"]["Orc"] = true
-elseif Race == 3 then
+elseif Race == Str_Int.Race["Dwarf"] then
 	ASCT_DB["Race"]["Dwarf"] = true
-elseif Race == 7 then
+elseif Race == Str_Int.Race["Gnome"] then
 	ASCT_DB["Race"]["Gnome"] = true
-elseif Race == 4 then
+elseif Race == Str_Int.Race["Night Elf"] then
 	ASCT_DB["Race"]["Night Elf"] = true
-elseif Race == 8 then
+elseif Race == Str_Int.Race["Troll"] then
 	ASCT_DB["Race"]["Troll"] = true
-elseif Race == 6 then
+elseif Race == Str_Int.Race["Tauren"] then
 	ASCT_DB["Race"]["Tauren"] = true
-elseif Race == 1 then
+elseif Race == Str_Int.Race["Human"] then
 	ASCT_DB["Race"]["Human"] = true
-elseif Race == 10 then
+elseif Race == Str_Int.Race["Blood Elf"] then
 	ASCT_DB["Race"]["Blood Elf"] = true
-elseif Race == 11 then
+elseif Race == Str_Int.Race["Draenei"] then
 	ASCT_DB["Race"]["Draenei"] = true
 end
 

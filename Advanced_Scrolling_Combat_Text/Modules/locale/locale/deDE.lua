@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["deDE"] then
  L["X"] = "X";
  L["Y"] = "Y";
  L["Message Selector"] = "Nachrichtenauswahl";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Fortschritt der Quest";
+ L["Complete"] = "Vollständig";
 end

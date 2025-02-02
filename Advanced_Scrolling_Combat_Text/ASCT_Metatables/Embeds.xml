@@ -1,5 +1,10 @@
 <UI>
     <Script file="Maintable.lua"/>
+    <Script file="Addon_Customs.lua"/>
+    <Script file="Miscellaneous_Table.lua"/>
+    <Include file="Customs\Customs.xml"/>
+    <Script file="Lua_Functions.lua"/>
+    <Script file="Addon_Lua_Functions.lua"/>
     <Include file="Utility\Utility.xml"/>
     <Script file="Database.lua"/>
     <Script file="locale.lua"/>

@@ -10,3 +10,7 @@ ASCT.API.Documentation["C_CurrencyInfo.GetCurrencyInfoFromLink"] = function(link
     local info = C_CurrencyInfo.GetCurrencyInfoFromLink(link)
     return info
 end
+ASCT.API.Documentation["C_CurrencyInfo.GetCoinIcon"] = function(number)
+    local amount = C_CurrencyInfo.GetCoinIcon(number)
+    return amount
+end

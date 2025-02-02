@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["itIT"] then
  L["X"] = "X";
  L["Y"] = "Y";
  L["Message Selector"] = "Selettore di messaggi";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Progressi della missione";
+ L["Complete"] = "Completo";
 end

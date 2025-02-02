@@ -1,13 +1,14 @@
 local ASCT = ASCT_Table
-if ASCT.Client.LE_EXPANSION_LEVEL["isWrathWow"] then
-    if ASCT.Client.tocversion["is30400"] then
-    ASCT.Widget.API["SetMinResize"](ASCT.Frames.Initializers["ASCT_Config"], 950,200)
-    ASCT.Widget.API["SetMaxResize"](ASCT.Frames.Initializers["ASCT_Config"], 950,650)
-    elseif ASCT.Client.tocversion["is30401"] then
-    ASCT.Widget.API["SetResizeBounds"](ASCT.Frames.Initializers["ASCT_Config"], 950,200, 950,650)
-    elseif ASCT.Client.tocversion["is30402"] then
-    ASCT.Widget.API["SetResizeBounds"](ASCT.Frames.Initializers["ASCT_Config"], 950,200, 950,650)
-    elseif ASCT.Client.tocversion["is30403"] then
-    ASCT.Widget.API["SetResizeBounds"](ASCT.Frames.Initializers["ASCT_Config"], 950,200, 950,650)
+local Client, Frames, Widget = ASCT.Client, ASCT.Frames, ASCT.Widget
+if Client.LE_EXPANSION_LEVEL["isWrathWow"] then
+    if Client.tocversion["is30400"] then
+        Widget.API["SetMinResize"](Frames.Initializers["ASCT_Config"], 950,200)
+        Widget.API["SetMaxResize"](Frames.Initializers["ASCT_Config"], 950,650)
+    elseif Client.tocversion["is30401"] then
+        Widget.API["SetResizeBounds"](Frames.Initializers["ASCT_Config"], 950,200, 950,650)
+    elseif Client.tocversion["is30402"] then
+        Widget.API["SetResizeBounds"](Frames.Initializers["ASCT_Config"], 950,200, 950,650)
+    elseif Client.tocversion["is30403"] then
+        Widget.API["SetResizeBounds"](Frames.Initializers["ASCT_Config"], 950,200, 950,650)
     end
 end

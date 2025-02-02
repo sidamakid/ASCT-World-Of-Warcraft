@@ -4,4 +4,5 @@
     <Include file="SARTE-Text\SARTE-Text.xml"/>
     <Include file="Gains_Losses\Gains_Losses.xml"/>
     <Include file="Loot_Text\Loot_Text.xml"/>
+    <Include file="Quest-Text\Quest-Text.xml"/>
 </UI>

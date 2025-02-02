@@ -13,7 +13,7 @@ end
 --Tab Text Creating
 -------------------------
 ASCT.Frames.Widgets["TextCreate"] = function(Frame, Text)
-local text = ASCT.API.Documentation["CreateFontString"](Frame, nil, "ARTWORK", "GameFontNormal")
-ASCT.Widget.API["SetText"](text, Text)
-return Text
+   local text = ASCT.API.Documentation["CreateFontString"](Frame, nil, "ARTWORK", "GameFontNormal")
+   ASCT.Widget.API["SetText"](text, Text)
+   return Text
 end

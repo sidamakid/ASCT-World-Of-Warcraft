@@ -1,0 +1,5 @@
+<UI>
+    <Include file="Custom_Tables\Custom_Tables.xml"/>
+    <Include file="Custom_Vars\Custom_Vars.xml"/>
+    <Include file="Custom_Func\Custom_Func.xml"/>
+</UI>

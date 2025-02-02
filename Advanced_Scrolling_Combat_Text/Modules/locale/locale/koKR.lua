@@ -273,4 +273,7 @@ if locale == Strings.LocaleName["koKR"] then
  L["X"] = "엑스";
  L["Y"] = "와이";
  L["Message Selector"] = "메시지 선택기";
+ --New things 01/01/2025
+ L["Quest Progress"] = "퀘스트 진행 상황";
+ L["Complete"] = "완성하다";
 end

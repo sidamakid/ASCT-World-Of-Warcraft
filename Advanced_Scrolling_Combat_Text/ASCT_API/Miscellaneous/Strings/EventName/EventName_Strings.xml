@@ -8,5 +8,6 @@
     <Script file="SPELL_Strings.lua"/>
     <Script file="TRANSMOG_Strings.lua"/>
     <Script file="UI_Strings.lua"/>
+    <Script file="QUEST_Strings.lua"/>
     <Script file="UNIT_Strings.lua"/>
 </UI>

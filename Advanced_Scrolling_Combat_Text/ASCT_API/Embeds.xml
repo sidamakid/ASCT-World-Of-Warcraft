@@ -1,4 +1,5 @@
 <UI>
+    <Include file="Lua_Functions\Lua_Functions.xml"/>
     <Include file="Miscellaneous\Miscellaneous.xml"/>
     <Script file="LE_EXPANSION_LEVEL_CURRENT.lua"/>
     <Include file="C__Index\C__Index.xml"/>
@@ -7,4 +8,6 @@
     <Include file="Events\Events.xml"/>
     <Include file="Script_Handlers_API\Script_Handlers_API.xml"/>
     <Include file="Functions\Functions.xml"/>
+    <Include file="Lua_ASCT_Index\Lua_ASCT_Index.xml"/>
+    <Include file="Select_Index\Select_Index.xml"/>
 </UI>

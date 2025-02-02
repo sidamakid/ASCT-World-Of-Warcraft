@@ -1,4 +1,5 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_ASCT, API = ASCT.Lua_ASCT, ASCT.API
 if ASCT.Client.LE_EXPANSION_LEVEL["isTbcWow"] and ASCT.Client.tocversion["is20504"] then
 	ASCT.Database.Spells["Spells_TBC"] = {
 	["Race"] = {
@@ -321,10 +322,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTbcWow"] and ASCT.Client.tocversion["is2050
 	},
 }
 local Lust_Table
-if select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
+if select(3, API.Documentation["UnitClass"]("player")) == 7 and select(2, API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
 Lust_Table = {["Heroism"] = {SpellEnable = false, iconEnable = false, nameEnable = false}}
 ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_TBC"]["Enhancement"], Lust_Table)
-elseif select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
+elseif select(3, API.Documentation["UnitClass"]("player")) == 7 and select(2, API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
 ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_TBC"]["Enhancement"], Lust_Table)
 end

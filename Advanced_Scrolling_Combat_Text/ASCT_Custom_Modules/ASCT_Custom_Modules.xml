@@ -1,0 +1,5 @@
+<UI>
+    <Include file="ASCT_Custom_Tables\ASCT_Custom_Tables.xml"/>
+    <Include file="ASCT_Custom_Variables\ASCT_Custom_Variables.xml"/>
+    <Include file="ASCT_Custom_Functions\ASCT_Custom_Functions.xml"/>
+</UI>

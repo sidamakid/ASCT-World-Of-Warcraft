@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Quest_Vars.lua"/>
+    <Script file="Resource_Loss_Vars.lua"/>
+</UI>

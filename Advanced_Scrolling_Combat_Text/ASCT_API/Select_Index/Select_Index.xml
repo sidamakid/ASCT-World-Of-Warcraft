@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Get_Select_Index.lua"/>
+    <Script file="Unit_Select_Index.lua"/>
+</UI>

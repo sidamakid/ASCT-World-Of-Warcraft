@@ -1,7 +1,8 @@
 local ASCT = ASCT_Table
-if ASCT.Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] then
-    if ASCT.Client.tocversion["90207"] then
-    ASCT.Widget.API["SetMinResize"](ASCT.Frames.Initializers["ASCT_Config"], 1000,200)
-    ASCT.Widget.API["SetMaxResize"](ASCT.Frames.Initializers["ASCT_Config"], 1000,650)
+local Client, Frames, Widget = ASCT.Client, ASCT.Frames, ASCT.Widget
+if Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] then
+    if Client.tocversion["90207"] then
+    Widget.API["SetMinResize"](Frames.Initializers["ASCT_Config"], 1000,200)
+    Widget.API["SetMaxResize"](Frames.Initializers["ASCT_Config"], 1000,650)
     end
 end

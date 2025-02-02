@@ -5,4 +5,5 @@
     <Script file="C_CurrencyInfo_Index.lua"/>
     <Script file="C_CVar_Index.lua"/>
     <Script file="C_TransmogCollection_Index.lua"/>
+    <Script file="C_QuestLog_Index.lua"/>
 </UI>

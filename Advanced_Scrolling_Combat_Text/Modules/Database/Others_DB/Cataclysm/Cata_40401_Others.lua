@@ -35,6 +35,7 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Duel Requests"] = false,
 		["Sent Mail"] = false,
 		["Loot"] = false,
+		["Quest Progress"] = false,
 	},
 	["Advanced_Scrolling_Combat_Text_Resistance"] = {
 		["Arcane Resistance"] = {StatEnable = false, Gains = false, Lost = false},

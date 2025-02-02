@@ -274,4 +274,14 @@ if locale == Strings.LocaleName["enUS"] then
  L["X"] = "X";
  L["Y"] = "Y";
  L["Message Selector"] = "Message Selector";
+ --New things 01/01/2025
+ L["Quest Progress"] = "Quest Progress";
+ L["Complete"] = "Complete";
+ --New things 02/01/2025
+ L["On Login"] = "On Login";
+ L["Chatbox"] = "Chatbox";
+ L["Transparency"] = "Transparency";
+ L["Entry Limit"] = "Entry Limit";
+ L["Confirm"] = "Confirm";
+ L["Use /asct help for a list of all the slash commands used in the asct addon."] = "Use /asct help for a list of all the slash commands used in the asct addon.";
 end

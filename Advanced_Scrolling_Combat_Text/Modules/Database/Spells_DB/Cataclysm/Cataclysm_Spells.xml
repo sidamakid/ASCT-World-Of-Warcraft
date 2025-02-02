@@ -2,4 +2,5 @@
     <Script file="Cata_40300_Spells.lua"/>
     <Script file="Cata_40400_Spells.lua"/> 
     <Script file="Cata_40401_Spells.lua"/>
+    <Script file="Cata_40402_Spells.lua"/>
 </UI>
