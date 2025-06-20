@@ -1,4 +1,4 @@
-local ASCT = ASCT_Table
+local Lua_API, ASCT = Lua_API_Table, ASCT_Table
 local Client, Locale, Database, Frames, Scripts, API = ASCT.Client, ASCT.Locale, ASCT.Database, ASCT.Frames, ASCT.Scripts, ASCT.API
 if Client.LE_EXPANSION_LEVEL["isShadowlandsWow"] then
 local callbacks = {}

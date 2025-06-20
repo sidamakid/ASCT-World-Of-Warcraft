@@ -591,7 +591,6 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Illusion"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Blink"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Counterspell"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
-            ["Frost Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Invisibility"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Conjure Refreshment"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Touch of the Magi"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -626,6 +625,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isTheWarWithinWow"] and ASCT.Client.tocversio
             ["Dragon's Breath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Frost_Mage"] = {
+            ["Frost Nova"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Cone of Cold"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Blizzard"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Cold Snap"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

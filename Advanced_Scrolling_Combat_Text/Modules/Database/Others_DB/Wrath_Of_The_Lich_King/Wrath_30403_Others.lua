@@ -1,7 +1,7 @@
 local ASCT = ASCT_Table
 if ASCT.Client.LE_EXPANSION_LEVEL["isWrathWow"] and ASCT.Client.tocversion["is30403"] then
 ASCT.Database.Spells["Others_Wrath"] = {
-["Advanced_Scrolling_Combat_Text_Stats"] = {
+	["Advanced_Scrolling_Combat_Text_Stats"] = {
 		["Armor"] = {StatEnable = false, Gains = false, Lost = false},
 		["Agility"] = {StatEnable = false, Gains = false, Lost = false},
 		["Attack Power"] = {StatEnable = false, Gains = false, Lost = false},
@@ -37,10 +37,11 @@ ASCT.Database.Spells["Others_Wrath"] = {
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 		["Achievement Gains"] = false,
-		["Death Quadrants"] = false,
+		["Death Coordinates"] = false,
 		["Duel Requests"] = false,
 		["Sent Mail"] = false,
 		["Loot"] = false,
+		["Quest Progress"] = false,
 	},
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
@@ -53,5 +54,24 @@ ASCT.Database.Spells["Others_Wrath"] = {
 		Icon = 18,
 		Debuff_time = 5,
 	},
+	["Message_Selector"] = {
+		["Msg"] = "is now ready!",
+	},
+	--[[
+	["Advanced_Scrolling_Combat_Text_Settings"] = {
+        ["IconEnable"] = false,
+        ["NameEnable"] = false,
+    },
+    ["EditBox_Values"] = {
+        ["EntryLimit"] = 10,
+        ["Position"] = {"CENTER", 0, 0},
+        ["Size"] = {400, 200},
+        ["Transparency"] = 1,
+        ["Font"] = "ChatFontNormal",
+    },
+    ["Display_On_Login"] = {
+        ["Chatbox"] = false,
+    },
+	]]
 }
 end

@@ -97,6 +97,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["
             ["Guardian Spirit"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
        ["Discipline"] = {
+            ["Archangel"]  = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Power Word: Shield"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Fear Ward"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Power Word: Barrier"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
@@ -360,6 +361,15 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["
             ["Arcane Power"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Presence of Mind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Arcane Barrage"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Stormwind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Ironforge"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Darnassus"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Orgrimmar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Undercity"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Thunder Bluff"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Shattrath"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Silvermoon"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Portal: Exodar"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Fire"] = {
             ["Flame Orb"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

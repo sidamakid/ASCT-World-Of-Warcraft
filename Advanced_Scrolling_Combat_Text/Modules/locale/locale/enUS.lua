@@ -136,7 +136,7 @@ if locale == Strings.LocaleName["enUS"] then
  --New things 8/17/2022
  L["Health"] = "Health";
  L["You died at"] = "You died at";
- L["Death Quadrants"] = "Death Quadrants";
+ L["Death Coordinates"] = "Death Coordinates";
  L["Has challenged you to a duel."] = "Has challenged you to a duel.";
  L["Duel Requests"] = "Duel Requests";
  L["Messages"] = "Messages";
@@ -284,4 +284,21 @@ if locale == Strings.LocaleName["enUS"] then
  L["Entry Limit"] = "Entry Limit";
  L["Confirm"] = "Confirm";
  L["Use /asct help for a list of all the slash commands used in the asct addon."] = "Use /asct help for a list of all the slash commands used in the asct addon.";
+ --New things 02/03/2025
+ L["Ready Message"] = "Ready Message";
+ --New things 03/22/2025
+ L["PVP Talents"] = "PVP Talents";
+ --New things 04/05/2025
+ L["Reset Options Panel Size And Location"] = "Reset Options Panel Size And Location";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "PVP Power Damage";
+ L["PVP Power Healing"] = "PVP Power Healing";
+ L["PVP Power"] = "PVP Power";
+ L["PVP Resilience"] = "PVP Resilience";
+ L["Hit"] = "Hit";
+ L["Haste"] = "Haste";
+ L["Expertise"] = "Expertise";
+ L["Critical Strike"] = "Critical Strike";
+ L["Dodge"] = "Dodge";
+ L["Parry"] = "Parry";
 end

@@ -24,7 +24,7 @@ ASCT.Database.Spells["Others_Vanilla"] = {
         ["Skill Gained"] = false,
         ["Skill Up"] = false,
         ["Resource lost"] = false,
-        ["Death Quadrants"] = false,
+        ["Death Coordinates"] = false,
         ["Duel Requests"] = false,
         ["Sent Mail"] = false,
         ["Loot"] = false,
@@ -33,12 +33,6 @@ ASCT.Database.Spells["Others_Vanilla"] = {
     ["Advanced_Scrolling_Combat_Text_Auras"] = {
         ["Fading DeBuffs"] = false,
     },
-    --[[
-    ["Advanced_Scrolling_Combat_Text_Settings"] = {
-        ["IconEnable"] = false,
-        ["NameEnable"] = false,
-    },
-    ]]
 	["Trinkets"] = {
 		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
@@ -47,6 +41,14 @@ ASCT.Database.Spells["Others_Vanilla"] = {
 		Icon = 18,
 		Debuff_time = 5,
 	},
+    ["Message_Selector"] = {
+		["Msg"] = "is now ready!",
+	},
+    --[[
+	["Advanced_Scrolling_Combat_Text_Settings"] = {
+        ["IconEnable"] = false,
+        ["NameEnable"] = false,
+    },
     ["EditBox_Values"] = {
         ["EntryLimit"] = 10,
         ["Position"] = {"CENTER", 0, 0},
@@ -57,5 +59,6 @@ ASCT.Database.Spells["Others_Vanilla"] = {
     ["Display_On_Login"] = {
         ["Chatbox"] = false,
     },
+    ]]
 }
 end

@@ -3,6 +3,7 @@
     <Script file="Advanced_Scrolling_Combat_Text-Spells_TBC.lua"/>
     <Script file="Advanced_Scrolling_Combat_Text-Spells_Wrath.lua"/>
     <Script file="Advanced_Scrolling_Combat_Text-Spells_Cata.lua"/>
+    <Script file="Advanced_Scrolling_Combat_Text-Spells_MOP.lua"/>
     <Script file="Advanced_Scrolling_Combat_Text-Spells_SL.lua"/>
     <Script file="Advanced_Scrolling_Combat_Text-Spells_DF.lua"/>
     <Script file="Advanced_Scrolling_Combat_Text-Spells_TWW.lua"/>

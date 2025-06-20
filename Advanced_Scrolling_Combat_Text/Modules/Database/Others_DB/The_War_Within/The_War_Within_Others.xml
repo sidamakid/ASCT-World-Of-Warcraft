@@ -4,4 +4,7 @@
     <Script file="TWW_110005_Others.lua"/>
     <Script file="TWW_110007_Others.lua"/>
     <Script file="TWW_110100_Others.lua"/>
+    <Script file="TWW_110105_Others.lua"/>
+    <Script file="TWW_110107_Others.lua"/>
+    <Script file="TWW_110200_Others.lua"/>
 </UI>

@@ -1,4 +1,4 @@
 <UI>
-    <Include file="Frames\Frames.xml"/>
-    <Include file="Widgets\Widgets.xml"/>
+    <Include file="Frame_Modules\Frame_Modules.xml"/>
+    <Include file="Widget_Modules\Widget_Modules.xml"/>
 </UI>

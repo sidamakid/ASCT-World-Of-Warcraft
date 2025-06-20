@@ -135,7 +135,7 @@ if locale == Strings.LocaleName["ruRU"] then
  --New things 8/17/2022
  L["Health"] = "Здоровье";
  L["You died at"] = "Вы умерли в";
- L["Death Quadrants"] = "Квадранты смерти";
+ L["Death Coordinates"] = "Координаты смерти";
  L["Has challenged you to a duel."] = "Вызвал вас на дуэль.";
  L["Duel Requests"] = "Дуэльные запросы";
  L["Messages"] = "Сообщения";
@@ -276,4 +276,17 @@ if locale == Strings.LocaleName["ruRU"] then
  --New things 01/01/2025
  L["Quest Progress"] = "Прогресс заданий";
  L["Complete"] = "Полный";
+ --New things 02/01/2025
+ L["On Login"] = "При входе в систему";
+ L["Chatbox"] = "Окно чата";
+ L["Transparency"] = "Прозрачность";
+ L["Entry Limit"] = "Лимит на вход";
+ L["Confirm"] = "Подтверждать";
+ L["Use /asct help for a list of all the slash commands used in the asct addon."] = "Используйте справку /asct для получения списка всех команд слэша, используемых в аддоне asct.";
+ --New things 02/03/2025
+ L["Ready Message"] = "Готовое сообщение";
+ --New things 03/22/2025
+ L["PVP Talents"] = "PvP-таланты";
+ --New things 04/05/2025
+ L["Reset Options Panel Size And Location"] = "Сбросить размер и расположение панели настроек";
 end

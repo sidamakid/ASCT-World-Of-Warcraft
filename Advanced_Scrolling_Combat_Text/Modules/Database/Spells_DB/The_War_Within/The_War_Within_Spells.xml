@@ -4,4 +4,7 @@
     <Script file="TWW_110005_Spells.lua"/>
     <Script file="TWW_110007_Spells.lua"/>
     <Script file="TWW_110100_Spells.lua"/>
+    <Script file="TWW_110105_Spells.lua"/>
+    <Script file="TWW_110107_Spells.lua"/>
+    <Script file="TWW_110200_Spells.lua"/>
 </UI>

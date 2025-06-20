@@ -22,7 +22,13 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Mastery"] = {StatEnable = false, Gains = false, Lost = false},
 		--["Transmog"] = {StatEnable = false, Gains = false, Lost = false},
 	},
-	--["Advanced_Scrolling_Combat_Text_Miscellaneous"] = {
+	["Advanced_Scrolling_Combat_Text_Resistance"] = {
+		["Arcane Resistance"] = {StatEnable = false, Gains = false, Lost = false},
+		["Fire Resistance"] = {StatEnable = false, Gains = false, Lost = false},
+		["Frost Resistance"] = {StatEnable = false, Gains = false, Lost = false},
+		["Nature Resistance"] = {StatEnable = false, Gains = false, Lost = false},
+		["Shadow Resistance"] = {StatEnable = false, Gains = false, Lost = false},
+	},
 	["Advanced_Scrolling_Combat_Text_Leveling"] = {
 		--["Fading DeBuffs"] = false,
 		["Experience Gains"] = false,
@@ -31,28 +37,15 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Skill Up"] = false,
 		["Resource lost"] = false,
 		["Achievement Gains"] = false,
-		["Death Quadrants"] = false,
+		["Death Coordinates"] = false,
 		["Duel Requests"] = false,
 		["Sent Mail"] = false,
 		["Loot"] = false,
 		["Quest Progress"] = false,
 	},
-	["Advanced_Scrolling_Combat_Text_Resistance"] = {
-		["Arcane Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Fire Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Frost Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Nature Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-		["Shadow Resistance"] = {StatEnable = false, Gains = false, Lost = false},
-	},
 	["Advanced_Scrolling_Combat_Text_Auras"] = {
 		["Fading DeBuffs"] = false,
 	},
-	--[[
-    ["Advanced_Scrolling_Combat_Text_Settings"] = {
-        ["IconEnable"] = false,
-        ["NameEnable"] = false,
-    },
-    ]]
 	["Trinkets"] = {
 		["Trinket_1"] = {TrinketEnable = false, Name = false, Icon = false,},
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
@@ -61,12 +54,24 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		Icon = 18,
 		Debuff_time = 5,
 	},
-	--[[
 	["Message_Selector"] = {
-		["Ready!"] = false,
-		["Is Ready!"] = false,
-		["is now ready!"] = false,
+		["Msg"] = "is now ready!",
 	},
+	--[[
+	["Advanced_Scrolling_Combat_Text_Settings"] = {
+        ["IconEnable"] = false,
+        ["NameEnable"] = false,
+    },
+    ["EditBox_Values"] = {
+        ["EntryLimit"] = 10,
+        ["Position"] = {"CENTER", 0, 0},
+        ["Size"] = {400, 200},
+        ["Transparency"] = 1,
+        ["Font"] = "ChatFontNormal",
+    },
+    ["Display_On_Login"] = {
+        ["Chatbox"] = false,
+    },
 	]]
 }
 end

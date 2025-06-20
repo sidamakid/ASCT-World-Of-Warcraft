@@ -135,7 +135,7 @@ if locale == Strings.LocaleName["zhCN"] then
  --New things 8/17/2022
  L["Health"] = "健康";
  L["You died at"] = "你死在";
- L["Death Quadrants"] = "死亡象限";
+ L["Death Coordinates"] = "死亡坐标";
  L["Has challenged you to a duel."] = "挑战你进行决斗。";
  L["Duel Requests"] = "决斗请求";
  L["Messages"] = "消息";
@@ -276,4 +276,17 @@ if locale == Strings.LocaleName["zhCN"] then
  --New things 01/01/2025
  L["Quest Progress"] = "任务进度";
  L["Complete"] = "完成";
+ --New things 02/01/2025
+ L["On Login"] = "登录时";
+ L["Chatbox"] = "聊天框";
+ L["Transparency"] = "透明度";
+ L["Entry Limit"] = "入场限制";
+ L["Confirm"] = "确认";
+ L["Use /asct help for a list of all the slash commands used in the asct addon."] = "使用 /asct help 获取 asct 插件中使用的所有斜杠命令的列表。";
+ --New things 02/03/2025
+ L["Ready Message"] = "就绪消息";
+ --New things 03/22/2025
+ L["PVP Talents"] = "PVP 天赋";
+ --New things 04/05/2025
+ L["Reset Options Panel Size And Location"] = "重置选项面板大小和位置";
 end

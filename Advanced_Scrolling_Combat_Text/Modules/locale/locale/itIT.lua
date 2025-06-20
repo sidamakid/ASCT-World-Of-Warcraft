@@ -135,7 +135,7 @@ if locale == Strings.LocaleName["itIT"] then
  --New things 8/17/2022
  L["Health"] = "Salute";
  L["You died at"] = "Sei morto a";
- L["Death Quadrants"] = "Quadranti della morte";
+ L["Death Coordinates"] = "Coordinate di morte";
  L["Has challenged you to a duel."] = "Ti ha sfidato a duello.";
  L["Duel Requests"] = "Richieste di duello";
  L["Messages"] = "Messaggi";
@@ -276,4 +276,17 @@ if locale == Strings.LocaleName["itIT"] then
  --New things 01/01/2025
  L["Quest Progress"] = "Progressi della missione";
  L["Complete"] = "Completo";
+ --New things 02/01/2025
+ L["On Login"] = "Al login";
+ L["Chatbox"] = "Casella di chat";
+ L["Transparency"] = "Trasparenza";
+ L["Entry Limit"] = "Limite di iscrizione";
+ L["Confirm"] = "Confermare";
+ L["Use /asct help for a list of all the slash commands used in the asct addon."] = "Utilizzare /asct help per un elenco di tutti i comandi barra utilizzati nell'add-on asc.";
+ --New things 02/03/2025
+ L["Ready Message"] = "Messaggio pronto";
+ --New things 03/22/2025
+ L["PVP Talents"] = "Talenti PVP";
+ --New things 04/05/2025
+ L["Reset Options Panel Size And Location"] = "Ripristina Dimensioni e posizione del pannello delle opzioni";
 end

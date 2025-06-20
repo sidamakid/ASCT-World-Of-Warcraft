@@ -135,7 +135,7 @@ if locale == Strings.LocaleName["koKR"] then
  --New things 8/17/2022
  L["Health"] = "건강";
  L["You died at"] = "당신은 죽었습니다.";
- L["Death Quadrants"] = "죽음의 사분면";
+ L["Death Coordinates"] = "사망 좌표";
  L["Has challenged you to a duel."] = "결투에 도전했습니다.";
  L["Duel Requests"] = "결투 요청";
  L["Messages"] = "메시지";
@@ -276,4 +276,17 @@ if locale == Strings.LocaleName["koKR"] then
  --New things 01/01/2025
  L["Quest Progress"] = "퀘스트 진행 상황";
  L["Complete"] = "완성하다";
+ --New things 02/01/2025
+ L["On Login"] = "로그인 시";
+ L["Chatbox"] = "채팅 상자";
+ L["Transparency"] = "투명성";
+ L["Entry Limit"] = "입장 제한";
+ L["Confirm"] = "확인하다";
+ L["Use /asct help for a list of all the slash commands used in the asct addon."] = "asct 추가 기능에 사용되는 모든 슬래시 명령 목록을 보려면 /asct 도움말을 사용합니다.";
+ --New things 02/03/2025
+ L["Ready Message"] = "준비 메시지";
+ --New things 03/22/2025
+ L["PVP Talents"] = "PVP 특성";
+ --New things 04/05/2025
+ L["Reset Options Panel Size And Location"] = "재설정 옵션 패널 크기 및 위치";
 end

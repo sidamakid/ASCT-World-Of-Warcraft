@@ -1,13 +1,15 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --All Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local ASCT, L =
+local Lua_API, ASCT, L =
+Lua_API_Table,
 ASCT_Table, --Checks the Version of the game to find which files to load for ASCT
 ASCT_locale_Table --Localize Words Table
+local Keys = ASCT.Keys
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Nested_ASCT_Tables
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local Lua_ASCT, Client, Frames, Database, Functions, Scripts, Widget, API, Strings, Str_Int, Locale = ASCT.Lua_ASCT, ASCT.Client, ASCT.Frames, ASCT.Database, ASCT.Functions, ASCT.Scripts, ASCT.Widget, ASCT.API, ASCT.Strings, ASCT.Str_Int, ASCT.Locale
+local Client, Frames, Database, Functions, Scripts, Widget, API, Integers, Strings, Str_Int, Locale = Keys.Metatables["Client"], Keys.Metatables["Frames"], Keys.Metatables["Database"], Keys.Metatables["Functions"], Keys.Metatables["Scripts"], Keys.Metatables["Widget"], Keys.Metatables["API"], Keys.Metatables["Integers"], Keys.Metatables["Strings"], Keys.Metatables["Str_Int"], Keys.Metatables["Locale"]
 if Client.LE_EXPANSION_LEVEL["isWrathWow"] then
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --For Call Back handler
@@ -43,13 +45,13 @@ Scripts.Frame["OnDragStop"](ASCT_Config, function(self)
 end)
 
 --Child Frames
-ASCT_Config.title = API.Documentation["CreateFontString"](ASCT_Config, nil, Strings.Layer["OVERLAY"]);
+ASCT_Config.title = API.Documentation["CreateFontString"](ASCT_Config, Lua_API.Var_Type["nil"], Strings.Layer["OVERLAY"]);
 Widget.API["SetFontObject"](ASCT_Config.title, "GameFontHighlight")
 Widget.API["SetPoint"](ASCT_Config.title, Strings.Point["TOP"], ASCT_Config, Strings.Point["TOP"], 1, -7);
 Widget.API["SetText"](ASCT_Config.title, L["Title"]);
 
 -- Create the scrolling parent frame and size it to fit inside the texture
-ASCT_Config.scrollFrame = API.Documentation["CreateFrame"](Strings.FrameType["ScrollFrame"], nil, ASCT_Config, "UIPanelScrollFrameTemplate")
+ASCT_Config.scrollFrame = API.Documentation["CreateFrame"](Strings.FrameType["ScrollFrame"], Lua_API.Var_Type["nil"], ASCT_Config, "UIPanelScrollFrameTemplate")
 Widget.API["SetPoint"](ASCT_Config.scrollFrame, Strings.Point["TOPLEFT"], 3, -25)
 Widget.API["SetPoint"](ASCT_Config.scrollFrame, Strings.Point["BOTTOMRIGHT"], -27, 4)
 
@@ -73,10 +75,10 @@ local frameName = Widget.API["GetName"](frame);
 for i = 1, numTabs do
   local tab = API.Documentation["CreateFrame"](Strings.FrameType["Button"], frameName.."Tab"..i, frame, "CharacterFrameTabButtonTemplate");
   Widget.API["SetID"](tab, i);
-  Widget.API["SetText"](tab, select(i, ...))
+  Widget.API["SetText"](tab, Lua_API.Functions["Select"](i, ...))
   Scripts.Frame["OnClick"](tab, Tab_OnClick);
 
-  tab.content = API.Documentation["CreateFrame"](Strings.FrameType["Frame"], nil, ASCT_Config.scrollFrame);
+  tab.content = API.Documentation["CreateFrame"](Strings.FrameType["Frame"], Lua_API.Var_Type["nil"], ASCT_Config.scrollFrame);
   Widget.API["SetSize"](tab.content, 770, 500)
   Widget.API["Hide"](tab.content)
 
@@ -88,11 +90,11 @@ for i = 1, numTabs do
   if (i == 1) then
     Widget.API["SetPoint"](tab, Strings.Point["TOPLEFT"], ASCT_Config, Strings.Point["BOTTOMLEFT"], 5, 7);
   else
-    Widget.API["SetPoint"](tab, Strings.Point["TOPLEFT"], _G[frameName.."Tab"..(i - 1)], Strings.Point["TOPRIGHT"], -14, 0);
+    Widget.API["SetPoint"](tab, Strings.Point["TOPLEFT"], Lua_API.Var_Environment["_G"][frameName.."Tab"..(i - 1)], Strings.Point["TOPRIGHT"], -14, 0);
   end
 end
 
-  Tab_OnClick(_G[frameName.."Tab1"])
+  Tab_OnClick(Lua_API.Var_Environment["_G"][frameName.."Tab1"])
 return unpack(contents)
 end
 ---------------------------
@@ -118,57 +120,17 @@ local TitleCreate = Frames.Widgets["TitleCreate"]
 ---------------------------
 --Automatic Class picker
 ---------------------------
-local Class = select(3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
-if Class == Str_Int.Class["Rogue"] then
-	ASCT_DB["Class"]["Rogue"] = true
-	Text1 = TextCreate(Text_Frame, L["Assassination"])
-	Text2 = TextCreate(Text_Frame, L["Combat"])
-	Text3 = TextCreate(Text_Frame, L["Subtlety"])
-elseif Class == Str_Int.Class["Priest"] then
-	ASCT_DB["Class"]["Priest"] = true
-	Text1 = TextCreate(Text_Frame, L["Shadow"])
-	Text2 = TextCreate(Text_Frame, L["Holy"])
-	Text3 = TextCreate(Text_Frame, L["Discipline"])
-elseif Class == Str_Int.Class["Warrior"] then
-	ASCT_DB["Class"]["Warrior"] = true
-	Text1 = TextCreate(Text_Frame, L["Arms"])
-	Text2 = TextCreate(Text_Frame, L["Fury"])
-	Text3 = TextCreate(Text_Frame, L["Protection"])
-elseif Class == Str_Int.Class["Druid"] then
-	ASCT_DB["Class"]["Druid"] = true
-	Text1 = TextCreate(Text_Frame, L["Balance"])
-	Text2 = TextCreate(Text_Frame, L["Feral_Combat"])
-	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == Str_Int.Class["Warlock"] then
-	ASCT_DB["Class"]["Warlock"] = true
-	Text1 = TextCreate(Text_Frame, L["Affliction"])
-	Text2 = TextCreate(Text_Frame, L["Demonology"])
-	Text3 = TextCreate(Text_Frame, L["Destruction"])
-elseif Class == Str_Int.Class["Shaman"] then
-	ASCT_DB["Class"]["Shaman"] = true
-	Text1 = TextCreate(Text_Frame, L["Elemental"])
-	Text2 = TextCreate(Text_Frame, L["Enhancement"])
-	Text3 = TextCreate(Text_Frame, L["Restoration"])
-elseif Class == Str_Int.Class["Hunter"] then
-	ASCT_DB["Class"]["Hunter"] = true
-	Text1 = TextCreate(Text_Frame, L["Beast Mastery"])
-	Text2 = TextCreate(Text_Frame, L["Marksmanship"])
-	Text3 = TextCreate(Text_Frame, L["Survival"])
-elseif Class == Str_Int.Class["Paladin"] then
-	ASCT_DB["Class"]["Paladin"] = true
-	Text1 = TextCreate(Text_Frame, L["Holy"])
-	Text2 = TextCreate(Text_Frame, L["Protection"])
-	Text3 = TextCreate(Text_Frame, L["Retribution"])
-elseif Class == Str_Int.Class["Mage"] then
-	ASCT_DB["Class"]["Mage"] = true
-	Text1 = TextCreate(Text_Frame, L["Arcane"])
-	Text2 = TextCreate(Text_Frame, L["Fire"])
-	Text3 = TextCreate(Text_Frame, L["Frost"])
-elseif Class == Str_Int.Class["Death Knight"] then
-	ASCT_DB["Class"]["Death Knight"] = true
-	Text1 = TextCreate(Text_Frame, L["Blood"])
-	Text2 = TextCreate(Text_Frame, L["Frost"])
-	Text3 = TextCreate(Text_Frame, L["Unholy"])
+local Class = Lua_API.Functions["Select"](3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
+local classMapping = ASCT.Tables.OptionsPanel["ClassMapping"]
+-- Check if the player's class matches and dynamically set values
+for className, data in pairs(Str_Int.Class) do
+    if Class == data then
+        ASCT_DB["Class"][classMapping[className].dbKey] = true
+        Text1 = TextCreate(Text_Frame, L[classMapping[className].specs[1]])
+        Text2 = TextCreate(Text_Frame, L[classMapping[className].specs[2]])
+        Text3 = TextCreate(Text_Frame, L[classMapping[className].specs[3]])
+        break
+    end
 end
 -------------------------
 ---Tabs
@@ -196,7 +158,7 @@ LibStub("LibDBIcon-1.0"):Register("ASCT", MinimapDataObject, ASCT_DB)
 ---------------------------
 --Color Picker Spells
 ---------------------------
-local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["Button"], nil, content5, "UIPanelButtonTemplate")
+local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["Button"], Lua_API.Var_Type["nil"], content5, "UIPanelButtonTemplate")
     Widget.API["SetPoint"](Color_picker_SARTE, Strings.Point["TOPRIGHT"], -70, -20)
     Widget.API["SetText"](Color_picker_SARTE, L["Color Picker"])
     Widget.API["SetWidth"](Color_picker_SARTE, 150)
@@ -212,7 +174,7 @@ InterfaceOptions_AddCategory(panel_main)
 ---------------------------
 --Open to options panel through default options panel
 ---------------------------
-local OpenToOptionsPanel = API.Documentation["CreateFrame"](Strings.FrameType["Button"], nil, panel_main, "UIPanelButtonTemplate")
+local OpenToOptionsPanel = API.Documentation["CreateFrame"](Strings.FrameType["Button"], Lua_API.Var_Type["nil"], panel_main, "UIPanelButtonTemplate")
 	Widget.API["SetPoint"](OpenToOptionsPanel, Strings.Point["CENTER"], 0, 0)
 	Widget.API["SetText"](OpenToOptionsPanel, L["Open To Options Panel"])
 	Widget.API["SetWidth"](OpenToOptionsPanel, 150)
@@ -233,6 +195,7 @@ local CreateStatToggle = Frames.Widgets["CreateStatToggle"]
 --Buttons
 ---------------------------
 local Buttons = Frames.Widgets["Buttons"]
+local CreateResetButtonToggles = Frames.Widgets["CreateResetButtonToggles"]
 ---------------------------
 --Name Icon Toggles
 ---------------------------
@@ -244,43 +207,68 @@ local CreateSpellToggle = Frames.Widgets["CreateSpellToggle"]
 local Locale_SpellName = Locale.Spells["ASCT_GetLocalizedName"]
 local Locale_SpellIcon = Locale.Spells["ASCT_GetLocalizedIcon"]
 ---------------------------
+--Trinket Toggle
+---------------------------
+local CreateTrinketToggle = Frames.Widgets["CreateTrinketToggle"]
+local CreateTrinketNameIconsToggles = Frames.Widgets["CreateTrinketNameIconsToggles"]
+---------------------------
 --Table Sorting
 ---------------------------
 local PairsByKeys = Functions.Table["PairsByKeys"]
 ---------------------------
+--Dropdown Menu Function
+---------------------------
+local CreateDropdownMenu = ASCT.Frames.Widgets["CreateDropdownMenu"]
+---------------------------
 -- Advanced Scrolling Combat Text Leveling
 ---------------------------
-local col_AD = 4
-local x_AD = 0
 for v in PairsByKeys(ASCT_DB, ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]) do
-	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], nil, content7, "InterfaceOptionsCheckButtonTemplate")
-	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD % col_AD), -20 + (- Widget.API["GetHeight"](b)-5) * math.floor(x_AD/col_AD))
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], Lua_API.Var_Type["nil"], content7, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_AD_1"] % Integers.SpellToggle.Column["col_AD_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-5) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_1"]/Integers.SpellToggle.Column["col_AD_1"]))
 	Widget.API["SetText"](b.Text, L[v])
 	Widget.API["SetChecked"](b, ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"][v])
 	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"][v] = Widget.API["GetChecked"](s) end)
-	x_AD=x_AD+1
+	Integers.SpellToggle.Row["x_AD_1"]=Integers.SpellToggle.Row["x_AD_1"]+1
 end
+---------------------------
+-- Onlogin_Values
+---------------------------
+--[[
+for v in PairsByKeys(ASCT_DB, ASCT_DB["Display_On_Login"]) do
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], Lua_API.Var_Type["nil"], content11, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_AD_2"] % col_AD_5), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-5) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_2"]/col_AD_5))
+	Widget.API["SetText"](b.Text, L[v])
+	Widget.API["SetChecked"](b, ASCT_DB["Display_On_Login"][v])
+	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Display_On_Login"][v] = Widget.API["GetChecked"](s) end)
+	Integers.SpellToggle.Row["x_AD_2"]=Integers.SpellToggle.Row["x_AD_2"]+1
+end
+]]
 ---------------------------
 -- Advanced Scrolling Combat Stats
 ---------------------------
-local col_AD_3 = 4
-local x_AD_3 = 0
 for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Advanced_Scrolling_Combat_Text_Stats"]) do
     local b = CreateStatToggle(Stat, settings, content8)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD_3 % col_AD_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_AD_3/col_AD_3))
-    x_AD_3=x_AD_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_AD_3"] % Integers.SpellToggle.Column["col_AD_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_3"]/Integers.SpellToggle.Column["col_AD_3"]))
+    Integers.SpellToggle.Row["x_AD_3"]=Integers.SpellToggle.Row["x_AD_3"]+1
     CreateGainsLossToggles(b, settings, content8)
 end
 ---------------------------
 -- Advanced Scrolling Combat Resistances
 ---------------------------
-local col_AD_4 = 4
-local x_AD_4 = 0
 for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Advanced_Scrolling_Combat_Text_Resistance"]) do
     local b = CreateStatToggle(Stat, settings, content9)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD_4 % col_AD_4), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_AD_4/col_AD_4))
-    x_AD_4=x_AD_4+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_AD_4"] % Integers.SpellToggle.Column["col_AD_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_4"]/Integers.SpellToggle.Column["col_AD_4"]))
+    Integers.SpellToggle.Row["x_AD_4"]=Integers.SpellToggle.Row["x_AD_4"]+1
     CreateGainsLossToggles(b, settings, content9)
+end
+---------------------------
+--Trinkets
+---------------------------
+for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Trinkets"]) do
+    local b = CreateTrinketToggle(Stat, settings, content11)
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_AD_5"] % Integers.SpellToggle.Column["col_AD_5"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_5"]/Integers.SpellToggle.Column["col_AD_5"]))
+    Integers.SpellToggle.Row["x_AD_5"]=Integers.SpellToggle.Row["x_AD_5"]+1
+    CreateTrinketNameIconsToggles(b, settings, content11)
 end
 ---------------------------
 --Custom Buttons
@@ -291,13 +279,21 @@ local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "
 ---------------------------
 local SliderText_Icon = TitleCreate(content5, Strings.Point["TOP"], -265, -10, Strings.Point["TOP"], L["Icon Size"])
 local Icon_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -40, "Integer_Values", "Icon")
-local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
+local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -20, Strings.Orientation["HORIZONTAL"], 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
 ---------------------------
 --Debuff Slider
 ---------------------------
 local SliderText_Debuff = TitleCreate(content5, Strings.Point["TOP"], -265, -130, Strings.Point["TOP"], L["Debuff fade time"])
 local Debuff_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -160, "Integer_Values", "Debuff_time")
-local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -140, Strings.Orientation["HORIZONTAL"], 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+---------------------------
+--Dropdown Menu
+---------------------------
+local fonts = {"Ready!", "Is Ready!", "is now ready!"}
+local dropdown1 = CreateDropdownMenu("ASCTMessageFontDropdown", content5, Strings.Point["TOP"], 0, -20, Strings.Point["TOP"], ASCT_DB, 150, fonts, "Message_Selector", "Msg")
+local text = API.Documentation["CreateFontString"](dropdown1, Lua_API.Var_Type["nil"], Strings.Layer["OVERLAY"], "GameFontHighlight")
+Widget.API["SetText"](text, L["Ready Message"])
+Widget.API["SetPoint"](text, Strings.Point["TOP"], dropdown1, Strings.Point["TOP"], 0, 12)
 ---------------------------
 --Reset All Slider Values
 ---------------------------
@@ -331,499 +327,477 @@ local All_Slider_Reset = Frames.Widgets["MakeSliderReset"](
     },
   }
 )
----------------------------
---Trinket Toggle
----------------------------
-local CreateTrinketToggle = Frames.Widgets["CreateTrinketToggle"]
----------------------------
---Trinket Name and Icon Toggles
----------------------------
-local CreateTrinketNameIconsToggles = Frames.Widgets["CreateTrinketNameIconsToggles"]
----------------------------
---Trinkets
----------------------------
-local col_AD_5 = 4
-local x_AD_5 = 0
-for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Trinkets"]) do
-    local b = CreateTrinketToggle(Stat, settings, content11)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_AD_5 % col_AD_5), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_AD_5/col_AD_5))
-    x_AD_5=x_AD_5+1
-    CreateTrinketNameIconsToggles(b, settings, content11)
-end
+--[[
+CreateResetButtonToggles({
+    FrameName = "ResetFrameSizeAndLocationButton",
+    ButtonAnchor = content5,
+    ButtonWidth = 240,
+    ButtonHeight = 30,
+    Text = L["Reset Options Panel Size And Location"],
+    Point = "CENTER",
+    RelativePoint = "CENTER",
+    ButtonX = 0,
+    ButtonY = 0,
+    ResetFrame = ASCT_Config,
+    OriginalWidth = 1000,
+    OriginalHeight = 650,
+    OriginalPoint = "CENTER",
+    OriginalRelativeToAnchor = UIParent,
+    OriginalRelativePoint = "CENTER"
+})
+]]
 ---------------------------
 --Rogue
 ---------------------------
 if ASCT_DB["Class"]["Rogue"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Assassination
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Assassination"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Combat
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Combat"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Subtlety
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Subtlety"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
-
 ---------------------------
 --Priest
 ---------------------------
 elseif ASCT_DB["Class"]["Priest"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Shadow
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Shadow"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Holy
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Holy_Priest"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Discipline
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Discipline"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
-
-
 ---------------------------
 --Warrior
 ---------------------------
 elseif ASCT_DB["Class"]["Warrior"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Arms
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Arms"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Fury
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Fury"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Protection
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Protection_Warrior"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 ---------------------------
 --Druid
 ---------------------------
 elseif ASCT_DB["Class"]["Druid"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Balance
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Balance"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Feral_Combat
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Feral_Combat"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Restoration
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Druid_Restoration"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 ---------------------------
 --Shaman
 ---------------------------
 elseif ASCT_DB["Class"]["Shaman"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Elemental
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Elemental"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Enhancement
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Enhancement"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Restoration
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Shaman_Restoration"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
-
-local col_4 = 4
-local x_4 = 0
+---------------------------
+--Shared_Spells
+---------------------------
 for v in PairsByKeys(ASCT_DB, ASCT_DB["Shared_Shaman_spells"]) do
-	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], nil, content6, "InterfaceOptionsCheckButtonTemplate")
-	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_4 % col_4), -20 + (- Widget.API["GetHeight"](b)-25) * math.floor(x_4/col_4))
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], Lua_API.Var_Type["nil"], content6, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_Shared"] % Integers.SpellToggle.Column["col_Shared"]), -20 + (- Widget.API["GetHeight"](b)-25) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_Shared"]/Integers.SpellToggle.Column["col_Shared"]))
 	Widget.API["SetText"](b.Text, L[v])
 	Widget.API["SetChecked"](b, ASCT_DB["Shared_Shaman_spells"][v])
 	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Shared_Shaman_spells"][v] = Widget.API["GetChecked"](s) end)
-	x_4=x_4+1
+	Integers.SpellToggle.Row["x_Shared"]=Integers.SpellToggle.Row["x_Shared"]+1
 end
 ---------------------------
 --Warlock
 ---------------------------
 elseif ASCT_DB["Class"]["Warlock"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Affliction
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Affliction"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Demonology
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Demonology"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Destruction
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Destruction"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 ---------------------------
 --Hunter
 ---------------------------
 elseif ASCT_DB["Class"]["Hunter"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Beast Mastery
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Beast Mastery"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Marksmanship
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Marksmanship"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Survival
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Survival"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
-
-local col_4 = 4
-local x_4 = 0
+---------------------------
+--Shared_Spells
+---------------------------
 for v in PairsByKeys(ASCT_DB, ASCT_DB["Shared_Hunter_spells"]) do
-	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], nil, content6, "InterfaceOptionsCheckButtonTemplate")
-	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_4 % col_4), -20 + (- Widget.API["GetHeight"](b)-25) * math.floor(x_4/col_4))
+	local b = API.Documentation["CreateFrame"](Strings.FrameType["CheckButton"], Lua_API.Var_Type["nil"], content6, "InterfaceOptionsCheckButtonTemplate")
+	Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_Shared"] % Integers.SpellToggle.Column["col_Shared"]), -20 + (- Widget.API["GetHeight"](b)-25) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_Shared"]/Integers.SpellToggle.Column["col_Shared"]))
 	Widget.API["SetText"](b.Text, L[v])
 	Widget.API["SetChecked"](b, ASCT_DB["Shared_Hunter_spells"][v])
 	Scripts.Frame["OnClick"](b, function(s) ASCT_DB["Shared_Hunter_spells"][v] = Widget.API["GetChecked"](s) end)
-	x_4=x_4+1
+	Integers.SpellToggle.Row["x_Shared"]=Integers.SpellToggle.Row["x_Shared"]+1
 end
 ---------------------------
 --Paladin
 ---------------------------
 elseif ASCT_DB["Class"]["Paladin"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Holy
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Holy_Paladin"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Protection
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Protection_Paladin"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Retribution
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Retribution"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 ---------------------------
 --Mage
 ---------------------------
 elseif ASCT_DB["Class"]["Mage"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Arcane
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Arcane"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Fire
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Fire"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Frost
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Frost_Mage"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 ---------------------------
 --Death_Knight
 ---------------------------
 elseif ASCT_DB["Class"]["Death_Knight"] == true then
-local col_1 = 4
-local x_1 = 0
+---------------------------
+--Blood
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Blood"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content1)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_1"] % Integers.SpellToggle.Column["col_1"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_1"]/Integers.SpellToggle.Column["col_1"]))
+    Integers.SpellToggle.Row["x_1"]=Integers.SpellToggle.Row["x_1"]+1
     CreateNameIconToggles(b, settings, content1)
 end
-
-local col_2 = 4
-local x_2 = 0
+---------------------------
+--Frost
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Frost_DK"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content2)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_2 % col_2), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_2/col_2))
-    x_2=x_2+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_2"] % Integers.SpellToggle.Column["col_2"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_2"]/Integers.SpellToggle.Column["col_2"]))
+    Integers.SpellToggle.Row["x_2"]=Integers.SpellToggle.Row["x_2"]+1
     CreateNameIconToggles(b, settings, content2)
 end
-
-local col_3 = 4
-local x_3 = 0
+---------------------------
+--Unholy
+---------------------------
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Unholy"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content3)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_3 % col_3), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_3/col_3))
-    x_3=x_3+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_3"] % Integers.SpellToggle.Column["col_3"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_3"]/Integers.SpellToggle.Column["col_3"]))
+    Integers.SpellToggle.Row["x_3"]=Integers.SpellToggle.Row["x_3"]+1
     CreateNameIconToggles(b, settings, content3)
 end
 
-
 end
 
 ------------------------
---AutoMatic Race Picker
+--Automatic Race Picker
 ------------------------
-local Race = select(3, API.Documentation["UnitRace"](Strings.UnitId["player"]))
-if Race == Str_Int.Race["Undead"] then
-	ASCT_DB["Race"]["Undead"] = true
-elseif Race == Str_Int.Race["Orc"] then
-	ASCT_DB["Race"]["Orc"] = true
-elseif Race == Str_Int.Race["Dwarf"] then
-	ASCT_DB["Race"]["Dwarf"] = true
-elseif Race == Str_Int.Race["Gnome"] then
-	ASCT_DB["Race"]["Gnome"] = true
-elseif Race == Str_Int.Race["Night Elf"] then
-	ASCT_DB["Race"]["Night Elf"] = true
-elseif Race == Str_Int.Race["Troll"] then
-	ASCT_DB["Race"]["Troll"] = true
-elseif Race == Str_Int.Race["Tauren"] then
-	ASCT_DB["Race"]["Tauren"] = true
-elseif Race == Str_Int.Race["Human"] then
-	ASCT_DB["Race"]["Human"] = true
-elseif Race == Str_Int.Race["Blood Elf"] then
-	ASCT_DB["Race"]["Blood Elf"] = true
-elseif Race == Str_Int.Race["Draenei"] then
-	ASCT_DB["Race"]["Draenei"] = true
+local Race = Lua_API.Functions["Select"](3, API.Documentation["UnitRace"](Strings.UnitId["player"]))
+-- Iterate over the ASCT.Str_Int.Race table
+for raceName, raceID in pairs(ASCT.Str_Int.Race) do
+    -- Handle cases with multiple IDs (e.g., Pandaren, Dracthyr, Earthen)
+    if type(raceID) == "table" then
+        for _, id in ipairs(raceID) do
+            if Race == id then
+                ASCT_DB["Race"][raceName] = true
+                break
+            end
+        end
+    elseif Race == raceID then
+        ASCT_DB["Race"][raceName] = true
+        break
+    end
 end
-
 
 ------------------------
 --Undead
 ------------------------
 if ASCT_DB["Race"]["Undead"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Undead"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 ------------------------
 --Orc
 ------------------------
 elseif ASCT_DB["Race"]["Orc"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Orc"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 -----------------------
 --Troll
 -----------------------
 elseif ASCT_DB["Race"]["Troll"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Troll"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 -----------------------
 --Tauren
 -----------------------
 elseif ASCT_DB["Race"]["Tauren"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Tauren"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 ---------------------
  --Human
 --------------------- 
 elseif ASCT_DB["Race"]["Human"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Human"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 -------------------
 --Night Elf
 -------------------
-
 elseif ASCT_DB["Race"]["Night Elf"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Night Elf"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
  ---------------------
 --Gnome
 ---------------------
 elseif ASCT_DB["Race"]["Gnome"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Gnome"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end  ---------------------
 --Dwarf
 ---------------------
 elseif ASCT_DB["Race"]["Dwarf"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Dwarf"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 ---------------------
 --Blood Elf
 ---------------------
 elseif ASCT_DB["Race"]["Blood Elf"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Blood Elf"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 ---------------------
 --Draenei 
 ---------------------
 elseif ASCT_DB["Race"]["Draenei"] == true then
-local col_1 = 4
-local x_1 = 0
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Draenei"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+200) * (x_1 % col_1), -20 + (- Widget.API["GetHeight"](b)-70) * math.floor(x_1/col_1))
-    x_1=x_1+1
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Wrath"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Wrath"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Wrath"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
 

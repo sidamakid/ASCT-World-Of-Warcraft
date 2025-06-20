@@ -8,5 +8,6 @@
     <Script file="Vanilla_11504_locale.lua"/>
     <Script file="Vanilla_11505_locale.lua"/>
     <Script file="Vanilla_11506_locale.lua"/>
+    <Script file="Vanilla_11507_locale.lua"/>
     <Include file="Seasonal\Seasonal.xml"/>
 </UI>

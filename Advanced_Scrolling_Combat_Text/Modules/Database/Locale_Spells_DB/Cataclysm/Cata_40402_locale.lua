@@ -28,6 +28,7 @@ ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizi
     ["Premeditation"] = 14183,
     ["Shadowstep"] = 36554,
     --Priest
+    ["Archangel"] = 87151 or 81700,
     ["Power Word: Shield"] = 17,
     ["Fear Ward"] = 6346,
     ["Power Word: Barrier"] = 62618,
