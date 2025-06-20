@@ -1,4 +1,5 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
 local Frames, Functions, Scripts, API, Strings = ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
 local f = Frames.SARTE["Duel_Request_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()

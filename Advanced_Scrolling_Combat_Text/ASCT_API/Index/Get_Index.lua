@@ -98,3 +98,14 @@ ASCT.API.Documentation["GetQuestLogIndexByID"] = function(questID)
     local questLogIndex = GetQuestLogIndexByID(questID)
     return questLogIndex
 end
+---------------------------
+--GetPvpPower
+---------------------------
+ASCT.API.Documentation["GetPvpPowerDamage"] = function()
+    local powerDamage = GetPvpPowerDamage()
+    return powerDamage
+end
+ASCT.API.Documentation["GetPvpPowerHealing"] = function()
+    local powerHealing = GetPvpPowerHealing()
+    return powerHealing
+end

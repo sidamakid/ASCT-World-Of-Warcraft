@@ -1,4 +1,7 @@
 <UI>
     <Script file="Column_Integers.lua"/>
     <Script file="Row_Integers.lua"/>
+    <Script file="X_SpellToggle_Integers.lua"/>
+    <Script file="Y_SpellToggle_Integers.lua"/>
+    <Script file="Button_Width_SpellToggle_Integers.lua"/>
 </UI>

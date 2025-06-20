@@ -1,6 +1,6 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
 local Client, Frames, Functions, Scripts, API, Strings = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
-if Client.LE_EXPANSION_LEVEL["is_Tbc-Wrath_Wow"] then
+if Client.LE_EXPANSION_LEVEL["is_Wrath-Cata_Wow"] then
 local lastStat = -1
 local f = Frames.SARTE["Spell_Power_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()

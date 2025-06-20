@@ -1,5 +1,6 @@
 <UI>
     <Script file="Utility.lua"/>
+    <Include file="Tables\Tables.xml"/>
     <Include file="Integers\Integers.xml"/>
     <Include file="Strings\Strings.xml"/>
     <Include file="Strings_To_Integers\Strings_To_Integers.xml"/>

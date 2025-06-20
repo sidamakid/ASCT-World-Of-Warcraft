@@ -1,0 +1,17 @@
+local Lua_API = Lua_API_Table
+local ASCT = ASCT_Table
+ASCT.Metatables.SetMetatable("Lua_ASCT", ASCT.Lua_ASCT)
+ASCT.Metatables.SetMetatable("Client", ASCT.Client)
+ASCT.Metatables.SetMetatable("Frames", ASCT.Frames)
+ASCT.Metatables.SetMetatable("Functions", ASCT.Functions)
+ASCT.Metatables.SetMetatable("Scripts", ASCT.Scripts)
+ASCT.Metatables.SetMetatable("API", ASCT.API)
+ASCT.Metatables.SetMetatable("Strings", ASCT.Strings)
+ASCT.Metatables.SetMetatable("Locale", ASCT.Locale)
+ASCT.Metatables.SetMetatable("Database", ASCT.Database)
+ASCT.Metatables.SetMetatable("Widget", ASCT.Widget)
+ASCT.Metatables.SetMetatable("Integers", ASCT.Integers)
+ASCT.Metatables.SetMetatable("Str_Int", ASCT.Str_Int)
+ASCT.Metatables.SetMetatable("Events", ASCT.Events)
+ASCT.Metatables.SetMetatable("Customs", ASCT.Customs)
+ASCT.Metatables.SetMetatable("Misc", ASCT.Miscellaneous)

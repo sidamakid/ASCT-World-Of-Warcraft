@@ -1,8 +1,9 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
-local Customs, Client, Frames, Functions, Scripts, API, Strings = ASCT.Customs, ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
+local Lua_ASCT, Client, Frames, Functions, Scripts, API, Strings = ASCT.Lua_ASCT, ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
 if Client.LE_EXPANSION_LEVEL["isCataclysmWow"] then
-local lastPower = Customs.Vars.Resource_Loss["lastPower"]
-local power = Customs.Vars.Resource_Loss["power"]
+local lastPower = Lua_ASCT.SARTE.Variables.Resource_Loss["lastPower"]
+local power = Lua_ASCT.SARTE.Variables.Resource_Loss["power"]
 local f = Frames.SARTE["Resource_Loss_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 Scripts.Frame["OnEvent"](f, function()
@@ -15,6 +16,10 @@ Scripts.Frame["OnEvent"](f, function()
     power = L["Energy"]
   elseif select(2, API.Documentation["UnitPowerType"](Strings.UnitId["player"])) == "RUNIC_POWER" then
     power = L["Runic Power"]
+  elseif select(2, API.Documentation["UnitPowerType"](Strings.UnitId["player"])) == "FOCUS" then
+    power = L["Focus"]
+  elseif select(2, API.Documentation["UnitPowerType"](Strings.UnitId["player"])) == "HOLY_POWER" then
+    power = L["Holy Power"]
   end
   if ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Resource lost"] == true then
   if not lastPower then

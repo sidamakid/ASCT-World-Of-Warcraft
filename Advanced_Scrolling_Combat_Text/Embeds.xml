@@ -1,7 +1,10 @@
 <UI>
     <Include file="Embeds-libs.xml"/>
     <Script file="Copy_Saved_Variables.lua"/>
+    <Include file="Lua_Modules\Embeds.xml"/>
     <Include file="ASCT_Metatables\Embeds.xml"/>
+    <Include file="ASCT_Metatables_Modules\Embeds.xml"/>
+    <Include file="ASCT_Keyword_Modules\Embeds.xml"/>
     <Include file="ASCT_API\Embeds.xml"/>
     <Include file="ASCT_Client\Embeds.xml"/>
     <Script file="localize.lua"/>
@@ -10,10 +13,11 @@
     <Include file="Modules\Moudules.xml"/>
     <Include file="Options_Panel_Modules\Options_Panel_Modules.xml"/>
     <Include file="Options_Panel\Embeds.xml"/>
-    <Script file="SCT_Check.lua"/>
+    <Include file="On_Login\On_Login.xml"/>
     <Include file="ASCT_Modules\ASCT_Modules.xml"/>
+    <!-- <Include file="Miscellaneous_Features\Miscellaneous_Features.xml"/>
     <Include file="Miscellaneous_Functions\Miscellaneous_Functions.xml"/>
-    <!-- <Include file="Miscellaneous_Features\Miscellaneous_Features.xml"/> -->
-    <Include file="ASCT_Custom_Modules\ASCT_Custom_Modules.xml"/>
+    <Include file="ASCT_Custom_Modules\ASCT_Custom_Modules.xml"/> -->
     <Include file="ASCT_Core\ASCT_Core.xml"/>
+    <!-- <Script file="Test_Functions.lua"/> -->
 </UI>

@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Title_Text.lua"/>
+    <Script file="Text.lua"/>
+</UI>

@@ -1,5 +1,6 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
-local Frames, Scripts, API, Strings, Functions, Events = ASCT.Frames, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Functions, ASCT.Events
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
+local Frames, Scripts, API, Strings, Functions, Events = Keys.Metatables["Frames"], Keys.Metatables["Scripts"], Keys.Metatables["API"], Keys.Metatables["Strings"], Keys.Metatables["Functions"], Keys.Metatables["Events"]
 local function MakeTrinketTracker(unit, inventorySlot, dbSettings, Icon_Size)
   local lastStart
   local f = Frames.SARTE["Trinket_OnUpdate_Frame"]
@@ -23,7 +24,7 @@ local function MakeTrinketTracker(unit, inventorySlot, dbSettings, Icon_Size)
           return
         end
         if Comabt_Text == true then
-        local msg = string.format ("%s"..L["msg"], details)
+        local msg = string.format ("%s"..L[ASCT_DB["Message_Selector"]["Msg"]], details)
         Functions.CombatText["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
         end
       end

@@ -1,5 +1,6 @@
-local ASCT = ASCT_Table
-local Client, Frames, Functions, Scripts, API, Strings = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
+local Client, Frames, Functions, Scripts, API, Strings = Keys.Metatables["Client"], Keys.Metatables["Frames"], Keys.Metatables["Functions"], Keys.Metatables["Scripts"], Keys.Metatables["API"], Keys.Metatables["Strings"]
 if Client.LE_EXPANSION_LEVEL["isWrathWowOrAbove"] then
 local f = Frames.SARTE["Achievement_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()

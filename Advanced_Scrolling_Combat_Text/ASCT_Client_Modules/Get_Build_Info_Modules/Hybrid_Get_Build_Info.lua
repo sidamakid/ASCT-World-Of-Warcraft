@@ -1,5 +1,5 @@
 local ASCT = ASCT_Table
-local Client, Lua_ASCT, Integers = ASCT.Client, ASCT.Lua_ASCT, ASCT.Integers
+local API, Client, Lua_ASCT, Integers = ASCT.API, ASCT.Client, ASCT.Lua_ASCT, ASCT.Integers
 
-Client.Modules["isRetailWow_Or_Above"] = Lua_ASCT.API["GetBuildInfo"](4) >= Integers.Client["110007"]
-Client.Modules["isNotRetailWow_Or_Above"] = Lua_ASCT.API["GetBuildInfo"](4) < Integers.Client["110007"]
+Client.Modules["isRetailWow_Or_Above"] = select(4, API.Documentation["GetBuildInfo"]()) >= Integers.Client["110007"]
+Client.Modules["isNotRetailWow_Or_Above"] = select(4, API.Documentation["GetBuildInfo"]()) < Integers.Client["110007"]

@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Setup_SpellToggle.lua"/>
+    <Script file="Location_SpellToggle.lua"/>
+    <Script file="Dimensions_SpellToggle.lua"/>
+</UI>

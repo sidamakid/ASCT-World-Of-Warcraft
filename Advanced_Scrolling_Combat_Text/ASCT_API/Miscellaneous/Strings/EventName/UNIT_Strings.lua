@@ -1,5 +1,6 @@
 local ASCT = ASCT_Table
 --ASCT.Strings.EventName
+ASCT.Strings.EventName["UNIT_AURA"] = "UNIT_AURA"
 ASCT.Strings.EventName["UNIT_SPELLCAST_SUCCEEDED"] = "UNIT_SPELLCAST_SUCCEEDED"
 ASCT.Strings.EventName["UNIT_STATS"] = "UNIT_STATS"
 ASCT.Strings.EventName["UNIT_POWER_FREQUENT"] = "UNIT_POWER_FREQUENT"

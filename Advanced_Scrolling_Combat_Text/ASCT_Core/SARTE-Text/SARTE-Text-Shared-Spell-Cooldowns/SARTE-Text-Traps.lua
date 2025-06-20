@@ -1,4 +1,5 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
 local Client, Frames, Functions, Scripts, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Locale
 if Client.LE_EXPANSION_LEVEL["is_Vanilla-Tbc-Wrath_Wow"] then
 local class_Check = select(3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
@@ -30,7 +31,7 @@ Scripts.Frame["OnEvent"](f, --Run when our event fires
       local spellName = API.Documentation["GetSpellInfo"](spellName)
       if unit == Strings.UnitId["player"] then
        if SpellTableHunterTraps[Locale.Spells["ASCT_GetEnglishName"](spellName)] and ASCT_DB["Shared_Hunter_spells"]["Traps"] == true then
-         local spellFrame = _G[ASCT_SARTE..spellName] or API.Documentation["CreateFrame"](Strings.FrameType["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         local spellFrame = Lua_API.Var_Environment["_G"][ASCT_SARTE..spellName] or API.Documentation["CreateFrame"](Strings.FrameType["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
          Scripts.Frame["OnUpdate"](spellFrame, --Run forever!
             function()
                start, duration = API.Documentation["GetSpellCooldown"](spellName) --Grab the needed time data

@@ -1,4 +1,4 @@
-local ASCT = ASCT_Table
+local Lua_API, ASCT = Lua_API_Table, ASCT_Table
 ---------------------------
 --Merge New Values from cleanDefaults into savedVars
 ---------------------------
@@ -51,8 +51,8 @@ end
 ---------------------------
 ASCT.Functions.Table["PairsByKeys"] = function (a, t, g)
   a = {}
-  for n in pairs(t) do table.insert(a, n) end
-  table.sort(a, g)
+  for n in pairs(t) do Lua_API.Table["table.insert"](a, n) end
+  Lua_API.Table["table.sort"](a, g)
   local i = 0      -- iterator variable
   local iter = function ()   -- iterator function
       i = i + 1
@@ -63,3 +63,24 @@ ASCT.Functions.Table["PairsByKeys"] = function (a, t, g)
   return iter
 end
 --Example: ASCT.Functions["PairsByKeys"](Table1, Table1(SubTable))
+ASCT.Functions.Table["ipairsByKeys"] = function (t)
+  -- Create an array of the keys in the table
+  local keys = {}
+  for k in pairs(t) do
+      Lua_API.Table["table.insert"](keys, k)
+  end
+
+  -- Sort the keys
+  Lua_API.Table["table.sort"](keys)
+
+  -- Iterator function
+  local i = 0
+  local function iter()
+      i = i + 1
+      if keys[i] then
+          return keys[i], t[keys[i]]
+      end
+  end
+
+  return iter
+end

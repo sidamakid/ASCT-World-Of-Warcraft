@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Color_picker_saved.lua"/>
+    <Script file="Color_picker.lua"/>
+</UI>

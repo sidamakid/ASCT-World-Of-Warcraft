@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Dropdown_Widgets_Classic.lua"/>
+    <Script file="Dropdown_Widgets_DragonFlight.lua"/>
+    <Script file="Dropdown_Widgets_The_War_Within.lua"/>
+</UI>

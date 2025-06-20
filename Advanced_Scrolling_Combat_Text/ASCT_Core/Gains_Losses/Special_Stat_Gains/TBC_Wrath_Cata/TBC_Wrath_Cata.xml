@@ -1,10 +1,11 @@
 <UI>
-    <Script file="Dodge Rating.lua"/>
+    <!-- <Script file="Dodge Rating.lua"/>
     <Script file="Critcal Strike.lua"/>
     <Script file="Expertise.lua"/>
     <Script file="Haste Rating.lua"/>
     <Script file="Hit Rating.lua"/>
     <Script file="Parry Rating.lua"/>
-    <Script file="Resilience.lua"/>
+    <Script file="Resilience.lua"/> -->
     <Script file="Spell Penetration.lua"/>
+    <Script file="All_Special_Stat_Gains-TBC_Wrath_Cata.lua"/>
 </UI>

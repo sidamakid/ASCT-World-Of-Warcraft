@@ -1,0 +1,7 @@
+<UI>
+    <Include file="Text_Widgets\Text_Widgets.xml"/>
+    <Include file="Slider_Widgets\Slider_Widgets.xml"/>
+    <Include file="Button_Widgets\Button_Widgets.xml"/>
+    <Include file="Dropdown_Widgets\Dropdown_Widgets.xml"/>
+    <Include file="Color_Picker_Widgets\Color_Picker_Widgets.xml"/>
+</UI>

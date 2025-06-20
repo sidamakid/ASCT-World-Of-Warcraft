@@ -3,6 +3,7 @@
     <Script file="Resource_Loss-TBC.lua"/>
     <Script file="Resource_Loss-WOTLK.lua"/>
     <Script file="Resource_Loss-Cata.lua"/>
+    <Script file="Resource_Loss-MOP.lua"/>
     <Script file="Resource_Loss-SL.lua"/>
     <Script file="Resource_Loss-DF.lua"/>
     <Script file="Resource_Loss-TWW.lua"/>

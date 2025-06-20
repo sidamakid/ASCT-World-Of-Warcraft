@@ -1,4 +1,5 @@
-local ASCT = ASCT_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
 local Frames, Scripts, Functions, API, Strings = ASCT.Frames, ASCT.Scripts, ASCT.Functions, ASCT.API, ASCT.Strings
 local Loot_Money = Frames.SARTE["Money_Loot_Frame"]
 
@@ -9,7 +10,8 @@ Scripts.Frame["OnEvent"](Loot_Money, function (self, event, ...)
       local message = ...
       local globalStrings = {
           YOU_LOOT_MONEY,
-          LOOT_MONEY_SPLIT
+          LOOT_MONEY_SPLIT,
+          --ERR_QUEST_REWARD_MONEY_S,
       }
       local MoneyGains
       -- Work through each possible pattern and break on the first pattern that matches

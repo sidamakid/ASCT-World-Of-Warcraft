@@ -1,4 +1,4 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
 local Frames, Scripts, Functions, API, Strings = ASCT.Frames, ASCT.Scripts, ASCT.Functions, ASCT.API, ASCT.Strings
 local Loot = Frames.SARTE["Transmog_Gained_Loot_Frame"]
 Scripts.Frame["OnEvent"](Loot,

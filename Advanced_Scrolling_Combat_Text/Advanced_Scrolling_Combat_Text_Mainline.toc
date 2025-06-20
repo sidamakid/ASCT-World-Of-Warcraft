@@ -1,5 +1,5 @@
-## Interface: 110005, 110007, 110100
-## Version: 10.7.5
+## Interface: 110005, 110007, 110100, 110105, 110107, 110200
+## Version: 11.1.5
 ## Title: Advanced Scrolling Combat Text
 ## Title-koKR: 고급 스크롤 전투 텍스트
 ## Title-frFR: Texte de combat à défilement avancé

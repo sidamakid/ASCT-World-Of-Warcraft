@@ -1,5 +1,7 @@
 <UI>
+    <!-- 
     <Script file="Armor Penetration.lua"/>
     <Script file="Block.lua"/>
-    <Script file="Defense Rating.lua"/>
+    <Script file="Defense Rating.lua"/> -->
+    <Script file="All_Special_Stat_Gains-TBC_Wrath.lua"/>
 </UI>

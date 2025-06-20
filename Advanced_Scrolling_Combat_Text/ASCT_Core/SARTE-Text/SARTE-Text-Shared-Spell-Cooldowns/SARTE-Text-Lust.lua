@@ -1,5 +1,6 @@
 local ASCT, L = ASCT_Table, ASCT_locale_Table
-local Client, Frames, Functions, Scripts, API, Strings, Locale = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Locale
+local Keys = ASCT.Keys
+local Client, Frames, Functions, Scripts, API, Strings, Locale = Keys.Metatables["Client"], Keys.Metatables["Frames"], Keys.Metatables["Functions"], Keys.Metatables["Scripts"], Keys.Metatables["API"], Keys.Metatables["Strings"], Keys.Metatables["Locale"]
 if Client.LE_EXPANSION_LEVEL["isTbcWowOrAbove"] then
 local class_Check = select(3, API.Documentation["UnitClass"](Strings.UnitId["player"]))
 if class_Check == 7 then

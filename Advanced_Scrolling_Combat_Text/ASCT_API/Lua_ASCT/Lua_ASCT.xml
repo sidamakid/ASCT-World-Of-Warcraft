@@ -1,0 +1,6 @@
+<UI>
+    <Include file="Val\Val.xml"/>
+    <Include file="Tables\Tables.xml"/>
+    <!-- <Include file="API\API.xml"/> -->
+    <Include file="Functions\Functions.xml"/>
+</UI>

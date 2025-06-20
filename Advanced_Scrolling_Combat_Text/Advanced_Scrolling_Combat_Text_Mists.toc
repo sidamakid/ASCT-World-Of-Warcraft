@@ -1,0 +1,32 @@
+## Interface: 50500
+## Version: 11.1.5
+## Title: Advanced Scrolling Combat Text
+## Title-koKR: 고급 스크롤 전투 텍스트
+## Title-frFR: Texte de combat à défilement avancé
+## Title-deDE: Erweiterter Scrolling-Kampftext
+## Title-zhCN: 高级滚动战斗文本
+## Title-zhTW: 高級滾動戰鬥文本
+## Title-esES: Texto de combate de desplazamiento avanzado
+## Title-esMX: Texto de combate de desplazamiento avanzado
+## Title-ruRU: Расширенная прокрутка боевого текста
+## Title-ptBR: Texto de combate de rolagem avançada
+## Title-itIT: Testo di combattimento a scorrimento avanzato
+## Notes: Adds additional functionality to the default Blizzard Scrolling Combat Text
+## Notes-koKR: 기본 블리자드 스크롤 전투 텍스트에 추가 기능을 추가합니다.
+## Notes-frFR: Ajout de fonctionnalités supplémentaires au texte de combat défilant Blizzard par défaut
+## Notes-deDE: Fügt dem standardmäßigen Blizzard-Lauftext zusätzliche Funktionen hinzu
+## Notes-zhCN: 为默认的暴雪滚动战斗文本添加附加功能
+## Notes-zhTW: 為預設的暴雪滾動戰鬥文本添加附加功能
+## Notes-esES: Agrega funcionalidad adicional al texto de combate de desplazamiento de Blizzard predeterminado.
+## Notes-esMX: Agrega funcionalidad adicional al texto de combate de desplazamiento de Blizzard predeterminado.
+## Notes-ruRU: Добавлена дополнительная функциональность к стандартному боевому тексту Blizzard Scrolling.
+## Notes-ptBR: Adiciona funcionalidade adicional ao texto padrão do Blizzard Scrolling Combat
+## Notes-itIT: Aggiunge funzionalità aggiuntive al testo di combattimento a scorrimento predefinito di Blizzard.
+## Author: Sidamakid Tinman
+## SavedVariablesPerCharacter: ASCT_DB, ASCT_Color_Picker_Variables
+## OptionalDeps: Advanced_Scrolling_Combat_Text_Options
+## X-Curse-Project-ID: 634963
+## X-WoWI-ID: 26362
+## X-Wago-ID: WYK9pO6L
+# Embeds
+Embeds.xml

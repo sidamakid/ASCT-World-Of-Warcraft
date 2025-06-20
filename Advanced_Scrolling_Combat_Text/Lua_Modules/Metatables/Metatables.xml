@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Var_Metatables.lua"/>
+    <Script file="API_Metatables.lua"/>
+</UI>

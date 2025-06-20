@@ -42,3 +42,9 @@ Event.RegisterEvent["PLAYER_ENTERING_WORLD"](ASCT.Frames.SARTE["Spell_Power_Fram
 --Spell Penetration
 Event.RegisterEvent["PLAYER_ENTERING_WORLD"](ASCT.Frames.SARTE["Spell_Pen_Frame"])
 Event.RegisterEvent["COMBAT_RATING_UPDATE"](ASCT.Frames.SARTE["Spell_Pen_Frame"])
+--PVP_Power
+Event.RegisterEvent["COMBAT_RATING_UPDATE"](ASCT.Frames.SARTE["PVP_Power_Frame"])
+Event.RegisterEvent["PLAYER_ENTERING_WORLD"](ASCT.Frames.SARTE["PVP_Power_Frame"])
+--PVP_Resilence
+Event.RegisterEvent["COMBAT_RATING_UPDATE"](ASCT.Frames.SARTE["PVP_Resilience_Frame"])
+Event.RegisterEvent["PLAYER_ENTERING_WORLD"](ASCT.Frames.SARTE["PVP_Resilience_Frame"])

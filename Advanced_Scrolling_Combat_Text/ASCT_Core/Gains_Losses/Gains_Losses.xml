@@ -1,6 +1,7 @@
 <UI>
-    <Script file="All_Stats_Classic.lua"/>
-    <Script file="All_Stats_Post_Shadowlands.lua"/>
+    <!-- <Script file="All_Stats_Classic.lua"/>
+    <Script file="All_Stats_Post_Shadowlands.lua"/>  -->
+    <Script file="All_Stats.lua"/>
     <Script file="AP_Gains.lua"/>
     <Script file="Armor_Gains.lua"/>
     <Script file="Experience_Gains.lua"/>
@@ -10,5 +11,6 @@
     <Script file="Skill_Up.lua"/>
     <Script file="Skill_Gained.lua"/>
     <Include file="Resistances\Resistance.xml"/>
-    <Include file="Special_Stat_Gains\Special_Stat_Gains.xml"/>
+    <Script file="All_Special_Stat_Gains.lua"/>
+    <!-- <Include file="Special_Stat_Gains\Special_Stat_Gains.xml"/> -->
 </UI>

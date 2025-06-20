@@ -1,8 +1,9 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
-local Client, Frames, Functions, Scripts, API, Strings = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
+local Lua_ASCT, Client, Frames, Functions, Scripts, API, Strings = ASCT.Lua_ASCT, ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings
 if Client.LE_EXPANSION_LEVEL["isTbcWow"] then
-local lastPower = nil
-local power
+local lastPower = Lua_ASCT.SARTE.Variables.Resource_Loss["lastPower"]
+local power = Lua_ASCT.SARTE.Variables.Resource_Loss["power"]
 local f = Frames.SARTE["Resource_Loss_Frame"]
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 Scripts.Frame["OnEvent"](f, function()

@@ -1,0 +1,5 @@
+<UI>
+    <Script file="Main_Frame.lua"/>
+    <Include file="Game_Specfic\Game_Specfic.xml"/>
+    <Include file="Main_Frame_Functions_Setup\Main_Frame_Functions_Setup.xml"/>
+</UI>

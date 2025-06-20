@@ -1,0 +1,6 @@
+<UI>
+    <Script file="MainTable.lua"/>
+    <Include file="Metatables\Metatables.xml"/>
+    <Include file="Val\Val.xml"/>
+    <Include file="API\API.xml"/>
+</UI>

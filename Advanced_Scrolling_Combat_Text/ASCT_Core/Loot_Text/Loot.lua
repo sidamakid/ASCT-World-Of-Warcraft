@@ -1,4 +1,5 @@
-local ASCT = ASCT_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
 local Frames, Scripts, Functions, API, Strings = ASCT.Frames, ASCT.Scripts, ASCT.Functions, ASCT.API, ASCT.Strings
 local Loot = Frames.SARTE["Item_Loot_Frame"]
 Scripts.Frame["OnEvent"](Loot,
@@ -8,7 +9,7 @@ function (self, event, ...)
     if ASCT_DB["Advanced_Scrolling_Combat_Text_Leveling"]["Loot"] == true then
     local message = ...;
     local globalStrings = {
-      LOOT_ITEM_SELF_MULTIPLE,LOOT_ITEM_PUSHED_SELF_MULTIPLE, LOOT_ITEM_SELF,  LOOT_ITEM_PUSHED_SELF, LOOT_ITEM_CREATED_SELF, LOOT_ROLL_YOU_WON, LOOT_ITEM_BONUS_ROLL_SELF
+      LOOT_ITEM_SELF_MULTIPLE,LOOT_ITEM_PUSHED_SELF_MULTIPLE, LOOT_ITEM_BONUS_ROLL_SELF_MULTIPLE, LOOT_ITEM_SELF,  LOOT_ITEM_PUSHED_SELF, LOOT_ITEM_CREATED_SELF, LOOT_ROLL_YOU_WON, LOOT_ITEM_BONUS_ROLL_SELF, --ERR_QUEST_REWARD_ITEM_S,
     }
     local Item, Quantity
     -- work through each possible pattern and break on the first pattern that matches

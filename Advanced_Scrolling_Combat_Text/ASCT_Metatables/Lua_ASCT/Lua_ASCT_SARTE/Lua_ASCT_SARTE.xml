@@ -1,0 +1,5 @@
+<UI>
+    <Script file="SARTE_Functions_Lua_ASCT.lua"/>
+    <Script file="SARTE_Tables_Lua_ASCT.lua"/>
+    <Script file="SARTE_Variables_Lua_ASCT.lua"/>
+</UI>

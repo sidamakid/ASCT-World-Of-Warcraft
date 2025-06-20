@@ -1,0 +1,4 @@
+<UI>
+    <Script file="Resource_Loss_SARTE.lua"/>
+    <Script file="Quests_SARTE.lua"/>
+</UI>

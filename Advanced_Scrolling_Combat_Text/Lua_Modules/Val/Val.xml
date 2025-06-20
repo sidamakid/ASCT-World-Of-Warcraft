@@ -1,0 +1,7 @@
+<UI>
+    <Script file="Var_Environment_Val.lua"/>
+    <Script file="Var_Library_Val.lua"/>
+    <Script file="Var_Type_Val.lua"/>
+    <Script file="Var_Boolean_Val.lua"/>
+    <Script file="Var_Module_Val.lua"/>
+</UI>

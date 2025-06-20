@@ -1,6 +1,7 @@
 local ASCT = ASCT_Table
 --ASCT.Strings.LocaleName
 ASCT.Strings.LocaleName["enUS"] = "enUS"
+ASCT.Strings.LocaleName["enGB"] = "enGB"
 ASCT.Strings.LocaleName["koKR"] = "koKR"
 ASCT.Strings.LocaleName["frFR"] = "frFR"
 ASCT.Strings.LocaleName["deDE"] = "deDE"

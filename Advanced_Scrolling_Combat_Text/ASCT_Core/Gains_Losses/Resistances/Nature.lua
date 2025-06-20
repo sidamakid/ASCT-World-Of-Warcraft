@@ -1,4 +1,5 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
+local Keys = ASCT.Keys
 local Client, Frames, Functions, Scripts, API, Strings, Str_Int = ASCT.Client, ASCT.Frames, ASCT.Functions, ASCT.Scripts, ASCT.API, ASCT.Strings, ASCT.Str_Int
 if Client.LE_EXPANSION_LEVEL["isNotMistsWow"] then
 local lastStat = -1

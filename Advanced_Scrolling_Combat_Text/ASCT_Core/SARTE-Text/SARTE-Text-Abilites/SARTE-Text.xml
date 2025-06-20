@@ -3,6 +3,7 @@
     <Script file="SARTE-Text-Tbc.lua"/>
     <Script file="SARTE-Text-Wrath.lua"/>
     <Script file="SARTE-Text-Cata.lua"/>
+    <Script file="SARTE-Text-MOP.lua"/>
     <Script file="SARTE-Text_SL.lua"/>
     <Script file="SARTE-Text_DF.lua"/>
     <Script file="SARTE-Text_TWW.lua"/>

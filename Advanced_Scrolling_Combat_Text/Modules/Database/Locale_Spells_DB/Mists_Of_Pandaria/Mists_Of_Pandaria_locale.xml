@@ -1,0 +1,4 @@
+<UI>
+    <Script file="MOP_50400_locale.lua"/>
+    <Script file="MOP_50500_locale.lua"/>
+</UI>

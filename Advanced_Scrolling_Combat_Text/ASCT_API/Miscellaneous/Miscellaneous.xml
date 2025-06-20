@@ -1,4 +1,5 @@
 <UI>
+    <Include file="Tables\Tables.xml"/>
     <Include file="Integers\Integers.xml"/>
     <Include file="Strings\Strings.xml"/>
     <Include file="Str_Int\Str_Int.xml"/>

@@ -1,4 +1,5 @@
 <UI>
+    <!-- <Script file="Miscellaneous_Strings.lua"/> -->
     <Script file="Locale_Strings.lua"/>
     <Script file="Mouse_Buttons_Strings.lua"/>
     <Script file="FrameType_Strings.lua"/>
@@ -6,8 +7,8 @@
     <Script file="Layer_Strings.lua"/>
     <Script file="Unit_Id_Strings.lua"/>
     <Script file="C_CVar_Strings.lua"/>
-    <!-- <Script file="Miscellaneous_Strings.lua"/> -->
     <Script file="LE_EXPANSION_LEVEL_Strings.lua"/>
     <Script file="Point_Strings.lua"/>
+    <Script file="Orientation_Strings.lua"/>
     <Script file="On_Strings.lua"/>
 </UI>

@@ -1,0 +1,7 @@
+<UI>
+    <Script file="API_Lua_ASCT.lua"/>
+    <Script file="Functions_Lua_ASCT.lua"/>
+    <Script file="Variables_Lua_ASCT.lua"/>
+    <Script file="Tables_Lua_ASCT.lua"/>
+    <Include file="Lua_ASCT_SARTE\Lua_ASCT_SARTE.xml"/>
+</UI>

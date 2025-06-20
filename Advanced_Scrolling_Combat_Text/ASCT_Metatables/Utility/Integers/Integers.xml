@@ -3,4 +3,5 @@
     <Script file="Client_Integers.lua"/>
     <Script file="API_Integers.lua"/>
     <Script file="Options_Panel_Integers.lua"/>
+    <Include file="SpellToggle\SpellToggle.xml"/>
 </UI>
