@@ -55,8 +55,12 @@ ASCT.Database.Spells["Others_MOP"] = {
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
 	},
 	["Integer_Values"] = {
-		Debuff_time = 5,
-		Icon = 18,
+		["Debuff_time"] = 5,
+		["Icon"] = 18,
+		["Minimum_Resource_Cost"] = 4,
+	},
+	["Slider_Step_Values"] = {
+		["Minimum_Resource_Cost_Step_Value"] = 1,
 	},
 	["Message_Selector"] = {
 		["Msg"] = "is now ready!",

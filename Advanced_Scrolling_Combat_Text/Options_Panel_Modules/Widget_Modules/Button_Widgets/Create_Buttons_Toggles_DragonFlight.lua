@@ -80,9 +80,9 @@ end
 ---------------------------
 --Buttons
 ---------------------------
-ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext,  x, y, tooltip_text1)
+ASCT.Frames.Widgets["Buttons"] = function(settings, var_1, var_2, Location, btntext, poi, x, y, tooltip_text1)
 	local b = ASCT.API.Documentation["CreateFrame"](ASCT.Strings.FrameType["CheckButton"], "NewButton", Location, "InterfaceOptionsCheckButtonTemplate")
-	ASCT.Widget.API["SetPoint"](b, ASCT.Strings.Point["TOPLEFT"], x, y)
+	ASCT.Widget.API["SetPoint"](b, poi, x, y)
 	ASCT.Widget.API["SetText"](b.Text, btntext)
   local Button_Tooltip = GameTooltip
 	ASCT.Scripts.Frame["OnEnter"](b, function (self)

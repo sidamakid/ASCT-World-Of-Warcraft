@@ -2,7 +2,7 @@ local ASCT, L = ASCT_Table, ASCT_locale_Table
 local API, Strings = ASCT.API, ASCT.Strings
 local locale = API.Documentation["GetLocale"]()
 -------------------------------------
---English (GB)
+--English (Great Britian)
 -------------------------------------
 if locale == Strings.LocaleName["enGB"] then
  --Rogue
@@ -104,7 +104,6 @@ if locale == Strings.LocaleName["enGB"] then
  L["Armor"] = "Armour";
  L["Armor lost"] = "Armour lost";
  L["Armor Gained"] = "Armour Gained";
- --Message
  L["Slash Command Message"] = "Slash command changed for Advanced Scrolling Combat Text. Type /asct to open the options panel";
  L["Features"] = "Features";
  L["Message"] = "Scrolling Combat Text is disabled. If not enabled, Advanced Scrolling Combat text won't show anything.";
@@ -293,4 +292,18 @@ if locale == Strings.LocaleName["enGB"] then
  --New things 06/08/2025
  L["PVP Power Damage"] = "PVP Power Damage";
  L["PVP Power Healing"] = "PVP Power Healing";
+ L["PVP Power"] = "PVP Power";
+ L["PVP Resilience"] = "PVP Resilience";
+ L["Hit"] = "Hit";
+ L["Haste"] = "Haste";
+ L["Expertise"] = "Expertise";
+ L["Critical Strike"] = "Critical Strike";
+ L["Dodge"] = "Dodge";
+ L["Parry"] = "Parry";
+ --New things 06/26/2025
+ L["Chi"] = "chi";
+ L["Minimum Resource Cost"] = "Minimum Resource Cost";
+ L["The Minimum Resource Cost"] = "The Minimum Resource Cost";
+ L["Reset All Slider Values"] = "Reset All Slider Values";
+ L["Reset Minimum Resource Cost"] = "Reset Minimum Resource Cost";
 end

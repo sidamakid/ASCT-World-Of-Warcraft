@@ -85,7 +85,7 @@ for i = 1, numTabs do
 
 
 
-  table.insert(contents, tab.content)
+  Lua_API.Table["table.insert"](contents, tab.content)
 
   if (i == 1) then
     Widget.API["SetPoint"](tab, Strings.Point["TOPLEFT"], ASCT_Config, Strings.Point["BOTTOMLEFT"], 5, 7);
@@ -136,7 +136,7 @@ end
 ---Tabs
 -------------------------
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"], L["About"])
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Auras"], L["Trinkets"])
+local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Auras"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Trinkets"], L["Settings"])
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11, content12, content13 = SetTabs(ASCT_Config, 13, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Auras"], L["Trinkets"], L["On Login"], "Messages")
 local content_6_TextTop = TitleCreate(content6, Strings.Point["TOP"], 0, -10, Strings.Point["TOP"], L["This Tab is for Shaman's and Hunter's only."])
 --local content_11_Text = TitleCreate(content11, Strings.Point["CENTER"], 95, 0, Strings.Point["CENTER"], L["About_Line_1"].."\n"..L["About_Line_2"].."\n"..L["About_Line_3"].."\n"..L["About_Line_4"].."\n"..L["About_Line_5"])
@@ -248,32 +248,40 @@ end
 --Trinkets
 ---------------------------
 for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Trinkets"]) do
-    local b = CreateTrinketToggle(Stat, settings, content11)
+    local b = CreateTrinketToggle(Stat, settings, content10)
     Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_AD_5"] % Integers.SpellToggle.Column["col_AD_5"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_5"]/Integers.SpellToggle.Column["col_AD_5"]))
     Integers.SpellToggle.Row["x_AD_5"]=Integers.SpellToggle.Row["x_AD_5"]+1
-    CreateTrinketNameIconsToggles(b, settings, content11)
+    CreateTrinketNameIconsToggles(b, settings, content10)
 end
 ---------------------------
 --Custom Buttons
 ---------------------------
-local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content10, L["Fading Debuffs Alert"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
+local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content5, L["Fading Debuffs Alert"], Strings.Point["TOPLEFT"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
 ---------------------------
 --Icon Slider
 ---------------------------
-local SliderText_Icon = TitleCreate(content5, Strings.Point["TOP"], -265, -10, Strings.Point["TOP"], L["Icon Size"])
-local Icon_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -40, "Integer_Values", "Icon")
-local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
+local SliderText_Icon = TitleCreate(content11, Strings.Point["TOP"], -265, -10, Strings.Point["TOP"], L["Icon Size"])
+local Icon_Slider_Text = Frames.Widgets["Interger_Value_Text"](content11, Strings.Point["TOPLEFT"], 110, -40, "Integer_Values", "Icon")
+local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content11, 200, 20, Strings.Point["TOPLEFT"], 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
 ---------------------------
 --Debuff Slider
 ---------------------------
-local SliderText_Debuff = TitleCreate(content5, Strings.Point["TOP"], -265, -130, Strings.Point["TOP"], L["Debuff fade time"])
-local Debuff_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -160, "Integer_Values", "Debuff_time")
-local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+local SliderText_Debuff = TitleCreate(content11, Strings.Point["TOP"], -265, -130, Strings.Point["TOP"], L["Debuff fade time"])
+local Debuff_Slider_Text = Frames.Widgets["Interger_Value_Text"](content11, Strings.Point["TOPLEFT"], 110, -160, "Integer_Values", "Debuff_time")
+local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content11, 200, 20, Strings.Point["TOPLEFT"], 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+---------------------------
+--Minimum_Resource_Cost Slider
+---------------------------
+--[[
+local SliderText_Minimum_Resource_Cost = TitleCreate(content11, Strings.Point["TOP"], -265, -250, Strings.Point["TOP"], L["Minimum Resource Cost"])
+local Minimum_Resource_Cost_Slider_Text = Frames.Widgets["Interger_Value_Text"](content11, Strings.Point["TOPLEFT"], 110, -280, "Integer_Values", "Minimum_Resource_Cost")
+local Minimum_Resource_Cost_Slider = Frames.Widgets["CreateSlider"]("Minimum_Resource_Cost_Slider", content11, 200, 20, Strings.Point["TOPLEFT"], 20, -260, "HORIZONTAL", 1, API.Documentation["UnitPower"](Strings.UnitId["player"]), "Integer_Values", "Minimum_Resource_Cost", 1, L["The Minimum Resource Cost"], "1", API.Documentation["UnitPower"](Strings.UnitId["player"]), Minimum_Resource_Cost_Slider_Text)
+]]
 ---------------------------
 --Dropdown Menu
 ---------------------------
 local fonts = {"Ready!", "Is Ready!", "is now ready!"}
-local dropdown1 = CreateDropdownMenu("ASCTMessageFontDropdown", content5, Strings.Point["TOP"], 0, -20, Strings.Point["TOP"], ASCT_DB, 150, fonts, "Message_Selector", "Msg")
+local dropdown1 = CreateDropdownMenu("ASCTMessageFontDropdown", content11, Strings.Point["TOP"], 0, -20, Strings.Point["TOP"], ASCT_DB, 150, fonts, "Message_Selector", "Msg")
 local text = API.Documentation["CreateFontString"](dropdown1, Lua_API.Var_Type["nil"], Strings.Layer["OVERLAY"], "GameFontHighlight")
 Widget.API["SetText"](text, L["Ready Message"])
 Widget.API["SetPoint"](text, Strings.Point["TOP"], dropdown1, Strings.Point["TOP"], 0, 12)
@@ -284,7 +292,7 @@ local Slider_Reset_Icon = Frames.Widgets["MakeSliderReset"]({
     text = L["Reset Icon Size"],
     width = 150,
     anchor = {Strings.Point["TOPLEFT"], 40, -60},
-    parent = content5,
+    parent = content11,
     options = {
       {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
     },
@@ -293,27 +301,39 @@ local Slider_Reset_Auras = Frames.Widgets["MakeSliderReset"]({
     text = L["Reset Debuff fade time"],
     width = 150,
     anchor = {Strings.Point["TOPLEFT"], 40, -180},
-    parent = content5,
+    parent = content11,
     options = {
       {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
     },
     })
+--[[
+local Slider_Reset_Minimum_Resource_Cost = Frames.Widgets["MakeSliderReset"]({
+    text = L["Reset Minimum Resource Cost"],
+    width = 200,
+    anchor = {Strings.Point["TOPLEFT"], 20, -300},
+    parent = content11,
+    options = {
+      {frame = Minimum_Resource_Cost_Slider, text = Minimum_Resource_Cost_Slider_Text, default = 4, location = {"Integer_Values", "Minimum_Resource_Cost"}},
+    },
+    })
+]]
 local All_Slider_Reset = Frames.Widgets["MakeSliderReset"](
     {
-    text = L["Reset Both Aura and Icon Values"],
+    text = L["Reset All Slider Values"],
     width = 210,
-    anchor = {Strings.Point["BOTTOMLEFT"], 20, 385},
-    parent = content5,
+    anchor = {Strings.Point["BOTTOMLEFT"], 20, 85},
+    parent = content11,
     options = {
       {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
       {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
+      --{frame = Minimum_Resource_Cost_Slider, text = Minimum_Resource_Cost_Slider_Text, default = 4, location = {"Integer_Values", "Minimum_Resource_Cost"}},
     },
   }
 )
 --[[
 CreateResetButtonToggles({
     FrameName = "ResetFrameSizeAndLocationButton",
-    ButtonAnchor = content5,
+    ButtonAnchor = content11,
     ButtonWidth = 240,
     ButtonHeight = 30,
     Text = L["Reset Options Panel Size And Location"],
@@ -658,7 +678,7 @@ end
 if ASCT_DB["Race"]["Undead"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Undead"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -668,7 +688,7 @@ end
 elseif ASCT_DB["Race"]["Orc"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Orc"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["col_4"]=Integers.SpellToggle.Column["col_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -678,7 +698,7 @@ end
 elseif ASCT_DB["Race"]["Troll"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Troll"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -688,7 +708,7 @@ end
 elseif ASCT_DB["Race"]["Tauren"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Tauren"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -698,7 +718,7 @@ end
 elseif ASCT_DB["Race"]["Human"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Human"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -708,7 +728,7 @@ end
 elseif ASCT_DB["Race"]["Night Elf"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Night Elf"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -718,7 +738,7 @@ end
 elseif ASCT_DB["Race"]["Gnome"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Gnome"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end
@@ -728,7 +748,7 @@ end
 elseif ASCT_DB["Race"]["Dwarf"] == true then
 for spellName, settings in PairsByKeys(ASCT_DB, ASCT_DB["Dwarf"]) do
     local b = CreateSpellToggle(Locale_SpellName, Locale_SpellIcon, spellName, settings, content4)
-    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], 20 + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
+    Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_Vanilla"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_Vanilla"]) * (Integers.SpellToggle.Row["x_4"] % Integers.SpellToggle.Column["col_4"]), Integers.SpellToggle.Y["Point_Vanilla"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_4"]/Integers.SpellToggle.Column["col_4"]))
     Integers.SpellToggle.Row["x_4"]=Integers.SpellToggle.Row["x_4"]+1
     CreateNameIconToggles(b, settings, content4)
 end

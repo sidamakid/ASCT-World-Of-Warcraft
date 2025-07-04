@@ -51,8 +51,9 @@ ASCT.Database.Spells["Others_Wrath"] = {
 		["Trinket_2"] = {TrinketEnable = false, NameEnable = false, IconEnable = false,},
 	},
 	["Integer_Values"] = {
-		Icon = 18,
-		Debuff_time = 5,
+		["Icon"] = 18,
+		["Debuff_time"] = 5,
+		["Minimum_Resource_Cost"] = 4,
 	},
 	["Message_Selector"] = {
 		["Msg"] = "is now ready!",

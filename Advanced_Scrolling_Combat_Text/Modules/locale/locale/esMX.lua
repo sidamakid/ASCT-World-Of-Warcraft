@@ -81,6 +81,7 @@ if locale == Strings.LocaleName["esMX"] then
  L["msg_Shocks"] = " ¡Los choques ya están listos!";
  L["msg_Traps"] = " ¡Las trampas ya están listas!";
  L["msg_Lust"] = " ¡La lujuria ya está lista!";
+ --Message
  L["Nothing"] = "Nada";
  L["Open To Options Panel"] = "Abrir el panel Opciones";
  --New things
@@ -288,4 +289,21 @@ if locale == Strings.LocaleName["esMX"] then
  L["PVP Talents"] = "Talentos JcJ";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "Opciones de restablecimiento Tamaño y ubicación del panel";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "Daño de Poder PVP";
+ L["PVP Power Healing"] = "PVP Poder de Curación";
+ L["PVP Power"] = "PVP Poder";
+ L["PVP Resilience"] = "Resiliencia PVP";
+ L["Hit"] = "Golpe";
+ L["Haste"] = "Prisa";
+ L["Expertise"] = "Experiencia";
+ L["Critical Strike"] = "Golpe Crítico";
+ L["Dodge"] = "Dodge";
+ L["Parry"] = "Parry";
+ --New things 06/26/2025
+ L["Chi"] = "chi";
+ L["Minimum Resource Cost"] = "Costo mínimo de recursos";
+ L["The Minimum Resource Cost"] = "El costo mínimo de recursos";
+ L["Reset All Slider Values"] = "Restablecer todos los valores de los deslizadores";
+ L["Reset Minimum Resource Cost"] = "Restablecer el costo mínimo de recursos";
 end

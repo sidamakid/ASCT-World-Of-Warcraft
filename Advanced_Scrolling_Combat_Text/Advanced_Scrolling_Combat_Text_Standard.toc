@@ -1,4 +1,4 @@
-## Interface: 20504
+## Interface: 110002, 110005, 110007, 110100, 110105, 110107, 110200
 ## Version: 11.2.0
 ## Title: Advanced Scrolling Combat Text
 ## Title-koKR: 고급 스크롤 전투 텍스트

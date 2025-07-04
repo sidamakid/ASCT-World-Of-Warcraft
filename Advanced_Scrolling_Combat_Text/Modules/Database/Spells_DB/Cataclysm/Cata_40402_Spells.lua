@@ -1,4 +1,4 @@
-local ASCT, L = ASCT_Table, ASCT_locale_Table
+local Lua_API, ASCT, L = Lua_API_Table, ASCT_Table, ASCT_locale_Table
 if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["is40402"] then
     ASCT.Database.Spells["Spells_Cataclysm"] = {
     ------------------------
@@ -470,10 +470,10 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isCataclysmWow"] and ASCT.Client.tocversion["
     }
 
 local Lust_Table
-if select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
+if Lua_API.Functions["Select"](3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and Lua_API.Functions["Select"](2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Alliance"] then
 Lust_Table = {["Heroism"] = {SpellEnable = false, iconEnable = false, nameEnable = false}}
 ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
-elseif select(3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and select(2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
+elseif Lua_API.Functions["Select"](3, ASCT.API.Documentation["UnitClass"]("player")) == 7 and Lua_API.Functions["Select"](2, ASCT.API.Documentation["UnitFactionGroup"]("player")) == L["Horde"] then
 Lust_Table = { ["Bloodlust"] = {SpellEnable = false, iconEnable = false, nameEnable = false} }
 ASCT.Functions.Table["TableCombine"](ASCT.Database.Spells["Spells_Cataclysm"]["Enhancement"], Lust_Table)
 end

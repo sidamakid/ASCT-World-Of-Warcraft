@@ -289,4 +289,21 @@ if locale == Strings.LocaleName["koKR"] then
  L["PVP Talents"] = "PVP 특성";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "재설정 옵션 패널 크기 및 위치";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "PVP 전력 피해";
+ L["PVP Power Healing"] = "PVP 파워 힐링";
+ L["PVP Power"] = "PVP 전력";
+ L["PVP Resilience"] = "PVP 회복력";
+ L["Hit"] = "치다";
+ L["Haste"] = "서두름";
+ L["Expertise"] = "전문성";
+ L["Critical Strike"] = "치명적인 타격";
+ L["Dodge"] = "피하기";
+ L["Parry"] = "파리";
+ --New things 06/26/2025
+ L["Chi"] = "치";
+ L["Minimum Resource Cost"] = "최소 자원 비용";
+ L["The Minimum Resource Cost"] = "최소 자원 비용";
+ L["Reset All Slider Values"] = "모든 슬라이더 값 재설정";
+ L["Reset Minimum Resource Cost"] = "최소 자원 비용 초기화";
 end

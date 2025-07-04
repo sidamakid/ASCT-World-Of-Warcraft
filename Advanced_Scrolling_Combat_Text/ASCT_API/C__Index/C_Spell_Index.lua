@@ -29,3 +29,8 @@ ASCT.API.Documentation["C_Spell.GetSpellDescription"] = function(spellIdentifier
     local description = C_Spell.GetSpellDescription(spellIdentifier)
     return description
 end
+
+ASCT.API.Documentation["C_Spell.GetSpellCharges"] = function(spellIdentifier)
+    local chargeInfo = C_Spell.GetSpellCharges(spellIdentifier)
+    return chargeInfo
+end

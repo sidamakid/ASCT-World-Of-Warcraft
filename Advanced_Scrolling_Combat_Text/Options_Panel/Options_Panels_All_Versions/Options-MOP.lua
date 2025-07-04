@@ -85,7 +85,7 @@ for i = 1, numTabs do
 
 
 
-  table.insert(contents, tab.content)
+  Lua_API.Table["table.insert"](contents, tab.content)
 
   if (i == 1) then
     Widget.API["SetPoint"](tab, Strings.Point["TOPLEFT"], ASCT_Config, Strings.Point["BOTTOMLEFT"], 5, 7);
@@ -137,7 +137,8 @@ end
 -------------------------
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Leveling"], L["Stats"], L["Auras"], L["Trinkets"], L["About"])
 --local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11, content12 = SetTabs(ASCT_Config, 12, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Resistances"], L["Auras"], L["Trinkets"], L["Message Selector"])
-local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Auras"], L["Trinkets"])
+local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10 = SetTabs(ASCT_Config, 10, Text1, Text2, Text3, L["Racials"], L["Auras"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"],  L["Trinkets"], L["Settings"])
+--local content1, content2, content3, content4, content5, content6, content7, content8, content9, content10, content11 = SetTabs(ASCT_Config, 11, Text1, Text2, Text3, L["Racials"], L["Settings"], L["Shared Spell cd's"], L["Miscellaneous"], L["Stats"], L["Auras"], L["Trinkets"], L["On Login"]);
 local content_6_TextTop = TitleCreate(content6, Strings.Point["TOP"], 0, -10, Strings.Point["TOP"], L["This Tab is for Shaman's and Hunter's only."])
 --local content_11_Text = TitleCreate(content11, Strings.Point["CENTER"], 95, 0, Strings.Point["CENTER"], L["About_Line_1"].."\n"..L["About_Line_2"].."\n"..L["About_Line_3"].."\n"..L["About_Line_4"].."\n"..L["About_Line_5"])
 ---------------------------
@@ -159,7 +160,7 @@ LibStub("LibDBIcon-1.0"):Register("ASCT", MinimapDataObject, ASCT_DB)
 ---------------------------
 --Color Picker Spells
 ---------------------------
-local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["Button"], Lua_API.Var_Type["nil"], content5, "UIPanelButtonTemplate")
+local Color_picker_SARTE = API.Documentation["CreateFrame"](Strings.FrameType["Button"], Lua_API.Var_Type["nil"], content10, "UIPanelButtonTemplate")
     Widget.API["SetPoint"](Color_picker_SARTE, Strings.Point["TOPRIGHT"], -70, -20)
     Widget.API["SetText"](Color_picker_SARTE, L["Color Picker"])
     Widget.API["SetWidth"](Color_picker_SARTE, 150)
@@ -259,32 +260,40 @@ end
 --Trinkets
 ---------------------------
 for Stat, settings in PairsByKeys(ASCT_DB, ASCT_DB["Trinkets"]) do
-    local b = CreateTrinketToggle(Stat, settings, content10)
+    local b = CreateTrinketToggle(Stat, settings, content9)
     Widget.API["SetPoint"](b, Strings.Point["TOPLEFT"], Integers.SpellToggle.X["Point_MOP"] + (Widget.API["GetWidth"](b)+Integers.SpellToggle.Width["Width_MOP"]) * (Integers.SpellToggle.Row["x_AD_5"] % Integers.SpellToggle.Column["col_AD_5"]), Integers.SpellToggle.Y["Point_MOP"] + (- Widget.API["GetHeight"](b)-70) * Lua_API.Math["math.floor"](Integers.SpellToggle.Row["x_AD_5"]/Integers.SpellToggle.Column["col_AD_5"]))
     Integers.SpellToggle.Row["x_AD_5"]=Integers.SpellToggle.Row["x_AD_5"]+1
-    CreateTrinketNameIconsToggles(b, settings, content10)
+    CreateTrinketNameIconsToggles(b, settings, content9)
 end
 ---------------------------
 --Custom Buttons
 ---------------------------
-local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content9, L["Fading Debuffs Alert"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
+local Debuffsfading = Buttons(ASCT_DB, "Advanced_Scrolling_Combat_Text_Auras", "Fading DeBuffs", content5, L["Fading Debuffs Alert"], Strings.Point["TOPLEFT"], 20, -20, L["Announces a Debuff you applied is about to fade on the Target."])
 ---------------------------
 --Icon Slider
 ---------------------------
-local SliderText_Icon = TitleCreate(content5, Strings.Point["TOP"], -265, -10, Strings.Point["TOP"], L["Icon Size"])
-local Icon_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -40, "Integer_Values", "Icon")
-local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
+local SliderText_Icon = TitleCreate(content10, Strings.Point["TOP"], -265, -10, Strings.Point["TOP"], L["Icon Size"])
+local Icon_Slider_Text = Frames.Widgets["Interger_Value_Text"](content10, Strings.Point["TOPLEFT"], 110, -40, "Integer_Values", "Icon")
+local Icon_Slider = Frames.Widgets["CreateSlider"]("Icon_slider", content10, 200, 20, Strings.Point["TOPLEFT"], 20, -20, "HORIZONTAL", 1, 50, "Integer_Values", "Icon", 1, L["The size of the message icon"], '1', '50', Icon_Slider_Text)
 ---------------------------
 --Debuff Slider
 ---------------------------
-local SliderText_Debuff = TitleCreate(content5, Strings.Point["TOP"], -265, -130, Strings.Point["TOP"], L["Debuff fade time"])
-local Debuff_Slider_Text = Frames.Widgets["Interger_Value_Text"](content5, Strings.Point["TOPLEFT"], 110, -160, "Integer_Values", "Debuff_time")
-local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content5, 200, 20, Strings.Point["TOPLEFT"], 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+local SliderText_Debuff = TitleCreate(content10, Strings.Point["TOP"], -265, -130, Strings.Point["TOP"], L["Debuff fade time"])
+local Debuff_Slider_Text = Frames.Widgets["Interger_Value_Text"](content10, Strings.Point["TOPLEFT"], 110, -160, "Integer_Values", "Debuff_time")
+local Debuff_Slider = Frames.Widgets["CreateSlider"]("Debuff_Slider_S", content10, 200, 20, Strings.Point["TOPLEFT"], 20, -140, "HORIZONTAL", 1, 20, "Integer_Values", "Debuff_time", 1, L["The time warning for Debuffs about to fade"], "1", "20", Debuff_Slider_Text)
+---------------------------
+--Minimum_Resource_Cost Slider
+---------------------------
+--[[
+local SliderText_Minimum_Resource_Cost = TitleCreate(content10, Strings.Point["TOP"], -265, -250, Strings.Point["TOP"], L["Minimum Resource Cost"])
+local Minimum_Resource_Cost_Slider_Text = Frames.Widgets["Interger_Value_Text"](content10, Strings.Point["TOPLEFT"], 110, -280, "Integer_Values", "Minimum_Resource_Cost")
+local Minimum_Resource_Cost_Slider = Frames.Widgets["CreateSlider"]("Minimum_Resource_Cost_Slider", content10, 200, 20, Strings.Point["TOPLEFT"], 20, -260, "HORIZONTAL", 1, API.Documentation["UnitPower"](Strings.UnitId["player"]), "Integer_Values", "Minimum_Resource_Cost", 1, L["The Minimum Resource Cost"], "1", API.Documentation["UnitPower"](Strings.UnitId["player"]), Minimum_Resource_Cost_Slider_Text)
+]]
 ---------------------------
 --Dropdown Menu
 ---------------------------
 local fonts = {"Ready!", "Is Ready!", "is now ready!"}
-local dropdown1 = CreateDropdownMenu("ASCTMessageFontDropdown", content5, Strings.Point["TOP"], 0, -20, Strings.Point["TOP"], ASCT_DB, 150, fonts, "Message_Selector", "Msg")
+local dropdown1 = CreateDropdownMenu("ASCTMessageFontDropdown", content10, Strings.Point["TOP"], 0, -20, Strings.Point["TOP"], ASCT_DB, 150, fonts, "Message_Selector", "Msg")
 local text = API.Documentation["CreateFontString"](dropdown1, Lua_API.Var_Type["nil"], Strings.Layer["OVERLAY"], "GameFontHighlight")
 Widget.API["SetText"](text, L["Ready Message"])
 Widget.API["SetPoint"](text, Strings.Point["TOP"], dropdown1, Strings.Point["TOP"], 0, 12)
@@ -295,7 +304,7 @@ local Slider_Reset_Icon = Frames.Widgets["MakeSliderReset"]({
     text = L["Reset Icon Size"],
     width = 150,
     anchor = {Strings.Point["TOPLEFT"], 40, -60},
-    parent = content5,
+    parent = content10,
     options = {
       {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
     },
@@ -304,27 +313,42 @@ local Slider_Reset_Auras = Frames.Widgets["MakeSliderReset"]({
     text = L["Reset Debuff fade time"],
     width = 150,
     anchor = {Strings.Point["TOPLEFT"], 40, -180},
-    parent = content5,
+    parent = content10,
     options = {
       {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
     },
+})
+--[[
+local Slider_Reset_Minimum_Resource_Cost = Frames.Widgets["MakeSliderReset"]({
+    text = L["Reset Minimum Resource Cost"],
+    width = 200,
+    anchor = {Strings.Point["TOPLEFT"], 20, -300},
+    parent = content10,
+    options = {
+      {frame = Minimum_Resource_Cost_Slider, text = Minimum_Resource_Cost_Slider_Text, default = 4, location = {"Integer_Values", "Minimum_Resource_Cost"}},
+    },
     })
+]]
 local All_Slider_Reset = Frames.Widgets["MakeSliderReset"](
     {
-    text = L["Reset Both Aura and Icon Values"],
+    text = L["Reset All Slider Values"],
     width = 210,
-    anchor = {Strings.Point["BOTTOMLEFT"], 20, 385},
-    parent = content5,
+    anchor = {Strings.Point["BOTTOMLEFT"], 20, 85},
+    parent = content10,
     options = {
       {frame = Icon_Slider, text = Icon_Slider_Text, default = 18, location = {"Integer_Values", "Icon"}},
       {frame = Debuff_Slider, text = Debuff_Slider_Text, default = 5, location = {"Integer_Values", "Debuff_time"}},
+      --{frame = Minimum_Resource_Cost_Slider, text = Minimum_Resource_Cost_Slider_Text, default = 4, location = {"Integer_Values", "Minimum_Resource_Cost"}},
     },
   }
 )
 --[[
+
+]]
+--[[
 CreateResetButtonToggles({
     FrameName = "ResetFrameSizeAndLocationButton",
-    ButtonAnchor = content5,
+    ButtonAnchor = content10,
     ButtonWidth = 240,
     ButtonHeight = 30,
     Text = L["Reset Options Panel Size And Location"],
@@ -857,8 +881,406 @@ elseif ASCT_DB["Race"]["Panderen"] == true then
     end
 
 end
+---------------------
+--Custom Chatbox Frame
+---------------------
+--[[
+-- Table to store chat tabs
+local chatTabs = {}
+local activeTab = 1
+
+-- Create the main chatbox frame
+local frame = CreateFrame("Frame", "ASCTChatboxFrame", UIParent, "BackdropTemplate")
+frame:SetSize(unpack(ASCT_DB["EditBox_Values"]["Size"]))
+frame:SetPoint(unpack(ASCT_DB["EditBox_Values"]["Position"]))
+frame:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+frame:SetBackdropColor(0, 0, 0, ASCT_DB["EditBox_Values"]["Transparency"])
+frame:SetResizeBounds(200, 100, 800, 600)
+frame:SetMovable(true)
+frame:SetResizable(true)
+frame:EnableMouse(true)
+frame:RegisterForDrag("LeftButton")
+frame:SetScript("OnDragStart", frame.StartMoving)
+frame:SetScript("OnDragStop", function()
+    frame:StopMovingOrSizing()
+    local point, _, _, x, y = frame:GetPoint()
+    ASCT_DB["EditBox_Values"]["Position"] = {point, x, y}
+end)
 
 
+-- Create the drag bar frame with a title
+local dragBar = CreateFrame("Frame", "ASCTChatboxDragBar", frame, "BackdropTemplate")
+dragBar:SetSize(frame:GetWidth(), 30)  -- Adjust the height as needed
+dragBar:SetPoint("BOTTOM", frame, "TOP", 0, -5)  -- This positions the drag bar above the chatbox frame
+dragBar:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+dragBar:SetBackdropColor(0.2, 0.2, 0.2, 0.8)
+dragBar:EnableMouse(true)
+dragBar:SetMovable(true)  -- Make the drag bar movable
+dragBar:RegisterForDrag("LeftButton")
+dragBar:SetScript("OnDragStart", function() frame:StartMoving() end)
+dragBar:SetScript("OnDragStop", function()
+    frame:StopMovingOrSizing()
+    local point, _, _, x, y = frame:GetPoint()
+    ASCT_DB["EditBox_Values"]["Position"] = {point, x, y}
+end)
+
+-- Define the tab template
+local function CreateTabTemplate(name, parent, tabIndex)
+    local tab = CreateFrame("Button", "ASCTChatboxTabButton"..tabIndex, parent, "BackdropTemplate")
+    tab:SetSize(80, 29)
+    tab:SetBackdrop({
+        bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+        edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+        tile = true, tileSize = 16, edgeSize = 16,
+        insets = { left = 4, right = 4, top = 4, bottom = 4 }
+    })
+    tab:SetBackdropColor(0, 0, 0, ASCT_DB["EditBox_Values"]["Transparency"])
+    tab:SetText(name)
+    tab:SetNormalFontObject("GameFontNormal")
+    tab:SetHighlightFontObject("GameFontHighlight")
+
+    local text = tab:CreateFontString(Lua_API.Var_Type["nil"], "OVERLAY", "GameFontHighlight")
+    text:SetText(name)
+    text:SetPoint("CENTER", tab, "CENTER")
+    tab:SetFontString(text)
+
+    return tab
+end
+
+local function CreateTabButton(tabIndex, text)
+    local tab = CreateTabTemplate(text, frame, tabIndex)
+    tab:SetPoint("BOTTOMLEFT", frame, "BOTTOMLEFT", (tabIndex - 1) * 82, -25.5)
+    tab:SetScript("OnClick", function()
+        SwitchChatTab(tabIndex)
+    end)
+    return tab
+end
+
+-- Function to switch to a different chat tab
+function SwitchChatTab(index)
+    for i, tab in ipairs(chatTabs) do
+        tab.frame:Hide()
+    end
+    chatTabs[index].frame:Show()
+    activeTab = index
+end
+
+-- Function to create a new tab within the main frame
+local function CreateNewChatTab(name)
+    local tabIndex = #chatTabs + 1
+
+    -- Create a new tab content frame
+    local tabFrame = CreateFrame("Frame", "ASCTChatboxTab"..tabIndex, frame, "BackdropTemplate")
+    tabFrame:SetAllPoints()
+    tabFrame:SetBackdrop({
+        bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+        edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+        tile = true, tileSize = 16, edgeSize = 16,
+        insets = { left = 4, right = 4, top = 4, bottom = 4 }
+    })
+    tabFrame:SetBackdropColor(0, 0, 0, ASCT_DB["EditBox_Values"]["Transparency"])
+    tabFrame:Hide()
+
+    -- Create a scroll frame for the chat tab
+    local scrollFrame = CreateFrame("ScrollFrame", "ASCTChatboxScrollFrame"..tabIndex, tabFrame, "UIPanelScrollFrameTemplate")
+    scrollFrame:SetPoint("TOPLEFT", 10, -10)
+    scrollFrame:SetPoint("BOTTOMRIGHT", -30, 10)
+
+    -- Create a container frame for the fontstring
+    local content = CreateFrame("Frame", Lua_API.Var_Type["nil"], scrollFrame)
+    content:SetSize(360, 180)
+    scrollFrame:SetScrollChild(content)
+
+    -- Create a fontstring for the chat tab
+    local fontString = content:CreateFontString("ASCTChatboxFontString"..tabIndex, "OVERLAY", "ChatFontNormal")
+    fontString:SetPoint("TOPLEFT")
+    fontString:SetWidth(360)
+    fontString:SetJustifyH("LEFT")
+    fontString:SetJustifyV("TOP")
+    fontString:SetText("")  -- Initialize with empty text
+
+    chatTabs[tabIndex] = {frame = tabFrame, fontString = fontString, content = content, scrollFrame = scrollFrame, name = name}
+
+    -- Create a tab button
+    CreateTabButton(tabIndex, name)
+
+    return tabIndex
+end
+
+-- Function to print text to the specified chat tab
+function PrintToCustomChatbox(text, tabIndex)
+    local tab = chatTabs[tabIndex]
+    if not tab then return end
+
+    local fontString = tab.fontString
+    local lines = {strsplit("\n", fontString:GetText() or "")}
+    if #lines >= ASCT_DB["EditBox_Values"]["EntryLimit"] then
+        table.remove(lines, 1)
+    end
+    local time = date("%I:%M:%S %p")
+    table.insert(lines, time .. ": " .. text)
+    fontString:SetText(table.concat(lines, "\n"))
+    local contentHeight = fontString:GetStringHeight()
+    tab.content:SetHeight(contentHeight)
+    tab.scrollFrame:UpdateScrollChildRect() -- Force the scroll frame to update
+    tab.scrollFrame:SetVerticalScroll(tab.scrollFrame:GetVerticalScrollRange()) -- Scroll to bottom
+end
+
+
+
+-- Create tabs for the chatbox
+CreateNewChatTab("All Attacks") --1
+CreateNewChatTab("Critical Hits") --2
+CreateNewChatTab("Failed \n".."Attacks") --3
+CreateNewChatTab("DOT \n".."(Damage Over Time)") --4
+SwitchChatTab(1)
+
+-- Adjust the drag bar width when the chatbox frame is resized
+frame:SetScript("OnSizeChanged", function()
+    local width = frame:GetWidth()
+    dragBar:SetWidth(width)  -- Resize the drag bar to match the frame's width
+end)
+
+-- Create a title for the drag bar
+local title = dragBar:CreateFontString(Lua_API.Var_Type["nil"], "OVERLAY", "GameFontNormal")
+title:SetPoint("CENTER", dragBar, "CENTER")
+title:SetText("Advanced Scrolling Combat Text")
+
+-- Disable focusable actions on the drag bar
+dragBar:SetScript("OnEnter", Lua_API.Var_Type["nil"])
+dragBar:SetScript("OnLeave", Lua_API.Var_Type["nil"])
+
+-- Create a resize handle
+local resizeButton = CreateFrame("Button", "ASCTChatboxResizeButton", frame)
+resizeButton:SetSize(16, 16)
+resizeButton:SetPoint("BOTTOMRIGHT")
+resizeButton:SetNormalTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up")
+resizeButton:SetHighlightTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Highlight")
+resizeButton:SetPushedTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down")
+resizeButton:SetScript("OnMouseDown", function() frame:StartSizing("BOTTOMRIGHT") end)
+resizeButton:SetScript("OnMouseUp", function() frame:StopMovingOrSizing() end)
+
+-- Create a close button
+local closeButton = CreateFrame("Button", "ASCTChatboxCloseButton", dragBar, "UIPanelCloseButton")
+closeButton:SetSize(35, 40)
+closeButton:SetPoint("CENTER", dragBar, "RIGHT", -15, 0)
+closeButton:SetScript("OnClick", function()
+    frame:Hide()
+end)
+
+-- Create the settings frame
+local settingsFrame = CreateFrame("Frame", "ASCTChatboxSettingsFrame", UIParent, "BackdropTemplate")
+settingsFrame:SetSize(300, 200)
+settingsFrame:SetPoint("CENTER")
+settingsFrame:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+settingsFrame:SetBackdropColor(0, 0, 0, 1)
+settingsFrame:EnableMouse(true)
+settingsFrame:SetMovable(true)
+settingsFrame:RegisterForDrag("LeftButton")
+settingsFrame:SetScript("OnDragStart", settingsFrame.StartMoving)
+settingsFrame:SetScript("OnDragStop", function()
+    settingsFrame:StopMovingOrSizing()
+    local point, _, _, x, y = settingsFrame:GetPoint()
+    -- Optionally store the position if needed
+end)
+settingsFrame:Hide()
+
+-- Create the drag bar frame for the settings frame
+local settingsDragBar = CreateFrame("Frame", "ASCTChatboxSettingsDragBar", settingsFrame, "BackdropTemplate")
+settingsDragBar:SetSize(settingsFrame:GetWidth(), 30)  -- Adjust the height as needed
+settingsDragBar:SetPoint("BOTTOM", settingsFrame, "TOP", 0, -5)  -- Position the drag bar above the settings frame
+settingsDragBar:SetBackdrop({
+    bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+    edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+    tile = true, tileSize = 16, edgeSize = 16,
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
+})
+settingsDragBar:SetBackdropColor(0.2, 0.2, 0.2, 0.8)
+settingsDragBar:EnableMouse(true)
+settingsDragBar:SetMovable(true)  -- Make the drag bar movable
+settingsDragBar:RegisterForDrag("LeftButton")
+settingsDragBar:SetScript("OnDragStart", function() settingsFrame:StartMoving() end)
+settingsDragBar:SetScript("OnDragStop", function()
+    settingsFrame:StopMovingOrSizing()
+    local point, _, _, x, y = settingsFrame:GetPoint()
+    -- Optionally store the position if needed
+end)
+
+-- Create a title for the drag bar of the settings frame
+local settingsTitle = settingsDragBar:CreateFontString(Lua_API.Var_Type["nil"], "OVERLAY", "GameFontNormal")
+settingsTitle:SetPoint("CENTER", settingsDragBar, "CENTER")
+settingsTitle:SetText("ASCT Chatbox Settings")
+
+-- Disable focusable actions on the drag bar
+settingsDragBar:SetScript("OnEnter", Lua_API.Var_Type["nil"])
+settingsDragBar:SetScript("OnLeave", Lua_API.Var_Type["nil"])
+
+
+-- Transparency slider
+local transparencySlider = CreateFrame("Slider", "ASCTChatboxTransparencySlider", settingsFrame, "OptionsSliderTemplate")
+transparencySlider:SetPoint("TOP", 0, -40)
+transparencySlider:SetMinMaxValues(0, 1)
+transparencySlider:SetValueStep(0.01)
+transparencySlider:SetObeyStepOnDrag(true)
+Lua_API.Var_Environment["_G"][transparencySlider:GetName() .. 'Low']:SetText('0')
+Lua_API.Var_Environment["_G"][transparencySlider:GetName() .. 'High']:SetText('1')
+Lua_API.Var_Environment["_G"][transparencySlider:GetName() .. 'Text']:SetText('Transparency')
+transparencySlider:SetScript("OnValueChanged", function(self, value)
+    for _, tab in ipairs(chatTabs) do
+        if tab.frame and tab.frame.SetBackdropColor then
+            tab.frame:SetBackdropColor(0, 0, 0, value)
+        end
+    end
+    frame:SetBackdropColor(0, 0, 0, value)
+    ASCT_DB["EditBox_Values"]["Transparency"] = value
+end)
+transparencySlider:SetValue(ASCT_DB["EditBox_Values"]["Transparency"])
+
+
+
+-- Font dropdown
+local fontDropdown = CreateFrame("Frame", "ASCTChatboxFontDropdown", settingsFrame, "UIDropDownMenuTemplate")
+fontDropdown:SetPoint("TOP", transparencySlider, "BOTTOM", 0, -20)
+UIDropDownMenu_SetWidth(fontDropdown, 150)
+UIDropDownMenu_SetText(fontDropdown, ASCT_DB["EditBox_Values"]["Font"])
+local fonts = {"ChatFontNormal", "GameFontNormal", "GameFontHighlight"}
+UIDropDownMenu_Initialize(fontDropdown, function(self, level)
+    local function OnClick(self)
+        UIDropDownMenu_SetText(fontDropdown, self.value)
+        for _, tab in ipairs(chatTabs) do
+            tab.fontString:SetFontObject(Lua_API.Var_Environment["_G"][self.value])
+        end
+        ASCT_DB["EditBox_Values"]["Font"] = self.value
+    end
+    for _, font in ipairs(fonts) do
+        local info = UIDropDownMenu_CreateInfo()
+        info.text = font
+        info.value = font
+        info.func = OnClick
+        UIDropDownMenu_AddButton(info)
+    end
+end)
+
+-- Entry limit editbox
+local entryLimitEditBox = CreateFrame("EditBox", "ASCTChatboxEntryLimitEditBox", settingsFrame, "InputBoxTemplate")
+entryLimitEditBox:SetSize(50, 20)
+entryLimitEditBox:SetPoint("TOP", fontDropdown, "BOTTOM", 0, -20)
+entryLimitEditBox:SetNumeric(true)
+entryLimitEditBox:SetAutoFocus(false)
+entryLimitEditBox:SetMaxLetters(2)
+entryLimitEditBox:SetScript("OnTextChanged", function(self)
+    local text = self:GetText()
+    if not tonumber(text) then
+        self:SetText("")
+    end
+end)
+entryLimitEditBox:SetText(ASCT_DB["EditBox_Values"]["EntryLimit"])  -- Default limit
+local entryLimitLabel = entryLimitEditBox:CreateFontString(Lua_API.Var_Type["nil"], "ARTWORK", "GameFontNormal")
+entryLimitLabel:SetPoint("RIGHT", entryLimitEditBox, "LEFT", -10, 0)
+entryLimitLabel:SetText("Entry Limit")
+
+-- Confirm button to save the entry limit
+local confirmButton = CreateFrame("Button", "ASCTChatboxConfirmButton", settingsFrame, "UIPanelButtonTemplate")
+confirmButton:SetSize(50, 20)
+confirmButton:SetPoint("LEFT", entryLimitEditBox, "RIGHT", 10, 0)
+confirmButton:SetText("Confirm")
+confirmButton:SetScript("OnClick", function()
+    local limit = tonumber(entryLimitEditBox:GetText())
+    if limit then
+        ASCT_DB["EditBox_Values"]["EntryLimit"] = limit
+
+        -- Ensure each chat tab adheres to the new entry limit
+        for _, tab in ipairs(chatTabs) do
+            local lines = {strsplit("\n", tab.fontString:GetText() or "")}
+            while #lines > ASCT_DB["EditBox_Values"]["EntryLimit"] do
+                table.remove(lines, 1)
+            end
+            tab.fontString:SetText(table.concat(lines, "\n"))
+            local contentHeight = tab.fontString:GetStringHeight()
+            tab.content:SetHeight(contentHeight)
+            tab.scrollFrame:UpdateScrollChildRect()
+            tab.scrollFrame:SetVerticalScroll(tab.scrollFrame:GetVerticalScrollRange())
+        end
+    end
+    entryLimitEditBox:ClearFocus()
+end)
+
+
+-- Create a settings button
+local settingsButton = CreateFrame("Button", "ASCTChatboxSettingsButton", dragBar, "UIPanelButtonTemplate")
+settingsButton:SetSize(25, 25)
+settingsButton:SetPoint("CENTER", closeButton, "LEFT", -1, 0.5)
+settingsButton:SetText("*")
+settingsButton:SetScript("OnClick", function()
+    settingsFrame:Show()
+end)
+
+-- Create an X button to hide the settings frame
+local settingsCloseButton = CreateFrame("Button", "ASCTChatboxSettingsCloseButton", settingsDragBar, "UIPanelCloseButton")
+settingsCloseButton:SetPoint("TOPRIGHT", settingsDragBar, "TOPRIGHT")
+settingsCloseButton:SetScript("OnClick", function() settingsFrame:Hide() end)
+
+
+-- Function to print text to the specified chat tab (Add the PrintToCustomChatbox function if not already included)
+-- Add the example combat log event handler code here if necessary
+local stringTable = {"Hello, world!", "How are you?", "Have a great day!", "Lua is fun!", "Enjoy coding!"}
+-- Slash commands for custom chatbox functionalities
+SLASH_CUSTOMCHATBOX1 = "/ccb"
+SlashCmdList["CUSTOMCHATBOX"] = function(msg)
+    if msg == "settings" then
+        settingsFrame:Show()
+    elseif msg == "hide" then
+        frame:Hide()
+    elseif msg == "reset" then
+        frame:ClearAllPoints()
+        frame:SetPoint("CENTER")
+        frame:SetSize(400, 200)
+        ASCT_DB["EditBox_Values"]["Position"] = {"CENTER", 0, 0}
+        ASCT_DB["EditBox_Values"]["Size"] = {400, 200}
+    elseif msg == "resetposition" then
+        frame:ClearAllPoints()
+        frame:SetPoint("CENTER")
+        ASCT_DB["EditBox_Values"]["Position"] = {"CENTER", 0, 0}
+    elseif msg == "resetsize" then
+        frame:SetSize(400, 200)
+        ASCT_DB["EditBox_Values"]["Size"] = {400, 200}
+    elseif msg == "ment" then
+        for i = 10,19,1 do
+            PrintToCustomChatbox(i)
+        end
+    elseif msg == "show" then
+        frame:Show()
+    elseif msg == "help" then
+        for i = 1, #stringTable do
+            print(stringTable[i] .. "\n")
+        end
+    else
+        print("Use /asct help for a list of all the slash commands used in the asct addon.")
+    end
+end
+
+-- Hide the frame initially and show on slash command
+if ASCT_DB["Display_On_Login"]["Chatbox"] then
+    frame:Show()
+else
+    frame:Hide()
+end
+]]
 
 end
 

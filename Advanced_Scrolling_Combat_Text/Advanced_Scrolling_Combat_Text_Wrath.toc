@@ -1,5 +1,5 @@
-## Interface: 30403
-## Version: 11.1.5
+## Interface: 30403, 30404
+## Version: 11.2.0
 ## Title: Advanced Scrolling Combat Text
 ## Title-koKR: 고급 스크롤 전투 텍스트
 ## Title-frFR: Texte de combat à défilement avancé

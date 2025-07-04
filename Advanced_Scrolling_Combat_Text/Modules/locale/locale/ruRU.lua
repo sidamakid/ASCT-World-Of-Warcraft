@@ -289,4 +289,21 @@ if locale == Strings.LocaleName["ruRU"] then
  L["PVP Talents"] = "PvP-таланты";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "Сбросить размер и расположение панели настроек";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "Урон от силы PVP";
+ L["PVP Power Healing"] = "PVP Сила исцеления";
+ L["PVP Power"] = "PVP Сила";
+ L["PVP Resilience"] = "Устойчивость к PVP";
+ L["Hit"] = "Удар";
+ L["Haste"] = "Спешка";
+ L["Expertise"] = "Экспертиза";
+ L["Critical Strike"] = "Критический удар";
+ L["Dodge"] = "Додж";
+ L["Parry"] = "Парри";
+ --New things 06/26/2025
+ L["Chi"] = "чи";
+ L["Minimum Resource Cost"] = "Минимальная стоимость ресурсов";
+ L["The Minimum Resource Cost"] = "Минимальная затратность ресурсов";
+ L["Reset All Slider Values"] = "Сбросить все значения ползунков";
+ L["Reset Minimum Resource Cost"] = "Сбросить минимальную стоимость ресурсов";
 end

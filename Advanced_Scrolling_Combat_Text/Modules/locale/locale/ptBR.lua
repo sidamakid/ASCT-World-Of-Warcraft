@@ -289,4 +289,21 @@ if locale == Strings.LocaleName["ptBR"] then
  L["PVP Talents"] = "Talentos PvP";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "Redefinir o tamanho e a localização do painel de opções";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "Dano de Poder PVP";
+ L["PVP Power Healing"] = "Cura de Poder PVP";
+ L["PVP Power"] = "PVP Power";
+ L["PVP Resilience"] = "Resiliência PVP";
+ L["Hit"] = "Acertar";
+ L["Haste"] = "Pressa";
+ L["Expertise"] = "Especialização";
+ L["Critical Strike"] = "Golpe Crítico";
+ L["Dodge"] = "Desvio";
+ L["Parry"] = "Parry";
+ --New things 06/26/2025
+ L["Chi"] = "chi";
+ L["Minimum Resource Cost"] = "Custo Mínimo de Recursos";
+ L["The Minimum Resource Cost"] = "O Custo Mínimo de Recurso";
+ L["Reset All Slider Values"] = "Reiniciar todos os valores dos controles deslizantes";
+ L["Reset Minimum Resource Cost"] = "Reiniciar Custo Mínimo de Recurso";
 end

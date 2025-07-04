@@ -89,51 +89,100 @@ Scripts.Frame["OnEvent"](f, --Run when our event fires
          db_Goblin and (db_Goblin.SpellEnable == true)
       then
          local spellFrame = Lua_API.Var_Environment["_G"][ASCT_SARTE..spellName] or API.Documentation["CreateFrame"](Strings.FrameType["Frame"], ASCT_SARTE..spellName) --Make a frame whose name is the name of the addon + the name of the spell so it will be unique and safe
+         spellFrame.lastCharges = spellFrame.lastCharges or 1
          Scripts.Frame["OnUpdate"](spellFrame, --Run forever!
-         function()
-            ---------------------------
-            --Grab the needed time data
-            ---------------------------
-            start, duration = API.Documentation["GetSpellCooldown"](spellName)
-            if start == 0 then
-            local name, _, icon = API.Documentation["GetSpellInfo"](spellName)
-            local details = " "
-            local dbSettings =
-            --Spells
-            dbSettings_Rogue or dbSettings_Priest or
-            dbSettings_Shaman or dbSettings_Warrior or
-            dbSettings_Warlock or dbSettings_Paladin or
-            dbSettings_Mage or dbSettings_Druid or
-            dbSettings_Hunter or dbSettings_Death_Knight or
-            --Racials
-            db_Human or db_Dwarf or
-            db_Gnome or db_Undead or
-            db_Night_Elf or db_Orc or
-            db_Tauren or db_Troll or
-            db_Blood_Elf or db_Draenei or
-            db_Worgen or db_Goblin
-            --if dbSettings.iconEnable then details = details..Lua_API.String["string.format"]("|T%d:18|t ".." ", icon) end
-            if dbSettings.iconEnable then details = details..Lua_API.String["string.format"]("|T%d:"..DB["Integer_Values"].Icon.."|t ".." ", icon) end
-            if dbSettings.nameEnable then details = details..name.." " end
-            if dbSettings.iconEnable == false and dbSettings.nameEnable == false then
-               Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
-               return end
-            local msg = Lua_API.String["string.format"]("%s"..L[DB["Message_Selector"]["Msg"]], details)
-            local Comabt_Text = API.Documentation["C_CVar.GetCVarBool"](Strings.C_CVar["enableFloatingCombatText"])
-            if Comabt_Text == false then
-               Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
-               return end
-            if Comabt_Text == true then
-               Functions.CombatText["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
-             ---------------------------
-            --Break the Onupdate event
-            ---------------------------
-            Scripts.Frame["OnUpdate"](spellFrame, nil) -- This breaks the OnUpdate so it doesn't run once the spell is off CD
-            end
-         end
-         end
-         )
+            function()
+               --[[
+               local chargeData = API.Documentation["C_Spell.GetSpellCharges"](spellName)
+               local isReady = false
 
+               if chargeData then
+                  local currentCharges = chargeData.currentCharges
+                  local wasAtZero = (spellFrame.lastCharges == 0)
+
+                  -- Check if we just regained a charge from zero
+                  if wasAtZero and currentCharges == 1 then
+                     isReady = true
+                  end
+
+                  -- Update tracker AFTER the check
+                  spellFrame.lastCharges = currentCharges
+               else
+                  -- Fallback cooldown handling
+                  local cdInfo = API.Documentation["C_Spell.GetSpellCooldown"](spellName)
+                  if cdInfo.startTime == 0 then
+                     isReady = true
+                  end
+               end
+               ]]
+               local chargeData = API.Documentation["GetSpellCharges"](spellName)
+               local isReady = false
+
+               if chargeData then
+                  local currentCharges = chargeData.currentCharges
+                  local wasAtZero = (spellFrame.lastCharges == 0)
+
+                  -- Check if we just regained a charge from zero
+                  if wasAtZero and currentCharges == 1 then
+                     isReady = true
+                  end
+
+                  -- Update tracker AFTER the check
+                  spellFrame.lastCharges = currentCharges
+               else
+                  -- Fallback cooldown handling
+                  start, duration = API.Documentation["GetSpellCooldown"](spellName)
+                  if start == 0 then
+                     isReady = true
+                  end
+               end
+               if not isReady then return end
+               ---------------------------
+               -- Proceed to trigger message
+               ---------------------------
+               --[[
+               local spellInfo = API.Documentation["C_Spell.GetSpellInfo"](spellName)
+               local name, icon = spellInfo.name, spellInfo.iconID
+               ]]
+               local name, rank, icon, castTime, minRange, maxRange, spellID, originalIcon = API.Documentation["GetSpellInfo"](spellName)
+               local details = " "
+               local dbSettings =
+               --Spells
+               dbSettings_Rogue or dbSettings_Priest or
+               dbSettings_Shaman or dbSettings_Warrior or
+               dbSettings_Warlock or dbSettings_Paladin or
+               dbSettings_Mage or dbSettings_Druid or
+               dbSettings_Hunter or dbSettings_Death_Knight or
+               --Racials
+               db_Human or db_Dwarf or
+               db_Gnome or db_Undead or
+               db_Night_Elf or db_Orc or
+               db_Tauren or db_Troll or
+               db_Blood_Elf or db_Draenei or
+               db_Worgen or db_Goblin
+               if dbSettings.iconEnable then
+                  details = details..Lua_API.String["string.format"]("|T%d:"..DB["Integer_Values"].Icon.."|t ".." ", icon)
+               end
+               if dbSettings.nameEnable then
+                  details = details..name.." "
+               end
+               if dbSettings.iconEnable == false and dbSettings.nameEnable == false then
+                  Scripts.Frame["OnUpdate"](spellFrame, nil)
+                  return
+               end
+
+               local msg = Lua_API.String["string.format"]("%s"..L[DB["Message_Selector"]["Msg"]], details)
+               local combatTextEnabled = API.Documentation["C_CVar.GetCVarBool"](Strings.C_CVar["enableFloatingCombatText"])
+               if not combatTextEnabled then
+                  Scripts.Frame["OnUpdate"](spellFrame, nil)
+                  return
+               end
+
+               Functions.CombatText["CombatText_AddMessage"](msg, CombatText_StandardScroll, ASCT_Color_Picker_Variables.r, ASCT_Color_Picker_Variables.g, ASCT_Color_Picker_Variables.b)
+               Scripts.Frame["OnUpdate"](spellFrame, nil)
+            end
+
+         )
       end
    end
    end

@@ -30,6 +30,10 @@ ASCT.API.Documentation["GetSpellBonusHealing"] = function()
     local bonusHeal = GetSpellBonusHealing()
     return bonusHeal
 end
+ASCT.API.Documentation["GetSpellCharges"] = function(spell)
+    local currentCharges, maxCharges, cooldownStart, cooldownDuration, chargeModRate = GetSpellCharges(spell)
+    return currentCharges, maxCharges, cooldownStart, cooldownDuration, chargeModRate
+end
 ---------------------------
 --GetCombatRating
 ---------------------------

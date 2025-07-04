@@ -83,7 +83,7 @@ if locale == Strings.LocaleName["zhTW"] then
  L["msg_Lust"] = " 慾望現在已經準備好了！";
  --Message
  L["Nothing"] = "無";
- L["Open To Options Panel"] = "打開選項面板"; 
+ L["Open To Options Panel"] = "打開選項面板";
  --New things
  L["Icon"] = "圖示";
  L["Name"] = "名字";
@@ -289,4 +289,21 @@ if locale == Strings.LocaleName["zhTW"] then
  L["PVP Talents"] = "PVP 天賦";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "重置選項面板大小和位置";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "PVP 力量傷害";
+ L["PVP Power Healing"] = "PVP 力量治療";
+ L["PVP Power"] = "PVP 力量";
+ L["PVP Resilience"] = "PVP 韌性";
+ L["Hit"] = "擊中";
+ L["Haste"] = "匆忙";
+ L["Expertise"] = "專業知識";
+ L["Critical Strike"] = "關鍵打擊";
+ L["Dodge"] = "躲避";
+ L["Parry"] = "帕里";
+ --New things 06/26/2025
+ L["Chi"] = "中文";
+ L["Minimum Resource Cost"] = "最低資源成本";
+ L["The Minimum Resource Cost"] = "最小資源成本";
+ L["Reset All Slider Values"] = "重置所有滑桿值";
+ L["Reset Minimum Resource Cost"] = "重置最小資源成本";
 end

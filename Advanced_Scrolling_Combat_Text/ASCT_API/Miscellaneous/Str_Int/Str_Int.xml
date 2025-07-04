@@ -3,6 +3,7 @@
     <Script file="LE_EXPANSION_LEVEL_Str_Int.lua"/>
     <Script file="Class_Str_Int.lua"/>
     <Script file="Race_Str_Int.lua"/>
+    <Script file="PowerType_Str_Int.lua"/>
     <Script file="Resistance_Str_Int.lua"/>
     <Script file="CR_Str_Int.lua"/>
 </UI>

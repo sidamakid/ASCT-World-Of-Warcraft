@@ -58,8 +58,9 @@ ASCT.Database.Spells["Others_Cataclysm"] = {
 		["Trinket_2"] = {TrinketEnable = false, Name = false, Icon = false,},
 	},
 	["Integer_Values"] = {
-		Icon = 18,
-		Debuff_time = 5,
+		["Icon"] = 18,
+		["Debuff_time"] = 5,
+		["Minimum_Resource_Cost"] = 4,
 	},
 	--[[
 	["Message_Selector"] = {

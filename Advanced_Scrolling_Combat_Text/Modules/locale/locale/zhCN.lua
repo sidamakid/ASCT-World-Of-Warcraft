@@ -289,4 +289,21 @@ if locale == Strings.LocaleName["zhCN"] then
  L["PVP Talents"] = "PVP 天赋";
  --New things 04/05/2025
  L["Reset Options Panel Size And Location"] = "重置选项面板大小和位置";
+ --New things 06/08/2025
+ L["PVP Power Damage"] = "PVP 伤害";
+ L["PVP Power Healing"] = "PVP能量治疗";
+ L["PVP Power"] = "PVP电力";
+ L["PVP Resilience"] = "PVP 弹性";
+ L["Hit"] = "击";
+ L["Haste"] = "匆忙";
+ L["Expertise"] = "专业知识";
+ L["Critical Strike"] = "关键打击";
+ L["Dodge"] = "道奇";
+ L["Parry"] = "帕里";
+ --New things 06/26/2025
+ L["Chi"] = "鸡";
+ L["Minimum Resource Cost"] = "最低资源成本";
+ L["The Minimum Resource Cost"] = "最小资源成本";
+ L["Reset All Slider Values"] = "重置所有滑块值";
+ L["Reset Minimum Resource Cost"] = "重置最低资源成本";
 end
