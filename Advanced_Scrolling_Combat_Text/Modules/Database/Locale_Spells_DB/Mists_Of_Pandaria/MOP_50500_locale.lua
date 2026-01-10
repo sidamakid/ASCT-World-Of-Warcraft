@@ -23,6 +23,7 @@ ASCT.Database.Spells["ASCT_Locale"] = {--Advanced Scrolling Combat Text Localizi
             ["Killing Spree"] = 51690,
             ["Adrenaline Rush"] = 13750,
             ["Combat Readiness"] = 74001,
+            ["Shiv"] = 5938,
         ---------------------------
         --Subtlety
         ---------------------------

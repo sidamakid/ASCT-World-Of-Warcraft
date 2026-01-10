@@ -1,0 +1,27 @@
+local _, ASCT = ...;
+local Lua_API = ASCT.Lua_API
+--Lua_API.Essentials
+Lua_API.Essentials["CopyTable"] = CopyTable
+Lua_API.Essentials["Mixin"] = Mixin
+Lua_API.Essentials["assert"] = assert
+Lua_API.Essentials["collectgarbage"] = collectgarbage
+Lua_API.Essentials["dofile"] = dofile
+Lua_API.Essentials["error"] = error
+Lua_API.Essentials["getmetatable"] = getmetatable
+Lua_API.Essentials["ipairs"] = ipairs
+Lua_API.Essentials["load"] = load
+Lua_API.Essentials["loadstring"] = loadstring
+Lua_API.Essentials["next"] = next
+Lua_API.Essentials["pairs"] = pairs
+Lua_API.Essentials["pcall"] = pcall
+Lua_API.Essentials["rawequal"] = rawequal
+Lua_API.Essentials["rawget"] = rawget
+Lua_API.Essentials["rawset"] = rawset
+Lua_API.Essentials["require"] = require
+Lua_API.Essentials["select"] = select
+Lua_API.Essentials["setmetatable"] = setmetatable
+Lua_API.Essentials["tonumber"] = tonumber
+Lua_API.Essentials["tostring"] = tostring
+Lua_API.Essentials["type"] = type
+Lua_API.Essentials["unpack"] = unpack
+Lua_API.Essentials["xpcall"] = xpcall

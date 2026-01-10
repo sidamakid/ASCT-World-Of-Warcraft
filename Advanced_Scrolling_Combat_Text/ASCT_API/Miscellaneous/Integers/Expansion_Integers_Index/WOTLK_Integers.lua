@@ -5,3 +5,4 @@ ASCT.Integers.Client["30401"] = 30401
 ASCT.Integers.Client["30402"] = 30402
 ASCT.Integers.Client["30403"] = 30403
 ASCT.Integers.Client["30404"] = 30404
+ASCT.Integers.Client["30405"] = 30405

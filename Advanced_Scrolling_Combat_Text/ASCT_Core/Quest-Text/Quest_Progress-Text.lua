@@ -1,6 +1,6 @@
 local Lua_API, ASCT = Lua_API_Table, ASCT_Table
 local Keys = ASCT.Keys
-local Lua_ASCT, Customs, API, Strings, Scripts, Frames, Functions, Misc = Keys.Metatables["Lua_ASCT"], Keys.Metatables["Customs"], Keys.Metatables["API"], Keys.Metatables["Strings"], Keys.Metatables["Scripts"], Keys.Metatables["Frames"], Keys.Metatables["Functions"], Keys.Metatables["Miscellaneous"]
+local Lua_ASCT, Variables, Customs, API, Strings, Scripts, Frames, Functions, Misc = Keys.Metatables["Lua_ASCT"], Keys.Metatables["Variables"], Keys.Metatables["Customs"], Keys.Metatables["API"], Keys.Metatables["Strings"], Keys.Metatables["Scripts"], Keys.Metatables["Frames"], Keys.Metatables["Functions"], Keys.Metatables["Miscellaneous"]
 local f = Frames.SARTE["Quest_Progress_Frame"]
 
 function f:OnEvent(event, ...)
@@ -8,9 +8,8 @@ function f:OnEvent(event, ...)
 end
 
 -- Example code to run if any objectives have changed
-local Quest_Progress_ColorTable = Lua_ASCT.SARTE.Tables.Quests["Quest_Progress_ColorTable"]
-local questIDSaved = Lua_ASCT.SARTE.Variables.Quests["questIDSaved"]
---local questLogIndexSaved = Lua_ASCT.SARTE.Variables.Quests["questLogIndexSaved"]
+local questIDSaved = Variables.SARTE.Quests["questIDSaved"]
+--local questLogIndexSaved = Variables.SARTE.Quests["questLogIndexSaved"]
 local Old_Quest_Objectives = Lua_ASCT.SARTE.Tables.Quests["Old_Quest_Objectives"]
 local Updated_Quest_Objectives = Lua_ASCT.SARTE.Tables.Quests["Updated_Quest_Objectives"]
 
@@ -31,7 +30,8 @@ function f:UNIT_QUEST_LOG_CHANGED(event, unit)
     Lua_ASCT.SARTE.Functions.Quests["addObjectiveDetails"](objectives, Updated_Quest_Objectives)
     local has_changed, changed_details = Lua_ASCT.SARTE.Functions.Quests["haveObjectivesChanged"](Old_Quest_Objectives, Updated_Quest_Objectives)
     if has_changed then
-        Lua_ASCT.SARTE.Functions.Quests["CombatText_AddMessage_Percentage"](changed_details, Quest_Progress_ColorTable, "text")
+        --Lua_ASCT.SARTE.Functions.Quests["CombatText_AddMessage_Percentage"](changed_details, Quest_Progress_ColorTable, "text")
+        Lua_ASCT.SARTE.Functions.Quests["CombatText_AddMessage_Gradient"](changed_details, "text")
     end
     questIDSaved = nil
 end
@@ -39,6 +39,23 @@ end
 Functions.Initializers["Advanced_Scrolling_Combat_Text_AddInitializer"](function()
 Scripts.Frame["OnEvent"](f, f.OnEvent)
 end)
+
+--[[
+local frame = CreateFrame("Frame")
+-- Register for the quest turn-in event
+frame:RegisterEvent("QUEST_TURNED_IN")
+
+-- Event handler
+frame:SetScript("OnEvent", function(self, event, questID)
+    if event == "QUEST_TURNED_IN" then
+        local questName = C_QuestLog.GetTitleForQuestID(questID)
+        local msg
+        msg = string.format("%s completed", questName)
+        Functions.CombatText["CombatText_AddMessage"](msg, CombatText_StandardScroll, 0, 1, 0)
+    end
+end)
+]]
+
 --[[
 https://warcraft.wiki.gg/wiki/QUEST_WATCH_UPDATE
 https://warcraft.wiki.gg/wiki/QUEST_ACCEPTED

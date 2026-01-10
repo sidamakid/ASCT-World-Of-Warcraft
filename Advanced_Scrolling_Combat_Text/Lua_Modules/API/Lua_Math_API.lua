@@ -38,3 +38,11 @@ end
 Lua_API.Math["math.pi"] = function()
     return Lua_API.Var_Library["math"].pi
 end
+
+Lua_API.Math["math.min"] = function(...)
+    return Lua_API.Var_Library["math"].min(...)
+end
+
+Lua_API.Math["math.max"] = function(...)
+    return Lua_API.Var_Library["math"].max(...)
+end

@@ -54,6 +54,7 @@ if ASCT.Client.LE_EXPANSION_LEVEL["isMOPWow"] and ASCT.Client.tocversion["is5050
             ["Killing Spree"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Redirect"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
             ["Sprint"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
+            ["Shiv"] = {SpellEnable = false, iconEnable = false, nameEnable = false},
         },
         ["Subtlety"] = {
             ["Blind"] = {SpellEnable = false, iconEnable = false, nameEnable = false},

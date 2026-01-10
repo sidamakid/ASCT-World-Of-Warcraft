@@ -13,3 +13,4 @@ ASCT.Client.tocversion["is11504"] = select(4, ASCT.API.Documentation["GetBuildIn
 ASCT.Client.tocversion["is11505"] = select(4, ASCT.API.Documentation["GetBuildInfo"]()) == ASCT.Integers.Client["11505"]
 ASCT.Client.tocversion["is11506"] = select(4, ASCT.API.Documentation["GetBuildInfo"]()) == ASCT.Integers.Client["11506"]
 ASCT.Client.tocversion["is11507"] = select(4, ASCT.API.Documentation["GetBuildInfo"]()) == ASCT.Integers.Client["11507"]
+ASCT.Client.tocversion["is11508"] = select(4, ASCT.API.Documentation["GetBuildInfo"]()) == ASCT.Integers.Client["11508"]

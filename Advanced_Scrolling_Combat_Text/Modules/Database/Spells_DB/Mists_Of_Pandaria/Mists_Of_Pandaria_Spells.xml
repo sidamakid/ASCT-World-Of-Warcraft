@@ -1,4 +1,7 @@
 <UI>
     <Script file="MOP_50400_Spells.lua"/>
     <Script file="MOP_50500_Spells.lua"/>
+    <Script file="MOP_50501_Spells.lua"/>
+    <Script file="MOP_50502_Spells.lua"/>
+    <Script file="MOP_50503_Spells.lua"/>
 </UI>
